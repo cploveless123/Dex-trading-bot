@@ -1,0 +1,19 @@
+{
+  "pair_address": "AKAKKEGgTmTpMhunVu24bLdWYLAH76NAn54MfBuhBZG2",
+  "token_address": "AxpepaVHpjvemeUy1oTBwLnuELVWnZNpLwBj5cKtpump",
+  "symbol": "Bebe",
+  "name": "Bebe The Parrot",
+  "price": "0.00006036",
+  "liquidity": 18691.99,
+  "mcap": 60365,
+  "volume_24h": 136746.91,
+  "price_change_24h": 84.46,
+  "buys_24h": 1926,
+  "sells_24h": 1569,
+  "buy_sell_ratio": 1.2275334608030593,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T21:48:24.695826",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
