@@ -1,0 +1,19 @@
+{
+  "pair_address": "3AZp76TfedVLcW7cjGTSejVmCqzh9mQL4H5GtWCUgPJo",
+  "token_address": "VrWz5R5TsVpiUNZ9krntxRVVvzB25vAAtVvsfbMpump",
+  "symbol": "Chick",
+  "name": "The Easter Chick",
+  "price": "0.000009603",
+  "liquidity": 0,
+  "mcap": 9603.12,
+  "volume_24h": 90555.11,
+  "price_change_24h": 256,
+  "buys_24h": 4166,
+  "sells_24h": 1516,
+  "buy_sell_ratio": 2.7480211081794197,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-05T19:42:46.653745",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "pair_address": "DAJKEj5PpHmGS1yntfbE3kvhRUCbX7dm8bdVe2BKqHMT",
+  "token_address": "DaqeqhEAGjeRvgH114nwmmA73oVtjeiDqxz2T2BPpump",
+  "symbol": "PAWELL",
+  "name": "Jerume Pawell",
+  "price": "0.00008901",
+  "liquidity": 22705.88,
+  "mcap": 89013,
+  "volume_24h": 144320.5,
+  "price_change_24h": 170,
+  "buys_24h": 7056,
+  "sells_24h": 1330,
+  "buy_sell_ratio": 5.3052631578947365,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T19:39:09.283775",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

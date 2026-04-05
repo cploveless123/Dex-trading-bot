@@ -1,0 +1,20 @@
+{
+  "pair_address": "5rhyV4DmoccwpUP9855VmMLkLdB52DYDWp6ztjjaiVkx",
+  "token_address": "5ssLcaKXLYAc1egWY5SPntyEhtFDhXZF4LSwu85PKSSp",
+  "symbol": "PIEPA",
+  "name": "PEPE PIEPA",
+  "price": "0.00000005098",
+  "liquidity": 60933.88,
+  "mcap": 50981,
+  "volume_24h": 1341504.14,
+  "price_change_24h": 180,
+  "buys_24h": 5787,
+  "sells_24h": 3403,
+  "buy_sell_ratio": 1.7005583308845136,
+  "dex": "raydium",
+  "analyzed_at": "2026-04-05T19:42:46.673211",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}

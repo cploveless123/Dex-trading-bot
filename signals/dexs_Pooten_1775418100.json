@@ -1,0 +1,19 @@
+{
+  "pair_address": "AE7bFHYZqKvFjskG6jd8p5mB4TdgWzprhW13xzu6rL4c",
+  "token_address": "9ZxDQbdNgVmwrhhVMf7jssm57sEanx2KWvkjk52Hpump",
+  "symbol": "Pooten",
+  "name": "Vledemeer pooten",
+  "price": "0.00006369",
+  "liquidity": 19010.16,
+  "mcap": 63691,
+  "volume_24h": 49327.53,
+  "price_change_24h": 96.27,
+  "buys_24h": 735,
+  "sells_24h": 552,
+  "buy_sell_ratio": 1.3315217391304348,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T19:41:40.550566",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

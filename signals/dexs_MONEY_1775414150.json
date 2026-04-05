@@ -1,0 +1,19 @@
+{
+  "pair_address": "DqpLnzMf9sd9nspuaspZRoNZqztgWdeDU24p5HsFGRJj",
+  "token_address": "4TaD358F4RK4ujHgepJdd6vVHVkgpNhaBWavPfHhpump",
+  "symbol": "MONEY",
+  "name": "WantMoney LLC",
+  "price": "0.00004958",
+  "liquidity": 16724.02,
+  "mcap": 49581,
+  "volume_24h": 10422.33,
+  "price_change_24h": 50.77,
+  "buys_24h": 104,
+  "sells_24h": 73,
+  "buy_sell_ratio": 1.4246575342465753,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T18:35:50.875228",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

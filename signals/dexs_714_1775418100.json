@@ -1,0 +1,20 @@
+{
+  "pair_address": "0xdaD55e537F2766780C4040529758cBd0246eAAff",
+  "token_address": "0xB7348695a5935f268133fA49707b335F5Cce4444",
+  "symbol": "714",
+  "name": "\u5e01\u5b89\u6210\u7acb\u7eaa\u5ff5\u65e5",
+  "price": "0.0003181",
+  "liquidity": 55698.55,
+  "mcap": 318112,
+  "volume_24h": 1372305.45,
+  "price_change_24h": 509,
+  "buys_24h": 8080,
+  "sells_24h": 7568,
+  "buy_sell_ratio": 1.0676532769556026,
+  "dex": "pancakeswap",
+  "analyzed_at": "2026-04-05T19:41:40.504251",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}

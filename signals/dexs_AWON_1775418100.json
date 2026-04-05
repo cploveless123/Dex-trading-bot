@@ -1,0 +1,19 @@
+{
+  "pair_address": "E7HgTLgDv1UfeChvXYrX2YQ6vyG8GorWmuGar7h6e9uu",
+  "token_address": "CGWuCRBLQZGki9NZ958E1DMmJ6XngwvSAu84cVHfpump",
+  "symbol": "AWON",
+  "name": "AWON",
+  "price": "0.00008911",
+  "liquidity": 22666.25,
+  "mcap": 89119,
+  "volume_24h": 186802.93,
+  "price_change_24h": 171,
+  "buys_24h": 2349,
+  "sells_24h": 1752,
+  "buy_sell_ratio": 1.3407534246575343,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T19:41:40.870524",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
