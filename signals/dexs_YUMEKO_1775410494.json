@@ -1,0 +1,21 @@
+{
+  "pair_address": "Cy3gXk8Jiw1aSpuq8An4upvcCwzaVm2AMNZwL9yK2mLe",
+  "token_address": "HDmhe9kdJmdDVfASQ1hrawax8zSMqDdrh7xSBCbspump",
+  "symbol": "YUMEKO",
+  "name": "Yumeko Jabami",
+  "price": "0.00009799",
+  "liquidity": 23822.45,
+  "mcap": 97999,
+  "volume_24h": 135317.9,
+  "price_change_24h": 195,
+  "buys_24h": 5446,
+  "sells_24h": 814,
+  "buy_sell_ratio": 6.69041769041769,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T17:34:54.303783",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

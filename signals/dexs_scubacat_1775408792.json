@@ -1,0 +1,19 @@
+{
+  "pair_address": "6KzQv7sYjwr7gEPuUX4d95QWNHJJus75v4LrdMEcJFnL",
+  "token_address": "EBKPekNusjfKt3Dmpuu2in8KC3pJVXYJYP8ESRi8pump",
+  "symbol": "scubacat",
+  "name": "scuba cat",
+  "price": "0.0001000",
+  "liquidity": 24579.04,
+  "mcap": 100028,
+  "volume_24h": 389632.16,
+  "price_change_24h": 203,
+  "buys_24h": 6288,
+  "sells_24h": 4518,
+  "buy_sell_ratio": 1.3917662682602923,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T17:06:31.894977",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

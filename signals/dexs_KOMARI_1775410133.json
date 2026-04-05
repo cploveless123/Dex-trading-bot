@@ -1,0 +1,21 @@
+{
+  "pair_address": "D4rXLWzHBEymHKmn9ZhNhiCY63wRGXgXdK4jmVspPs53",
+  "token_address": "41MVUBMDDiz6gy339uHvXDbXrCw3MBrYo2xU2RbGpump",
+  "symbol": "KOMARI",
+  "name": "Komari the Shiba Inu",
+  "price": "0.00009564",
+  "liquidity": 23948.03,
+  "mcap": 95641,
+  "volume_24h": 300321.94,
+  "price_change_24h": 187,
+  "buys_24h": 13762,
+  "sells_24h": 2181,
+  "buy_sell_ratio": 6.309949564419991,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T17:28:53.906360",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

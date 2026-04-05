@@ -1,0 +1,19 @@
+{
+  "pair_address": "C7chhn1EScgNjMMzhKKn2kEbpSTaZ5dkSGowXGYYLqLu",
+  "token_address": "7MacTwBiTqs6JDGgxp64r16LnRAs4odEW8uDmnfLpump",
+  "symbol": "JTC",
+  "name": "JUSTICE COIN",
+  "price": "0.00002498",
+  "liquidity": 0,
+  "mcap": 24983.02,
+  "volume_24h": 6209.7,
+  "price_change_24h": 238,
+  "buys_24h": 88,
+  "sells_24h": 27,
+  "buy_sell_ratio": 3.259259259259259,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-05T17:25:53.694766",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

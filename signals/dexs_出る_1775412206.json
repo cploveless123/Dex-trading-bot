@@ -1,0 +1,19 @@
+{
+  "pair_address": "2hqEnuafqtExLNXD6EELgV1xpUpCLnqizjXKqZ6xF4WL",
+  "token_address": "Dvi1ea8UXPcb6PfppuV4HcxQyPakyT3d8n4ZVFsopump",
+  "symbol": "\u51fa\u308b",
+  "name": "Leave The Colony",
+  "price": "0.00004824",
+  "liquidity": 16842.46,
+  "mcap": 48245,
+  "volume_24h": 194512.9,
+  "price_change_24h": 53.65,
+  "buys_24h": 2956,
+  "sells_24h": 2442,
+  "buy_sell_ratio": 1.2104832104832104,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T18:03:26.902319",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

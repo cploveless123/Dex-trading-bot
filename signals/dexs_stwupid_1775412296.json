@@ -1,0 +1,19 @@
+{
+  "pair_address": "8suvsbbmCPYMMgBystaoY46SbeqeA7jF38WY7ZVjFCsg",
+  "token_address": "9mhk5U5cM9FGbvtRAyeULqLqwfdPQ3fk1yRLqxPxpump",
+  "symbol": "stwupid",
+  "name": "stwupid",
+  "price": "0.00001591",
+  "liquidity": 0,
+  "mcap": 15919.28,
+  "volume_24h": 35940.54,
+  "price_change_24h": 568,
+  "buys_24h": 520,
+  "sells_24h": 226,
+  "buy_sell_ratio": 2.3008849557522124,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-05T18:04:56.958825",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

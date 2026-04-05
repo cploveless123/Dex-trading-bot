@@ -1,0 +1,19 @@
+{
+  "pair_address": "7viqhhyM1P8vzp1wNmaEEf5zkGXysB1iiifaR4CXrYzV",
+  "token_address": "GP1vHzWh2NZgUSZBmLqrPGbwwthGjDsKLMSHrdudpump",
+  "symbol": "pep",
+  "name": "pepsolana",
+  "price": "0.000007915",
+  "liquidity": 0,
+  "mcap": 7915.46,
+  "volume_24h": 24825.11,
+  "price_change_24h": 160,
+  "buys_24h": 704,
+  "sells_24h": 269,
+  "buy_sell_ratio": 2.617100371747212,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-05T17:00:22.085194",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

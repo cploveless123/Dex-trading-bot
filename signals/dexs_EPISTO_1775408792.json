@@ -1,0 +1,19 @@
+{
+  "pair_address": "0x5b85d6c353fb7ed7ed033c1c6341d038dabf3c2765d71471733b9318e41c67cf",
+  "token_address": "0x3fDFeC435b33732185B518E7081E932CeDdFF14F",
+  "symbol": "EPISTO",
+  "name": "EPISTO APP",
+  "price": "0.0000001820",
+  "liquidity": 16997.95,
+  "mcap": 18201,
+  "volume_24h": 10878.69,
+  "price_change_24h": 60.73,
+  "buys_24h": 47,
+  "sells_24h": 17,
+  "buy_sell_ratio": 2.764705882352941,
+  "dex": "uniswap",
+  "analyzed_at": "2026-04-05T17:06:31.754897",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

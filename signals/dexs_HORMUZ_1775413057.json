@@ -1,0 +1,19 @@
+{
+  "pair_address": "FCvL7pWAbKF4ZrBrxgw8DEzSAkt8JoA58MsJPifMyb8w",
+  "token_address": "GxM46SyLWozDDMfM6AxsFFMhHLURo5vhxY9efroPpump",
+  "symbol": "HORMUZ",
+  "name": "Hormuz Coin",
+  "price": "0.00005663",
+  "liquidity": 18194.9,
+  "mcap": 56637,
+  "volume_24h": 185441.03,
+  "price_change_24h": 72.62,
+  "buys_24h": 2251,
+  "sells_24h": 1953,
+  "buy_sell_ratio": 1.1525857654889913,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T18:17:36.904269",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

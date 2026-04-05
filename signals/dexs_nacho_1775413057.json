@@ -1,0 +1,19 @@
+{
+  "pair_address": "CH12sgPBFRkyEeo4Rmf7KGQi57HrF4KsaoQM8gXRyfaP",
+  "token_address": "FbZiAicEbNta6M1n3FTfeFe39C94UQyYHW2Pf8s9pump",
+  "symbol": "nacho",
+  "name": "the dwarf cat",
+  "price": "0.00005036",
+  "liquidity": 17082.62,
+  "mcap": 50361,
+  "volume_24h": 256223.31,
+  "price_change_24h": 52.19,
+  "buys_24h": 4082,
+  "sells_24h": 3420,
+  "buy_sell_ratio": 1.1935672514619884,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T18:17:37.159704",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

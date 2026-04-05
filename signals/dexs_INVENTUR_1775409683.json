@@ -1,0 +1,19 @@
+{
+  "pair_address": "FLz13T6vgncJTCu9cEU3vR1Nt4uY2doNoAZnsMecrCFz",
+  "token_address": "BdKUkXTFY5eBZL1AexVCV5q8LANG9AoSiF5pFYJipump",
+  "symbol": "INVENTUR",
+  "name": "F Student",
+  "price": "0.000006903",
+  "liquidity": 0,
+  "mcap": 6903.67,
+  "volume_24h": 7638.96,
+  "price_change_24h": 199,
+  "buys_24h": 115,
+  "sells_24h": 53,
+  "buy_sell_ratio": 2.169811320754717,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-05T17:21:23.341030",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
