@@ -1,0 +1,19 @@
+{
+  "pair_address": "E3krXMfvUq1LHsT1pdAhHuogYT5ZumETKwnkULgeLusk",
+  "token_address": "2JcnCbrcdHu4S321A3syNUdXoXYnUo9NeEFcfiJAq346",
+  "symbol": "USA",
+  "name": "United States of America",
+  "price": "0.000009523",
+  "liquidity": 0,
+  "mcap": 9523.99,
+  "volume_24h": 8222.46,
+  "price_change_24h": 315,
+  "buys_24h": 149,
+  "sells_24h": 51,
+  "buy_sell_ratio": 2.9215686274509802,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-05T23:17:05.379476",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

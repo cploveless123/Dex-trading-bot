@@ -1,0 +1,19 @@
+{
+  "pair_address": "H5qBZ3yhz7WWKfxLzqi86SGd5FUD3sFDzPwxsiy4TxZ4",
+  "token_address": "Chk5sAJEzkSDZpoPZ6sds6fvLf4k2t5JLnTN98V2pump",
+  "symbol": "Mog",
+  "name": "Mog Coin",
+  "price": "0.00006075",
+  "liquidity": 19144.73,
+  "mcap": 60755,
+  "volume_24h": 254949.12,
+  "price_change_24h": 83.91,
+  "buys_24h": 4476,
+  "sells_24h": 3706,
+  "buy_sell_ratio": 1.2077711818672423,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T23:17:05.457745",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

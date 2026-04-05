@@ -1,0 +1,23 @@
+{
+  "balance": 0.9,
+  "positions": [
+    {
+      "token": "USA",
+      "address": "2JcnCbrcdHu4S321A3syNUdXoXYnUo9NeEFcfiJAq346",
+      "entry_price": "0.000009523",
+      "entry_time": "2026-04-05T23:24:36.103955",
+      "liquidity": 0,
+      "mcap": 9523.99,
+      "size": 0.1,
+      "pnl_sol": 0,
+      "status": "open"
+    }
+  ],
+  "stats": {
+    "total_trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "best": 0,
+    "worst": 0
+  }
+}

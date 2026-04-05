@@ -1,0 +1,20 @@
+{
+  "pair_address": "0xB1803689Da8c1b4d8a573111233a8e3255992008",
+  "token_address": "0x74BD3aCE6Bb307430f1687B23F2ff1e2C41BF63b",
+  "symbol": "Yoshi",
+  "name": "Yoshi",
+  "price": "0.00002829",
+  "liquidity": 11998.21,
+  "mcap": 28294,
+  "volume_24h": 24861.78,
+  "price_change_24h": 2098,
+  "buys_24h": 196,
+  "sells_24h": 76,
+  "buy_sell_ratio": 2.5789473684210527,
+  "dex": "uniswap",
+  "analyzed_at": "2026-04-05T23:01:59.205055",
+  "signals": [
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

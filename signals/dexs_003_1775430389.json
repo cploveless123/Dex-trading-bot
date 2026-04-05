@@ -1,0 +1,19 @@
+{
+  "pair_address": "G52DyMPc6HhUd7xTvjsXwhGo3BPje1mQdyieosNW5E1K",
+  "token_address": "Fzfv7TYcuZMviqMeyx47xqaZu6rTc5VaRkkoym22vQfX",
+  "symbol": "003",
+  "name": "citrini analyst #3",
+  "price": "0.00008355",
+  "liquidity": 22331.27,
+  "mcap": 83551,
+  "volume_24h": 272015.43,
+  "price_change_24h": 155,
+  "buys_24h": 2936,
+  "sells_24h": 2146,
+  "buy_sell_ratio": 1.3681267474370922,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T23:06:29.517198",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

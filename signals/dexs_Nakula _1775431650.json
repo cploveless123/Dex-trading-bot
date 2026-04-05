@@ -1,0 +1,19 @@
+{
+  "pair_address": "Ct2zxdt1xBRSxSiAbcXuMkLiDS5MKz6M9T5xyaSkDCgG",
+  "token_address": "8cJfw6d2udnWAcAggfoFYT827jmVoV3NwN9Bqzyfpump",
+  "symbol": "Nakula ",
+  "name": "\u90a3\u5e93\u62c9",
+  "price": "0.00003127",
+  "liquidity": 13413.74,
+  "mcap": 31275,
+  "volume_24h": 12686.01,
+  "price_change_24h": -5.47,
+  "buys_24h": 191,
+  "sells_24h": 85,
+  "buy_sell_ratio": 2.2470588235294118,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T23:27:30.696611",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

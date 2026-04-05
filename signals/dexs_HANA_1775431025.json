@@ -1,0 +1,19 @@
+{
+  "pair_address": "D115GUbG3LET7ag4wJRJRJaF3D26UWjjkuELeMTgENmj",
+  "token_address": "CQHTGVk1ouWSVDapPNHsShhhNPfq1Yc447GpCWJopump",
+  "symbol": "HANA",
+  "name": "HANA",
+  "price": "0.000001814",
+  "liquidity": 3337.92,
+  "mcap": 1814,
+  "volume_24h": 405469.26,
+  "price_change_24h": -94.39,
+  "buys_24h": 13905,
+  "sells_24h": 6828,
+  "buy_sell_ratio": 2.0364674868189807,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T23:17:05.755694",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
