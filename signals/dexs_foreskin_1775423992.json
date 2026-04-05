@@ -1,0 +1,19 @@
+{
+  "pair_address": "2dbZhK8UsJsjEtuYTXNa2Xcc4nc5NMUCrPNQxijNEpA5",
+  "token_address": "BTbV7fxHgNHPVVK7ujWVpNXToDjns8o5qiWs2Vr6pump",
+  "symbol": "foreskin",
+  "name": "foreskin",
+  "price": "0.00008961",
+  "liquidity": 24033.48,
+  "mcap": 89620,
+  "volume_24h": 991331.54,
+  "price_change_24h": 177,
+  "buys_24h": 11347,
+  "sells_24h": 9497,
+  "buy_sell_ratio": 1.1947983573760135,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T21:19:52.862659",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

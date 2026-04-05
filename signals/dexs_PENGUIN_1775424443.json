@@ -1,0 +1,19 @@
+{
+  "pair_address": "3m4JWdUzCmb5dS2f11c96AEgBqAUgjX1o7HGifsk2z9r",
+  "token_address": "Gk6aiAoEuc5NVLGXsfJdqkrGunPbzF7SW1XtWEGEpump",
+  "symbol": "PENGUIN",
+  "name": "AGENT PENGUIN",
+  "price": "0.00005129",
+  "liquidity": 17112.77,
+  "mcap": 51291,
+  "volume_24h": 77746.27,
+  "price_change_24h": 55.8,
+  "buys_24h": 684,
+  "sells_24h": 526,
+  "buy_sell_ratio": 1.3003802281368821,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T21:27:23.305543",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

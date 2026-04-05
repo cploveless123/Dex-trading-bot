@@ -1,0 +1,19 @@
+{
+  "pair_address": "9W741NNxx1ZuPSYrW4u7n2GYcWSdYoTmjXR2bofSQN7J",
+  "token_address": "5LLik1wP7xrTtBnzpBjgrCxLPoR2zHq9Ur1Z5Vxqpump",
+  "symbol": "FINDER",
+  "name": "Lil\u2019 Finder Guy",
+  "price": "0.00007032",
+  "liquidity": 19955.82,
+  "mcap": 70320,
+  "volume_24h": 23510.68,
+  "price_change_24h": 113,
+  "buys_24h": 325,
+  "sells_24h": 203,
+  "buy_sell_ratio": 1.6009852216748768,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T21:04:51.031718",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

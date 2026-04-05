@@ -1,0 +1,19 @@
+{
+  "pair_address": "8DgNtk5i417VAqvfkMF2vedKdoQygvG8KfRh4MdURRUx",
+  "token_address": "CYTUg8qLd45EGbx7MXxSwR5PSMNoUck5SetxxSDHpump",
+  "symbol": "stonks",
+  "name": "stonks",
+  "price": "0.0003197",
+  "liquidity": 47182.02,
+  "mcap": 319719,
+  "volume_24h": 1833671.37,
+  "price_change_24h": 871,
+  "buys_24h": 15713,
+  "sells_24h": 13335,
+  "buy_sell_ratio": 1.1783277090363704,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T21:04:51.199658",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

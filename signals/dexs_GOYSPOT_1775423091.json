@@ -1,0 +1,19 @@
+{
+  "pair_address": "BfviMMi2fKFNYnvfhjZ2cwGfLRNVVsozUzhqHBqngHzR",
+  "token_address": "FLTNxJmfEyWnLniQWWuP5TXvbtVD1KK2uhdpb38ppump",
+  "symbol": "GOYSPOT",
+  "name": "GOYSPOT",
+  "price": "0.0001145",
+  "liquidity": 26140.21,
+  "mcap": 114515,
+  "volume_24h": 335631.96,
+  "price_change_24h": 260,
+  "buys_24h": 3859,
+  "sells_24h": 3031,
+  "buy_sell_ratio": 1.2731771692510723,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T21:04:51.178802",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
