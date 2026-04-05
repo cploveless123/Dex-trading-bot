@@ -1,19 +1,41 @@
 # Heartbeat Checklist - Run every 15 minutes
 
 ## Check Systems
-1. Are monitors running? `ps aux | grep -E "combined|gmgn|sim_trader" | grep -v grep`
-2. Check for new signals: `ls -lt /root/.openclaw/workspace/trading-bot/signals/ | head -5`
-3. Check trade results: `tail -3 /root/.openclaw/workspace/trading-bot/trades/sim_trades.jsonl`
+1. `ps aux | grep -E "combined|gmgn|sim_trader" | grep -v grep`
+2. Check signals: `ls -lt signals/ | head -5`
+3. Check trades: `tail -5 trades/sim_trades.jsonl`
 
-## If new signals/trades found
-Send Telegram update to Chris with:
-- New signals in GMGN format
-- New trade results with DexScreener links
-- Current balance and P&L
-- What I'm learning
+## Format for Chris (15-min update):
+
+```
+📊 15-MINUTE UPDATE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+💰 Balance: X.XXXX SOL (+XX.XX%)
+📈 Record: XW/0L | All TP2 hits!
+
+📋 RECENT TRADES:
+(foreach trade, newest first)
+
+💊 GMGN PUMP → ✅ WIN +0.XXXX SOL
+🔗 https://dexscreener.com/solana/TOKENADDRESS
+
+📡 NEW SIGNALS:
+(foreach new signal)
+
+💊 GMGN PUMP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+💰 SYMBOL
+📊 VOL +XX.X%
+💎 FDV: $XXXK | Liq: $XXXK
+🎯 TP1: +50% | TP2: +100% | Stop: -30%
+🔗 https://dexscreener.com/solana/TOKENADDRESS
+
+🧠 WHAT I'M LEARNING:
+- Pattern insight 1
+- Pattern insight 2
+```
 
 ## If systems down
-Restart them:
 ```
 cd /root/.openclaw/workspace/trading-bot
 /root/.openclaw/workspace/venv/bin/python scripts/combined_monitor.py &
@@ -22,9 +44,6 @@ cd /root/.openclaw/workspace/trading-bot
 ```
 
 ## Git push (hourly)
-Every hour, push to GitHub to backup:
 ```
-git -C /root/.openclaw/workspace add -A
-git -C /root/.openclaw/workspace commit -m "Update $(date)"
-git -C /root/.openclaw/workspace push origin master
+git -C /root/.openclaw/workspace add -A && git -C /root/.openclaw/workspace commit -m "Update $(date)" && git -C /root/.openclaw/workspace push origin master
 ```
