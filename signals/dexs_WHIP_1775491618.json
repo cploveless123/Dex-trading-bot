@@ -1,0 +1,19 @@
+{
+  "pair_address": "B3CWPrpZXiZZWXdpGP1BCi2uFpVoHmuT68EVzjtNzwZE",
+  "token_address": "B4ChW4MMQLEKrNDv1be74CdhkYc9Gr9YKVUXFEjMpump",
+  "symbol": "WHIP",
+  "name": "Bad Claude",
+  "price": "0.00003556",
+  "liquidity": 14511.38,
+  "mcap": 35561,
+  "volume_24h": 146659.11,
+  "price_change_24h": 5.46,
+  "buys_24h": 3722,
+  "sells_24h": 1780,
+  "buy_sell_ratio": 2.0910112359550563,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T16:06:58.449530",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

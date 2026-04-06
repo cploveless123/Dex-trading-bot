@@ -24,7 +24,7 @@ SLIPPAGE = 0.02  # 2% slippage
 TAX_FEE = 0.03   # 3% trading fees/taxes (simulated)
 
 # State
-balance = INITIAL_BALANCE
+balances = {"solana": 1.0, "ethereum": 1.0, "base": 1.0}
 positions = []
 closed_trades = []
 stats = {'total_trades': 0, 'wins': 0, 'losses': 0, 'best': 0, 'worst': 0}
@@ -191,14 +191,14 @@ def format_trade(trade):
     return output
 
 def load_history():
-    global balance, stats, closed_trades
+    global balances, stats, closed_trades
     if SIM_TRADES_FILE.exists():
         with open(SIM_TRADES_FILE, 'r') as f:
             for line in f:
                 if line.strip():
                     t = json.loads(line)
                     closed_trades.append(t)
-                    balance += t.get('amount_sol', POSITION_SIZE) + t.get('pnl_sol', 0)
+                    for c in balances: balances[c] += t.get('amount_sol', POSITION_SIZE) + t.get('pnl_sol', 0)
         stats['total_trades'] = len(closed_trades)
         stats['wins'] = sum(1 for t in closed_trades if t.get('pnl_sol', 0) > 0)
         stats['losses'] = sum(1 for t in closed_trades if t.get('pnl_sol', 0) <= 0)
@@ -233,6 +233,24 @@ def get_recent_signals():
 
 ALLOWED_CHAINS = ['solana', 'ethereum', 'base']
 
+# DEX to Chain mapping
+DEX_CHAIN_MAP = {
+    'solana': ['pumpswap', 'pumpfun', 'raydium', 'meteora', 'orca', 'jupiter', 'solana'],
+    'ethereum': ['uniswap', 'sushiswap', 'uniswapv3', 'eth', 'ethereum'],
+    'base': ['base', 'baseswap', 'aerodrome', 'basecamp'],
+    'bsc': ['pancakeswap', 'pancake', 'bsc', 'binance'],
+}
+
+def get_chain_from_dex(dex):
+    if not dex:
+        return None
+    dex = dex.lower()
+    for chain, dexes in DEX_CHAIN_MAP.items():
+        for d in dexes:
+            if d in dex:
+                return chain
+    return None
+
 def score_signal(sig):
     """
     Score signal with safety checks
@@ -247,12 +265,9 @@ def score_signal(sig):
     
     # Chain filter - only SOL, ETH, BASE
     dex = sig.get('dex', '').lower()
-    chain_allowed = False
-    for chain in ALLOWED_CHAINS:
-        if chain in dex or dex == '':
-            chain_allowed = True
-            break
-    if not chain_allowed and dex not in ['', 'unknown']:
+    chain = get_chain_from_dex(dex)
+    chain_allowed = chain in ALLOWED_CHAINS if chain else False
+    if not chain_allowed:
         return 0, False
     
     # === SAFETY CHECKS (must pass) ===
@@ -339,7 +354,7 @@ def simulate_price_movement(action):
         return random.uniform(-0.10, 0.80)
 
 def check_positions():
-    global balance, stats
+    global balances, stats
     
     now = datetime.now()
     closed = []
@@ -360,7 +375,7 @@ def check_positions():
         if net_change >= TP1_PCT and not pos.get('tp1_hit'):
             pos['tp1_hit'] = True
             pnl = (POSITION_SIZE / 2) * net_change
-            balance += (POSITION_SIZE / 2) + pnl
+            for c in balances: balances[c] += (POSITION_SIZE / 2) + pnl
             pos['tp1_pnl'] = pnl
             print(f"\n🎯 TP1 HIT! {pos['token']} at +{change_pct*100:.1f}% (net: +{net_change*100:.1f}%) — sold 50%")
         
@@ -368,7 +383,7 @@ def check_positions():
         elif net_change >= TP2_PCT and not pos.get('tp2_hit'):
             pos['tp2_hit'] = True
             pnl = (POSITION_SIZE / 2) * net_change
-            balance += (POSITION_SIZE / 2) + pnl
+            for c in balances: balances[c] += (POSITION_SIZE / 2) + pnl
             pos['closed'] = True
             pos['pnl_sol'] = pnl + pos.get('tp1_pnl', 0)
             pos['exit_reason'] = 'TP2'
@@ -390,7 +405,7 @@ def check_positions():
         # Check Stop Loss (after costs)
         elif net_change <= STOP_LOSS:
             pnl = POSITION_SIZE * net_change
-            balance += POSITION_SIZE + pnl
+            for c in balances: balances[c] += POSITION_SIZE + pnl
             pos['closed'] = True
             pos['pnl_sol'] = pnl
             pos['exit_reason'] = 'STOP_LOSS'
@@ -415,7 +430,7 @@ def check_positions():
             net_change_for_time = change_pct - SLIPPAGE - TAX_FEE
             if age_min > 120 and net_change_for_time > 0.20:
                 pnl = POSITION_SIZE * net_change_for_time
-                balance += POSITION_SIZE + pnl
+                for c in balances: balances[c] += POSITION_SIZE + pnl
                 pos['closed'] = True
                 pos['pnl_sol'] = pnl
                 pos['exit_reason'] = 'TIME_EXIT'
@@ -440,7 +455,7 @@ def check_positions():
     stats['total_trades'] = len(closed_trades)
 
 def open_position(signal):
-    global balance
+    global balances
     
     if len(positions) >= 3:
         return None
@@ -468,7 +483,9 @@ def open_position(signal):
     }
     
     positions.append(pos)
-    balance -= POSITION_SIZE
+    chain = get_chain_from_dex(signal.get('dex', 'solana'))
+    if balances.get(chain, 0) >= POSITION_SIZE:
+        balances[chain] -= POSITION_SIZE
     
     # Print signal in GMGN format
     print(f"\n{'='*50}")
@@ -486,21 +503,21 @@ def print_status():
     print(f"\n{'='*50}")
     print(f"📊 SIM WALLET STATUS")
     print(f"{'='*50}")
-    print(f"💰 Balance: {balance:.4f} SOL")
+    print(f"💰 Balance: {sum(balances.values()):.4f} SOL")
     print(f"📈 Open: {len(positions)} | Closed: {stats['total_trades']}")
     print(f"✅ Wins: {stats['wins']} | ❌ Losses: {stats['losses']}")
     print(f"📈 Win Rate: {win_rate:.1f}%")
     print(f"💵 Total P&L: {total_pnl:+.4f} SOL")
-    print(f"📊 Return: {((balance - INITIAL_BALANCE) / INITIAL_BALANCE * 100):+.2f}%")
+    print(f"📊 Return: {((sum(balances.values()) - 3.0) / INITIAL_BALANCE * 100):+.2f}%")
     print(f"{'='*50}")
 
 def main():
-    global balance, stats
+    global balances, stats
     
     load_history()
     
     print("🎮 TRADING SIMULATOR STARTED")
-    print(f"💰 Starting: {balance:.4f} SOL | Target: Beat initial")
+    print(f"💰 Starting: {sum(balances.values()):.4f} SOL | Target: Beat initial")
     print(f"📊 Rules: TP1 +50% | TP2 +100% | SL -30%")
     print(f"📝 History: {stats['total_trades']} trades ({stats['wins']}W/{stats['losses']}L)")
     
@@ -537,3 +554,25 @@ def main():
 
 if __name__ == "__main__":
     main()
+# Load multi-chain wallet
+def load_wallet():
+    global balancess
+    try:
+        with open('sim_wallet.json') as f:
+            data = json.load(f)
+            balances = data.get('balances', {'solana': 1.0, 'ethereum': 1.0, 'base': 1.0})
+    except:
+        balances = {'solana': 1.0, 'ethereum': 1.0, 'base': 1.0}
+
+# Override balance usage
+def get_chain_balance(chain):
+    return balances.get(chain, 0)
+
+def spend_chain_balance(chain, amount):
+    if balances.get(chain, 0) >= amount:
+        balances[chain] -= amount
+        return True
+    return False
+
+# Init
+load_wallet()
