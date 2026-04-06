@@ -1,0 +1,19 @@
+{
+  "pair_address": "DrbjfrX4or3WZEWEEEJCKFopLLTvTmgByoTRjF8wKywY",
+  "token_address": "A8GUvSnhJCmodZrknQyacSM4L6uixdmNZiXSarAVpump",
+  "symbol": "Oil",
+  "name": "Digital Oil",
+  "price": "0.00009026",
+  "liquidity": 23165.37,
+  "mcap": 90266,
+  "volume_24h": 149811.98,
+  "price_change_24h": 164,
+  "buys_24h": 2637,
+  "sells_24h": 1872,
+  "buy_sell_ratio": 1.4086538461538463,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T03:33:47.849483",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

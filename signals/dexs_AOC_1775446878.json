@@ -1,0 +1,19 @@
+{
+  "pair_address": "GYsn4voxr6dDKXCS7Z96vLubvNhKtDgqznWR6GYH8gt6",
+  "token_address": "b8Es4e4x75EmNzWZYqf9Drwm8W2x6LnFV7ZMpvXpump",
+  "symbol": "AOC",
+  "name": "The Next Generation Plan",
+  "price": "0.0003803",
+  "liquidity": 48186.85,
+  "mcap": 380317,
+  "volume_24h": 483339.6,
+  "price_change_24h": 622,
+  "buys_24h": 2961,
+  "sells_24h": 2004,
+  "buy_sell_ratio": 1.4775449101796407,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T03:41:18.327388",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
