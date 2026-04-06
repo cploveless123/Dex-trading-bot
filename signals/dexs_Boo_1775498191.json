@@ -1,0 +1,21 @@
+{
+  "pair_address": "FpjXiL9gZfiS5hppSLaxTRjuX978FdbFiZiGSmdHxvhU",
+  "token_address": "FkxCGmvWvYjLaxETEnoBHb917J4Ve5Rs8WVNE2bcpump",
+  "symbol": "Boo",
+  "name": "Boo Pomeranian",
+  "price": "0.00007342",
+  "liquidity": 20767.48,
+  "mcap": 73421,
+  "volume_24h": 102879.19,
+  "price_change_24h": 118,
+  "buys_24h": 3530,
+  "sells_24h": 703,
+  "buy_sell_ratio": 5.021337126600285,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T17:56:31.025591",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

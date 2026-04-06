@@ -1,0 +1,19 @@
+{
+  "pair_address": "0xeC6272f2D4E55b01936b1E2ba18A82088540531f",
+  "token_address": "0x2E1F4D0CC87a195957D1dD8E663451147Db3324b",
+  "symbol": "Mamesuke",
+  "name": "Mamesuke",
+  "price": "0.00000000001763",
+  "liquidity": 7069.17,
+  "mcap": 17633,
+  "volume_24h": 14685.59,
+  "price_change_24h": 922,
+  "buys_24h": 76,
+  "sells_24h": 33,
+  "buy_sell_ratio": 2.303030303030303,
+  "dex": "uniswap",
+  "analyzed_at": "2026-04-06T17:55:06.814668",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

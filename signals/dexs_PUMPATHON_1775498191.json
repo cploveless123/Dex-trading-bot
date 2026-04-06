@@ -1,0 +1,19 @@
+{
+  "pair_address": "2wqgxY47khXFd1zdzvpKaz3kNKGTtEHkun4wtv9PVfXT",
+  "token_address": "BvTZs8EqKuqLcSPWApaDrLfiyPhUefRwG4BQ4TPppump",
+  "symbol": "PUMPATHON",
+  "name": "PUMPATHON 3",
+  "price": "0.00006332",
+  "liquidity": 19335.94,
+  "mcap": 63329,
+  "volume_24h": 132537.94,
+  "price_change_24h": 88.07,
+  "buys_24h": 2124,
+  "sells_24h": 1509,
+  "buy_sell_ratio": 1.4075546719681908,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T17:56:30.981485",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

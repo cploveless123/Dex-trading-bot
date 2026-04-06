@@ -1,0 +1,20 @@
+{
+  "pair_address": "3S2ksmRtWPsqGkq6UKzTUnzY11YMfbZ3T2fZgqk7Juos",
+  "token_address": "3Q9tgeotdgWPWKRH6jtrvSjZjxqzDZpYYmazKf51RiU9",
+  "symbol": "VDOR",
+  "name": "Vanguard Digital Oil Reserve",
+  "price": "0.001798",
+  "liquidity": 171598.96,
+  "mcap": 1798358,
+  "volume_24h": 1500014.69,
+  "price_change_24h": 8256,
+  "buys_24h": 2119,
+  "sells_24h": 1986,
+  "buy_sell_ratio": 1.066968781470292,
+  "dex": "raydium",
+  "analyzed_at": "2026-04-06T17:40:05.794853",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}
