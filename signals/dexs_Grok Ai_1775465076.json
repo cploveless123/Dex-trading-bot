@@ -1,0 +1,20 @@
+{
+  "pair_address": "14Q4JiJ7KMd6KtEx4fFCkxqBkCdCqm8ACA9u4vaaKvCm",
+  "token_address": "9zsNTkgq6j6FRZpzLtbvW7wsgGhNGGiwaqLhNeDyMtUD",
+  "symbol": "Grok Ai",
+  "name": "Grok Coin\ud83e\udd16",
+  "price": "0.001626",
+  "liquidity": 163547.58,
+  "mcap": 1626066,
+  "volume_24h": 1002442.28,
+  "price_change_24h": 7037,
+  "buys_24h": 1547,
+  "sells_24h": 1488,
+  "buy_sell_ratio": 1.0396505376344085,
+  "dex": "raydium",
+  "analyzed_at": "2026-04-06T08:44:36.270367",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}

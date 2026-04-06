@@ -1,0 +1,19 @@
+{
+  "pair_address": "H52pnjeSwTVeqpUQbJ2XEhrUVvY9mrCW6cZAHyJnJrih",
+  "token_address": "EQfwFGXyB47Q9rsRBDn1p6batRZjgqfNEL8L63MKpump",
+  "symbol": "VLOODIMER",
+  "name": "Vloodimer Petin",
+  "price": "0.0001189",
+  "liquidity": 26569.33,
+  "mcap": 118939,
+  "volume_24h": 136598.09,
+  "price_change_24h": 250,
+  "buys_24h": 887,
+  "sells_24h": 683,
+  "buy_sell_ratio": 1.2986822840409955,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T08:44:36.252196",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

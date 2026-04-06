@@ -1,0 +1,19 @@
+{
+  "pair_address": "J3mQi742wkupsUtYj2fkcMpaMH9f8T5rC8TdHLdfyTXm",
+  "token_address": "3HguawtaJHGVk18hiFz8NEk4esirMefpipLEzDBxpump",
+  "symbol": "MILF",
+  "name": "MILF",
+  "price": "0.00005761",
+  "liquidity": 18396.83,
+  "mcap": 57614,
+  "volume_24h": 69803.93,
+  "price_change_24h": 70.63,
+  "buys_24h": 999,
+  "sells_24h": 1212,
+  "buy_sell_ratio": 0.8242574257425742,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T08:43:06.173415",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
