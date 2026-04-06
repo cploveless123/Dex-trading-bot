@@ -1,0 +1,19 @@
+{
+  "pair_address": "DqnjjKrr4GDS3ZRtCATUTprie8rXQG4usptj34ou4jSm",
+  "token_address": "BksagHFY9AQTHNtUVRn6ZtjMCg6zEmZVcQMVaD6Xpump",
+  "symbol": "SAM",
+  "name": "Sam Altcoin",
+  "price": "0.0002095",
+  "liquidity": 35541.46,
+  "mcap": 209539,
+  "volume_24h": 272853.49,
+  "price_change_24h": 427,
+  "buys_24h": 1720,
+  "sells_24h": 1275,
+  "buy_sell_ratio": 1.3490196078431373,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T09:56:40.649292",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
