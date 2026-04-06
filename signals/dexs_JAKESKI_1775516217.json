@@ -1,0 +1,19 @@
+{
+  "pair_address": "2RxeTkCjXJb1tLVx8kNDSKf8yNrBjrX4aCJEeELwdCaz",
+  "token_address": "2qy4Qcazpt7r7caLCZHV6cA6muFrNWs8h39GzRoAt5wL",
+  "symbol": "JAKESKI",
+  "name": "Jakeski",
+  "price": "0.000005669",
+  "liquidity": 0,
+  "mcap": 5669.77,
+  "volume_24h": 5173.31,
+  "price_change_24h": 142,
+  "buys_24h": 80,
+  "sells_24h": 39,
+  "buy_sell_ratio": 2.051282051282051,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-06T22:56:57.189102",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
