@@ -1,0 +1,19 @@
+{
+  "pair_address": "Hi1JqMmubGi5D2K9NL18TEf5DtHJsawea5m27FfdoSTB",
+  "token_address": "DD6CQVDCvkcEEpgb3bNviss4hVF6JwVzCSYpVTCgpump",
+  "symbol": "stonks",
+  "name": "stankmemes.com",
+  "price": "0.00001672",
+  "liquidity": 0,
+  "mcap": 16726.33,
+  "volume_24h": 29321.63,
+  "price_change_24h": 601,
+  "buys_24h": 387,
+  "sells_24h": 188,
+  "buy_sell_ratio": 2.0585106382978724,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-05T23:51:38.120378",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "pair_address": "92YYV1B66ERETbvUYj55FCkVZKdzDA746vnHNgAzTPQU",
+  "token_address": "HJuCzYxCukwQm2gcfNXYxC33NS2sgVV7WyFHNzySpump",
+  "symbol": "SUPERCAT",
+  "name": "SuperCat",
+  "price": "0.0001116",
+  "liquidity": 25844.04,
+  "mcap": 111659,
+  "volume_24h": 159453.93,
+  "price_change_24h": 232,
+  "buys_24h": 11262,
+  "sells_24h": 1485,
+  "buy_sell_ratio": 7.583838383838384,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T23:35:07.004683",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

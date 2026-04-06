@@ -1,0 +1,19 @@
+{
+  "pair_address": "8UCPZzG3katVS2MzPzJbcqHmUcnBoJbm4S33KLreUGQ4",
+  "token_address": "JEFEs45DdhAauqJcGniBzPuayL48VBJrGnMkmxUspump",
+  "symbol": "cumcoin",
+  "name": "cumcoin",
+  "price": "0.00006320",
+  "liquidity": 19460.39,
+  "mcap": 63209,
+  "volume_24h": 208025.43,
+  "price_change_24h": 59.88,
+  "buys_24h": 2155,
+  "sells_24h": 1516,
+  "buy_sell_ratio": 1.4215039577836412,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T23:56:08.448207",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

@@ -19,6 +19,10 @@ TP1_PCT = 0.50
 TP2_PCT = 1.00
 STOP_LOSS = -0.30
 
+# Costs
+SLIPPAGE = 0.02  # 2% slippage
+TAX_FEE = 0.03   # 3% trading fees/taxes (simulated)
+
 # State
 balance = INITIAL_BALANCE
 positions = []
@@ -306,39 +310,46 @@ def check_positions():
         entry_price = pos.get('entry_price', 0.0001)
         change_pct = simulate_price_movement(action)
         
+        # Apply costs to the raw change
+        net_change = change_pct - SLIPPAGE - TAX_FEE
+        
         # Check TP1
-        if change_pct >= TP1_PCT and not pos.get('tp1_hit'):
+        if net_change >= TP1_PCT and not pos.get('tp1_hit'):
             pos['tp1_hit'] = True
-            pnl = (POSITION_SIZE / 2) * change_pct
+            pnl = (POSITION_SIZE / 2) * net_change
             balance += (POSITION_SIZE / 2) + pnl
             pos['tp1_pnl'] = pnl
-            print(f"\n🎯 TP1 HIT! {pos['token']} at +{change_pct*100:.1f}% — sold 50%")
+            print(f"\n🎯 TP1 HIT! {pos['token']} at +{change_pct*100:.1f}% (net: +{net_change*100:.1f}%) — sold 50%")
         
         # Check TP2
-        elif change_pct >= TP2_PCT and not pos.get('tp2_hit'):
+        elif net_change >= TP2_PCT and not pos.get('tp2_hit'):
             pos['tp2_hit'] = True
-            pnl = (POSITION_SIZE / 2) * change_pct
+            pnl = (POSITION_SIZE / 2) * net_change
             balance += (POSITION_SIZE / 2) + pnl
             pos['closed'] = True
             pos['pnl_sol'] = pnl + pos.get('tp1_pnl', 0)
             pos['exit_reason'] = 'TP2'
             pos['closed_at'] = now.isoformat()
+            pos['gross_pct'] = change_pct
+            pos['net_pct'] = net_change
             closed.append(pos)
             stats['wins'] += 1
             stats['best'] = max(stats['best'], pos['pnl_sol'])
             save_trade(pos)
             
-            print(f"\n🎯🎯 TP2 HIT! {pos['token']} at +{change_pct*100:.1f}% — FULL EXIT")
+            print(f"\n🎯🎯 TP2 HIT! {pos['token']} at +{change_pct*100:.1f}% (net: +{net_change*100:.1f}%) — FULL EXIT")
             print(f"   💰 Profit: +{pos['pnl_sol']:.4f} SOL")
         
-        # Check Stop Loss
-        elif change_pct <= STOP_LOSS:
-            pnl = POSITION_SIZE * change_pct
+        # Check Stop Loss (after costs)
+        elif net_change <= STOP_LOSS:
+            pnl = POSITION_SIZE * net_change
             balance += POSITION_SIZE + pnl
             pos['closed'] = True
             pos['pnl_sol'] = pnl
             pos['exit_reason'] = 'STOP_LOSS'
             pos['closed_at'] = now.isoformat()
+            pos['gross_pct'] = change_pct
+            pos['net_pct'] = net_change
             closed.append(pos)
             stats['losses'] += 1
             stats['worst'] = min(stats['worst'], pnl)
@@ -351,19 +362,22 @@ def check_positions():
         elif pos.get('opened_at'):
             opened = datetime.fromisoformat(pos['opened_at'])
             age_min = (now - opened).total_seconds() / 60
-            if age_min > 120 and change_pct > 0.20:
-                pnl = POSITION_SIZE * change_pct
+            net_change_for_time = change_pct - SLIPPAGE - TAX_FEE
+            if age_min > 120 and net_change_for_time > 0.20:
+                pnl = POSITION_SIZE * net_change_for_time
                 balance += POSITION_SIZE + pnl
                 pos['closed'] = True
                 pos['pnl_sol'] = pnl
                 pos['exit_reason'] = 'TIME_EXIT'
                 pos['closed_at'] = now.isoformat()
+                pos['gross_pct'] = change_pct
+                pos['net_pct'] = net_change_for_time
                 closed.append(pos)
                 stats['wins'] += 1
                 stats['best'] = max(stats['best'], pnl)
                 save_trade(pos)
                 
-                print(f"\n⏰ TIME EXIT! {pos['token']} at +{change_pct*100:.1f}% after {age_min:.0f}m")
+                print(f"\n⏰ TIME EXIT! {pos['token']} at +{change_pct*100:.1f}% (net: +{net_change_for_time*100:.1f}%) after {age_min:.0f}m")
                 print(f"   💰 Profit: +{pnl:.4f} SOL")
     
     for pos in closed:

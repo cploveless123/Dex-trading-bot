@@ -1,0 +1,19 @@
+{
+  "pair_address": "ETGEY3U38ynmDHHnXYgXtsXCPVs4VoFYPR97jektw1wQ",
+  "token_address": "39fGSGLpbP9S9Qv5npgjmTB5FG7KMkLz7TxNkFmYpump",
+  "symbol": "Fertcuin",
+  "name": "Fertcuin",
+  "price": "0.00006139",
+  "liquidity": 18891.3,
+  "mcap": 61390,
+  "volume_24h": 45130.13,
+  "price_change_24h": 82.35,
+  "buys_24h": 647,
+  "sells_24h": 452,
+  "buy_sell_ratio": 1.4314159292035398,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-05T23:39:37.342216",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
