@@ -1,0 +1,19 @@
+{
+  "pair_address": "CxskJzvojCdcaxqAyKpSNKHQXF4zTszoKe911xxHwjiL",
+  "token_address": "9X76LtpKEYoJUD5KcPJtjumyxbAdNnLppCvgTJmypump",
+  "symbol": "DIAPER",
+  "name": "The Diaper",
+  "price": "0.00004252",
+  "liquidity": 15677.89,
+  "mcap": 42526,
+  "volume_24h": 36473.8,
+  "price_change_24h": 26.32,
+  "buys_24h": 840,
+  "sells_24h": 396,
+  "buy_sell_ratio": 2.121212121212121,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T21:47:46.708261",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
