@@ -9,12 +9,12 @@ from datetime import datetime
 from pathlib import Path
 from telethon import TelegramClient
 
-SESSION = "/root/.openclaw/workspace/trading-bot/gmgn_monitor.session"
+SESSION = "/root/Dex-trading-bot/gmgn_monitor.session"
 API_ID = 30571469
 API_HASH = "85d1c3567f4182f4e4a88334ec04b935"
 CHANNEL = '@gmgnsignals'
-SIGNALS_DIR = Path("/root/.openclaw/workspace/trading-bot/signals")
-JOURNAL_FILE = Path("/root/.openclaw/workspace/trading-bot/trades/learning_journal.jsonl")
+SIGNALS_DIR = Path("/root/Dex-trading-bot/signals")
+JOURNAL_FILE = Path("/root/Dex-trading-bot/trades/learning_journal.jsonl")
 
 def get_dexscreener_link(token_addr):
     """Generate DexScreener link for token"""

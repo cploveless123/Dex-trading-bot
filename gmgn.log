@@ -1,4 +1,16 @@
-/root/.openclaw/workspace/venv/bin/python: can't open file '/root/.openclaw/workspace/scripts/gmgn_poll_monitor.py': [Errno 2] No such file or directory
-/root/.openclaw/workspace/venv/bin/python: can't open file '/root/.openclaw/workspace/scripts/gmgn_poll_monitor.py': [Errno 2] No such file or directory
-/root/.openclaw/workspace/venv/bin/python: can't open file '/root/.openclaw/workspace/scripts/gmgn_poll_monitor.py': [Errno 2] No such file or directory
-/root/.openclaw/workspace/venv/bin/python: can't open file '/root/.openclaw/workspace/scripts/gmgn_poll_monitor.py': [Errno 2] No such file or directory
+🎯 GMGN Monitor Starting...
+   Channel: GMGN.AI (6887194564)
+Traceback (most recent call last):
+  File "/root/Dex-trading-bot/gmgn_monitor.py", line 101, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/root/Dex-trading-bot/gmgn_monitor.py", line 82, in main
+    await client.start()
+  File "/root/Dex-trading-bot/venv/lib/python3.10/site-packages/telethon/client/auth.py", line 135, in _start
+    await self.connect()
+  File "/root/Dex-trading-bot/venv/lib/python3.10/site-packages/telethon/client/telegrambaseclient.py", line 593, in connect
+    await self._sender.send(functions.InvokeWithLayerRequest(LAYER, req))
+telethon.errors.rpcerrorlist.AuthKeyDuplicatedError: The authorization key (session file) was used under two different IP addresses simultaneously, and can no longer be used. Use the same session exclusively, or use different sessions (caused by InvokeWithLayerRequest(InitConnectionRequest(GetConfigRequest)))
