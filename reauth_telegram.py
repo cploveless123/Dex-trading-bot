@@ -10,13 +10,13 @@ from telethon.errors import SessionPasswordNeededError
 from dotenv import load_dotenv
 
 # Load config
-dotenv_path = Path(__file__).parent.parent / ".env"
+dotenv_path = Path(__file__).parent / ".env"
 load_dotenv(dotenv_path)
 
-SESSION_FILE = "/root/.openclaw/workspace/trading-bot/gmgn_monitor.session"
-API_ID = int(os.getenv("TELEGRAM_API_ID", ""))
-API_HASH = os.getenv("TELEGRAM_API_HASH", "")
-PHONE = os.getenv("TELEGRAM_PHONE", "")
+SESSION_FILE = "/root/Dex-trading-bot/gmgn_monitor.session"
+API_ID = 30571469
+API_HASH = "85d1c3567f4182f4e4a88334ec04b935"
+PHONE = "+19894393061"
 
 async def reauth():
     print("🔐 Telegram Re-auth")
