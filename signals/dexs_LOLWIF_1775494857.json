@@ -1,0 +1,19 @@
+{
+  "pair_address": "DmZMixXwwzMyhoSq33hnnRbp58MzP6XcDaZ916Aq2GNi",
+  "token_address": "2iLfhsStokdTx2gDs1PTLMd8gPugqEJ2e8c4nbrqpump",
+  "symbol": "LOLWIF",
+  "name": "Lol Wif Hat",
+  "price": "0.00006882",
+  "liquidity": 20130.45,
+  "mcap": 68824,
+  "volume_24h": 129670.7,
+  "price_change_24h": 83.89,
+  "buys_24h": 1024,
+  "sells_24h": 760,
+  "buy_sell_ratio": 1.3473684210526315,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T17:00:57.154847",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

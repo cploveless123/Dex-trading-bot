@@ -1,0 +1,19 @@
+{
+  "pair_address": "9yuirENV6txiwvMSZnaTffWxXnuheUZoiJBP2Vsi96B1",
+  "token_address": "9nGTegp6aMKcWqgCnwr8VoGvUn1hEqaD972sr8DXGDkt",
+  "symbol": "Muppets",
+  "name": "The Muppets",
+  "price": "0.00001181",
+  "liquidity": 0,
+  "mcap": 11813.62,
+  "volume_24h": 8290.67,
+  "price_change_24h": 381,
+  "buys_24h": 120,
+  "sells_24h": 45,
+  "buy_sell_ratio": 2.6666666666666665,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-06T17:03:57.411691",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
