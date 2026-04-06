@@ -1,0 +1,19 @@
+{
+  "pair_address": "SZnQudQsXdV6QeifdWZRsAKNpXAh1xHddBD84a8XFAD",
+  "token_address": "26qVGLVAUARpANsSNpDeNok1aHh2FBiKuqQm5uadpump",
+  "symbol": "Garry",
+  "name": "Felix's Garry",
+  "price": "0.00001362",
+  "liquidity": 0,
+  "mcap": 13620.51,
+  "volume_24h": 38234.52,
+  "price_change_24h": 347,
+  "buys_24h": 925,
+  "sells_24h": 374,
+  "buy_sell_ratio": 2.4732620320855614,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-06T23:28:28.949545",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

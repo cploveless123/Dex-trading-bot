@@ -1,0 +1,19 @@
+{
+  "pair_address": "BWREKWbfKobNLzQzxbu1epgjH7RNd9rQci5j6Xxu8DC6",
+  "token_address": "u5YhH6pSjsi368DBYENfuQrx75AbqbsNe5uo2MWpcgJ",
+  "symbol": "trust",
+  "name": "trust the process",
+  "price": "0.000008067",
+  "liquidity": 0,
+  "mcap": 8067.66,
+  "volume_24h": 22480.72,
+  "price_change_24h": 254,
+  "buys_24h": 555,
+  "sells_24h": 237,
+  "buy_sell_ratio": 2.3417721518987342,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-06T23:10:22.025660",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
