@@ -1,0 +1,20 @@
+{
+  "pair_address": "6Q9p6FkFvrBHQ6FLBs5p9hctdyq8dRhTauvnzcuU72Fz",
+  "token_address": "6ukaPtXR5ZQeanhUAoJVq1b69BZd3deB2mC7JResy2EZ",
+  "symbol": "BLUPE",
+  "name": "BLUE PEPE",
+  "price": "0.00000005317",
+  "liquidity": 63892.61,
+  "mcap": 53179,
+  "volume_24h": 815983.36,
+  "price_change_24h": 178,
+  "buys_24h": 3239,
+  "sells_24h": 2002,
+  "buy_sell_ratio": 1.6178821178821179,
+  "dex": "raydium",
+  "analyzed_at": "2026-04-06T12:55:21.465515",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}
