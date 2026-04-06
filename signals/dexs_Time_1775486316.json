@@ -1,0 +1,19 @@
+{
+  "pair_address": "2EnFiGTT9STovQnP5GiKis4y5qhAycxD4QwbZ9StGiBR",
+  "token_address": "3Fh92J5Hetd3oYam6VsBTj2hETfLjhSQvPPyi3qWdKQY",
+  "symbol": "Time",
+  "name": "Don't Waste Time With Crypto",
+  "price": "0.0003582",
+  "liquidity": 48662.54,
+  "mcap": 358276,
+  "volume_24h": 1051166.13,
+  "price_change_24h": 959,
+  "buys_24h": 8944,
+  "sells_24h": 9474,
+  "buy_sell_ratio": 0.9440574203082119,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T14:38:36.643214",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
