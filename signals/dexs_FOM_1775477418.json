@@ -1,0 +1,19 @@
+{
+  "pair_address": "0x2f07180a22C9024b3a4aEAAE3F94477Ad7c55eE3",
+  "token_address": "0x7A487d5C9f0a31602c969706456F4AF9edbeFFfF",
+  "symbol": "FOM",
+  "name": "Freedom of Money",
+  "price": "0.0001108",
+  "liquidity": 31127.17,
+  "mcap": 110821,
+  "volume_24h": 139774.54,
+  "price_change_24h": 67.57,
+  "buys_24h": 948,
+  "sells_24h": 956,
+  "buy_sell_ratio": 0.9916317991631799,
+  "dex": "pancakeswap",
+  "analyzed_at": "2026-04-06T12:10:18.399154",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

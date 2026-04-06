@@ -1,0 +1,19 @@
+{
+  "pair_address": "FsuXWjQM5Q1vaYuY9L9NoRAUzy6Bc4S4XHsh9V4Q5rXU",
+  "token_address": "9CCwbjhmmbFSshq7GiFvM2qCtU73yrYpq6t3WHwDpump",
+  "symbol": "tronks",
+  "name": "tronks",
+  "price": "0.0001017",
+  "liquidity": 24571.72,
+  "mcap": 101779,
+  "volume_24h": 105479.64,
+  "price_change_24h": 198,
+  "buys_24h": 5639,
+  "sells_24h": 2918,
+  "buy_sell_ratio": 1.9324880054832076,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T12:02:48.002241",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
