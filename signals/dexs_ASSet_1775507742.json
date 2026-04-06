@@ -1,0 +1,19 @@
+{
+  "pair_address": "473hFWQp3yCkfcNdbvQqZp6W22fwvR381Qfy7mtTwVJT",
+  "token_address": "14MMze4dqb3pFbenkiQMLDYMVHYn1i17xMSJfmjfpump",
+  "symbol": "ASSet",
+  "name": "Real World ASSet",
+  "price": "0.00001054",
+  "liquidity": 0,
+  "mcap": 10543.24,
+  "volume_24h": 5897.41,
+  "price_change_24h": 304,
+  "buys_24h": 107,
+  "sells_24h": 49,
+  "buy_sell_ratio": 2.183673469387755,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-06T20:35:42.190781",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

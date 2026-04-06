@@ -1,0 +1,19 @@
+{
+  "pair_address": "C36ocwC59SXDAgkkUBV2yPXvNdYVq4W7qusEprsyvRhB",
+  "token_address": "tE6fNafUUkKQMgDbfqog9SooeQU4D4eAzdqMExRpump",
+  "symbol": "$dbble",
+  "name": "Dabble",
+  "price": "0.00004445",
+  "liquidity": 16027.98,
+  "mcap": 44456,
+  "volume_24h": 3686.28,
+  "price_change_24h": 31.61,
+  "buys_24h": 224,
+  "sells_24h": 73,
+  "buy_sell_ratio": 3.0684931506849313,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T20:31:17.327048",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

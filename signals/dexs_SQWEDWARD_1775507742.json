@@ -1,0 +1,19 @@
+{
+  "pair_address": "FPkUXnm8H5HoAJ8a1ggoMpGSSB4qzmZDkcjPH8Esn4Wh",
+  "token_address": "HrY9A1eEtQfTDSxqumZX7YPS3MztzYX9JmXP2mAPpump",
+  "symbol": "SQWEDWARD",
+  "name": "SQWEDWARD",
+  "price": "0.0001078",
+  "liquidity": 25626.08,
+  "mcap": 107821,
+  "volume_24h": 280014.8,
+  "price_change_24h": 219,
+  "buys_24h": 1735,
+  "sells_24h": 1351,
+  "buy_sell_ratio": 1.2842339008142116,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T20:35:42.243233",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

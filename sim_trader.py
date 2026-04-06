@@ -303,7 +303,7 @@ def score_signal(sig):
     if mcap and mcap < 9000:
         return 0, False
     # Liquidity >= 9K
-    if liquidity and liquidity < 9000:
+    if liquidity is not None and liquidity < 9000 and liquidity > 0:
         return 0, False
     # 1hr volume >= 5K
     vol_1h = sig.get("volume_1h", 0)

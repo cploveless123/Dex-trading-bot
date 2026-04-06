@@ -1,0 +1,21 @@
+{
+  "pair_address": "AG1BPCYRPsqVa3kNoA39vPCwvjEijLyb2LdP4iBbjRXP",
+  "token_address": "9h49YjtCDHfvdDwiDkcr1YsqTm59dX3y6GtbcjSXpump",
+  "symbol": "STNKS",
+  "name": "STNKS",
+  "price": "0.0001034",
+  "liquidity": 24831.91,
+  "mcap": 103432,
+  "volume_24h": 157013.19,
+  "price_change_24h": 205,
+  "buys_24h": 9409,
+  "sells_24h": 1178,
+  "buy_sell_ratio": 7.987266553480476,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T20:49:18.655461",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}
