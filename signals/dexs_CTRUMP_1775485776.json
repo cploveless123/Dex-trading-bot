@@ -1,0 +1,19 @@
+{
+  "pair_address": "3VKBhPkkebaSmLfNaHWLqNNpF5nMsiygMg52BBLFqasA",
+  "token_address": "CHTkPMd6NoDAL7ddVDXREjBdJk1Xt9SVLZWW6g8hPqKS",
+  "symbol": "CTRUMP",
+  "name": "Cry Trump",
+  "price": "0.00001728",
+  "liquidity": 11995.84,
+  "mcap": 17285,
+  "volume_24h": 15320.62,
+  "price_change_24h": 733,
+  "buys_24h": 226,
+  "sells_24h": 207,
+  "buy_sell_ratio": 1.0917874396135265,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T14:29:36.118424",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

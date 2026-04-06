@@ -1,0 +1,19 @@
+{
+  "pair_address": "5dzYkSuk2bPxUm9x5c6KLoRBK6KhDPue2vJhxhepCxdA",
+  "token_address": "G7ax5miWdsmRgjuSRxbfWj1Z26rHRrvkDc2kKcoCYwyP",
+  "symbol": "\ub3fc\uc9c0",
+  "name": "\uc0b4\ucc10 \ubabb\uc0dd\uae34 \ub3fc\uc9c0",
+  "price": "0.0001067",
+  "liquidity": 26122.28,
+  "mcap": 106705,
+  "volume_24h": 600202.64,
+  "price_change_24h": 233,
+  "buys_24h": 6587,
+  "sells_24h": 5714,
+  "buy_sell_ratio": 1.1527826391319567,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T14:15:25.721778",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

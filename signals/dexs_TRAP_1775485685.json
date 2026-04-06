@@ -1,0 +1,21 @@
+{
+  "pair_address": "5N1Tc4zH7ayFSdwp6FcBFJMezc3Jtpqw5ja4XbtDbxhu",
+  "token_address": "3rmTtuMfZ2tSnYb64Y5KKaF8urjXEegy7rzzNoBcTRAP",
+  "symbol": "TRAP",
+  "name": "TRAP",
+  "price": "0.002846",
+  "liquidity": 129970.89,
+  "mcap": 2846259,
+  "volume_24h": 65786.63,
+  "price_change_24h": 190466,
+  "buys_24h": 1833,
+  "sells_24h": 20,
+  "buy_sell_ratio": 91.65,
+  "dex": "meteora",
+  "analyzed_at": "2026-04-06T14:28:04.763321",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "pair_address": "C79JNgvLBn1x8oaLFwMAR5NfzjSKD4qjdS7PQVrcDYxi",
+  "token_address": "DdszrDADuiHYbVqS6GoJHhcaH31P9dDXYcMhFqrrpump",
+  "symbol": "MOON",
+  "name": "MOON",
+  "price": "0.00006389",
+  "liquidity": 19342.07,
+  "mcap": 63892,
+  "volume_24h": 15196.69,
+  "price_change_24h": 58.33,
+  "buys_24h": 328,
+  "sells_24h": 273,
+  "buy_sell_ratio": 1.2014652014652014,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T14:15:25.938458",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

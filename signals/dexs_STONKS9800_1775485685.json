@@ -1,0 +1,19 @@
+{
+  "pair_address": "3YxvfRNYUCkFReuqC8h2o3cNuPV1V7BXj3ydXwCkw7k4",
+  "token_address": "6nGd97aWcKe87MFyck61yMS8vPJnWgGCy2iAHjbFpump",
+  "symbol": "STONKS9800",
+  "name": "STONKS9800",
+  "price": "0.00001732",
+  "liquidity": 0,
+  "mcap": 17323.59,
+  "volume_24h": 44662.72,
+  "price_change_24h": 606,
+  "buys_24h": 1094,
+  "sells_24h": 371,
+  "buy_sell_ratio": 2.9487870619946093,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-06T14:28:04.652179",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

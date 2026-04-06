@@ -1,0 +1,20 @@
+{
+  "pair_address": "Bimp9bACYHE3UBZZoYS2agxT9ap2Dwma4XdKaD6EUDwK",
+  "token_address": "6cePryZ53YWAhQKm4v68HKzzJMCsLadxqAfXHUAmpump",
+  "symbol": "\ub3fc\uc9c0",
+  "name": "\uc0b4\ucc10 \ubabb\uc0dd\uae34 \ub3fc\uc9c0",
+  "price": "0.0001397",
+  "liquidity": 29217.09,
+  "mcap": 139772,
+  "volume_24h": 328631.37,
+  "price_change_24h": 258,
+  "buys_24h": 4559,
+  "sells_24h": 1685,
+  "buy_sell_ratio": 2.705637982195846,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T14:28:04.917813",
+  "signals": [
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

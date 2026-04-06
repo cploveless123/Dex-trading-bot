@@ -1,0 +1,19 @@
+{
+  "pair_address": "2gECzwtNuvfXxroY2YNS1tqdVPeVU7SFYW7ZiyNbd2YV",
+  "token_address": "FomswBZWCXN7tewoo3D7pSEnDA14jcySdiXWZxyLpump",
+  "symbol": "TIME",
+  "name": "The Most Valuable Currency",
+  "price": "0.000007179",
+  "liquidity": 0,
+  "mcap": 7179.71,
+  "volume_24h": 5605.94,
+  "price_change_24h": 186,
+  "buys_24h": 111,
+  "sells_24h": 55,
+  "buy_sell_ratio": 2.018181818181818,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-06T14:13:26.648096",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
