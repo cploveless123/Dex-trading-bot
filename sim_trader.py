@@ -260,17 +260,17 @@ def score_signal(sig):
     
     # Check rug probability
     rug_prob = sig.get('rug_probability', 0)
-    if rug_prob > 30:
+    if rug_prob > 70:
         safety_issues.append(f"Rug Prob: {rug_prob}%")
     
     # Check top holder %
     top10 = sig.get('top_10_pct', 0)
-    if top10 > 50:
+    if top10 > 70:
         safety_issues.append(f"Top10: {top10}%")
     
     # Check holder count
     holders = sig.get('holders', 999)
-    if holders < 10:
+    if holders < 5:
         safety_issues.append(f"Holders: {holders}")
     
     # Check dev balance (high = risky)
