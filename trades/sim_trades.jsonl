@@ -1,3 +1,2 @@
 
-{"token": "1.46M", "token_address": "EiNzsaaVMmaeanCdUPcubGRcSBwzSyqu8N6XpfuApump", "amount_sol": 0.1, "entry_price": 0.0001, "action": "BUY", "source": "dexscreener", "opened_at": "2026-04-06T18:25:23", "closed": false, "pnl_sol": 0}
-{"token": "AIRENA", "token_address": "CAF2WaWy2oPgXkCLUXeFbHtKtB6yNqhBKEZgDUJjpump", "amount_sol": 0.1, "entry_price": 0.0001, "action": "BUY", "source": "dexscreener", "opened_at": "2026-04-06T18:28:00", "closed": false, "pnl_sol": 0}
+{"token": "CINOT", "token_address": "5b8JHKDQjDcfr5ywjuk4ZRxWa7G6M9Ts1TAyu322pump", "amount_sol": 0.1, "entry_price": 0.0001, "action": "BUY", "source": "dexscreener", "opened_at": "2026-04-06T18:51:00", "closed": false, "pnl_sol": 0, "mcap": 112447, "liquidity": 25942}

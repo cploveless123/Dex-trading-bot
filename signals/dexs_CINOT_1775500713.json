@@ -1,0 +1,19 @@
+{
+  "pair_address": "9qjvptjXXiFyxCGxCMfTcFwYJzcQJ588MaU99aiZdHKS",
+  "token_address": "5b8JHKDQjDcfr5ywjuk4ZRxWa7G6M9Ts1TAyu322pump",
+  "symbol": "CINOT",
+  "name": "Kia Cinot",
+  "price": "0.0001124",
+  "liquidity": 25942.93,
+  "mcap": 112447,
+  "volume_24h": 180071.24,
+  "price_change_24h": 232,
+  "buys_24h": 1268,
+  "sells_24h": 826,
+  "buy_sell_ratio": 1.5351089588377724,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T18:38:33.849314",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

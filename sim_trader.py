@@ -297,6 +297,18 @@ def score_signal(sig):
     chain_allowed = chain in ALLOWED_CHAINS if chain else False
     if not chain_allowed:
         return 0, False
+
+    # === MINIMUM REQUIREMENTS ===
+    # Market cap >= 9K
+    if mcap and mcap < 9000:
+        return 0, False
+    # Liquidity >= 9K
+    if liquidity and liquidity < 9000:
+        return 0, False
+    # 1hr volume >= 5K
+    vol_1h = sig.get("volume_1h", 0)
+    if vol_1h and vol_1h < 5000:
+        return 0, False
     
     # === SAFETY CHECKS (must pass) ===
     safety_issues = []

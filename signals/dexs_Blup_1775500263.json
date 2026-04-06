@@ -1,0 +1,19 @@
+{
+  "pair_address": "AuPw8Re5bNNR6x6xEdm5PjL8c19CDBsEae9a8QcKBQij",
+  "token_address": "HBNteavMvxktPSaSLL4chXQNWdsH4Tz8Yny3eUoPpump",
+  "symbol": "Blup",
+  "name": "Blup",
+  "price": "0.00007103",
+  "liquidity": 20464.14,
+  "mcap": 71037,
+  "volume_24h": 82755.23,
+  "price_change_24h": 111,
+  "buys_24h": 1589,
+  "sells_24h": 1182,
+  "buy_sell_ratio": 1.344331641285956,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T18:31:03.333380",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

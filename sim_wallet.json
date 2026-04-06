@@ -1,18 +1,5 @@
 {
-  "balances": {
-    "solana": 0.8,
-    "ethereum": 1.0,
-    "base": 1.0
-  },
-  "positions": [
-    {"token": "1.46M", "address": "EiNzsaaVMmaeanCdUPcubGRcSBwzSyqu8N6XpfuApump", "size": 0.1, "entry_price": 0.0001},
-    {"token": "AIRENA", "address": "CAF2WaWy2oPgXkCLUXeFbHtKtB6yNqhBKEZgDUJjpump", "size": 0.1, "entry_price": 0.0001}
-  ],
-  "stats": {
-    "total_trades": 2,
-    "wins": 0,
-    "losses": 0,
-    "best": 0,
-    "worst": 0
-  }
+  "balances": {"solana": 0.9, "ethereum": 1.0, "base": 1.0},
+  "positions": [{"token": "CINOT", "address": "5b8JHKDQjDcfr5ywjuk4ZRxWa7G6M9Ts1TAyu322pump", "size": 0.1, "entry_price": 0.0001, "mcap": 112447}],
+  "stats": {"total_trades": 1, "wins": 0, "losses": 0, "best": 0, "worst": 0}
 }

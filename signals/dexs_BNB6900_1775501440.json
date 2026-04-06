@@ -1,0 +1,19 @@
+{
+  "pair_address": "0x28e1Da705226eEB19B62905a7C75ac74C08F6377",
+  "token_address": "0x2360a223F394e2086A631f6a546e5cf5AEB44444",
+  "symbol": "BNB6900",
+  "name": "BNB6900",
+  "price": "0.00008060",
+  "liquidity": 26779.55,
+  "mcap": 80607,
+  "volume_24h": 182523.25,
+  "price_change_24h": 51.22,
+  "buys_24h": 1792,
+  "sells_24h": 1328,
+  "buy_sell_ratio": 1.3493975903614457,
+  "dex": "pancakeswap",
+  "analyzed_at": "2026-04-06T18:50:40.692555",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

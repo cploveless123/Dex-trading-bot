@@ -1,0 +1,19 @@
+{
+  "pair_address": "0x529b3067d7409a52c8afca921b6abf534d792c4ff0ce134fce6f35b271977c73",
+  "token_address": "0x920af9A8e69D200a38d09B1641923a7cFfB9fb07",
+  "symbol": "QPAY",
+  "name": "QpayBase",
+  "price": "0.0000001954",
+  "liquidity": 17650.77,
+  "mcap": 19542,
+  "volume_24h": 17850.07,
+  "price_change_24h": 106,
+  "buys_24h": 60,
+  "sells_24h": 90,
+  "buy_sell_ratio": 0.6666666666666666,
+  "dex": "uniswap",
+  "analyzed_at": "2026-04-06T18:38:33.825931",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
