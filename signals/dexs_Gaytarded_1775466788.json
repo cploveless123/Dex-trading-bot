@@ -1,0 +1,19 @@
+{
+  "pair_address": "4bxptgN8VtY74RXRKzbjP73GkzbjHSWm5B9USmAMwFT5",
+  "token_address": "72w3wu8UDh8G1QL3aQM4KSQpodz4QqUpt8sNGWZmbnYL",
+  "symbol": "Gaytarded",
+  "name": "Gaytarded",
+  "price": "0.00005743",
+  "liquidity": 18672.02,
+  "mcap": 57434,
+  "volume_24h": 217496.72,
+  "price_change_24h": 68.52,
+  "buys_24h": 2183,
+  "sells_24h": 1726,
+  "buy_sell_ratio": 1.2647740440324449,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T09:13:08.232824",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

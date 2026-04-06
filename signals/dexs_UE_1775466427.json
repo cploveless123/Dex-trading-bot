@@ -1,0 +1,19 @@
+{
+  "pair_address": "AyDbuMurRfVKrdmv4aUAz5XmscSRwgQzsRGTCdXHzfJV",
+  "token_address": "CFhawanWKGFwLCTXkmQBi9vzJNKtvemVqMbzC8RUpump",
+  "symbol": "UE",
+  "name": "Kunue Wust ",
+  "price": "0.0001309",
+  "liquidity": 28055.09,
+  "mcap": 130992,
+  "volume_24h": 215142.97,
+  "price_change_24h": 284,
+  "buys_24h": 1093,
+  "sells_24h": 903,
+  "buy_sell_ratio": 1.2104097452934661,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T09:07:07.815332",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

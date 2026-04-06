@@ -1,0 +1,21 @@
+{
+  "pair_address": "0xAE41a75344aDadb87160e28FFF9335C732523369",
+  "token_address": "0x3015fd8357C685b988FFdA84C9643a55B878d0F5",
+  "symbol": "BULL",
+  "name": "BULL",
+  "price": "0.0000000000004737",
+  "liquidity": 21980.9,
+  "mcap": 199309,
+  "volume_24h": 11585.37,
+  "price_change_24h": 228,
+  "buys_24h": 78,
+  "sells_24h": 25,
+  "buy_sell_ratio": 3.12,
+  "dex": "pancakeswap",
+  "analyzed_at": "2026-04-06T09:04:07.565265",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}
