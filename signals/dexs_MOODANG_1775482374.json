@@ -1,0 +1,19 @@
+{
+  "pair_address": "BDhLfCBNSMp58ZhYnfougeAjcHv8nHpg9gTWgBE5Z6pT",
+  "token_address": "8HyG5qPSp1M5Ez8KvL67NktTyCtHvr6Xn87b2UHNpump",
+  "symbol": "MOODANG",
+  "name": "Moo Dang",
+  "price": "0.00008322",
+  "liquidity": 22008.06,
+  "mcap": 83229,
+  "volume_24h": 10769.92,
+  "price_change_24h": 145,
+  "buys_24h": 145,
+  "sells_24h": 97,
+  "buy_sell_ratio": 1.4948453608247423,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T13:32:54.012943",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
