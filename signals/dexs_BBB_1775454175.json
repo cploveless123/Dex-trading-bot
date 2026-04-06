@@ -1,0 +1,19 @@
+{
+  "pair_address": "5hnYdRJw2suYJj5bxp8q8o4CCGsMP8KCwkTwLpkL8CJa",
+  "token_address": "bDhgqaxqxmV9Ei2v2vXvLTfmiqQMstvmqNDK9PJpump",
+  "symbol": "BBB",
+  "name": "Big Balled Bird",
+  "price": "0.000009441",
+  "liquidity": 0,
+  "mcap": 9441.79,
+  "volume_24h": 13174.94,
+  "price_change_24h": 301,
+  "buys_24h": 284,
+  "sells_24h": 137,
+  "buy_sell_ratio": 2.072992700729927,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-06T05:42:55.507212",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
