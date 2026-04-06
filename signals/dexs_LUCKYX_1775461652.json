@@ -1,0 +1,19 @@
+{
+  "pair_address": "0x256930A773980747ABdCb40ebd99BC8A7C39CfD7",
+  "token_address": "0xC5Def4c5f7a2Dd3A0a75c05d828df720a3567777",
+  "symbol": "LUCKYX",
+  "name": "LuckyX Vault",
+  "price": "0.0001123",
+  "liquidity": 30135.5,
+  "mcap": 111177,
+  "volume_24h": 219848.85,
+  "price_change_24h": 124,
+  "buys_24h": 2419,
+  "sells_24h": 1488,
+  "buy_sell_ratio": 1.6256720430107527,
+  "dex": "pancakeswap",
+  "analyzed_at": "2026-04-06T07:47:32.808333",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

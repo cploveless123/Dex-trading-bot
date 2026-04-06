@@ -1,0 +1,19 @@
+{
+  "pair_address": "0xAEf7d0C944D40717Ad98Bc7d317D96796fF11dE9",
+  "token_address": "0x9F465f7AD7BB42665E22d55BaD322F4726a6fFfF",
+  "symbol": "Gift",
+  "name": "Giftily",
+  "price": "0.0001674",
+  "liquidity": 42596.34,
+  "mcap": 162399,
+  "volume_24h": 418611.27,
+  "price_change_24h": 119,
+  "buys_24h": 2534,
+  "sells_24h": 2037,
+  "buy_sell_ratio": 1.2439862542955327,
+  "dex": "pancakeswap",
+  "analyzed_at": "2026-04-06T07:32:32.036200",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
