@@ -1,0 +1,19 @@
+{
+  "pair_address": "pXo5BeX9ynNmrvm9aRE2swd1ZVwUqvup8zhrvzzUKnV",
+  "token_address": "Gmg18127oz2a9aiyFEhUtuq5feXA6LLKKgQWYfoRpump",
+  "symbol": "Darko",
+  "name": "Darko The Hyrax",
+  "price": "0.00005139",
+  "liquidity": 17211.64,
+  "mcap": 51396,
+  "volume_24h": 14245.15,
+  "price_change_24h": 52.2,
+  "buys_24h": 149,
+  "sells_24h": 158,
+  "buy_sell_ratio": 0.9430379746835443,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T19:25:07.390030",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

@@ -396,6 +396,10 @@ def simulate_price_movement(action):
         return random.uniform(-0.10, 0.80)
 
 def check_positions():
+    # Exit strategy:
+    # - +20%: Remove initial investment
+    # - +100%: DCA out, keep 10% moon bag
+    # - Below -20%: Sell all
     global balances, stats
     
     now = datetime.now()
@@ -594,4 +598,30 @@ def main():
             last_status = time.time()
         
         time.sleep(30)
+
+
+def apply_exit_strategy(pos):
+    """
+    Exit strategy:
+    - +20%: Remove initial investment
+    - +100%: DCA out, keep 10% moon bag  
+    - Below -20%: Sell all
+    """
+    import time
+    entry = pos.get('entry_price', 0)
+    current = pos.get('current_price', entry)
+    if not current:
+        current = entry
+    
+    pnl_pct = (current - entry) / entry if entry > 0 else 0
+    
+    # Check if we should exit
+    if pnl_pct >= 1.0:  # 100% - DCA out, keep 10% moon bag
+        return "DCA_100%"
+    elif pnl_pct >= 0.20:  # 20% - remove initial
+        return "TAKE_20%"
+    elif pnl_pct < 0:  # Below entry - sell all
+        return "STOP_LOSS"
+    
+    return None
 

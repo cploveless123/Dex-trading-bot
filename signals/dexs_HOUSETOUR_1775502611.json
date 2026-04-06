@@ -1,0 +1,19 @@
+{
+  "pair_address": "4DZNBX2ehNPZXwCCvgxx7xrfvB2nciiyDRWHDEMiz4PW",
+  "token_address": "HFhKShUSq8puhB2obrHnQKsSDZDWsjm8NJxoJfgopump",
+  "symbol": "HOUSETOUR",
+  "name": "House Tour",
+  "price": "0.0007153",
+  "liquidity": 64221.87,
+  "mcap": 715302,
+  "volume_24h": 59890.12,
+  "price_change_24h": 1350,
+  "buys_24h": 1151,
+  "sells_24h": 1125,
+  "buy_sell_ratio": 1.023111111111111,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T19:10:11.884729",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
