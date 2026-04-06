@@ -1,0 +1,19 @@
+{
+  "pair_address": "CGwhXmNb8mHgwxUpMis3psLNe8ErqK1mE1gL9VPrFGaj",
+  "token_address": "2UeZg5xwKyg6kbyVddmnGkH2Pa1JZxQ79ZzUnj2ypump",
+  "symbol": "KEYRARI",
+  "name": "KEYRARI",
+  "price": "0.0001180",
+  "liquidity": 26579.41,
+  "mcap": 118028,
+  "volume_24h": 178173.32,
+  "price_change_24h": 228,
+  "buys_24h": 6130,
+  "sells_24h": 4077,
+  "buy_sell_ratio": 1.5035565366691195,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T04:39:51.847882",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
