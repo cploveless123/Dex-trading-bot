@@ -1,0 +1,19 @@
+{
+  "pair_address": "CvrnpLrmn9SB5H8jdv4WmYwDmHRKtb8NRWkmBzXikyNw",
+  "token_address": "BdLpbJSXrBpCZKDxd1LYD7MMkR8CfMhrrT8evJA4pump",
+  "symbol": "MOON",
+  "name": "The backyard of the",
+  "price": "0.00007931",
+  "liquidity": 21530.35,
+  "mcap": 79315,
+  "volume_24h": 82606.11,
+  "price_change_24h": 135,
+  "buys_24h": 688,
+  "sells_24h": 533,
+  "buy_sell_ratio": 1.2908067542213884,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T21:29:51.217966",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
