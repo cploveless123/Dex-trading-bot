@@ -1,0 +1,19 @@
+{
+  "pair_address": "6KkskqsFq8iKDjcHzkvU1XBsMiYgbKwZ6aVmcdSj9PPM",
+  "token_address": "4vi22odNEypGiDXnJU7wwYqzQ6ogQgMeQxg9Jci1pump",
+  "symbol": "ACTM",
+  "name": "Act M : The Moon Prophecy",
+  "price": "0.0001186",
+  "liquidity": 26736.13,
+  "mcap": 118654,
+  "volume_24h": 239719.7,
+  "price_change_24h": 216,
+  "buys_24h": 1713,
+  "sells_24h": 1327,
+  "buy_sell_ratio": 1.290881688018086,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T20:16:16.289954",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

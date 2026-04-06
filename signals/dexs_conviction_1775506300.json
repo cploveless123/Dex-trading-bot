@@ -1,0 +1,19 @@
+{
+  "pair_address": "HsE2tkLvDbXYarAwm1464KCyhpLDhwSyaZcZtQFkNyqb",
+  "token_address": "6rS31iaZQrPVuXmsWwsySm1mCKyrjhwfaSFRsaruUWrg",
+  "symbol": "conviction",
+  "name": "community conviction",
+  "price": "0.00009387",
+  "liquidity": 24222.93,
+  "mcap": 93878,
+  "volume_24h": 471699.03,
+  "price_change_24h": 139,
+  "buys_24h": 4121,
+  "sells_24h": 3941,
+  "buy_sell_ratio": 1.0456736868815022,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T20:11:40.646461",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

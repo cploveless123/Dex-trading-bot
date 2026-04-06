@@ -1,5 +1,5 @@
 {
   "balances": {"solana": 1.0, "ethereum": 1.0, "base": 1.0},
-  "positions": [{"token": "CINOT", "address": "5b8JHKDQjDcfr5ywujuk4ZRxWa7G6M9Ts1TAyu322pump", "size": 0.1, "entry_price": 0.0001, "mcap": 112447, "status": "running", "pnl_pct": 65.7}],
-  "stats": {"total_trades": 1, "wins": 1, "losses": 0, "best": 0.02, "worst": 0}
+  "positions": [],
+  "stats": {"total_trades": 0, "wins": 0, "losses": 0}
 }
