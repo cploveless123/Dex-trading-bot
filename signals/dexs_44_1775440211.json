@@ -1,0 +1,19 @@
+{
+  "pair_address": "F6i263SMu283SumjqEcB97fSkG9BwbtbReRvaUXVTmsc",
+  "token_address": "3jcimw2sPCCwrdnCeUv7vkUSoL6VjU1qFLQVcnbqwfTb",
+  "symbol": "44",
+  "name": "Dude 44",
+  "price": "0.0002431",
+  "liquidity": 39900.98,
+  "mcap": 243101,
+  "volume_24h": 873841.92,
+  "price_change_24h": 615,
+  "buys_24h": 9800,
+  "sells_24h": 8397,
+  "buy_sell_ratio": 1.1670834821960223,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T01:50:11.414028",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
