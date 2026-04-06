@@ -1,0 +1,19 @@
+{
+  "pair_address": "4EUuqu83r2edBrXqqjt9JUVbe8ctjfhnTfYbBZ8a3nny",
+  "token_address": "8Qme42zKXukG6oxWP5Bwv7BbDrcn2t7rr4tvQ8Kipump",
+  "symbol": "SPARK",
+  "name": "Spark",
+  "price": "0.00007331",
+  "liquidity": 21183.51,
+  "mcap": 73311,
+  "volume_24h": 409578.58,
+  "price_change_24h": 120,
+  "buys_24h": 5919,
+  "sells_24h": 4341,
+  "buy_sell_ratio": 1.3635107118175536,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T23:41:59.833108",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
