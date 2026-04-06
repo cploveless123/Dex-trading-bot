@@ -1,0 +1,20 @@
+{
+  "pair_address": "0x61Dd121c552519dAf29518674ee77f7FF2198937",
+  "token_address": "0xfEAbe9e808708607DD8bc5eC92efFAE4a72c4444",
+  "symbol": "\u5e01\u5b89\u5929\u4f7f",
+  "name": "Binance Angel",
+  "price": "0.00007959",
+  "liquidity": 26134.21,
+  "mcap": 79593,
+  "volume_24h": 65478.51,
+  "price_change_24h": 50.63,
+  "buys_24h": 716,
+  "sells_24h": 349,
+  "buy_sell_ratio": 2.0515759312320916,
+  "dex": "pancakeswap",
+  "analyzed_at": "2026-04-06T23:37:29.609434",
+  "signals": [
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

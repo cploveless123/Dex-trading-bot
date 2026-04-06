@@ -1,1 +1,19 @@
-{"balances": {"solana": 1.0, "ethereum": 1.0, "base": 1.0}, "positions": [{"token": "MOON", "status": "moon_bag", "size": 0.05}], "stats": {"total_trades": 5, "wins": 3, "losses": 1}}
+{
+  "balances": {
+    "solana": 1.0,
+    "ethereum": 1.0,
+    "base": 1.0
+  },
+  "positions": [
+    {
+      "token": "MOON",
+      "status": "moon_bag",
+      "size": 0.05
+    }
+  ],
+  "stats": {
+    "total_trades": 5,
+    "wins": 3,
+    "losses": 1
+  }
+}

@@ -625,3 +625,66 @@ def apply_exit_strategy(pos):
     
     return None
 
+
+# === AUTOMATED EXIT MONITOR ===
+def check_exits():
+    """Check all open positions for exit triggers"""
+    global balances
+    
+    # Get open positions from wallet
+    try:
+        with open('sim_wallet.json') as f:
+            data = json.load(f)
+            positions = data.get('positions', [])
+    except:
+        return
+    
+    for pos in positions:
+        if pos.get('closed') or pos.get('status') == 'sold':
+            continue
+            
+        token = pos.get('token', '')
+        addr = pos.get('address', '')
+        
+        if not addr:
+            continue
+            
+        # Get current price
+        try:
+            result = subprocess.run(
+                f'curl -s "https://api.dexscreener.com/latest/dex/pairs/solana/{addr}"',
+                shell=True, capture_output=True
+            )
+            data = json.loads(result.stdout)
+            price = float(data.get('pair', {}).get('priceUsd', 0))
+        except:
+            continue
+            
+        entry = pos.get('entry_price', 0.0001)
+        if entry == 0:
+            entry = 0.0001
+            
+        pnl_pct = (price / entry - 1) * 100
+        
+        # Exit logic
+        if pnl_pct >= 100:
+            print(f"🎯 {token}: +100% DCA EXIT")
+            # Sell 90%, keep 10%
+            pos['status'] = 'dca_exit'
+        elif pnl_pct >= 20:
+            print(f"✅ {token}: +20% - Take initial")
+            # Take initial back, keep 50%
+            pos['status'] = 'partial_exit'
+        elif pnl_pct <= -20:
+            print(f"🛑 {token}: -20% STOP LOSS")
+            pos['status'] = 'stop_loss'
+            
+    # Save updated
+    with open('sim_wallet.json', 'w') as f:
+        json.dump(data, f, indent=2)
+
+# Run check every cycle
+import time
+while True:
+    check_exits()
+    time.sleep(60)  # Check every minute
