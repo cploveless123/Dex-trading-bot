@@ -1,0 +1,21 @@
+{
+  "pair_address": "4LK8xjVsJwe8abxG5SPV6bTTWbuQJYkFizsf4eof1yaD",
+  "token_address": "954muhRw7gYsbfg3QpTFyHy9gR6pF3udaGveXDYhpump",
+  "symbol": "BUY",
+  "name": "Don't waste time without buying",
+  "price": "0.0001120",
+  "liquidity": 25646.26,
+  "mcap": 112073,
+  "volume_24h": 112414.9,
+  "price_change_24h": 233,
+  "buys_24h": 7484,
+  "sells_24h": 893,
+  "buy_sell_ratio": 8.38073908174692,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T17:22:04.140310",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

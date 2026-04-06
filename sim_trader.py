@@ -274,23 +274,20 @@ def score_signal(sig):
     safety_issues = []
     
     # Check rug probability
-    rug_prob = sig.get('rug_probability', 0)
-    if rug_prob > 70:
-        safety_issues.append(f"Rug Prob: {rug_prob}%")
     
     # Check top holder %
     top10 = sig.get('top_10_pct', 0)
-    if top10 > 70:
+    if top10 > 85:
         safety_issues.append(f"Top10: {top10}%")
     
     # Check holder count
     holders = sig.get('holders', 999)
-    if holders < 5:
+    if holders < 10:
         safety_issues.append(f"Holders: {holders}")
     
     # Check dev balance (high = risky)
     dev_bal = sig.get('dev_balance_sol', 0)
-    if dev_bal > 5:
+    if dev_bal > 50:
         safety_issues.append(f"Dev Balance: {dev_bal} SOL")
     
     # Check age (very new = risky) - only flag if we can confirm it's < 1 min
@@ -328,11 +325,16 @@ def score_signal(sig):
         score += 1
     
     # Liquidity scoring
-    if liquidity and liquidity > 50000:
+    if liquidity and liquidity > 9000:
         score += 2
-    if liquidity and liquidity > 100000:
+    if liquidity and liquidity > 9000:
         score += 1
         
+    # KOL/Smart money check
+    token_addr = sig.get("token_address", "")
+    if check_kol_holding(token_addr):
+        score += 10
+        print(f"   🎯 KOL DETECTED!")
     # Small cap preference for pumps
     if mcap and mcap < 100000:
         score += 1
@@ -576,3 +578,34 @@ def spend_chain_balance(chain, amount):
 
 # Init
 load_wallet()
+
+# KOL/Smart Wallet comparison
+def check_kol_holding(token_addr):
+    """Check if any tracked KOL wallets hold or held this token"""
+    # For now, we track addresses we've collected
+    kol_wallets = [
+        "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
+        "CyaE1VxvBrahnPWkqm5VsdCvyS2QmNht2UFrKJHga54o",
+        "4BdKaxN8G6ka4GYtQQWk4G4dZRUTX2vQH9GcXdBREFUk",
+        "BCagckXeMChUKrHEd6fKFA1uiWDtcmCXMsqaheLiUPJd",
+        "5t9xBNuDdGTGpjaPTx6hKd7sdRJbvtKS8Mhq6qVbo8Qz",
+        "2T5NgDDidkvhJQg8AHDi74uCFwgp25pYFMRZXBaCUNBH",
+        "D2wBctC1K2mEtA17i8ZfdEubkiksiAH2j8F7ri3ec71V",
+        "8MaVa9kdt3NW4Q5HyNAm1X5LbR8PQRVDc1W8NMVK88D5",
+        "BCnqsPEtA1TkgednYEebRpkmwFRJDCjMQcKZMMtEdArc",
+        "6EDaVsS6enYgJ81tmhEkiKFcb4HuzPUVFZeom6PHUqN3",
+        "34ZEH778zL8ctkLwxxERLX5ZnUu6MuFyX9CWrs8kucMw",
+        "DNfuF1L62WWyW3pNakVkyGGFzVVhj4Yr52jSmdTyeBHm",
+        "JDd3hy3gQn2V982mi1zqhNqUw1GfV2UL6g76STojCJPN",
+        "HmBmSYwYEgEZuBUYuDs9xofyqBAkw4ywugB1d7R7sTGh",
+        "4DdrfiDHpmx55i4SPssxVzS9ZaKLb8qr45NKY9Er9nNh",
+        "bwamJzztZsepfkteWRChggmXuiiCQvpLqPietdNfSXa",
+        "515vh1DrPuwMATt9Zoq9kP4sJL9fyojA1dHJu4DQpNRp",
+        "GpTXmkdvrTajqkzX1fBmC4BUjSboF9dHgfnqPqj8WAc4",
+        "HyYNVYmnFmi87NsQqWzLJhUTPBKQUfgfhdbBa554nMFF",
+        "HYWo71Wk9PNDe5sBaRKazPnVyGnQDiwgXCFKvgAQ1ENp",
+        "Hw5UKBU5k3YudnGwaykj5E8cYUidNMPuEewRRar5Xoc7",
+    ]
+    # Just signal that we'd check this - actual tx lookup would be slow
+    return False  # Placeholder - can add actual on-chain check
+

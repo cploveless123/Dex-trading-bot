@@ -1,0 +1,21 @@
+{
+  "pair_address": "4226Jf5GcpTABnfLK7p4h5iw3esETrRzQdeTW9zqNYcb",
+  "token_address": "E5TQebStG8yjiSov3sn3FEJ1L7ckZpC2vtNvhrcDpump",
+  "symbol": "HAIKU",
+  "name": "Haiku the Husky",
+  "price": "0.00007656",
+  "liquidity": 21226.48,
+  "mcap": 76567,
+  "volume_24h": 116732.64,
+  "price_change_24h": 128,
+  "buys_24h": 3140,
+  "sells_24h": 847,
+  "buy_sell_ratio": 3.707201889020071,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T17:26:28.816377",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

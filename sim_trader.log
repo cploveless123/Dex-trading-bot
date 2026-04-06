@@ -2,70 +2,11 @@
 💰 Starting: 3.0000 SOL | Target: Beat initial
 📊 Rules: TP1 +50% | TP2 +100% | SL -30%
 📝 History: 0 trades (0W/0L)
-
-==================================================
-📡 DEXSCREENER SIGNAL
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-💰 KERMIT
-📊 VOL 0.0%
-💎 FDV: $725K | Liq: $66K
-📈 Price: $0.000725
-🎯 TP1: +50% | TP2: +100% | Stop: -30%
-🔗 https://dexscreener.com/solana/2giC2MXhhENo4jkbRjfAgNAZboTJtXZTsSFbMZKwpump
-==================================================
-🟢 BUY 0.1 SOL of KERMIT
-   Entry simulated at $0.000100
-
-🎯 TP1 HIT! KERMIT at +55.1% (net: +50.1%) — sold 50%
-
-==================================================
-📊 SIM WALLET STATUS
-==================================================
-💰 Balance: 3.1252 SOL
-📈 Open: 1 | Closed: 0
-✅ Wins: 0 | ❌ Losses: 0
-📈 Win Rate: 0.0%
-💵 Total P&L: +0.0000 SOL
-📊 Return: +12.52%
-==================================================
-
-==================================================
-📡 DEXSCREENER SIGNAL
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-💰 stunks
-📊 VOL 0.0%
-💎 FDV: $15K | Liq: $0
-📈 Price: $0.00001501
-🎯 TP1: +50% | TP2: +100% | Stop: -30%
-🔗 https://dexscreener.com/solana/G7WmjEgJrQQyLyV31mFYoemZ6Az7MaQJNSbNYUbppump
-==================================================
-🟢 BUY 0.1 SOL of stunks
-   Entry simulated at $0.000100
-
-==================================================
-📊 SIM WALLET STATUS
-==================================================
-💰 Balance: 3.0252 SOL
-📈 Open: 2 | Closed: 0
-✅ Wins: 0 | ❌ Losses: 0
-📈 Win Rate: 0.0%
-💵 Total P&L: +0.0000 SOL
-📊 Return: +2.52%
-==================================================
-
-==================================================
-📡 DEXSCREENER SIGNAL
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-💰 Muppets
-📊 VOL 0.0%
-💎 FDV: $12K | Liq: $0
-📈 Price: $0.00001181
-🎯 TP1: +50% | TP2: +100% | Stop: -30%
-🔗 https://dexscreener.com/solana/9nGTegp6aMKcWqgCnwr8VoGvUn1hEqaD972sr8DXGDkt
-==================================================
-🟢 BUY 0.1 SOL of Muppets
-   Entry simulated at $0.000100
-
-🎯 TP1 HIT! stunks at +62.1% (net: +57.1%) — sold 50%
-
-🎯 TP1 HIT! Muppets at +60.1% (net: +55.1%) — sold 50%
+Traceback (most recent call last):
+  File "/root/Dex-trading-bot/sim_trader.py", line 558, in <module>
+    main()
+  File "/root/Dex-trading-bot/sim_trader.py", line 541, in main
+    score, should_trade = score_signal(s)
+  File "/root/Dex-trading-bot/sim_trader.py", line 335, in score_signal
+    if check_kol_holding(token_addr):
+NameError: name 'check_kol_holding' is not defined
