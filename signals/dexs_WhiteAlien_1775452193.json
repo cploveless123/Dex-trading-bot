@@ -1,0 +1,19 @@
+{
+  "pair_address": "3uUjxG2y9tt8PCmJkusXkr6mn3ZrWfZpcx2zoQXWBEqx",
+  "token_address": "6WtYbBxtstZErieZ3UVagrJ56zaWRPoSqi8RCPG9kgrB",
+  "symbol": "WhiteAlien",
+  "name": "The White Alien",
+  "price": "0.00006525",
+  "liquidity": 19572.47,
+  "mcap": 65253,
+  "volume_24h": 91689.09,
+  "price_change_24h": 93.34,
+  "buys_24h": 1318,
+  "sells_24h": 950,
+  "buy_sell_ratio": 1.3873684210526316,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T05:09:53.519786",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
