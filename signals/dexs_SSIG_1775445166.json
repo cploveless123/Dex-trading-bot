@@ -1,0 +1,20 @@
+{
+  "pair_address": "0x5dfd5a77e2ce55c669193512430b5312b9b2fe99bdcc3f3b1113a5cb12e01455",
+  "token_address": "0xa9c9e03a914fBCAf15868D68Ab2E149FE72cd8b7",
+  "symbol": "SSIG",
+  "name": "Standard Signal",
+  "price": "0.000001504",
+  "liquidity": 87642.58,
+  "mcap": 150465,
+  "volume_24h": 263556.47,
+  "price_change_24h": 771,
+  "buys_24h": 638,
+  "sells_24h": 447,
+  "buy_sell_ratio": 1.4272930648769575,
+  "dex": "uniswap",
+  "analyzed_at": "2026-04-06T03:12:46.648816",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "pair_address": "HpxKDHduZFADeBx5Pq9GuR55DqW2NWYNXFhMhuxPBqvJ",
+  "token_address": "VpRP3m5wQBNkDRcDRn6J5syA2VJsiFBXU6V3wMQpump",
+  "symbol": "PENIS",
+  "name": "Personal Elec Nico Inhalent Syst",
+  "price": "0.0004584",
+  "liquidity": 53832.92,
+  "mcap": 458433,
+  "volume_24h": 895102.65,
+  "price_change_24h": 795,
+  "buys_24h": 7917,
+  "sells_24h": 5602,
+  "buy_sell_ratio": 1.4132452695465905,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T03:03:46.105358",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}
