@@ -1,0 +1,19 @@
+{
+  "pair_address": "Ekbdzdp9e3xTcY7BBU1cPFv43TvRPq7Y5KjmnX2Yrftp",
+  "token_address": "txnVrgCVcwfday4L5mY3aDjxggniJ26TAAKMvQz9z6s",
+  "symbol": "UNKNOWN",
+  "name": "Unknown",
+  "price": "0.0002195",
+  "liquidity": 145323.7,
+  "mcap": 0,
+  "volume_24h": 425727.15,
+  "price_change_24h": 45.49,
+  "buys_24h": 2231,
+  "sells_24h": 1312,
+  "buy_sell_ratio": 1.7004573170731707,
+  "dex": "meteora",
+  "analyzed_at": "2026-04-06T19:35:43.622501",
+  "signals": [
+    "HIGH_VOLUME_PUMP"
+  ]
+}

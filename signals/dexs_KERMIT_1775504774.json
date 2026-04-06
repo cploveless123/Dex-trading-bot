@@ -1,0 +1,20 @@
+{
+  "pair_address": "0x7C97286F57Abf82B1f92FF0CA1B315db9682021b",
+  "token_address": "0xE83673F7182A4530ADE98D334441EbaB9b9f2460",
+  "symbol": "KERMIT",
+  "name": "KERMIT THE FROG",
+  "price": "0.00003676",
+  "liquidity": 12629.41,
+  "mcap": 36760,
+  "volume_24h": 19865.2,
+  "price_change_24h": 3193,
+  "buys_24h": 154,
+  "sells_24h": 38,
+  "buy_sell_ratio": 4.052631578947368,
+  "dex": "uniswap",
+  "analyzed_at": "2026-04-06T19:46:14.275465",
+  "signals": [
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}
