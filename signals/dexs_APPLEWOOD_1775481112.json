@@ -1,0 +1,19 @@
+{
+  "pair_address": "p2XaBKvsceEkQnVq7y63VeJMVqfpbBaN7nwF11HTVNR",
+  "token_address": "HZ2omgrHJLKM9fkCnoSNeCzSNVjz5eAmW3wvwD3ppump",
+  "symbol": "APPLEWOOD",
+  "name": "Applewood Landscaping",
+  "price": "0.000009314",
+  "liquidity": 0,
+  "mcap": 9314.69,
+  "volume_24h": 23206.11,
+  "price_change_24h": 129,
+  "buys_24h": 482,
+  "sells_24h": 240,
+  "buy_sell_ratio": 2.0083333333333333,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-06T13:11:52.611984",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

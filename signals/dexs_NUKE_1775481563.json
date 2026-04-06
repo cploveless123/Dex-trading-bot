@@ -1,0 +1,19 @@
+{
+  "pair_address": "GhvmuBfwT4iFwHTUMrTKi2SgsuoZS7FCrEjX1YrdhuxD",
+  "token_address": "3aHbxzSG6SAfY9fZ2e9MYqeXCyuY9LGVNTY9cy5apump",
+  "symbol": "NUKE",
+  "name": "NUKE",
+  "price": "0.00001412",
+  "liquidity": 0,
+  "mcap": 14123.7,
+  "volume_24h": 11968.99,
+  "price_change_24h": 510,
+  "buys_24h": 190,
+  "sells_24h": 61,
+  "buy_sell_ratio": 3.1147540983606556,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-06T13:19:23.170466",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
