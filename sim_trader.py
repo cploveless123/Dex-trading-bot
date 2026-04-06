@@ -251,6 +251,34 @@ def get_chain_from_dex(dex):
                 return chain
     return None
 
+def check_kol_holding(token_addr):
+    """Check if any tracked KOL wallets hold or held this token"""
+    # For now, we track addresses we've collected
+    kol_wallets = [
+        "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
+        "CyaE1VxvBrahnPWkqm5VsdCvyS2QmNht2UFrKJHga54o",
+        "4BdKaxN8G6ka4GYtQQWk4G4dZRUTX2vQH9GcXdBREFUk",
+        "BCagckXeMChUKrHEd6fKFA1uiWDtcmCXMsqaheLiUPJd",
+        "5t9xBNuDdGTGpjaPTx6hKd7sdRJbvtKS8Mhq6qVbo8Qz",
+        "2T5NgDDidkvhJQg8AHDi74uCFwgp25pYFMRZXBaCUNBH",
+        "D2wBctC1K2mEtA17i8ZfdEubkiksiAH2j8F7ri3ec71V",
+        "8MaVa9kdt3NW4Q5HyNAm1X5LbR8PQRVDc1W8NMVK88D5",
+        "BCnqsPEtA1TkgednYEebRpkmwFRJDCjMQcKZMMtEdArc",
+        "6EDaVsS6enYgJ81tmhEkiKFcb4HuzPUVFZeom6PHUqN3",
+        "34ZEH778zL8ctkLwxxERLX5ZnUu6MuFyX9CWrs8kucMw",
+        "DNfuF1L62WWyW3pNakVkyGGFzVVhj4Yr52jSmdTyeBHm",
+        "JDd3hy3gQn2V982mi1zqhNqUw1GfV2UL6g76STojCJPN",
+        "HmBmSYwYEgEZuBUYuDs9xofyqBAkw4ywugB1d7R7sTGh",
+        "4DdrfiDHpmx55i4SPssxVzS9ZaKLb8qr45NKY9Er9nNh",
+        "bwamJzztZsepfkteWRChggmXuiiCQvpLqPietdNfSXa",
+        "515vh1DrPuwMATt9Zoq9kP4sJL9fyojA1dHJu4DQpNRp",
+        "GpTXmkdvrTajqkzX1fBmC4BUjSboF9dHgfnqPqj8WAc4",
+        "HyYNVYmnFmi87NsQqWzLJhUTPBKQUfgfhdbBa554nMFF",
+        "HYWo71Wk9PNDe5sBaRKazPnVyGnQDiwgXCFKvgAQ1ENp",
+        "Hw5UKBU5k3YudnGwaykj5E8cYUidNMPuEewRRar5Xoc7",
+    ]
+    # Just signal that we'd check this - actual tx lookup would be slow
+    return False  # Placeholder - can add actual on-chain check
 def score_signal(sig):
     """
     Score signal with safety checks
@@ -540,6 +568,7 @@ def main():
                 for s in signals:
                     score, should_trade = score_signal(s)
                     if should_trade:
+                        print("  Score", score, ":", s.get("symbol", "?"))
                         scored.append((score, s))
                 scored.sort(key=lambda x: -x[0])
                 
@@ -553,59 +582,4 @@ def main():
             last_status = time.time()
         
         time.sleep(30)
-
-if __name__ == "__main__":
-    main()
-# Load multi-chain wallet
-def load_wallet():
-    global balancess
-    try:
-        with open('sim_wallet.json') as f:
-            data = json.load(f)
-            balances = data.get('balances', {'solana': 1.0, 'ethereum': 1.0, 'base': 1.0})
-    except:
-        balances = {'solana': 1.0, 'ethereum': 1.0, 'base': 1.0}
-
-# Override balance usage
-def get_chain_balance(chain):
-    return balances.get(chain, 0)
-
-def spend_chain_balance(chain, amount):
-    if balances.get(chain, 0) >= amount:
-        balances[chain] -= amount
-        return True
-    return False
-
-# Init
-load_wallet()
-
-# KOL/Smart Wallet comparison
-def check_kol_holding(token_addr):
-    """Check if any tracked KOL wallets hold or held this token"""
-    # For now, we track addresses we've collected
-    kol_wallets = [
-        "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
-        "CyaE1VxvBrahnPWkqm5VsdCvyS2QmNht2UFrKJHga54o",
-        "4BdKaxN8G6ka4GYtQQWk4G4dZRUTX2vQH9GcXdBREFUk",
-        "BCagckXeMChUKrHEd6fKFA1uiWDtcmCXMsqaheLiUPJd",
-        "5t9xBNuDdGTGpjaPTx6hKd7sdRJbvtKS8Mhq6qVbo8Qz",
-        "2T5NgDDidkvhJQg8AHDi74uCFwgp25pYFMRZXBaCUNBH",
-        "D2wBctC1K2mEtA17i8ZfdEubkiksiAH2j8F7ri3ec71V",
-        "8MaVa9kdt3NW4Q5HyNAm1X5LbR8PQRVDc1W8NMVK88D5",
-        "BCnqsPEtA1TkgednYEebRpkmwFRJDCjMQcKZMMtEdArc",
-        "6EDaVsS6enYgJ81tmhEkiKFcb4HuzPUVFZeom6PHUqN3",
-        "34ZEH778zL8ctkLwxxERLX5ZnUu6MuFyX9CWrs8kucMw",
-        "DNfuF1L62WWyW3pNakVkyGGFzVVhj4Yr52jSmdTyeBHm",
-        "JDd3hy3gQn2V982mi1zqhNqUw1GfV2UL6g76STojCJPN",
-        "HmBmSYwYEgEZuBUYuDs9xofyqBAkw4ywugB1d7R7sTGh",
-        "4DdrfiDHpmx55i4SPssxVzS9ZaKLb8qr45NKY9Er9nNh",
-        "bwamJzztZsepfkteWRChggmXuiiCQvpLqPietdNfSXa",
-        "515vh1DrPuwMATt9Zoq9kP4sJL9fyojA1dHJu4DQpNRp",
-        "GpTXmkdvrTajqkzX1fBmC4BUjSboF9dHgfnqPqj8WAc4",
-        "HyYNVYmnFmi87NsQqWzLJhUTPBKQUfgfhdbBa554nMFF",
-        "HYWo71Wk9PNDe5sBaRKazPnVyGnQDiwgXCFKvgAQ1ENp",
-        "Hw5UKBU5k3YudnGwaykj5E8cYUidNMPuEewRRar5Xoc7",
-    ]
-    # Just signal that we'd check this - actual tx lookup would be slow
-    return False  # Placeholder - can add actual on-chain check
 

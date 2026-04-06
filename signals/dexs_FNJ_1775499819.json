@@ -1,0 +1,19 @@
+{
+  "pair_address": "9Pbm2rHTKiCaJGbmhLrWFD4nJJH2nBdgEzUhELHSqPPU",
+  "token_address": "zS1b59LhLuxFyReqb6X8Mc1SX4xvjRFCWw8fE9Zpump",
+  "symbol": "FNJ",
+  "name": "Floating Nutella Jar",
+  "price": "0.0001023",
+  "liquidity": 25007.46,
+  "mcap": 102384,
+  "volume_24h": 304551.21,
+  "price_change_24h": 211,
+  "buys_24h": 3099,
+  "sells_24h": 2841,
+  "buy_sell_ratio": 1.0908130939809926,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T18:23:39.018643",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

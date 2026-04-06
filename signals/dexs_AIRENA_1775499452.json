@@ -1,0 +1,19 @@
+{
+  "pair_address": "GnaF4KZZScYq89se8pvHD3K4Uu2KQ3wKAVigGvKRNf2Y",
+  "token_address": "CAF2WaWy2oPgXkCLUXeFbHtKtB6yNqhBKEZgDUJjpump",
+  "symbol": "AIRENA",
+  "name": "Airena",
+  "price": "0.0003768",
+  "liquidity": 46761.44,
+  "mcap": 376866,
+  "volume_24h": 77634.97,
+  "price_change_24h": 495,
+  "buys_24h": 470,
+  "sells_24h": 284,
+  "buy_sell_ratio": 1.6549295774647887,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T18:17:32.378391",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

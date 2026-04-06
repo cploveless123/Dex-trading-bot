@@ -1,0 +1,19 @@
+{
+  "pair_address": "evVoYXuPLgHMizVUGjxdDvNU9yxW9PZS7ix6B1bLskS",
+  "token_address": "DiteVnhJ327XJcEsC9XSpreuQMsxueLSgeu5kra2pump",
+  "symbol": "MAN",
+  "name": "no man left behind",
+  "price": "0.00007260",
+  "liquidity": 20959.65,
+  "mcap": 72602,
+  "volume_24h": 266743.15,
+  "price_change_24h": 117,
+  "buys_24h": 3386,
+  "sells_24h": 2776,
+  "buy_sell_ratio": 1.2197406340057637,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T18:04:07.594307",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

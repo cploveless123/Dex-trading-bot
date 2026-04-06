@@ -1,0 +1,21 @@
+{
+  "pair_address": "9CnTV6desKVBr884VYSurDWVQ9wXQ7ndjf5yzJKEyuur",
+  "token_address": "EiNzsaaVMmaeanCdUPcubGRcSBwzSyqu8N6XpfuApump",
+  "symbol": "1.46M",
+  "name": "speedrun to 1.46 million",
+  "price": "0.00008179",
+  "liquidity": 22059.25,
+  "mcap": 81799,
+  "volume_24h": 130025.08,
+  "price_change_24h": 99.45,
+  "buys_24h": 3012,
+  "sells_24h": 986,
+  "buy_sell_ratio": 3.054766734279919,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T18:25:02.889287",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}
