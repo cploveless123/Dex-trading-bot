@@ -112,7 +112,19 @@ def format_trade(trade):
     action = trade.get('action', 'BUY')
     reason = trade.get('exit_reason', 'UNKNOWN')
     token_addr = trade.get('token_address', '')
-    dex_link = f"https://dexscreener.com/solana/{token_addr}" if token_addr else ""
+    
+    # Get chain from dex field or infer from address
+    dex = trade.get('dex', 'solana')
+    if 'pancake' in dex.lower() or 'bsc' in dex.lower():
+        chain = 'bsc'
+    elif 'pumpswap' in dex.lower() or 'pump' in dex.lower():
+        chain = 'solana'
+    elif 'raydium' in dex.lower():
+        chain = 'solana'
+    else:
+        chain = 'solana'
+    
+    dex_link = f"https://dexscreener.com/{chain}/{token_addr}" if token_addr else ""
     
     # Action emoji
     if action == 'KOL_BUY':
@@ -146,13 +158,32 @@ def format_trade(trade):
     else:
         exit_text = f"📤 {reason}"
     
+    # Market cap info
+    entry_mcap = trade.get('entry_mcap', 0)
+    exit_mcap = trade.get('exit_mcap', 0)
+    entry_liq = trade.get('entry_liquidity', 0)
+    
+    mcap_str = ""
+    if entry_mcap > 0:
+        mcap_str = f"MCAP: ${entry_mcap/1000:.1f}K → ${exit_mcap/1000:.1f}K" if exit_mcap > 0 else f"MCAP: ${entry_mcap/1000:.1f}K"
+    
+    liq_str = f"Liq: ${entry_liq/1000:.1f}K" if entry_liq > 0 else ""
+    
     # Buy command
     buy_cmd = f"/buy {token_addr} 0.1 on GMGN bot" if token_addr else ""
+    
+    details = []
+    if mcap_str:
+        details.append(mcap_str)
+    if liq_str:
+        details.append(liq_str)
+    details_str = " | ".join(details) if details else ""
     
     output = f"""📊 TRADE COMPLETE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {emoji} {symbol} ({action_text})
 {result} | {exit_text}
+{details_str}
 🔗 {dex_link}
 
 ⚙️ Or: {buy_cmd}"""
@@ -200,6 +231,8 @@ def get_recent_signals():
     except: pass
     return signals
 
+ALLOWED_CHAINS = ['solana', 'ethereum', 'base']
+
 def score_signal(sig):
     """
     Score signal with safety checks
@@ -211,6 +244,16 @@ def score_signal(sig):
     change = sig.get('change_pct', 0)
     liquidity = sig.get('liquidity', 0)
     mcap = sig.get('mcap', 0)
+    
+    # Chain filter - only SOL, ETH, BASE
+    dex = sig.get('dex', '').lower()
+    chain_allowed = False
+    for chain in ALLOWED_CHAINS:
+        if chain in dex or dex == '':
+            chain_allowed = True
+            break
+    if not chain_allowed and dex not in ['', 'unknown']:
+        return 0, False
     
     # === SAFETY CHECKS (must pass) ===
     safety_issues = []
@@ -332,6 +375,10 @@ def check_positions():
             pos['closed_at'] = now.isoformat()
             pos['gross_pct'] = change_pct
             pos['net_pct'] = net_change
+            # Estimate exit mcap based on price movement
+            entry_mcap = pos.get('entry_mcap', 0)
+            if entry_mcap > 0:
+                pos['exit_mcap'] = int(entry_mcap * (1 + change_pct))
             closed.append(pos)
             stats['wins'] += 1
             stats['best'] = max(stats['best'], pos['pnl_sol'])
@@ -350,6 +397,9 @@ def check_positions():
             pos['closed_at'] = now.isoformat()
             pos['gross_pct'] = change_pct
             pos['net_pct'] = net_change
+            entry_mcap = pos.get('entry_mcap', 0)
+            if entry_mcap > 0:
+                pos['exit_mcap'] = int(entry_mcap * (1 + change_pct))
             closed.append(pos)
             stats['losses'] += 1
             stats['worst'] = min(stats['worst'], pnl)
@@ -372,6 +422,9 @@ def check_positions():
                 pos['closed_at'] = now.isoformat()
                 pos['gross_pct'] = change_pct
                 pos['net_pct'] = net_change_for_time
+                entry_mcap = pos.get('entry_mcap', 0)
+                if entry_mcap > 0:
+                    pos['exit_mcap'] = int(entry_mcap * (1 + change_pct))
                 closed.append(pos)
                 stats['wins'] += 1
                 stats['best'] = max(stats['best'], pnl)
@@ -398,11 +451,15 @@ def open_position(signal):
         return None
     
     entry_price = 0.0001
+    entry_mcap = signal.get('mcap', 0)
     pos = {
         'token': token,
         'token_address': signal.get('token_address', ''),
         'amount_sol': POSITION_SIZE,
         'entry_price': entry_price,
+        'entry_mcap': entry_mcap,
+        'entry_liquidity': signal.get('liquidity', 0),
+        'dex': signal.get('dex', 'unknown'),
         'action': signal.get('action', 'BUY'),
         'source': signal.get('source', signal.get('_source', 'unknown')),
         'opened_at': datetime.now().isoformat(),

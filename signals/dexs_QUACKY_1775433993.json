@@ -1,0 +1,19 @@
+{
+  "pair_address": "9cMQbT7UThdTNW95v89SFmBYGuE5qzX71tx3jR29Gpgy",
+  "token_address": "6yJpMssfeiTndVSA8pqeVs91zEit5M7gQ75pzXKUpump",
+  "symbol": "QUACKY",
+  "name": "QUACKY",
+  "price": "0.0001019",
+  "liquidity": 24361.48,
+  "mcap": 101990,
+  "volume_24h": 20835.12,
+  "price_change_24h": 202,
+  "buys_24h": 212,
+  "sells_24h": 161,
+  "buy_sell_ratio": 1.3167701863354038,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T00:06:33.434062",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
