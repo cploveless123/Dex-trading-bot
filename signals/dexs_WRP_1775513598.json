@@ -1,0 +1,19 @@
+{
+  "pair_address": "0x375cBd1BD9b7858D1a616fA31f53F775CB7d812a",
+  "token_address": "0x1dd264855c7DE0E2fe2cDd6e82bcC71Bd86c4fe9",
+  "symbol": "WRP",
+  "name": "Warp",
+  "price": "0.009944",
+  "liquidity": 42309.12,
+  "mcap": 49723943,
+  "volume_24h": 98249.7,
+  "price_change_24h": -1.45,
+  "buys_24h": 1880,
+  "sells_24h": 637,
+  "buy_sell_ratio": 2.9513343799058083,
+  "dex": "aerodrome",
+  "analyzed_at": "2026-04-06T22:13:18.251364",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
