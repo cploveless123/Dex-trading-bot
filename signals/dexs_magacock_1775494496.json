@@ -1,0 +1,19 @@
+{
+  "pair_address": "3hpYKUWyDR9FC6C2QkoF6Ve1wd7MNrbWpW1D9wckewmL",
+  "token_address": "316z9vogYt1T6odH6uZrVcZWVp5thR1sSJvLzXP7pump",
+  "symbol": "magacock",
+  "name": "magacock",
+  "price": "0.00001960",
+  "liquidity": 10740.97,
+  "mcap": 19597,
+  "volume_24h": 2213.85,
+  "price_change_24h": 62.38,
+  "buys_24h": 36,
+  "sells_24h": 17,
+  "buy_sell_ratio": 2.1176470588235294,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-06T16:54:56.700063",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

@@ -231,7 +231,7 @@ def get_recent_signals():
     except: pass
     return signals
 
-ALLOWED_CHAINS = ['solana', 'ethereum', 'base']
+ALLOWED_CHAINS = ['solana']
 
 # DEX to Chain mapping
 DEX_CHAIN_MAP = {
