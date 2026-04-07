@@ -12,13 +12,14 @@ with open('/root/Dex-trading-bot/trades/sim_trades.jsonl') as f:
 with open('/root/Dex-trading-bot/sim_wallet.json') as f:
     w = json.load(f)
 
-# Show ALL trades this session (not just last 5)
-msg = "LAST 5 TRADES REPORT\n================\n\n"
+# Show LAST 10 trades (not just 5)
+msg = "LAST 10 TRADES REPORT\n================\n\n"
 
 if not trades:
     msg += "No trades this session\n\n"
 else:
-    for t in trades:
+    recent = trades[-10:] if len(trades) >= 10 else trades
+    for t in recent:
         token = t.get('token', '?')
         addr = t.get('token_address', '')
         entry_mcap = int(t.get('entry_mcap', t.get('mcap', 0)))
@@ -39,7 +40,7 @@ else:
         msg += "\n"
 
 msg += "================\n"
-msg += f"Wallet: {w['balances']['solana']:.2f} SOL, {w['balances']['ethereum']:.2f} ETH, {w['balances']['base']:.2f} BASE\n"
+msg += f"Wallet: {w['balances']['solana']:.4f} SOL, {w['balances']['ethereum']:.2f} ETH, {w['balances']['base']:.2f} BASE\n"
 msg += f"Positions: {len([p for p in trades if not p.get('closed')])}"
 
 resp = requests.post(

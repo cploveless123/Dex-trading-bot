@@ -1,0 +1,19 @@
+{
+  "pair_address": "AB7CLgyZ7EoPCiXqpREzJkdeWoxj6WScx4iveULkStVv",
+  "token_address": "67CSeUQariYiMkLbmUfvid2QMNTSTK5rPmUScjcdpump",
+  "symbol": "XANA",
+  "name": "Xana Cat",
+  "price": "0.00009975",
+  "liquidity": 23893.29,
+  "mcap": 99758,
+  "volume_24h": 86125.62,
+  "price_change_24h": 202,
+  "buys_24h": 739,
+  "sells_24h": 818,
+  "buy_sell_ratio": 0.9034229828850856,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T04:58:43.419701",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
