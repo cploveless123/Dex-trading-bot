@@ -20,15 +20,15 @@ def send_alert(token, action, entry_mcap, exit_mcap=None, pnl=0, pnl_pct=0, exit
 📍 Entry MC: ${entry_mcap:,}
 💵 Amount: 0.1 SOL
 
-🔗 DexScreener: https://dexscreener.com/solana/{token_address}
-🥧 PumpFun: https://pump.fun/{token_address}
+🔗 https://dexscreener.com/solana/{token_address}
+🥧 https://pump.fun/{token_address}
 
-🎯 Exit Plan (revised):
-+25%~+100% → Sell 50%
-+100%~+500% → Sell 25%
-+500%~+2000% → Sell 15%
-Remainder → Hold + trailing stop
-⚠️ Stop Loss: -25%"""
+🎯 Exit Plan:
++25% → Sell 50%
++100% → Sell 25%
++500% → Sell 15%
+Rest → Hold (trailing stop)
+⚠️ Stop: -25%"""
     
     elif action == "SELL":
         pnl_emoji = "🟢" if pnl >= 0 else "🔴"
