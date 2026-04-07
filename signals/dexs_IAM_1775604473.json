@@ -1,0 +1,19 @@
+{
+  "pair_address": "DVMEZvVPqakCyGKm8Ztv9z39GtQqLemagPsA8gHEfQbk",
+  "token_address": "qyzQwsyTYhAEGvonp5mcDaRSFuesDH4pfyRymLfpump",
+  "symbol": "IAM",
+  "name": "I am become billionaire",
+  "price": "0.00005936",
+  "liquidity": 19179.47,
+  "mcap": 59362,
+  "volume_24h": 96919.41,
+  "price_change_24h": 68.11,
+  "buys_24h": 735,
+  "sells_24h": 769,
+  "buy_sell_ratio": 0.9557867360208062,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T23:27:52.794115",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

@@ -68,7 +68,7 @@ def log_activity(wallet, activity_type, data):
     with open(ACTIVITY_FILE, 'a') as f:
         f.write(json.dumps(entry) + '\n')
 
-def send_telegram(msg):
+def _disabled_send_telegram(msg):
     """Send alert to Telegram"""
     try:
         requests.post(

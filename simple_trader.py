@@ -203,7 +203,7 @@ def get_signals():
             pass
     return signals
 
-def send_telegram(msg):
+def _disabled_send_telegram(msg):
     """Send Telegram alert"""
     import urllib.request
     import urllib.parse
