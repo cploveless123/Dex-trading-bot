@@ -33,35 +33,32 @@ def format_trade_alert(trade):
     
     if action == "BUY":
         msg = f"""✅ BUY EXECUTED
-================
-Token: {token}
-Pair Address: {token_addr}
-Entry MC: ${entry_mcap:,}
-Amount: 0.1 SOL
+━━━━━━━━━━━━━━━
+💰 {token}
 
-Links:
-DexScreener: https://dexscreener.com/solana/{token_addr}
-DexTools: https://www.dextools.io/solana/token/{token_addr}
-PumpFun: https://pump.fun/{token_addr}
+📍 Entry MC: ${entry_mcap:,}
+💵 Amount: 0.1 SOL
 
-Exit Rules:
-+20% → Sell 75%
-+100% → Full exit
--20% → Stop loss"""
+🔗 DexScreener: https://dexscreener.com/solana/{token_addr}
+🥧 PumpFun: https://pump.fun/{token_addr}
+
+🎯 Exit Plan:
+TP1 +20% → Sell 75%
+TP2 +100% → Full exit
+Stop -20%"""
     else:
+        pnl_emoji = "🟢" if pnl >= 0 else "🔴"
         msg = f"""🔴 SELL EXECUTED
-================
-Token: {token}
-Pair Address: {token_addr}
-Entry MC: ${entry_mcap:,}
-Exit MC: ${exit_mcap:,}
-P&L: {pnl:+.4f} SOL ({pnl_pct:+.1f}%)
-Exit: {exit_r}
+━━━━━━━━━━━━━━━
+💰 {token}
 
-Links:
-DexScreener: https://dexscreener.com/solana/{token_addr}
-DexTools: https://www.dextools.io/solana/token/{token_addr}
-PumpFun: https://pump.fun/{token_addr}"""
+📍 Entry MC: ${entry_mcap:,}
+📍 Exit MC: ${exit_mcap:,}
+{pnl_emoji} P&L: {pnl:+.4f} SOL ({pnl_pct:+.1f}%)
+📋 Reason: {exit_r}
+
+🔗 DexScreener: https://dexscreener.com/solana/{token_addr}
+🥧 PumpFun: https://pump.fun/{token_addr}"""
     
     return msg
 

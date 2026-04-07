@@ -1,0 +1,19 @@
+{
+  "pair_address": "0x0CD39A4Da160EdAE7DAb118Fe8EA1E116dA08d6b",
+  "token_address": "0x6b0c157aE1DDBA2DB0b72C4af3127c4E36D34444",
+  "symbol": "\u52a0\u5bc6\u592e\u884c",
+  "name": "\u52a0\u5bc6\u4e16\u754c\u7684\u592e\u884c",
+  "price": "0.0002361",
+  "liquidity": 46853.05,
+  "mcap": 236101,
+  "volume_24h": 359976.12,
+  "price_change_24h": 662,
+  "buys_24h": 710,
+  "sells_24h": 538,
+  "buy_sell_ratio": 1.3197026022304832,
+  "dex": "pancakeswap",
+  "analyzed_at": "2026-04-07T07:06:26.892872",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

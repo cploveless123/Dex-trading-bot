@@ -1,0 +1,19 @@
+{
+  "pair_address": "9dq3E51xiY3wHpA6AMD77PWos4yk5dJw9C7cBKzZ2BhF",
+  "token_address": "A9ooQBqeMPGyPmeCQt1mmFwXH72ifQEkSV8VeusRpump",
+  "symbol": "UNDERPANTS",
+  "name": "Just Underpants",
+  "price": "0.00002948",
+  "liquidity": 0,
+  "mcap": 29481.19,
+  "volume_24h": 55840.35,
+  "price_change_24h": 1143,
+  "buys_24h": 1395,
+  "sells_24h": 515,
+  "buy_sell_ratio": 2.70873786407767,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T07:07:31.968762",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

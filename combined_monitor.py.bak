@@ -51,8 +51,7 @@ class TradingMonitor:
         if not token_data:
             return None
             
-        liquidity_data = token_data.get("liquidity")
-        liquidity = liquidity_data.get("usd", 0) if liquidity_data else 0
+        liquidity = token_data.get('liquidity', {}).get('usd', 0)
         mcap = token_data.get('marketCap', 0)
         volume_24h = token_data.get('volume', {}).get('h24', 0)
         price_change = token_data.get('priceChange', {}).get('h24', 0)

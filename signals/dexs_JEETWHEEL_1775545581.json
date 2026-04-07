@@ -1,0 +1,19 @@
+{
+  "pair_address": "2XPKwMZAv46fdC1XS2KQsFbMHEWC5iWLXWy2oATeUcEB",
+  "token_address": "86d1ATQDWLXamCakCJ8QCQNuuip29LDpXHskoSTSpump",
+  "symbol": "JEETWHEEL",
+  "name": "The Jeet Flywheel",
+  "price": "0.000002225",
+  "liquidity": 0,
+  "mcap": 2225.88,
+  "volume_24h": 6651.1,
+  "price_change_24h": -0.52,
+  "buys_24h": 113,
+  "sells_24h": 53,
+  "buy_sell_ratio": 2.1320754716981134,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T07:06:21.108452",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

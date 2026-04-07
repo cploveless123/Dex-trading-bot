@@ -1,0 +1,19 @@
+{
+  "pair_address": "A4hkr5jCYdrcxDqRE6Qr7CkVgaSKq694Noff92aeRRLZ",
+  "token_address": "4SDT2p929ABQsUDPLnhwdDTeJ99Tbu9Eu4tyZhBppump",
+  "symbol": "Pumpverse",
+  "name": "Pumpverse",
+  "price": "0.00008932",
+  "liquidity": 22479.18,
+  "mcap": 89324,
+  "volume_24h": 54360.09,
+  "price_change_24h": 174,
+  "buys_24h": 892,
+  "sells_24h": 1377,
+  "buy_sell_ratio": 0.6477850399419027,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T07:04:53.158245",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

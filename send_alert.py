@@ -14,34 +14,33 @@ def send_alert(token, action, entry_mcap, exit_mcap=None, pnl=0, pnl_pct=0, exit
     
     if action == "BUY":
         msg = f"""✅ BUY EXECUTED
-================
-Token: {token}
-Entry MC: ${entry_mcap:,}
-Amount: 0.1 SOL
+━━━━━━━━━━━━━━━
+💰 {token}
 
-Links:
-DexScreener: https://dexscreener.com/solana/{token_address}
-DexTools: https://www.dextools.io/solana/token/{token_address}
-PumpFun: https://pump.fun/{token_address}
+📍 Entry MC: ${entry_mcap:,}
+💵 Amount: 0.1 SOL
 
-Exit Rules:
-+20% → Sell 75%
-+100% → Full exit
--20% → Stop loss"""
+🔗 DexScreener: https://dexscreener.com/solana/{token_address}
+🥧 PumpFun: https://pump.fun/{token_address}
+
+🎯 Exit Plan:
+TP1 +20% → Sell 75%
+TP2 +100% → Full exit
+Stop -20%"""
     
     elif action == "SELL":
+        pnl_emoji = "🟢" if pnl >= 0 else "🔴"
         msg = f"""🔴 SELL EXECUTED
-================
-Token: {token}
-Entry MC: ${entry_mcap:,}
-Exit MC: ${exit_mcap:,}
-P&L: {pnl:+.4f} SOL ({pnl_pct:+.1f}%)
-Exit: {exit_reason}
+━━━━━━━━━━━━━━━
+💰 {token}
 
-Links:
-DexScreener: https://dexscreener.com/solana/{token_address}
-DexTools: https://www.dextools.io/solana/token/{token_address}
-PumpFun: https://pump.fun/{token_address}"""
+📍 Entry MC: ${entry_mcap:,}
+📍 Exit MC: ${exit_mcap:,}
+{pnl_emoji} P&L: {pnl:+.4f} SOL ({pnl_pct:+.1f}%)
+📋 Reason: {exit_reason}
+
+🔗 DexScreener: https://dexscreener.com/solana/{token_address}
+🥧 PumpFun: https://pump.fun/{token_address}"""
     
     resp = requests.post(
         f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",

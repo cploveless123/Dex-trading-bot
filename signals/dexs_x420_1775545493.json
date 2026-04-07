@@ -1,0 +1,19 @@
+{
+  "pair_address": "6CgTwXf3xmgihaxmuJSNozBHSDeoFebhQczjA4x1Hnag",
+  "token_address": "CHR8C8v9P3h7JsUmpr3b6gRy8BhoVN6A93B9wURApump",
+  "symbol": "x420",
+  "name": "x420 Payments",
+  "price": "0.00001234",
+  "liquidity": 0,
+  "mcap": 12347.17,
+  "volume_24h": 23188.56,
+  "price_change_24h": 417,
+  "buys_24h": 3535,
+  "sells_24h": 1534,
+  "buy_sell_ratio": 2.304432855280313,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T07:04:53.286820",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
