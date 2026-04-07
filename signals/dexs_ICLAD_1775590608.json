@@ -1,0 +1,19 @@
+{
+  "pair_address": "0xAC27585d5F01f60e1eB9fcFfE7E8d7672D386cb2",
+  "token_address": "0x4EE281947C63d97128a02C1bF7983c06EcEbB1BD",
+  "symbol": "ICLAD",
+  "name": "ICLAD",
+  "price": "0.00003872",
+  "liquidity": 16378.99,
+  "mcap": 38555,
+  "volume_24h": 2143.33,
+  "price_change_24h": 83.08,
+  "buys_24h": 18,
+  "sells_24h": 0,
+  "buy_sell_ratio": 0,
+  "dex": "pancakeswap",
+  "analyzed_at": "2026-04-07T19:36:48.427077",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

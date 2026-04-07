@@ -1,0 +1,19 @@
+{
+  "pair_address": "BG9qWSFqCA7rDiVpeY1mADQDMBhi4LHXcM9K9HbRhHv1",
+  "token_address": "EK8GUeB1QCguSWvW4RNr4c6MKkgABwn2ASfbpqn3pump",
+  "symbol": "HOMLUNDER",
+  "name": "HOMLUNDER",
+  "price": "0.0001003",
+  "liquidity": 24420.02,
+  "mcap": 100357,
+  "volume_24h": 225803.13,
+  "price_change_24h": 202,
+  "buys_24h": 1471,
+  "sells_24h": 1223,
+  "buy_sell_ratio": 1.2027800490596894,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T19:39:48.672052",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
