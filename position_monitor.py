@@ -24,16 +24,10 @@ def get_live_mcap(pair_address):
         pass
     return None
 
+# Telegram alerts handled by alert_sender.py ONLY - no duplicate sending
 def send_alert(msg):
-    """Send Telegram alert"""
-    try:
-        resp = requests.post(
-            f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
-            json={"chat_id": CHAT_ID, "text": msg}
-        )
-        return resp.status_code == 200
-    except:
-        return False
+    """DEPRECATED - use alert_sender.py only"""
+    pass
 
 def check_positions():
     """Check all open positions for TP/stop hits"""

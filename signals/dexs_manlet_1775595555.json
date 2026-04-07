@@ -1,0 +1,19 @@
+{
+  "pair_address": "7vvss38u39YgY5amRYVFzzJmUjbpkvupf68kKqFqNj8",
+  "token_address": "BoFAaiFDdEsB9oFhrbvogNtEyEs2r4i8vXXdE6zSpump",
+  "symbol": "manlet",
+  "name": "manlet",
+  "price": "0.0001215",
+  "liquidity": 27397.41,
+  "mcap": 121551,
+  "volume_24h": 388726.42,
+  "price_change_24h": 260,
+  "buys_24h": 4299,
+  "sells_24h": 3323,
+  "buy_sell_ratio": 1.2937105025579296,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T20:59:15.474403",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
