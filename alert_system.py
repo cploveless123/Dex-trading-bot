@@ -75,7 +75,7 @@ def format_gmgn_signal(sig):
 💰 {symbol}
 📊 VOL +{change:.1f}%
 💎 FDV: {mcap_str} | Liq: {liq_str}
-🎯 TP1: +50% | TP2: +100% | Stop: -30%
+🎯 TP1: +25% → Sell 75% | TP2: +75% → Sell 25% | Stop: -25%
 🔗 {dex_link}"""
     
     return output

@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """
-Whale Watcher - Monitor whale wallet activity and learn from their trades
+Whale Watcher v2 - On-chain wallet activity tracker
+Uses Solana RPC to observe whale wallet transactions and learn from their moves
 """
 import json
 import time
 import requests
 from datetime import datetime
 from pathlib import Path
-from collections import defaultdict
 
 WALLETS_FILE = Path(__file__).parent / "wallet_analysis" / "whale_wallets.jsonl"
 ACTIVITY_FILE = Path(__file__).parent / "wallet_analysis" / "whale_activity.jsonl"
 TRADES_FILE = Path(__file__).parent / "trades" / "sim_trades.jsonl"
 
+RPC_URL = "https://api.mainnet-beta.solana.com"
 BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
 
@@ -27,42 +28,34 @@ def load_wallets():
                     pass
     return wallets
 
-def get_wallet_token_balances(wallet):
-    """Get all token balances for a wallet via DexScreener"""
+def get_wallet_transactions(wallet, limit=10):
+    """Get recent transactions for a wallet via Solana RPC"""
+    payload = {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "getSignaturesForAddress",
+        "params": [wallet, {"limit": limit}]
+    }
+    
     try:
-        resp = requests.get(
-            f"https://api.dexscreener.com/latest/dex/wallets/solana/{wallet}",
-            timeout=15
-        )
-        if resp.status_code == 200:
-            data = resp.json()
-            return data.get('tokens', [])
-    except:
-        pass
+        r = requests.post(RPC_URL, json=payload, timeout=15)
+        if r.status_code == 200:
+            data = r.json()
+            return data.get('result', [])
+    except Exception as e:
+        print(f"RPC error for {wallet[:15]}...: {e}")
     return []
 
-def analyze_whale_move(wallet, tokens):
-    """Analyze what whale is doing - buy/sell/hold"""
-    moves = []
-    
-    for token in tokens:
-        sym = token.get('symbol', '?')
-        mc = token.get('marketCap', 0)
-        liq = token.get('liquidity', 0)
-        price_change = token.get('priceChange', {}).get('h24', 0)
-        # This is simplified - real implementation would track position size
-        
-        if mc > 10000 and liq > 5000:
-            moves.append({
-                'wallet': wallet,
-                'symbol': sym,
-                'mcap': mc,
-                'liquidity': liq,
-                'price_change_24h': price_change,
-                'type': 'active_position'
-            })
-    
-    return moves
+def parse_transaction_type(tx):
+    """Parse transaction to determine if buy/sell/transfer"""
+    # This is simplified - real implementation would parse transaction details
+    sig = tx.get('signature', '')
+    # Transaction type detection would require full transaction parsing
+    return {
+        'signature': sig,
+        'time': tx.get('blockTime'),
+        'type': 'unknown'  # Would need getTransaction for full details
+    }
 
 def log_activity(wallet, activity_type, data):
     """Log whale activity to file"""
@@ -86,25 +79,8 @@ def send_telegram(msg):
     except:
         pass
 
-def format_whale_alert(wallet, tokens):
-    """Format whale activity alert"""
-    msg = f"""🐋 **WHALE ACTIVITY**
-━━━━━━━━━━━━━━━━━━━
-`{wallet[:15]}...`
-
-**Active positions:** {len(tokens)}
-"""
-    for t in tokens[:3]:
-        mc = t.get('marketCap', 0)
-        liq = t.get('liquidity', 0)
-        chg = t.get('priceChange', {}).get('h24', 0)
-        sym = t.get('symbol', '?')
-        msg += f"\n• {sym}: ${mc/1000:.1f}K mcap | {chg:+.0f}% 24h"
-    
-    return msg
-
 def main():
-    print("🐋 Whale Watcher Started")
+    print("🐋 Whale Watcher v2 Started (on-chain)")
     
     while True:
         wallets = load_wallets()
@@ -115,24 +91,19 @@ def main():
             if not wallet:
                 continue
             
-            tokens = get_wallet_token_balances(wallet)
+            txs = get_wallet_transactions(wallet, limit=5)
             
-            if tokens:
+            if txs:
                 # Log activity
-                log_activity(wallet, 'token_holdings', {
-                    'count': len(tokens),
-                    'total_mcap': sum(t.get('marketCap', 0) for t in tokens)
+                log_activity(wallet, 'tx_check', {
+                    'tx_count': len(txs),
+                    'latest_sig': txs[0].get('signature', '')[:20] if txs else ''
                 })
                 
-                # Send alert for significant activity
-                significant = [t for t in tokens if t.get('marketCap', 0) > 50000]
-                if significant:
-                    msg = format_whale_alert(wallet, significant)
-                    send_telegram(msg)
-                    print(f"  🐋 {wallet[:15]}...: {len(significant)} significant positions")
+                print(f"  🐋 {wallet[:15]}...: {len(txs)} recent txs")
         
-        print("  Sleeping 5 minutes...")
-        time.sleep(300)  # Check every 5 minutes
+        print("  Sleeping 3 minutes...")
+        time.sleep(180)  # Check every 3 minutes
 
 if __name__ == "__main__":
     main()

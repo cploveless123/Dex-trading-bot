@@ -1,0 +1,19 @@
+{
+  "pair_address": "FQ7EgNyAL4EfLdmcTUwKUohDfgQwEjKaZcm7fDnCR38b",
+  "token_address": "8M6TV4fuZkR3ZGVdNXkZ2tE69sMbsJddvoKJgFmtpump",
+  "symbol": "UPNALD",
+  "name": "UPNALD",
+  "price": "0.00006288",
+  "liquidity": 19620.93,
+  "mcap": 62883,
+  "volume_24h": 104991.79,
+  "price_change_24h": 81.5,
+  "buys_24h": 1237,
+  "sells_24h": 1113,
+  "buy_sell_ratio": 1.1114106019766397,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T23:11:27.748047",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

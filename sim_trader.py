@@ -99,7 +99,7 @@ def format_signal(sig):
 📊 VOL {vol_str}
 💎 FDV: {mcap_str} | Liq: {liq_str}
 📈 Price: {price_str}
-🎯 TP1: +50% | TP2: +100% | Stop: -30%
+🎯 TP1: +25% → Sell 75% | TP2: +75% → Sell 25% | Stop: -25%
 🔗 {dex_link}"""
     
     return output

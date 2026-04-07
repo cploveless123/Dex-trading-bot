@@ -1,0 +1,19 @@
+{
+  "pair_address": "AgFez8sseaAQQwbeqd3AiLbcaumwvEFWNBey4UuLUyVL",
+  "token_address": "woozysjkCxjdA9nA4NNw9vZvsCpWuYLEJeH6uJJznZ2",
+  "symbol": "WOOZY",
+  "name": "WOOZY",
+  "price": "0.00009392",
+  "liquidity": 24709.6,
+  "mcap": 93925,
+  "volume_24h": 538409.26,
+  "price_change_24h": 124,
+  "buys_24h": 3110,
+  "sells_24h": 3636,
+  "buy_sell_ratio": 0.8553355335533553,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T23:11:29.367046",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

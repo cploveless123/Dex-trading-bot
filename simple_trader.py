@@ -141,14 +141,14 @@ def check_positions():
         current_price = pos["entry_price"] * (1 + price_change/100)
         
         tp1 = pos["entry_price"] * 1.5  # +50%
-        tp2 = pos["entry_price"] * 2.0  # +100%
+        tp2 = pos["entry_price"] * 1.75  # +100%
         stop = pos["entry_price"] * 0.7  # -30%
         
         pnl = (current_price - pos["entry_price"]) * pos["size"] / pos["entry_price"]
         
         if current_price >= tp2:
             # TP2 hit - full exit
-            pnl = 0.1  # +100%
+            pnl = 0.075  # +100%
             balance += 0.1 + pnl
             pos["pnl_sol"] = pnl
             pos["status"] = "closed_tp2"

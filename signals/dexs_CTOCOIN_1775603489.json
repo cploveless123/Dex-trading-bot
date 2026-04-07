@@ -1,0 +1,19 @@
+{
+  "pair_address": "GPy11cvq6HB1hndUVQ5qvb2jpPoNv1DuiJo2bd5AUZ3g",
+  "token_address": "Bhm3Rbqvm5TYoi78t11cQAjJt92FZAhuSTgpSGAgpump",
+  "symbol": "CTOCOIN",
+  "name": "CTO Coin",
+  "price": "0.00001058",
+  "liquidity": 0,
+  "mcap": 10584.57,
+  "volume_24h": 12678.45,
+  "price_change_24h": 320,
+  "buys_24h": 111,
+  "sells_24h": 52,
+  "buy_sell_ratio": 2.1346153846153846,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T23:11:27.724867",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
