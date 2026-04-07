@@ -15,7 +15,7 @@ TRADES_FILE = "/root/Dex-trading-bot/trades/sim_trades.jsonl"
 # WINNING: $5K-$15K mcap, pumpfun, MOMENTUM
 # LOSING: $70K+ mcap, pumpswap
 MIN_MCAP = 5000
-MAX_MCAP = 30000  # Tighter cap based on data
+MAX_MCAP = 100000  # Tighter cap based on data
 MIN_VOLUME = 10000  # Higher volume requirement
 MIN_BS_RATIO = 1.5
 MIN_24H_CHANGE = 30
@@ -77,7 +77,7 @@ def check_and_buy():
                 continue
             
             # Stricter mcap: $5K-$20K (winners were $5K-$15K mostly)
-            if m < MIN_MCAP or m > MAX_MCAP:
+            if m < MIN_MCAP:
                 continue
             
             # Volume requirement: $30K+ for raydium, $20K+ for pump.fun (can have 0 liquidity during bonding)
