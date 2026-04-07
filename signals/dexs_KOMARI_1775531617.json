@@ -1,0 +1,21 @@
+{
+  "pair_address": "BwZPjiB2dPBxKiBgYsnGuFE9T6wzE6kNTd2RusVCBUng",
+  "token_address": "9PiQVuDAdc4qnVkNLmTp52TZFmUayF9CkQJDqsa8pump",
+  "symbol": "KOMARI",
+  "name": "Komari",
+  "price": "0.00008877",
+  "liquidity": 23074.46,
+  "mcap": 88773,
+  "volume_24h": 302420.39,
+  "price_change_24h": 171,
+  "buys_24h": 14587,
+  "sells_24h": 2128,
+  "buy_sell_ratio": 6.854793233082707,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T03:13:37.176988",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}
