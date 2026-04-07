@@ -32,10 +32,14 @@ def format_trade_alert(trade):
     pnl_pct = (trade.get('net_pct', 0) or trade.get('pnl_pct', 0)) * 100
     exit_r = trade.get('exit_reason', 'OPEN')
     
-    # Calculate wallet balance
+    # Calculate wallet balance correctly
     with open(TRADES_FILE) as f:
         all_trades = [json.loads(l) for l in f]
-    balance = 1.0 + sum(t.get('pnl_sol', 0) for t in all_trades)
+    # Start with 1.0, add closed P&L, subtract locked for open positions
+    closed_pnl = sum(t.get('pnl_sol', 0) for t in all_trades if t.get('status') == 'closed')
+    open_count = len([t for t in all_trades if t.get('status') in ['open', 'open_partial']])
+    locked = open_count * 0.05
+    balance = 1.0 + closed_pnl - locked
     
     if action == "BUY":
         msg = f"""✅ BUY EXECUTED | {timestamp}
