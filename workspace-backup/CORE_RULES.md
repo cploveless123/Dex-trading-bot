@@ -85,3 +85,15 @@ Rest → Hold (trailing stop)
 - Live mcap verification BEFORE presenting trades
 
 **Last updated: 2026-04-07 15:21 UTC**
+
+### MOON LESSON (2026-04-07 15:23 UTC):
+- Bought at $32K mcap, +0% after 1.5 hours
+- No recent hourly activity = red flag
+- Chris identified: "shouldn't have been bought in first place"
+- Close positions with no momentum even if not at stop
+
+### ADJUSTED ENTRY RULES:
+- Require BOTH: volume >$20K AND recent buys (not just 24h aggregate)
+- Check 1h volume specifically
+- If no significant 1h movement since entry = consider selling
+- Fresh momentum required, not just good 24h stats
