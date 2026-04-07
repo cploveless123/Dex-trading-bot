@@ -1,0 +1,19 @@
+{
+  "pair_address": "0xC68643034a19e8B876c81190E2da4Ab270Eda7Fd",
+  "token_address": "0x4912e0e8bE5cB1dEa2fE903Fb9e7476DA298932C",
+  "symbol": "BLAW",
+  "name": "Blaw",
+  "price": "0.0002994",
+  "liquidity": 72674.3,
+  "mcap": 299489,
+  "volume_24h": 538077.82,
+  "price_change_24h": 29.04,
+  "buys_24h": 2852,
+  "sells_24h": 2883,
+  "buy_sell_ratio": 0.989247311827957,
+  "dex": "uniswap",
+  "analyzed_at": "2026-04-07T05:22:50.811866",
+  "signals": [
+    "HIGH_VOLUME_PUMP"
+  ]
+}
