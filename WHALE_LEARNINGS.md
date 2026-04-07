@@ -282,3 +282,32 @@ Chris: "Make all links clickable in all messages"
 - URLs in code blocks
 - URLs mixed with markdown pipes or special chars
 
+
+## PATTERN RECOGNITION (Chris teaching 2026-04-07 17:18 UTC)
+
+### Core Trading Wisdom:
+1. **Buy the dip** - Good opportunities usually right AFTER dips
+2. **Sell after big pumps** - Take profits when it's pumping hard
+3. **Get better with every trade** - Learn from each outcome
+
+### Entry Patterns to Recognize:
+- **Dip entry**: Price pulled back, volume still present = accumulation
+- **Pump entry**: Already pumping hard = late entry, risky
+- **Breakout**: Price breaking resistance with volume = continuation
+
+### Exit Patterns:
+- **After pump**: When it's been pumping hard = good time to sell
+- **Before dump**: When buy pressure is exhausting = take profit
+
+### Skills to Build:
+- Recognize accumulation vs distribution
+- Identify pump vs dump patterns
+- Time entries at dips, exits at pumps
+- Volume tells the story - watch who's buying/selling
+
+### This changes my approach:
+Instead of just chasing momentum, I should:
+1. Look for coins that have dipped but have volume (accumulation)
+2. Sell when they pump hard (not wait for TP targets if at +300%+)
+3. Track what makes some pumps continue vs dump
+
