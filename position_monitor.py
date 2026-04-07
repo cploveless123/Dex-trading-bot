@@ -74,7 +74,11 @@ def check_positions():
             t['closed_at'] = datetime.utcnow().isoformat()
             t['pnl_sol'] = 0.025
             t['pnl_pct'] = 25
-            updated = True
+            
+            # WRITE TO FILE FIRST before alert (prevents duplicate alerts)
+            with open(TRADES_FILE, 'w') as f:
+                for tr in trades:
+                    f.write(json.dumps(tr) + '\n')
             
             timestamp = datetime.utcnow().strftime("%H:%M UTC")
             msg = f"""🔴 SELL EXECUTED (50%) | {timestamp}
@@ -100,7 +104,11 @@ def check_positions():
             t['pnl_sol'] = 0.05
             t['pnl_pct'] = 100
             t['status'] = 'closed'
-            updated = True
+            
+            # WRITE TO FILE FIRST before alert (prevents duplicate alerts)
+            with open(TRADES_FILE, 'w') as f:
+                for tr in trades:
+                    f.write(json.dumps(tr) + '\n')
             
             timestamp = datetime.utcnow().strftime("%H:%M UTC")
             msg = f"""🔴 SELL EXECUTED (remaining) | {timestamp}
@@ -147,7 +155,11 @@ def check_positions():
             t['closed_at'] = datetime.utcnow().isoformat()
             t['pnl_sol'] = -0.025
             t['pnl_pct'] = -25
-            updated = True
+            
+            # WRITE TO FILE FIRST before alert (prevents duplicate alerts)
+            with open(TRADES_FILE, 'w') as f:
+                for tr in trades:
+                    f.write(json.dumps(tr) + '\n')
             
             timestamp = datetime.utcnow().strftime("%H:%M UTC")
             msg = f"""🔴 SELL EXECUTED | {timestamp}
@@ -164,11 +176,6 @@ def check_positions():
 🥧 https://pump.fun/{tok}"""
             send_alert(msg)
             print(f"🛑 {sym} STOP AUTO: closed at {change:.0f}%")
-    
-    if updated:
-        with open(TRADES_FILE, 'w') as f:
-            for t in trades:
-                f.write(json.dumps(t) + '\n')
     
     return updated
 
