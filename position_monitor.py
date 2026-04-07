@@ -43,7 +43,8 @@ def check_positions():
     updated = False
     
     for t in trades:
-        if t.get('status') != 'open':
+        # Include 'open_partial' as still open for further TP/stop monitoring
+        if t.get('status') not in ['open', 'open_partial']:
             continue
         
         sym = t.get('token')
@@ -64,20 +65,21 @@ def check_positions():
         if change >= 25 and not t.get('tp1_sold'):
             t['tp1_sold'] = True
             t['partial_exit'] = True
+            t['status'] = 'open_partial'  # NOT closed - still have 50% position
             t['exit_reason'] = 'TP1_AUTO'
             t['closed_at'] = datetime.utcnow().isoformat()
-            t['pnl_sol'] = 0.05
-            t['pnl_pct'] = 50
+            t['pnl_sol'] = 0.025
+            t['pnl_pct'] = 25
             updated = True
             
-            msg = f"""🔴 SELL EXECUTED (50%) - AUTO
+            msg = f"""🔴 SELL EXECUTED (50%) - TP1
 ━━━━━━━━━━━━━━━
 💰 {sym}
 
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
-🟢 P&L: +0.0500 SOL (+50.0%)
-📋 Reason: TP1_AUTO (+25% → auto sold 50%)
+🟢 P&L: +0.0250 SOL (+25.0%)
+📋 Reason: TP1_AUTO
 
 🔗 https://dexscreener.com/solana/{pair}
 🥧 https://pump.fun/{tok}"""
