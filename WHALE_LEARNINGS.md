@@ -134,3 +134,49 @@ Rest → Hold (trailing stop)
 ### Key Learning:
 Learning by DOING > watching and waiting
 Proof of concept = actual trades, not analysis
+
+## PERMANENT STRATEGY (saved 2026-04-07 13:57 UTC)
+
+### 🎯 Exit Rules (NEVER CHANGE):
+```
++25% → Sell 50%
++100% → Sell 25%  
++500% → Sell 15%
+Rest → Hold (trailing stop)
+⚠️ Stop: -25%
+```
+
+### ⚡ Action Rules (NEVER CHANGE):
+- Signal meets criteria → BUY IMMEDIATELY (no asking)
+- TP1 (+25%) hit → sell 50% immediately
+- TP2 (+100%) hit → sell 25% immediately
+- Stop loss (-25%) hit → close immediately
+- No presenting trades - either buy or pass
+
+### 📊 Alert Format (ALWAYS):
+```
+✅ BUY EXECUTED / 🔴 SELL EXECUTED
+━━━━━━━━━━━━━━━
+💰 TOKEN
+📍 Entry MC: $XX,XXX
+📍 Exit MC: $XX,XXX (sells only)
+🟢/🔴 P&L: +X.XXXX SOL (+XX.X%)
+📋 Reason: TP1_PARTIAL / STOP_LOSS / etc
+🔗 https://clickable.link
+🥧 https://clickable.link
+```
+
+### 🔍 Scan Rules:
+- Live mcap verification BEFORE presenting
+- Pump.fun only: Mcap $5K-$100K, Vol >$15K
+- No presenting "potential" trades
+
+### 📈 This Session Proof:
+- BABEPSTEIN: +77% (sold 75%, 25% held)
+- MOON: Entry $32K, +982% 24h momentum
+- POW: +48% first win
+- TRUMPLER: -34% stop loss (accepted)
+
+### 💡 Key Insight:
+"Learning by DOING > watching and waiting"
+Proof of concept = actual trades, not analysis
