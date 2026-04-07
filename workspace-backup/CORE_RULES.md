@@ -108,3 +108,26 @@ Implemented changes:
 - Entry requires: mcap verified live (within 20% of signal)
 - No waiting for permission - act on own judgment
 
+
+### ADJUSTED ENTRY CRITERIA (2026-04-07 15:48 UTC):
+Chris approved - tiered approach for low vs mid cap:
+
+**Low mcap ($5K-$15K):**
+- Volume: $15K+
+- Buy/sell ratio: 1.3+
+- 24h momentum: 50%+
+
+**Mid mcap ($15K-$50K):**
+- Volume: $25K+
+- Buy/sell ratio: 1.3+
+- 24h momentum: 30%+
+
+**Position size: 0.05 SOL (reduced from 0.1)**
+- Reason: poor win rate requires smaller sizing until improved
+
+### NEVER STOP RULE:
+Chris: "Keep being diligent, make trades, learn, build skills, adjust if needed"
+- Continuous scanning
+- Act on signals immediately
+- Learn from every win/loss
+- Adjust criteria based on results
