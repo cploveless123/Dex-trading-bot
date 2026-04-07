@@ -22,6 +22,7 @@ LAST_TRADE_FILE = Path("/root/Dex-trading-bot/.last_alert_trade")
 
 def format_trade_alert(trade):
     """Format trade alert with full details"""
+    timestamp = datetime.utcnow().strftime("%H:%M UTC")
     token = trade.get('token', '?')
     action = trade.get('action', 'UNKNOWN')
     token_addr = trade.get('token_address', '')
@@ -32,12 +33,12 @@ def format_trade_alert(trade):
     exit_r = trade.get('exit_reason', 'OPEN')
     
     if action == "BUY":
-        msg = f"""✅ BUY EXECUTED
+        msg = f"""✅ BUY EXECUTED | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {token}
 
 📍 Entry MC: ${entry_mcap:,}
-💵 Amount: 0.1 SOL
+💵 Amount: 0.05 SOL
 
 🔗 https://dexscreener.com/solana/{token_addr}
 🥧 https://pump.fun/{token_addr}
@@ -48,7 +49,7 @@ def format_trade_alert(trade):
 ⚠️ Stop: -25%"""
     else:
         pnl_emoji = "🟢" if pnl >= 0 else "🔴"
-        msg = f"""🔴 SELL EXECUTED
+        msg = f"""🔴 SELL EXECUTED | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {token}
 

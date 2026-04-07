@@ -21,15 +21,10 @@ MIN_BS_RATIO = 1.5
 MIN_24H_CHANGE = 30
 POSITION_SIZE = 0.05
 
-def send_alert(msg):
-    try:
-        resp = requests.post(
-            f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
-            json={"chat_id": CHAT_ID, "text": msg}
-        )
-        return resp.status_code == 200
-    except:
-        return False
+# Telegram alerts handled by alert_sender.py - NOT here
+def _do_not_use_send_alert(msg):
+    # DEPRECATED - use alert_sender.py only
+    pass
 
 def check_and_buy():
     """Scan and buy if STRICTER criteria met based on pattern analysis"""
