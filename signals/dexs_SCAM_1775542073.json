@@ -1,0 +1,19 @@
+{
+  "pair_address": "5ZRa5UhyDTkywxVBzdNmB5Rhn1khTaCmUVQpW7GfQwyh",
+  "token_address": "GYFh8eRmYsrYAiAFobE7WSTMYNqHPSrvs5fSEV34pump",
+  "symbol": "SCAM",
+  "name": "Scam Altman",
+  "price": "0.000004234",
+  "liquidity": 0,
+  "mcap": 4234.86,
+  "volume_24h": 3193.81,
+  "price_change_24h": 57.71,
+  "buys_24h": 94,
+  "sells_24h": 31,
+  "buy_sell_ratio": 3.032258064516129,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T06:07:53.660258",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
