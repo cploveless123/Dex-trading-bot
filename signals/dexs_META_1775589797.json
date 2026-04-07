@@ -1,0 +1,20 @@
+{
+  "pair_address": "0xc51270f612e4a1fc19fb47aae9eadce9b6687b3327ffddb8b1e0e92d5694f449",
+  "token_address": "0xe9ce29bbAa23185eAAdcDF30708A62B236082E22",
+  "symbol": "META",
+  "name": "Meta Claw",
+  "price": "0.0000001847",
+  "liquidity": 17240.51,
+  "mcap": 18478,
+  "volume_24h": 9030.95,
+  "price_change_24h": 80.32,
+  "buys_24h": 75,
+  "sells_24h": 23,
+  "buy_sell_ratio": 3.260869565217391,
+  "dex": "uniswap",
+  "analyzed_at": "2026-04-07T19:23:17.471173",
+  "signals": [
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

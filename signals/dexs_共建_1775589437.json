@@ -1,0 +1,20 @@
+{
+  "pair_address": "0x843170d02C676175F86F85288ddE9569b5570034",
+  "token_address": "0xB2aCF3AE051c7F0B0b8DE90CbB4eD99312574444",
+  "symbol": "\u5171\u5efa",
+  "name": "Build N Build",
+  "price": "0.0005340",
+  "liquidity": 74575.93,
+  "mcap": 534066,
+  "volume_24h": 1856565.08,
+  "price_change_24h": 926,
+  "buys_24h": 9075,
+  "sells_24h": 8740,
+  "buy_sell_ratio": 1.0383295194508009,
+  "dex": "pancakeswap",
+  "analyzed_at": "2026-04-07T19:17:17.158016",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}

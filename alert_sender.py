@@ -44,9 +44,7 @@ def format_trade_alert(trade):
 
 🎯 Exit Plan:
 +25% → Sell 50%
-+100% → Sell 25%
-+500% → Sell 15%
-Rest → Hold (trailing stop)
++100% → Sell 50%
 ⚠️ Stop: -25%"""
     else:
         pnl_emoji = "🟢" if pnl >= 0 else "🔴"

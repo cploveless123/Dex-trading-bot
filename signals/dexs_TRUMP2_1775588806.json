@@ -1,0 +1,19 @@
+{
+  "pair_address": "H7kNqmgjNKwGgR5rN4SqQr7ac8jNsc8vm9CpmaBbtVcT",
+  "token_address": "6qrEeSjcZJ7YfXWwEagjg9Y5jMfGYfTBBQFi3r3Epump",
+  "symbol": "TRUMP2",
+  "name": "The Mad King",
+  "price": "0.0004176",
+  "liquidity": 48555.44,
+  "mcap": 417626,
+  "volume_24h": 45347.7,
+  "price_change_24h": 769,
+  "buys_24h": 968,
+  "sells_24h": 991,
+  "buy_sell_ratio": 0.9767911200807265,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T19:06:46.583966",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

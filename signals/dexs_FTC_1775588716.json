@@ -1,0 +1,21 @@
+{
+  "pair_address": "45mtBVGe9iuPXmkV29jVjQMvYqr2cyUUCFjBV5pSx8ZP",
+  "token_address": "77cN4Vw39V6Go7aed81jHhh6ccafNxAF1MCa6Sycpump",
+  "symbol": "FTC",
+  "name": "Fuck Trump Coin",
+  "price": "0.0001253",
+  "liquidity": 26935.51,
+  "mcap": 125369,
+  "volume_24h": 138179.52,
+  "price_change_24h": 214,
+  "buys_24h": 2188,
+  "sells_24h": 626,
+  "buy_sell_ratio": 3.4952076677316293,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T19:05:16.418772",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}
