@@ -20,6 +20,7 @@ TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
 LAST_SIGNAL_FILE = Path("/root/Dex-trading-bot/.last_alert_signal")
 # Track alerted trades to prevent duplicate alerts on file updates
 ALERTED_TRADES_FILE = Path("/root/Dex-trading-bot/.alerted_trades")
+LAST_TRADE_INDEX_FILE = Path("/root/Dex-trading-bot/.last_alert_index")
 
 
 
@@ -124,14 +125,17 @@ def check_new_signals():
     return None
 
 def check_new_trades():
-    """Check for NEW trades only (not updated existing trades)"""
+    """Check for NEW trades only - only alert on trades added since last check"""
     if not TRADES_FILE.exists():
         return None
     
-    # Load already alerted trades
-    alerted = set()
-    if ALERTED_TRADES_FILE.exists():
-        alerted = set(ALERTED_TRADES_FILE.read_text().strip().split('\n'))
+    # Get last alerted index
+    last_index = 0
+    if LAST_TRADE_INDEX_FILE.exists():
+        try:
+            last_index = int(LAST_TRADE_INDEX_FILE.read_text().strip())
+        except:
+            last_index = 0
     
     with open(TRADES_FILE) as f:
         lines = [l for l in f.readlines() if l.strip()]
@@ -139,31 +143,27 @@ def check_new_trades():
     if not lines:
         return None
     
-    # Check for NEW trades (not yet alerted) or newly closed trades
-    for line in reversed(lines):
+    # Only check trades AFTER the last alerted index
+    for i in range(last_index, len(lines)):
+        line = lines[i]
         trade = json.loads(line)
         token_addr = trade.get('token_address', '')
         action = trade.get('action', '')
         status = trade.get('status', '')
-        trade_key = f"{token_addr}:{action}:{status}"
         
-        # Skip if already alerted for this exact state
-        if trade_key in alerted:
-            continue
-        
-        # Only alert on NEW buys (action=BUY, status=open) or CLOSED trades (status=closed with exit)
+        # Only alert on NEW buys (action=BUY, status=open) or newly closed trades
         if action == 'BUY' and status == 'open':
-            # Mark as alerted
-            alerted.add(trade_key)
-            ALERTED_TRADES_FILE.write_text('\n'.join(alerted))
+            # Mark as alerted by updating index
+            LAST_TRADE_INDEX_FILE.write_text(str(i + 1))
             return format_trade_alert(trade)
         
         if status == 'closed' and trade.get('exit_reason'):
-            # Mark as alerted
-            alerted.add(trade_key)
-            ALERTED_TRADES_FILE.write_text('\n'.join(alerted))
+            # Mark as alerted by updating index
+            LAST_TRADE_INDEX_FILE.write_text(str(i + 1))
             return format_trade_alert(trade)
     
+    # No new trades
+    LAST_TRADE_INDEX_FILE.write_text(str(len(lines)))
     return None
 
 def get_status():
