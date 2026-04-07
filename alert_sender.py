@@ -151,7 +151,10 @@ def get_status():
     with open(TRADES_FILE) as f:
         lines = [json.loads(l) for l in f.readlines() if l.strip()]
     
-    balance = 1.0 + sum(t.get('pnl_sol', 0) for t in lines)
+    closed_pnl = sum(t.get('pnl_sol', 0) for t in lines if t.get('status') == 'closed')
+    open_count = len([t for t in lines if t.get('status') in ['open', 'open_partial']])
+    locked = open_count * 0.05
+    balance = 1.0 + closed_pnl - locked
     wins = len([t for t in lines if t.get('pnl_sol', 0) > 0])
     return f"💰 Balance: {balance:.4f} SOL\n📈 {len(lines)} trades | {wins}W"
 
