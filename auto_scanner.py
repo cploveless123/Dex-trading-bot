@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Auto Scanner - Continuously finds and takes trades autonomously
-Runs every 2 minutes, buys when criteria met, monitors TP/stop
+Auto Scanner v2 - Based on pattern analysis data
+Tighter criteria: low mcap pumpfun only, avoid pumpswap
 """
 import requests, json
 from datetime import datetime
@@ -11,14 +11,14 @@ BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
 TRADES_FILE = "/root/Dex-trading-bot/trades/sim_trades.jsonl"
 
-# Entry criteria (adjusted for better wins)
-LOW_MCAP_MIN = 5000
-LOW_MCAP_MAX = 30000
-MID_MCAP_MIN = 30000
-MID_MCAP_MAX = 80000
-MIN_VOLUME = 15000
-MIN_BS_RATIO = 1.3
-MIN_24H_CHANGE = 50
+# STRICTER criteria based on pattern analysis
+# WINNING: $5K-$15K mcap, pumpfun, MOMENTUM
+# LOSING: $70K+ mcap, pumpswap
+MIN_MCAP = 5000
+MAX_MCAP = 20000  # Tighter cap based on data
+MIN_VOLUME = 30000  # Higher volume requirement
+MIN_BS_RATIO = 1.5
+MIN_24H_CHANGE = 30
 POSITION_SIZE = 0.05
 
 def send_alert(msg):
@@ -31,20 +31,8 @@ def send_alert(msg):
     except:
         return False
 
-def get_live_mcap(pair_address):
-    try:
-        resp = requests.get(f"https://api.dexscreener.com/latest/dex/pairs/solana/{pair_address}", timeout=10)
-        data = resp.json()
-        pairs = data.get('pairs', [])
-        if pairs:
-            p = max(pairs, key=lambda x: x.get('liquidity', {}).get('usd', 0))
-            return p.get('fdv', 0) or 0
-    except:
-        pass
-    return None
-
 def check_and_buy():
-    """Scan and buy if criteria met - look for dips with volume (accumulation)"""
+    """Scan and buy if STRICTER criteria met based on pattern analysis"""
     timestamp = datetime.utcnow().strftime("%H:%M UTC")
     
     resp = requests.get(
@@ -56,7 +44,7 @@ def check_and_buy():
     if resp.status_code != 200:
         return None
     
-    tokens = resp.json()[:60]  # Scan more for dip opportunities
+    tokens = resp.json()[:80]
     
     for tok_data in tokens:
         addr = tok_data.get('tokenAddress', '')
@@ -79,66 +67,68 @@ def check_and_buy():
             dex = p.get('dexId', '')
             sym = p.get('baseToken', {}).get('symbol', '?')
             pair = p.get('pairAddress', '')
-            chg_1h = p.get('priceChange', {}).get('h1', 0) or 0
             chg = p.get('priceChange', {}).get('h24', 0) or 0
             buys = p.get('txns', {}).get('h24', {}).get('buys', 0) or 0
             sells = p.get('txns', {}).get('h24', {}).get('sells', 0) or 1
             bs = buys / sells if sells > 0 else 0
             
-            if dex not in ['pumpfun', 'pumpswap']:
+            # ONLY pumpfun, ONLY low mcap based on winning trades
+            if dex != 'pumpfun':
                 continue
             
-            # Pattern recognition: Look for accumulation (dips with volume)
-            # OR strong momentum continuation - both are valid
-            low_cap = LOW_MCAP_MIN <= m < LOW_MCAP_MAX and v > MIN_VOLUME and bs >= MIN_BS_RATIO and chg >= 20
-            mid_cap = MID_MCAP_MIN <= m < MID_MCAP_MAX and v > MIN_VOLUME * 1.5 and bs >= MIN_BS_RATIO and chg >= 15
+            # Stricter mcap: $5K-$20K (winners were $5K-$15K mostly)
+            if m < MIN_MCAP or m > MAX_MCAP:
+                continue
             
-            # Also look for dip entries (1h change negative but 24h still positive = recovery)
-            dip_entry = LOW_MCAP_MIN <= m < LOW_MCAP_MAX and v > MIN_VOLUME and chg_1h < -10 and chg > 10 and bs >= 2.0
+            # Volume requirement: $30K+ (winners had volume)
+            if v < MIN_VOLUME:
+                continue
             
-            if low_cap or mid_cap or dip_entry:
-                # Check if already have this token
-                with open(TRADES_FILE) as f:
-                    existing = [json.loads(l) for l in f]
-                
-                already_have = any(
-                    t.get('token_address') == addr and t.get('status') in ['open', 'open_partial']
-                    for t in existing
-                )
-                
-                if already_have:
-                    continue
-                
-                # Calculate balance
-                balance = 1.0 + sum(t.get('pnl_sol', 0) for t in existing)
-                
-                # Buy it
-                trade = {
-                    "token": sym,
-                    "token_address": addr,
-                    "pair_address": pair,
-                    "amount_sol": POSITION_SIZE,
-                    "entry_mcap": int(m),
-                    "entry_liquidity": p.get('liquidity', {}).get('usd', 0),
-                    "dex": dex,
-                    "action": "BUY",
-                    "source": "auto_scanner",
-                    "opened_at": datetime.utcnow().isoformat(),
-                    "status": "open",
-                    "entry_reason": "DIP_ENTRY" if dip_entry else "MOMENTUM"
-                }
-                
-                with open(TRADES_FILE, "a") as f:
-                    f.write(json.dumps(trade) + "\n")
-                
-                entry_type = "📉 DIP ENTRY" if dip_entry else "🚀 MOMENTUM"
-                
-                # Send alert
-                msg = f"""✅ BUY EXECUTED | {timestamp}
+            # Buy/sell ratio 1.5+ (winners had good ratio)
+            if bs < MIN_BS_RATIO:
+                continue
+            
+            # 24h change 30%+ (momentum needed)
+            if chg < MIN_24H_CHANGE:
+                continue
+            
+            # Check if already have this token
+            with open(TRADES_FILE) as f:
+                existing = [json.loads(l) for l in f]
+            
+            already_have = any(
+                t.get('token_address') == addr and t.get('status') in ['open', 'open_partial']
+                for t in existing
+            )
+            
+            if already_have:
+                continue
+            
+            balance = 1.0 + sum(t.get('pnl_sol', 0) for t in existing)
+            
+            trade = {
+                "token": sym,
+                "token_address": addr,
+                "pair_address": pair,
+                "amount_sol": POSITION_SIZE,
+                "entry_mcap": int(m),
+                "entry_liquidity": p.get('liquidity', {}).get('usd', 0),
+                "dex": dex,
+                "action": "BUY",
+                "source": "auto_scanner_v2",
+                "opened_at": datetime.utcnow().isoformat(),
+                "status": "open",
+                "entry_reason": "MOMENTUM"
+            }
+            
+            with open(TRADES_FILE, "a") as f:
+                f.write(json.dumps(trade) + "\n")
+            
+            msg = f"""✅ BUY EXECUTED | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {sym}
 
-{entry_type}
+🚀 MOMENTUM | Based on pattern analysis
 📍 Entry MC: ${int(m):,}
 💵 Amount: {POSITION_SIZE} SOL
 💰 Wallet: {balance:.4f} SOL
@@ -152,25 +142,24 @@ def check_and_buy():
 +500% → Sell 15%
 Rest → Hold
 ⚠️ Stop: -25%"""
-                
-                send_alert(msg)
-                print(f"✅ AUTO BOUGHT: {sym} @ ${m:,.0f} ({entry_type})")
-                return sym
+            
+            send_alert(msg)
+            print(f"✅ AUTO BOUGHT: {sym} @ ${m:,.0f}")
+            return sym
         
         except Exception as e:
-            print(f"Error scanning {addr}: {e}")
             continue
     
     return None
 
 def main():
-    print("🚀 Auto Scanner Started - Finding opportunities...")
+    print("🚀 Auto Scanner v2 Started - Based on pattern analysis")
     while True:
         try:
             check_and_buy()
-        except Exception as e:
-            print(f"Scanner error: {e}")
-        time.sleep(120)  # Scan every 2 minutes
+        except:
+            pass
+        time.sleep(120)
 
 if __name__ == "__main__":
     main()
