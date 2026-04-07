@@ -180,3 +180,17 @@ Rest → Hold (trailing stop)
 ### 💡 Key Insight:
 "Learning by DOING > watching and waiting"
 Proof of concept = actual trades, not analysis
+
+## AUTO POSITION MONITOR (2026-04-07 14:06 UTC)
+
+### New Process Running:
+`position_monitor.py` - runs every 60 seconds
+
+### What it does automatically:
+- TP1 +25% → sell 50% → Telegram alert
+- TP2 +100% → sell 25% → Telegram alert  
+- TP3 +500% → full exit → Telegram alert
+- Stop -25% → close → Telegram alert
+
+### NO PROMPTING NEEDED
+Bot executes, sends alert, that's it.

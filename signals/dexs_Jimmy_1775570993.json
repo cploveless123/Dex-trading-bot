@@ -1,0 +1,20 @@
+{
+  "pair_address": "2z7HYVBzssrSrF52t8B5xYGwFF1wYk6gGsrKHQRZRHfd",
+  "token_address": "9sze2N4nXEqQKaWv1XM7Pf4AdxyubD9twHo4HHN1pump",
+  "symbol": "Jimmy",
+  "name": "GTA 6 AI Agent",
+  "price": "0.00006060",
+  "liquidity": 18534.08,
+  "mcap": 60610,
+  "volume_24h": 133166.4,
+  "price_change_24h": 61.78,
+  "buys_24h": 3151,
+  "sells_24h": 988,
+  "buy_sell_ratio": 3.1892712550607287,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T14:09:53.539138",
+  "signals": [
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

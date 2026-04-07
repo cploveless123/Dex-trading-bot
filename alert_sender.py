@@ -157,9 +157,11 @@ def main():
             if trade_alert:
                 send_telegram(trade_alert)
             
-            signal_alert = check_new_signals()
-            if signal_alert:
-                send_telegram(signal_alert)
+            # Signal alerts DISABLED - only send trade executed alerts
+            # Chris said: "Either buy or pass - no presenting signals"
+            # signal_alert = check_new_signals()
+            # if signal_alert:
+            #     send_telegram(signal_alert)
             
         except Exception as e:
             print(f"Error: {e}")
