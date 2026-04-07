@@ -1,0 +1,19 @@
+{
+  "pair_address": "HGzZGTWGBgWwf2vfS7dAZ7PP1t5FR1MaiNRguib451oq",
+  "token_address": "4uuEfaHL9QwZUYaywU8rW7Tbr5274PNNvtUrf9zVpump",
+  "symbol": "LOVELOL",
+  "name": "Love LOL",
+  "price": "0.00006994",
+  "liquidity": 19992.17,
+  "mcap": 69943,
+  "volume_24h": 126952.52,
+  "price_change_24h": 112,
+  "buys_24h": 1021,
+  "sells_24h": 901,
+  "buy_sell_ratio": 1.1331853496115427,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T18:42:44.983950",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

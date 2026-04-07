@@ -27,9 +27,9 @@ def send_alert(token, action, entry_mcap, exit_mcap=None, pnl=0, pnl_pct=0, exit
 
 🎯 Exit Plan:
 +25% → Sell 50%
-+100% → Sell 25%
-+500% → Sell 15%
-Rest → Hold
++100% → Sell 50%
+
+
 ⚠️ Stop: -25%"""
     
     elif action == "SELL":

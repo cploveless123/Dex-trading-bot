@@ -138,9 +138,9 @@ def check_and_buy():
 
 🎯 Exit Plan:
 +25% → Sell 50%
-+100% → Sell 25%
-+500% → Sell 15%
-Rest → Hold
++100% → Sell 50%
+
+
 ⚠️ Stop: -25%"""
             
             send_alert(msg)

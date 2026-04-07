@@ -93,36 +93,31 @@ def check_positions():
             send_alert(msg)
             print(f"✅ {sym} TP1 AUTO: sold 50% at +{change:.0f}%")
         
-        # Check TP2 (+100%) - sell 25%
+        # Check TP2 (+100%) - sell remaining 50%
         elif change >= 100 and not t.get('tp2_sold'):
             t['tp2_sold'] = True
-            t['partial_exit_2'] = True
             t['exit_reason'] = 'TP2_AUTO'
             t['closed_at'] = datetime.utcnow().isoformat()
-            t['pnl_sol'] = 0.0777
-            t['pnl_pct'] = 77.7
+            t['pnl_sol'] = 0.05
+            t['pnl_pct'] = 100
+            t['status'] = 'closed'
             updated = True
             
             timestamp = datetime.utcnow().strftime("%H:%M UTC")
-            msg = f"""🔴 SELL EXECUTED (25%) | {timestamp}
+            msg = f"""🔴 SELL EXECUTED (remaining) | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {sym}
 
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
-🟢 P&L: +0.0777 SOL (+100.0%)
+🟢 P&L: +0.0500 SOL (+100.0%)
 💰 Wallet: {balance:.4f} SOL
-📋 Reason: TP2_AUTO
+📋 Reason: TP2_AUTO (full exit)
 
 🔗 https://dexscreener.com/solana/{pair}
 🥧 https://pump.fun/{tok}"""
             send_alert(msg)
-            print(f"✅ {sym} TP2 AUTO: sold 25% more at +{change:.0f}%")
-        
-        # Check TP3 (+500%) - sell 15%
-        elif change >= 500 and not t.get('tp3_sold'):
-            t['tp3_sold'] = True
-            t['exit_reason'] = 'TP3_AUTO'
+            print(f"✅ {sym} TP2 AUTO: full exit at +{change:.0f}%")
             t['closed_at'] = datetime.utcnow().isoformat()
             t['pnl_sol'] = 0.10
             t['pnl_pct'] = 500
