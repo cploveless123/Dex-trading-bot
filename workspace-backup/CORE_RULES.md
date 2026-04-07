@@ -88,3 +88,14 @@ A partially exited position should show in OPEN POSITIONS.
 ### Updated partial exit handling in position_monitor.py:
 - If partial_exit = True AND NOT full exit achieved → status = "open_partial"
 - Only mark "closed" when fully exited (all positions sold)
+
+### TIMESTAMPS ON ALL MESSAGES (LOCKED IN 2026-04-07 16:43 UTC):
+Chris: "Perfect. Please don't forget"
+
+ALL alerts and reports MUST include timestamp in header:
+- ✅ BUY EXECUTED | HH:MM UTC
+- 🔴 SELL EXECUTED | HH:MM UTC
+- 📊 TRADE REPORT | HH:MM UTC
+
+Timestamps prevent confusion about when actions occurred.
+This is now permanently saved and will be backed up hourly.
