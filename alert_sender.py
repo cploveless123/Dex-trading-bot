@@ -54,8 +54,8 @@ def format_trade_alert(trade):
 🥧 https://pump.fun/{token_addr}
 
 🎯 Exit Plan:
-+25% → Sell 50%
-+100% → Sell 50%
++25% → Sell 75%
++75% → Sell 25%
 ⚠️ Stop: -25%"""
     else:
         pnl_emoji = "🟢" if pnl >= 0 else "🔴"
