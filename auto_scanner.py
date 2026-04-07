@@ -80,8 +80,10 @@ def check_and_buy():
             if m < MIN_MCAP or m > MAX_MCAP:
                 continue
             
-            # Volume requirement: $30K+ (winners had volume)
-            if v < MIN_VOLUME:
+            # Volume requirement: $30K+ for raydium, $20K+ for pump.fun (can have 0 liquidity during bonding)
+            if dex == 'pumpfun' and v < 20000:
+                continue
+            if dex != 'pumpfun' and v < MIN_VOLUME:
                 continue
             
             # Buy/sell ratio 1.5+ (winners had good ratio)
