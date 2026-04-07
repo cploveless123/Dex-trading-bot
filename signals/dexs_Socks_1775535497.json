@@ -1,0 +1,19 @@
+{
+  "pair_address": "6AhjFJ1APT8op7jfy1TRcfqCemqrNc9b3JWqU7tP8A6F",
+  "token_address": "GvLpXC6iPRaUhMUXKrEXr7P7ZjmQTe1XhVT239Bepump",
+  "symbol": "Socks",
+  "name": "Just A Socks",
+  "price": "0.0001660",
+  "liquidity": 30916.95,
+  "mcap": 166094,
+  "volume_24h": 151552,
+  "price_change_24h": 379,
+  "buys_24h": 6557,
+  "sells_24h": 4846,
+  "buy_sell_ratio": 1.353074700784152,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T04:18:17.286411",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

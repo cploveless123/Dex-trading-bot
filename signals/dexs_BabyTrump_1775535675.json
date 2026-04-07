@@ -1,0 +1,19 @@
+{
+  "pair_address": "8YKAngmCSm6x5fsdrZa7MHeqhQZko1q7JTnTdnBejqAb",
+  "token_address": "EW7ZvfyaeiXjsxLmPf3m73JnQL2bkqRyan8CW1Sapump",
+  "symbol": "BabyTrump",
+  "name": "Official Baby Trump",
+  "price": "0.0003158",
+  "liquidity": 43648.22,
+  "mcap": 315813,
+  "volume_24h": 502727.36,
+  "price_change_24h": 852,
+  "buys_24h": 5810,
+  "sells_24h": 4586,
+  "buy_sell_ratio": 1.2668992586131704,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T04:21:14.948500",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

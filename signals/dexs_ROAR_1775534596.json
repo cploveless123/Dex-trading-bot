@@ -1,0 +1,20 @@
+{
+  "pair_address": "BxjiQdY73wzFHdGbnkYtTCGstx4iDdPGeGvXmmtf44AM",
+  "token_address": "8sBp1UerZu2tYwMjKpaN43REgtwYHjv8WBKf7G2MMwE3",
+  "symbol": "ROAR",
+  "name": "Russian Oil Asset Reserve",
+  "price": "0.001519",
+  "liquidity": 155878.66,
+  "mcap": 1519781,
+  "volume_24h": 1067839.68,
+  "price_change_24h": 7107,
+  "buys_24h": 1870,
+  "sells_24h": 1780,
+  "buy_sell_ratio": 1.050561797752809,
+  "dex": "raydium",
+  "analyzed_at": "2026-04-07T04:03:16.441587",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}

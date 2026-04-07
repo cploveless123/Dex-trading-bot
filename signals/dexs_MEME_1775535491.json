@@ -1,0 +1,20 @@
+{
+  "pair_address": "0xE10Eb1FA6328FD5F901480B061B923D8B7d56229",
+  "token_address": "0x901F0571Ba1aDD7e9cebD0E057B833Ca01217777",
+  "symbol": "MEME",
+  "name": "MEME",
+  "price": "0.0002416",
+  "liquidity": 327617.5,
+  "mcap": 11937018,
+  "volume_24h": 86198.72,
+  "price_change_24h": 39.08,
+  "buys_24h": 679,
+  "sells_24h": 180,
+  "buy_sell_ratio": 3.772222222222222,
+  "dex": "pancakeswap",
+  "analyzed_at": "2026-04-07T04:18:10.985568",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "BUY_MOMENTUM"
+  ]
+}

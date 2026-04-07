@@ -1,0 +1,19 @@
+{
+  "pair_address": "9EDQs553So9EXzxzotMKQ9xJdD8ZgM5DrF5DhadzS8rR",
+  "token_address": "GshcMHctgcKYLzatRihNpbXeuR8xW285Wcheehxgpump",
+  "symbol": "LAISK",
+  "name": "LAISK",
+  "price": "0.00006054",
+  "liquidity": 18564.24,
+  "mcap": 60547,
+  "volume_24h": 69292.92,
+  "price_change_24h": 82.94,
+  "buys_24h": 1014,
+  "sells_24h": 923,
+  "buy_sell_ratio": 1.0985915492957747,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T04:21:15.283168",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
