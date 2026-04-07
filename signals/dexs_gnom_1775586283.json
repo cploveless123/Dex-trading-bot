@@ -1,0 +1,19 @@
+{
+  "pair_address": "3t6WCLWz6p8BjyPbXMiQrVcH1a1YRMV9k4e5oogFEUJD",
+  "token_address": "9TThady5n8vpwHLud9yy5XDS1VSGQoXoFgKmnw78pump",
+  "symbol": "gnom",
+  "name": "gnom",
+  "price": "0.000006428",
+  "liquidity": 0,
+  "mcap": 6428.15,
+  "volume_24h": 4396.16,
+  "price_change_24h": 142,
+  "buys_24h": 81,
+  "sells_24h": 36,
+  "buy_sell_ratio": 2.25,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T18:24:43.814085",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
