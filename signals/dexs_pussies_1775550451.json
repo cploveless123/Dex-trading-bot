@@ -1,0 +1,19 @@
+{
+  "pair_address": "64sgSJg1bwHu28d1TFDhK7TPdVPpFACkc2gHdRdzMLMq",
+  "token_address": "DkVbZFMbeWWUhuMWNskzjcqDJRDXa5gCruEwixd7pump",
+  "symbol": "pussies",
+  "name": "pussies",
+  "price": "0.0001914",
+  "liquidity": 33323.31,
+  "mcap": 191499,
+  "volume_24h": 184216.07,
+  "price_change_24h": 307,
+  "buys_24h": 1524,
+  "sells_24h": 878,
+  "buy_sell_ratio": 1.7357630979498861,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T08:27:31.697035",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
