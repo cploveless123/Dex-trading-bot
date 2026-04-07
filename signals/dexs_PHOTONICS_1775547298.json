@@ -1,0 +1,19 @@
+{
+  "pair_address": "Cs634BNCTeoKsFYwymYxVUms8wi4vCbTW9ZcaFG9H6cD",
+  "token_address": "7q2E4KJwAHNW79Ndu9scfYq6GQg8g3GP6eixVy1kpump",
+  "symbol": "PHOTONICS",
+  "name": "Photoncoin",
+  "price": "0.000003912",
+  "liquidity": 0,
+  "mcap": 3912.68,
+  "volume_24h": 2059.6,
+  "price_change_24h": 51.43,
+  "buys_24h": 54,
+  "sells_24h": 19,
+  "buy_sell_ratio": 2.8421052631578947,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T07:34:58.682570",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

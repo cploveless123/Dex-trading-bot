@@ -1,0 +1,19 @@
+{
+  "pair_address": "2JThyiJvLf9C9gP2YM8dcjEXuN8LeKFsnecWHRQFxkpu",
+  "token_address": "GF7QCMfZHktxrzv8hXZvtxwrJgRS9zSZ56TYDCkipump",
+  "symbol": "BabyDoge",
+  "name": "Baby Doge",
+  "price": "0.00001941",
+  "liquidity": 0,
+  "mcap": 19417.35,
+  "volume_24h": 21481.43,
+  "price_change_24h": 579,
+  "buys_24h": 395,
+  "sells_24h": 195,
+  "buy_sell_ratio": 2.0256410256410255,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T07:37:58.844673",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
