@@ -85,3 +85,29 @@
 
 ### 💡 Key Insight
 "Winning in Solana memecoins is largely about surviving long enough to find it."
+
+## CRITICAL RULES (committed 2026-04-07 13:46 UTC)
+
+### Exit Rules (STRICT):
+```
++25% → Sell 50%
++100% → Sell 25%
++500% → Sell 15%
+Rest → Hold (trailing stop)
+⚠️ Stop: -25%
+```
+
+### Alert Format (ALL alerts):
+- Entry MC + Exit MC on ALL sells
+- PnL with green/red emoji
+- Clickable links (plain URLs)
+- Live mcap verification BEFORE presenting
+
+### Action Triggers:
+- TP1 (+25%) hit → sell 50% immediately
+- Stop loss (-25%) hit → close immediately  
+- No asking, just doing
+
+### Git:
+- Commit after every trade action
+- Include exit rules in commit message
