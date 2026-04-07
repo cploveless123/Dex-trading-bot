@@ -122,6 +122,11 @@ def check_and_buy():
                 with open(TRADES_FILE, "a") as f:
                     f.write(json.dumps(trade) + "\n")
                 
+                # Calculate balance
+                with open(TRADES_FILE) as f:
+                    existing = [json.loads(l) for l in f]
+                balance = 1.0 + sum(t.get('pnl_sol', 0) for t in existing)
+                
                 # Send alert
                 msg = f"""✅ BUY EXECUTED | {timestamp}
 ━━━━━━━━━━━━━━━
@@ -129,6 +134,7 @@ def check_and_buy():
 
 📍 Entry MC: ${int(m):,}
 💵 Amount: {POSITION_SIZE} SOL
+💰 Wallet: {balance:.4f} SOL
 
 🔗 https://dexscreener.com/solana/{pair}
 🥧 https://pump.fun/{addr}
