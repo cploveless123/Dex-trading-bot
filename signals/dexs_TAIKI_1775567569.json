@@ -1,0 +1,20 @@
+{
+  "pair_address": "0x3A8a0733D0D48Bfe30BC2B341D2F1A24e34911a6",
+  "token_address": "0x225130eea8B4749714165F4A43f0082450673dff",
+  "symbol": "TAIKI",
+  "name": "The OG Shiba Inu",
+  "price": "0.00002493",
+  "liquidity": 10276.18,
+  "mcap": 24939,
+  "volume_24h": 8307.76,
+  "price_change_24h": 2204,
+  "buys_24h": 84,
+  "sells_24h": 12,
+  "buy_sell_ratio": 7.0,
+  "dex": "uniswap",
+  "analyzed_at": "2026-04-07T13:12:49.754525",
+  "signals": [
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

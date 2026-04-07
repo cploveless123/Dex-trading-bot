@@ -51,3 +51,37 @@
 ## Win/Loss Track Record
 - Session: 0 wins, multiple losses (learning phase)
 - Main issues: Bad data, stale signals, fake addresses
+
+## PROFIT-TAKING FRAMEWORK (from Chris - 2026-04-07 13:13 UTC)
+
+### 🎯 Exit Ladder
+| Target | Action |
+|--------|--------|
+| +25% to +100% | Sell 50% → recoup investment, risk-free position |
+| 2x-10x | Sell 25% → lock in gains |
+| 20x+ | Sell 15-20% → capture moonshot |
+| Remainder | Hold + trailing stop → lottery ticket for 100x+ |
+
+### ⚠️ Stop Loss: -25% (not -20%)
+
+### 📊 Position Sizing
+- Never risk >1-5% of capital per trade
+- Makes partial exits psychologically easier
+
+### 🔧 Tools
+- GMGN auto-sell orders (2x, 5x, 10x presets)
+- Wallet monitoring → follow smart money
+- Trailing stop-loss
+
+### 🐋 Whale Signals
+- When whales distribute = signal to take profits
+- Social hype peaking = often local top
+
+### ✅ Pre-Trade Checklist
+1. Position size? (never >5% capital)
+2. Stop-loss level?
+3. Exit ladder? (write it down)
+4. Max daily loss limit?
+
+### 💡 Key Insight
+"Winning in Solana memecoins is largely about surviving long enough to find it."

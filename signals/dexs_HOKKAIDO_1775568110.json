@@ -1,0 +1,19 @@
+{
+  "pair_address": "8fAw96sDeBYQu7fWARqKPMUvaCupnKZ3pnuTZzWK2KNv",
+  "token_address": "CGD6Dbzzaf53Dfi2skxD3Su7LKhhXAyZGcgqw5yapump",
+  "symbol": "HOKKAIDO",
+  "name": "HOKKAIDO",
+  "price": "0.0001292",
+  "liquidity": 26842.1,
+  "mcap": 129208,
+  "volume_24h": 17278.92,
+  "price_change_24h": 255,
+  "buys_24h": 172,
+  "sells_24h": 142,
+  "buy_sell_ratio": 1.2112676056338028,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T13:21:50.389251",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

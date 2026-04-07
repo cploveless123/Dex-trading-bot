@@ -1,0 +1,19 @@
+{
+  "pair_address": "2xFiZUyiraZawY1J1KVFCCvM4A1TCyPJECaNRdLYUXtq",
+  "token_address": "GPbuMZHGqoC1964wNYuFoq4wp9d7mpYzTxXrFBs5pump",
+  "symbol": "BABEPSTEIN",
+  "name": "Official Baby Epstein",
+  "price": "0.00001595",
+  "liquidity": 0,
+  "mcap": 15953.93,
+  "volume_24h": 30844.16,
+  "price_change_24h": 576,
+  "buys_24h": 659,
+  "sells_24h": 246,
+  "buy_sell_ratio": 2.678861788617886,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T13:26:20.700344",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "pair_address": "0x9b2a0a54f851edd8241717a77a5cd5fad1f688770f2435cd77bfd46cc71b6b30",
+  "token_address": "0x37d183FCf1DA460a64D21E754b3E6144C4e11BA3",
+  "symbol": "AGBETS",
+  "name": "AgenticBets",
+  "price": "0.0000005981",
+  "liquidity": 51825.38,
+  "mcap": 59813,
+  "volume_24h": 514716.44,
+  "price_change_24h": 198,
+  "buys_24h": 1326,
+  "sells_24h": 2202,
+  "buy_sell_ratio": 0.6021798365122616,
+  "dex": "uniswap",
+  "analyzed_at": "2026-04-07T13:00:48.973739",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}

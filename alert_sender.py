@@ -42,10 +42,12 @@ def format_trade_alert(trade):
 🔗 DexScreener: https://dexscreener.com/solana/{token_addr}
 🥧 PumpFun: https://pump.fun/{token_addr}
 
-🎯 Exit Plan:
-TP1 +20% → Sell 75%
-TP2 +100% → Full exit
-Stop -20%"""
+🎯 Exit Plan (revised):
++25%~+100% → Sell 50%
++100%~+500% → Sell 25%
++500%~+2000% → Sell 15%
+Remainder → Hold + trailing stop
+⚠️ Stop Loss: -25%"""
     else:
         pnl_emoji = "🟢" if pnl >= 0 else "🔴"
         msg = f"""🔴 SELL EXECUTED
