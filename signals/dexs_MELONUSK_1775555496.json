@@ -1,0 +1,20 @@
+{
+  "pair_address": "CApv82xVibCnC6mEPN7b8cBhmM6nVW6FF3w1G3Q6VWB9",
+  "token_address": "3yjXnHLgqq2D5V1KGE28wVB4TiENrQKCunhGhiqcpPEh",
+  "symbol": "MELONUSK",
+  "name": "Melon Usk",
+  "price": "0.00000004656",
+  "liquidity": 59106.11,
+  "mcap": 46567,
+  "volume_24h": 722239.11,
+  "price_change_24h": 149,
+  "buys_24h": 3264,
+  "sells_24h": 2186,
+  "buy_sell_ratio": 1.4931381518755718,
+  "dex": "raydium",
+  "analyzed_at": "2026-04-07T09:51:36.768253",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}
