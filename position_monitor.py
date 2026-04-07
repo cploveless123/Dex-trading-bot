@@ -60,7 +60,10 @@ def check_positions():
         # Get current balance
         with open(TRADES_FILE) as f_trades:
             all_trades = [json.loads(l) for l in f_trades]
-        balance = 1.0 + sum(t.get('pnl_sol', 0) for t in all_trades)
+        closed_pnl = sum(t.get('pnl_sol', 0) for t in all_trades if t.get('status') == 'closed')
+        open_count = len([t for t in all_trades if t.get('status') in ['open', 'open_partial']])
+        locked = open_count * 0.05
+        balance = 1.0 + closed_pnl - locked
         
         # Check TP1 (+25%) - sell 50%
         if change >= 25 and not t.get('tp1_sold'):
