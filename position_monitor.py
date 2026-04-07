@@ -174,7 +174,7 @@ def main():
             check_positions()
         except Exception as e:
             print(f"Error: {e}")
-        time.sleep(60)  # Check every minute
+        time.sleep(15)  # Check every minute
 
 if __name__ == "__main__":
     main()
