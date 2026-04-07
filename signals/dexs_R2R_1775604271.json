@@ -1,0 +1,20 @@
+{
+  "pair_address": "9gHhhRyufd9PiA21wUr8XYrkHbyCZyy8yEaCGEww8SUL",
+  "token_address": "8TLHW32GiP3DuLyKvju5GJ6TE6vne2HcWja7r1rmpump",
+  "symbol": "R2R",
+  "name": "Trump Ready 2 Rock",
+  "price": "0.005448",
+  "liquidity": 182301.71,
+  "mcap": 5448603,
+  "volume_24h": 177713.07,
+  "price_change_24h": 10729,
+  "buys_24h": 2520,
+  "sells_24h": 1698,
+  "buy_sell_ratio": 1.4840989399293287,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T23:24:31.606892",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}

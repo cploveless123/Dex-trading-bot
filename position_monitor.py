@@ -1,3 +1,5 @@
+from trading_constants import TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT, STOP_LOSS_PERCENT
+
 #!/usr/bin/env python3
 """
 Position Monitor - Auto-execute TP/stop for open positions

@@ -1,0 +1,19 @@
+{
+  "pair_address": "0x174c0bD5a3a9765478d91011B4B7F18c26cE18f2",
+  "token_address": "0xb9E6b953D3Df3B668147cCc3EA914B3b28b24444",
+  "symbol": "BOB",
+  "name": "Binance Bot",
+  "price": "0.0001499",
+  "liquidity": 36635.75,
+  "mcap": 149946,
+  "volume_24h": 113585.34,
+  "price_change_24h": 175,
+  "buys_24h": 474,
+  "sells_24h": 401,
+  "buy_sell_ratio": 1.1820448877805487,
+  "dex": "pancakeswap",
+  "analyzed_at": "2026-04-07T23:24:31.246821",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

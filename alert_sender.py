@@ -1,3 +1,5 @@
+from trading_constants import EXIT_PLAN_TEXT
+
 #!/usr/bin/env python3
 """
 Real-time Alert Sender - Runs continuously, checks for new signals/trades and sends to Telegram
@@ -53,10 +55,7 @@ def format_trade_alert(trade):
 🔗 https://dexscreener.com/solana/{token_addr}
 🥧 https://pump.fun/{token_addr}
 
-🎯 Exit Plan:
-+25% → Sell 75%
-+75% → Sell 25%
-⚠️ Stop: -25%"""
+EXIT_PLAN_TEXT + """
     else:
         pnl_emoji = "🟢" if pnl >= 0 else "🔴"
         msg = f"""🔴 SELL EXECUTED | {timestamp}
