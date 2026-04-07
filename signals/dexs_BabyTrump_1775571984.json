@@ -1,0 +1,20 @@
+{
+  "pair_address": "0x448856B94e044a1Dadd22A2999114D7E45Ade7e1",
+  "token_address": "0x87632EE8657ADE4fF07A6A15d6bE4BBE70036588",
+  "symbol": "BabyTrump",
+  "name": "Official Baby Trump Coin",
+  "price": "0.00005800",
+  "liquidity": 15707.93,
+  "mcap": 58004,
+  "volume_24h": 30449.34,
+  "price_change_24h": 5255,
+  "buys_24h": 266,
+  "sells_24h": 60,
+  "buy_sell_ratio": 4.433333333333334,
+  "dex": "uniswap",
+  "analyzed_at": "2026-04-07T14:26:24.579108",
+  "signals": [
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}
