@@ -1,0 +1,19 @@
+{
+  "pair_address": "65hg8XgrQ4A9rTY5snV5GUuGtn723t1yjXRB2SgkHgPd",
+  "token_address": "69UpA42H1AwjfsKRDXdPMJFTyysfYsZ7Ujxy8785pump",
+  "symbol": "AntiTrump",
+  "name": "The Official Anti-Trump",
+  "price": "0.00006355",
+  "liquidity": 18974.81,
+  "mcap": 63558,
+  "volume_24h": 99524.2,
+  "price_change_24h": 95.41,
+  "buys_24h": 1276,
+  "sells_24h": 1677,
+  "buy_sell_ratio": 0.7608825283243887,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T15:47:40.531093",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
