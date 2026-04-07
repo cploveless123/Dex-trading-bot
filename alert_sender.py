@@ -55,7 +55,7 @@ def format_trade_alert(trade):
 🔗 https://dexscreener.com/solana/{token_addr}
 🥧 https://pump.fun/{token_addr}
 
-EXIT_PLAN_TEXT + """
+{EXIT_PLAN_TEXT}"""
     else:
         pnl_emoji = "🟢" if pnl >= 0 else "🔴"
         msg = f"""🔴 SELL EXECUTED | {timestamp}
