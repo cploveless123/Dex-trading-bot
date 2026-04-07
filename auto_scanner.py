@@ -126,26 +126,8 @@ def check_and_buy():
             with open(TRADES_FILE, "a") as f:
                 f.write(json.dumps(trade) + "\n")
             
-            msg = f"""✅ BUY EXECUTED | {timestamp}
-━━━━━━━━━━━━━━━
-💰 {sym}
-
-🚀 MOMENTUM | Based on pattern analysis
-📍 Entry MC: ${int(m):,}
-💵 Amount: {POSITION_SIZE} SOL
-💰 Wallet: {balance:.4f} SOL
-
-🔗 https://dexscreener.com/solana/{pair}
-🥧 https://pump.fun/{addr}
-
-🎯 Exit Plan:
-+25% → Sell 50%
-+100% → Sell 50%
-
-
-⚠️ Stop: -25%"""
-            
-            send_alert(msg)
+            # DON'T send Telegram here - let alert_sender.py handle ALL alerts
+            # This prevents double-sending
             print(f"✅ AUTO BOUGHT: {sym} @ ${m:,.0f}")
             return sym
         
