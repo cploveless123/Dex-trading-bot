@@ -1,0 +1,19 @@
+{
+  "pair_address": "9RotgfSPAtRb9G6UW9gWwNKmjatFSQgWFAdX4FSXM1GP",
+  "token_address": "33ncfi4s6rEU1MaPuWKUWxTo4B4PyPd7YEA1eUKbpump",
+  "symbol": "DEPORTER",
+  "name": "Donald The Deporter",
+  "price": "0.00001161",
+  "liquidity": 0,
+  "mcap": 11619.66,
+  "volume_24h": 14110.46,
+  "price_change_24h": 335,
+  "buys_24h": 225,
+  "sells_24h": 108,
+  "buy_sell_ratio": 2.0833333333333335,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T12:57:48.850353",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
