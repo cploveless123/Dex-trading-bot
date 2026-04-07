@@ -1,0 +1,19 @@
+{
+  "pair_address": "4meHYagYKTYst2Z6eufLRQtpcNsHHrin1nv7YQoy9Jg1",
+  "token_address": "EPLTYx3vh8Y5iVnWV65QLaRqN83bzpgatxBK5vedpump",
+  "symbol": "SpeedDate",
+  "name": "Love in the trenches ",
+  "price": "0.00001606",
+  "liquidity": 0,
+  "mcap": 16061.85,
+  "volume_24h": 149511.08,
+  "price_change_24h": 615,
+  "buys_24h": 4182,
+  "sells_24h": 1841,
+  "buy_sell_ratio": 2.271591526344378,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T02:15:09.848403",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
