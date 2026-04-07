@@ -1,0 +1,19 @@
+{
+  "pair_address": "QHyDrhwcVNm8MRP3msoghCZSVJCZmCTjyEfXCwxnCBv",
+  "token_address": "tED9gZBYYRzg7PHjzyCNSmuWeL5NQGwSqtVM7d4pump",
+  "symbol": "PPC",
+  "name": "Peercoin",
+  "price": "0.00001256",
+  "liquidity": 0,
+  "mcap": 12561.94,
+  "volume_24h": 17232.91,
+  "price_change_24h": 463,
+  "buys_24h": 355,
+  "sells_24h": 171,
+  "buy_sell_ratio": 2.0760233918128654,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T03:51:09.363560",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

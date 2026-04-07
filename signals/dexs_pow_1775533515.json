@@ -1,0 +1,19 @@
+{
+  "pair_address": "7edPFT7WF37F1xgAUbSWsvBJ2MNX5BtaiE1czt2ggxtX",
+  "token_address": "3HFVVmGGto5h3LG6C9yMVJ1XgGR6jynDfK8umKkPpump",
+  "symbol": "pow",
+  "name": "proof of work solana memecoin",
+  "price": "0.0001100",
+  "liquidity": 25224.73,
+  "mcap": 110060,
+  "volume_24h": 177189.12,
+  "price_change_24h": 232,
+  "buys_24h": 1791,
+  "sells_24h": 1564,
+  "buy_sell_ratio": 1.145140664961637,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T03:45:15.425854",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

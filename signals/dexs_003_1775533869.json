@@ -1,0 +1,20 @@
+{
+  "pair_address": "CEhGRxFLfpVYDGrd5BpibY9z5eUBxqabBKFmsZHeQVcg",
+  "token_address": "KyC8NEG7Pfa7e8yVeAnYoXQa7QUyVz67fJCSfhdpump",
+  "symbol": "003",
+  "name": "Analyst #3",
+  "price": "0.0004571",
+  "liquidity": 52976.54,
+  "mcap": 457189,
+  "volume_24h": 924209.6,
+  "price_change_24h": 851,
+  "buys_24h": 5230,
+  "sells_24h": 3924,
+  "buy_sell_ratio": 1.3328236493374108,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T03:51:09.323757",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}

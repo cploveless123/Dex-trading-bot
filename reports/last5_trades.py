@@ -8,37 +8,37 @@ with open('/root/Dex-trading-bot/trades/sim_trades.jsonl') as f:
         except:
             pass
 
-recent = [t for t in reversed(trades) if '2026-04-0' in str(t.get('opened_at',''))][-5:]
+with open('/root/Dex-trading-bot/sim_wallet.json') as f:
+    w = json.load(f)
 
-lines = []
-lines.append("📊 LAST 5 TRADES")
-lines.append("━━━━━━━━━━━━━━")
+recent = trades[-5:] if len(trades) >= 5 else trades
 
-for i, t in enumerate(recent, 1):
+msg = "LAST 5 TRADES REPORT\n"
+msg += "================\n\n"
+
+for t in recent:
     token = t.get('token', '?')
     addr = t.get('token_address', '')
     entry_mcap = int(t.get('entry_mcap', t.get('mcap', 0)))
     exit_mcap = int(t.get('exit_mcap', 0)) if t.get('exit_mcap') else 0
     pnl = t.get('pnl_sol', 0)
-    pnl_pct = t.get('net_pct', 0) * 100
+    pnl_pct = (t.get('net_pct', 0) or t.get('pnl_pct', 0)) * 100
     exit_r = t.get('exit_reason', 'OPEN')
     
-    lines.append(f"\n{i}. {token}")
-    lines.append(f"   Entry: ${entry_mcap:,}")
-    lines.append(f"   Exit: ${exit_mcap:,}" if exit_mcap else f"   Exit: -")
-    lines.append(f"   P&L: {pnl:+.4f} SOL ({pnl_pct:+.1f}%)")
-    lines.append(f"   Exit: {exit_r}")
-    lines.append(f"   Links:")
-    lines.append(f"   • DexScreener: https://dexscreener.com/solana/{addr}")
-    lines.append(f"   • DexTools: https://www.dextools.io/solana/token/{addr}")
-    lines.append(f"   • PumpFun: https://pump.fun/{addr}")
+    msg += f"Token: {token}\n"
+    msg += f"Entry MC: ${entry_mcap:,}\n"
+    msg += f"Exit MC: ${exit_mcap:,}\n" if exit_mcap else "Exit MC: -\n"
+    msg += f"P&L: {pnl:+.4f} SOL ({pnl_pct:+.1f}%)\n"
+    msg += f"Exit: {exit_r}\n"
+    if addr:
+        msg += f"DexScreener: https://dexscreener.com/solana/{addr}\n"
+        msg += f"DexTools: https://www.dextools.io/solana/token/{addr}\n"
+        msg += f"PumpFun: https://pump.fun/{addr}\n"
+    msg += "\n"
 
-lines.append("\n━━━━━━━━━━━━━━")
-with open('/root/Dex-trading-bot/sim_wallet.json') as f:
-    w = json.load(f)
-lines.append(f"💰 {w['balances']['solana']} SOL | {w['balances']['ethereum']} ETH | {w['balances']['base']} BASE")
-
-msg = "\n".join(lines)
+msg += "================\n"
+msg += f"Wallet: {w['balances']['solana']:.2f} SOL, {w['balances']['ethereum']:.2f} ETH, {w['balances']['base']:.2f} BASE\n"
+msg += f"Positions: {len([p for p in trades if not p.get('closed')])}"
 
 result = subprocess.run(
     ['curl', '-s', '-X', 'POST', 
@@ -47,4 +47,4 @@ result = subprocess.run(
      '-d', f'text={msg}'],
     capture_output=True, text=True
 )
-print("Sent" if result.returncode == 0 else f"Error: {result.stderr}")
+print("Sent")
