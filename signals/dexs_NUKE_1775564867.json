@@ -1,0 +1,19 @@
+{
+  "pair_address": "BYkjdzuw3yYTt1RzxMeiGMGuNdSQbgYL2WbWL16vbPWa",
+  "token_address": "BTR4CQwepbMjvcdYkbJWB5ZoCTCR53Zz2Ky3i3hysDDJ",
+  "symbol": "NUKE",
+  "name": "Nuclear Bomb",
+  "price": "0.000009215",
+  "liquidity": 0,
+  "mcap": 9215.25,
+  "volume_24h": 4409.9,
+  "price_change_24h": 224,
+  "buys_24h": 89,
+  "sells_24h": 29,
+  "buy_sell_ratio": 3.0689655172413794,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T12:27:47.068646",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

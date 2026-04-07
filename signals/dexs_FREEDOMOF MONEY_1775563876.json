@@ -1,0 +1,19 @@
+{
+  "pair_address": "0x65CAe2f65E31e89401B7D629Bc2a8BDfe102d8c6",
+  "token_address": "0x395cad4A607E00ed193255da06E6075e98637777",
+  "symbol": "FREEDOMOF MONEY",
+  "name": "Freedom of Money",
+  "price": "0.0001651",
+  "liquidity": 35601.24,
+  "mcap": 148677,
+  "volume_24h": 65045.26,
+  "price_change_24h": 180,
+  "buys_24h": 367,
+  "sells_24h": 240,
+  "buy_sell_ratio": 1.5291666666666666,
+  "dex": "pancakeswap",
+  "analyzed_at": "2026-04-07T12:11:16.118189",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

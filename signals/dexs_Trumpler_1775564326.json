@@ -1,0 +1,19 @@
+{
+  "pair_address": "A57mBE3xQDBZ4V6ZEonCR4mCwUjgRq6zuEgmWhAcY93K",
+  "token_address": "6WDifViBeiJWqrPe9zWGD3uEMuyHPPg6Qb5hcVAKpump",
+  "symbol": "Trumpler",
+  "name": "Trumpler",
+  "price": "0.0001290",
+  "liquidity": 27387.42,
+  "mcap": 129049,
+  "volume_24h": 350501.03,
+  "price_change_24h": 295,
+  "buys_24h": 4060,
+  "sells_24h": 3654,
+  "buy_sell_ratio": 1.1111111111111112,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T12:18:46.524032",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

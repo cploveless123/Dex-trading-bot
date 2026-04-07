@@ -1,0 +1,19 @@
+{
+  "pair_address": "E7rwXWdB2cbKCwRQJZSiKJ6LtLDo2jRdMhyZVEWyCsBb",
+  "token_address": "DuYqgPsNiosDKjLG5p1TKUo53CNXUSDTfgSjAPuFpump",
+  "symbol": "Pedolf",
+  "name": "Pedolf Shitler",
+  "price": "0.00005920",
+  "liquidity": 18551.02,
+  "mcap": 59208,
+  "volume_24h": 227000.8,
+  "price_change_24h": 80.72,
+  "buys_24h": 2304,
+  "sells_24h": 2864,
+  "buy_sell_ratio": 0.8044692737430168,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T12:29:17.209341",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
