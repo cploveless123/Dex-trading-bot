@@ -1,1 +1,2 @@
 
+{"token": "LEVEL941", "token_address": "Hq1KkaD2s7HDp2f2B4rSXogG5z7Au64yER2sHHGCs941", "amount_sol": 0.1, "entry_price": 0.0001, "entry_mcap": 49886, "entry_liquidity": 17156.52, "dex": "raydium", "action": "BUY", "source": "dexscreener", "opened_at": "2026-04-07T00:30:35.450144", "closed": true, "pnl_sol": 0.06805900066085174, "tp1_hit": true, "tp1_pnl": 0.02763321946124967, "exit_reason": "TIME_EXIT", "closed_at": "2026-04-07T02:30:41.029353", "gross_pct": 0.7305900066085175, "net_pct": 0.6805900066085174, "exit_mcap": 86332}
