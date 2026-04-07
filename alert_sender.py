@@ -38,10 +38,13 @@ def format_trade_alert(trade):
     # Calculate wallet balance correctly
     with open(TRADES_FILE) as f:
         all_trades = [json.loads(l) for l in f]
-    # Start with 1.0, add closed P&L, subtract locked for open positions
-    closed_pnl = sum(t.get('pnl_sol', 0) for t in all_trades if t.get('status') == 'closed')
-    open_count = len([t for t in all_trades if t.get('status') in ['open', 'open_partial']])
-    locked = open_count * 0.05
+    # Treat old trades (status=None) as closed
+    closed_pnl = sum(t.get('pnl_sol', 0) for t in all_trades if t.get('status') in ['closed', 'open_partial', None])
+    # Full open positions: 0.05 locked each
+    open_full = len([t for t in all_trades if t.get('status') == 'open'])
+    # Partial exits: 0.0125 locked (25% still at risk)
+    open_partial = len([t for t in all_trades if t.get('status') == 'open_partial'])
+    locked = open_full * 0.05 + open_partial * 0.0125
     balance = 1.0 + closed_pnl - locked
     
     if action == "BUY":
@@ -170,9 +173,13 @@ def get_status():
     with open(TRADES_FILE) as f:
         lines = [json.loads(l) for l in f.readlines() if l.strip()]
     
-    closed_pnl = sum(t.get('pnl_sol', 0) for t in lines if t.get('status') == 'closed')
-    open_count = len([t for t in lines if t.get('status') in ['open', 'open_partial']])
-    locked = open_count * 0.05
+    # Treat old trades (status=None) as closed
+    closed_pnl = sum(t.get('pnl_sol', 0) for t in lines if t.get('status') in ['closed', 'open_partial', None])
+    # Full open positions: 0.05 locked each
+    open_full = len([t for t in lines if t.get('status') == 'open'])
+    # Partial exits: 0.0125 locked (25% still at risk)
+    open_partial = len([t for t in lines if t.get('status') == 'open_partial'])
+    locked = open_full * 0.05 + open_partial * 0.0125
     balance = 1.0 + closed_pnl - locked
     wins = len([t for t in lines if t.get('pnl_sol', 0) > 0])
     return f"💰 Balance: {balance:.4f} SOL\n📈 {len(lines)} trades | {wins}W"
