@@ -72,3 +72,19 @@ Rest → Hold
 - Mcap numbers formatted: $XX,XXX
 
 **Last updated: 2026-04-07 16:28 UTC**
+
+### PARTIAL EXIT STATUS RULE (2026-04-07 16:32 UTC):
+Chris: "Stop making these reoccurring mistakes"
+
+When selling partial (e.g. 50% at TP1):
+- status = "open_partial" (NOT "closed")
+- closed = False
+- partial_exit = True
+- Exit reason = "TP1_PARTIAL" or similar
+
+The trade is NOT fully closed until full exit or stop loss.
+A partially exited position should show in OPEN POSITIONS.
+
+### Updated partial exit handling in position_monitor.py:
+- If partial_exit = True AND NOT full exit achieved → status = "open_partial"
+- Only mark "closed" when fully exited (all positions sold)
