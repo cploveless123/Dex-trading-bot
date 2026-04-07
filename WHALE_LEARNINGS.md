@@ -111,3 +111,26 @@ Rest → Hold (trailing stop)
 ### Git:
 - Commit after every trade action
 - Include exit rules in commit message
+
+## BEHAVIOR SHIFT (2026-04-07 13:52 UTC)
+
+### OLD Behavior:
+- Presented "potential trades" for Chris to decide
+- Asked permission before every action
+- Filtered too conservatively
+
+### NEW Behavior (DECIDED):
+- If signal meets criteria → BUY IMMEDIATELY
+- No presenting "potential" trades
+- Either buy or pass - binary decision
+- Commit after every action
+
+### This Session's Trades:
+- POW: +48% ✅ (first win)
+- BABEPSTEIN: +38% partial ✅ (sold 50%)
+- MOON: entry $32K | +982% 24h 🚀 NEW
+- TRUMPLER: -34% ❌ (stop loss)
+
+### Key Learning:
+Learning by DOING > watching and waiting
+Proof of concept = actual trades, not analysis

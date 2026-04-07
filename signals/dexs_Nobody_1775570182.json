@@ -1,0 +1,19 @@
+{
+  "pair_address": "HwLLWJXJwcY26XtaWsuPT6dDe1yZCHtoYwoLsz3syJY4",
+  "token_address": "DRYp16KAYVoSssXgRUvYUrhsyt2WCzugkhvLhrgNpump",
+  "symbol": "Nobody",
+  "name": "Nobody",
+  "price": "0.00009861",
+  "liquidity": 23449.6,
+  "mcap": 98610,
+  "volume_24h": 15161.78,
+  "price_change_24h": 201,
+  "buys_24h": 195,
+  "sells_24h": 148,
+  "buy_sell_ratio": 1.3175675675675675,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T13:56:22.617725",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
