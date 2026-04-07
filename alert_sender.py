@@ -18,7 +18,8 @@ CHAT_ID = "6402511249"
 SIGNALS_DIR = Path("/root/Dex-trading-bot/signals")
 TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
 LAST_SIGNAL_FILE = Path("/root/Dex-trading-bot/.last_alert_signal")
-LAST_TRADE_FILE = Path("/root/Dex-trading-bot/.last_alert_trade")
+# Track alerted trades to prevent duplicate alerts on file updates
+ALERTED_TRADES_FILE = Path("/root/Dex-trading-bot/.alerted_trades")
 
 
 
@@ -120,29 +121,47 @@ def check_new_signals():
     return None
 
 def check_new_trades():
-    if not LAST_TRADE_FILE.exists():
-        LAST_TRADE_FILE.write_text("")
-    
+    """Check for NEW trades only (not updated existing trades)"""
     if not TRADES_FILE.exists():
         return None
     
-    last = LAST_TRADE_FILE.read_text().strip()
+    # Load already alerted trades
+    alerted = set()
+    if ALERTED_TRADES_FILE.exists():
+        alerted = set(ALERTED_TRADES_FILE.read_text().strip().split('\n'))
+    
     with open(TRADES_FILE) as f:
         lines = [l for l in f.readlines() if l.strip()]
     
     if not lines:
         return None
     
-    latest = lines[-1]
-    latest_hash = hash(latest)
+    # Check for NEW trades (not yet alerted) or newly closed trades
+    for line in reversed(lines):
+        trade = json.loads(line)
+        token_addr = trade.get('token_address', '')
+        action = trade.get('action', '')
+        status = trade.get('status', '')
+        trade_key = f"{token_addr}:{action}:{status}"
+        
+        # Skip if already alerted for this exact state
+        if trade_key in alerted:
+            continue
+        
+        # Only alert on NEW buys (action=BUY, status=open) or CLOSED trades (status=closed with exit)
+        if action == 'BUY' and status == 'open':
+            # Mark as alerted
+            alerted.add(trade_key)
+            ALERTED_TRADES_FILE.write_text('\n'.join(alerted))
+            return format_trade_alert(trade)
+        
+        if status == 'closed' and trade.get('exit_reason'):
+            # Mark as alerted
+            alerted.add(trade_key)
+            ALERTED_TRADES_FILE.write_text('\n'.join(alerted))
+            return format_trade_alert(trade)
     
-    if str(latest_hash) != last:
-        LAST_TRADE_FILE.write_text(str(latest_hash))
-        trade = json.loads(latest)
-        token = trade.get('token', 'UNKNOWN')
-        pnl = trade.get('pnl_sol', 0)
-        action = trade.get('action', 'UNKNOWN')
-        return format_trade_alert(trade)
+    return None
 
 def get_status():
     if not TRADES_FILE.exists():
