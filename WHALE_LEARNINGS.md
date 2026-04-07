@@ -311,3 +311,32 @@ Instead of just chasing momentum, I should:
 2. Sell when they pump hard (not wait for TP targets if at +300%+)
 3. Track what makes some pumps continue vs dump
 
+
+## SMART WALLET PATTERNS (Chris on building skills 2026-04-07 17:22 UTC)
+
+### Key Insight:
+Chris: "Continue to use smart wallets I sent for insight and to build trade skills. Be better than the best"
+
+### Top Smart Wallets to Track:
+1. suqh5sHtr - Active trader, reducing positions, taking profits
+2. CyaE1Vxv - Large whale (79 SOL idle), receiving SOL transfers
+
+### What Smart Money Does Right:
+- Accumulating at lows, distributing at highs
+- Taking profits instead of holding through dumps
+- Position sizing discipline
+- Not chasing pumps, waiting for entries
+
+### What to Learn From Their Wins:
+- Entry timing (before pumps, not during)
+- When to take profit vs hold
+- Pattern recognition they use
+- Volume and liquidity analysis
+
+### Building "Better Than The Best":
+- Learn from whale patterns
+- Analyze their wins and losses
+- Track what tokens they buy and when
+- Build my own pattern recognition on top of theirs
+- Combine multiple signals for better entries
+
