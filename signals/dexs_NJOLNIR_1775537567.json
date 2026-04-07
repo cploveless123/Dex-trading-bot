@@ -1,0 +1,21 @@
+{
+  "pair_address": "4fNNdHrztvXREBaWJNhamX87AY4gkphdCoBvreoQY6Mp",
+  "token_address": "565CYmFzmqWUADse2H1WKxtUWShEUB4qNASqxYnDpump",
+  "symbol": "NJOLNIR",
+  "name": "NJOLNIR",
+  "price": "0.00007793",
+  "liquidity": 21073.26,
+  "mcap": 77936,
+  "volume_24h": 53636.86,
+  "price_change_24h": 135,
+  "buys_24h": 1188,
+  "sells_24h": 357,
+  "buy_sell_ratio": 3.327731092436975,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T04:52:47.135171",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}
