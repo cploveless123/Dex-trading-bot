@@ -1,0 +1,19 @@
+{
+  "pair_address": "CTfWxsEWXtgRAWcEobFYvNxGuaGpLNvVPqjb2QBG3SDh",
+  "token_address": "D5ZH2uvmcrCn1nC9fNy6ib886NYphSMSWQr8VJS9pump",
+  "symbol": "PEPEOS",
+  "name": "Pepe Operating System",
+  "price": "0.0001032",
+  "liquidity": 24673.95,
+  "mcap": 103201,
+  "volume_24h": 135230.51,
+  "price_change_24h": 167,
+  "buys_24h": 807,
+  "sells_24h": 564,
+  "buy_sell_ratio": 1.4308510638297873,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T19:56:19.854235",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
