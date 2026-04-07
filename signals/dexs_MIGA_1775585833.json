@@ -1,0 +1,19 @@
+{
+  "pair_address": "BgL8WN6RtinbjN9Chma9VQ9mh4Cp11ZSLmNZpZHLcix8",
+  "token_address": "FEYLtxbaLPJ2uZ3aS3uuhDLZWGH29zWU334kKEN2pump",
+  "symbol": "MIGA",
+  "name": "Make Iran Great Again",
+  "price": "0.00001647",
+  "liquidity": 0,
+  "mcap": 16473.89,
+  "volume_24h": 31750.77,
+  "price_change_24h": 590,
+  "buys_24h": 581,
+  "sells_24h": 228,
+  "buy_sell_ratio": 2.5482456140350878,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T18:17:13.222265",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

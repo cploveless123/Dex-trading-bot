@@ -1,0 +1,21 @@
+{
+  "pair_address": "FQ3R5yAqixM6anGnH4wGAMkrhbFmDSXLey9YapjCDgU7",
+  "token_address": "4ko6t6ud4ddqFYpdsrGdoJLL1sCE8R2NUhApeWQepump",
+  "symbol": "SHIRO",
+  "name": "Shiro the Buddy",
+  "price": "0.00008800",
+  "liquidity": 23044.19,
+  "mcap": 88002,
+  "volume_24h": 296474.19,
+  "price_change_24h": 171,
+  "buys_24h": 12825,
+  "sells_24h": 2269,
+  "buy_sell_ratio": 5.652269722344645,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T18:14:12.952879",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

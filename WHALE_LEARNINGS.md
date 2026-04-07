@@ -340,3 +340,32 @@ Chris: "Continue to use smart wallets I sent for insight and to build trade skil
 - Build my own pattern recognition on top of theirs
 - Combine multiple signals for better entries
 
+
+## TRADE PATTERN ANALYSIS (2026-04-07 18:16 UTC)
+Chris: "Every trade is a piece of data"
+
+### Win Pattern Data:
+- +48% POW | mcap $103K | pumpfun
+- +355% MJG | mcap $30.8K | pumpfun ← BEST TRADE
+- +78% (2 trades) | mcap $8K-$9K | pumpfun | MOMENTUM
+- +25% (3 trades) | mcap $5K-$53K | pumpfun/pumpswap | MOMENTUM
+
+### Loss Pattern Data:
+- Large mcap ($70K+) dumps immediately
+- pumpswap entries hit stop faster (liquidity volatility)
+- High mcap ($100K+) poor win rate
+- Entry timing matters more than entry mcap alone
+
+### Key Learnings:
+1. Low mcap ($5K-$15K) with volume = best win rate
+2. MOMENTUM entries working better than DIP entries
+3. pumpswap = higher volatility, faster dumps
+4. Small mcap ($5K-$10K) = 2 wins at +78%
+5. Average losing trade: large mcap + pumpswap
+
+### What This Means For Future Trades:
+- Target: $5K-$15K mcap, pumpfun, MOMENTUM entries
+- Avoid: $70K+ mcap, pumpswap
+- Position size: 0.05 SOL (correct for simulation)
+- Stop loss at -25% correct - losses happen fast
+
