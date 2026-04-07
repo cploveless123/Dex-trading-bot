@@ -97,3 +97,14 @@ Rest → Hold (trailing stop)
 - Check 1h volume specifically
 - If no significant 1h movement since entry = consider selling
 - Fresh momentum required, not just good 24h stats
+
+### SELF-IMPROVEMENT RULE (2026-04-07 15:39 UTC):
+Chris: "Don't wait for me to tell you to change strategies. Do what you think is necessary to make better choices"
+
+Implemented changes:
+- Position size: 0.05 SOL (was 0.1 SOL) - given poor win rate
+- Entry requires: 2+ signal confirmations (not just 1)
+- Entry requires: volume >$25K AND buy pressure
+- Entry requires: mcap verified live (within 20% of signal)
+- No waiting for permission - act on own judgment
+
