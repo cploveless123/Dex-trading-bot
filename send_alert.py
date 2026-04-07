@@ -10,15 +10,17 @@ BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
 
 def send_alert(token, action, entry_mcap, exit_mcap=None, pnl=0, pnl_pct=0, exit_reason="", token_address=""):
-    """Send real-time trade alert with full details"""
+    """Send real-time trade alert with full details and timestamp"""
+    
+    timestamp = datetime.utcnow().strftime("%H:%M UTC")
     
     if action == "BUY":
-        msg = f"""✅ BUY EXECUTED
+        msg = f"""✅ BUY EXECUTED | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {token}
 
 📍 Entry MC: ${entry_mcap:,}
-💵 Amount: 0.1 SOL
+💵 Amount: 0.05 SOL
 
 🔗 https://dexscreener.com/solana/{token_address}
 🥧 https://pump.fun/{token_address}
@@ -27,12 +29,12 @@ def send_alert(token, action, entry_mcap, exit_mcap=None, pnl=0, pnl_pct=0, exit
 +25% → Sell 50%
 +100% → Sell 25%
 +500% → Sell 15%
-Rest → Hold (trailing stop)
+Rest → Hold
 ⚠️ Stop: -25%"""
     
     elif action == "SELL":
         pnl_emoji = "🟢" if pnl >= 0 else "🔴"
-        msg = f"""🔴 SELL EXECUTED
+        msg = f"""🔴 SELL EXECUTED | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {token}
 
@@ -41,19 +43,12 @@ Rest → Hold (trailing stop)
 {pnl_emoji} P&L: {pnl:+.4f} SOL ({pnl_pct:+.1f}%)
 📋 Reason: {exit_reason}
 
-🔗 DexScreener: https://dexscreener.com/solana/{token_address}
-🥧 PumpFun: https://pump.fun/{token_address}"""
+🔗 https://dexscreener.com/solana/{token_address}
+🥧 https://pump.fun/{token_address}"""
     
     resp = requests.post(
         f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
         json={"chat_id": CHAT_ID, "text": msg}
     )
-    return resp.json()
-
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) >= 3:
-        token = sys.argv[1]
-        action = sys.argv[2]
-        entry_mcap = int(sys.argv[3]) if len(sys.argv) > 3 else 0
-        print(send_alert(token, action, entry_mcap))
+    
+    return resp.status_code == 200

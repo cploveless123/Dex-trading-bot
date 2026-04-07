@@ -72,7 +72,8 @@ def check_positions():
             t['pnl_pct'] = 25
             updated = True
             
-            msg = f"""🔴 SELL EXECUTED (50%) - TP1
+            timestamp = datetime.utcnow().strftime("%H:%M UTC")
+            msg = f"""🔴 SELL EXECUTED (50%) | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {sym}
 
@@ -96,14 +97,15 @@ def check_positions():
             t['pnl_pct'] = 77.7
             updated = True
             
-            msg = f"""🔴 SELL EXECUTED (25% more) - AUTO
+            timestamp = datetime.utcnow().strftime("%H:%M UTC")
+            msg = f"""🔴 SELL EXECUTED (25%) | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {sym}
 
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
 🟢 P&L: +0.0777 SOL (+100.0%)
-📋 Reason: TP2_AUTO (+100% → auto sold 25%)
+📋 Reason: TP2_AUTO
 
 🔗 https://dexscreener.com/solana/{pair}
 🥧 https://pump.fun/{tok}"""
@@ -120,14 +122,15 @@ def check_positions():
             t['status'] = 'closed'
             updated = True
             
-            msg = f"""🔴 SELL EXECUTED (15% more) - AUTO
+            timestamp = datetime.utcnow().strftime("%H:%M UTC")
+            msg = f"""🔴 SELL EXECUTED (15%) | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {sym}
 
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
 🟢 P&L: +0.1000 SOL (+500.0%)
-📋 Reason: TP3_AUTO (+500% → full exit)
+📋 Reason: TP3_AUTO
 
 🔗 https://dexscreener.com/solana/{pair}
 🥧 https://pump.fun/{tok}"""
@@ -144,14 +147,15 @@ def check_positions():
             t['pnl_pct'] = -25
             updated = True
             
-            msg = f"""🔴 SELL EXECUTED - AUTO STOP
+            timestamp = datetime.utcnow().strftime("%H:%M UTC")
+            msg = f"""🔴 SELL EXECUTED | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {sym}
 
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
 🔴 P&L: -0.0250 SOL (-25.0%)
-📋 Reason: STOP_AUTO (-25% hit)
+📋 Reason: STOP_AUTO
 
 🔗 https://dexscreener.com/solana/{pair}
 🥧 https://pump.fun/{tok}"""
