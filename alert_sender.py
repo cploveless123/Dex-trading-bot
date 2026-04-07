@@ -18,6 +18,51 @@ TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
 LAST_SIGNAL_FILE = Path("/root/Dex-trading-bot/.last_alert_signal")
 LAST_TRADE_FILE = Path("/root/Dex-trading-bot/.last_alert_trade")
 
+
+
+def format_trade_alert(trade):
+    """Format trade alert with full details"""
+    token = trade.get('token', '?')
+    action = trade.get('action', 'UNKNOWN')
+    token_addr = trade.get('token_address', '')
+    entry_mcap = int(trade.get('entry_mcap', trade.get('mcap', 0)))
+    exit_mcap = int(trade.get('exit_mcap', 0)) if trade.get('exit_mcap') else 0
+    pnl = trade.get('pnl_sol', 0)
+    pnl_pct = (trade.get('net_pct', 0) or trade.get('pnl_pct', 0)) * 100
+    exit_r = trade.get('exit_reason', 'OPEN')
+    
+    if action == "BUY":
+        msg = f"""✅ BUY EXECUTED
+================
+Token: {token}
+Entry MC: ${entry_mcap:,}
+Amount: 0.1 SOL
+
+Links:
+DexScreener: https://dexscreener.com/solana/{token_addr}
+DexTools: https://www.dextools.io/solana/token/{token_addr}
+PumpFun: https://pump.fun/{token_addr}
+
+Exit Rules:
++20% → Sell 75%
++100% → Full exit
+-20% → Stop loss"""
+    else:
+        msg = f"""🔴 SELL EXECUTED
+================
+Token: {token}
+Entry MC: ${entry_mcap:,}
+Exit MC: ${exit_mcap:,}
+P&L: {pnl:+.4f} SOL ({pnl_pct:+.1f}%)
+Exit: {exit_r}
+
+Links:
+DexScreener: https://dexscreener.com/solana/{token_addr}
+DexTools: https://www.dextools.io/solana/token/{token_addr}
+PumpFun: https://pump.fun/{token_addr}"""
+    
+    return msg
+
 def send_telegram(text):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
     data = {"chat_id": CHAT_ID, "text": text, "parse_mode": "Markdown"}
@@ -88,7 +133,7 @@ def check_new_trades():
         token = trade.get('token', 'UNKNOWN')
         pnl = trade.get('pnl_sol', 0)
         action = trade.get('action', 'UNKNOWN')
-        return f"🔔 *Trade {action}*\n💰 {token}: {pnl:+.4f} SOL"
+        return format_trade_alert(trade)
 
 def get_status():
     if not TRADES_FILE.exists():
