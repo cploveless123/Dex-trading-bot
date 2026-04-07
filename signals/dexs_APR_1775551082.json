@@ -1,0 +1,22 @@
+{
+  "pair_address": "0x8D24F73036Fce22cb40981910D3F8033F7095D6E",
+  "token_address": "0x86FD98E6EF47249eA62bEAb134202EBEBc1a0211",
+  "symbol": "APR",
+  "name": "APR",
+  "price": "0.5892",
+  "liquidity": 1065924.31,
+  "mcap": 58925333,
+  "volume_24h": 30215981.95,
+  "price_change_24h": 58819,
+  "buys_24h": 986,
+  "sells_24h": 66,
+  "buy_sell_ratio": 14.93939393939394,
+  "dex": "pancakeswap",
+  "analyzed_at": "2026-04-07T08:38:02.343645",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

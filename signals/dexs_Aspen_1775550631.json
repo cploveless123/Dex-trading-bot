@@ -1,0 +1,21 @@
+{
+  "pair_address": "HJd4xhh4QCB8wJVyaZjpCg5eprcZtR1ysWxNudxij4eC",
+  "token_address": "HdYfzNm3AxqiiRuvfdNbFfmxHJhpT41nWpcNdMohpump",
+  "symbol": "Aspen",
+  "name": "Trump Family Dog",
+  "price": "0.00008146",
+  "liquidity": 22162.07,
+  "mcap": 81466,
+  "volume_24h": 295443.66,
+  "price_change_24h": 146,
+  "buys_24h": 7035,
+  "sells_24h": 1776,
+  "buy_sell_ratio": 3.9611486486486487,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T08:30:31.834040",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}
