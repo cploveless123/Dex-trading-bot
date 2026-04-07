@@ -61,6 +61,11 @@ def check_positions():
         
         change = ((mcap - entry) / entry) * 100
         
+        # Get current balance
+        with open(TRADES_FILE) as f_trades:
+            all_trades = [json.loads(l) for l in f_trades]
+        balance = 1.0 + sum(t.get('pnl_sol', 0) for t in all_trades)
+        
         # Check TP1 (+25%) - sell 50%
         if change >= 25 and not t.get('tp1_sold'):
             t['tp1_sold'] = True
@@ -80,6 +85,7 @@ def check_positions():
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
 🟢 P&L: +0.0250 SOL (+25.0%)
+💰 Wallet: {balance:.4f} SOL
 📋 Reason: TP1_AUTO
 
 🔗 https://dexscreener.com/solana/{pair}
@@ -105,6 +111,7 @@ def check_positions():
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
 🟢 P&L: +0.0777 SOL (+100.0%)
+💰 Wallet: {balance:.4f} SOL
 📋 Reason: TP2_AUTO
 
 🔗 https://dexscreener.com/solana/{pair}
@@ -130,6 +137,7 @@ def check_positions():
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
 🟢 P&L: +0.1000 SOL (+500.0%)
+💰 Wallet: {balance:.4f} SOL
 📋 Reason: TP3_AUTO
 
 🔗 https://dexscreener.com/solana/{pair}
@@ -155,6 +163,7 @@ def check_positions():
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
 🔴 P&L: -0.0250 SOL (-25.0%)
+💰 Wallet: {balance:.4f} SOL
 📋 Reason: STOP_AUTO
 
 🔗 https://dexscreener.com/solana/{pair}
