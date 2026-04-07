@@ -4,16 +4,10 @@
     "ethereum": 1.0,
     "base": 1.0
   },
-  "positions": [
-    {
-      "token": "MOON",
-      "status": "moon_bag",
-      "size": 0.05
-    }
-  ],
+  "positions": [],
   "stats": {
-    "total_trades": 5,
+    "total_trades": 6,
     "wins": 3,
-    "losses": 1
+    "losses": 2
   }
 }
