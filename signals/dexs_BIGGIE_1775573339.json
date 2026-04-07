@@ -1,0 +1,21 @@
+{
+  "pair_address": "BVvXgxgPHEaEZ2hj9D3GGHQGLbt5TViEBvWE1h2AysNi",
+  "token_address": "BhtojqtKXrabjkY7Pu4PzBpAsbXTGoHmE4MmaJ3Cpump",
+  "symbol": "BIGGIE",
+  "name": "American Bully",
+  "price": "0.00007586",
+  "liquidity": 20786.88,
+  "mcap": 75863,
+  "volume_24h": 115461.17,
+  "price_change_24h": 132,
+  "buys_24h": 4566,
+  "sells_24h": 982,
+  "buy_sell_ratio": 4.64969450101833,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T14:48:59.843598",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

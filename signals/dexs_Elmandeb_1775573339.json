@@ -1,0 +1,19 @@
+{
+  "pair_address": "3yE6FRW7A3z6TvQ5Prw61xpjKrqnNLpkbSiiaP87GUGs",
+  "token_address": "FoRc8EkGFTGmojfEDVz1hXZFsKFfqoriPwbChfv2pump",
+  "symbol": "Elmandeb",
+  "name": "Bab el-Mandeb Strait",
+  "price": "0.00001342",
+  "liquidity": 0,
+  "mcap": 13427.9,
+  "volume_24h": 5678.05,
+  "price_change_24h": 450,
+  "buys_24h": 102,
+  "sells_24h": 34,
+  "buy_sell_ratio": 3.0,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T14:48:58.735109",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

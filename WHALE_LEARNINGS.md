@@ -262,3 +262,23 @@ If workspace is lost, Wilson loses:
 
 ### RECOVERY PATH
 GitHub: https://github.com/cploveless123/Dex-trading-bot/tree/master/workspace-backup/
+
+## ⚠️ URL FORMATTING RULE (2026-04-07 14:46 UTC)
+
+Chris: "Make all links clickable in all messages"
+
+### Format for Telegram URLs:
+- Put URLs on their own line (not mixed with text)
+- Ensure no markdown characters interfere
+- Telegram auto-detects http:// and https:// URLs
+- Example good format:
+```
+🔗 https://dexscreener.com/solana/PAIRADDRESS
+🥧 https://pump.fun/TOKENADDRESS
+```
+
+### DON'T DO:
+- Text directly before URL without space: "Check this https://..."
+- URLs in code blocks
+- URLs mixed with markdown pipes or special chars
+
