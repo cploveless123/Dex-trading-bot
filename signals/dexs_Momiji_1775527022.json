@@ -1,0 +1,19 @@
+{
+  "pair_address": "H8YJRn162JBWM99qUzPUwg1VNtyKADA1p4YZwSigGHgy",
+  "token_address": "AjmS731RCrtaWF2KZRavFuu5HYSA7cbEyAKhwtQPpump",
+  "symbol": "Momiji",
+  "name": "The mother hippo",
+  "price": "0.00001081",
+  "liquidity": 0,
+  "mcap": 10811.5,
+  "volume_24h": 33423.39,
+  "price_change_24h": 174,
+  "buys_24h": 770,
+  "sells_24h": 366,
+  "buy_sell_ratio": 2.1038251366120218,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T01:57:02.529911",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

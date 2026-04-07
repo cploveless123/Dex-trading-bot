@@ -4,15 +4,10 @@
     "ethereum": 1.0,
     "base": 1.0
   },
-  "positions": [
-    {
-      "token": "LEVEL941",
-      "status": "moon_bag",
-      "size": 0.05
-    }
-  ],
+  "positions": [],
   "stats": {
-    "total_trades": 8,
-    "wins": 4
+    "total_trades": 9,
+    "wins": 4,
+    "losses": 1
   }
 }
