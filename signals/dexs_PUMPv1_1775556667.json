@@ -1,0 +1,19 @@
+{
+  "pair_address": "6bLVyGk9Fw33dGAQCpQiyYePx11SHtMXTs7MxCtGjQMk",
+  "token_address": "6mH4PwEh6G9aoLFWi9Nt7PSKVKG1rfGy5UJnFBJkpump",
+  "symbol": "PUMPv1",
+  "name": "Pump v1",
+  "price": "0.00006869",
+  "liquidity": 20256.62,
+  "mcap": 68694,
+  "volume_24h": 286214.65,
+  "price_change_24h": 106,
+  "buys_24h": 3489,
+  "sells_24h": 5332,
+  "buy_sell_ratio": 0.654351087771943,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T10:11:07.923758",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
