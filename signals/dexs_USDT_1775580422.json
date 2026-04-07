@@ -1,0 +1,19 @@
+{
+  "pair_address": "FMKDU5gXuR2oFzdFMdNcYoGCjZwD7EvBN6A48rBym2US",
+  "token_address": "4KTwX78t65RUfciw3NJUWFQe8TA9qmA8CgaCMBrVpump",
+  "symbol": "USDT",
+  "name": "Unstable Donald Trump",
+  "price": "0.00005952",
+  "liquidity": 18284.73,
+  "mcap": 59528,
+  "volume_24h": 40043.56,
+  "price_change_24h": 85.71,
+  "buys_24h": 762,
+  "sells_24h": 615,
+  "buy_sell_ratio": 1.2390243902439024,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T16:47:02.582596",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

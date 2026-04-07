@@ -1,0 +1,19 @@
+{
+  "pair_address": "Dip8wP7YsUyw3Pcd8fKMsSu6CL6apsmaEn8cD8UZEz1b",
+  "token_address": "FcS3t2tzksjDSuVi5iuo7VR7gKQWSeihfUpkKu8mXpW4",
+  "symbol": "SPCX",
+  "name": "SpaceX",
+  "price": "0.0001804",
+  "liquidity": 32735.49,
+  "mcap": 180495,
+  "volume_24h": 315710.29,
+  "price_change_24h": 553,
+  "buys_24h": 2332,
+  "sells_24h": 2198,
+  "buy_sell_ratio": 1.0609645131938126,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T16:47:02.650543",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

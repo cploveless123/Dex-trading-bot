@@ -1,0 +1,22 @@
+{
+  "pair_address": "0xEd01719a81d44092394134f5D557f016d37df72A",
+  "token_address": "0xBBD97e3FF9a67e9bDfe39Afd1f00D9BfBf3C7777",
+  "symbol": "BAPE",
+  "name": "BAPE",
+  "price": "0.007792",
+  "liquidity": 251872.82,
+  "mcap": 1558512,
+  "volume_24h": 341375.05,
+  "price_change_24h": 134,
+  "buys_24h": 1715,
+  "sells_24h": 558,
+  "buy_sell_ratio": 3.0734767025089607,
+  "dex": "pancakeswap",
+  "analyzed_at": "2026-04-07T16:47:02.824337",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "pair_address": "Co1sqjg86SjoF9CH4pcJWCVUyZNCiCVjDGSNFEMPQLYh",
+  "token_address": "D18Tzon2fyVCpsg4NSCczxsF2W2aXT3R6BERmr3Rpump",
+  "symbol": "Tremp",
+  "name": "Duland Tremp",
+  "price": "0.00008844",
+  "liquidity": 22865.25,
+  "mcap": 88441,
+  "volume_24h": 292388.06,
+  "price_change_24h": 123,
+  "buys_24h": 9907,
+  "sells_24h": 2488,
+  "buy_sell_ratio": 3.981913183279743,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T16:47:02.721405",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "pair_address": "DowibAzS4BZkmVjJVPZwD2wXWajC5awtpYNzXp2zP6WF",
+  "token_address": "9oFs23YBu7my8fAoztFq6QxE5QFTV4yw3Lsap1rWpump",
+  "symbol": "cortiSOL",
+  "name": "cortisol",
+  "price": "0.00007393",
+  "liquidity": 20453.69,
+  "mcap": 73932,
+  "volume_24h": 84030.86,
+  "price_change_24h": 127,
+  "buys_24h": 2348,
+  "sells_24h": 2387,
+  "buy_sell_ratio": 0.9836614997905321,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T16:47:02.801460",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

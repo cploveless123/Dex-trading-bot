@@ -1,0 +1,20 @@
+{
+  "pair_address": "0x7b44e7fb57de7b2dcfab2d4b14badc5bde6df8d0d273c6c5866a9fc73228d3ef",
+  "token_address": "0x5E4e764Dd18b87EbD6661AEbf4a935eA1c82bB07",
+  "symbol": "BT",
+  "name": "Buddy Tap",
+  "price": "0.000001498",
+  "liquidity": 91730.43,
+  "mcap": 149828,
+  "volume_24h": 137628.4,
+  "price_change_24h": 594,
+  "buys_24h": 538,
+  "sells_24h": 1249,
+  "buy_sell_ratio": 0.4307445956765412,
+  "dex": "uniswap",
+  "analyzed_at": "2026-04-07T16:47:02.699008",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}

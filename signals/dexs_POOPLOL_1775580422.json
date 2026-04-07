@@ -1,0 +1,19 @@
+{
+  "pair_address": "EgmeUVVmqeGpDSuV6Ur64HzdsGYaWr3BxNupA6oN8VaD",
+  "token_address": "FufQ5tEggpovzgTQgMZexD4mvYC4hAQUW7TKYj13pump",
+  "symbol": "POOPLOL",
+  "name": "PoopLOL",
+  "price": "0.0001148",
+  "liquidity": 26056.16,
+  "mcap": 114855,
+  "volume_24h": 389642.49,
+  "price_change_24h": 207,
+  "buys_24h": 2345,
+  "sells_24h": 1752,
+  "buy_sell_ratio": 1.3384703196347032,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T16:47:02.467949",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
