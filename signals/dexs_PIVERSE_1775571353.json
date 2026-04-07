@@ -1,0 +1,19 @@
+{
+  "pair_address": "4rxJf76FNPcbeTsBxMSNQgrH3eU8iV74xsA5TgGAQHdx",
+  "token_address": "42MdhyU4oo6XS3PhKSYPR1uuKvL9Mi99P8ZP46KYpump",
+  "symbol": "PIVERSE",
+  "name": "PIVERSE",
+  "price": "0.00001548",
+  "liquidity": 0,
+  "mcap": 15485.84,
+  "volume_24h": 28787.27,
+  "price_change_24h": 562,
+  "buys_24h": 524,
+  "sells_24h": 203,
+  "buy_sell_ratio": 2.58128078817734,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T14:15:53.961751",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

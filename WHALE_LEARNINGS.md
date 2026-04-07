@@ -194,3 +194,52 @@ Proof of concept = actual trades, not analysis
 
 ### NO PROMPTING NEEDED
 Bot executes, sends alert, that's it.
+
+## TRADE REPORT FORMAT (Chris approved 2026-04-07 14:23 UTC)
+
+### MUST USE THIS EXACT FORMAT FOR ALL TRADE REPORTS:
+
+```
+📊 TRADE REPORT | HH:MM UTC
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💰 Balance: X.XXXX SOL
+📈 Record: XW / XL
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━ OPEN POSITIONS ━━━━━━━━
+
+🟢 TOKEN
+- Entry: $XX,XXX → Live: $XX,XXX (+X%)
+- 🌐 https://dexscreener.com/solana/PAIR
+
+🟢 TOKEN  
+- Entry: $XX,XXX → Live: $XX,XXX (+X%)
+- 🌐 https://dexscreener.com/solana/PAIR
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━ LAST 5 TRADES ━━━━━━━━
+
+🔴 TOKEN | -0.XXXX SOL (-XX%)
+- BUY: $XX,XXX @ HH:MM:SS
+- SELL: $XX,XXX @ HH:MM:SS
+- Reason: EXIT_REASON
+- 🌐 https://dexscreener.com/solana/PAIR
+
+🟢 TOKEN | +0.XXXX SOL (+XX%)
+- BUY: $XX,XXX @ HH:MM:SS
+- SELL: $XX,XXX @ HH:MM:SS
+- Reason: EXIT_REASON
+- 🌐 https://dexscreener.com/solana/PAIR
+```
+
+### RULES:
+- Last 5 trades (NOT 10)
+- Include open positions with live mcap + link
+- Show balance + win/loss record
+- Include buy mcap + sell mcap + timestamps for each trade
+- Green/red emoji for win/loss
+- All links clickable
+- Always timestamped
