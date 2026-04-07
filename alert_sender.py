@@ -32,6 +32,11 @@ def format_trade_alert(trade):
     pnl_pct = (trade.get('net_pct', 0) or trade.get('pnl_pct', 0)) * 100
     exit_r = trade.get('exit_reason', 'OPEN')
     
+    # Calculate wallet balance
+    with open(TRADES_FILE) as f:
+        all_trades = [json.loads(l) for l in f]
+    balance = 1.0 + sum(t.get('pnl_sol', 0) for t in all_trades)
+    
     if action == "BUY":
         msg = f"""✅ BUY EXECUTED | {timestamp}
 ━━━━━━━━━━━━━━━
@@ -39,6 +44,7 @@ def format_trade_alert(trade):
 
 📍 Entry MC: ${entry_mcap:,}
 💵 Amount: 0.05 SOL
+💰 Wallet: {balance:.4f} SOL
 
 🔗 https://dexscreener.com/solana/{token_addr}
 🥧 https://pump.fun/{token_addr}
