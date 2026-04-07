@@ -35,6 +35,7 @@ def format_trade_alert(trade):
         msg = f"""✅ BUY EXECUTED
 ================
 Token: {token}
+Pair Address: {token_addr}
 Entry MC: ${entry_mcap:,}
 Amount: 0.1 SOL
 
@@ -51,6 +52,7 @@ Exit Rules:
         msg = f"""🔴 SELL EXECUTED
 ================
 Token: {token}
+Pair Address: {token_addr}
 Entry MC: ${entry_mcap:,}
 Exit MC: ${exit_mcap:,}
 P&L: {pnl:+.4f} SOL ({pnl_pct:+.1f}%)
