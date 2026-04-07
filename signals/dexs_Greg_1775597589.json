@@ -1,0 +1,19 @@
+{
+  "pair_address": "5gYNSBFBa7bzUa5xn8RB1GfAmzNo8UmzKM6YgZ5tXNUD",
+  "token_address": "6CgsUW1pYNq7Ps9LnhjQiUNF9RsRrmsvTBkL6mv7pump",
+  "symbol": "Greg",
+  "name": "Greg The Turtle",
+  "price": "0.00002743",
+  "liquidity": 12616.26,
+  "mcap": 27432,
+  "volume_24h": 7941.92,
+  "price_change_24h": -14.48,
+  "buys_24h": 143,
+  "sells_24h": 60,
+  "buy_sell_ratio": 2.3833333333333333,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T21:33:09.805084",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

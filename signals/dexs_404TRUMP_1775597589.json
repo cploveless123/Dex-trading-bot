@@ -1,0 +1,19 @@
+{
+  "pair_address": "37dBqubCPNNTgTrCZpKRPpSen6Cfx7JCEoaJszE5ksUi",
+  "token_address": "2ZupwYSSXnkfWUYoMvN6FcVJMjiy4HUeoDbCoQnhpump",
+  "symbol": "404TRUMP",
+  "name": "404 Trump",
+  "price": "0.0001298",
+  "liquidity": 27987.41,
+  "mcap": 129864,
+  "volume_24h": 226892.35,
+  "price_change_24h": 245,
+  "buys_24h": 1314,
+  "sells_24h": 942,
+  "buy_sell_ratio": 1.394904458598726,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T21:33:09.748751",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

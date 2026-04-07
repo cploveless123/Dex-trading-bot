@@ -1,0 +1,20 @@
+{
+  "pair_address": "0x8b81050F96Aea0343f0D58bDF9AE42bE38df48Ec",
+  "token_address": "0xEAC4B1D1C586e1060F3F7C6EB7e555F49b52a4d8",
+  "symbol": "FREN",
+  "name": "Fren",
+  "price": "0.00002344",
+  "liquidity": 13500.84,
+  "mcap": 23442,
+  "volume_24h": 21735.74,
+  "price_change_24h": 1003,
+  "buys_24h": 111,
+  "sells_24h": 27,
+  "buy_sell_ratio": 4.111111111111111,
+  "dex": "uniswap",
+  "analyzed_at": "2026-04-07T21:33:09.779746",
+  "signals": [
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

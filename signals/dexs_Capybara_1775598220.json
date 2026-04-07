@@ -1,0 +1,19 @@
+{
+  "pair_address": "GFCXgfehSH1YjvjERdM7HJQmtGNWmz2fUj1kQWz4gRaH",
+  "token_address": "FWksMsJDaBRFrsWn4SbR5QWjjB5b3knk1pfWEuE7eAhV",
+  "symbol": "Capybara",
+  "name": "Claude Capybara",
+  "price": "0.00003209",
+  "liquidity": 13663.99,
+  "mcap": 32099,
+  "volume_24h": 4983.48,
+  "price_change_24h": -5.5,
+  "buys_24h": 79,
+  "sells_24h": 39,
+  "buy_sell_ratio": 2.0256410256410255,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T21:43:40.335597",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

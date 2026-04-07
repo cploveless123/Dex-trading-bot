@@ -1,0 +1,19 @@
+{
+  "pair_address": "BFn7n6xPSX4ZsLwBMfFvAaDKGvQbyDcwWAj8UGDiPHr6",
+  "token_address": "2xm2WZ9krE2YAArRC6S6ZzJAYgN813K6hh2dawKjpump",
+  "symbol": "PANDU",
+  "name": "Pandu Pandas",
+  "price": "0.0002921",
+  "liquidity": 41418.12,
+  "mcap": 292174,
+  "volume_24h": 84128.66,
+  "price_change_24h": 641,
+  "buys_24h": 575,
+  "sells_24h": 556,
+  "buy_sell_ratio": 1.0341726618705036,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T21:34:39.886127",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
