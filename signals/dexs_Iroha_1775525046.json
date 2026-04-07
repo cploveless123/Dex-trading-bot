@@ -1,0 +1,19 @@
+{
+  "pair_address": "G4fp1B7E64yhfCuLhPUHSFyYAYpstmFjj2mktZXQo1wd",
+  "token_address": "6WA6ia64gKJyHR3kzUu1Y7FGsG7gntuWJv2X683Cpump",
+  "symbol": "Iroha",
+  "name": "\u30a4\u30ed\u30cf",
+  "price": "0.00005956",
+  "liquidity": 18416.83,
+  "mcap": 59566,
+  "volume_24h": 59793.98,
+  "price_change_24h": 81.65,
+  "buys_24h": 1148,
+  "sells_24h": 947,
+  "buy_sell_ratio": 1.212249208025343,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T01:24:06.493827",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
