@@ -87,7 +87,7 @@ def check_positions():
             send_alert(msg)
             print(f"✅ {sym} TP1 AUTO: sold 50% at +{change:.0f}%")
         
-        # Check TP2 (+100%) - sell remaining 50%
+        # Check TP2 (+75%) - sell remaining 25%
         elif change >= 100 and not t.get('tp2_sold'):
             t['tp2_sold'] = True
             t['exit_reason'] = 'TP2_AUTO'
@@ -104,7 +104,7 @@ def check_positions():
 
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
-🟢 P&L: +0.0500 SOL (+100.0%)
+🟢 P&L: +0.0125 SOL (+75.0%)
 💰 Wallet: {balance:.4f} SOL
 📋 Reason: TP2_AUTO (full exit)
 

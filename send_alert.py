@@ -26,10 +26,8 @@ def send_alert(token, action, entry_mcap, exit_mcap=None, pnl=0, pnl_pct=0, exit
 🥧 https://pump.fun/{token_address}
 
 🎯 Exit Plan:
-+25% → Sell 50%
-+100% → Sell 50%
-
-
++25% → Sell 75%
++75% → Sell 25%
 ⚠️ Stop: -25%"""
     
     elif action == "SELL":

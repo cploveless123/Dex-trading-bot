@@ -1,0 +1,19 @@
+{
+  "pair_address": "9B2QxN8yRvxGDYni7dLLBdD43CWbEvJBj7uEtQL7sgdA",
+  "token_address": "44BE4PYg4xi2a8dTnbut8fTW4t79i5s7UdUKUz62pump",
+  "symbol": "CEASEFIRE",
+  "name": "Ceasefire Coin",
+  "price": "0.00001280",
+  "liquidity": 0,
+  "mcap": 12807.14,
+  "volume_24h": 15329.2,
+  "price_change_24h": 438,
+  "buys_24h": 188,
+  "sells_24h": 84,
+  "buy_sell_ratio": 2.238095238095238,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-07T22:43:44.163136",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
