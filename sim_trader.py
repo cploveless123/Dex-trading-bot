@@ -15,8 +15,8 @@ SIM_TRADES_FILE = TRADES_DIR / "sim_trades.jsonl"
 # Config
 POSITION_SIZE = 0.1
 INITIAL_BALANCE = 1.0
-TP1_PCT = 0.50
-TP2_PCT = 1.00
+TP1_PCT = 0.75
+TP2_PCT = 1.00  # Full exit
 STOP_LOSS = -0.30
 
 # Costs

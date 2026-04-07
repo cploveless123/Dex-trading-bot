@@ -13,7 +13,7 @@ SIGNALS_DIR = Path("/root/Dex-trading-bot/signals")
 TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
 SIM_WALLET = Path("/root/Dex-trading-bot/sim_wallet.json")
 STARTING_BALANCE = 1.0
-TELEGRAM_BOT = "8650620888:AAHMOK5S6mRx5eZR_Kr0APe_NiMCXAg0Vys"
+TELEGRAM_BOT = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 TELEGRAM_CHAT = "6402511249"
 
 # State

@@ -10,7 +10,7 @@ FDV: ${fdv:,} | Liq: ${liquidity:,.0f}
 {dex_link}"""
     
     # Use existing Telegram bot
-    bot_token = "8650620888:AAHMOK5S6mRx5eZR_Kr0APe_NiMCXAg0Vys"
+    bot_token = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
     chat_id = "6402511249"  # Chris's ID
     
     os.system(f'''curl -s -X POST "https://api.telegram.org/bot{bot_token}/sendMessage" \

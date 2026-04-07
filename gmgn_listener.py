@@ -80,7 +80,7 @@ async def main():
                 
                 # Also send Telegram alert
                 import os
-                os.system(f'''curl -s -X POST "https://api.telegram.org/bot8650620888:AAHMOK5S6mRx5eZR_Kr0APe_NiMCXAg0Vys/sendMessage" -d "chat_id=6402511249" -d "text=📡 GMGN SIGNAL: {message[:200]}"''')
+                os.system(f'''curl -s -X POST "https://api.telegram.org/bot8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg/sendMessage" -d "chat_id=6402511249" -d "text=📡 GMGN SIGNAL: {message[:200]}"''')
     
     print("   👂 Listening for all GMGN signals...")
     await client.run_until_disconnected()

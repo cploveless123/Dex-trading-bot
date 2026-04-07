@@ -10,7 +10,7 @@ from pathlib import Path
 from datetime import datetime
 
 # Config
-BOT_TOKEN = "8650620888:AAHMOK5S6mRx5eZR_Kr0APe_NiMCXAg0Vys"
+BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
 
 SIGNALS_DIR = Path("/root/Dex-trading-bot/signals")
