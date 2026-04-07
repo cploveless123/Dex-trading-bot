@@ -243,3 +243,22 @@ Bot executes, sends alert, that's it.
 - Green/red emoji for win/loss
 - All links clickable
 - Always timestamped
+
+## ⚠️ CRITICAL REMINDER (2026-04-07 14:32 UTC)
+
+### BACKUP IS ESSENTIAL
+Chris reminded: "Backing yourself / workspace up is very important"
+- Workspace backup included in hourly cron
+- Files: MEMORY.md, USER.md, HEARTBEAT.md, WHALE_LEARNINGS.md
+- Location: workspace-backup/ in GitHub repo
+- Recovery: run recover.sh from workspace-backup/
+
+### NEVER FORGET THIS
+If workspace is lost, Wilson loses:
+- Memory of who Chris is
+- Trading strategy and exit rules
+- Alert formats and report style
+- All learned skills and insights
+
+### RECOVERY PATH
+GitHub: https://github.com/cploveless123/Dex-trading-bot/tree/master/workspace-backup/
