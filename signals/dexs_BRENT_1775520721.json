@@ -1,0 +1,20 @@
+{
+  "pair_address": "29wZa1Cfy7JmsRJ2dohAKmuLU4Fsu8rHh5BUrtMb24GQ",
+  "token_address": "kLqMvUm1p4pRbxU4r8kWCTVAuWMJLtcTJqGb4b5pump",
+  "symbol": "BRENT",
+  "name": "Brent Crude",
+  "price": "0.004134",
+  "liquidity": 155921.5,
+  "mcap": 4134465,
+  "volume_24h": 170269.41,
+  "price_change_24h": 214,
+  "buys_24h": 457,
+  "sells_24h": 514,
+  "buy_sell_ratio": 0.8891050583657587,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T00:12:01.908456",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}

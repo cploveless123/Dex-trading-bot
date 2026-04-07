@@ -1,0 +1,19 @@
+{
+  "pair_address": "83VZqQebUe4AyN2wQZ3VvAWrNSq9dhXXEgYayrN3Ztzq",
+  "token_address": "Hq1KkaD2s7HDp2f2B4rSXogG5z7Au64yER2sHHGCs941",
+  "symbol": "LEVEL941",
+  "name": "PIGEON",
+  "price": "0.00004988",
+  "liquidity": 17156.52,
+  "mcap": 49886,
+  "volume_24h": 15147.73,
+  "price_change_24h": 49.58,
+  "buys_24h": 147,
+  "sells_24h": 57,
+  "buy_sell_ratio": 2.5789473684210527,
+  "dex": "raydium",
+  "analyzed_at": "2026-04-07T00:22:32.676191",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}
