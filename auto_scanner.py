@@ -44,7 +44,7 @@ def get_live_mcap(pair_address):
     return None
 
 def check_and_buy():
-    """Scan and buy if criteria met"""
+    """Scan and buy if criteria met - look for dips with volume (accumulation)"""
     timestamp = datetime.utcnow().strftime("%H:%M UTC")
     
     resp = requests.get(
@@ -56,7 +56,7 @@ def check_and_buy():
     if resp.status_code != 200:
         return None
     
-    tokens = resp.json()[:40]
+    tokens = resp.json()[:60]  # Scan more for dip opportunities
     
     for tok_data in tokens:
         addr = tok_data.get('tokenAddress', '')
@@ -79,6 +79,7 @@ def check_and_buy():
             dex = p.get('dexId', '')
             sym = p.get('baseToken', {}).get('symbol', '?')
             pair = p.get('pairAddress', '')
+            chg_1h = p.get('priceChange', {}).get('h1', 0) or 0
             chg = p.get('priceChange', {}).get('h24', 0) or 0
             buys = p.get('txns', {}).get('h24', {}).get('buys', 0) or 0
             sells = p.get('txns', {}).get('h24', {}).get('sells', 0) or 1
@@ -87,11 +88,15 @@ def check_and_buy():
             if dex not in ['pumpfun', 'pumpswap']:
                 continue
             
-            # Check criteria
-            low_cap = LOW_MCAP_MIN <= m < LOW_MCAP_MAX and v > MIN_VOLUME and bs >= MIN_BS_RATIO and chg >= MIN_24H_CHANGE
-            mid_cap = MID_MCAP_MIN <= m < MID_MCAP_MAX and v > MIN_VOLUME * 1.5 and bs >= MIN_BS_RATIO and chg >= 30
+            # Pattern recognition: Look for accumulation (dips with volume)
+            # OR strong momentum continuation - both are valid
+            low_cap = LOW_MCAP_MIN <= m < LOW_MCAP_MAX and v > MIN_VOLUME and bs >= MIN_BS_RATIO and chg >= 20
+            mid_cap = MID_MCAP_MIN <= m < MID_MCAP_MAX and v > MIN_VOLUME * 1.5 and bs >= MIN_BS_RATIO and chg >= 15
             
-            if low_cap or mid_cap:
+            # Also look for dip entries (1h change negative but 24h still positive = recovery)
+            dip_entry = LOW_MCAP_MIN <= m < LOW_MCAP_MAX and v > MIN_VOLUME and chg_1h < -10 and chg > 10 and bs >= 2.0
+            
+            if low_cap or mid_cap or dip_entry:
                 # Check if already have this token
                 with open(TRADES_FILE) as f:
                     existing = [json.loads(l) for l in f]
@@ -103,6 +108,9 @@ def check_and_buy():
                 
                 if already_have:
                     continue
+                
+                # Calculate balance
+                balance = 1.0 + sum(t.get('pnl_sol', 0) for t in existing)
                 
                 # Buy it
                 trade = {
@@ -116,22 +124,21 @@ def check_and_buy():
                     "action": "BUY",
                     "source": "auto_scanner",
                     "opened_at": datetime.utcnow().isoformat(),
-                    "status": "open"
+                    "status": "open",
+                    "entry_reason": "DIP_ENTRY" if dip_entry else "MOMENTUM"
                 }
                 
                 with open(TRADES_FILE, "a") as f:
                     f.write(json.dumps(trade) + "\n")
                 
-                # Calculate balance
-                with open(TRADES_FILE) as f:
-                    existing = [json.loads(l) for l in f]
-                balance = 1.0 + sum(t.get('pnl_sol', 0) for t in existing)
+                entry_type = "📉 DIP ENTRY" if dip_entry else "🚀 MOMENTUM"
                 
                 # Send alert
                 msg = f"""✅ BUY EXECUTED | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {sym}
 
+{entry_type}
 📍 Entry MC: ${int(m):,}
 💵 Amount: {POSITION_SIZE} SOL
 💰 Wallet: {balance:.4f} SOL
@@ -147,7 +154,7 @@ Rest → Hold
 ⚠️ Stop: -25%"""
                 
                 send_alert(msg)
-                print(f"✅ AUTO BOUGHT: {sym} @ ${m:,.0f}")
+                print(f"✅ AUTO BOUGHT: {sym} @ ${m:,.0f} ({entry_type})")
                 return sym
         
         except Exception as e:
