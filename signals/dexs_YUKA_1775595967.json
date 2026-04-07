@@ -1,0 +1,21 @@
+{
+  "pair_address": "6D7VXevaNeAaBPJZ93HE2dm1QMHGYE1CWdxomGUr3gZd",
+  "token_address": "282K42MHDECYL5g58xVmdepxZCoUPCzHMHbiHjfmpump",
+  "symbol": "YUKA",
+  "name": "Hinata Yuka",
+  "price": "0.0001308",
+  "liquidity": 27737.38,
+  "mcap": 130811,
+  "volume_24h": 89097.15,
+  "price_change_24h": 280,
+  "buys_24h": 5716,
+  "sells_24h": 694,
+  "buy_sell_ratio": 8.236311239193084,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T21:06:07.671815",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

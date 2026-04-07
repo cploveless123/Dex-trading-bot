@@ -1,0 +1,19 @@
+{
+  "pair_address": "9ucRqAx9eMdaeJQ8vNzHDzNfxigQPcmW5SUKoUak32QP",
+  "token_address": "CBhuYzoXmaFHiRxLWjiJCVTCVHBrQGmCfAfrY5ELpump",
+  "symbol": "LeBrain",
+  "name": "LeBrain James",
+  "price": "0.00004075",
+  "liquidity": 15392.64,
+  "mcap": 40750,
+  "volume_24h": 101952.69,
+  "price_change_24h": 137,
+  "buys_24h": 1644,
+  "sells_24h": 1193,
+  "buy_sell_ratio": 1.3780385582564962,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T21:00:06.976006",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

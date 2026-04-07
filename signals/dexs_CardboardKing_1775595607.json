@@ -1,0 +1,19 @@
+{
+  "pair_address": "EtbPKzU5x3Jr9GrxG4sMkGBAS3CQ7op263otfrsxU5oV",
+  "token_address": "9ySeRvXASXEW2jJMLfgD55oqnND4FEjp4E4Q47z9pump",
+  "symbol": "CardboardKing",
+  "name": "Cardboard King Strategy",
+  "price": "0.00005842",
+  "liquidity": 18943.19,
+  "mcap": 58430,
+  "volume_24h": 362440.57,
+  "price_change_24h": 74.66,
+  "buys_24h": 4151,
+  "sells_24h": 3808,
+  "buy_sell_ratio": 1.0900735294117647,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T21:00:07.109213",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

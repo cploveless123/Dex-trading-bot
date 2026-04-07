@@ -1,0 +1,19 @@
+{
+  "pair_address": "DjtNS8HS2RzG3SG4YUYHvrTtDR4xD71UbKtSagDRym3Z",
+  "token_address": "FMBvaD5ag7sdTQrPJJc5pbgT3k9Rk2tVRTC3wmoPpump",
+  "symbol": "RECK",
+  "name": "Reck Marti",
+  "price": "0.0001170",
+  "liquidity": 26521.76,
+  "mcap": 117065,
+  "volume_24h": 195653.61,
+  "price_change_24h": 246,
+  "buys_24h": 1220,
+  "sells_24h": 955,
+  "buy_sell_ratio": 1.2774869109947644,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T21:10:38.001184",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

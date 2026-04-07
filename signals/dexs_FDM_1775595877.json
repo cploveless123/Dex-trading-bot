@@ -1,0 +1,19 @@
+{
+  "pair_address": "GSDtRDDCsqmMYz4rowYuHUvLs8Mbpk9epNxj35QpzSL7",
+  "token_address": "7HhKRt7WWAQoNTsehp6kPSAxDqoUT2fSNz4nBbNeNszv",
+  "symbol": "FDM",
+  "name": "FREEDOM DOLLAR",
+  "price": "0.00002176",
+  "liquidity": 13425.67,
+  "mcap": 21763,
+  "volume_24h": 16871.05,
+  "price_change_24h": 957,
+  "buys_24h": 251,
+  "sells_24h": 198,
+  "buy_sell_ratio": 1.2676767676767677,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T21:04:37.545873",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

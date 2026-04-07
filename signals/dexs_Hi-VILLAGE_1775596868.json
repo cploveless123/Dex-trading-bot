@@ -1,0 +1,20 @@
+{
+  "pair_address": "FjfHYnFrpm6tJdFLdjB7XhjXMYGY8tCKRZgibq7Rb3c3",
+  "token_address": "3gNxjZ7SnBBbiNZurpj88VTMvY5hptk8VKd7JHtHpump",
+  "symbol": "Hi-VILLAGE",
+  "name": "Hi-VILLAGE",
+  "price": "0.0001345",
+  "liquidity": 28383.19,
+  "mcap": 134547,
+  "volume_24h": 166533.42,
+  "price_change_24h": 225,
+  "buys_24h": 2637,
+  "sells_24h": 882,
+  "buy_sell_ratio": 2.989795918367347,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T21:21:08.774636",
+  "signals": [
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}
