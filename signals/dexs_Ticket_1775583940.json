@@ -1,0 +1,19 @@
+{
+  "pair_address": "E6TJY9sLjJkpDqRpVPKaVZgaFnN6bLpEJTrbC6G7bLW1",
+  "token_address": "Af97EncKKiUn4rHrAA8ukBCjLSsQ1oYCUqrnBbr8pump",
+  "symbol": "Ticket",
+  "name": "Ticket Token",
+  "price": "0.00006686",
+  "liquidity": 19430.33,
+  "mcap": 66861,
+  "volume_24h": 18504.43,
+  "price_change_24h": 111,
+  "buys_24h": 217,
+  "sells_24h": 224,
+  "buy_sell_ratio": 0.96875,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T17:45:40.799709",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}

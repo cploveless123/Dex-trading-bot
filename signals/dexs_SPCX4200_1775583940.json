@@ -1,0 +1,21 @@
+{
+  "pair_address": "2RkXAEC6a7XHc7LFTwy3ekiBTsbaU9veZheJS2MMo2zk",
+  "token_address": "Pk3TQZJE3QCBoaDgdBLEYtammWhxx6RdKLixgcxpump",
+  "symbol": "SPCX4200",
+  "name": "SPACEX4200",
+  "price": "0.00008766",
+  "liquidity": 22687.67,
+  "mcap": 87662,
+  "volume_24h": 177097.2,
+  "price_change_24h": 169,
+  "buys_24h": 9252,
+  "sells_24h": 1347,
+  "buy_sell_ratio": 6.868596881959911,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T17:45:40.833930",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

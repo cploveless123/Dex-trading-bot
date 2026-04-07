@@ -1,0 +1,21 @@
+{
+  "pair_address": "9A858BQArp9WYf8VovZcbFvRJZ4bC8rg2fCfH1H4Cwhf",
+  "token_address": "RBXJwCBkHi7N8X6Npx7GHthUzpbbv9n5CrBuww2oojf",
+  "symbol": "RBX",
+  "name": "Roblox Digital Currency",
+  "price": "0.001193",
+  "liquidity": 96723.09,
+  "mcap": 1193279,
+  "volume_24h": 52770.48,
+  "price_change_24h": 2467,
+  "buys_24h": 61,
+  "sells_24h": 20,
+  "buy_sell_ratio": 3.05,
+  "dex": "meteora",
+  "analyzed_at": "2026-04-07T17:53:11.420475",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

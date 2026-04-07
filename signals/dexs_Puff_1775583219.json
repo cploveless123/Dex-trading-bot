@@ -1,0 +1,20 @@
+{
+  "pair_address": "BduE9LqnBj2SJu9cjky8dkgJZQ78dMzLGGgAEAtTwXom",
+  "token_address": "7gLVqhd2K4fhH6bvuuSwEDKzgRYnZT6iCXPKLT8Dpump",
+  "symbol": "Puff",
+  "name": "That Little Puff",
+  "price": "0.00005914",
+  "liquidity": 18602.79,
+  "mcap": 59144,
+  "volume_24h": 170276.69,
+  "price_change_24h": 81.84,
+  "buys_24h": 7911,
+  "sells_24h": 1135,
+  "buy_sell_ratio": 6.970044052863436,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-07T17:33:39.852873",
+  "signals": [
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

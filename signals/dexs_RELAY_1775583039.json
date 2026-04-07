@@ -1,0 +1,19 @@
+{
+  "pair_address": "0xc9b0297827af885f115621b30fdfb13318e75f0649d1cdb45fe71f3cc22fff91",
+  "token_address": "0x580fF5Ae64eC792A949c6123386A8A936c7EBB07",
+  "symbol": "RELAY",
+  "name": "RELAY44",
+  "price": "0.0000001819",
+  "liquidity": 17193.23,
+  "mcap": 18198,
+  "volume_24h": 7112.37,
+  "price_change_24h": 70.9,
+  "buys_24h": 31,
+  "sells_24h": 25,
+  "buy_sell_ratio": 1.24,
+  "dex": "uniswap",
+  "analyzed_at": "2026-04-07T17:30:39.670587",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
