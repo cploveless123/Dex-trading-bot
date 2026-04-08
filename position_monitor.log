@@ -130,3 +130,74 @@ Error: name 'pair' is not defined
   BTCO: mcap=$7,760 | gain=-1.8% | peak=$7,899 | dd=+0%
   PEACE: mcap=$4,240 | gain=-78.9% | peak=$20,103 | dd=+0%
   BTCO: mcap=$7,899 | gain=+0.0% | peak=$7,899 | dd=+0%
+  PEACE: mcap=$4,291 | gain=-78.7% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$7,886 | gain=-0.2% | peak=$7,899 | dd=+0%
+  PEACE: mcap=$4,258 | gain=-78.8% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$7,329 | gain=-7.2% | peak=$7,899 | dd=+0%
+  PEACE: mcap=$4,199 | gain=-79.1% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$7,202 | gain=-8.8% | peak=$7,899 | dd=+0%
+  Shiro: mcap=$90,288 | gain=-8.5% | peak=$98,642 | dd=+0%
+  PEACE: mcap=$4,199 | gain=-79.1% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$7,197 | gain=-8.9% | peak=$7,899 | dd=+0%
+  Shiro: mcap=$90,000 | gain=-8.8% | peak=$98,642 | dd=+0%
+  PEACE: mcap=$3,799 | gain=-81.1% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$7,197 | gain=-8.9% | peak=$7,899 | dd=+0%
+[TRAILING_STOP] ✅ Alert sent
+✅ LOOP TRAILING STOP @ $17,129 (57% drop)
+  Shiro: mcap=$97,005 | gain=-1.7% | peak=$98,642 | dd=+0%
+  momiji: mcap=$15,716 | gain=+5.6% | peak=$15,716 | dd=+0%
+  PEACE: mcap=$4,142 | gain=-79.4% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$7,207 | gain=-8.8% | peak=$7,899 | dd=+0%
+  LOOP: mcap=$16,999 | gain=-35.5% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$88,831 | gain=-9.9% | peak=$98,642 | dd=+0%
+  momiji: mcap=$15,679 | gain=+5.4% | peak=$15,716 | dd=+0%
+  PEACE: mcap=$4,101 | gain=-79.6% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$7,207 | gain=-8.8% | peak=$7,899 | dd=+0%
+  LOOP: mcap=$14,354 | gain=-45.5% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$85,934 | gain=-12.9% | peak=$98,642 | dd=+0%
+  momiji: mcap=$16,776 | gain=+12.8% | peak=$16,776 | dd=+0%
+  PEACE: mcap=$3,791 | gain=-81.1% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$7,224 | gain=-8.5% | peak=$7,899 | dd=+0%
+  LOOP: mcap=$11,734 | gain=-55.5% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$94,112 | gain=-4.6% | peak=$98,642 | dd=+0%
+  momiji: mcap=$16,829 | gain=+13.1% | peak=$16,829 | dd=+0%
+  PEACE: mcap=$3,791 | gain=-81.1% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$7,224 | gain=-8.5% | peak=$7,899 | dd=+0%
+  LOOP: mcap=$18,405 | gain=-30.1% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$94,048 | gain=-4.7% | peak=$98,642 | dd=+0%
+  momiji: mcap=$16,162 | gain=+8.6% | peak=$16,829 | dd=+0%
+  PEACE: mcap=$3,058 | gain=-84.8% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$7,224 | gain=-8.5% | peak=$7,899 | dd=+0%
+  LOOP: mcap=$17,563 | gain=-33.3% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$95,909 | gain=-2.8% | peak=$98,642 | dd=+0%
+  momiji: mcap=$16,720 | gain=+12.4% | peak=$16,829 | dd=+0%
+  PEACE: mcap=$3,058 | gain=-84.8% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$7,035 | gain=-10.9% | peak=$7,899 | dd=+0%
+  LOOP: mcap=$14,347 | gain=-45.5% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$95,884 | gain=-2.8% | peak=$98,642 | dd=+0%
+  momiji: mcap=$18,143 | gain=+21.9% | peak=$18,143 | dd=+0%
+  PEACE: mcap=$3,071 | gain=-84.7% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$7,032 | gain=-11.0% | peak=$7,899 | dd=+0%
+  LOOP: mcap=$13,623 | gain=-48.3% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$104,617 | gain=+6.1% | peak=$104,617 | dd=+0%
+  momiji: mcap=$18,584 | gain=+24.9% | peak=$18,584 | dd=+0%
+  PEACE: mcap=$3,761 | gain=-81.3% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$7,011 | gain=-11.2% | peak=$7,899 | dd=+0%
+  LOOP: mcap=$11,339 | gain=-57.0% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$108,530 | gain=+10.0% | peak=$108,530 | dd=+0%
+  momiji: mcap=$18,273 | gain=+22.8% | peak=$18,584 | dd=+0%
+  PEACE: mcap=$4,644 | gain=-76.9% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$7,011 | gain=-11.2% | peak=$7,899 | dd=+0%
+  LOOP: mcap=$11,933 | gain=-54.7% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$118,099 | gain=+19.7% | peak=$118,099 | dd=+0%
+  momiji: mcap=$18,898 | gain=+27.0% | peak=$18,898 | dd=+0%
+📊 Position Monitor v2 starting...
+📋 Exit Plan: TP1 +43.9% (sell 74%) | Trailing 30% drop | Stop -20%
+📋 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+⏰ Checking every 60s
+[STARTUP] ✅ Alert sent
+  PEACE: mcap=$4,644 | gain=-76.9% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$7,011 | gain=-11.2% | peak=$7,899 | dd=+0%
+  LOOP: mcap=$11,933 | gain=-54.7% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$118,099 | gain=+19.7% | peak=$118,099 | dd=+0%
+  momiji: mcap=$18,898 | gain=+27.0% | peak=$18,898 | dd=+0%

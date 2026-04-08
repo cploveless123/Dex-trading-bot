@@ -207,6 +207,7 @@ def check_and_buy():
                     'source': 'gmgn_api_buyer',
                     'action': 'BUY',
                     'opened_at': now,
+                    'amount_sol': 0.10 if sig.get('action') == 'KOL_BUY' else 0.05,
                     'entry_mcap': int(mcap),
                     'entry_price': market.get('priceUsd', 0),
                     'entry_liquidity': int(liq),

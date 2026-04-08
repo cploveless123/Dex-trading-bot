@@ -4,9 +4,10 @@ Trading Constants - Shared configuration for all trading scripts
 """
 
 # Position sizing
-POSITION_SIZE = 0.05      # SOL per trade
-MIN_MCAP = 4000           # Minimum market cap ($)
-MAX_MCAP = 150000         # Maximum market cap ($) - raised from $100K based on GYAN (+322%)
+POSITION_SIZE = 0.05      # Normal position size
+KOL_BUY_POSITION_SIZE = 0.10  # KOL_BUY signals: 100% WR - double down      # SOL per trade
+MIN_MCAP = 15000           # Minimum market cap ($)
+MAX_MCAP = 75000         # Maximum market cap ($) - raised from $100K based on GYAN (+322%)
 MIN_VOLUME = 5000         # Minimum 24h volume ($)
 MIN_5MIN_VOLUME = 1000    # Minimum 5min volume ($)
 MIN_BS_RATIO = 1.5        # Minimum buy/sell ratio
@@ -26,7 +27,7 @@ TP1_PERCENT = 45          # First take profit level (%)
 TP1_SELL_PCT = 74         # % of position to sell at TP1 (recovers initial investment)
 TP2_PERCENT = 45          # Trailing stop trigger (% above TP1 peak)
 TP2_SELL_PCT = 100        # Sell remaining % at trailing stop
-STOP_LOSS_PERCENT = -30   # Stop loss percentage
+STOP_LOSS_PERCENT = -20   # Stop loss percentage
 TRAILING_STOP_PCT = 30    # % drop from peak to trigger trailing stop on remaining position
 
 # Slippage & Tax Correction
