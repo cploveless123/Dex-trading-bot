@@ -271,32 +271,6 @@ def check_positions():
                 print(f"✅ {sym} TRAILING STOP @ ${mcap:,.0f} ({drawdown_pct:.0f}% drop from peak)")
                 continue
 
-        # === STOP LOSS ===
-        if not tp1_sold and gains_pct <= STOP_LOSS_PERCENT:
-            t['status'] = 'closed'
-            t['exit_reason'] = 'STOP_AUTO'
-            t['closed_at'] = datetime.utcnow().isoformat()
-            t['pnl_sol'] = POSITION_SIZE * (gains_pct / 100)
-            t['pnl_pct'] = gains_pct
-            updated = True
-            if ca_key in peak_cache:
-                del peak_cache[ca_key]
-
-            msg = f"""🔴 STOP LOSS | {datetime.utcnow().strftime('%H:%M UTC')}
-━━━━━━━━━━━━━━━
-💰 {sym}
-📍 Entry MC: ${int(entry):,}
-📊 Exit MC: ${int(mcap):,} ({gains_pct:.1f}%)
-💰 Loss: {t['pnl_sol']:.4f} SOL
-
-🔗 https://dexscreener.com/solana/{ca}
-🥧 https://pump.fun/{ca}
-
-📋 Closed: stop loss triggered"""
-            send_alert(msg, "STOP_LOSS")
-            print(f"🔴 {sym} STOP LOSS @ ${mcap:,.0f}")
-            continue
-
         # === LOG LIVE PEAK ===
         baseline = cache.get('baseline', entry)
         if baseline > entry:
