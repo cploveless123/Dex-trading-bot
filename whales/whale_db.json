@@ -420,35 +420,96 @@
       },
       "tags": [],
       "created_tokens": 39
+    },
+    {
+      "wallet": "4BdKaxN8G6ka4GYtQQWk4G4dZRUTX2vQH9GcXdBREFUk",
+      "analyzed_at": "2026-04-08T20:17:39.341523",
+      "native_balance": 1799.050193525,
+      "realized_profit": 30015.480289286945,
+      "buy_count": 13,
+      "sell_count": 7,
+      "unique_tokens": 5,
+      "winrate": 0.7172774869109948,
+      "avg_hold_hours": 15.742464953271028,
+      "total_cost": 3693.5633597233505,
+      "mcap_buckets": {
+        "<$10K": {
+          "wins": 0,
+          "losses": 20,
+          "buys": 20,
+          "total_cost": 3693.5633597233505
+        }
+      },
+      "most_traded": [
+        [
+          "Hopecore",
+          9,
+          7,
+          2
+        ],
+        [
+          "HUMANSLOP",
+          5,
+          3,
+          2
+        ],
+        [
+          "TH",
+          2,
+          1,
+          1
+        ],
+        [
+          "HumanSlop",
+          2,
+          1,
+          1
+        ],
+        [
+          "ELONALD",
+          2,
+          1,
+          1
+        ]
+      ],
+      "pnl_distribution": {
+        "<-50%": 5,
+        "-50% to 0%": 49,
+        "0% to 100%": 151,
+        "100% to 500%": 6,
+        ">500%": 3
+      },
+      "tags": [],
+      "created_tokens": 2
     }
   ],
   "synthesis": {
-    "synthesized_at": "2026-04-08T20:00:56.394121",
-    "whales_analyzed": 7,
-    "avg_winrate": 0.5105333133412039,
-    "avg_hold_hours": 48.6942129095194,
+    "synthesized_at": "2026-04-08T20:17:39.342198",
+    "whales_analyzed": 8,
+    "avg_winrate": 0.5363763350374278,
+    "avg_hold_hours": 44.575244414988354,
     "mcap_preference": {
       "<$10K": {
-        "buys": 140,
+        "buys": 160,
         "winrate": 0.0,
         "wins": 0,
-        "losses": 140
+        "losses": 160
       }
     },
     "best_mcap_range": [
       "<$10K"
     ],
     "pnl_distribution": {
-      "<-50%": 31,
-      "-50% to 0%": 799,
-      "0% to 100%": 721,
-      "100% to 500%": 21,
-      ">500%": 2
+      "<-50%": 36,
+      "-50% to 0%": 848,
+      "0% to 100%": 872,
+      "100% to 500%": 27,
+      ">500%": 5
     },
     "trading_styles": {
       "momentum": 1,
       "fast_cycle": 2,
-      "high_wr": 4
+      "high_wr": 5
     },
     "common_tokens": [
       "NEU",
