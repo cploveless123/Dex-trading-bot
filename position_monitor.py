@@ -1,27 +1,48 @@
 #!/usr/bin/env python3
 """
-Position Monitor - Auto-execute TP/stop for open positions
-Run continuously in background alongside scanner
+Position Monitor v2 - Auto-execute TP/stop for open positions
+Live peak tracking via persistent cache file
 """
 import requests, json
 from datetime import datetime
 import time
-from trading_constants import REAL_TP1_PCT, TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT, STOP_LOSS_PERCENT, TRAILING_STOP_PCT, EXIT_PLAN_TEXT, SIM_RESET_TIMESTAMP
+from pathlib import Path
+from trading_constants import (
+    REAL_TP1_PCT, TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT,
+    STOP_LOSS_PERCENT, TRAILING_STOP_PCT, EXIT_PLAN_TEXT, SIM_RESET_TIMESTAMP,
+    POSITION_SIZE
+)
 
 BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
 TRADES_FILE = "/root/Dex-trading-bot/trades/sim_trades.jsonl"
-POSITION_SIZE = 0.05
+PEAK_CACHE_FILE = "/root/Dex-trading-bot/position_peak_cache.json"
+CHECK_INTERVAL = 60  # Check every 60 seconds
+
+def load_peak_cache():
+    """Load cached peak mcaps from disk"""
+    if Path(PEAK_CACHE_FILE).exists():
+        try:
+            with open(PEAK_CACHE_FILE) as f:
+                return json.load(f)
+        except:
+            pass
+    return {}
+
+def save_peak_cache(cache):
+    """Persist peak mcap cache to disk"""
+    with open(PEAK_CACHE_FILE, 'w') as f:
+        json.dump(cache, f)
 
 def get_live_mcap(tok_address):
-    """Get current mcap for a token using its CA"""
+    """Get current mcap for a token"""
     try:
         resp = requests.get(f"https://api.dexscreener.com/latest/dex/tokens/{tok_address}", timeout=10)
         data = resp.json()
         pairs = data.get('pairs', [])
         if pairs:
             p = max(pairs, key=lambda x: x.get('liquidity', {}).get('usd', 0))
-            return p.get('fdv', 0) or 0
+            return float(p.get('fdv', 0) or 0)
     except:
         pass
     return None
@@ -40,178 +61,177 @@ def send_alert(msg, label="ALERT"):
 
 def check_positions():
     """Check all open positions for TP/stop hits"""
+    # Load peak cache
+    peak_cache = load_peak_cache()
+    
     with open(TRADES_FILE) as f:
         trades = [json.loads(l) for l in f]
     
     updated = False
     
     for t in trades:
-        # Include 'open_partial' as still open for further TP/stop monitoring
         if t.get('status') not in ['open', 'open_partial']:
             continue
         
-        sym = t.get('token')
-        entry = t.get('entry_mcap', 0)
-        tok = t.get('token_address', '')
-        
-        if not entry or not tok:
+        sym = t.get('token', '?')
+        ca = t.get('token_address', '')
+        entry = float(t.get('entry_mcap', 0))
+        if not ca or not entry:
             continue
         
-        mcap = get_live_mcap(tok)
-        if not mcap:
+        mcap = get_live_mcap(ca)
+        if mcap is None or mcap == 0:
             continue
         
-        change = ((mcap - entry) / entry) * 100
+        # === LIVE PEAK TRACKING ===
+        ca_key = ca[:20]  # Use first 20 chars as key
+        if ca_key not in peak_cache:
+            peak_cache[ca_key] = {'peak_mcap': entry, 'baseline': entry}
         
-        # Get current balance - only count PnL from trades opened after wallet reset
-        with open(TRADES_FILE) as f_trades:
-            all_trades = [json.loads(l) for l in f_trades]
-        reset_ts = SIM_RESET_TIMESTAMP
-        # Only trades opened after reset count toward PnL
-        reset_trades = [tr for tr in all_trades if tr.get('opened_at', '') > reset_ts]
-        closed_pnl = sum(tr.get('pnl_sol', 0) for tr in reset_trades if tr.get('status') == 'closed')
-        open_full = len([tr for tr in reset_trades if tr.get('status') == 'open'])
-        open_partial = len([tr for tr in reset_trades if tr.get('status') == 'open_partial'])
-        locked = open_full * POSITION_SIZE + open_partial * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100)
-        balance = 1.0 + closed_pnl - locked
+        cache = peak_cache[ca_key]
         
-        # TP1: +25% → sell 75%
-        if change >= TP1_PERCENT and not t.get('tp1_sold'):
+        # Update peak if current mcap is higher (only while in active trade)
+        if mcap > cache['peak_mcap']:
+            cache['peak_mcap'] = mcap
+        
+        tp1_sold = t.get('tp1_sold')
+        tp2_sold = t.get('tp2_sold')
+        trailing_stopped = t.get('trailing_stopped')
+        peak = cache['peak_mcap']
+        
+        gains_pct = ((mcap - entry) / entry) * 100
+        
+        # === TP1 HIT ===
+        if not tp1_sold and gains_pct >= REAL_TP1_PCT:
             t['tp1_sold'] = True
             t['partial_exit'] = True
-            t['status'] = 'open_partial'  # still have 25% in
-            t['exit_reason'] = 'TP1_AUTO'
+            t['status'] = 'open_partial'
             t['closed_at'] = datetime.utcnow().isoformat()
-            # PnL: 75% of position sold at 25% gain
-            tp1_pnl = POSITION_SIZE * (TP1_SELL_PCT / 100) * (TP1_PERCENT / 100)
-            t['pnl_sol'] = round(tp1_pnl, 6)
-            t['pnl_pct'] = TP1_PERCENT
+            t['exit_reason'] = 'TP1_AUTO'
+            t['pnl_sol'] = POSITION_SIZE * TP1_SELL_PCT / 100 * (REAL_TP1_PCT / 100)
+            t['pnl_pct'] = REAL_TP1_PCT
+            # Reset baseline to TP1 price — trailing stop measures from here
+            cache['baseline'] = mcap
+            cache['peak_mcap'] = mcap
+            updated = True
             
-            with open(TRADES_FILE, 'w') as f:
-                for tr in trades:
-                    f.write(json.dumps(tr) + '\n')
-            
-            timestamp = datetime.utcnow().strftime("%H:%M UTC")
-            msg = f"""🎯 TP1 HIT (Partial Exit) | {timestamp}
+            msg = f"""🏆 TP1 HIT | {datetime.utcnow().strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
 💰 {sym}
-📍 Entry MC: ${entry:,}
-📍 Exit MC: ${int(mcap):,}
-🟢 Sold {TP1_SELL_PCT}% (initial investment): +{tp1_pnl:.4f} SOL (+{TP1_PERCENT}% nominal)
-💰 Wallet: {balance:.4f} SOL (~{100-TP1_SELL_PCT}% still in trade)
+📊 +{REAL_TP1_PCT:.1f}% (+{t['pnl_sol']:.4f} SOL sold)
 
-🔗 https://dexscreener.com/solana/{tok}
-🥧 https://pump.fun/{tok}
+💵 Sold {TP1_SELL_PCT}% of position @ mcap ${mcap:,.0f}
+💰 Remaining 26% riding with trailing stop
 
-📋 After TP1: Trailing stop — sell remaining if {TRAILING_STOP_PCT}% drop from peak
-⚠️ Stop: {STOP_LOSS_PERCENT}% from entry
-"""
-            updated = True
+🔗 https://dexscreener.com/solana/{ca}
+🥧 https://pump.fun/{ca}
+
+📊 Exit Plan:
+📈 TP2: +100% (sell remaining 26%)
+⚠️ Stop: -30% (trailing)
+⏰ Check again in {CHECK_INTERVAL}s"""
+            send_alert(msg, "TP1")
+            print(f"✅ {sym} TP1 HIT @ ${mcap:,.0f}")
         
-        # TP2: TRAILING STOP — for remaining 30% after TP1
-        # Track peak mcap since TP1, sell if price drops TRAILING_STOP_PCT from peak
-        elif t.get('tp1_sold') and not t.get('tp2_sold') and not t.get('trailing_stopped'):
-            # Update peak mcap
-            current_peak = max(t.get('trail_peak_mcap', entry), mcap)
-            t['trail_peak_mcap'] = current_peak
+        # === TRAILING STOP (remaining position after TP1) ===
+        elif tp1_sold and not tp2_sold and not trailing_stopped:
+            baseline = cache['baseline']
             
-            # Calculate drawdown from peak
-            peak = current_peak
-            if peak > entry:
-                drawdown_pct = ((peak - mcap) / peak) * 100
+            # Drawdown from baseline (TP1 price)
+            if baseline > entry:
+                drawdown_pct = ((baseline - mcap) / baseline) * 100
             else:
                 drawdown_pct = 0
             
-            # Trailing stop: sell remaining if drop from peak >= TRAILING_STOP_PCT
             if drawdown_pct >= TRAILING_STOP_PCT:
                 t['trailing_stopped'] = True
                 t['tp2_sold'] = True
                 t['exit_reason'] = 'TRAILING_STOP'
                 t['closed_at'] = datetime.utcnow().isoformat()
                 
-                # PnL: remaining % sold at current gain
-                remaining_pct = (mcap - entry) / entry * 100
-                tp2_pnl = POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100) * (remaining_pct / 100)
+                remaining_pct = gains_pct  # Net gain from entry
+                tp2_pnl = POSITION_SIZE * (100 - TP1_SELL_PCT) / 100 * (remaining_pct / 100)
                 prev_pnl = t.get('pnl_sol', 0)
-                total_pnl = round(tp2_pnl + prev_pnl, 6)
-                total_pct = round((total_pnl / POSITION_SIZE) * 100, 1)
-                t['pnl_sol'] = total_pnl
-                t['pnl_pct'] = total_pct
-                t['status'] = 'closed'
+                t['pnl_sol'] = prev_pnl + tp2_pnl
+                updated = True
                 
-                with open(TRADES_FILE, 'w') as f:
-                    for tr in trades:
-                        f.write(json.dumps(tr) + '\n')
+                # Clean up cache
+                del peak_cache[ca_key]
                 
-                timestamp = datetime.utcnow().strftime("%H:%M UTC")
-                msg = f"""📊 TRAILING STOP (FULL EXIT) | {timestamp}
+                msg = f"""🛑 TRAILING STOP | {datetime.utcnow().strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
 💰 {sym}
-📍 Entry MC: ${entry:,}
-📍 Peak MC: ${int(peak):,}
-📍 Exit MC: ${int(mcap):,}
-🟢 Total P&L: +{total_pnl:.4f} SOL (+{total_pct}%)
-💰 Wallet: {balance:.4f} SOL
-📋 Reason: Trailing stop ({drawdown_pct:.0f}% drop from peak)
+📊 Remaining sold @ {remaining_pct:.1f}% (from entry)
+💰 Total PnL: {t['pnl_sol']:.4f} SOL
 
-🔗 https://dexscreener.com/solana/{tok}
-🥧 https://pump.fun/{tok}"""
-                send_alert(msg, "TP1")
-                print(f"✅ {sym} TRAILING STOP: {drawdown_pct:.0f}% drop from peak ${int(peak):,}")
-                updated = True
+🔗 https://dexscreener.com/solana/{ca}
+🥧 https://pump.fun/{ca}
+
+📋 Exit: Trailing stop ({TRAILING_STOP_PCT}% drop from peak ${int(baseline):,})"""
+                send_alert(msg, "TRAILING_STOP")
+                print(f"✅ {sym} TRAILING STOP @ ${mcap:,.0f} ({drawdown_pct:.0f}% drop)")
         
-        # Stop Loss: -25%
-        elif change <= STOP_LOSS_PERCENT and not t.get('stopped'):
-            t['stopped'] = True
+        # === STOP LOSS ===
+        elif not tp1_sold and gains_pct <= STOP_LOSS_PERCENT:
             t['status'] = 'closed'
             t['exit_reason'] = 'STOP_AUTO'
             t['closed_at'] = datetime.utcnow().isoformat()
-            stop_pnl = POSITION_SIZE * (abs(STOP_LOSS_PERCENT) / 100)
-            t['pnl_sol'] = round(-stop_pnl, 6)
-            t['pnl_pct'] = STOP_LOSS_PERCENT
+            t['pnl_sol'] = POSITION_SIZE * (gains_pct / 100)
+            t['pnl_pct'] = gains_pct
+            updated = True
             
-            with open(TRADES_FILE, 'w') as f:
-                for tr in trades:
-                    f.write(json.dumps(tr) + '\n')
+            # Clean up cache
+            if ca_key in peak_cache:
+                del peak_cache[ca_key]
             
-            timestamp = datetime.utcnow().strftime("%H:%M UTC")
-            msg = f"""🛑 STOP LOSS | {timestamp}
+            msg = f"""🔴 STOP LOSS | {datetime.utcnow().strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
 💰 {sym}
-📍 Entry MC: ${entry:,}
-📍 Exit MC: ${int(mcap):,}
-🔴 Loss: -{stop_pnl:.4f} SOL ({STOP_LOSS_PERCENT}%)
-💰 Wallet: {balance:.4f} SOL
-📋 Reason: STOP_AUTO
+📊 {gains_pct:.1f}% @ mcap ${mcap:,.0f}
+💰 Loss: {t['pnl_sol']:.4f} SOL
 
-🔗 https://dexscreener.com/solana/{tok}
-🥧 https://pump.fun/{tok}"""
-            send_alert(msg, "STOP")
-            print(f"🛑 {sym} STOP LOSS at {change:.0f}%")
-            updated = True
+🔗 https://dexscreener.com/solana/{ca}
+🥧 https://pump.fun/{ca}
+
+📋 Closed: stop loss triggered"""
+            send_alert(msg, "STOP_LOSS")
+            print(f"🔴 {sym} STOP LOSS @ ${mcap:,.0f}")
+        
+        # === LOG LIVE PEAK ===
+        else:
+            baseline = cache.get('baseline', entry)
+            if baseline > entry:
+                drawdown = ((baseline - mcap) / baseline) * 100
+            else:
+                drawdown = 0
+            print(f"  {sym}: mcap=${mcap:,.0f} | gain={gains_pct:+.1f}% | peak=${peak:,.0f} | dd={drawdown:+.0f}%")
+    
+    # Save updated peak cache
+    save_peak_cache(peak_cache)
+    
+    # Write updated trades file
+    if updated:
+        with open(TRADES_FILE, 'w') as f:
+            for t in trades:
+                f.write(json.dumps(t) + '\n')
     
     return updated
 
 def main():
-    print(f"📊 Position Monitor starting...")
-    print(f"📋 Exit Plan: TP1 +{TP1_PERCENT}% (sell {TP1_SELL_PCT}%) | Trailing {TRAILING_STOP_PCT}% drop from peak | Stop {STOP_LOSS_PERCENT}%")
+    print(f"📊 Position Monitor v2 starting...")
+    print(f"📋 Exit Plan: TP1 +{REAL_TP1_PCT:.1f}% (sell {TP1_SELL_PCT}%) | Trailing {TRAILING_STOP_PCT}% drop | Stop {STOP_LOSS_PERCENT}%")
+    print(f"📋 Peak cache: {PEAK_CACHE_FILE}")
+    print(f"⏰ Checking every {CHECK_INTERVAL}s")
     
-    # Test Telegram connectivity
-    try:
-        import urllib.request
-        url = f"https://api.telegram.org/bot{BOT_TOKEN}/getMe"
-        resp = urllib.request.urlopen(url, timeout=5)
-        print(f"✅ Telegram connected")
-    except Exception as e:
-        print(f"❌ Telegram error: {e}")
+    # Verify Telegram
+    send_alert("✅ Position Monitor v2 online", "STARTUP")
     
     while True:
         try:
             check_positions()
         except Exception as e:
-            print(f"Error: {e}")
-        
-        time.sleep(60)  # Check every 60 seconds
+            print(f"❌ Error in check_positions: {e}")
+        time.sleep(CHECK_INTERVAL)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

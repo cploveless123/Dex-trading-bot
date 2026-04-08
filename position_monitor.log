@@ -35,3 +35,14 @@ Error: name 'pair' is not defined
 📊 Position Monitor starting...
 📋 Exit Plan: TP1 +45% (sell 74%) | Trailing 30% drop from peak | Stop -30%
 ✅ Telegram connected
+📊 Position Monitor v2 starting...
+📋 Exit Plan: TP1 +43.9% (sell 74%) | Trailing 30% drop | Stop -30%
+📋 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+⏰ Checking every 60s
+[STARTUP] ✅ Alert sent
+  BWUL: mcap=$8,431 | gain=-14.6% | peak=$9,875 | dd=+0%
+  BTCO: mcap=$6,146 | gain=-22.2% | peak=$7,899 | dd=+0%
+  BWUL: mcap=$8,431 | gain=-14.6% | peak=$9,875 | dd=+0%
+[TRAILING_STOP] ✅ Alert sent
+✅ PEACE TRAILING STOP @ $3,757 (87% drop)
+  BTCO: mcap=$6,118 | gain=-22.5% | peak=$7,899 | dd=+0%
