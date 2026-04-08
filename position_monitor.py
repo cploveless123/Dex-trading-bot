@@ -28,8 +28,18 @@ def get_live_mcap(pair_address):
 
 # Telegram alerts handled by alert_sender.py ONLY - no duplicate sending
 def send_alert(msg):
-    """DEPRECATED - use alert_sender.py only"""
-    pass
+    """Send alert via Telegram"""
+    import urllib.request, urllib.parse
+    BOT_TOKEN = "8187345922:AAGu4CpBnCvJp9OlEG4IdRlN-TAbnxrzT4U"
+    CHAT_ID = "6402511249"
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+    data = {"chat_id": CHAT_ID, "text": msg, "parse_mode": "Markdown"}
+    try:
+        req = urllib.request.Request(url, data=urllib.parse.urlencode(data).encode())
+        with urllib.request.urlopen(req, timeout=10) as response:
+            pass
+    except Exception as e:
+        print(f"Alert error: {e}")
 
 def check_positions():
     """Check all open positions for TP/stop hits"""

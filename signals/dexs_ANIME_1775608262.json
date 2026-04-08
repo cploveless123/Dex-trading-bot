@@ -1,0 +1,19 @@
+{
+  "pair_address": "BFJNcGaAvNgT8n17X4Yu1cHyhmdjNjYtYEgKnUbRyRay",
+  "token_address": "HzKqNfB2RGxaZbgUsgdz4etx3FNxsAP5nCgKpz1Tpump",
+  "symbol": "ANIME",
+  "name": "Anime Ethereum",
+  "price": "0.00004197",
+  "liquidity": 15852.59,
+  "mcap": 41593,
+  "volume_24h": 2013.11,
+  "price_change_24h": 64.72,
+  "buys_24h": 7,
+  "sells_24h": 2,
+  "buy_sell_ratio": 3.5,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-08T00:31:02.276055",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
