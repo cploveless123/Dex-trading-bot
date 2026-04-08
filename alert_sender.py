@@ -1,4 +1,4 @@
-from trading_constants import EXIT_PLAN_TEXT
+from trading_constants import EXIT_PLAN_TEXT, TP1_SELL_PCT, POSITION_SIZE
 
 #!/usr/bin/env python3
 """
@@ -45,7 +45,7 @@ def format_trade_alert(trade):
     open_full = len([t for t in all_trades if t.get('status') == 'open'])
     # Partial exits: 0.0125 locked (25% still at risk)
     open_partial = len([t for t in all_trades if t.get('status') == 'open_partial'])
-    locked = open_full * 0.05 + open_partial * 0.0125
+    locked = open_full * POSITION_SIZE + open_partial * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100)
     balance = 1.0 + closed_pnl - locked
     
     if action == "BUY":
@@ -54,7 +54,7 @@ def format_trade_alert(trade):
 💰 {token}
 
 📍 Entry MC: ${entry_mcap:,}
-💵 Amount: 0.05 SOL
+💵 Amount: {POSITION_SIZE} SOL
 💰 Wallet: {balance:.4f} SOL
 
 🔗 https://dexscreener.com/solana/{token_addr}
@@ -91,15 +91,16 @@ def format_tp1_alert(trade):
     closed_pnl = sum(t.get('pnl_sol', 0) for t in all_trades if t.get('status') in ['closed', 'open_partial', None])
     open_full = len([t for t in all_trades if t.get('status') == 'open'])
     open_partial = len([t for t in all_trades if t.get('status') == 'open_partial'])
-    locked = open_full * 0.05 + open_partial * 0.0125
+    locked = open_full * POSITION_SIZE + open_partial * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100)
     balance = 1.0 + closed_pnl - locked
     
+    remaining_pct = 100 - TP1_SELL_PCT
     msg = f"""🎯 TP1 HIT (Partial Exit) | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {token}
 📍 Entry MC: ${entry_mcap:,}
-🟢 Sold 50%: +{tp1_pnl:.4f} SOL ({pnl_pct:.1f}%)
-💰 Wallet: {balance:.4f} SOL (25% still in trade)
+🟢 Sold {TP1_SELL_PCT}%: +{tp1_pnl:.4f} SOL ({pnl_pct:.1f}%)
+💰 Wallet: {balance:.4f} SOL ({remaining_pct}% still in trade)
 
 🔗 https://dexscreener.com/solana/{token_addr}
 🥧 https://pump.fun/{token_addr}
@@ -216,7 +217,7 @@ def get_status():
     open_full = len([t for t in lines if t.get('status') == 'open'])
     # Partial exits: 0.0125 locked (25% still at risk)
     open_partial = len([t for t in lines if t.get('status') == 'open_partial'])
-    locked = open_full * 0.05 + open_partial * 0.0125
+    locked = open_full * POSITION_SIZE + open_partial * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100)
     balance = 1.0 + closed_pnl - locked
     wins = len([t for t in lines if t.get('pnl_sol', 0) > 0])
     return f"💰 Balance: {balance:.4f} SOL\n📈 {len(lines)} trades | {wins}W"

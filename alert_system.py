@@ -11,6 +11,7 @@ import os
 # Config - these would be set by the main system
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
+from trading_constants import EXIT_PLAN_TEXT, TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT, STOP_LOSS_PERCENT
 
 SIGNALS_DIR = Path("/root/.openclaw/workspace/trading-bot/signals")
 TRADES_FILE = Path("/root/.openclaw/workspace/trading-bot/trades/sim_trades.jsonl")
@@ -75,7 +76,7 @@ def format_gmgn_signal(sig):
 💰 {symbol}
 📊 VOL +{change:.1f}%
 💎 FDV: {mcap_str} | Liq: {liq_str}
-🎯 TP1: +25% → Sell 75% | TP2: +75% → Sell 25% | Stop: -25%
+🎯 TP1: +{TP1_PERCENT}% → Sell {TP1_SELL_PCT}% | TP2: +{TP2_PERCENT}% → Sell {TP2_SELL_PCT}% | Stop: {STOP_LOSS_PERCENT}%
 🔗 {dex_link}"""
     
     return output

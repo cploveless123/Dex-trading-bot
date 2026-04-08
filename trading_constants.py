@@ -6,14 +6,15 @@ Do NOT hardcode these values elsewhere - import from this file.
 from pathlib import Path
 
 # Exit Plan
-TP1_PERCENT = 25          # First take profit level (%)
-TP1_SELL_PCT = 75         # % of position to sell at TP1
-TP2_PERCENT = 75          # Second take profit level (%)
-TP2_SELL_PCT = 25         # % of remaining to sell at TP2
+TP1_PERCENT = 35          # First take profit level (%)
+TP1_SELL_PCT = 70         # % of position to sell at TP1
+TP2_PERCENT = 95          # Second take profit level (%)
+TP2_SELL_PCT = 30         # % of remaining to sell at TP2
 STOP_LOSS_PERCENT = -25   # Stop loss percentage
 
 # Position
 POSITION_SIZE_SOL = 0.05  # SOL per trade
+POSITION_SIZE = POSITION_SIZE_SOL
 
 # Scanner Criteria
 MIN_MCAP = 5000           # Minimum market cap ($)

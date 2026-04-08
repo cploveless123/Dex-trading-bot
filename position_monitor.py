@@ -80,7 +80,7 @@ def check_positions():
             t['exit_reason'] = 'TP1_AUTO'
             t['closed_at'] = datetime.utcnow().isoformat()
             # PnL: 75% of position sold at 25% gain
-            tp1_pnl = POSITION_SIZE * 0.75 * (TP1_PERCENT / 100)
+            tp1_pnl = POSITION_SIZE * (TP1_SELL_PCT / 100) * (TP1_PERCENT / 100)
             t['pnl_sol'] = round(tp1_pnl, 6)
             t['pnl_pct'] = TP1_PERCENT
             
@@ -111,7 +111,7 @@ def check_positions():
             t['exit_reason'] = 'TP2_AUTO'
             t['closed_at'] = datetime.utcnow().isoformat()
             # PnL: remaining 25% sold at 75% gain
-            tp2_pnl = POSITION_SIZE * 0.25 * (TP2_PERCENT / 100)
+            tp2_pnl = POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100) * (TP2_PERCENT / 100)
             prev_pnl = t.get('pnl_sol', 0)
             total_pnl = round(tp2_pnl + prev_pnl, 6)
             total_pct = round((total_pnl / POSITION_SIZE) * 100, 1)

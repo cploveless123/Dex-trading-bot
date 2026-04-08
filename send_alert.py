@@ -5,6 +5,7 @@ Alert Sender - Real-time buy/sell alerts to Telegram
 import json
 import requests
 from datetime import datetime
+from trading_constants import EXIT_PLAN_TEXT, POSITION_SIZE
 
 BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
@@ -20,15 +21,12 @@ def send_alert(token, action, entry_mcap, exit_mcap=None, pnl=0, pnl_pct=0, exit
 💰 {token}
 
 📍 Entry MC: ${entry_mcap:,}
-💵 Amount: 0.05 SOL
+💵 Amount: {POSITION_SIZE} SOL
 
 🔗 https://dexscreener.com/solana/{token_address}
 🥧 https://pump.fun/{token_address}
 
-🎯 Exit Plan:
-+25% → Sell 75%
-+75% → Sell 25%
-⚠️ Stop: -25%"""
+{EXIT_PLAN_TEXT}"""
     
     elif action == "SELL":
         pnl_emoji = "🟢" if pnl >= 0 else "🔴"
