@@ -262,7 +262,7 @@ def send_buy_alert(trade, market):
 {EXIT_PLAN_TEXT}"""
     
     try:
-        url = "https://api.telegram.org/bot8773298871:AAEH6xH9WjgmE_i6gTXM3xZG3cK5Y5V-24w/sendMessage"
+        url = "https://api.telegram.org/bot8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg/sendMessage"
         data = {"chat_id": "6402511249", "text": msg, "parse_mode": "HTML"}
         req = urllib.request.Request(url, data=urllib.parse.urlencode(data).encode())
         urllib.request.urlopen(req, timeout=10)
