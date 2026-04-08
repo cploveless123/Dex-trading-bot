@@ -58,6 +58,24 @@ def should_buy_from_signal(sig: dict, market: dict) -> tuple:
     if dex != 'pumpfun':
         reasons_why_not.append(f"not pumpfun ({dex})")
     
+    # === PULLBACK DETECTION (Chris's insight) ===
+    # Buy AFTER the first pump + dump cycle, not during the pump
+    # Sweet spot: price up 5-40% in 5min (showing momentum) but NOT at peak
+    # If 5min change > 50%, we caught the top - SKIP
+    # If 5min change negative but > -20%, pullback entry is GOOD
+    chg5 = market.get('priceChange', {}).get('m5', 0) or 0
+    if chg5 > 50:
+        reasons_why_not.append(f"5min pump {chg5:+.0f}% too hot (chasing top)")
+        return False, reasons_why_not  # Hard skip - too late
+    if chg5 < -30:
+        reasons_why_not.append(f"5min dump {chg5:+.0f}% (falling knife)")
+        return False, reasons_why_not  # Hard skip - might keep dumping
+    # chg5 between -30 and 50 is acceptable for buying
+    if chg5 > 5 and chg5 <= 50:
+        reasons_why_not.append(f"5min {chg5:+.0f}% momentum zone (ideal entry window)")
+    elif chg5 >= 0 and chg5 <= 5:
+        reasons_why_not.append(f"5min {chg5:+.0f}% no momentum yet")
+    
     # Mcap check
     if mcap < MIN_MCAP:
         reasons_why_not.append(f"mcap low (${mcap:,.0f})")
