@@ -1,6 +1,6 @@
 # Synthesized Whale Trading Strategy
-# Generated: 2026-04-08T20:22:06.267246
-# Whales analyzed: 11
+# Generated: 2026-04-08T20:24:05.953623
+# Whales analyzed: 12
 
 ## Strategy Type: HYBRID
 Combination: quick takes for normal setups, let winners run longer
@@ -23,9 +23,9 @@ Combination: quick takes for normal setups, let winners run longer
 ## Whale Token Watch List
 - NEU
 - Kyupiiin
+- AIFRUITS
 - Iroha
 - KERMIT
-- INCOME
 
 ## Whales Analyzed
 - 99QbDV2M2x2ovjWgEDTdjVkJRi7BJkALSyYmTvBo7rpg (+4135.36 SOL, 37.3% WR)
@@ -39,3 +39,4 @@ Combination: quick takes for normal setups, let winners run longer
 - 4uCT4g7YHH4xxfmfNfKUDenwGrRNGoZ9Ay1XFxfUGhQG (+20973.04 SOL, 59.1% WR)
 - ATFRUwvyMh61w2Ab6AZxUyxsAfiiuG1RqL6iv3Vi9q2B (+2214.95 SOL, 100.0% WR)
 - DE3zsvHFi2u5sEbbdjG49a7dxRWuTghb1MZgQHpnXQVQ (+2240.87 SOL, 34.2% WR)
+- DYAn4XpAkN5mhiXkRB7dGq4Jadnx6XYgu8L5b3WGhbrt (+7402.50 SOL, 53.8% WR)

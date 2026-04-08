@@ -670,39 +670,107 @@
       },
       "tags": [],
       "created_tokens": 0
+    },
+    {
+      "wallet": "DYAn4XpAkN5mhiXkRB7dGq4Jadnx6XYgu8L5b3WGhbrt",
+      "analyzed_at": "2026-04-08T20:24:05.928591",
+      "native_balance": 71.950070391,
+      "realized_profit": 7402.499842093755,
+      "buy_count": 14,
+      "sell_count": 6,
+      "unique_tokens": 6,
+      "winrate": 0.5384615384615384,
+      "avg_hold_hours": 11.399180299931833,
+      "total_cost": 3585.1928358554196,
+      "mcap_buckets": {
+        "<$10K": {
+          "wins": 0,
+          "losses": 20,
+          "buys": 20,
+          "total_cost": 3585.1928358554196
+        }
+      },
+      "most_traded": [
+        [
+          "Mauri",
+          7,
+          7,
+          0
+        ],
+        [
+          "LOOP",
+          5,
+          2,
+          3
+        ],
+        [
+          "Explosive",
+          3,
+          2,
+          1
+        ],
+        [
+          "AIFRUITS",
+          2,
+          1,
+          1
+        ],
+        [
+          "SOPHIA",
+          2,
+          1,
+          1
+        ],
+        [
+          "JELLY",
+          1,
+          1,
+          0
+        ]
+      ],
+      "pnl_distribution": {
+        "<-50%": 4,
+        "-50% to 0%": 62,
+        "0% to 100%": 93,
+        "100% to 500%": 3,
+        ">500%": 1
+      },
+      "tags": [],
+      "created_tokens": 6
     }
   ],
   "synthesis": {
-    "synthesized_at": "2026-04-08T20:22:06.232916",
-    "whales_analyzed": 11,
-    "avg_winrate": 0.565838384920888,
-    "avg_hold_hours": 157.44417446638556,
+    "synthesized_at": "2026-04-08T20:24:05.929277",
+    "whales_analyzed": 12,
+    "avg_winrate": 0.5635569810492755,
+    "avg_hold_hours": 145.27375828584778,
     "mcap_preference": {
       "<$10K": {
-        "buys": 220,
+        "buys": 240,
         "winrate": 0.0,
         "wins": 0,
-        "losses": 220
+        "losses": 240
       }
     },
     "best_mcap_range": [
       "<$10K"
     ],
     "pnl_distribution": {
-      "<-50%": 65,
-      "-50% to 0%": 1246,
-      "0% to 100%": 1529,
-      "100% to 500%": 30,
-      ">500%": 5
+      "<-50%": 69,
+      "-50% to 0%": 1308,
+      "0% to 100%": 1622,
+      "100% to 500%": 33,
+      ">500%": 6
     },
     "trading_styles": {
       "momentum": 1,
       "fast_cycle": 3,
-      "high_wr": 7
+      "high_wr": 8
     },
     "common_tokens": [
       "NEU",
       "Kyupiiin",
+      "AIFRUITS",
       "Iroha",
       "KERMIT",
       "INCOME",
@@ -714,8 +782,7 @@
       "BBL",
       "\u306a\u304b\u3054",
       "123456",
-      "Momiji",
-      "AGI"
+      "Momiji"
     ]
   }
 }
