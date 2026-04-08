@@ -14434,3 +14434,17 @@ Error: name 'pair' is not defined
   Troly: mcap=$6,334 | gain=-43.2% | peak=$15,618 | dd=+0%
   ELONTOK: mcap=$20,321 | gain=+65.8% | peak=$20,321 | dd=+0%
   YUMEKO: mcap=$94,893 | gain=+28.8% | peak=$94,893 | dd=+0%
+📊 Position Monitor v3 starting...
+📋 Exit Plan: TP1 +100% (sell 50%) | TP2 +200% (sell 25%) | TP3 +500% (sell 25%) | Trailing 30% | Stop -20%
+📋 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+⏰ Checking every 5s
+[STARTUP] ✅ Alert sent
+Error: name 'l' is not defined
+Error: name 'l' is not defined
+Error: name 'l' is not defined
+Error: name 'l' is not defined
+Error: name 'l' is not defined
+Error: name 'l' is not defined
+Error: name 'l' is not defined
+Error: name 'l' is not defined
+Error: name 'l' is not defined
