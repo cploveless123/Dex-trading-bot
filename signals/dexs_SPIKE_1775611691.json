@@ -1,0 +1,20 @@
+{
+  "pair_address": "DeSYSGeEj9ytT55E9AmdFs9p2cm5fryXt61kGCammCrB",
+  "token_address": "BFiGUxnidogqcZAPVPDZRCfhx3nXnFLYqpQUaUGpump",
+  "symbol": "SPIKE",
+  "name": "SPIKE ",
+  "price": "0.001122",
+  "liquidity": 85137.39,
+  "mcap": 1122061,
+  "volume_24h": 1415078.52,
+  "price_change_24h": 577,
+  "buys_24h": 355,
+  "sells_24h": 287,
+  "buy_sell_ratio": 1.2369337979094077,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-08T01:28:11.567904",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}

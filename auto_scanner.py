@@ -67,26 +67,25 @@ def check_and_buy():
             sells = p.get('txns', {}).get('h24', {}).get('sells', 0) or 1
             bs = buys / sells if sells > 0 else 0
             
-            # ONLY pumpfun, ONLY low mcap based on winning trades
+            # ONLY pumpfun for now
             if dex != 'pumpfun':
                 continue
             
-            # Stricter mcap: $5K-$20K (winners were $5K-$15K mostly)
-            if m < MIN_MCAP:
+            # Lowered mcap floor to $2K to catch early momentum before pump
+            # Winners entry range: $2K-$22K mcap
+            if m < 2000:
                 continue
             
-            # Volume requirement: $30K+ for raydium, $20K+ for pump.fun (can have 0 liquidity during bonding)
-            if dex == 'pumpfun' and v < 20000:
-                continue
-            if dex != 'pumpfun' and v < MIN_VOLUME:
+            # Volume: $10K+ for pumpfun (low liquidity during bonding is normal)
+            if v < 10000:
                 continue
             
-            # Buy/sell ratio 1.5+ (winners had good ratio)
-            if bs < MIN_BS_RATIO:
+            # Buy/sell ratio 1.2+ (relaxed from 1.5 - early momentum counts)
+            if bs < 1.2:
                 continue
             
-            # 24h change 30%+ (momentum needed)
-            if chg < MIN_24H_CHANGE:
+            # 24h change 15%+ (relaxed to catch earlier entries)
+            if chg < 15:
                 continue
             
             # Check if already have this token

@@ -1,0 +1,19 @@
+{
+  "pair_address": "6Y3W9YEHiFec4pexLZpZjAdwoQ1UjQynxDmXLV21xVHU",
+  "token_address": "4DuvECwjHDBUovniUn4wuKio84PxCpAqGsAne2hupump",
+  "symbol": "GREGOR",
+  "name": "Gregor",
+  "price": "0.0001466",
+  "liquidity": 30089.82,
+  "mcap": 146629,
+  "volume_24h": 270377.78,
+  "price_change_24h": 334,
+  "buys_24h": 2785,
+  "sells_24h": 2609,
+  "buy_sell_ratio": 1.0674587964737448,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-08T01:20:41.120235",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
