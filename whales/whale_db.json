@@ -804,34 +804,71 @@
       },
       "tags": [],
       "created_tokens": 1
+    },
+    {
+      "wallet": "C1HWvjfaA6Y33T59ULtGmrknjpmu4yaRALoL5tGF5fCS",
+      "analyzed_at": "2026-04-08T20:29:34.799032",
+      "native_balance": 782.092997304,
+      "realized_profit": 4340.43121263202,
+      "buy_count": 18,
+      "sell_count": 2,
+      "unique_tokens": 1,
+      "winrate": 0.5933609958506224,
+      "avg_hold_hours": 0.30170210333790576,
+      "total_cost": 533.21426565817,
+      "mcap_buckets": {
+        "<$10K": {
+          "wins": 0,
+          "losses": 20,
+          "buys": 20,
+          "total_cost": 533.21426565817
+        }
+      },
+      "most_traded": [
+        [
+          "OG",
+          20,
+          18,
+          2
+        ]
+      ],
+      "pnl_distribution": {
+        "<-50%": 16,
+        "-50% to 0%": 82,
+        "0% to 100%": 142,
+        "100% to 500%": 3,
+        ">500%": 0
+      },
+      "tags": [],
+      "created_tokens": 0
     }
   ],
   "synthesis": {
-    "synthesized_at": "2026-04-08T20:26:04.235939",
-    "whales_analyzed": 13,
-    "avg_winrate": 0.554089227928269,
-    "avg_hold_hours": 136.31598343195066,
+    "synthesized_at": "2026-04-08T20:29:34.799772",
+    "whales_analyzed": 14,
+    "avg_winrate": 0.5568943542084371,
+    "avg_hold_hours": 126.60067762276402,
     "mcap_preference": {
       "<$10K": {
-        "buys": 260,
+        "buys": 280,
         "winrate": 0.0,
         "wins": 0,
-        "losses": 260
+        "losses": 280
       }
     },
     "best_mcap_range": [
       "<$10K"
     ],
     "pnl_distribution": {
-      "<-50%": 73,
-      "-50% to 0%": 1351,
-      "0% to 100%": 1659,
-      "100% to 500%": 36,
+      "<-50%": 89,
+      "-50% to 0%": 1433,
+      "0% to 100%": 1801,
+      "100% to 500%": 39,
       ">500%": 6
     },
     "trading_styles": {
       "momentum": 2,
-      "fast_cycle": 3,
+      "fast_cycle": 4,
       "high_wr": 8
     },
     "common_tokens": [
