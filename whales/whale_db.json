@@ -115,44 +115,143 @@
       },
       "tags": [],
       "created_tokens": 4
+    },
+    {
+      "wallet": "Hw5UKBU5k3YudnGwaykj5E8cYUidNMPuEewRRar5Xoc7",
+      "analyzed_at": "2026-04-08T19:49:41.756492",
+      "native_balance": 605.952987925,
+      "realized_profit": 35793.77126794074,
+      "buy_count": 9,
+      "sell_count": 10,
+      "unique_tokens": 10,
+      "winrate": 0.5371900826446281,
+      "avg_hold_hours": 43.128638888888894,
+      "total_cost": 6231.45427302243,
+      "mcap_buckets": {
+        "<$10K": {
+          "wins": 0,
+          "losses": 20,
+          "buys": 20,
+          "total_cost": 6231.45427302243
+        }
+      },
+      "most_traded": [
+        [
+          "PEACE",
+          4,
+          1,
+          3
+        ],
+        [
+          "Myooncat",
+          2,
+          1,
+          1
+        ],
+        [
+          "BBL",
+          2,
+          1,
+          1
+        ],
+        [
+          "\u306a\u304b\u3054",
+          2,
+          1,
+          1
+        ],
+        [
+          "123456",
+          2,
+          1,
+          1
+        ],
+        [
+          "Momiji",
+          2,
+          1,
+          1
+        ],
+        [
+          "AGI",
+          2,
+          1,
+          1
+        ],
+        [
+          "WIZ",
+          2,
+          1,
+          1
+        ],
+        [
+          "the",
+          1,
+          0,
+          1
+        ],
+        [
+          "Kyupiiin",
+          1,
+          1,
+          0
+        ]
+      ],
+      "pnl_distribution": {
+        "<-50%": 4,
+        "-50% to 0%": 52,
+        "0% to 100%": 75,
+        "100% to 500%": 8,
+        ">500%": 1
+      },
+      "tags": [],
+      "created_tokens": 2
     }
   ],
   "synthesis": {
-    "synthesized_at": "2026-04-08T19:21:42.590465",
-    "whales_analyzed": 2,
-    "avg_winrate": 0.3677719836830817,
-    "avg_hold_hours": 4.554510130222105,
+    "synthesized_at": "2026-04-08T19:49:41.757161",
+    "whales_analyzed": 3,
+    "avg_winrate": 0.4242446833369305,
+    "avg_hold_hours": 17.412553049777703,
     "mcap_preference": {
       "<$10K": {
-        "buys": 40,
+        "buys": 60,
         "winrate": 0.0,
         "wins": 0,
-        "losses": 40
+        "losses": 60
       }
     },
     "best_mcap_range": [
       "<$10K"
     ],
     "pnl_distribution": {
-      "<-50%": 15,
-      "-50% to 0%": 474,
-      "0% to 100%": 312,
-      "100% to 500%": 2,
-      ">500%": 0
+      "<-50%": 19,
+      "-50% to 0%": 526,
+      "0% to 100%": 387,
+      "100% to 500%": 10,
+      ">500%": 1
     },
     "trading_styles": {
       "momentum": 1,
-      "fast_cycle": 1
+      "fast_cycle": 1,
+      "high_wr": 1
     },
     "common_tokens": [
       "NEU",
+      "Kyupiiin",
       "Iroha",
       "KERMIT",
       "INCOME",
       "oil",
       "WATER",
-      "Kyupiiin",
-      "cutecatinu"
+      "cutecatinu",
+      "PEACE",
+      "Myooncat",
+      "BBL",
+      "\u306a\u304b\u3054",
+      "123456",
+      "Momiji",
+      "AGI"
     ]
   }
 }
