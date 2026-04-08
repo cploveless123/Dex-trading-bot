@@ -1,0 +1,19 @@
+{
+  "pair_address": "Gbedv5pH6fq7cRbAK5TokpqrcRA3cSC9Lr8Nw8y8wotd",
+  "token_address": "78AZrvmGcEEDeVSgzA7Tmhbff9Bxsm8Dvn6TDqVpump",
+  "symbol": "AOW",
+  "name": "Art Of Word",
+  "price": "0.0004142",
+  "liquidity": 49951.9,
+  "mcap": 414298,
+  "volume_24h": 100766.77,
+  "price_change_24h": 708,
+  "buys_24h": 1708,
+  "sells_24h": 1601,
+  "buy_sell_ratio": 1.0668332292317302,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-08T00:29:32.152976",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
