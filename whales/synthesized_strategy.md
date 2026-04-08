@@ -1,6 +1,6 @@
 # Synthesized Whale Trading Strategy
-# Generated: 2026-04-08T19:49:46.325887
-# Whales analyzed: 3
+# Generated: 2026-04-08T19:52:01.715187
+# Whales analyzed: 4
 
 ## Strategy Type: HYBRID
 Combination: quick takes for normal setups, let winners run longer
@@ -31,3 +31,4 @@ Combination: quick takes for normal setups, let winners run longer
 - 99QbDV2M2x2ovjWgEDTdjVkJRi7BJkALSyYmTvBo7rpg (+4135.36 SOL, 37.3% WR)
 - AEqPi4RCD7uRXmMB5ec6V4ehT74Ra2kEdmqVqtHUmyLh (+2665.50 SOL, 36.2% WR)
 - Hw5UKBU5k3YudnGwaykj5E8cYUidNMPuEewRRar5Xoc7 (+35793.77 SOL, 53.7% WR)
+- GARVttNdUU87zy8vhZnVjLyihnReGgWtqAyGxzoRpjuT (+10769.36 SOL, 53.3% WR)

@@ -206,35 +206,78 @@
       },
       "tags": [],
       "created_tokens": 2
+    },
+    {
+      "wallet": "GARVttNdUU87zy8vhZnVjLyihnReGgWtqAyGxzoRpjuT",
+      "analyzed_at": "2026-04-08T19:51:58.507511",
+      "native_balance": 28.678634404,
+      "realized_profit": 10769.360726382527,
+      "buy_count": 13,
+      "sell_count": 7,
+      "unique_tokens": 2,
+      "winrate": 0.5333333333333333,
+      "avg_hold_hours": 14.788545751633986,
+      "total_cost": 16452.759610071727,
+      "mcap_buckets": {
+        "<$10K": {
+          "wins": 0,
+          "losses": 20,
+          "buys": 20,
+          "total_cost": 16452.759610071727
+        }
+      },
+      "most_traded": [
+        [
+          "milkers",
+          18,
+          12,
+          6
+        ],
+        [
+          "HERM",
+          2,
+          1,
+          1
+        ]
+      ],
+      "pnl_distribution": {
+        "<-50%": 3,
+        "-50% to 0%": 11,
+        "0% to 100%": 19,
+        "100% to 500%": 1,
+        ">500%": 0
+      },
+      "tags": [],
+      "created_tokens": 0
     }
   ],
   "synthesis": {
-    "synthesized_at": "2026-04-08T19:49:41.757161",
-    "whales_analyzed": 3,
-    "avg_winrate": 0.4242446833369305,
-    "avg_hold_hours": 17.412553049777703,
+    "synthesized_at": "2026-04-08T19:51:58.508058",
+    "whales_analyzed": 4,
+    "avg_winrate": 0.45151684583603124,
+    "avg_hold_hours": 16.756551225241772,
     "mcap_preference": {
       "<$10K": {
-        "buys": 60,
+        "buys": 80,
         "winrate": 0.0,
         "wins": 0,
-        "losses": 60
+        "losses": 80
       }
     },
     "best_mcap_range": [
       "<$10K"
     ],
     "pnl_distribution": {
-      "<-50%": 19,
-      "-50% to 0%": 526,
-      "0% to 100%": 387,
-      "100% to 500%": 10,
+      "<-50%": 22,
+      "-50% to 0%": 537,
+      "0% to 100%": 406,
+      "100% to 500%": 11,
       ">500%": 1
     },
     "trading_styles": {
       "momentum": 1,
       "fast_cycle": 1,
-      "high_wr": 1
+      "high_wr": 2
     },
     "common_tokens": [
       "NEU",
