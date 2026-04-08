@@ -76,7 +76,7 @@ def check_and_buy():
             bs = buys / sells if sells > 0 else 0
             
             # 5min volume check
-            v5 = p.get('volume', {}).get('h5', 0) or 0
+            v5 = p.get('volume', {}).get('m5', 0) or 0
             
             # ONLY pumpfun for now
             if dex != 'pumpfun':

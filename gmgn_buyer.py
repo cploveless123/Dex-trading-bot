@@ -47,7 +47,7 @@ def should_buy_from_signal(sig: dict, market: dict) -> tuple:
     # Get market data
     mcap = market.get('fdv', 0) or 0
     v = market.get('volume', {}).get('h24', 0) or 0
-    v5 = market.get('volume', {}).get('h5', 0) or 0
+    v5 = market.get('volume', {}).get('m5', 0) or 0
     dex = market.get('dexId', '')
     buys = market.get('txns', {}).get('h24', {}).get('buys', 0) or 0
     sells = market.get('txns', {}).get('h24', {}).get('sells', 0) or 1
