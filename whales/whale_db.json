@@ -841,34 +841,101 @@
       },
       "tags": [],
       "created_tokens": 0
+    },
+    {
+      "wallet": "Fr9B91h3MrqghrH1pfdw3RTAi34TJckcQMp25EKnXVxo",
+      "analyzed_at": "2026-04-08T20:31:47.609783",
+      "native_balance": 30.64096234,
+      "realized_profit": 15715.49268453378,
+      "buy_count": 8,
+      "sell_count": 12,
+      "unique_tokens": 6,
+      "winrate": 0.513595166163142,
+      "avg_hold_hours": 0.09189340696117804,
+      "total_cost": 3175.6188641379795,
+      "mcap_buckets": {
+        "<$10K": {
+          "wins": 0,
+          "losses": 20,
+          "buys": 20,
+          "total_cost": 3175.6188641379795
+        }
+      },
+      "most_traded": [
+        [
+          "KarpathyTalk",
+          8,
+          2,
+          6
+        ],
+        [
+          "mayham",
+          3,
+          2,
+          1
+        ],
+        [
+          "SLOP",
+          3,
+          1,
+          2
+        ],
+        [
+          "READ",
+          2,
+          2,
+          0
+        ],
+        [
+          "lumer",
+          2,
+          1,
+          1
+        ],
+        [
+          "iShowLuffy",
+          2,
+          0,
+          2
+        ]
+      ],
+      "pnl_distribution": {
+        "<-50%": 5,
+        "-50% to 0%": 156,
+        "0% to 100%": 161,
+        "100% to 500%": 7,
+        ">500%": 3
+      },
+      "tags": [],
+      "created_tokens": 0
     }
   ],
   "synthesis": {
-    "synthesized_at": "2026-04-08T20:29:34.799772",
-    "whales_analyzed": 14,
-    "avg_winrate": 0.5568943542084371,
-    "avg_hold_hours": 126.60067762276402,
+    "synthesized_at": "2026-04-08T20:31:47.610541",
+    "whales_analyzed": 15,
+    "avg_winrate": 0.5540077416720841,
+    "avg_hold_hours": 118.16675867504384,
     "mcap_preference": {
       "<$10K": {
-        "buys": 280,
+        "buys": 300,
         "winrate": 0.0,
         "wins": 0,
-        "losses": 280
+        "losses": 300
       }
     },
     "best_mcap_range": [
       "<$10K"
     ],
     "pnl_distribution": {
-      "<-50%": 89,
-      "-50% to 0%": 1433,
-      "0% to 100%": 1801,
-      "100% to 500%": 39,
-      ">500%": 6
+      "<-50%": 94,
+      "-50% to 0%": 1589,
+      "0% to 100%": 1962,
+      "100% to 500%": 46,
+      ">500%": 9
     },
     "trading_styles": {
       "momentum": 2,
-      "fast_cycle": 4,
+      "fast_cycle": 5,
       "high_wr": 8
     },
     "common_tokens": [
