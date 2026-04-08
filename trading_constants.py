@@ -7,7 +7,7 @@ Trading Constants - Shared configuration for all trading scripts
 POSITION_SIZE = 0.05      # Normal position size
 KOL_BUY_POSITION_SIZE = 0.10  # KOL_BUY signals: 100% WR - double down      # SOL per trade
 MIN_MCAP = 15000           # Minimum market cap ($)
-MAX_MCAP = 75000         # Maximum market cap ($) - raised from $100K based on GYAN (+322%)
+MAX_MCAP = 75000         # Maximum market cap ($) - lowered from $150K based on 173-trade analysis (>$75K = 86% loss rate)
 MIN_VOLUME = 5000         # Minimum 24h volume ($)
 MIN_5MIN_VOLUME = 1000    # Minimum 5min volume ($)
 MIN_BS_RATIO = 1.5        # Minimum buy/sell ratio
