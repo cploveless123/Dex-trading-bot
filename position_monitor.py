@@ -138,15 +138,20 @@ def check_positions():
         
         # === TRAILING STOP (remaining position after TP1) ===
         elif tp1_sold and not tp2_sold and not trailing_stopped:
-            baseline = cache['baseline']
+            # Use TP1 price as baseline (not peak) for tighter control
+            # This prevents pumpfun dumps from escaping our stop
+            baseline = cache['baseline']  # This is TP1 price after reset
             
-            # Drawdown from baseline (TP1 price)
+            # Drawdown from TP1 baseline
             if baseline > entry:
                 drawdown_pct = ((baseline - mcap) / baseline) * 100
             else:
                 drawdown_pct = 0
             
-            if drawdown_pct >= TRAILING_STOP_PCT:
+            # Hard stop: sell if price drops back to TP1 - 15% 
+            # (TP1 + 20% is our floor - we already made TP1 gains)
+            TRAIL_HARD_STOP = 15  # % below TP1 to trigger emergency exit
+            if drawdown_pct >= TRAIL_HARD_STOP:
                 t['trailing_stopped'] = True
                 t['tp2_sold'] = True
                 t['exit_reason'] = 'TRAILING_STOP'
@@ -170,9 +175,9 @@ def check_positions():
 🔗 https://dexscreener.com/solana/{ca}
 🥧 https://pump.fun/{ca}
 
-📋 Exit: Trailing stop ({TRAILING_STOP_PCT}% drop from peak ${int(baseline):,})"""
+📋 Exit: Trailing stop ({TRAIL_HARD_STOP}% drop from TP1 baseline ${int(baseline):,})"""
                 send_alert(msg, "TRAILING_STOP")
-                print(f"✅ {sym} TRAILING STOP @ ${mcap:,.0f} ({drawdown_pct:.0f}% drop)")
+                print(f"✅ {sym} TRAILING STOP @ ${mcap:,.0f} ({drawdown_pct:.0f}% drop from TP1)")
         
         # === STOP LOSS ===
         elif not tp1_sold and gains_pct <= STOP_LOSS_PERCENT:

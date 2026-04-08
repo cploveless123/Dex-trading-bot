@@ -25,10 +25,10 @@ PUMP_FUN_ONLY = False     # Trade pump.fun AND pumpswap tokens (GYAN was on pump
 # Remaining % trails with trailing stop
 TP1_PERCENT = 45          # First take profit level (%)
 TP1_SELL_PCT = 74         # % of position to sell at TP1 (recovers initial investment)
-TP2_PERCENT = 45          # Trailing stop trigger (% above TP1 peak)
+TP2_PERCENT = 45          # (Unused - TP1 sells 74%, remaining 26% follows trailing stop)
 TP2_SELL_PCT = 100        # Sell remaining % at trailing stop
 STOP_LOSS_PERCENT = -20   # Stop loss percentage
-TRAILING_STOP_PCT = 30    # % drop from peak to trigger trailing stop on remaining position
+TRAILING_STOP_PCT = 15    # % drop from TP1 baseline to trigger trailing stop
 
 # Slippage & Tax Correction
 # Pump.fun: ~1% buy tax + ~1% sell tax + ~0.5% slippage = ~2.5% total cost per trade
