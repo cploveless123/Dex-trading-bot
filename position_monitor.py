@@ -10,7 +10,7 @@ from datetime import datetime
 import time
 from pathlib import Path
 from trading_constants import (
-    REAL_TP1_PCT, TP1_PERCENT, TP1_SELL_PCT,
+    REAL_TP1_PCT, TP1_PERCENT, TP1_TRAILING_PCT, TP1_SELL_PCT,
     TP2_PERCENT, TP2_SELL_PCT, TP3_PERCENT, TP3_SELL_PCT,
     STOP_LOSS_PERCENT, TRAILING_STOP_PCT, EXIT_PLAN_TEXT, SIM_RESET_TIMESTAMP,
     POSITION_SIZE, MAX_OPEN_POSITIONS
@@ -116,54 +116,44 @@ def check_positions():
         peak = cache['peak_mcap']
         gains_pct = ((mcap - entry) / entry) * 100
 
-        # === STOP LOSS (-20%) ===
-        if not tp1_sold and gains_pct <= STOP_LOSS_PERCENT:
-            t['status'] = 'closed'
-            t['exit_reason'] = 'STOP_AUTO'
-            t['closed_at'] = datetime.utcnow().isoformat()
-            t['pnl_sol'] = POSITION_SIZE * (gains_pct / 100)
-            t['pnl_pct'] = gains_pct
-            updated = True
-            if ca_key in peak_cache:
-                del peak_cache[ca_key]
-            msg = f"""🔴 STOP LOSS | {datetime.utcnow().strftime('%H:%M UTC')}
+        # === TP1 HIT (+50% minimum → 10% trailing from peak) ===
+        # Token must reach +50% first, then if it drops 10% from peak, sell 50%
+        if not tp1_sold:
+            peak = cache.get('peak_mcap', entry)
+            
+            # Check if we've reached the +50% minimum threshold
+            if gains_pct >= TP1_PERCENT:
+                # We reached +50% - now track peak and look for 10% drop
+                if peak > entry:
+                    # Calculate drop from peak
+                    drawdown_from_peak = ((peak - mcap) / peak) * 100
+                    
+                    # If price dropped 10% from peak after hitting +50%, TP1 sells
+                    if drawdown_from_peak >= TP1_TRAILING_PCT:
+                        t['tp1_sold'] = True
+                        t['partial_exit'] = True
+                        t['status'] = 'open_partial'
+                        t['closed_at'] = datetime.utcnow().isoformat()
+                        t['exit_reason'] = 'TP1_AUTO'
+                        # PnL based on actual sell price
+                        sell_pct = (mcap - entry) / entry * 100
+                        pnl_tp1 = POSITION_SIZE * TP1_SELL_PCT / 100 * (sell_pct / 100)
+                        t['pnl_sol'] = pnl_tp1
+                        t['pnl_pct'] = sell_pct
+                        cache['baseline'] = mcap
+                        cache['peak_mcap'] = mcap
+                        save_peak_cache(peak_cache)
+                        updated = True
+                        
+                        msg = f"""🏆 TP1 (+50% min → 10% trailing) | {datetime.utcnow().strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
 💰 {sym}
 📍 Entry MC: ${int(entry):,}
-📊 Exit MC: ${int(mcap):,} ({gains_pct:.1f}%)
-💰 Loss: {t['pnl_sol']:.4f} SOL
+📊 Sold at MC: ${int(mcap):,} (+{sell_pct:.1f}%)
+💵 Sold: {TP1_SELL_PCT}% of position
+💰 PnL so far: {pnl_tp1:.4f} SOL
 
-🔗 https://dexscreener.com/solana/{ca}
-🥧 https://pump.fun/{ca}
-
-📋 Stop loss triggered"""
-            send_alert(msg, "STOP_LOSS")
-            print(f"🔴 {sym} STOP LOSS @ ${mcap:,.0f} ({gains_pct:.1f}% from entry)")
-            continue
-
-        # === TP1 HIT (+100%) ===
-        if not tp1_sold and gains_pct >= REAL_TP1_PCT:
-            t['tp1_sold'] = True
-            t['partial_exit'] = True
-            t['status'] = 'open_partial'
-            t['closed_at'] = datetime.utcnow().isoformat()
-            t['exit_reason'] = 'TP1_AUTO'
-            pnl_tp1 = POSITION_SIZE * TP1_SELL_PCT / 100 * (REAL_TP1_PCT / 100)
-            t['pnl_sol'] = pnl_tp1
-            t['pnl_pct'] = REAL_TP1_PCT
-            cache['baseline'] = mcap
-            cache['peak_mcap'] = mcap
-            save_peak_cache(peak_cache)
-            updated = True
-
-            msg = f"""🏆 TP1 HIT (+{TP1_PERCENT}%) | {datetime.utcnow().strftime('%H:%M UTC')}
-━━━━━━━━━━━━━━━
-💰 {sym}
-📍 Entry MC: ${int(entry):,}
-💵 Sold: {TP1_SELL_PCT}% of position @ MC ${int(mcap):,}
-📊 +{REAL_TP1_PCT:.1f}% (+{pnl_tp1:.4f} SOL)
-
-💵 Remaining 50% still riding 🚀
+💵 Remaining 50% still riding
 🔗 https://dexscreener.com/solana/{ca}
 🥧 https://pump.fun/{ca}
 
@@ -171,9 +161,10 @@ def check_positions():
 📈 TP2: +{TP2_PERCENT}% → Sell 25% more
 📈 TP3: +{TP3_PERCENT}% → Sell remaining 25%
 📊 Trailing: {TRAILING_STOP_PCT}% from peak"""
-            send_alert(msg, "TP1")
-            print(f"✅ {sym} TP1 HIT @ ${mcap:,.0f}")
-            continue
+                        send_alert(msg, "TP1")
+                        print(f"✅ {sym} TP1 HIT @ ${mcap:,.0f} (+{sell_pct:.1f}%)")
+                        continue
+
 
         # === TP2 HIT (+200%) ===
         if tp1_sold and not tp2_sold and gains_pct >= REAL_TP2_PCT:

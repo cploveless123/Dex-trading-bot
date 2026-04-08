@@ -27,19 +27,21 @@ MIN_GMGN_SCORE = 55       # Minimum GMGN API score to buy
 MIN_ENTRY_MCAP = 3000     # Absolute minimum entry mcap ($)
 PUMP_FUN_ONLY = False     # Trade pump.fun AND pumpswap tokens
 
-# Exit Plan - HOLD FOR BIGGER WINS
-# TP1 at +100%: sell 50% to secure gains
-# TP2 at +200%: sell 25% more
-# TP3 at +500%: sell remaining 25%
-# Trailing: 30% from peak - ride the big ones
-TP1_PERCENT = 100         # First target: +100% (was +45%)
-TP1_SELL_PCT = 50         # Sell 50% at TP1 (was 74%)
+# Exit Plan - CHRIS'S NEW STRATEGY
+# TP1: +50% minimum → then 10% trailing from peak → sell 50%
+# TP2: +200% → sell 25%
+# TP3: +500% → sell 25%
+# Trailing: 20% from peak on remaining 25%
+# Stop: -20%
+TP1_PERCENT = 50         # First target: +50% minimum before trailing activates
+TP1_TRAILING_PCT = 10   # 10% trailing stop from peak after hitting +50%
+TP1_SELL_PCT = 50         # Sell 50% at TP1
 TP2_PERCENT = 200         # Second target: +200%
 TP2_SELL_PCT = 25         # Sell 25% more at TP2
 TP3_PERCENT = 500         # Third target: +500%
 TP3_SELL_PCT = 25         # Sell remaining 25% at TP3
 STOP_LOSS_PERCENT = -20   # Stop loss: -20%
-TRAILING_STOP_PCT = 30    # Trailing stop: 30% from peak
+TRAILING_STOP_PCT = 20    # Trailing stop: 20% from peak on remaining
 
 # Slippage & Tax Correction
 SLIPPAGE_TAX_COST = 0.025   # ~2.5% per round trip
@@ -51,10 +53,10 @@ REAL_TP3_PCT = round(TP3_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_STOP_PCT = round(STOP_LOSS_PERCENT * (1 + SLIPPAGE_TAX_COST), 1)
 
 EXIT_PLAN_TEXT = f"""🎯 Exit Plan:
-+{TP1_PERCENT}% → Sell {TP1_SELL_PCT}% of position
++{TP1_PERCENT}% minimum → then {TP1_TRAILING_PCT}% trailing from peak → Sell {TP1_SELL_PCT}%
 +{TP2_PERCENT}% → Sell {TP2_SELL_PCT}% more
 +{TP3_PERCENT}% → Sell remaining {TP3_SELL_PCT}%
-📊 Trailing: {TRAILING_STOP_PCT}% from peak
+📊 Trailing: {TRAILING_STOP_PCT}% from peak on remaining
 ⚠️ Stop: {STOP_LOSS_PERCENT}% (net: {REAL_STOP_PCT}% after tax)"""
 
 # Re-entry lockout after close
