@@ -82,7 +82,7 @@ See `/root/.openclaw/workspace/trading-patterns.md` for full analysis
 ## Entry Criteria (UPDATED per Chris)
 - Mcap: $5K-$100K
 - 24h volume: $15K+
-- 5min volume: $2K+
+- 5min volume: $1K+
 - Buy/sell ratio: 1.5+
 - Holders: 15+
 - Pump.fun only
