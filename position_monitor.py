@@ -1,5 +1,3 @@
-from trading_constants import TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT, STOP_LOSS_PERCENT, TRAILING_STOP_PCT, EXIT_PLAN_TEXT, SIM_RESET_TIMESTAMP
-
 #!/usr/bin/env python3
 """
 Position Monitor - Auto-execute TP/stop for open positions
@@ -8,6 +6,7 @@ Run continuously in background alongside scanner
 import requests, json
 from datetime import datetime
 import time
+from trading_constants import TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT, STOP_LOSS_PERCENT, TRAILING_STOP_PCT, EXIT_PLAN_TEXT, SIM_RESET_TIMESTAMP
 
 BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
@@ -27,16 +26,17 @@ def get_live_mcap(tok_address):
         pass
     return None
 
-def send_alert(msg):
+def send_alert(msg, label="ALERT"):
     """Send alert via Telegram"""
     import urllib.request, urllib.parse
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
     data = {"chat_id": CHAT_ID, "text": msg, "parse_mode": "HTML"}
     try:
         req = urllib.request.Request(url, data=urllib.parse.urlencode(data).encode())
-        urllib.request.urlopen(req, timeout=10)
-    except:
-        pass
+        resp = urllib.request.urlopen(req, timeout=10)
+        print(f"[{label}] ✅ Alert sent")
+    except Exception as e:
+        print(f"[{label}] ❌ Alert failed: {e}")
 
 def check_positions():
     """Check all open positions for TP/stop hits"""
@@ -156,7 +156,7 @@ def check_positions():
 
 🔗 https://dexscreener.com/solana/{tok}
 🥧 https://pump.fun/{tok}"""
-                send_alert(msg)
+                send_alert(msg, "TP1")
                 print(f"✅ {sym} TRAILING STOP: {drawdown_pct:.0f}% drop from peak ${int(peak):,}")
                 updated = True
         
@@ -186,7 +186,7 @@ def check_positions():
 
 🔗 https://dexscreener.com/solana/{tok}
 🥧 https://pump.fun/{tok}"""
-            send_alert(msg)
+            send_alert(msg, "STOP")
             print(f"🛑 {sym} STOP LOSS at {change:.0f}%")
             updated = True
     
@@ -195,6 +195,15 @@ def check_positions():
 def main():
     print(f"📊 Position Monitor starting...")
     print(f"📋 Exit Plan: TP1 +{TP1_PERCENT}% (sell {TP1_SELL_PCT}%) | Trailing {TRAILING_STOP_PCT}% drop from peak | Stop {STOP_LOSS_PERCENT}%")
+    
+    # Test Telegram connectivity
+    try:
+        import urllib.request
+        url = f"https://api.telegram.org/bot{BOT_TOKEN}/getMe"
+        resp = urllib.request.urlopen(url, timeout=5)
+        print(f"✅ Telegram connected")
+    except Exception as e:
+        print(f"❌ Telegram error: {e}")
     
     while True:
         try:
