@@ -101,6 +101,31 @@ def check_positions():
         
         gains_pct = ((mcap - entry) / entry) * 100
         
+        # === RUG PULL MONITOR ===
+        # If mcap drops 50%+ from entry on any open position → emergency close
+        if t.get('status') == 'open' and not t.get('tp1_sold'):
+            if gains_pct <= -50 and not t.get('emergency_stopped'):
+                t['status'] = 'closed'
+                t['exit_reason'] = 'RUG_PROTECTION'
+                t['closed_at'] = datetime.utcnow().isoformat()
+                t['pnl_sol'] = POSITION_SIZE * -0.50
+                t['pnl_pct'] = -50
+                updated = True
+                
+                msg = f"""🚨 RUG PROTECTION | {datetime.utcnow().strftime('%H:%M UTC')}
+━━━━━━━━━━━━━━━
+💰 {sym}
+📍 Entry MC: ${int(entry):,}
+📊 Exit MC: ${int(mcap):,} (-50% crash!)
+💰 Loss: {t['pnl_sol']:.4f} SOL
+
+⚠️ Emergency exit -50% drop detected!
+🔗 https://dexscreener.com/solana/{ca}
+🥧 https://pump.fun/{ca}"""
+                send_alert(msg, "RUG")
+                print(f"🚨 {sym} RUG PROTECTION @ ${mcap:,.0f} (-50% from entry)")
+                continue
+        
         # === TP1 HIT ===
         if not tp1_sold and gains_pct >= REAL_TP1_PCT:
             t['tp1_sold'] = True
@@ -147,7 +172,7 @@ def check_positions():
             else:
                 drawdown_pct = 0
             
-            TRAIL_STOP_THRESHOLD = 30  # % drop from peak to trigger trailing stop
+            TRAIL_STOP_THRESHOLD = 15  # % drop from peak to trigger trailing stop (tightened from 30%)
             
             if drawdown_pct >= TRAIL_STOP_THRESHOLD:
                 t['trailing_stopped'] = True
