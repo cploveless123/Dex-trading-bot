@@ -13,7 +13,7 @@ MIN_BS_RATIO = 1.5        # Minimum buy/sell ratio
 MIN_HOLDERS = 15           # Minimum holder count
 
 # GMGN Scoring
-MIN_GMGN_SCORE = 50       # Minimum GMGN API score to buy
+MIN_GMGN_SCORE = 55       # Minimum GMGN API score to buy
 
 # Entry criteria
 MIN_ENTRY_MCAP = 3000     # Absolute minimum entry mcap ($)

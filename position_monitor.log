@@ -22,3 +22,9 @@ Error: name 'pair' is not defined
 🛑 CYPHER STOP LOSS at -31%
 [STOP] ✅ Alert sent
 🛑 Brandy STOP LOSS at -43%
+[TP1] ✅ Alert sent
+✅ Kurōmu TRAILING STOP: 42% drop from peak $14,199
+[STOP] ✅ Alert sent
+🛑 SATOSHI STOP LOSS at -33%
+[STOP] ✅ Alert sent
+🛑 RIAL STOP LOSS at -66%

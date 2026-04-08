@@ -100,6 +100,11 @@ def check_and_buy():
             if bs < MIN_BS_RATIO:
                 continue
             
+            # Vol/MCap ratio: Chris's insight - 3x+ predicts pumps
+            vol_mcap_ratio = (float(v) / float(m)) if float(m) > 0 else 0
+            if vol_mcap_ratio < 2.0:
+                continue  # Need at least 2x vol/mcap for momentum
+            
             # Holders: 15+ if available
             holders = p.get('holders', 0) or 0
             if holders > 0 and holders < MIN_HOLDERS:
