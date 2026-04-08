@@ -30,3 +30,5 @@ Error: name 'pair' is not defined
 🛑 RIAL STOP LOSS at -66%
 [STOP] ✅ Alert sent
 🛑 Momiji STOP LOSS at -49%
+[TP1] ✅ Alert sent
+✅ BTCO TRAILING STOP: 40% drop from peak $16,025

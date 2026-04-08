@@ -59,3 +59,11 @@ GMGN_VOL_MCAP_MAX = 15.0       # Maximum vol/mcap ratio (no upper limit - higher
 
 # Simulation reset timestamp - all trades before this are from old session
 SIM_RESET_TIMESTAMP = '2026-04-08T04:34:00'
+
+# API Rate Limiting (prevents bans)
+DEXSCREENER_INTERVAL = 30    # Min seconds between DexScreener calls per CA
+SCAN_INTERVAL = 300            # Full scan interval (5 min)
+GMGN_INTERVAL = 60              # Min seconds between GMGN CLI calls
+MAX_RETRIES = 3                # Retries before circuit breaker
+CIRCUIT_BREAKER_THRESHOLD = 5  # Failures before extended wait
+CIRCUIT_BREAKER_WAIT = 300     # Seconds to wait when tripped
