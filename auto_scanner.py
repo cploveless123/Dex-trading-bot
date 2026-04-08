@@ -1,33 +1,22 @@
 #!/usr/bin/env python3
 """
-Auto Scanner v2 - Based on pattern analysis data
-Tighter criteria: low mcap pumpfun only, avoid pumpswap
+Auto Scanner v2 - Based on 16-whale synthesis (55% avg WR)
+NEW STRATEGY: Tighter filters, bigger wins, max 2 positions
 """
 import requests, json
 from datetime import datetime
 import time
+from pathlib import Path
+from trading_constants import (
+    MIN_MCAP, MAX_MCAP, MIN_VOLUME, MIN_5MIN_VOLUME, MIN_BS_RATIO,
+    MIN_HOLDERS, POSITION_SIZE, TICKER_BLACKLIST, REENTRY_LOCKOUT_MINUTES,
+    REENTRY_BS_THRESHOLD, REENTRY_CHG_THRESHOLD, MAX_OPEN_POSITIONS,
+    GMGN_VOL_MCAP_MIN, SIM_RESET_TIMESTAMP, EXIT_PLAN_TEXT
+)
 
 BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
-TRADES_FILE = "/root/Dex-trading-bot/trades/sim_trades.jsonl"
-
-# STRICTER criteria based on 173-trade pattern analysis
-# Mcap $15K-$75K (data-driven sweet spot), 24h vol $10K+, 5min vol $1K+, bs 1.5, holders 15+
-MIN_MCAP = 10000        # floor
-MAX_MCAP = 75000       # ceiling (lowered from $150K - >$75K = 86% loss rate)
-MIN_VOLUME = 10000     # 24h volume minimum
-MIN_5MIN_VOLUME = 1000 # 5min volume minimum (recent activity)
-MIN_BS_RATIO = 1.5    # buy/sell ratio - winners have momentum
-MIN_HOLDERS = 15       # holders minimum
-POSITION_SIZE = 0.05
-
-# Hard blacklist - NEVER re-enter these tickers
-TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
-
-# Re-entry lockout: 30 min after any close, must have STRONG momentum to override
-REENTRY_LOCKOUT_MINUTES = 30
-REENTRY_BS_THRESHOLD = 3.0   # buy/sell ratio 3.0+ to override lockout
-REENTRY_CHG_THRESHOLD = 60   # 24h change 60%+ to override lockout
+TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
 
 # Telegram alerts handled by alert_sender.py - NOT here
 def _do_not_use_send_alert(msg):
@@ -37,6 +26,18 @@ def _do_not_use_send_alert(msg):
 def check_and_buy():
     """Scan and buy if STRICTER criteria met based on pattern analysis"""
     timestamp = datetime.utcnow().strftime("%H:%M UTC")
+    
+    # Check max open positions
+    try:
+        with open(TRADES_FILE) as f:
+            all_trades = [json.loads(l) for l in f]
+        reset = SIM_RESET_TIMESTAMP
+        open_pos = [t for t in all_trades if t.get('opened_at','') > reset and not t.get('closed_at') and t.get('status') != 'closed']
+        if len(open_pos) >= MAX_OPEN_POSITIONS:
+            print(f"⏳ Max open positions ({MAX_OPEN_POSITIONS}) reached, skipping scan")
+            return None
+    except:
+        pass
     
     resp = requests.get(
         "https://api.dexscreener.com/token-profiles/latest/v1",

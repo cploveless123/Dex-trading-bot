@@ -8,13 +8,10 @@ from datetime import datetime
 from pathlib import Path
 from itertools import islice
 from trading_constants import (
-    MIN_MCAP, MAX_MCAP, MIN_VOLUME, POSITION_SIZE, EXIT_PLAN_TEXT
+    MIN_MCAP, MAX_MCAP, MIN_VOLUME, POSITION_SIZE, EXIT_PLAN_TEXT,
+    MIN_BS_RATIO, MIN_HOLDERS, MIN_GMGN_SCORE, MAX_OPEN_POSITIONS, SIM_RESET_TIMESTAMP,
+    GMGN_VOL_MCAP_MIN
 )
-# Additional filters not in trading_constants yet
-MIN_BS_RATIO = 1.5
-MIN_HOLDERS = 15
-MIN_GMGN_API_SCORE = 50  # Minimum GMGN API score to buy
-MIN_5MIN_VOLUME = 0      # Disabled - DexScreener no longer provides this
 
 import gmgn_api_scorer
 import gmgn_signal_scorer
@@ -141,6 +138,18 @@ def should_buy_from_signal(sig: dict, market: dict) -> tuple:
 def check_and_buy():
     """Main loop - check recent GMGN signals and buy if they pass criteria"""
     print(f"[{datetime.utcnow().strftime('%H:%M:%S')}] GMGN Buyer scanning...")
+    
+    # Check max open positions
+    try:
+        with open(TRADES_FILE) as f:
+            all_trades = [json.loads(l) for l in f]
+        reset = SIM_RESET_TIMESTAMP
+        open_pos = [t for t in all_trades if t.get('opened_at','') > reset and not t.get('closed_at') and t.get('status') != 'closed']
+        if len(open_pos) >= MAX_OPEN_POSITIONS:
+            print(f"⏳ Max open positions ({MAX_OPEN_POSITIONS}) reached, skipping GMGN scan")
+            return
+    except:
+        pass
     
     # Get recent GMGN signals (last 50)
     signal_files = sorted(SIGNALS_DIR.glob('gmgn_*.json'), key=lambda p: p.stat().st_mtime, reverse=True)[:50]

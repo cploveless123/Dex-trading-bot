@@ -1,72 +1,83 @@
 #!/usr/bin/env python3
 """
 Trading Constants - Shared configuration for all trading scripts
+
+NEW STRATEGY: Based on 16-whale synthesis (55% avg WR)
+Goal: Turn 1 SOL to 100 SOL via compounding 2-5x wins
 """
 
 # Position sizing
 POSITION_SIZE = 0.05      # Normal position size
-KOL_BUY_POSITION_SIZE = 0.10  # KOL_BUY signals: 100% WR - double down      # SOL per trade
-MIN_MCAP = 15000           # Minimum market cap ($)
-MAX_MCAP = 75000         # Maximum market cap ($) - lowered from $150K based on 173-trade analysis (>$75K = 86% loss rate)
-MIN_VOLUME = 5000         # Minimum 24h volume ($)
-MIN_5MIN_VOLUME = 1000    # Minimum 5min volume ($)
-MIN_BS_RATIO = 1.5        # Minimum buy/sell ratio
-MIN_HOLDERS = 15           # Minimum holder count
+KOL_BUY_POSITION_SIZE = 0.10  # KOL_BUY signals: double down
+MAX_OPEN_POSITIONS = 2     # Max concurrent positions - quality over quantity
+
+# Entry Filters (TIGHTER = higher win rate)
+MIN_MCAP = 30000           # $30K floor - cuts micro-cap rugs
+MAX_MCAP = 75000           # $75K ceiling
+MIN_VOLUME = 5000          # Minimum 24h volume ($)
+MIN_5MIN_VOLUME = 1000     # Minimum 5min volume ($)
+MIN_BS_RATIO = 2.0        # BS ratio 2.0+ (was 1.5) - stronger momentum
+MIN_HOLDERS = 50           # Holders 50+ (was 15) - more distributed = safer
+TOP10_HOLDER_MAX = 40     # Max top 10 holder % - prevents honeypots
 
 # GMGN Scoring
 MIN_GMGN_SCORE = 55       # Minimum GMGN API score to buy
 
 # Entry criteria
 MIN_ENTRY_MCAP = 3000     # Absolute minimum entry mcap ($)
-PUMP_FUN_ONLY = False     # Trade pump.fun AND pumpswap tokens (GYAN was on pumpswap)
+PUMP_FUN_ONLY = False     # Trade pump.fun AND pumpswap tokens
 
-# Exit Plan
-# TP1: sell % of position to recoup initial investment
-# Remaining % trails with trailing stop
-TP1_PERCENT = 45          # First take profit level (%)
-TP1_SELL_PCT = 74         # % of position to sell at TP1 (recovers initial investment)
-TP2_PERCENT = 45          # (Unused - TP1 sells 74%, remaining 26% follows trailing stop)
-TP2_SELL_PCT = 100        # Sell remaining % at trailing stop
-STOP_LOSS_PERCENT = -20   # Stop loss percentage
-TRAILING_STOP_PCT = 30    # % drop from peak - whale uses 30% to capture big runs
+# Exit Plan - HOLD FOR BIGGER WINS
+# TP1 at +100%: sell 50% to secure gains
+# TP2 at +200%: sell 25% more
+# TP3 at +500%: sell remaining 25%
+# Trailing: 30% from peak - ride the big ones
+TP1_PERCENT = 100         # First target: +100% (was +45%)
+TP1_SELL_PCT = 50         # Sell 50% at TP1 (was 74%)
+TP2_PERCENT = 200         # Second target: +200%
+TP2_SELL_PCT = 25         # Sell 25% more at TP2
+TP3_PERCENT = 500         # Third target: +500%
+TP3_SELL_PCT = 25         # Sell remaining 25% at TP3
+STOP_LOSS_PERCENT = -20   # Stop loss: -20%
+TRAILING_STOP_PCT = 30    # Trailing stop: 30% from peak
 
 # Slippage & Tax Correction
-# Pump.fun: ~1% buy tax + ~1% sell tax + ~0.5% slippage = ~2.5% total cost per trade
-# Real TP1 = TP1_PERCENT - SLIPPAGE_TAX_COST (we capture less profit)
-# Real Stop = STOP_LOSS_PERCENT + SLIPPAGE_TAX_COST (stop exits ~2.5% worse)
-SLIPPAGE_TAX_COST = 0.025   # 2.5% effective cost per round trip (buy + sell)
+SLIPPAGE_TAX_COST = 0.025   # ~2.5% per round trip
 
-# Real net exit percentages (after ~2.5% tax/slippage)
+# Real net exit percentages (after tax)
 REAL_TP1_PCT = round(TP1_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
+REAL_TP2_PCT = round(TP2_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
+REAL_TP3_PCT = round(TP3_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_STOP_PCT = round(STOP_LOSS_PERCENT * (1 + SLIPPAGE_TAX_COST), 1)
 
 EXIT_PLAN_TEXT = f"""🎯 Exit Plan:
-+{TP1_PERCENT}% → Sell initial investment (~{TP1_SELL_PCT}% of position)
-📊 Trailing stop: sell remaining if {TRAILING_STOP_PCT}% drop from peak
++{TP1_PERCENT}% → Sell {TP1_SELL_PCT}% of position
++{TP2_PERCENT}% → Sell {TP2_SELL_PCT}% more
++{TP3_PERCENT}% → Sell remaining {TP3_SELL_PCT}%
+📊 Trailing: {TRAILING_STOP_PCT}% from peak
 ⚠️ Stop: {STOP_LOSS_PERCENT}% (net: {REAL_STOP_PCT}% after tax)"""
 
 # Re-entry lockout after close
-REENTRY_LOCKOUT_MINUTES = 30  # Minutes to wait before re-entering after close
-REENTRY_BS_THRESHOLD = 3.0    # BS ratio needed to override lockout
-REENTRY_CHG_THRESHOLD = 60   # % change needed to override lockout
+REENTRY_LOCKOUT_MINUTES = 30
+REENTRY_BS_THRESHOLD = 3.0
+REENTRY_CHG_THRESHOLD = 60
 
-# Ticker blacklist - tokens that have chased too many times
+# Ticker blacklist
 TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
 
 # GMGN Signal Settings
-GMGN_SCORE_THRESHOLD = 50     # Minimum GMGN score to act on signal
-GMGN_VOL_MCAP_MIN = 1.5       # Minimum vol/mcap ratio
-GMGN_VOL_MCAP_MAX = 15.0       # Maximum vol/mcap ratio (no upper limit - higher = more momentum)
+GMGN_SCORE_THRESHOLD = 50
+GMGN_VOL_MCAP_MIN = 3.0    # 3x vol/mcap (was 1.5) - stronger momentum
+GMGN_VOL_MCAP_MAX = 15.0
 
-# Simulation reset timestamp - all trades before this are from old session
-SIM_RESET_TIMESTAMP = '2026-04-08T04:34:00'
-# Chris's actual SOL deposit to fund the SIM (for accurate balance tracking)
-CHRIS_STARTING_BALANCE = 0.5050
+# Simulation reset timestamp
+SIM_RESET_TIMESTAMP = '2026-04-08T20:45:00'
+CHRIS_STARTING_BALANCE = 1.0   # Reset to 1.0 SOL for fresh tracking
 
-# API Rate Limiting (prevents bans)
-DEXSCREENER_INTERVAL = 30    # Min seconds between DexScreener calls per CA
-SCAN_INTERVAL = 300            # Full scan interval (5 min)
-GMGN_INTERVAL = 60              # Min seconds between GMGN CLI calls
-MAX_RETRIES = 3                # Retries before circuit breaker
-CIRCUIT_BREAKER_THRESHOLD = 5  # Failures before extended wait
-CIRCUIT_BREAKER_WAIT = 300     # Seconds to wait when tripped
+# API Rate Limiting
+DEXSCREENER_INTERVAL = 30
+SCAN_INTERVAL = 300
+GMGN_INTERVAL = 60
+MAX_RETRIES = 3
+CIRCUIT_BREAKER_THRESHOLD = 5
+CIRCUIT_BREAKER_WAIT = 300
