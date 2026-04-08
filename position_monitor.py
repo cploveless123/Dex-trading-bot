@@ -100,7 +100,7 @@ def check_positions():
 🟢 Sold {TP1_SELL_PCT}% (initial investment): +{tp1_pnl:.4f} SOL (+{TP1_PERCENT}%)
 💰 Wallet: {balance:.4f} SOL (~{100-TP1_SELL_PCT}% still in trade)
 
-🔗 https://dexscreener.com/solana/{pair}
+🔗 https://dexscreener.com/solana/{tok}
 🥧 https://pump.fun/{tok}
 
 📋 After TP1: Trailing stop — sell remaining if {TRAILING_STOP_PCT}% drop from peak
@@ -154,7 +154,7 @@ def check_positions():
 💰 Wallet: {balance:.4f} SOL
 📋 Reason: Trailing stop ({drawdown_pct:.0f}% drop from peak)
 
-🔗 https://dexscreener.com/solana/{pair}
+🔗 https://dexscreener.com/solana/{tok}
 🥧 https://pump.fun/{tok}"""
                 send_alert(msg)
                 print(f"✅ {sym} TRAILING STOP: {drawdown_pct:.0f}% drop from peak ${int(peak):,}")
@@ -184,7 +184,7 @@ def check_positions():
 💰 Wallet: {balance:.4f} SOL
 📋 Reason: STOP_AUTO
 
-🔗 https://dexscreener.com/solana/{pair}
+🔗 https://dexscreener.com/solana/{tok}
 🥧 https://pump.fun/{tok}"""
             send_alert(msg)
             print(f"🛑 {sym} STOP LOSS at {change:.0f}%")
