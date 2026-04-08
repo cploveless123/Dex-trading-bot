@@ -93,22 +93,28 @@ def check_and_buy():
             if v < MIN_VOLUME:
                 continue
             
-            # 5min volume: $2K+ if available
+            # 5min volume: $500+ if available
             if v5 > 0 and v5 < MIN_5MIN_VOLUME:
                 continue
+            
+            # === CHRIS'S INSIGHT: Early momentum tier ($8.5K-$12K mcap) ===
+            # 5min vol/mcap ratio >= 1.0 (100%) = strong early signal
+            v5m_ratio = v5 / m if m > 0 and v5 > 0 else 0
+            early_momentum_tier = 8500 <= m <= 12000 and v5m_ratio >= 1.0
             
             # Buy/sell ratio: can be lower if vol/mcap is extreme and holders are high
             # If vol/mcap > 5x AND holders > 100, BS can be >= 1.0
             vol_mcap_ratio = v / m if m > 0 else 0
             if bs < MIN_BS_RATIO:
-                if vol_mcap_ratio < 5.0 or holders < 100:
+                if early_momentum_tier:
+                    pass  # Skip BS check for early momentum tier
+                elif vol_mcap_ratio < 5.0 or holders < 100:
                     continue  # Need BOTH conditions to override BS requirement
-                continue
             
-            # Vol/MCap ratio: Chris's insight - 3x+ predicts pumps
-            vol_mcap_ratio = (float(v) / float(m)) if float(m) > 0 else 0
-            if vol_mcap_ratio < 2.0:
-                continue  # Need at least 2x vol/mcap for momentum
+            # Vol/MCap ratio: Chris's insight - 3x+ predicts pumps (but 1x+ for $8.5K-$12K early tier)
+            if not early_momentum_tier:
+                if vol_mcap_ratio < 2.0:
+                    continue  # Need at least 2x vol/mcap for momentum
             
             # Holders: 15+ if available
             holders = p.get('holders', 0) or 0

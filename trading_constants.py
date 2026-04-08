@@ -12,10 +12,10 @@ KOL_BUY_POSITION_SIZE = 0.10  # KOL_BUY signals: double down
 MAX_OPEN_POSITIONS = 5     # Max concurrent positions - aggressive deployment
 
 # Entry Filters - AGGRESSIVE for 100x growth
-MIN_MCAP = 15000           # $15K floor - captures early momentum plays
+MIN_MCAP = 8500            # $8.5K floor - early momentum plays
 MAX_MCAP = 75000           # $75K ceiling
 MIN_VOLUME = 5000          # Minimum 24h volume ($)
-MIN_5MIN_VOLUME = 1000     # Minimum 5min volume ($)
+MIN_5MIN_VOLUME = 500     # Minimum 5min volume ($)
 MIN_BS_RATIO = 1.5        # BS ratio 1.5+ - momentum only
 MIN_HOLDERS = 30           # Holders 30+ - decent distribution
 TOP10_HOLDER_MAX = 45     # Max top 10 holder % - prevents honeypots
