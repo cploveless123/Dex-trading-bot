@@ -46,3 +46,6 @@ Error: name 'pair' is not defined
 [TRAILING_STOP] ✅ Alert sent
 ✅ PEACE TRAILING STOP @ $3,757 (87% drop)
   BTCO: mcap=$6,118 | gain=-22.5% | peak=$7,899 | dd=+0%
+  BWUL: mcap=$8,450 | gain=-14.4% | peak=$9,875 | dd=+0%
+  PEACE: mcap=$4,139 | gain=-79.4% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$6,238 | gain=-21.0% | peak=$7,899 | dd=+0%
