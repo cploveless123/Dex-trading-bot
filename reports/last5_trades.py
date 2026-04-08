@@ -1,5 +1,9 @@
 import json, requests
 from datetime import datetime
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from trading_constants import POSITION_SIZE, TP1_SELL_PCT
 
 trades = []
 with open('/root/Dex-trading-bot/trades/sim_trades.jsonl') as f:
@@ -10,17 +14,20 @@ with open('/root/Dex-trading-bot/trades/sim_trades.jsonl') as f:
             except:
                 pass
 
-# Calculate balance and record
-balance = 1.0 + sum(t.get('pnl_sol', 0) for t in trades)
-wins = len([t for t in trades if t.get('pnl_sol', 0) > 0])
-losses = len([t for t in trades if t.get('pnl_sol', 0) < 0])
+# Correct balance: 1.0 + closed_pnl - locked_in_open_positions
+closed_all = [t for t in trades if t.get('status') == 'closed' or t.get('closed') == True]
+open_full = [t for t in trades if t.get('status') == 'open']
+open_partial = [t for t in trades if t.get('status') == 'open_partial']
 
-# Get closed and open trades
-closed = [t for t in trades if t.get('closed') or t.get('status') == 'closed']
-closed.sort(key=lambda x: x.get('closed_at', x.get('opened_at', '')), reverse=True)
-recent = closed[:5]
+closed_pnl = sum(t.get('pnl_sol', 0) for t in closed_all)
+locked = (len(open_full) * POSITION_SIZE) + (len(open_partial) * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100))
+balance = 1.0 + closed_pnl - locked
 
-open_pos = [t for t in trades if t.get('status') == 'open']
+wins = len([t for t in closed_all if t.get('pnl_sol', 0) > 0])
+losses = len([t for t in closed_all if t.get('pnl_sol', 0) < 0])
+
+closed_all.sort(key=lambda x: x.get('closed_at', x.get('opened_at', '')), reverse=True)
+recent = closed_all[:5]
 
 # Build message in Chris-approved format
 msg = f"📊 TRADE REPORT | {datetime.utcnow().strftime('%H:%M UTC')}\n"
@@ -29,11 +36,11 @@ msg += f"💰 Balance: {balance:.4f} SOL\n"
 msg += f"📈 Record: {wins}W / {losses}L\n\n"
 msg += "━━━━━━━━ OPEN POSITIONS ━━━━━━━━\n\n"
 
-for t in open_pos:
+for t in open_full + open_partial:
     sym = t.get('token', '?')
     pair = t.get('pair_address', '')
     entry = t.get('entry_mcap', 0)
-    # Get live mcap
+    partial = " (TP1 hit)" if t.get('status') == 'open_partial' else ""
     try:
         resp = requests.get(f"https://api.dexscreener.com/latest/dex/pairs/solana/{pair}", timeout=10)
         data = resp.json()
@@ -45,7 +52,7 @@ for t in open_pos:
         status = "⚠️"
         chg = 0
         mcap = entry
-    msg += f"{status} {sym}\n"
+    msg += f"{status} {sym}{partial}\n"
     msg += f"   Entry: ${entry:,} → Live: ${mcap:,.0f} ({chg:+.0f}%)\n"
     msg += f"   https://dexscreener.com/solana/{pair}\n\n"
 
@@ -74,6 +81,7 @@ for t in recent:
 
 resp = requests.post(
     "https://api.telegram.org/bot8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg/sendMessage",
-    json={"chat_id": "6402511249", "text": msg}
+    json={"chat_id": "6402511249", "text": msg, "parse_mode": "HTML"}
 )
 print("Trade report sent:", resp.status_code == 200)
+print(f"Balance: {balance:.4f} SOL | {wins}W/{losses}L | open: {len(open_full)} full, {len(open_partial)} partial")
