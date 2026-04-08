@@ -59,3 +59,12 @@ Rest → Hold (trailing stop)
 - Wants continuous scanning and trading
 - Prefers fast decisions over perfect analysis
 - Very detail-oriented on alert/report format
+
+## HOURLY BACKUP (CRITICAL - DO NOT SKIP)
+Hourly cron job backs up to GitHub:
+- Workspace files: *.md, BOOTSTRAP.md
+- Cron jobs: /root/.openclaw/cron/jobs.json
+- Workspace skills: skills/
+- System skills: /opt/node22/lib/node_modules/openclaw/skills/
+Job ID: 16429a40-b0b6-470e-8c3e-8c154b57862a (hourly-bot-backup)
+Runs at :30 every hour
