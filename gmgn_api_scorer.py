@@ -1,10 +1,28 @@
 #!/usr/bin/env python3
 """
-GMGN API Scorer - Uses GMGN API for rich token data
-Fetches smart money, holder concentration, creator history
+GMGN API Scorer - Uses GMGN API + DexScreener for rich token data
+Fetches smart money, holder concentration, creator history, vol/mcap ratio
 """
 import subprocess, json
+import requests
 from pathlib import Path
+
+def get_dexscreener_vol(ca: str) -> tuple:
+    """Get 24h volume and mcap from DexScreener, return (vol, mcap, ratio)"""
+    try:
+        r = requests.get(f"https://api.dexscreener.com/latest/dex/tokens/{ca}", timeout=8)
+        if r.status_code == 200:
+            data = r.json()
+            pairs = data.get('pairs', [])
+            if pairs:
+                p = max(pairs, key=lambda x: x.get('liquidity', {}).get('usd', 0))
+                mcap = p.get('fdv', 0) or 0
+                vol = p.get('volume', {}).get('h24', 0) or 0
+                ratio = vol/mcap if mcap > 0 else 0
+                return vol, mcap, ratio
+    except:
+        pass
+    return 0, 0, 0
 
 def get_gmgn_token_data(ca: str) -> dict:
     """Fetch rich token data from GMGN API"""
@@ -32,8 +50,8 @@ def get_gmgn_security(ca: str) -> dict:
         pass
     return {}
 
-def score_with_gmgn_api(sig: dict, gmgn_data: dict, security_data: dict) -> dict:
-    """Enhanced scoring using GMGN API data - returns score + breakdown"""
+def score_with_gmgn_api(sig: dict, gmgn_data: dict, security_data: dict, dex_vol: float = 0, dex_mcap: float = 0) -> dict:
+    """Enhanced scoring using GMGN API data + DexScreener vol data - returns score + breakdown"""
     score = 0
     breakdown = {}
     
@@ -99,6 +117,24 @@ def score_with_gmgn_api(sig: dict, gmgn_data: dict, security_data: dict) -> dict
     elif renowned >= 1: score += 3; breakdown['kol'] = '3 (KOL)'
     else: breakdown['kol'] = '0'
     
+    # === VOL/MCAP RATIO (Chris's insight: ~3x predicts pumps) ===
+    # Fetch from DexScreener if not provided
+    if dex_mcap <= 0 or dex_vol <= 0:
+        dex_vol, dex_mcap, vol_ratio = get_dexscreener_vol(sig.get('ca', '') or sig.get('token_address', ''))
+    else:
+        vol_ratio = dex_vol/dex_mcap if dex_mcap > 0 else 0
+    
+    if vol_ratio >= 2.0 and vol_ratio <= 4.0:  # Chris's sweet spot
+        score += 10; breakdown['volmcap'] = f'10 ({vol_ratio:.1f}x - sweet spot)'
+    elif vol_ratio > 4.0 and vol_ratio <= 6.0:
+        score += 7; breakdown['volmcap'] = f'7 ({vol_ratio:.1f}x - active)'
+    elif vol_ratio > 6.0:
+        score += 3; breakdown['volmcap'] = f'3 ({vol_ratio:.1f}x - caution)'
+    elif vol_ratio >= 1.0:
+        score += 5; breakdown['volmcap'] = f'5 ({vol_ratio:.1f}x - developing)'
+    else:
+        breakdown['volmcap'] = '0 (<1x)'
+    
     # === ACTION MULTIPLIER ===
     action = sig.get('action', 'PUMP')
     mult = {'KOL_BUY': 1.5, 'KOTH': 1.3, 'PUMP': 1.0, 'NEW_POOL': 1.1, 'SNIPER': 1.2}.get(action, 1.0)
@@ -117,6 +153,9 @@ def score_with_gmgn_api(sig: dict, gmgn_data: dict, security_data: dict) -> dict
         'gmgn_bot_degen_rate': bot_degen_rate * 100,
         'gmgn_smart_wallets': smart,
         'gmgn_renowned_wallets': renowned,
+        'dex_vol': dex_vol,
+        'dex_mcap': dex_mcap,
+        'vol_mcap_ratio': vol_ratio if 'vol_ratio' in dir() else (dex_vol/dex_mcap if dex_mcap > 0 else 0),
     }
 
 if __name__ == '__main__':
