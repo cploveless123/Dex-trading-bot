@@ -557,3 +557,29 @@ Error: name 'pair' is not defined
   FAH: mcap=$4,280 | gain=-82.7% | peak=$24,797 | dd=+0%
   NOTHING: mcap=$2,299 | gain=-89.4% | peak=$21,726 | dd=+0%
   Badger: mcap=$18,721 | gain=-8.3% | peak=$23,024 | dd=+0%
+  PEACE: mcap=$3,034 | gain=-84.9% | peak=$20,103 | dd=+0%
+  Topless: mcap=$2,590 | gain=-85.5% | peak=$17,915 | dd=+0%
+  MIKO: mcap=$1,859 | gain=-95.1% | peak=$37,670 | dd=+0%
+  LOOP: mcap=$5,461 | gain=-79.3% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$104,705 | gain=+6.1% | peak=$139,023 | dd=+0%
+  FAH: mcap=$4,094 | gain=-83.5% | peak=$24,797 | dd=+0%
+  NOTHING: mcap=$2,299 | gain=-89.4% | peak=$21,726 | dd=+0%
+  Badger: mcap=$17,244 | gain=-15.5% | peak=$23,024 | dd=+0%
+  PEACE: mcap=$3,034 | gain=-84.9% | peak=$20,103 | dd=+0%
+  Topless: mcap=$2,590 | gain=-85.5% | peak=$17,915 | dd=+0%
+  MIKO: mcap=$1,859 | gain=-95.1% | peak=$37,670 | dd=+0%
+  LOOP: mcap=$6,184 | gain=-76.5% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$112,831 | gain=+14.4% | peak=$139,023 | dd=+0%
+  FAH: mcap=$3,897 | gain=-84.3% | peak=$24,797 | dd=+0%
+  NOTHING: mcap=$2,241 | gain=-89.7% | peak=$21,726 | dd=+0%
+  Badger: mcap=$17,208 | gain=-15.7% | peak=$23,024 | dd=+0%
+  PEACE: mcap=$3,034 | gain=-84.9% | peak=$20,103 | dd=+0%
+  Topless: mcap=$2,590 | gain=-85.5% | peak=$17,915 | dd=+0%
+  MIKO: mcap=$1,859 | gain=-95.1% | peak=$37,670 | dd=+0%
+  LOOP: mcap=$6,792 | gain=-74.2% | peak=$26,346 | dd=+0%
+  🔧 Shiro TP1 @ $147,148 — baseline reset to $147,148, cache saved
+[TP1] ✅ Alert sent
+✅ Shiro TP1 HIT @ $147,148
+  FAH: mcap=$3,669 | gain=-85.2% | peak=$24,797 | dd=+0%
+  NOTHING: mcap=$2,241 | gain=-89.7% | peak=$21,726 | dd=+0%
+  Badger: mcap=$17,989 | gain=-11.9% | peak=$23,024 | dd=+0%
