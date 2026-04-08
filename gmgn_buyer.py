@@ -55,8 +55,8 @@ def should_buy_from_signal(sig: dict, market: dict) -> tuple:
     holders = market.get('holders', 0) or 0
     
     # Check pump.fun
-    if dex != 'pumpfun':
-        reasons_why_not.append(f"not pumpfun ({dex})")
+    if dex not in ['pumpfun', 'pumpswap']:
+        reasons_why_not.append(f"not pumpfun/pumpswap ({dex})")
     
     # === PULLBACK DETECTION (Chris's insight) ===
     # Buy AFTER the first pump + dump cycle, not during the pump

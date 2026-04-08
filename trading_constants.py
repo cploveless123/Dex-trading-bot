@@ -6,7 +6,7 @@ Trading Constants - Shared configuration for all trading scripts
 # Position sizing
 POSITION_SIZE = 0.05      # SOL per trade
 MIN_MCAP = 4000           # Minimum market cap ($)
-MAX_MCAP = 100000         # Maximum market cap ($)
+MAX_MCAP = 150000         # Maximum market cap ($) - raised from $100K based on GYAN (+322%)
 MIN_VOLUME = 5000         # Minimum 24h volume ($)
 MIN_5MIN_VOLUME = 1000    # Minimum 5min volume ($)
 MIN_BS_RATIO = 1.5        # Minimum buy/sell ratio
@@ -17,7 +17,7 @@ MIN_GMGN_SCORE = 55       # Minimum GMGN API score to buy
 
 # Entry criteria
 MIN_ENTRY_MCAP = 3000     # Absolute minimum entry mcap ($)
-PUMP_FUN_ONLY = True      # Only trade pump.fun tokens
+PUMP_FUN_ONLY = False     # Trade pump.fun AND pumpswap tokens (GYAN was on pumpswap)
 
 # Exit Plan
 # TP1: sell % of position to recoup initial investment
@@ -55,7 +55,7 @@ TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
 # GMGN Signal Settings
 GMGN_SCORE_THRESHOLD = 50     # Minimum GMGN score to act on signal
 GMGN_VOL_MCAP_MIN = 1.5       # Minimum vol/mcap ratio
-GMGN_VOL_MCAP_MAX = 8.0       # Maximum vol/mcap ratio (caution above this)
+GMGN_VOL_MCAP_MAX = 15.0       # Maximum vol/mcap ratio (no upper limit - higher = more momentum)
 
 # Simulation reset timestamp - all trades before this are from old session
 SIM_RESET_TIMESTAMP = '2026-04-08T04:34:00'

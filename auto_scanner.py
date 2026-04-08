@@ -78,26 +78,30 @@ def check_and_buy():
             # 5min volume check
             v5 = p.get('volume', {}).get('m5', 0) or 0
             
-            # ONLY pumpfun for now
-            if dex != 'pumpfun':
+            # Pumpfun OR pumpswap (GYAN was on pumpswap - broaden access)
+            if dex not in ['pumpfun', 'pumpswap']:
                 continue
             
-            # Mcap: $5K-$100K
+            # Mcap: $4K-$150K (GYAN at $147K made +322%)
             if m < MIN_MCAP:
                 continue
             if m > MAX_MCAP:
                 continue
             
-            # 24h volume: $15K+ for pumpfun
+            # 24h volume: $15K+ (organic interest)
             if v < MIN_VOLUME:
                 continue
             
-            # 5min volume: $2K+ if available (API may not always have this)
+            # 5min volume: $2K+ if available
             if v5 > 0 and v5 < MIN_5MIN_VOLUME:
                 continue
             
-            # Buy/sell ratio 1.5+ (winners had momentum)
+            # Buy/sell ratio: can be lower if vol/mcap is extreme and holders are high
+            # If vol/mcap > 5x AND holders > 100, BS can be >= 1.0
+            vol_mcap_ratio = v / m if m > 0 else 0
             if bs < MIN_BS_RATIO:
+                if vol_mcap_ratio < 5.0 or holders < 100:
+                    continue  # Need BOTH conditions to override BS requirement
                 continue
             
             # Vol/MCap ratio: Chris's insight - 3x+ predicts pumps
