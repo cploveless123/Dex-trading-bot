@@ -116,6 +116,31 @@ def check_positions():
         peak = cache['peak_mcap']
         gains_pct = ((mcap - entry) / entry) * 100
 
+        # === STOP LOSS (-20%) ===
+        if not tp1_sold and gains_pct <= STOP_LOSS_PERCENT:
+            t['status'] = 'closed'
+            t['exit_reason'] = 'STOP_AUTO'
+            t['closed_at'] = datetime.utcnow().isoformat()
+            t['pnl_sol'] = POSITION_SIZE * (gains_pct / 100)
+            t['pnl_pct'] = gains_pct
+            updated = True
+            if ca_key in peak_cache:
+                del peak_cache[ca_key]
+            msg = f"""🔴 STOP LOSS | {datetime.utcnow().strftime('%H:%M UTC')}
+━━━━━━━━━━━━━━━
+💰 {sym}
+📍 Entry MC: ${int(entry):,}
+📊 Exit MC: ${int(mcap):,} ({gains_pct:.1f}%)
+💰 Loss: {t['pnl_sol']:.4f} SOL
+
+🔗 https://dexscreener.com/solana/{ca}
+🥧 https://pump.fun/{ca}
+
+📋 Stop loss triggered"""
+            send_alert(msg, "STOP_LOSS")
+            print(f"🔴 {sym} STOP LOSS @ ${mcap:,.0f} ({gains_pct:.1f}% from entry)")
+            continue
+
         # === TP1 HIT (+50% minimum → 10% trailing from peak) ===
         # Token must reach +50% first, then if it drops 10% from peak, sell 50%
         if not tp1_sold:
