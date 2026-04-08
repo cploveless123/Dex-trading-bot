@@ -1,0 +1,21 @@
+{
+  "pair_address": "2qWodPbz1uAu6LEbSy9rNVGLrmxTv4YxiLx34UuQRzeW",
+  "token_address": "6ygoY6CctQyUMnRQ2rTak84byAvy6Bs3cawycGdKpump",
+  "symbol": "CATGIRL",
+  "name": "Cat Girl",
+  "price": "0.0001147",
+  "liquidity": 26654.3,
+  "mcap": 114716,
+  "volume_24h": 188235.27,
+  "price_change_24h": 229,
+  "buys_24h": 12053,
+  "sells_24h": 1364,
+  "buy_sell_ratio": 8.836510263929618,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-08T02:41:45.926388",
+  "signals": [
+    "STRONG_BUY_PRESSURE",
+    "RAPID_MOVE",
+    "BUY_MOMENTUM"
+  ]
+}

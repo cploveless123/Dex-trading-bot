@@ -21,6 +21,14 @@ MIN_BS_RATIO = 1.5
 MIN_24H_CHANGE = 30
 POSITION_SIZE = 0.05
 
+# Hard blacklist - NEVER re-enter these tickers (stopped/chased too many times)
+TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
+
+# Re-entry lockout: 30 min after any close, must have STRONG momentum to override
+REENTRY_LOCKOUT_MINUTES = 30
+REENTRY_BS_THRESHOLD = 3.0   # buy/sell ratio 3.0+ to override lockout
+REENTRY_CHG_THRESHOLD = 60   # 24h change 60%+ to override lockout
+
 # Telegram alerts handled by alert_sender.py - NOT here
 def _do_not_use_send_alert(msg):
     # DEPRECATED - use alert_sender.py only
@@ -100,8 +108,12 @@ def check_and_buy():
             if already_have:
                 continue
             
-            # Block re-entry on any recently closed token (within 15 min)
-            # UNLESS token shows strong renewed momentum (bs 2.5+ AND chg 50%+)
+            # Hard blacklist - NEVER re-enter these tickers
+            if sym in TICKER_BLACKLIST:
+                continue
+            
+            # Block re-entry on any recently closed token
+            # UNLESS token shows STRONG renewed momentum (bs 3.0+ AND chg 60%+)
             recently_closed = None
             for t in existing:
                 if t.get('token_address') == addr and t.get('exit_reason') in ['STOP_AUTO', 'MANUAL_CLOSE', 'TP2', 'TP1_AUTO']:
@@ -111,15 +123,14 @@ def check_and_buy():
                         try:
                             closed_ts = dt.fromisoformat(closed.replace('Z', '+00:00'))
                             age_minutes = (dt.utcnow() - closed_ts.replace(tzinfo=None)).total_seconds() / 60
-                            if age_minutes < 15:
+                            if age_minutes < REENTRY_LOCKOUT_MINUTES:
                                 recently_closed = t
                                 break
                         except:
                             pass
             
             if recently_closed:
-                # Only allow re-entry if strong momentum signal
-                if not (bs >= 2.5 and chg >= 50):
+                if not (bs >= REENTRY_BS_THRESHOLD and chg >= REENTRY_CHG_THRESHOLD):
                     continue
             
             balance = 1.0 + sum(t.get('pnl_sol', 0) for t in existing)
