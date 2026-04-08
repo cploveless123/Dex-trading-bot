@@ -8,3 +8,4 @@ Traceback (most recent call last):
     from trading_constants import EXIT_PLAN_TEXT, TP1_SELL_PCT, POSITION_SIZE
 ImportError: cannot import name 'POSITION_SIZE' from 'trading_constants' (/root/Dex-trading-bot/trading_constants.py)
 📱 Alert sender started
+📱 Alert sender started
