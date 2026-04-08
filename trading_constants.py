@@ -11,7 +11,7 @@ TP1_SELL_PCT = 74         # % of position to sell at TP1 (recovers initial inves
 TP2_PERCENT = 45          # Trailing stop trigger (% above TP1 peak)
 TP2_SELL_PCT = 100        # Sell remaining % at trailing stop
 STOP_LOSS_PERCENT = -30   # Stop loss percentage
-TRAILING_STOP_PCT = 20   # % drop from peak to trigger trailing stop on remaining position
+TRAILING_STOP_PCT = 30   # % drop from peak to trigger trailing stop on remaining position
 
 # Position
 POSITION_SIZE_SOL = 0.05  # SOL per trade
