@@ -298,34 +298,83 @@
       },
       "tags": [],
       "created_tokens": 525
+    },
+    {
+      "wallet": "8iKJ2xKycqwF7Gn7VEUKCzxSBURmrDUyLxZnx8hzjoni",
+      "analyzed_at": "2026-04-08T20:00:05.998572",
+      "native_balance": 326.049834688,
+      "realized_profit": 6823.391513239937,
+      "buy_count": 15,
+      "sell_count": 5,
+      "unique_tokens": 3,
+      "winrate": 0.49746192893401014,
+      "avg_hold_hours": 0.10375493513818387,
+      "total_cost": 952.41416603937,
+      "mcap_buckets": {
+        "<$10K": {
+          "wins": 0,
+          "losses": 20,
+          "buys": 20,
+          "total_cost": 952.41416603937
+        }
+      },
+      "most_traded": [
+        [
+          "Speedrun",
+          16,
+          13,
+          3
+        ],
+        [
+          "LEBANON",
+          2,
+          1,
+          1
+        ],
+        [
+          "barcoin",
+          2,
+          1,
+          1
+        ]
+      ],
+      "pnl_distribution": {
+        "<-50%": 2,
+        "-50% to 0%": 97,
+        "0% to 100%": 93,
+        "100% to 500%": 5,
+        ">500%": 0
+      },
+      "tags": [],
+      "created_tokens": 0
     }
   ],
   "synthesis": {
-    "synthesized_at": "2026-04-08T19:57:11.715586",
-    "whales_analyzed": 5,
-    "avg_winrate": 0.46742816593436165,
-    "avg_hold_hours": 15.511776715929154,
+    "synthesized_at": "2026-04-08T20:00:05.999236",
+    "whales_analyzed": 6,
+    "avg_winrate": 0.4724337931009697,
+    "avg_hold_hours": 12.943773085797325,
     "mcap_preference": {
       "<$10K": {
-        "buys": 100,
+        "buys": 120,
         "winrate": 0.0,
         "wins": 0,
-        "losses": 100
+        "losses": 120
       }
     },
     "best_mcap_range": [
       "<$10K"
     ],
     "pnl_distribution": {
-      "<-50%": 29,
-      "-50% to 0%": 696,
-      "0% to 100%": 604,
-      "100% to 500%": 16,
+      "<-50%": 31,
+      "-50% to 0%": 793,
+      "0% to 100%": 697,
+      "100% to 500%": 21,
       ">500%": 2
     },
     "trading_styles": {
       "momentum": 1,
-      "fast_cycle": 1,
+      "fast_cycle": 2,
       "high_wr": 3
     },
     "common_tokens": [
