@@ -35,3 +35,5 @@ EXIT_PLAN_TEXT = f"""🎯 Exit Plan:
 
 def get_exit_plan():
     return EXIT_PLAN_TEXT
+
+SIM_RESET_TIMESTAMP = '2026-04-08T04:34:00'  # Only count PnL from trades after this time

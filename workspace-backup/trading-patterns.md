@@ -1,39 +1,53 @@
-# Trading Pattern Learnings
+# Trading Patterns Learned — 2026-04-08
 
-## Today's Data (Apr 6, 2026)
+## Win/Loss Analysis (110 trades, 18% WR)
 
-### Signal Analysis (127 signals scanned)
-| Token | Mcap | Vol 24h | Change | DEX | Signals | Triggered? |
-|-------|------|---------|--------|-----|---------|------------|
-| TRAP | $2.8M | $65k | +190466% | meteora | STRONG_BUY_PRESSURE + RAPID_MOVE + BUY_MOMENTUM | No |
-| Time | $358k | $1051k | +959% | pumpswap | RAPID_MOVE | No |
-| 돼지 | $140k | $329k | +258% | pumpswap | RAPID_MOVE + BUY_MOMENTUM | No |
-| STONKS9800 | $17k | $45k | +606% | pumpfun | BUY_MOMENTUM | No |
-| 714 | $26M | $575k | +26% | pancakeswap | HIGH_VOLUME_PUMP + STRONG_BUY_PRESSURE | YES → +0.032 SOL |
+### WINNERS (20 trades, avg +0.0539 SOL)
+- Entry reason: MOMENTUM signal only
+- Entry mcap range: $5,206 - $52,976 (avg $17,522)
+- Best performers: STREAMER (+0.10), POW (+0.048), BABEPSTEIN (+0.077 partial)
 
-### Filters Applied (why many rejected)
-- Min mcap: $10k (CTRUMP $17k didn't trigger)
-- Min volume: $10k
-- Must be Solana (714 is BSC, but still bought)
-- Liquidity requirement
+### LOSERS (90 trades, avg -0.024 SOL)
+- Entry reason: MOMENTUM signal (same as winners!)
+- Entry mcap range: $4,589 - $78,861 (avg $18,394)
+- 65 stop losses | 22 manual closes
 
-### Key Patterns
-1. **Very conservative filtering** - 127 signals → 1 trade (0.8% trigger rate)
-2. **Repeated tokens** = 돼지 appeared 4x, 714 appeared 3x - shows momentum
-3. **Best signal combo:** STRONG_BUY_PRESSURE + RAPID_MOVE + BUY_MOMENTUM (TRAP had all 3 but filtered)
-4. **DEX preference:** pumpswap > pumpfun > meteora > pancakeswap
+### CRITICAL PROBLEM: TP2 never fires
+- TP2 threshold is +95% — TOO HIGH
+- Only 3 trades ever reached TP2 in 110 trades
+- Winners avg +54% but we only capture +35% (TP1 sell 70%)
+- TP1 sells 70% too early — leaving too much on table
 
-### Trade Result
-- **714** (BSC): Bought 0.1 SOL @ 0.0001, exited TIME_EXIT at TP1
-- **PnL:** +0.032 SOL (+32%)
-- **TP1 contribution:** +0.0286 SOL (89% of total gain)
-- **Time in trade:** ~2 hours
+## Signal Sources
+| Source | WR | PnL |
+|--------|-----|-----|
+| live_scan | 25% | +0.10 |
+| manual_scan | 50% | +0.10 |
+| auto_scanner | 25% | -0.04 |
+| auto_scanner_v2 | 16% | -0.56 |
+| combined_monitor_live_verify | 0% | -0.03 |
 
-### Missing Data
-- No GMGN signals received yet (just connected)
-- No loss examples to learn from
-- No SL triggers observed
+## What Makes a Winner vs Loser
+Both have same: entry mcap range, MOMENTUM signal, similar liquidity
+**The difference is not in entry — it's timing and luck**
 
----
+## GMGN Channel Signals (450+ captured)
+- PUMP signals: 29/50 recent
+- KOTH: 6/50
+- KOL_BUY: 3/50
+- Liquidity: $1.5K - $83B (very wide)
+- Holders: 3 - 2718 (very wide)
 
-*Updated: 2026-04-06 14:53 UTC*
+## Pattern Recommendations
+1. **Lower TP2 threshold** — +95% is too high. Consider +60% or +70%
+2. **Re-entry lockout works** — NODES problem fixed
+3. **GMGN signals are noisy** — most don't translate to trades
+4. **Scanner needs better filtering** — both winners and losers use MOMENTUM
+5. **Consider trailing stop** — instead of fixed TP2
+
+## What I'm Learning From GMGN Channels
+- Most signals are early-stage pumps (PUMP type)
+- LP burn signals (@sollpburnt) indicate token maturity
+- New pool signals (@solnewlp) catch launches early
+- Degen calls are high risk but can be explosive
+- Need to correlate GMGN signals with on-chain data (liquidity, holders)

@@ -6,16 +6,18 @@ from datetime import datetime
 from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from trading_constants import POSITION_SIZE, TP1_SELL_PCT, EXIT_PLAN_TEXT
+from trading_constants import POSITION_SIZE, TP1_SELL_PCT, EXIT_PLAN_TEXT, SIM_RESET_TIMESTAMP
 
 TRADES_FILE = Path(__file__).parent.parent / "trades" / "sim_trades.jsonl"
 
 with open(TRADES_FILE) as f:
     trades = [json.loads(l) for l in f]
 
-closed_all = [t for t in trades if t.get('status') == 'closed' or t.get('closed') == True]
-open_full = [t for t in trades if t.get('status') == 'open']
-open_partial = [t for t in trades if t.get('status') == 'open_partial']
+reset_ts = SIM_RESET_TIMESTAMP
+reset_trades = [t for t in trades if t.get('opened_at', '') > reset_ts]
+closed_all = [t for t in reset_trades if t.get('status') == 'closed' or t.get('closed') == True]
+open_full = [t for t in reset_trades if t.get('status') == 'open']
+open_partial = [t for t in reset_trades if t.get('status') == 'open_partial']
 open_pos = open_full + open_partial
 
 closed_pnl = sum(t.get('pnl_sol', 0) for t in closed_all)

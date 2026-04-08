@@ -1,4 +1,4 @@
-from trading_constants import TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT, STOP_LOSS_PERCENT, EXIT_PLAN_TEXT
+from trading_constants import TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT, STOP_LOSS_PERCENT, EXIT_PLAN_TEXT, SIM_RESET_TIMESTAMP
 
 # Trailing stop config for remaining position after TP1
 TRAILING_STOP_PCT = 20  # % drop from peak to trigger exit of remaining 30%
@@ -68,12 +68,16 @@ def check_positions():
         
         change = ((mcap - entry) / entry) * 100
         
-        # Get current balance
+        # Get current balance - only count PnL from trades opened after wallet reset
         with open(TRADES_FILE) as f_trades:
             all_trades = [json.loads(l) for l in f_trades]
-        closed_pnl = sum(tr.get('pnl_sol', 0) for tr in all_trades if tr.get('status') == 'closed')
-        open_count = len([tr for tr in all_trades if tr.get('status') in ['open', 'open_partial']])
-        locked = open_count * POSITION_SIZE
+        reset_ts = SIM_RESET_TIMESTAMP
+        # Only trades opened after reset count toward PnL
+        reset_trades = [tr for tr in all_trades if tr.get('opened_at', '') > reset_ts]
+        closed_pnl = sum(tr.get('pnl_sol', 0) for tr in reset_trades if tr.get('status') == 'closed')
+        open_full = len([tr for tr in reset_trades if tr.get('status') == 'open'])
+        open_partial = len([tr for tr in reset_trades if tr.get('status') == 'open_partial'])
+        locked = open_full * POSITION_SIZE + open_partial * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100)
         balance = 1.0 + closed_pnl - locked
         
         # TP1: +25% → sell 75%

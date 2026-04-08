@@ -92,8 +92,8 @@ def check_and_buy():
             if v < MIN_VOLUME:
                 continue
             
-            # 5min volume: $2K+ (recent activity)
-            if v5 < MIN_5MIN_VOLUME:
+            # 5min volume: $2K+ if available (API may not always have this)
+            if v5 > 0 and v5 < MIN_5MIN_VOLUME:
                 continue
             
             # Buy/sell ratio 1.5+ (winners had momentum)

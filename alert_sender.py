@@ -1,4 +1,4 @@
-from trading_constants import EXIT_PLAN_TEXT, TP1_SELL_PCT, POSITION_SIZE
+from trading_constants import EXIT_PLAN_TEXT, TP1_SELL_PCT, POSITION_SIZE, SIM_RESET_TIMESTAMP
 
 #!/usr/bin/env python3
 """
@@ -36,14 +36,15 @@ def format_trade_alert(trade):
     pnl_pct = (trade.get('net_pct', 0) or trade.get('pnl_pct', 0)) * 100
     exit_r = trade.get('exit_reason', 'OPEN')
     
-    # Calculate wallet balance correctly
+    # Calculate wallet balance correctly - only count PnL from after reset
     with open(TRADES_FILE) as f:
         all_trades = [json.loads(l) for l in f]
-    # Treat old trades (status=None) as closed
-    closed_pnl = sum(t.get('pnl_sol', 0) for t in all_trades if t.get('status') in ['closed', 'open_partial', None])
+    reset_ts = SIM_RESET_TIMESTAMP
+    reset_trades = [t for t in all_trades if t.get('opened_at', '') > reset_ts]
+    closed_pnl = sum(t.get('pnl_sol', 0) for t in reset_trades if t.get('status') == 'closed')
     # Full open positions: 0.05 locked each
     open_full = len([t for t in all_trades if t.get('status') == 'open'])
-    # Partial exits: 0.0125 locked (25% still at risk)
+    # Partial exits: remaining % locked (~26% with current TP1_SELL_PCT)
     open_partial = len([t for t in all_trades if t.get('status') == 'open_partial'])
     locked = open_full * POSITION_SIZE + open_partial * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100)
     balance = 1.0 + closed_pnl - locked
@@ -215,7 +216,7 @@ def get_status():
     closed_pnl = sum(t.get('pnl_sol', 0) for t in lines if t.get('status') in ['closed', 'open_partial', None])
     # Full open positions: 0.05 locked each
     open_full = len([t for t in lines if t.get('status') == 'open'])
-    # Partial exits: 0.0125 locked (25% still at risk)
+    # Partial exits: remaining % locked (~26% with current TP1_SELL_PCT)
     open_partial = len([t for t in lines if t.get('status') == 'open_partial'])
     locked = open_full * POSITION_SIZE + open_partial * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100)
     balance = 1.0 + closed_pnl - locked
