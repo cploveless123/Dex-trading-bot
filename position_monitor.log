@@ -15,3 +15,48 @@
 📋 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 ⏰ Checking every 5s
 [STARTUP] ✅ Alert sent
+💓 [21:47:28] Monitor alive | 13 checks done | 0 open positions | Next check in 5s
+💓 [21:48:28] Monitor alive | 25 checks done | 0 open positions | Next check in 5s
+  ZACH: mcap=$17,745 | gain=+0.0% | peak=$17,745 | dd=+0%
+  ZACH: mcap=$17,745 | gain=+0.0% | peak=$17,745 | dd=+0%
+  ZACH: mcap=$17,745 | gain=+0.0% | peak=$17,745 | dd=+0%
+  ZACH: mcap=$18,911 | gain=+6.6% | peak=$18,911 | dd=+0%
+  ZACH: mcap=$18,911 | gain=+6.6% | peak=$18,911 | dd=+0%
+  ZACH: mcap=$18,911 | gain=+6.6% | peak=$18,911 | dd=+0%
+  ZACH: mcap=$18,911 | gain=+6.6% | peak=$18,911 | dd=+0%
+  ZACH: mcap=$18,911 | gain=+6.6% | peak=$18,911 | dd=+0%
+  ZACH: mcap=$18,911 | gain=+6.6% | peak=$18,911 | dd=+0%
+  ZACH: mcap=$21,101 | gain=+18.9% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$21,101 | gain=+18.9% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$21,101 | gain=+18.9% | peak=$21,101 | dd=+0%
+💓 [21:49:29] Monitor alive | 37 checks done | 1 open positions | Next check in 5s
+  ZACH: mcap=$21,101 | gain=+18.9% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$21,101 | gain=+18.9% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$21,101 | gain=+18.9% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$19,923 | gain=+12.3% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$19,923 | gain=+12.3% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$19,923 | gain=+12.3% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$19,923 | gain=+12.3% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$19,923 | gain=+12.3% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$19,923 | gain=+12.3% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$20,281 | gain=+14.3% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$20,281 | gain=+14.3% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$20,281 | gain=+14.3% | peak=$21,101 | dd=+0%
+💓 [21:50:30] Monitor alive | 49 checks done | 1 open positions | Next check in 5s
+  ZACH: mcap=$20,281 | gain=+14.3% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$20,281 | gain=+14.3% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$20,281 | gain=+14.3% | peak=$21,101 | dd=+0%
+  ZACH: mcap=$21,766 | gain=+22.7% | peak=$21,766 | dd=+0%
+  ZACH: mcap=$21,766 | gain=+22.7% | peak=$21,766 | dd=+0%
+  ZACH: mcap=$21,766 | gain=+22.7% | peak=$21,766 | dd=+0%
+  ZACH: mcap=$21,766 | gain=+22.7% | peak=$21,766 | dd=+0%
+  ZACH: mcap=$21,766 | gain=+22.7% | peak=$21,766 | dd=+0%
+  ZACH: mcap=$21,883 | gain=+23.3% | peak=$21,883 | dd=+0%
+  ZACH: mcap=$21,883 | gain=+23.3% | peak=$21,883 | dd=+0%
+  ZACH: mcap=$21,883 | gain=+23.3% | peak=$21,883 | dd=+0%
+  ZACH: mcap=$21,883 | gain=+23.3% | peak=$21,883 | dd=+0%
+💓 [21:51:31] Monitor alive | 61 checks done | 1 open positions | Next check in 5s
+  ZACH: mcap=$21,883 | gain=+23.3% | peak=$21,883 | dd=+0%
+  ZACH: mcap=$21,883 | gain=+23.3% | peak=$21,883 | dd=+0%
+  ZACH: mcap=$19,990 | gain=+12.7% | peak=$21,883 | dd=+0%
+  ZACH: mcap=$19,990 | gain=+12.7% | peak=$21,883 | dd=+0%
