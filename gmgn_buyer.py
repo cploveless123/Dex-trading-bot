@@ -14,6 +14,7 @@ from trading_constants import (
     REENTRY_BS_THRESHOLD, REENTRY_CHG_THRESHOLD
 )
 import gmgn_signal_scorer
+import send_alert
 
 TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
 SIGNALS_DIR = Path("/root/Dex-trading-bot/signals")
