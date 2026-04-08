@@ -121,7 +121,9 @@ def check_positions():
             msg = f"""🏆 TP1 HIT | {datetime.utcnow().strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
 💰 {sym}
-📊 +{REAL_TP1_PCT:.1f}% (+{t['pnl_sol']:.4f} SOL sold)
+📍 Entry MC: ${int(entry):,}
+💵 Sold @ MC: ${int(mcap):,}
+📊 +{REAL_TP1_PCT:.1f}% (+{t['pnl_sol']:.4f} SOL)
 
 💵 Sold {TP1_SELL_PCT}% of position @ mcap ${mcap:,.0f}
 💰 Remaining 26% riding with trailing stop
@@ -165,7 +167,8 @@ def check_positions():
                 msg = f"""🛑 TRAILING STOP | {datetime.utcnow().strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
 💰 {sym}
-📊 Remaining sold @ {remaining_pct:.1f}% (from entry)
+📍 Entry MC: ${int(entry):,}
+📊 Exit MC: ${int(mcap):,} ({remaining_pct:.1f}% from entry)
 💰 Total PnL: {t['pnl_sol']:.4f} SOL
 
 🔗 https://dexscreener.com/solana/{ca}
