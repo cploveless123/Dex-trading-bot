@@ -35,9 +35,8 @@ lines.append(f"💰 Balance: {balance:.4f} SOL | {wins}W/{losses}L")
 lines.append(f"📋 Open: {len(open_pos)} | Locked: {locked:.4f} SOL")
 lines.append(f"")
 lines.append(f"🎯 EXIT PLAN:")
-lines.append(f"+35% → Sell initial investment")
-lines.append(f"📊 Trailing stop: 20% from peak")
-lines.append(f"⚠️ Stop: -25%")
+for line in EXIT_PLAN_TEXT.split('\n'):
+    lines.append(line)
 lines.append(f"")
 
 if open_pos:
