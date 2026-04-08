@@ -18,6 +18,8 @@ CHANNELS = [
     '@gmgn_trading',   # Solana Trading
     '@pump_sol_alert', # Portal for Pump Alert Channel - GMGN
     '@solnewlp',       # Portal for Solana New Pool Channel - GMGN
+    '@sollpburnt',     # Portal for Sol LP Burn - GMGN
+    '@gmgn_degencalls', # 💎Portal for Degen Calls - GMGN
 ]
 SIGNALS_DIR = Path("/root/Dex-trading-bot/signals")
 JOURNAL_FILE = Path("/root/Dex-trading-bot/trades/learning_journal.jsonl")

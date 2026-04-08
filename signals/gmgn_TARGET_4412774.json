@@ -1,0 +1,17 @@
+{
+  "source": "gmgn",
+  "raw": "**\ud83d\udc51 Pump King of the hill (KOTH)**\n\n**$TARGET**(TARGET)\n`4bmCnrrYMWPqfVsSjG3CodLjqP5E4hGfvu14xdnhpump`\n\n\ud83d\udcc8 5m | 1h | 6h: **410.2%** | **410.2%** | **410.2%**\n\ud83c\udfb2 5m TXs/Vol: **77**/**$6.2K**\n\ud83d\udca1 MCP: **$18K**\n\ud83d\udca7 Liq: **52.31** **SOL** ($13.9K \ud83d\udd25100%)\n\ud83d\udc65 Holder: **41**\n\ud83d\udd52 Open: **33s** **ago**\n\n\u2705 NoMint / \u2705Blacklist / \u2705Burnt\n\u274cTOP 10: **52.26%**\n\n\u23f3 DEV: [HOLD](https://gmgn.ai/sol/address/)\n\ud83d\udc68\u200d\ud83c\udf73 DEV Burnt\u70e7\u5e01: **0(\ud83d\udd25Rate: %)**\n\nBackup BOT: [US](https://t.me/US_GMGNBOT?start=4bmCnrrYMWPqfVsSjG3CodLjqP5E4hGfvu14xdnhpump) | [01](https://t.me/GMGN_sol_bot?start=4bmCnrrYMWPqfVsSjG3CodLjqP5E4hGfvu14xdnhpump) | [02](https://t.me/GMGN_sol02_bot?start=4bmCnrrYMWPqfVsSjG3CodLjqP5E4hGfvu14xdnhpump) | [03](https://t.me/GMGN_sol03_bot?start=4bmCnrrYMWPqfVsSjG3CodLjqP5E4hGfvu14xdnhpump) | [04](https://t.me/GMGN_sol04_bot?start=4bmCnrrYMWPqfVsSjG3CodLjqP5E4hGfvu14xdnhpump)\n\n\ud83d\ude80 **TIP:** Fast **SOL/Base/ETH** charts with GMGN.ai",
+  "parsed_at": "2026-04-08T03:44:04.097524",
+  "token_address": "4bmCnrrYMWPqfVsSjG3CodLjqP5E4hGfvu14xdnhpump",
+  "dexscreener_link": "https://dexscreener.com/solana/4bmCnrrYMWPqfVsSjG3CodLjqP5E4hGfvu14xdnhpump",
+  "symbol": "TARGET",
+  "action": "PUMP",
+  "liquidity": 6200.0,
+  "no_mint": true,
+  "no_blacklist": true,
+  "lp_burnt": true,
+  "top_10_pct": 52.26,
+  "holders": 41,
+  "age_seconds": 33,
+  "source_channel": "GMGN Featured Signals(Lv2) - SOL"
+}
