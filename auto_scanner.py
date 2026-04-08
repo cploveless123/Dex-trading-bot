@@ -11,10 +11,10 @@ BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
 TRADES_FILE = "/root/Dex-trading-bot/trades/sim_trades.jsonl"
 
-# STRICTER criteria based on 110-trade pattern analysis
-# Mcap $5K-$100K, 24h vol $15K+, 5min vol $2K+, bs 1.5, holders 15+
-MIN_MCAP = 5000        # floor
-MAX_MCAP = 100000      # ceiling
+# STRICTER criteria based on 173-trade pattern analysis
+# Mcap $15K-$75K (data-driven sweet spot), 24h vol $10K+, 5min vol $1K+, bs 1.5, holders 15+
+MIN_MCAP = 15000       # floor (raised from $4K to avoid micro-cap rugs)
+MAX_MCAP = 75000       # ceiling (lowered from $150K - >$75K = 86% loss rate)
 MIN_VOLUME = 10000     # 24h volume minimum
 MIN_5MIN_VOLUME = 1000 # 5min volume minimum (recent activity)
 MIN_BS_RATIO = 1.5    # buy/sell ratio - winners have momentum
