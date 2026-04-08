@@ -6,7 +6,7 @@ Run continuously in background alongside scanner
 import requests, json
 from datetime import datetime
 import time
-from trading_constants import TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT, STOP_LOSS_PERCENT, TRAILING_STOP_PCT, EXIT_PLAN_TEXT, SIM_RESET_TIMESTAMP
+from trading_constants import REAL_TP1_PCT, TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT, STOP_LOSS_PERCENT, TRAILING_STOP_PCT, EXIT_PLAN_TEXT, SIM_RESET_TIMESTAMP
 
 BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
@@ -97,7 +97,7 @@ def check_positions():
 💰 {sym}
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
-🟢 Sold {TP1_SELL_PCT}% (initial investment): +{tp1_pnl:.4f} SOL (+{TP1_PERCENT}%)
+🟢 Sold {TP1_SELL_PCT}% (initial investment): +{tp1_pnl:.4f} SOL (+{TP1_PERCENT}% nominal)
 💰 Wallet: {balance:.4f} SOL (~{100-TP1_SELL_PCT}% still in trade)
 
 🔗 https://dexscreener.com/solana/{tok}

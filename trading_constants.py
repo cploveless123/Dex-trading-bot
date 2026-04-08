@@ -1,39 +1,61 @@
+#!/usr/bin/env python3
 """
-Trading Constants - SINGLE SOURCE OF TRUTH
-All trading rules, exit plans, and configuration defined here.
-Do NOT hardcode these values elsewhere - import from this file.
+Trading Constants - Shared configuration for all trading scripts
 """
-from pathlib import Path
+
+# Position sizing
+POSITION_SIZE = 0.05      # SOL per trade
+MIN_MCAP = 4000           # Minimum market cap ($)
+MAX_MCAP = 100000         # Maximum market cap ($)
+MIN_VOLUME = 5000         # Minimum 24h volume ($)
+MIN_5MIN_VOLUME = 1000    # Minimum 5min volume ($)
+MIN_BS_RATIO = 1.5        # Minimum buy/sell ratio
+MIN_HOLDERS = 15           # Minimum holder count
+
+# GMGN Scoring
+MIN_GMGN_SCORE = 50       # Minimum GMGN API score to buy
+
+# Entry criteria
+MIN_ENTRY_MCAP = 3000     # Absolute minimum entry mcap ($)
+PUMP_FUN_ONLY = True      # Only trade pump.fun tokens
 
 # Exit Plan
+# TP1: sell % of position to recoup initial investment
+# Remaining % trails with trailing stop
 TP1_PERCENT = 45          # First take profit level (%)
 TP1_SELL_PCT = 74         # % of position to sell at TP1 (recovers initial investment)
 TP2_PERCENT = 45          # Trailing stop trigger (% above TP1 peak)
 TP2_SELL_PCT = 100        # Sell remaining % at trailing stop
 STOP_LOSS_PERCENT = -30   # Stop loss percentage
-TRAILING_STOP_PCT = 30   # % drop from peak to trigger trailing stop on remaining position
+TRAILING_STOP_PCT = 30    # % drop from peak to trigger trailing stop on remaining position
 
-# Position
-POSITION_SIZE_SOL = 0.05  # SOL per trade
-POSITION_SIZE = POSITION_SIZE_SOL
+# Slippage & Tax Correction
+# Pump.fun: ~1% buy tax + ~1% sell tax + ~0.5% slippage = ~2.5% total cost per trade
+# Real TP1 = TP1_PERCENT - SLIPPAGE_TAX_COST (we capture less profit)
+# Real Stop = STOP_LOSS_PERCENT + SLIPPAGE_TAX_COST (stop exits ~2.5% worse)
+SLIPPAGE_TAX_COST = 0.025   # 2.5% effective cost per round trip (buy + sell)
 
-# Scanner Criteria
-MIN_MCAP = 4000           # Minimum market cap ($)
-MAX_MCAP = 100000         # Maximum market cap ($)
-MIN_VOLUME = 5000         # Minimum 24h volume ($)
-MIN_24H_CHANGE = 20       # Minimum 24h price change (%)
-
-# Files
-TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
-WALLETS_FILE = Path("/root/Dex-trading-bot/wallet_analysis/whale_wallets.jsonl")
-ALERTS_FILE = Path("/root/Dex-trading-bot/wallet_analysis/whale_activity.jsonl")
+# Real net exit percentages (after ~2.5% tax/slippage)
+REAL_TP1_PCT = round(TP1_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
+REAL_STOP_PCT = round(STOP_LOSS_PERCENT * (1 + SLIPPAGE_TAX_COST), 1)
 
 EXIT_PLAN_TEXT = f"""🎯 Exit Plan:
 +{TP1_PERCENT}% → Sell initial investment (~{TP1_SELL_PCT}% of position)
 📊 Trailing stop: sell remaining if {TRAILING_STOP_PCT}% drop from peak
-⚠️ Stop: {STOP_LOSS_PERCENT}%"""
+⚠️ Stop: {STOP_LOSS_PERCENT}% (net: {REAL_STOP_PCT}% after tax)"""
 
-def get_exit_plan():
-    return EXIT_PLAN_TEXT
+# Re-entry lockout after close
+REENTRY_LOCKOUT_MINUTES = 30  # Minutes to wait before re-entering after close
+REENTRY_BS_THRESHOLD = 3.0    # BS ratio needed to override lockout
+REENTRY_CHG_THRESHOLD = 60   # % change needed to override lockout
 
-SIM_RESET_TIMESTAMP = '2026-04-08T04:34:00'  # Only count PnL from trades after this time
+# Ticker blacklist - tokens that have chased too many times
+TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
+
+# GMGN Signal Settings
+GMGN_SCORE_THRESHOLD = 50     # Minimum GMGN score to act on signal
+GMGN_VOL_MCAP_MIN = 1.5       # Minimum vol/mcap ratio
+GMGN_VOL_MCAP_MAX = 8.0       # Maximum vol/mcap ratio (caution above this)
+
+# Simulation reset timestamp - all trades before this are from old session
+SIM_RESET_TIMESTAMP = '2026-04-08T04:34:00'
