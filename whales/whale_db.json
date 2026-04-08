@@ -347,19 +347,92 @@
       },
       "tags": [],
       "created_tokens": 0
+    },
+    {
+      "wallet": "Hn6vBWWySnxA8XjxRQDEmZEuH5QL7KqosnJGcLcUzFJ6",
+      "analyzed_at": "2026-04-08T20:00:56.393367",
+      "native_balance": 240.778389974,
+      "realized_profit": 4450.194951999789,
+      "buy_count": 10,
+      "sell_count": 10,
+      "unique_tokens": 7,
+      "winrate": 0.7391304347826086,
+      "avg_hold_hours": 263.1968518518518,
+      "total_cost": 3496.2141007583805,
+      "mcap_buckets": {
+        "<$10K": {
+          "wins": 0,
+          "losses": 20,
+          "buys": 20,
+          "total_cost": 3496.2141007583805
+        }
+      },
+      "most_traded": [
+        [
+          "CUM",
+          8,
+          4,
+          4
+        ],
+        [
+          "Oil",
+          3,
+          2,
+          1
+        ],
+        [
+          "MAPS",
+          2,
+          1,
+          1
+        ],
+        [
+          "BANG",
+          2,
+          1,
+          1
+        ],
+        [
+          "CB2",
+          2,
+          1,
+          1
+        ],
+        [
+          "LABLAB",
+          2,
+          1,
+          1
+        ],
+        [
+          "WUAP",
+          1,
+          0,
+          1
+        ]
+      ],
+      "pnl_distribution": {
+        "<-50%": 0,
+        "-50% to 0%": 6,
+        "0% to 100%": 24,
+        "100% to 500%": 0,
+        ">500%": 0
+      },
+      "tags": [],
+      "created_tokens": 39
     }
   ],
   "synthesis": {
-    "synthesized_at": "2026-04-08T20:00:05.999236",
-    "whales_analyzed": 6,
-    "avg_winrate": 0.4724337931009697,
-    "avg_hold_hours": 12.943773085797325,
+    "synthesized_at": "2026-04-08T20:00:56.394121",
+    "whales_analyzed": 7,
+    "avg_winrate": 0.5105333133412039,
+    "avg_hold_hours": 48.6942129095194,
     "mcap_preference": {
       "<$10K": {
-        "buys": 120,
+        "buys": 140,
         "winrate": 0.0,
         "wins": 0,
-        "losses": 120
+        "losses": 140
       }
     },
     "best_mcap_range": [
@@ -367,15 +440,15 @@
     ],
     "pnl_distribution": {
       "<-50%": 31,
-      "-50% to 0%": 793,
-      "0% to 100%": 697,
+      "-50% to 0%": 799,
+      "0% to 100%": 721,
       "100% to 500%": 21,
       ">500%": 2
     },
     "trading_styles": {
       "momentum": 1,
       "fast_cycle": 2,
-      "high_wr": 3
+      "high_wr": 4
     },
     "common_tokens": [
       "NEU",
