@@ -60,6 +60,8 @@ GMGN_VOL_MCAP_MAX = 15.0       # Maximum vol/mcap ratio (no upper limit - higher
 
 # Simulation reset timestamp - all trades before this are from old session
 SIM_RESET_TIMESTAMP = '2026-04-08T04:34:00'
+# Chris's actual SOL deposit to fund the SIM (for accurate balance tracking)
+CHRIS_STARTING_BALANCE = 0.5050
 
 # API Rate Limiting (prevents bans)
 DEXSCREENER_INTERVAL = 30    # Min seconds between DexScreener calls per CA
