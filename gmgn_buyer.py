@@ -8,11 +8,11 @@ from datetime import datetime
 from pathlib import Path
 from itertools import islice
 from trading_constants import (
-    MIN_MCAP, MAX_MCAP, MIN_VOLUME, MIN_5MIN_VOLUME,
-    MIN_BS_RATIO, MIN_HOLDERS, POSITION_SIZE,
-    TICKER_BLACKLIST, REENTRY_LOCKOUT_MINUTES,
-    REENTRY_BS_THRESHOLD, REENTRY_CHG_THRESHOLD
+    MIN_MCAP, MAX_MCAP, MIN_VOLUME, POSITION_SIZE
 )
+# Additional filters not in trading_constants yet
+MIN_BS_RATIO = 1.5
+MIN_HOLDERS = 15
 import gmgn_signal_scorer
 import send_alert
 
