@@ -1,8 +1,4 @@
-from trading_constants import TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT, STOP_LOSS_PERCENT, EXIT_PLAN_TEXT, SIM_RESET_TIMESTAMP
-
-# Trailing stop config for remaining position after TP1
-TRAILING_STOP_PCT = 20  # % drop from peak to trigger exit of remaining 30%
-STOP_FLOOR_PCT = 0      # stop can't go below entry (0% from entry = lock profit at TP1 level)
+from trading_constants import TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT, STOP_LOSS_PERCENT, TRAILING_STOP_PCT, EXIT_PLAN_TEXT, SIM_RESET_TIMESTAMP
 
 #!/usr/bin/env python3
 """
