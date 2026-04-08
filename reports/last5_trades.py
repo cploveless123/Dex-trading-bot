@@ -30,33 +30,27 @@ closed_all.sort(key=lambda x: x.get('closed_at', x.get('opened_at', '')), revers
 recent = closed_all[:5]
 
 # Build message in Chris-approved format
-msg = f"📊 TRADE REPORT | {datetime.utcnow().strftime('%H:%M UTC')}\n"
-msg += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-msg += f"💰 Balance: {balance:.4f} SOL\n"
-msg += f"📈 Record: {wins}W / {losses}L\n\n"
-msg += "━━━━━━━━ OPEN POSITIONS ━━━━━━━━\n\n"
+lines = []
+lines.append(f"📊 TRADE REPORT | {datetime.utcnow().strftime('%H:%M UTC')}")
+lines.append(f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+lines.append(f"")
+lines.append(f"💰 Balance: {balance:.4f} SOL")
+lines.append(f"📈 Record: {wins}W / {losses}L")
+lines.append(f"")
+lines.append(f"━━━━━━━━ OPEN POSITIONS ━━━━━━━━")
+lines.append(f"")
 
 for t in open_full + open_partial:
     sym = t.get('token', '?')
-    pair = t.get('pair_address', '')
+    ca = t.get('token_address', '')
     entry = t.get('entry_mcap', 0)
     partial = " (TP1 hit)" if t.get('status') == 'open_partial' else ""
-    try:
-        resp = requests.get(f"https://api.dexscreener.com/latest/dex/pairs/solana/{pair}", timeout=10)
-        data = resp.json()
-        p = data.get('pairs', [{}])[0] if data.get('pairs') else {}
-        mcap = p.get('fdv', 0) or 0
-        chg = ((mcap - entry) / entry * 100) if entry > 0 else 0
-        status = "🟢" if chg >= 0 else "🔴"
-    except:
-        status = "⚠️"
-        chg = 0
-        mcap = entry
-    msg += f"{status} {sym}{partial}\n"
-    msg += f"   Entry: ${entry:,} → Live: ${mcap:,.0f} ({chg:+.0f}%)\n"
-    msg += f"   https://dexscreener.com/solana/{pair}\n\n"
+    lines.append(f"• {sym}{partial} | Entry MC: ${entry:,}")
+    lines.append(f"  🔗 https://dexscreener.com/solana/{ca}")
+    lines.append(f"")
 
-msg += "━━━━━━━━ LAST 5 TRADES ━━━━━━━━\n\n"
+lines.append(f"━━━━━━━━ LAST 5 TRADES ━━━━━━━━")
+lines.append(f"")
 
 for t in recent:
     sym = t.get('token', '?')
@@ -74,10 +68,13 @@ for t in recent:
     closed_fmt = closed_at.split('T')[1][:8] if closed_at else ''
     pnl_str = f"+{pnl:.4f}" if pnl >= 0 else f"{pnl:.4f}"
     pnl_emoji = "🟢" if pnl >= 0 else "🔴"
-    msg += f"{pnl_emoji} {sym} | {pnl_str} SOL ({pnl_pct:+.0f}%)\n"
-    msg += f"   BUY: ${entry_m:,} @ {opened_fmt} | SELL: ${exit_m:,} @ {closed_fmt}\n"
-    msg += f"   Reason: {reason}\n"
-    msg += f"   https://dexscreener.com/solana/{pair}\n\n"
+    lines.append(f"{pnl_emoji} {sym} | {pnl_str} SOL ({pnl_pct:+.0f}%)")
+    lines.append(f"   BUY: ${entry_m:,} @ {opened_fmt} | SELL: ${exit_m:,} @ {closed_fmt}")
+    lines.append(f"   Reason: {reason}")
+    lines.append(f"   🔗 https://dexscreener.com/solana/{pair}")
+    lines.append(f"")
+
+msg = "\n".join(lines)
 
 resp = requests.post(
     "https://api.telegram.org/bot8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg/sendMessage",

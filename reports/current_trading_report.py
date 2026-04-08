@@ -43,9 +43,11 @@ if open_pos:
     lines.append(f"OPEN POSITIONS ({len(open_pos)}):")
     for t in open_pos:
         sym = t.get('token', '?')
+        ca = t.get('token_address', '')
         entry = t.get('entry_mcap', 0)
         partial = " (TP1 hit)" if t.get('status') == 'open_partial' else ""
-        lines.append(f"• {sym}{partial} @ ${entry:,}")
+        lines.append(f"• {sym}{partial} | Entry MC: ${entry:,}")
+        lines.append(f"  🔗 https://dexscreener.com/solana/{ca}")
     lines.append(f"")
 
 closed.sort(key=lambda x: x.get('closed_at', ''), reverse=True)

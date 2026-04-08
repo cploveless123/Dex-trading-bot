@@ -223,3 +223,41 @@ Error: name 'pair' is not defined
   Shiro: mcap=$114,268 | gain=+15.8% | peak=$128,599 | dd=+0%
   momiji: mcap=$13,763 | gain=-7.5% | peak=$19,630 | dd=+0%
   FAH: mcap=$25,326 | gain=+2.1% | peak=$30,220 | dd=+0%
+  PEACE: mcap=$4,153 | gain=-79.3% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$6,707 | gain=-15.1% | peak=$7,899 | dd=+0%
+  LOOP: mcap=$10,671 | gain=-59.5% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$112,244 | gain=+13.8% | peak=$128,599 | dd=+0%
+  momiji: mcap=$15,244 | gain=+2.5% | peak=$19,630 | dd=+0%
+  FAH: mcap=$27,686 | gain=+11.7% | peak=$30,220 | dd=+0%
+  PEACE: mcap=$3,745 | gain=-81.4% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$6,701 | gain=-15.2% | peak=$7,899 | dd=+0%
+  LOOP: mcap=$10,014 | gain=-62.0% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$116,075 | gain=+17.7% | peak=$128,599 | dd=+0%
+  momiji: mcap=$13,908 | gain=-6.5% | peak=$19,630 | dd=+0%
+  FAH: mcap=$24,496 | gain=-1.2% | peak=$30,220 | dd=+0%
+  PEACE: mcap=$3,009 | gain=-85.0% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$6,701 | gain=-15.2% | peak=$7,899 | dd=+0%
+  LOOP: mcap=$9,633 | gain=-63.4% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$118,850 | gain=+20.5% | peak=$128,599 | dd=+0%
+  momiji: mcap=$14,651 | gain=-1.5% | peak=$19,630 | dd=+0%
+  FAH: mcap=$28,610 | gain=+15.4% | peak=$30,220 | dd=+0%
+  PEACE: mcap=$3,085 | gain=-84.7% | peak=$20,103 | dd=+0%
+  BTCO: mcap=$6,453 | gain=-18.3% | peak=$7,899 | dd=+0%
+  LOOP: mcap=$8,436 | gain=-68.0% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$121,338 | gain=+23.0% | peak=$128,599 | dd=+0%
+  momiji: mcap=$13,483 | gain=-9.4% | peak=$19,630 | dd=+0%
+  FAH: mcap=$28,620 | gain=+15.4% | peak=$30,220 | dd=+0%
+  PEACE: mcap=$3,085 | gain=-84.7% | peak=$20,103 | dd=+0%
+[STOP_LOSS] ✅ Alert sent
+🔴 BTCO STOP LOSS @ $6,228
+  LOOP: mcap=$8,666 | gain=-67.1% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$119,487 | gain=+21.1% | peak=$128,599 | dd=+0%
+  momiji: mcap=$14,449 | gain=-2.9% | peak=$19,630 | dd=+0%
+  FAH: mcap=$28,401 | gain=+14.5% | peak=$30,220 | dd=+0%
+  NOTHING: mcap=$19,688 | gain=-9.4% | peak=$21,726 | dd=+0%
+  PEACE: mcap=$3,044 | gain=-84.9% | peak=$20,103 | dd=+0%
+  LOOP: mcap=$8,632 | gain=-67.2% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$107,797 | gain=+9.3% | peak=$128,599 | dd=+0%
+  momiji: mcap=$14,102 | gain=-5.2% | peak=$19,630 | dd=+0%
+  FAH: mcap=$31,665 | gain=+27.7% | peak=$31,665 | dd=+0%
+  NOTHING: mcap=$27,985 | gain=+28.8% | peak=$27,985 | dd=+0%
