@@ -113,8 +113,10 @@ def check_positions():
             # PnL: remaining 25% sold at 75% gain
             tp2_pnl = POSITION_SIZE * 0.25 * (TP2_PERCENT / 100)
             prev_pnl = t.get('pnl_sol', 0)
-            t['pnl_sol'] = round(tp2_pnl + prev_pnl, 6)
-            t['pnl_pct'] = TP2_PERCENT
+            total_pnl = round(tp2_pnl + prev_pnl, 6)
+            total_pct = round((total_pnl / POSITION_SIZE) * 100, 1)
+            t['pnl_sol'] = total_pnl
+            t['pnl_pct'] = total_pct
             t['status'] = 'closed'
             
             with open(TRADES_FILE, 'w') as f:
@@ -127,7 +129,7 @@ def check_positions():
 💰 {sym}
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
-🟢 P&L: +{t['pnl_sol']:.4f} SOL (+{TP2_PERCENT}%)
+🟢 Total P&L: +{total_pnl:.4f} SOL (+{total_pct}%)
 💰 Wallet: {balance:.4f} SOL
 📋 Reason: TP2_AUTO
 
