@@ -13,11 +13,11 @@ TRADES_DIR = Path("/root/Dex-trading-bot/trades")
 SIM_TRADES_FILE = TRADES_DIR / "sim_trades.jsonl"
 
 # Config
-POSITION_SIZE = 0.1
+POSITION_SIZE = 0.05  # Chris's actual position size
 INITIAL_BALANCE = 1.0
-TP1_PCT = 0.75
-TP2_PCT = 1.00  # Full exit
-STOP_LOSS = -0.30
+TP1_PCT = 0.25   # +25% → sell 75%
+TP2_PCT = 0.75   # +75% → sell 25%
+STOP_LOSS = -0.25  # -25% stop
 
 # Costs
 SLIPPAGE = 0.02  # 2% slippage
@@ -417,19 +417,21 @@ def check_positions():
         # Apply costs to the raw change
         net_change = change_pct - SLIPPAGE - TAX_FEE
         
-        # Check TP1
+        # Check TP1: +25% → sell 75%
         if net_change >= TP1_PCT and not pos.get('tp1_hit'):
             pos['tp1_hit'] = True
-            pnl = (POSITION_SIZE / 2) * net_change
-            for c in balances: balances[c] += (POSITION_SIZE / 2) + pnl
+            sold = POSITION_SIZE * 0.75
+            pnl = sold * net_change
+            for c in balances: balances[c] += sold + pnl
             pos['tp1_pnl'] = pnl
-            print(f"\n🎯 TP1 HIT! {pos['token']} at +{change_pct*100:.1f}% (net: +{net_change*100:.1f}%) — sold 50%")
+            print(f"\n🎯 TP1 HIT! {pos['token']} at +{change_pct*100:.1f}% (net: +{net_change*100:.1f}%) — sold 75%")
         
-        # Check TP2
+        # Check TP2: +75% → sell remaining 25%
         elif net_change >= TP2_PCT and not pos.get('tp2_hit'):
             pos['tp2_hit'] = True
-            pnl = (POSITION_SIZE / 2) * net_change
-            for c in balances: balances[c] += (POSITION_SIZE / 2) + pnl
+            sold = POSITION_SIZE * 0.25
+            pnl = sold * net_change
+            for c in balances: balances[c] += sold + pnl
             pos['closed'] = True
             pos['pnl_sol'] = pnl + pos.get('tp1_pnl', 0)
             pos['exit_reason'] = 'TP2'

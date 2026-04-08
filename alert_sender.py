@@ -77,9 +77,39 @@ def format_trade_alert(trade):
     
     return msg
 
+def format_tp1_alert(trade):
+    """Format TP1 partial exit alert"""
+    timestamp = datetime.utcnow().strftime("%H:%M UTC")
+    token = trade.get('token', '?')
+    token_addr = trade.get('token_address', '')
+    entry_mcap = int(trade.get('entry_mcap', 0))
+    tp1_pnl = trade.get('pnl_sol', 0)  # pnl_sol holds the TP1 profit
+    pnl_pct = trade.get('pnl_pct', 0)  # already in percent form
+    
+    with open(TRADES_FILE) as f:
+        all_trades = [json.loads(l) for l in f]
+    closed_pnl = sum(t.get('pnl_sol', 0) for t in all_trades if t.get('status') in ['closed', 'open_partial', None])
+    open_full = len([t for t in all_trades if t.get('status') == 'open'])
+    open_partial = len([t for t in all_trades if t.get('status') == 'open_partial'])
+    locked = open_full * 0.05 + open_partial * 0.0125
+    balance = 1.0 + closed_pnl - locked
+    
+    msg = f"""🎯 TP1 HIT (Partial Exit) | {timestamp}
+━━━━━━━━━━━━━━━
+💰 {token}
+📍 Entry MC: ${entry_mcap:,}
+🟢 Sold 50%: +{tp1_pnl:.4f} SOL ({pnl_pct:.1f}%)
+💰 Wallet: {balance:.4f} SOL (25% still in trade)
+
+🔗 https://dexscreener.com/solana/{token_addr}
+🥧 https://pump.fun/{token_addr}
+
+{EXIT_PLAN_TEXT}"""
+    return msg
+
 def send_telegram(text):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-    data = {"chat_id": CHAT_ID, "text": text, "parse_mode": "Markdown"}
+    data = {"chat_id": CHAT_ID, "text": text, "parse_mode": "HTML"}
     try:
         req = urllib.request.Request(url, data=urllib.parse.urlencode(data).encode())
         urllib.request.urlopen(req, timeout=10)
@@ -152,11 +182,18 @@ def check_new_trades():
         status = trade.get('status', '')
         
         # Only alert on NEW buys (action=BUY, status=open) or newly closed trades
+        # New buy opened
         if action == 'BUY' and status == 'open':
             # Mark as alerted by updating index
             LAST_TRADE_INDEX_FILE.write_text(str(i + 1))
             return format_trade_alert(trade)
         
+        # TP1 partial exit hit - send partial sell alert
+        if status == 'open_partial' and trade.get('exit_reason') == 'TP1_AUTO':
+            LAST_TRADE_INDEX_FILE.write_text(str(i + 1))
+            return format_tp1_alert(trade)
+        
+        # Trade fully closed (TP2 or stop loss)
         if status == 'closed' and trade.get('exit_reason'):
             # Mark as alerted by updating index
             LAST_TRADE_INDEX_FILE.write_text(str(i + 1))

@@ -1,4 +1,4 @@
-from trading_constants import TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT, STOP_LOSS_PERCENT
+from trading_constants import TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT, STOP_LOSS_PERCENT, EXIT_PLAN_TEXT
 
 #!/usr/bin/env python3
 """
@@ -12,6 +12,7 @@ import time
 BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
 TRADES_FILE = "/root/Dex-trading-bot/trades/sim_trades.jsonl"
+POSITION_SIZE = 0.05
 
 def get_live_mcap(pair_address):
     """Get current mcap for a pair"""
@@ -26,20 +27,16 @@ def get_live_mcap(pair_address):
         pass
     return None
 
-# Telegram alerts handled by alert_sender.py ONLY - no duplicate sending
 def send_alert(msg):
     """Send alert via Telegram"""
     import urllib.request, urllib.parse
-    BOT_TOKEN = "8187345922:AAGu4CpBnCvJp9OlEG4IdRlN-TAbnxrzT4U"
-    CHAT_ID = "6402511249"
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-    data = {"chat_id": CHAT_ID, "text": msg, "parse_mode": "Markdown"}
+    data = {"chat_id": CHAT_ID, "text": msg, "parse_mode": "HTML"}
     try:
         req = urllib.request.Request(url, data=urllib.parse.urlencode(data).encode())
-        with urllib.request.urlopen(req, timeout=10) as response:
-            pass
-    except Exception as e:
-        print(f"Alert error: {e}")
+        urllib.request.urlopen(req, timeout=10)
+    except:
+        pass
 
 def check_positions():
     """Check all open positions for TP/stop hits"""
@@ -70,133 +67,119 @@ def check_positions():
         # Get current balance
         with open(TRADES_FILE) as f_trades:
             all_trades = [json.loads(l) for l in f_trades]
-        closed_pnl = sum(t.get('pnl_sol', 0) for t in all_trades if t.get('status') == 'closed')
-        open_count = len([t for t in all_trades if t.get('status') in ['open', 'open_partial']])
-        locked = open_count * 0.05
+        closed_pnl = sum(tr.get('pnl_sol', 0) for tr in all_trades if tr.get('status') == 'closed')
+        open_count = len([tr for tr in all_trades if tr.get('status') in ['open', 'open_partial']])
+        locked = open_count * POSITION_SIZE
         balance = 1.0 + closed_pnl - locked
         
-        # Check TP1 (+25%) - sell 50%
-        if change >= 25 and not t.get('tp1_sold'):
+        # TP1: +25% → sell 75%
+        if change >= TP1_PERCENT and not t.get('tp1_sold'):
             t['tp1_sold'] = True
             t['partial_exit'] = True
-            t['status'] = 'open_partial'  # NOT closed - still have 50% position
+            t['status'] = 'open_partial'  # still have 25% in
             t['exit_reason'] = 'TP1_AUTO'
             t['closed_at'] = datetime.utcnow().isoformat()
-            t['pnl_sol'] = 0.025
-            t['pnl_pct'] = 25
+            # PnL: 75% of position sold at 25% gain
+            tp1_pnl = POSITION_SIZE * 0.75 * (TP1_PERCENT / 100)
+            t['pnl_sol'] = round(tp1_pnl, 6)
+            t['pnl_pct'] = TP1_PERCENT
             
-            # WRITE TO FILE FIRST before alert (prevents duplicate alerts)
             with open(TRADES_FILE, 'w') as f:
                 for tr in trades:
                     f.write(json.dumps(tr) + '\n')
             
             timestamp = datetime.utcnow().strftime("%H:%M UTC")
-            msg = f"""🔴 SELL EXECUTED (50%) | {timestamp}
+            msg = f"""🎯 TP1 HIT (Partial Exit) | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {sym}
-
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
-🟢 P&L: +0.0250 SOL (+25.0%)
-💰 Wallet: {balance:.4f} SOL
-📋 Reason: TP1_AUTO
+🟢 Sold 75%: +{tp1_pnl:.4f} SOL (+{TP1_PERCENT}%)
+💰 Wallet: {balance:.4f} SOL (25% still in trade)
 
 🔗 https://dexscreener.com/solana/{pair}
-🥧 https://pump.fun/{tok}"""
+🥧 https://pump.fun/{tok}
+
+{EXIT_PLAN_TEXT}"""
             send_alert(msg)
-            print(f"✅ {sym} TP1 AUTO: sold 50% at +{change:.0f}%")
+            print(f"✅ {sym} TP1 AUTO: sold 75% at +{change:.0f}%")
+            updated = True
         
-        # Check TP2 (+75%) - sell remaining 25%
-        elif change >= 100 and not t.get('tp2_sold'):
+        # TP2: +75% → sell remaining 25%
+        elif change >= TP2_PERCENT and not t.get('tp2_sold'):
             t['tp2_sold'] = True
             t['exit_reason'] = 'TP2_AUTO'
             t['closed_at'] = datetime.utcnow().isoformat()
-            t['pnl_sol'] = 0.05
-            t['pnl_pct'] = 100
+            # PnL: remaining 25% sold at 75% gain
+            tp2_pnl = POSITION_SIZE * 0.25 * (TP2_PERCENT / 100)
+            prev_pnl = t.get('pnl_sol', 0)
+            t['pnl_sol'] = round(tp2_pnl + prev_pnl, 6)
+            t['pnl_pct'] = TP2_PERCENT
             t['status'] = 'closed'
             
-            # WRITE TO FILE FIRST before alert (prevents duplicate alerts)
             with open(TRADES_FILE, 'w') as f:
                 for tr in trades:
                     f.write(json.dumps(tr) + '\n')
             
             timestamp = datetime.utcnow().strftime("%H:%M UTC")
-            msg = f"""🔴 SELL EXECUTED (remaining) | {timestamp}
+            msg = f"""🔴 SELL EXECUTED (FULL EXIT) | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {sym}
-
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
-🟢 P&L: +0.0125 SOL (+75.0%)
+🟢 P&L: +{t['pnl_sol']:.4f} SOL (+{TP2_PERCENT}%)
 💰 Wallet: {balance:.4f} SOL
-📋 Reason: TP2_AUTO (full exit)
+📋 Reason: TP2_AUTO
 
 🔗 https://dexscreener.com/solana/{pair}
 🥧 https://pump.fun/{tok}"""
             send_alert(msg)
             print(f"✅ {sym} TP2 AUTO: full exit at +{change:.0f}%")
-            t['closed_at'] = datetime.utcnow().isoformat()
-            t['pnl_sol'] = 0.10
-            t['pnl_pct'] = 500
-            t['status'] = 'closed'
             updated = True
-            
-            timestamp = datetime.utcnow().strftime("%H:%M UTC")
-            msg = f"""🔴 SELL EXECUTED (15%) | {timestamp}
-━━━━━━━━━━━━━━━
-💰 {sym}
-
-📍 Entry MC: ${entry:,}
-📍 Exit MC: ${int(mcap):,}
-🟢 P&L: +0.1000 SOL (+500.0%)
-💰 Wallet: {balance:.4f} SOL
-📋 Reason: TP3_AUTO
-
-🔗 https://dexscreener.com/solana/{pair}
-🥧 https://pump.fun/{tok}"""
-            send_alert(msg)
-            print(f"✅ {sym} TP3 AUTO: full exit at +{change:.0f}%")
         
-        # Check Stop Loss (-25%)
-        elif change <= -25 and not t.get('stopped'):
+        # Stop Loss: -25%
+        elif change <= STOP_LOSS_PERCENT and not t.get('stopped'):
             t['stopped'] = True
             t['status'] = 'closed'
             t['exit_reason'] = 'STOP_AUTO'
             t['closed_at'] = datetime.utcnow().isoformat()
-            t['pnl_sol'] = -0.025
-            t['pnl_pct'] = -25
+            stop_pnl = POSITION_SIZE * (abs(STOP_LOSS_PERCENT) / 100)
+            t['pnl_sol'] = round(-stop_pnl, 6)
+            t['pnl_pct'] = STOP_LOSS_PERCENT
             
-            # WRITE TO FILE FIRST before alert (prevents duplicate alerts)
             with open(TRADES_FILE, 'w') as f:
                 for tr in trades:
                     f.write(json.dumps(tr) + '\n')
             
             timestamp = datetime.utcnow().strftime("%H:%M UTC")
-            msg = f"""🔴 SELL EXECUTED | {timestamp}
+            msg = f"""🛑 STOP LOSS | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {sym}
-
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
-🔴 P&L: -0.0250 SOL (-25.0%)
+🔴 Loss: -{stop_pnl:.4f} SOL ({STOP_LOSS_PERCENT}%)
 💰 Wallet: {balance:.4f} SOL
 📋 Reason: STOP_AUTO
 
 🔗 https://dexscreener.com/solana/{pair}
 🥧 https://pump.fun/{tok}"""
             send_alert(msg)
-            print(f"🛑 {sym} STOP AUTO: closed at {change:.0f}%")
+            print(f"🛑 {sym} STOP LOSS at {change:.0f}%")
+            updated = True
     
     return updated
 
 def main():
-    print("📊 Position Monitor Started - Auto TP/Stop")
+    print(f"📊 Position Monitor starting...")
+    print(f"📋 Exit Plan: TP1 +{TP1_PERCENT}% (sell {TP1_SELL_PCT}%) | TP2 +{TP2_PERCENT}% (sell {TP2_SELL_PCT}%) | Stop {STOP_LOSS_PERCENT}%")
+    
     while True:
         try:
             check_positions()
         except Exception as e:
             print(f"Error: {e}")
-        time.sleep(15)  # Check every minute
+        
+        time.sleep(60)  # Check every 60 seconds
 
 if __name__ == "__main__":
     main()

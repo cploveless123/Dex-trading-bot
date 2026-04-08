@@ -88,7 +88,7 @@ def check_and_buy():
             if chg < 15:
                 continue
             
-            # Check if already have this token
+            # Check if already have this token (open or partial)
             with open(TRADES_FILE) as f:
                 existing = [json.loads(l) for l in f]
             
@@ -99,6 +99,28 @@ def check_and_buy():
             
             if already_have:
                 continue
+            
+            # Block re-entry on recently stopped tokens (within 30 min)
+            # UNLESS token shows strong renewed momentum (bs 2.5+ AND chg 50%+)
+            recent_stop = None
+            for t in existing:
+                if t.get('token_address') == addr and t.get('exit_reason') == 'STOP_AUTO':
+                    from datetime import datetime as dt
+                    closed = t.get('closed_at', '')
+                    if closed:
+                        try:
+                            closed_ts = dt.fromisoformat(closed.replace('Z', '+00:00'))
+                            age_minutes = (dt.utcnow() - closed_ts.replace(tzinfo=None)).total_seconds() / 60
+                            if age_minutes < 30:
+                                recent_stop = t
+                                break
+                        except:
+                            pass
+            
+            if recent_stop:
+                # Only allow re-entry if strong momentum signal
+                if not (bs >= 2.5 and chg >= 50):
+                    continue
             
             balance = 1.0 + sum(t.get('pnl_sol', 0) for t in existing)
             
