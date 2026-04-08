@@ -28,7 +28,7 @@ TP1_SELL_PCT = 74         # % of position to sell at TP1 (recovers initial inves
 TP2_PERCENT = 45          # (Unused - TP1 sells 74%, remaining 26% follows trailing stop)
 TP2_SELL_PCT = 100        # Sell remaining % at trailing stop
 STOP_LOSS_PERCENT = -20   # Stop loss percentage
-TRAILING_STOP_PCT = 15    # % drop from TP1 baseline to trigger trailing stop
+TRAILING_STOP_PCT = 30    # % drop from peak to trigger trailing stop on remaining position
 
 # Slippage & Tax Correction
 # Pump.fun: ~1% buy tax + ~1% sell tax + ~0.5% slippage = ~2.5% total cost per trade

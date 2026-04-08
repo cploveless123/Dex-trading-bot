@@ -515,3 +515,45 @@ Error: name 'pair' is not defined
   FAH: mcap=$3,906 | gain=-84.2% | peak=$24,797 | dd=+0%
   NOTHING: mcap=$2,338 | gain=-89.2% | peak=$21,726 | dd=+0%
   Badger: mcap=$23,024 | gain=+12.8% | peak=$23,024 | dd=+0%
+  PEACE: mcap=$2,998 | gain=-85.1% | peak=$20,103 | dd=+0%
+  MIKO: mcap=$1,847 | gain=-95.1% | peak=$37,670 | dd=+0%
+  LOOP: mcap=$5,160 | gain=-80.4% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$121,469 | gain=+23.1% | peak=$139,023 | dd=+0%
+  FAH: mcap=$4,209 | gain=-83.0% | peak=$24,797 | dd=+0%
+  NOTHING: mcap=$2,357 | gain=-89.2% | peak=$21,726 | dd=+0%
+  Badger: mcap=$18,150 | gain=-11.1% | peak=$23,024 | dd=+0%
+  PEACE: mcap=$2,998 | gain=-85.1% | peak=$20,103 | dd=+0%
+  MIKO: mcap=$1,847 | gain=-95.1% | peak=$37,670 | dd=+0%
+  LOOP: mcap=$5,237 | gain=-80.1% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$112,827 | gain=+14.4% | peak=$139,023 | dd=+0%
+  FAH: mcap=$4,210 | gain=-83.0% | peak=$24,797 | dd=+0%
+  NOTHING: mcap=$2,357 | gain=-89.2% | peak=$21,726 | dd=+0%
+  Badger: mcap=$21,680 | gain=+6.2% | peak=$23,024 | dd=+0%
+  PEACE: mcap=$3,034 | gain=-84.9% | peak=$20,103 | dd=+0%
+  MIKO: mcap=$1,847 | gain=-95.1% | peak=$37,670 | dd=+0%
+  LOOP: mcap=$5,498 | gain=-79.1% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$106,885 | gain=+8.4% | peak=$139,023 | dd=+0%
+  FAH: mcap=$4,295 | gain=-82.7% | peak=$24,797 | dd=+0%
+  NOTHING: mcap=$2,357 | gain=-89.2% | peak=$21,726 | dd=+0%
+  Badger: mcap=$20,913 | gain=+2.4% | peak=$23,024 | dd=+0%
+  PEACE: mcap=$3,034 | gain=-84.9% | peak=$20,103 | dd=+0%
+  MIKO: mcap=$1,858 | gain=-95.1% | peak=$37,670 | dd=+0%
+  LOOP: mcap=$5,513 | gain=-79.1% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$103,687 | gain=+5.1% | peak=$139,023 | dd=+0%
+  FAH: mcap=$4,280 | gain=-82.7% | peak=$24,797 | dd=+0%
+  NOTHING: mcap=$2,350 | gain=-89.2% | peak=$21,726 | dd=+0%
+  Badger: mcap=$20,185 | gain=-1.1% | peak=$23,024 | dd=+0%
+📊 Position Monitor v2 starting...
+📋 Exit Plan: TP1 +43.9% (sell 74%) | Trailing 30% drop | Stop -20%
+📋 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+⏰ Checking every 60s
+[STARTUP] ✅ Alert sent
+  PEACE: mcap=$3,034 | gain=-84.9% | peak=$20,103 | dd=+0%
+[TRAILING_STOP] ✅ Alert sent
+✅ Topless TRAILING STOP @ $2,590 (92% drop from peak $31,093)
+  MIKO: mcap=$1,859 | gain=-95.1% | peak=$37,670 | dd=+0%
+  LOOP: mcap=$5,513 | gain=-79.1% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$102,756 | gain=+4.2% | peak=$139,023 | dd=+0%
+  FAH: mcap=$4,280 | gain=-82.7% | peak=$24,797 | dd=+0%
+  NOTHING: mcap=$2,299 | gain=-89.4% | peak=$21,726 | dd=+0%
+  Badger: mcap=$18,721 | gain=-8.3% | peak=$23,024 | dd=+0%

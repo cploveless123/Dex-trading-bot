@@ -138,20 +138,16 @@ def check_positions():
         
         # === TRAILING STOP (remaining position after TP1) ===
         elif tp1_sold and not tp2_sold and not trailing_stopped:
-            # Use TP1 price as baseline (not peak) for tighter control
-            # This prevents pumpfun dumps from escaping our stop
-            baseline = cache['baseline']  # This is TP1 price after reset
-            
-            # Drawdown from TP1 baseline
-            if baseline > entry:
-                drawdown_pct = ((baseline - mcap) / baseline) * 100
+            # Measure drawdown from PEAK (highest mcap after TP1)
+            # This is the correct trailing stop: 30% drop from peak
+            if cache['peak_mcap'] > entry:
+                drawdown_pct = ((cache['peak_mcap'] - mcap) / cache['peak_mcap']) * 100
             else:
                 drawdown_pct = 0
             
-            # Hard stop: sell if price drops back to TP1 - 15% 
-            # (TP1 + 20% is our floor - we already made TP1 gains)
-            TRAIL_HARD_STOP = 15  # % below TP1 to trigger emergency exit
-            if drawdown_pct >= TRAIL_HARD_STOP:
+            TRAIL_STOP_THRESHOLD = 30  # % drop from peak to trigger trailing stop
+            
+            if drawdown_pct >= TRAIL_STOP_THRESHOLD:
                 t['trailing_stopped'] = True
                 t['tp2_sold'] = True
                 t['exit_reason'] = 'TRAILING_STOP'
@@ -175,9 +171,9 @@ def check_positions():
 🔗 https://dexscreener.com/solana/{ca}
 🥧 https://pump.fun/{ca}
 
-📋 Exit: Trailing stop ({TRAIL_HARD_STOP}% drop from TP1 baseline ${int(baseline):,})"""
+📋 Exit: Trailing stop ({TRAIL_STOP_THRESHOLD}% drop from peak ${int(cache['peak_mcap']):,})"""
                 send_alert(msg, "TRAILING_STOP")
-                print(f"✅ {sym} TRAILING STOP @ ${mcap:,.0f} ({drawdown_pct:.0f}% drop from TP1)")
+                print(f"✅ {sym} TRAILING STOP @ ${mcap:,.0f} ({drawdown_pct:.0f}% drop from peak ${int(cache['peak_mcap']):,})")
         
         # === STOP LOSS ===
         elif not tp1_sold and gains_pct <= STOP_LOSS_PERCENT:
