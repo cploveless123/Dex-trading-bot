@@ -297,7 +297,7 @@ def main():
         except Exception as e:
             print(f"Error: {e}")
         
-        time.sleep(60)  # Scan every 60 seconds
+        time.sleep(120)  # Scan every 60 seconds
 
 if __name__ == "__main__":
     main()
