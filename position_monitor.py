@@ -111,8 +111,11 @@ def check_positions():
             t['pnl_sol'] = POSITION_SIZE * TP1_SELL_PCT / 100 * (REAL_TP1_PCT / 100)
             t['pnl_pct'] = REAL_TP1_PCT
             # Reset baseline to TP1 price — trailing stop measures from here
+            # CRITICAL: Save immediately to disk so process restart won't lose this
             cache['baseline'] = mcap
             cache['peak_mcap'] = mcap
+            save_peak_cache(peak_cache)  # Save BEFORE exit to ensure persistence
+            print(f"  🔧 {sym} TP1 @ ${mcap:,.0f} — baseline reset to ${mcap:,.0f}, cache saved")
             updated = True
             
             msg = f"""🏆 TP1 HIT | {datetime.utcnow().strftime('%H:%M UTC')}
