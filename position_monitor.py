@@ -49,7 +49,7 @@ def save_peak_cache(cache):
 def get_mcap_from_dex(ca):
     """Fetch current mcap from DexScreener with rate limiting"""
     try:
-        r = requests.get(f"https://api.dexscreener.com/dex/tokens/{ca}", timeout=5, headers={"User-Agent": "Mozilla/5.0"})
+        r = requests.get(f"https://api.dexscreener.com/latest/dex/tokens/{ca}", timeout=5, headers={"User-Agent": "Mozilla/5.0"})
         if r.status_code == 200:
             data = r.json()
             if data.get('pairs'):
@@ -74,7 +74,7 @@ def count_open_positions():
 def check_positions():
     """Check all open positions for TP/stop triggers"""
     with open(TRADES_FILE) as f:
-        trades = [json.loads(l) for f in f]
+        trades = [json.loads(l) for l in f]
 
     reset = SIM_RESET_TIMESTAMP
     peak_cache = load_peak_cache()
@@ -116,28 +116,30 @@ def check_positions():
         peak = cache['peak_mcap']
         gains_pct = ((mcap - entry) / entry) * 100
 
-        # === RUG PULL MONITOR ===
-        if t.get('status') == 'open' and not tp1_sold:
-            if gains_pct <= -50 and not t.get('emergency_stopped'):
-                t['status'] = 'closed'
-                t['exit_reason'] = 'RUG_PROTECTION'
-                t['closed_at'] = datetime.utcnow().isoformat()
-                t['pnl_sol'] = POSITION_SIZE * -0.50
-                t['pnl_pct'] = -50
-                updated = True
-                msg = f"""🚨 RUG PROTECTION | {datetime.utcnow().strftime('%H:%M UTC')}
+        # === STOP LOSS (-20%) ===
+        if not tp1_sold and gains_pct <= STOP_LOSS_PERCENT:
+            t['status'] = 'closed'
+            t['exit_reason'] = 'STOP_AUTO'
+            t['closed_at'] = datetime.utcnow().isoformat()
+            t['pnl_sol'] = POSITION_SIZE * (gains_pct / 100)
+            t['pnl_pct'] = gains_pct
+            updated = True
+            if ca_key in peak_cache:
+                del peak_cache[ca_key]
+            msg = f"""🔴 STOP LOSS | {datetime.utcnow().strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
 💰 {sym}
 📍 Entry MC: ${int(entry):,}
-📊 Exit MC: ${int(mcap):,} (-50% crash!)
+📊 Exit MC: ${int(mcap):,} ({gains_pct:.1f}%)
 💰 Loss: {t['pnl_sol']:.4f} SOL
 
-⚠️ Emergency exit -50% drop detected!
 🔗 https://dexscreener.com/solana/{ca}
-🥧 https://pump.fun/{ca}"""
-                send_alert(msg, "RUG")
-                print(f"🚨 {sym} RUG PROTECTION @ ${mcap:,.0f} (-50% from entry)")
-                continue
+🥧 https://pump.fun/{ca}
+
+📋 Stop loss triggered"""
+            send_alert(msg, "STOP_LOSS")
+            print(f"🔴 {sym} STOP LOSS @ ${mcap:,.0f} ({gains_pct:.1f}% from entry)")
+            continue
 
         # === TP1 HIT (+100%) ===
         if not tp1_sold and gains_pct >= REAL_TP1_PCT:
