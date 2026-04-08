@@ -1,3 +1,24 @@
 -e __pycache__/
 *.log
 venv/
+
+# Session files - too large for git
+*.session
+*.session-journal
+*.session-shm
+*.session-wal
+
+# Signals directory - captured dynamically
+signals/*.json
+!signals/README.md
+
+# Logs
+*.log
+wallet_activity.log
+
+# Whale activity - dynamic
+wallet_analysis/whale_activity.jsonl
+
+# But keep key data files
+trades/sim_trades.jsonl
+trades/learning_journal.jsonl

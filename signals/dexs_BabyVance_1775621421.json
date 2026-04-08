@@ -1,0 +1,20 @@
+{
+  "pair_address": "B2oUvFzBvawJT1iBWmMW8Lr4z4udTAWLgcRLqKY62cCa",
+  "token_address": "m7brmLVkFGc81ZyQV4d5NxR5NdiZCj2Hwrhm7GDpump",
+  "symbol": "BabyVance",
+  "name": "Official Baby Vance",
+  "price": "0.0004295",
+  "liquidity": 52110.96,
+  "mcap": 429537,
+  "volume_24h": 612216.03,
+  "price_change_24h": 745,
+  "buys_24h": 3359,
+  "sells_24h": 2032,
+  "buy_sell_ratio": 1.6530511811023623,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-08T04:10:21.053069",
+  "signals": [
+    "HIGH_VOLUME_PUMP",
+    "RAPID_MOVE"
+  ]
+}
