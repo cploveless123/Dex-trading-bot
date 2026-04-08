@@ -1,0 +1,266 @@
+#!/usr/bin/env python3
+"""
+GMGN Signal Buyer - Acts directly on GMGN signals that pass our filters
+Scans the signals directory instead of relying on DexScreener's noisy endpoint
+"""
+import requests, json, time
+from datetime import datetime
+from pathlib import Path
+from itertools import islice
+from trading_constants import (
+    MIN_MCAP, MAX_MCAP, MIN_VOLUME, MIN_5MIN_VOLUME,
+    MIN_BS_RATIO, MIN_HOLDERS, POSITION_SIZE,
+    TICKER_BLACKLIST, REENTRY_LOCKOUT_MINUTES,
+    REENTRY_BS_THRESHOLD, REENTRY_CHG_THRESHOLD
+)
+import gmgn_signal_scorer
+
+TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
+SIGNALS_DIR = Path("/root/Dex-trading-bot/signals")
+MIN_GMGN_SCORE = 50  # Only buy high quality signals
+
+def get_token_market_data(ca: str):
+    """Get full market data from DexScreener for a specific token"""
+    try:
+        r = requests.get(f"https://api.dexscreener.com/latest/dex/tokens/{ca}", timeout=10)
+        if r.status_code != 200:
+            return None
+        data = r.json()
+        pairs = data.get('pairs', [])
+        if not pairs:
+            return None
+        # Get best pair by liquidity
+        best = max(pairs, key=lambda x: x.get('liquidity', {}).get('usd', 0))
+        return best
+    except:
+        return None
+
+def should_buy_from_signal(sig: dict, market: dict) -> tuple:
+    """Check if a GMGN signal passes our buy criteria. Returns (should_buy, reasons)"""
+    reasons_why_not = []
+    
+    # Get market data
+    mcap = market.get('fdv', 0) or 0
+    v = market.get('volume', {}).get('h24', 0) or 0
+    v5 = market.get('volume', {}).get('h5', 0) or 0
+    dex = market.get('dexId', '')
+    buys = market.get('txns', {}).get('h24', {}).get('buys', 0) or 0
+    sells = market.get('txns', {}).get('h24', {}).get('sells', 0) or 1
+    bs = buys / sells if sells > 0 else 0
+    holders = market.get('holders', 0) or 0
+    
+    # Check pump.fun
+    if dex != 'pumpfun':
+        reasons_why_not.append(f"not pumpfun ({dex})")
+    
+    # Mcap check
+    if mcap < MIN_MCAP:
+        reasons_why_not.append(f"mcap low (${mcap:,.0f})")
+    if mcap > MAX_MCAP:
+        reasons_why_not.append(f"mcap high (${mcap:,.0f})")
+    
+    # Volume check
+    if v < MIN_VOLUME:
+        reasons_why_not.append(f"vol low (${v:,.0f})")
+    
+    # 5min volume
+    if v5 > 0 and v5 < MIN_5MIN_VOLUME:
+        reasons_why_not.append(f"5min vol low (${v5:,.0f})")
+    
+    # Buy/sell ratio
+    if bs < MIN_BS_RATIO:
+        reasons_why_not.append(f"bs low ({bs:.1f})")
+    
+    # Holders
+    if holders > 0 and holders < MIN_HOLDERS:
+        reasons_why_not.append(f"holders low ({holders})")
+    
+    # Blacklist check
+    sym = sig.get('symbol', '')
+    if sym in TICKER_BLACKLIST:
+        reasons_why_not.append(f"blacklisted ({sym})")
+    
+    # Re-entry check
+    ca = sig.get('ca', '')
+    if ca:
+        with open(TRADES_FILE) as f:
+            existing = [json.loads(l) for l in f]
+        
+        recently_closed = False
+        for t in existing:
+            if t.get('token_address') == ca and t.get('exit_reason') in ['STOP_AUTO', 'MANUAL_CLOSE', 'TP1_AUTO', 'TP2']:
+                from datetime import datetime as dt
+                closed = t.get('closed_at', '')
+                if closed:
+                    try:
+                        closed_ts = dt.fromisoformat(closed.replace('Z', '+00:00'))
+                        age = (dt.utcnow() - closed_ts.replace(tzinfo=None)).total_seconds() / 60
+                        if age < REENTRY_LOCKOUT_MINUTES:
+                            # Check if strong enough to override
+                            gmgn_score = sig.get('gmgn_score', 0)
+                            if not (bs >= REENTRY_BS_THRESHOLD and gmgn_score >= 70):
+                                recently_closed = True
+                                break
+                    except:
+                        pass
+        
+        if recently_closed:
+            reasons_why_not.append("recently closed (lockout)")
+    
+    # GMGN score check
+    gmgn_score = sig.get('gmgn_score', 0)
+    if gmgn_score < MIN_GMGN_SCORE:
+        reasons_why_not.append(f"GMGN score low ({gmgn_score})")
+    
+    should = len(reasons_why_not) == 0
+    return should, reasons_why_not
+
+def check_and_buy():
+    """Main loop - check recent GMGN signals and buy if they pass criteria"""
+    print(f"[{datetime.utcnow().strftime('%H:%M:%S')}] GMGN Buyer scanning...")
+    
+    # Get recent GMGN signals (last 50)
+    signal_files = sorted(SIGNALS_DIR.glob('gmgn_*.json'), key=lambda p: p.stat().st_mtime, reverse=True)[:50]
+    
+    # Already tracking what we own
+    with open(TRADES_FILE) as f:
+        existing = [json.loads(l) for l in f]
+    owned = {t['token_address'] for t in existing if t.get('status') in ['open', 'open_partial']}
+    
+    bought_count = 0
+    
+    for sf in signal_files:
+        try:
+            sig = json.load(open(sf))
+            ca = sig.get('ca', '')
+            sym = sig.get('symbol', '')
+            
+            if not ca or not sym:
+                continue
+            
+            # Skip if already owned
+            if ca in owned:
+                continue
+            
+            # Skip if blacklisted
+            if sym in TICKER_BLACKLIST:
+                continue
+            
+            # Get market data from DexScreener
+            market = get_token_market_data(ca)
+            if not market:
+                continue
+            
+            should_buy, reasons = should_buy_from_signal(sig, market)
+            
+            if should_buy:
+                mcap = market.get('fdv', 0) or 0
+                liq = market.get('liquidity', {}).get('usd', 0) or 0
+                gmgn_score = sig.get('gmgn_score', 0)
+                
+                print(f"\n✅ BUY SIGNAL: {sym}")
+                print(f"   Mcap: ${mcap:,.0f} | Liq: ${liq:,.0f} | GMGN Score: {gmgn_score}/100")
+                print(f"   Holders: {market.get('holders', 0)} | BS: {market.get('txns',{}).get('h24',{}).get('buys',0)/max(market.get('txns',{}).get('h24',{}).get('sells',1),1):.1f}")
+                print(f"   Action: {sig.get('action')} | Age: {sig.get('age_minutes')}min | LP Burnt: {sig.get('lp_burnt')}")
+                
+                # Execute simulated buy
+                now = datetime.utcnow().isoformat()
+                
+                # Record trade
+                trade = {
+                    'token': sym,
+                    'token_address': ca,
+                    'pair_address': market.get('pairAddress', ca),
+                    'source': 'gmgn_signal',
+                    'action': 'BUY',
+                    'opened_at': now,
+                    'entry_mcap': int(mcap),
+                    'entry_price': market.get('priceUsd', 0),
+                    'entry_liquidity': int(liq),
+                    'status': 'open',
+                    'entry_reason': sig.get('action', 'GMGN'),
+                    'gmgn_score': gmgn_score,
+                    'gmgn_action': sig.get('action', ''),
+                    'gmgn_holders': sig.get('holders', 0),
+                    'gmgn_lp_burnt': sig.get('lp_burnt', False),
+                    'gmgn_top10_pct': sig.get('top_10_pct', 0),
+                }
+                
+                with open(TRADES_FILE, 'a') as f:
+                    f.write(json.dumps(trade) + '\n')
+                
+                # Send alert
+                send_buy_alert(trade, market)
+                
+                owned.add(ca)  # Don't buy twice in same scan
+                bought_count += 1
+                
+            else:
+                # Log why not (for learning)
+                if reasons and sym not in ['', '?']:
+                    pass  # Silently skip failed checks
+                    
+        except Exception as e:
+            pass
+    
+    if bought_count == 0:
+        print(f"  No new signals passed filters this scan")
+    
+    return bought_count
+
+def send_buy_alert(trade, market):
+    """Send buy alert to Telegram"""
+    import urllib.request, urllib.parse
+    
+    sym = trade['token']
+    ca = trade['token_address']
+    entry = trade['entry_mcap']
+    gmgn_score = trade.get('gmgn_score', 0)
+    action = trade.get('gmgn_action', '')
+    holders = trade.get('gmgn_holders', 0)
+    lp_burnt = trade.get('gmgn_lp_burnt', False)
+    
+    liq = market.get('liquidity', {}).get('usd', 0) or 0
+    
+    EXIT_PLAN_TEXT = """🎯 Exit Plan:
++35% → Sell initial investment (~74%)
+📊 Trailing stop: 20% drop from peak
+⚠️ Stop: -25%"""
+    
+    msg = f"""✅ BUY EXECUTED | {datetime.utcnow().strftime('%H:%M UTC')}
+━━━━━━━━━━━━━━━
+💰 {sym}
+
+📍 Entry MC: ${entry:,}
+💵 Amount: {POSITION_SIZE} SOL
+🏆 GMGN Score: {gmgn_score}/100 ({action})
+📊 Holders: {holders} | LP Burnt: {lp_burnt}
+💧 Liquidity: ${liq:,.0f}
+
+🔗 https://dexscreener.com/solana/{ca}
+🥧 https://pump.fun/{ca}
+
+{EXIT_PLAN_TEXT}"""
+    
+    try:
+        url = "https://api.telegram.org/bot8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg/sendMessage"
+        data = {"chat_id": "6402511249", "text": msg, "parse_mode": "HTML"}
+        req = urllib.request.Request(url, data=urllib.parse.urlencode(data).encode())
+        urllib.request.urlopen(req, timeout=10)
+    except:
+        pass
+
+def main():
+    print("GMGN Signal Buyer starting...")
+    print(f"Filters: Mcap ${MIN_MCAP:,}-${MAX_MCAP:,} | Vol ${MIN_VOLUME:,}+ | BS {MIN_BS_RATIO}+ | Holders {MIN_HOLDERS}+ | GMGN Score {MIN_GMGN_SCORE}+")
+    
+    while True:
+        try:
+            check_and_buy()
+        except Exception as e:
+            print(f"Error: {e}")
+        
+        time.sleep(60)  # Scan every 60 seconds
+
+if __name__ == "__main__":
+    main()
