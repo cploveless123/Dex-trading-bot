@@ -7,7 +7,7 @@ import requests
 from datetime import datetime
 from trading_constants import EXIT_PLAN_TEXT, POSITION_SIZE
 
-BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
+BOT_TOKEN = "8773298871:AAEH6xH9WjgmE_i6gTXM3xZG3cK5Y5V-24w"
 CHAT_ID = "6402511249"
 
 def send_alert(token, action, entry_mcap, exit_mcap=None, pnl=0, pnl_pct=0, exit_reason="", token_address=""):
