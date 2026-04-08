@@ -12,7 +12,13 @@ from telethon import TelegramClient
 SESSION = "/root/Dex-trading-bot/gmgn.session"
 API_ID = 30571469
 API_HASH = "85d1c3567f4182f4e4a88334ec04b935"
-CHANNEL = '@gmgnsignals'
+CHANNELS = [
+    '@gmgnai',         # 💎GMGN Degen Group - Official
+    '@gmgnsignals',    # GMGN Featured Signals (Lv2) - SOL
+    '@gmgn_trading',   # Solana Trading
+    '@pump_sol_alert', # Portal for Pump Alert Channel - GMGN
+    '@solnewlp',       # Portal for Solana New Pool Channel - GMGN
+]
 SIGNALS_DIR = Path("/root/Dex-trading-bot/signals")
 JOURNAL_FILE = Path("/root/Dex-trading-bot/trades/learning_journal.jsonl")
 
@@ -22,7 +28,7 @@ def get_dexscreener_link(token_addr):
         return f"https://dexscreener.com/solana/{token_addr}"
     return ""
 
-def format_gmgn_signal(self, sig: dict) -> str:
+def format_gmgn_signal(sig: dict) -> str:
     """Format GMGN signal in Chris's exact style"""
     symbol = sig.get('symbol', 'UNKNOWN')
     token_addr = sig.get('token_address', '')
@@ -70,7 +76,7 @@ def format_gmgn_signal(self, sig: dict) -> str:
     
     return f"""🏐 GMGN ALERT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-💰 {symbol}
+💰 {symbol} | {sig.get('source_channel', 'GMGN')}
 🔗 CA: {token_addr}
 📊 Signal: PRICE{change_str}
 
@@ -225,35 +231,47 @@ async def main():
     client = TelegramClient(SESSION, API_ID, API_HASH)
     await client.connect()
     
-    entity = await client.get_entity(CHANNEL)
-    print(f"Watching: {entity.title}")
+    entities = []
+    for ch in CHANNELS:
+        try:
+            e = await client.get_entity(ch)
+            entities.append(e)
+            print(f"Watching: {e.title}")
+        except Exception as ex:
+            print(f"Failed to join {ch}: {ex}")
     
-    last_id = None
+    if not entities:
+        print("No channels joined!")
+        await client.disconnect()
+        return
+    
+    # Track last seen message IDs per channel
+    last_ids = {str(e.id): None for e in entities}
     
     while True:
         try:
-            async for msg in client.iter_messages(entity, limit=10):
-                if msg.id != last_id and msg.text:
-                    last_id = msg.id
-                    
-                    if any(kw in msg.text for kw in ['KOL', 'PUMP', 'KOTH']):
-                        signal = parse_signal(msg.text)
+            for entity in entities:
+                async for msg in client.iter_messages(entity, limit=5):
+                    key = str(entity.id)
+                    if msg.id != last_ids[key] and msg.text:
+                        last_ids[key] = msg.id
                         
-                        if signal.get('token_address'):
-                            symbol = signal.get('symbol', 'UNK')
-                            action = signal.get('action', 'SIGNAL')
+                        if any(kw in msg.text for kw in ['KOL', 'PUMP', 'KOTH', 'BUY', 'SNIPER']):
+                            signal = parse_signal(msg.text)
+                            signal['source_channel'] = entity.title
                             
-                            fname = SIGNALS_DIR / f"gmgn_{symbol}_{msg.id}.json"
-                            with open(fname, 'w') as f:
-                                json.dump(signal, f, indent=2)
-                            
-                            JOURNAL_FILE.parent.mkdir(parents=True, exist_ok=True)
-                            with open(JOURNAL_FILE, 'a') as f:
-                                f.write(json.dumps({"type": "gmgn_signal", "timestamp": datetime.utcnow().isoformat(), "data": signal}) + '\n')
-                            
-                            # Print formatted signal
-                            formatted = format_gmgn_signal(signal)
-                            print(f"\n{formatted}")
+                            if signal.get('token_address'):
+                                symbol = signal.get('symbol', 'UNK')
+                                fname = SIGNALS_DIR / f"gmgn_{symbol}_{msg.id}.json"
+                                with open(fname, 'w') as f:
+                                    json.dump(signal, f, indent=2)
+                                
+                                JOURNAL_FILE.parent.mkdir(parents=True, exist_ok=True)
+                                with open(JOURNAL_FILE, 'a') as f:
+                                    f.write(json.dumps({"type": "gmgn_signal", "timestamp": datetime.utcnow().isoformat(), "data": signal}) + '\n')
+                                
+                                formatted = format_gmgn_signal(signal)
+                                print(f"\n{formatted}")
             
             await asyncio.sleep(15)
         except Exception as e:

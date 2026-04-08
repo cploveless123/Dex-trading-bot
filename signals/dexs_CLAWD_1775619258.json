@@ -1,0 +1,19 @@
+{
+  "pair_address": "GBzd5ooMFkYtYgzUMKfzyaEJpvzxvm5FK4FDJcpVJJcH",
+  "token_address": "8cHzQHUS2s2h8TzCmfqPKYiM4dSt4roa3n7MyRLApump",
+  "symbol": "CLAWD",
+  "name": "solanaclawd",
+  "price": "0.0001718",
+  "liquidity": 34099.79,
+  "mcap": 171900,
+  "volume_24h": 702461.32,
+  "price_change_24h": 401,
+  "buys_24h": 7876,
+  "sells_24h": 6237,
+  "buy_sell_ratio": 1.2627865961199294,
+  "dex": "pumpswap",
+  "analyzed_at": "2026-04-08T03:34:18.988667",
+  "signals": [
+    "RAPID_MOVE"
+  ]
+}
