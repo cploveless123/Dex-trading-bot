@@ -1,0 +1,19 @@
+{
+  "pair_address": "8qE7beNz9B5AkWQDb4JDTWrW2DpgDp3ExZYomCkKAWur",
+  "token_address": "9VwzS4t972bLWPXZjrutRZuzABaSy1NLozYCBB34pump",
+  "symbol": "real",
+  "name": "real",
+  "price": "0.00002322",
+  "liquidity": 0,
+  "mcap": 23223.43,
+  "volume_24h": 38463.52,
+  "price_change_24h": 668,
+  "buys_24h": 439,
+  "sells_24h": 213,
+  "buy_sell_ratio": 2.0610328638497655,
+  "dex": "pumpfun",
+  "analyzed_at": "2026-04-08T03:29:48.745332",
+  "signals": [
+    "BUY_MOMENTUM"
+  ]
+}

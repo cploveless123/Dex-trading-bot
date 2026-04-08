@@ -9,7 +9,7 @@ from datetime import datetime
 from pathlib import Path
 from telethon import TelegramClient
 
-SESSION = "/root/Dex-trading-bot/gmgn_monitor.session"
+SESSION = "/root/Dex-trading-bot/gmgn.session"
 API_ID = 30571469
 API_HASH = "85d1c3567f4182f4e4a88334ec04b935"
 CHANNEL = '@gmgnsignals'
@@ -223,7 +223,7 @@ def parse_signal(text):
 async def main():
     print("GMGN Monitor Starting")
     client = TelegramClient(SESSION, API_ID, API_HASH)
-    await client.start()
+    await client.connect()
     
     entity = await client.get_entity(CHANNEL)
     print(f"Watching: {entity.title}")
