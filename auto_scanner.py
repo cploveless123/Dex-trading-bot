@@ -12,14 +12,13 @@ CHAT_ID = "6402511249"
 TRADES_FILE = "/root/Dex-trading-bot/trades/sim_trades.jsonl"
 
 # STRICTER criteria based on 110-trade pattern analysis
-# WINNING: $5K-$53K mcap, pumpfun, volume $20K+, bs 1.5+, holders 50+
-# LOSING: $70K+ mcap (too late), low liquidity, weak holders
-MIN_MCAP = 5000        # winners start at $5,206+
-MAX_MCAP = 50000       # winners never above $53K — tighten to avoid late entries
-MIN_VOLUME = 20000    # raise from $10K — winners had $20K+ volume
+# Mcap $5K-$100K, 24h vol $15K+, 5min vol $2K+, bs 1.5, holders 15+
+MIN_MCAP = 5000        # floor
+MAX_MCAP = 100000      # ceiling
+MIN_VOLUME = 15000     # 24h volume minimum
+MIN_5MIN_VOLUME = 2000 # 5min volume minimum (recent activity)
 MIN_BS_RATIO = 1.5    # buy/sell ratio - winners have momentum
-MIN_24H_CHANGE = 15   # 15%+ price momentum
-MIN_HOLDERS = 50       # add holders minimum - winners had 50-200+ holders
+MIN_HOLDERS = 15       # holders minimum
 POSITION_SIZE = 0.05
 
 # Hard blacklist - NEVER re-enter these tickers
@@ -76,29 +75,32 @@ def check_and_buy():
             sells = p.get('txns', {}).get('h24', {}).get('sells', 0) or 1
             bs = buys / sells if sells > 0 else 0
             
+            # 5min volume check
+            v5 = p.get('volume', {}).get('h5', 0) or 0
+            
             # ONLY pumpfun for now
             if dex != 'pumpfun':
                 continue
             
-            # Mcap: $5K-$50K (tightened from $2K-$100K based on data)
+            # Mcap: $5K-$100K
             if m < MIN_MCAP:
                 continue
             if m > MAX_MCAP:
                 continue
             
-            # Volume: $20K+ for pumpfun (winners had $20K+ volume)
+            # 24h volume: $15K+ for pumpfun
             if v < MIN_VOLUME:
+                continue
+            
+            # 5min volume: $2K+ (recent activity)
+            if v5 < MIN_5MIN_VOLUME:
                 continue
             
             # Buy/sell ratio 1.5+ (winners had momentum)
             if bs < MIN_BS_RATIO:
                 continue
             
-            # 24h change 15%+ (momentum needed)
-            if chg < MIN_24H_CHANGE:
-                continue
-            
-            # Holders: 50+ if available (winners had 50-200+ holders)
+            # Holders: 15+ if available
             holders = p.get('holders', 0) or 0
             if holders > 0 and holders < MIN_HOLDERS:
                 continue
