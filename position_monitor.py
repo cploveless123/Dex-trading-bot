@@ -128,7 +128,7 @@ def check_positions():
 
 📊 Exit Plan:
 📈 TP2: +100% (sell remaining 26%)
-⚠️ Stop: -30% (trailing)
+⚠️ Stop: {STOP_LOSS_PERCENT}% (trailing)
 ⏰ Check again in {CHECK_INTERVAL}s"""
             send_alert(msg, "TP1")
             print(f"✅ {sym} TP1 HIT @ ${mcap:,.0f}")

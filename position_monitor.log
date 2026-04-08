@@ -298,3 +298,39 @@ Error: name 'pair' is not defined
 [TRAILING_STOP] ✅ Alert sent
 ✅ NOTHING TRAILING STOP @ $3,780 (89% drop)
   eeffocalien: mcap=$57,325 | gain=+2.5% | peak=$57,325 | dd=+0%
+  PEACE: mcap=$3,213 | gain=-84.0% | peak=$20,103 | dd=+0%
+  LOOP: mcap=$8,283 | gain=-68.6% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$117,297 | gain=+18.9% | peak=$128,599 | dd=+0%
+  momiji: mcap=$13,981 | gain=-6.0% | peak=$19,630 | dd=+0%
+  NOTHING: mcap=$4,006 | gain=-81.6% | peak=$21,726 | dd=+0%
+  eeffocalien: mcap=$52,469 | gain=-6.2% | peak=$57,325 | dd=+0%
+  PEACE: mcap=$3,177 | gain=-84.2% | peak=$20,103 | dd=+0%
+  LOOP: mcap=$8,312 | gain=-68.5% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$136,948 | gain=+38.8% | peak=$136,948 | dd=+0%
+  momiji: mcap=$13,922 | gain=-6.4% | peak=$19,630 | dd=+0%
+  NOTHING: mcap=$3,432 | gain=-84.2% | peak=$21,726 | dd=+0%
+  eeffocalien: mcap=$56,557 | gain=+1.1% | peak=$57,325 | dd=+0%
+  PEACE: mcap=$3,177 | gain=-84.2% | peak=$20,103 | dd=+0%
+  LOOP: mcap=$8,145 | gain=-69.1% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$139,023 | gain=+40.9% | peak=$139,023 | dd=+0%
+  momiji: mcap=$12,031 | gain=-19.1% | peak=$19,630 | dd=+0%
+  NOTHING: mcap=$3,528 | gain=-83.8% | peak=$21,726 | dd=+0%
+  eeffocalien: mcap=$51,461 | gain=-8.0% | peak=$57,325 | dd=+0%
+  PEACE: mcap=$3,177 | gain=-84.2% | peak=$20,103 | dd=+0%
+  LOOP: mcap=$8,024 | gain=-69.5% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$137,499 | gain=+39.4% | peak=$139,023 | dd=+0%
+  momiji: mcap=$12,858 | gain=-13.6% | peak=$19,630 | dd=+0%
+  NOTHING: mcap=$3,678 | gain=-83.1% | peak=$21,726 | dd=+0%
+  eeffocalien: mcap=$48,016 | gain=-14.2% | peak=$57,325 | dd=+0%
+📊 Position Monitor v2 starting...
+📋 Exit Plan: TP1 +43.9% (sell 74%) | Trailing 30% drop | Stop -20%
+📋 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+⏰ Checking every 60s
+[STARTUP] ✅ Alert sent
+  PEACE: mcap=$3,223 | gain=-84.0% | peak=$20,103 | dd=+0%
+  LOOP: mcap=$8,226 | gain=-68.8% | peak=$26,346 | dd=+0%
+  Shiro: mcap=$131,744 | gain=+33.6% | peak=$139,023 | dd=+0%
+  momiji: mcap=$12,312 | gain=-17.2% | peak=$19,630 | dd=+0%
+  NOTHING: mcap=$3,057 | gain=-85.9% | peak=$21,726 | dd=+0%
+[STOP_LOSS] ✅ Alert sent
+🔴 eeffocalien STOP LOSS @ $43,770

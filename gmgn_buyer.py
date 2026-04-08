@@ -8,7 +8,7 @@ from datetime import datetime
 from pathlib import Path
 from itertools import islice
 from trading_constants import (
-    MIN_MCAP, MAX_MCAP, MIN_VOLUME, POSITION_SIZE
+    MIN_MCAP, MAX_MCAP, MIN_VOLUME, POSITION_SIZE, EXIT_PLAN_TEXT
 )
 # Additional filters not in trading_constants yet
 MIN_BS_RATIO = 1.5
@@ -260,17 +260,15 @@ def send_buy_alert(trade, market):
     
     liq = market.get('liquidity', {}).get('usd', 0) or 0
     
-    EXIT_PLAN_TEXT = """🎯 Exit Plan:
-+35% → Sell initial investment (~74%)
-📊 Trailing stop: 20% drop from peak
-⚠️ Stop: -25%"""
+    # Use amount from trade record (0.10 for KOL_BUY, 0.05 for others)
+    amt_sol = trade.get('amount_sol', POSITION_SIZE)
     
     msg = f"""✅ BUY EXECUTED | {datetime.utcnow().strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
 💰 {sym}
 
 📍 Entry MC: ${entry:,}
-💵 Amount: {POSITION_SIZE} SOL
+💵 Amount: {amt_sol} SOL
 🏆 GMGN Score: {gmgn_score}/100 ({action})
 📊 Holders: {holders} | LP Burnt: {lp_burnt}
 💧 Liquidity: ${liq:,.0f}

@@ -199,12 +199,8 @@ def main():
                 with open(TRADES_FILE, 'a') as f:
                     f.write(json.dumps(trade) + '\n')
                 
+                from trading_constants import EXIT_PLAN_TEXT
                 owned.add(ca)
-                
-                EXIT_PLAN = f"""🎯 Exit Plan:
-+45% → Sell initial investment (~74% of position)
-📊 Trailing stop: sell remaining if 30% drop from peak
-⚠️ Stop: -30%"""
                 
                 msg = f"""✅ KOL BUY | {datetime.utcnow().strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
@@ -221,7 +217,7 @@ def main():
 🔗 https://dexscreener.com/solana/{ca}
 🥧 https://pump.fun/{ca}
 
-{EXIT_PLAN}"""
+{EXIT_PLAN_TEXT}"""
                 
                 send_alert(msg)
                 print(f"   ✅ BOUGHT & ALERTED!")
