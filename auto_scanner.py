@@ -13,7 +13,7 @@ TRADES_FILE = "/root/Dex-trading-bot/trades/sim_trades.jsonl"
 
 # STRICTER criteria based on 173-trade pattern analysis
 # Mcap $15K-$75K (data-driven sweet spot), 24h vol $10K+, 5min vol $1K+, bs 1.5, holders 15+
-MIN_MCAP = 15000       # floor (raised from $4K to avoid micro-cap rugs)
+MIN_MCAP = 10000        # floor
 MAX_MCAP = 75000       # ceiling (lowered from $150K - >$75K = 86% loss rate)
 MIN_VOLUME = 10000     # 24h volume minimum
 MIN_5MIN_VOLUME = 1000 # 5min volume minimum (recent activity)
