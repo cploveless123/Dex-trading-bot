@@ -6,11 +6,11 @@ Do NOT hardcode these values elsewhere - import from this file.
 from pathlib import Path
 
 # Exit Plan
-TP1_PERCENT = 35          # First take profit level (%)
-TP1_SELL_PCT = 74         # % of position to sell at TP1 (recovers initial investment)
-TP2_PERCENT = 35          # Trailing stop trigger (same as TP1 for remaining %)
+TP1_PERCENT = 45          # First take profit level (%)
+TP1_SELL_PCT = 100        # % of position to sell at TP1 (full exit at TP1)
+TP2_PERCENT = 45          # Trailing stop trigger (% above TP1 peak)
 TP2_SELL_PCT = 100        # Sell remaining % at trailing stop
-STOP_LOSS_PERCENT = -25   # Stop loss percentage
+STOP_LOSS_PERCENT = -30   # Stop loss percentage
 TRAILING_STOP_PCT = 20   # % drop from peak to trigger trailing stop on remaining position
 
 # Position
@@ -29,8 +29,8 @@ WALLETS_FILE = Path("/root/Dex-trading-bot/wallet_analysis/whale_wallets.jsonl")
 ALERTS_FILE = Path("/root/Dex-trading-bot/wallet_analysis/whale_activity.jsonl")
 
 EXIT_PLAN_TEXT = f"""🎯 Exit Plan:
-+{TP1_PERCENT}% → Sell initial investment (~{TP1_SELL_PCT}% of position)
-📊 Trailing stop: sell remaining if {TRAILING_STOP_PCT}% drop from peak
++{TP1_PERCENT}% → Sell full position
+📊 Trailing stop: active after TP1 (not applicable if TP1=full exit)
 ⚠️ Stop: {STOP_LOSS_PERCENT}%"""
 
 def get_exit_plan():
