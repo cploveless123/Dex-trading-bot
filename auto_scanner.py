@@ -15,7 +15,7 @@ TRADES_FILE = "/root/Dex-trading-bot/trades/sim_trades.jsonl"
 # Mcap $5K-$100K, 24h vol $15K+, 5min vol $2K+, bs 1.5, holders 15+
 MIN_MCAP = 5000        # floor
 MAX_MCAP = 100000      # ceiling
-MIN_VOLUME = 15000     # 24h volume minimum
+MIN_VOLUME = 10000     # 24h volume minimum
 MIN_5MIN_VOLUME = 1000 # 5min volume minimum (recent activity)
 MIN_BS_RATIO = 1.5    # buy/sell ratio - winners have momentum
 MIN_HOLDERS = 15       # holders minimum
