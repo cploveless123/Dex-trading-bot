@@ -81,7 +81,7 @@ See `/root/.openclaw/workspace/trading-patterns.md` for full analysis
 
 ## Entry Criteria (UPDATED per Chris)
 - Mcap: $5K-$100K
-- 24h volume: $15K+
+- 24h volume: $10K+
 - 5min volume: $1K+
 - Buy/sell ratio: 1.5+
 - Holders: 15+
@@ -96,6 +96,24 @@ See `/root/.openclaw/workspace/trading-patterns.md` for full analysis
 ## Whales Tracked
 - GH9yk8vgFvHnAD8JZqXxr3hBN1Lr1mJ9NPzrP5mVqiJe (Chris-added 2026-04-08)
 - 4 others tracked in wallet_analysis/whale_wallets.jsonl
+
+## Dual Scanner System (2026-04-08)
+1. `auto_scanner.py` - DexScreener native scan, 90s, scans 30 newest tokens
+2. `gmgn_buyer.py` - GMGN signal native, 60s, acts on high-quality signals (score 50+)
+Both run simultaneously. GMGN buyer is smarter - uses LP burn, holder concentration, age data.
+
+## GMGN Signal Scorer (built 2026-04-08)
+Scores signals 0-100 based on:
+- Liquidity (0-25 pts): higher = better
+- Holders (0-20 pts): more decentralized = better
+- Top 10% concentration (0-15 pts): lower = better
+- LP burnt (10 pts): yes = safer
+- Safety flags (10 pts): no_mint + no_blacklist
+- Age (0-10 pts): 5-30min sweet spot
+- Volume ratio (0-10 pts): vol/mcap high = strong interest
+- Action multiplier: KOL_BUY (1.5x), KOTH (1.3x), PUMP (1.0x)
+Saved to: gmgn_signal_scorer.py
+Top recent scores: MOCUS 76, GURU 73, GATSBY 72
 
 ## GMGN Channels Watched (7 total)
 - @gmgnai — 💎GMGN Degen Group - Official
