@@ -185,7 +185,7 @@ def check_positions():
             else:
                 drawdown_pct = 0
             
-            TRAIL_STOP_THRESHOLD = 15  # % drop from peak to trigger trailing stop (tightened from 30%)
+            TRAIL_STOP_THRESHOLD = 30  # % drop from peak - whale uses 30% to capture big runs
             
             if drawdown_pct >= TRAIL_STOP_THRESHOLD:
                 t['trailing_stopped'] = True
