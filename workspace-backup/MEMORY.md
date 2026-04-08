@@ -6,18 +6,17 @@
 - Telegram alerts via @WilsonVultrBot (token: 8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg)
 - Chat ID: 6402511249 (Chris - "please grow good weed")
 
-## Trading Strategy (LOCKED IN - 2026-04-07)
+## Trading Strategy (CORRECTED - 2026-04-08)
 
 ### Exit Rules:
 ```
-+25% → Sell 50%
-+100% → Sell 25%
-+500% → Sell 15%
-Rest → Hold (trailing stop)
++35% → Sell 70%
++95% → Sell 30%
 ⚠️ Stop: -25%
 ```
 
 ### Alert Format:
+- Telegram uses HTML mode (Markdown fails on emoji → HTTP 400)
 - Entry/Exit mcap on all sells
 - PnL with green/red emoji
 - Clickable links (plain URLs)
@@ -33,6 +32,8 @@ Rest → Hold (trailing stop)
 
 ### Auto Monitor:
 `position_monitor.py` runs every 60s checking TP/stop hits
+`auto_scanner.py` runs every 90s scanning for buys
+`alert_sender.py` runs every 30s sending Telegram alerts
 
 ## Today's Trades (2026-04-07)
 
@@ -59,6 +60,17 @@ Rest → Hold (trailing stop)
 - Wants continuous scanning and trading
 - Prefers fast decisions over perfect analysis
 - Very detail-oriented on alert/report format
+
+## Trading Lessons Learned
+- NODES bought 6 times in one day, stopped out 4x → ~0.15 SOL lost to repeat chasing
+- Re-entry lockout added: no re-buy of stopped tokens within 30 min unless strong momentum (bs 2.5+, chg 50%+)
+- Markdown mode in Telegram fails with certain emoji → use HTML mode
+- .last_alert_index can go stale and cause missed alerts → must sync to actual trade count
+- Position monitor and sim_trader had hardcoded wrong thresholds → must use trading_constants
+
+## Whales Tracked
+- GH9yk8vgFvHnAD8JZqXxr3hBN1Lr1mJ9NPzrP5mVqiJe (Chris-added 2026-04-08)
+- 4 others tracked in wallet_analysis/whale_wallets.jsonl
 
 ## HOURLY BACKUP (CRITICAL - DO NOT SKIP)
 Hourly cron job backs up to GitHub:
