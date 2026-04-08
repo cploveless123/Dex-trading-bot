@@ -295,9 +295,27 @@ def main():
     print(f"⏰ Checking every {CHECK_INTERVAL}s")
     send_alert("✅ Position Monitor v3 online - NEW STRATEGY: TP1 +100%, TP2 +200%, TP3 +500%, Trailing 30%", "STARTUP")
 
+    check_count = 0
+    last_status_time = time.time()
+    
     while True:
         try:
             check_positions()
+            check_count += 1
+            
+            # Heartbeat every 60 seconds (12 cycles at 5s interval)
+            elapsed = time.time() - last_status_time
+            if elapsed >= 60:
+                open_count = 0
+                try:
+                    with open(TRADES_FILE) as f:
+                        trades = [json.loads(l) for l in f]
+                    reset = SIM_RESET_TIMESTAMP
+                    open_count = len([t for t in trades if t.get('opened_at','') > reset and not t.get('closed_at') and t.get('status') != 'closed'])
+                except:
+                    pass
+                print(f"💓 [{datetime.utcnow().strftime('%H:%M:%S')}] Monitor alive | {check_count} checks done | {open_count} open positions | Next check in {CHECK_INTERVAL}s")
+                last_status_time = time.time()
         except Exception as e:
             print(f"Error: {e}")
         time.sleep(CHECK_INTERVAL)
