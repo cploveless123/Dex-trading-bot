@@ -17,7 +17,11 @@ BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
 TRADES_FILE = "/root/Dex-trading-bot/trades/sim_trades.jsonl"
 PEAK_CACHE_FILE = "/root/Dex-trading-bot/position_peak_cache.json"
-CHECK_INTERVAL = 60  # Check every 60 seconds
+CHECK_INTERVAL = 5  # Check every 5 seconds for faster reaction to price movements
+
+# Rate limiting - don't hammer DexScreener
+_last_mcap_fetch = {}  # CA -> last fetch timestamp
+_MIN_FETCH_INTERVAL = 5  # Min seconds before refetching same CA
 
 def load_peak_cache():
     """Load cached peak mcaps from disk"""
@@ -35,13 +39,22 @@ def save_peak_cache(cache):
         json.dump(cache, f)
 
 def get_live_mcap(tok_address):
-    """Get current mcap for a token"""
+    """Get current mcap for a token with rate limiting"""
+    import time
+    now = time.time()
+    
+    # Rate limit: don't refetch same CA within 5 seconds
+    last_fetch = _last_mcap_fetch.get(tok_address, 0)
+    if now - last_fetch < _MIN_FETCH_INTERVAL:
+        return None  # Skip - too soon since last fetch
+    
     try:
         resp = requests.get(f"https://api.dexscreener.com/latest/dex/tokens/{tok_address}", timeout=10)
         data = resp.json()
         pairs = data.get('pairs', [])
         if pairs:
             p = max(pairs, key=lambda x: x.get('liquidity', {}).get('usd', 0))
+            _last_mcap_fetch[tok_address] = now
             return float(p.get('fdv', 0) or 0)
     except:
         pass
@@ -81,7 +94,7 @@ def check_positions():
         
         mcap = get_live_mcap(ca)
         if mcap is None or mcap == 0:
-            continue
+            continue  # Skip this token - rate limited or error
         
         # === LIVE PEAK TRACKING ===
         ca_key = ca[:20]  # Use first 20 chars as key
