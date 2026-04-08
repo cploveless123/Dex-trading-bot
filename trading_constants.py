@@ -18,7 +18,7 @@ POSITION_SIZE_SOL = 0.05  # SOL per trade
 POSITION_SIZE = POSITION_SIZE_SOL
 
 # Scanner Criteria
-MIN_MCAP = 5000           # Minimum market cap ($)
+MIN_MCAP = 4000           # Minimum market cap ($)
 MAX_MCAP = 100000         # Maximum market cap ($)
 MIN_VOLUME = 5000         # Minimum 24h volume ($)
 MIN_24H_CHANGE = 20       # Minimum 24h price change (%)
