@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "13ed03a1-b2b7-4b78-8739-0d0b909b0147",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "git-backup",
+      "enabled": false,
+      "createdAtMs": 1775432221771,
+      "updatedAtMs": 1775520523647,
+      "schedule": {
+        "expr": "*/30 * * * *",
+        "kind": "cron"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Git add and commit all changes. Run: cd /root/.openclaw/workspace && git add -A && git commit -m \"Auto-backup $(date)\"",
+        "timeoutSeconds": 30
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {
+        "lastRunAtMs": 1775518265113,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 30005,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 7,
+        "lastErrorReason": "timeout",
+        "lastError": "cron: job execution timed out"
+      }
+    },
+    {
+      "id": "e6239808-e4a1-450d-b034-0b8eaf099dfd",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "wallet-monitor",
+      "enabled": true,
+      "createdAtMs": 1775494068269,
+      "updatedAtMs": 1775608749640,
+      "schedule": {
+        "everyMs": 300000,
+        "kind": "every",
+        "anchorMs": 1775494068269
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run wallet monitor: cd /root/Dex-trading-bot && python3 wallet_watcher.py && echo '---' && cat /root/.openclaw/workspace/memory/wallets/watchlist.json",
+        "model": "minimax/MiniMax-M2.5",
+        "thinking": "off",
+        "timeoutSeconds": 30
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {
+        "nextRunAtMs": 1775609033854,
+        "lastRunAtMs": 1775608733854,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 15786,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": false
+      }
+    },
+    {
+      "id": "6944bf4d-dba3-47dd-8df8-f545627b6e34",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "current-trading-report",
+      "enabled": true,
+      "createdAtMs": 1775520534720,
+      "updatedAtMs": 1775607131377,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 3600000,
+        "anchorMs": 1775520534720
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run: python3 /root/Dex-trading-bot/reports/last5_trades.py - plain text format (no Markdown), Telegram auto-links URLs. Sends to @WilsonVultrBot (6402511249)."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "6402511249"
+      },
+      "state": {
+        "nextRunAtMs": 1775610722542,
+        "lastRunAtMs": 1775607122542,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 8835,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "19582a03-80b9-4574-81d6-d8d87582e2bb",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "wilson-progress-report",
+      "enabled": true,
+      "createdAtMs": 1775536488575,
+      "updatedAtMs": 1775608555713,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 3600000,
+        "anchorMs": 1775536488575
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Send Wilson progress report: systems status, wallet, session P&L, skills learned, what working on, what's next. Format: progress report with skills, work, plans. Send to @WilsonVultrBot (6402511249)."
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1775612088748,
+        "lastRunAtMs": 1775608488748,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 66965,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "16429a40-b0b6-470e-8c3e-8c154b57862a",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "hourly-bot-backup",
+      "enabled": true,
+      "createdAtMs": 1775536655383,
+      "updatedAtMs": 1775608852876,
+      "schedule": {
+        "expr": "30 * * * *",
+        "kind": "cron"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Hourly backup: cd /root/.openclaw/workspace && for f in *.md BOOTSTRAP.md; do [ -f \"$f\" ] && cp \"$f\" /root/Dex-trading-bot/workspace-backup/; done; cp /root/.openclaw/cron/jobs.json /root/Dex-trading-bot/workspace-backup/openclaw_crons.json 2>/dev/null; cp -r skills /root/Dex-trading-bot/workspace-backup/ 2>/dev/null; cd /root/Dex-trading-bot && git add -A && git commit -m \"Auto-backup $(date -u '+%Y-%m-%d %H:%M UTC')\" && git push origin master && echo DONE",
+        "timeoutSeconds": 90
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1775611800000,
+        "lastRunAtMs": 1775608200006,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 45005,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "cron: job execution timed out",
+        "lastErrorReason": "timeout"
+      }
+    }
+  ]
+}
