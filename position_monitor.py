@@ -18,10 +18,10 @@ CHAT_ID = "6402511249"
 TRADES_FILE = "/root/Dex-trading-bot/trades/sim_trades.jsonl"
 POSITION_SIZE = 0.05
 
-def get_live_mcap(pair_address):
-    """Get current mcap for a pair"""
+def get_live_mcap(tok_address):
+    """Get current mcap for a token using its CA"""
     try:
-        resp = requests.get(f"https://api.dexscreener.com/latest/dex/pairs/solana/{pair_address}", timeout=10)
+        resp = requests.get(f"https://api.dexscreener.com/latest/dex/tokens/{tok_address}", timeout=10)
         data = resp.json()
         pairs = data.get('pairs', [])
         if pairs:
@@ -56,13 +56,12 @@ def check_positions():
         
         sym = t.get('token')
         entry = t.get('entry_mcap', 0)
-        pair = t.get('pair_address', '')
         tok = t.get('token_address', '')
         
-        if not entry or not pair:
+        if not entry or not tok:
             continue
         
-        mcap = get_live_mcap(pair)
+        mcap = get_live_mcap(tok)
         if not mcap:
             continue
         
