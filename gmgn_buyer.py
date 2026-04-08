@@ -13,6 +13,10 @@ from trading_constants import (
 # Additional filters not in trading_constants yet
 MIN_BS_RATIO = 1.5
 MIN_HOLDERS = 15
+MIN_GMGN_API_SCORE = 50  # Minimum GMGN API score to buy
+MIN_5MIN_VOLUME = 0      # Disabled - DexScreener no longer provides this
+
+import gmgn_api_scorer
 import gmgn_signal_scorer
 import send_alert
 
@@ -157,12 +161,22 @@ def check_and_buy():
             if should_buy:
                 mcap = market.get('fdv', 0) or 0
                 liq = market.get('liquidity', {}).get('usd', 0) or 0
-                gmgn_score = sig.get('gmgn_score', 0)
+                
+                # Get GMGN API data for rich scoring
+                gmgn_data = gmgn_api_scorer.get_gmgn_token_data(ca)
+                gmgn_sec = gmgn_api_scorer.get_gmgn_security(ca)
+                api_score_result = gmgn_api_scorer.score_with_gmgn_api(sig, gmgn_data, gmgn_sec)
+                api_score = api_score_result['score']
+                
+                if api_score < MIN_GMGN_API_SCORE:
+                    print(f"  ❌ {sym}: GMGN API score {api_score}/100 < {MIN_GMGN_API_SCORE}")
+                    continue
                 
                 print(f"\n✅ BUY SIGNAL: {sym}")
-                print(f"   Mcap: ${mcap:,.0f} | Liq: ${liq:,.0f} | GMGN Score: {gmgn_score}/100")
-                print(f"   Holders: {market.get('holders', 0)} | BS: {market.get('txns',{}).get('h24',{}).get('buys',0)/max(market.get('txns',{}).get('h24',{}).get('sells',1),1):.1f}")
-                print(f"   Action: {sig.get('action')} | Age: {sig.get('age_minutes')}min | LP Burnt: {sig.get('lp_burnt')}")
+                print(f"   Mcap: ${mcap:,.0f} | Liq: ${liq:,.0f} | GMGN API Score: {api_score}/100")
+                print(f"   Holders: {api_score_result['gmgn_holders']} | Top10: {api_score_result['gmgn_top10_pct']:.1f}% | CreatorTokens: {api_score_result['gmgn_creator_count']}")
+                print(f"   Action: {sig.get('action')} | Smart: {api_score_result['gmgn_smart_wallets']} | KOL: {api_score_result['gmgn_renowned_wallets']}")
+                print(f"   Score breakdown: {api_score_result['breakdown']}")
                 
                 # Execute simulated buy
                 now = datetime.utcnow().isoformat()
@@ -172,7 +186,7 @@ def check_and_buy():
                     'token': sym,
                     'token_address': ca,
                     'pair_address': market.get('pairAddress', ca),
-                    'source': 'gmgn_signal',
+                    'source': 'gmgn_api_buyer',
                     'action': 'BUY',
                     'opened_at': now,
                     'entry_mcap': int(mcap),
@@ -180,11 +194,15 @@ def check_and_buy():
                     'entry_liquidity': int(liq),
                     'status': 'open',
                     'entry_reason': sig.get('action', 'GMGN'),
-                    'gmgn_score': gmgn_score,
+                    'gmgn_score': api_score,
+                    'gmgn_api_base_score': api_score_result['base_score'],
                     'gmgn_action': sig.get('action', ''),
-                    'gmgn_holders': sig.get('holders', 0),
-                    'gmgn_lp_burnt': sig.get('lp_burnt', False),
-                    'gmgn_top10_pct': sig.get('top_10_pct', 0),
+                    'gmgn_holders': api_score_result['gmgn_holders'],
+                    'gmgn_top10_pct': api_score_result['gmgn_top10_pct'],
+                    'gmgn_creator_count': api_score_result['gmgn_creator_count'],
+                    'gmgn_bot_degen_rate': api_score_result['gmgn_bot_degen_rate'],
+                    'gmgn_smart_wallets': api_score_result['gmgn_smart_wallets'],
+                    'gmgn_renowned_wallets': api_score_result['gmgn_renowned_wallets'],
                 }
                 
                 with open(TRADES_FILE, 'a') as f:
