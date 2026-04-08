@@ -11,17 +11,18 @@ BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
 TRADES_FILE = "/root/Dex-trading-bot/trades/sim_trades.jsonl"
 
-# STRICTER criteria based on pattern analysis
-# WINNING: $5K-$15K mcap, pumpfun, MOMENTUM
-# LOSING: $70K+ mcap, pumpswap
-MIN_MCAP = 5000
-MAX_MCAP = 100000  # Tighter cap based on data
-MIN_VOLUME = 10000  # Higher volume requirement
-MIN_BS_RATIO = 1.5
-MIN_24H_CHANGE = 30
+# STRICTER criteria based on 110-trade pattern analysis
+# WINNING: $5K-$53K mcap, pumpfun, volume $20K+, bs 1.5+, holders 50+
+# LOSING: $70K+ mcap (too late), low liquidity, weak holders
+MIN_MCAP = 5000        # winners start at $5,206+
+MAX_MCAP = 50000       # winners never above $53K — tighten to avoid late entries
+MIN_VOLUME = 20000    # raise from $10K — winners had $20K+ volume
+MIN_BS_RATIO = 1.5    # buy/sell ratio - winners have momentum
+MIN_24H_CHANGE = 15   # 15%+ price momentum
+MIN_HOLDERS = 50       # add holders minimum - winners had 50-200+ holders
 POSITION_SIZE = 0.05
 
-# Hard blacklist - NEVER re-enter these tickers (stopped/chased too many times)
+# Hard blacklist - NEVER re-enter these tickers
 TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
 
 # Re-entry lockout: 30 min after any close, must have STRONG momentum to override
@@ -79,21 +80,27 @@ def check_and_buy():
             if dex != 'pumpfun':
                 continue
             
-            # Lowered mcap floor to $2K to catch early momentum before pump
-            # Winners entry range: $2K-$22K mcap
-            if m < 2000:
+            # Mcap: $5K-$50K (tightened from $2K-$100K based on data)
+            if m < MIN_MCAP:
+                continue
+            if m > MAX_MCAP:
                 continue
             
-            # Volume: $10K+ for pumpfun (low liquidity during bonding is normal)
-            if v < 10000:
+            # Volume: $20K+ for pumpfun (winners had $20K+ volume)
+            if v < MIN_VOLUME:
                 continue
             
-            # Buy/sell ratio 1.2+ (relaxed from 1.5 - early momentum counts)
-            if bs < 1.2:
+            # Buy/sell ratio 1.5+ (winners had momentum)
+            if bs < MIN_BS_RATIO:
                 continue
             
-            # 24h change 15%+ (relaxed to catch earlier entries)
-            if chg < 15:
+            # 24h change 15%+ (momentum needed)
+            if chg < MIN_24H_CHANGE:
+                continue
+            
+            # Holders: 50+ if available (winners had 50-200+ holders)
+            holders = p.get('holders', 0) or 0
+            if holders > 0 and holders < MIN_HOLDERS:
                 continue
             
             # Check if already have this token (open or partial)
