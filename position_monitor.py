@@ -1,5 +1,9 @@
 from trading_constants import TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT, STOP_LOSS_PERCENT, EXIT_PLAN_TEXT
 
+# Trailing stop config for remaining position after TP1
+TRAILING_STOP_PCT = 20  # % drop from peak to trigger exit of remaining 30%
+STOP_FLOOR_PCT = 0      # stop can't go below entry (0% from entry = lock profit at TP1 level)
+
 #!/usr/bin/env python3
 """
 Position Monitor - Auto-execute TP/stop for open positions
@@ -100,44 +104,62 @@ def check_positions():
 🔗 https://dexscreener.com/solana/{pair}
 🥧 https://pump.fun/{tok}
 
-{EXIT_PLAN_TEXT}"""
-            send_alert(msg)
-            print(f"✅ {sym} TP1 AUTO: sold 75% at +{change:.0f}%")
+📋 After TP1: Trailing stop — sell remaining if {TRAILING_STOP_PCT}% drop from peak
+⚠️ Stop: {STOP_LOSS_PERCENT}% from entry
+"""
             updated = True
         
-        # TP2: +75% → sell remaining 25%
-        elif change >= TP2_PERCENT and not t.get('tp2_sold'):
-            t['tp2_sold'] = True
-            t['exit_reason'] = 'TP2_AUTO'
-            t['closed_at'] = datetime.utcnow().isoformat()
-            # PnL: remaining 25% sold at 75% gain
-            tp2_pnl = POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100) * (TP2_PERCENT / 100)
-            prev_pnl = t.get('pnl_sol', 0)
-            total_pnl = round(tp2_pnl + prev_pnl, 6)
-            total_pct = round((total_pnl / POSITION_SIZE) * 100, 1)
-            t['pnl_sol'] = total_pnl
-            t['pnl_pct'] = total_pct
-            t['status'] = 'closed'
+        # TP2: TRAILING STOP — for remaining 30% after TP1
+        # Track peak mcap since TP1, sell if price drops TRAILING_STOP_PCT from peak
+        elif t.get('tp1_sold') and not t.get('tp2_sold') and not t.get('trailing_stopped'):
+            # Update peak mcap
+            current_peak = max(t.get('trail_peak_mcap', entry), mcap)
+            t['trail_peak_mcap'] = current_peak
             
-            with open(TRADES_FILE, 'w') as f:
-                for tr in trades:
-                    f.write(json.dumps(tr) + '\n')
+            # Calculate drawdown from peak
+            peak = current_peak
+            if peak > entry:
+                drawdown_pct = ((peak - mcap) / peak) * 100
+            else:
+                drawdown_pct = 0
             
-            timestamp = datetime.utcnow().strftime("%H:%M UTC")
-            msg = f"""🔴 SELL EXECUTED (FULL EXIT) | {timestamp}
+            # Trailing stop: sell remaining if drop from peak >= TRAILING_STOP_PCT
+            if drawdown_pct >= TRAILING_STOP_PCT:
+                t['trailing_stopped'] = True
+                t['tp2_sold'] = True
+                t['exit_reason'] = 'TRAILING_STOP'
+                t['closed_at'] = datetime.utcnow().isoformat()
+                
+                # PnL: remaining % sold at current gain
+                remaining_pct = (mcap - entry) / entry * 100
+                tp2_pnl = POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100) * (remaining_pct / 100)
+                prev_pnl = t.get('pnl_sol', 0)
+                total_pnl = round(tp2_pnl + prev_pnl, 6)
+                total_pct = round((total_pnl / POSITION_SIZE) * 100, 1)
+                t['pnl_sol'] = total_pnl
+                t['pnl_pct'] = total_pct
+                t['status'] = 'closed'
+                
+                with open(TRADES_FILE, 'w') as f:
+                    for tr in trades:
+                        f.write(json.dumps(tr) + '\n')
+                
+                timestamp = datetime.utcnow().strftime("%H:%M UTC")
+                msg = f"""📊 TRAILING STOP (FULL EXIT) | {timestamp}
 ━━━━━━━━━━━━━━━
 💰 {sym}
 📍 Entry MC: ${entry:,}
+📍 Peak MC: ${int(peak):,}
 📍 Exit MC: ${int(mcap):,}
 🟢 Total P&L: +{total_pnl:.4f} SOL (+{total_pct}%)
 💰 Wallet: {balance:.4f} SOL
-📋 Reason: TP2_AUTO
+📋 Reason: Trailing stop ({drawdown_pct:.0f}% drop from peak)
 
 🔗 https://dexscreener.com/solana/{pair}
 🥧 https://pump.fun/{tok}"""
-            send_alert(msg)
-            print(f"✅ {sym} TP2 AUTO: full exit at +{change:.0f}%")
-            updated = True
+                send_alert(msg)
+                print(f"✅ {sym} TRAILING STOP: {drawdown_pct:.0f}% drop from peak ${int(peak):,}")
+                updated = True
         
         # Stop Loss: -25%
         elif change <= STOP_LOSS_PERCENT and not t.get('stopped'):
@@ -173,7 +195,7 @@ def check_positions():
 
 def main():
     print(f"📊 Position Monitor starting...")
-    print(f"📋 Exit Plan: TP1 +{TP1_PERCENT}% (sell {TP1_SELL_PCT}%) | TP2 +{TP2_PERCENT}% (sell {TP2_SELL_PCT}%) | Stop {STOP_LOSS_PERCENT}%")
+    print(f"📋 Exit Plan: TP1 +{TP1_PERCENT}% (sell {TP1_SELL_PCT}%) | Trailing {TRAILING_STOP_PCT}% drop from peak | Stop {STOP_LOSS_PERCENT}%")
     
     while True:
         try:

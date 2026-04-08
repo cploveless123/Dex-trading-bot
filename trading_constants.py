@@ -11,6 +11,7 @@ TP1_SELL_PCT = 70         # % of position to sell at TP1
 TP2_PERCENT = 95          # Second take profit level (%)
 TP2_SELL_PCT = 30         # % of remaining to sell at TP2
 STOP_LOSS_PERCENT = -25   # Stop loss percentage
+TRAILING_STOP_PCT = 20   # % drop from peak to trigger trailing stop on remaining position
 
 # Position
 POSITION_SIZE_SOL = 0.05  # SOL per trade
@@ -29,7 +30,7 @@ ALERTS_FILE = Path("/root/Dex-trading-bot/wallet_analysis/whale_activity.jsonl")
 
 EXIT_PLAN_TEXT = f"""🎯 Exit Plan:
 +{TP1_PERCENT}% → Sell {TP1_SELL_PCT}%
-+{TP2_PERCENT}% → Sell {TP2_SELL_PCT}%
+📊 Trailing stop: sell remaining if {TRAILING_STOP_PCT}% drop from peak
 ⚠️ Stop: {STOP_LOSS_PERCENT}%"""
 
 def get_exit_plan():
