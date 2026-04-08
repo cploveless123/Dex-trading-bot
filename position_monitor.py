@@ -98,8 +98,8 @@ def check_positions():
 💰 {sym}
 📍 Entry MC: ${entry:,}
 📍 Exit MC: ${int(mcap):,}
-🟢 Sold 75%: +{tp1_pnl:.4f} SOL (+{TP1_PERCENT}%)
-💰 Wallet: {balance:.4f} SOL (25% still in trade)
+🟢 Sold {TP1_SELL_PCT}% (initial investment): +{tp1_pnl:.4f} SOL (+{TP1_PERCENT}%)
+💰 Wallet: {balance:.4f} SOL (~{100-TP1_SELL_PCT}% still in trade)
 
 🔗 https://dexscreener.com/solana/{pair}
 🥧 https://pump.fun/{tok}
