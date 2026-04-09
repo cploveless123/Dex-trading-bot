@@ -34,14 +34,14 @@ PUMP_FUN_ONLY = False     # Trade pump.fun AND pumpswap tokens
 # Trailing: 20% from peak on remaining 25%
 # Stop: -20%
 TP1_PERCENT = 50         # First target: +50% minimum before trailing activates
-TP1_TRAILING_PCT = 10   # 10% trailing stop from peak after hitting +50%
+TP1_TRAILING_PCT = 15   # 15% trailing stop from peak after hitting +50%
 TP1_SELL_PCT = 50         # Sell 50% at TP1
 TP2_PERCENT = 200         # Second target: +200%
 TP2_SELL_PCT = 25         # Sell 25% more at TP2
 TP3_PERCENT = 500         # Third target: +500%
 TP3_SELL_PCT = 25         # Sell remaining 25% at TP3
 STOP_LOSS_PERCENT = -20   # Stop loss: -20%
-TRAILING_STOP_PCT = 20    # Trailing stop: 20% from peak on remaining
+TRAILING_STOP_PCT = 30    # Trailing stop: 30% from peak on remaining
 
 # Slippage & Tax Correction
 SLIPPAGE_TAX_COST = 0.025   # ~2.5% per round trip
@@ -52,12 +52,12 @@ REAL_TP2_PCT = round(TP2_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_TP3_PCT = round(TP3_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_STOP_PCT = round(STOP_LOSS_PERCENT * (1 + SLIPPAGE_TAX_COST), 1)
 
-EXIT_PLAN_TEXT = f"""🎯 Exit Plan:
+EXIT_PLAN_TEXT = f"""🎯 Exit Plan (tax-adjusted):
 +{TP1_PERCENT}% minimum → then {TP1_TRAILING_PCT}% trailing from peak → Sell {TP1_SELL_PCT}%
 +{TP2_PERCENT}% → Sell {TP2_SELL_PCT}% more
 +{TP3_PERCENT}% → Sell remaining {TP3_SELL_PCT}%
 📊 Trailing: {TRAILING_STOP_PCT}% from peak on remaining
-⚠️ Stop: {STOP_LOSS_PERCENT}% (net: {REAL_STOP_PCT}% after tax)"""
+⚠️ Stop: {STOP_LOSS_PERCENT}% (net: {REAL_STOP_PCT}% after {SLIPPAGE_TAX_COST*100}% tax/slippage)"""
 
 # Re-entry lockout after close
 REENTRY_LOCKOUT_MINUTES = 30
