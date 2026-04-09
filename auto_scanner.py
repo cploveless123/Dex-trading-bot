@@ -137,26 +137,19 @@ def check_and_buy():
             if sym in TICKER_BLACKLIST:
                 continue
             
-            # Block re-entry on any recently closed token
-            # UNLESS token shows STRONG renewed momentum (bs 3.0+ AND chg 60%+)
-            recently_closed = None
+            # === NEW RULE: NEVER re-enter a position we've already sold ===
+            # Block re-entry on ANY fully exited token (no exceptions, no time limit)
+            already_exited = False
             for t in existing:
-                if t.get('token_address') == addr and t.get('exit_reason') in ['STOP_AUTO', 'MANUAL_CLOSE', 'TP2', 'TP1_AUTO']:
-                    from datetime import datetime as dt
-                    closed = t.get('closed_at', '')
-                    if closed:
-                        try:
-                            closed_ts = dt.fromisoformat(closed.replace('Z', '+00:00'))
-                            age_minutes = (dt.utcnow() - closed_ts.replace(tzinfo=None)).total_seconds() / 60
-                            if age_minutes < REENTRY_LOCKOUT_MINUTES:
-                                recently_closed = t
-                                break
-                        except:
-                            pass
-            
-            if recently_closed:
-                if not (bs >= REENTRY_BS_THRESHOLD and chg >= REENTRY_CHG_THRESHOLD):
-                    continue
+                if t.get('token_address') == addr:
+                    if t.get('status') == 'closed' or t.get('fully_exited'):
+                        already_exited = True
+                        break
+                    elif t.get('tp1_sold'):
+                        already_exited = True
+                        break
+            if already_exited:
+                continue
             
             balance = 1.0 + sum(t.get('pnl_sol', 0) for t in existing)
             

@@ -41,6 +41,26 @@ def should_buy_from_signal(sig: dict, market: dict) -> tuple:
     """Check if a GMGN signal passes our buy criteria. Returns (should_buy, reasons)"""
     reasons_why_not = []
     
+    # === NEW RULE: Never re-enter a position we've already sold ===
+    from pathlib import Path
+    ca = (sig.get('token_address') or '').lower()
+    if not ca:
+        ca = market.get('baseToken', {}).get('address', '').lower()
+    if ca:
+        try:
+            with open(Path(__file__).parent / "trades" / "sim_trades.jsonl") as f:
+                for line in f:
+                    t = json.loads(line)
+                    if t.get('token_address', '').lower() == ca:
+                        if t.get('status') == 'closed' or t.get('fully_exited'):
+                            reasons_why_not.append(f"RE-ENTRY BLOCKED: {sig.get('symbol', t.get('token', '?'))} already fully exited")
+                            return False, reasons_why_not
+                        elif t.get('tp1_sold'):
+                            reasons_why_not.append(f"RE-ENTRY BLOCKED: {sig.get('symbol', t.get('token', '?'))} already has open partial position")
+                            return False, reasons_why_not
+        except:
+            pass
+    
     # Get market data
     mcap = market.get('fdv', 0) or 0
     v = market.get('volume', {}).get('h24', 0) or 0
