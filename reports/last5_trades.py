@@ -22,12 +22,12 @@ closed_all = [t for t in session_trades if t.get('fully_exited') or t.get('trail
 open_full = [t for t in session_trades if t.get('status') == 'open']
 open_partial = [t for t in session_trades if t.get('status') == 'open_partial']
 
-closed_pnl = sum(t.get('pnl_sol', 0) for t in closed_all)
-locked = (len(open_full) * POSITION_SIZE) + (len(open_partial) * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100))
-balance = CHRIS_STARTING_BALANCE + closed_pnl - locked
+total_pnl = sum(t.get('pnl_sol', 0) for t in session_trades if t.get('pnl_sol') is not None)
+balance = CHRIS_STARTING_BALANCE + total_pnl
 
-wins = len([t for t in closed_all if t.get('pnl_sol', 0) > 0])
-losses = len([t for t in closed_all if t.get('pnl_sol', 0) < 0])
+has_pnl = [t for t in session_trades if t.get('pnl_sol') is not None]
+wins = len([t for t in has_pnl if t.get('pnl_sol', 0) > 0])
+losses = len([t for t in has_pnl if t.get('pnl_sol', 0) < 0])
 
 closed_all.sort(key=lambda x: x.get('closed_at', x.get('opened_at', '')), reverse=True)
 recent = closed_all[:5]
