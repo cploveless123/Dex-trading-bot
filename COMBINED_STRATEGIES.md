@@ -10,14 +10,14 @@ Turn 1.0 SOL → 100 SOL
 
 ## ✅ WINNER TRAITS
 - Top10% holder < 50%
-- BS ratio > 0.20
+- BS ratio > 1.15
 - Liquidity > $1K
 
 ## ❌ ANTI-PATTERNS (REJECT)
 - Top10% > 70% = dump
 - Liquidity < $1K = rug
-- 1min change > 50% = chasing top
-- 1min change < -50% = falling knife
+- 5min change > 50% = chasing top
+- 5min change < -50% = falling knife
 - Non-ASCII ticker = reject
 
 ---
@@ -30,9 +30,10 @@ Turn 1.0 SOL → 100 SOL
 | BS ratio | > 0.20 |
 | Holders | > 15 |
 | Vol/Mcap | > 1.25x |
-| 1 min change | -30% to +5% |
-| 5 min volume | > $1K |
+| 1 min change | -30% to +5% (PULLBACK ONLY) |
+| 5 min vol | > $1K |
 | Liquidity | > $1K |
+| Target WR | 35%+ |
 
 ---
 
@@ -41,9 +42,8 @@ Turn 1.0 SOL → 100 SOL
 | Target | Action |
 |--------|--------|
 | TP1 +50% | Sell 50%, trail 15% |
-| TP2 +200% | Sell 25% more |
-| TP3 +500% | Sell remaining 25% |
-| Trailing | 30% from peak on remaining |
+| TP2 +150% | Sell 25% |
+| Trailing | 30% from peak |
 | Stop | -20% |
 
 ---
