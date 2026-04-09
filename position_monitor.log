@@ -222,3 +222,7 @@ Checking every 5s
   FAUCET: mcap=$16,570 | gain=-3.7% | peak=$27,247 | dd=+0%
   FAUCET: mcap=$16,570 | gain=-3.7% | peak=$27,247 | dd=+0%
   FAUCET: mcap=$16,570 | gain=-3.7% | peak=$27,247 | dd=+0%
+  FAUCET: mcap=$16,570 | gain=-3.7% | peak=$27,247 | dd=+0%
+  FAUCET: mcap=$16,570 | gain=-3.7% | peak=$27,247 | dd=+0%
+[00:59:53] Monitor alive | 169 checks | 1 open | next in 5s
+  FAUCET: mcap=$16,570 | gain=-3.7% | peak=$27,247 | dd=+0%
