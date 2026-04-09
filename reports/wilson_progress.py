@@ -6,7 +6,7 @@ from datetime import datetime
 from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from trading_constants import POSITION_SIZE, TP1_SELL_PCT, EXIT_PLAN_TEXT, SIM_RESET_TIMESTAMP
+from trading_constants import POSITION_SIZE, TP1_SELL_PCT, EXIT_PLAN_TEXT, SIM_RESET_TIMESTAMP, CHRIS_STARTING_BALANCE
 
 TRADES_FILE = Path(__file__).parent.parent / "trades" / "sim_trades.jsonl"
 
@@ -15,15 +15,15 @@ with open(TRADES_FILE) as f:
 
 reset_ts = SIM_RESET_TIMESTAMP
 reset_trades = [t for t in trades if t.get('opened_at', '') > reset_ts]
-closed_all = [t for t in reset_trades if t.get('status') == 'closed' or t.get('closed') == True]
+closed_all = [t for t in reset_trades if t.get('closed_at')]
 open_full = [t for t in reset_trades if t.get('status') == 'open']
 open_partial = [t for t in reset_trades if t.get('status') == 'open_partial']
 open_pos = open_full + open_partial
 
 closed_pnl = sum(t.get('pnl_sol', 0) for t in closed_all)
 locked = (len(open_full) * POSITION_SIZE) + (len(open_partial) * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100))
-balance = 1.0 + closed_pnl - locked
-available = 1.0 + closed_pnl
+balance = CHRIS_STARTING_BALANCE + closed_pnl
+available = CHRIS_STARTING_BALANCE + closed_pnl - locked
 
 wins = len([t for t in closed_all if t.get('pnl_sol', 0) > 0])
 losses = len([t for t in closed_all if t.get('pnl_sol', 0) < 0])

@@ -74,7 +74,7 @@ GMGN_VOL_MCAP_MAX = 15.0
 
 # Simulation reset timestamp
 SIM_RESET_TIMESTAMP = '2026-04-08T20:45:00'
-CHRIS_STARTING_BALANCE = 1.0   # Reset to 1.0 SOL for fresh tracking
+CHRIS_STARTING_BALANCE = 0.5050   # Chris's actual starting balance (session reset)
 
 # API Rate Limiting
 DEXSCREENER_INTERVAL = 30
