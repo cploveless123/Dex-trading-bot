@@ -3,11 +3,12 @@ Exit Plan: TP1 +50% (sell 50%) | TP2 +200% | TP3 +500% | Trailing 30% | Stop -20
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
-  Muskism: mcap=$9,089 | gain=+0.0% | peak=$9,089 | dd=+0%
-  Muskism: mcap=$9,089 | gain=+0.0% | peak=$9,089 | dd=+0%
-  Muskism: mcap=$9,089 | gain=+0.0% | peak=$9,089 | dd=+0%
-  Muskism: mcap=$9,089 | gain=+0.0% | peak=$9,089 | dd=+0%
-  Muskism: mcap=$9,089 | gain=+0.0% | peak=$9,089 | dd=+0%
-  Muskism: mcap=$9,089 | gain=+0.0% | peak=$9,089 | dd=+0%
-  Muskism: mcap=$9,090 | gain=+0.0% | peak=$9,090 | dd=+0%
-  Muskism: mcap=$9,090 | gain=+0.0% | peak=$9,090 | dd=+0%
+  Muskism: mcap=$9,431 | gain=+3.8% | peak=$9,741 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 MOODUANG STOP LOSS @ $6,993 (-26.5%)
+  Muskism: mcap=$9,431 | gain=+3.8% | peak=$9,741 | dd=+0%
+  Muskism: mcap=$9,431 | gain=+3.8% | peak=$9,741 | dd=+0%
+  Muskism: mcap=$9,431 | gain=+3.8% | peak=$9,741 | dd=+0%
+  Muskism: mcap=$10,637 | gain=+17.0% | peak=$10,637 | dd=+0%
+  Muskism: mcap=$10,637 | gain=+17.0% | peak=$10,637 | dd=+0%
+  Muskism: mcap=$10,637 | gain=+17.0% | peak=$10,637 | dd=+0%

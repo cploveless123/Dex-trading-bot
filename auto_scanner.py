@@ -98,7 +98,7 @@ def check_should_buy(addr, p, sym, dex, m, v, v5, bs, buys, sells, holders, pair
     if not early_momentum and vol_mcap_ratio < 1.0:
         return False, f"vol/mcap {vol_mcap_ratio:.1f}x < 1.0x"
     
-    return True, f"OK: BS={bs:.2f} vol/mcap={vol_mcap_ratio:.1f}x age={pair_age_min:.0f}min"
+    return True, f"OK: BS={bs:.2f} vol/mcap={vol_mcap_ratio:.1f}x age={pair_age_min:.0f}min pullback={chg5:.0f}%"
 
 def check_and_buy():
     """Main scan loop"""

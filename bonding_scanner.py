@@ -149,6 +149,13 @@ def check_and_buy_bonding():
                 if vol_mcap_ratio < 1.0:
                     continue
             
+            # === PULLBACK INSIGHT: Buy AFTER dip, not on pump ===
+            if pair_age_min >= 5:
+                if chg5 > 40:
+                    continue  # Bought the top
+                if chg5 < -20:
+                    continue  # Falling knife
+            
             # Check if already tracked
             try:
                 with open(TRADES_FILE) as f:
@@ -199,7 +206,7 @@ def check_and_buy_bonding():
                 "pair_age_min": round(pair_age_min, 1),
                 "bs_ratio": round(bs, 2),
                 "vol_mcap_ratio": round(vol_mcap_ratio, 2),
-                "chg5": chg5
+                "chg5": round(chg5, 1)
             }
             
             with open(TRADES_FILE, "a") as f:
