@@ -73,7 +73,7 @@ GMGN_VOL_MCAP_MIN = 2.0    # 2x vol/mcap - captures more setups
 GMGN_VOL_MCAP_MAX = 15.0
 
 # Simulation reset timestamp
-SIM_RESET_TIMESTAMP = '2026-04-09T14:14:44.900653'
+SIM_RESET_TIMESTAMP = '2026-04-09T14:53:39.483698'
 CHRIS_STARTING_BALANCE = 1.0   # Reset for fresh simulation
 
 # API Rate Limiting
