@@ -30,7 +30,7 @@ Turn 1.0 SOL → 100 SOL
 | BS ratio | > 0.20 |
 | Holders | > 15 |
 | Vol/Mcap | > 1.25x |
-| 1 min change | -30% to +5% (PULLBACK ONLY) |
+| **1 min change** | **-50% to +5% (PULLBACK ONLY)** |
 | 5 min vol | > $1K |
 | Liquidity | > $1K |
 | Target WR | 35%+ |
@@ -49,7 +49,7 @@ Turn 1.0 SOL → 100 SOL
 ---
 
 ## 🔧 FILTERS
-- Confirmed pullback only (1min change -30% to +5%)
+- Confirmed pullback only (1min change -50% to +5%)
 - Liquidity > $1K
 - ASCII tickers only
 - 60s startup delay
@@ -58,7 +58,7 @@ Turn 1.0 SOL → 100 SOL
 
 ## ⚙️ ACTIVE SCANNER
 | Scanner | Strategy |
-|--------|----------|
+|---------|----------|
 | whale_momentum_scanner.py | PULLBACK_MOMENTUM |
 
 ---
