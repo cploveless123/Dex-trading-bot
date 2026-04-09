@@ -20,6 +20,8 @@ Turn 1.0 SOL → 100 SOL
 
 • Top10% > 70% = dump
 • Liquidity < $1K = rug
+• 5min change > 50% = chasing top
+• 5min change < -50% = falling knife
 • Non-ASCII ticker = reject
 
 ---
@@ -29,22 +31,20 @@ Turn 1.0 SOL → 100 SOL
 | Rule | Value |
 | ------|------- |
 | Mcap | $5K - $75K |
-| BS ratio | > 0.20 |
+| BS ratio | > 0.2 (<2 min) / >1.0 (>2 min) |
 | Holders | > 15 |
-| Vol/Mcap | > 1.15x |
+| Vol/Mcap | > 1.1x |
 | 5 min vol | > $1K |
 | Liquidity | > $1K |
 
-### Pullback Detection
+### Dip Detection
 
-| Type | Rule |
+| Age | Rule |
 | --------------- | --------------------------- |
-| New (<90 sec) | 30% dip from local peak |
-| Older (>90 sec) | 30% dip from local peak |
+| **New (<2 min)** | 11-39% dip from peak |
+| **Older (>2 min)** | 11-39% dip + h1>+5% + 5min<0% + 5min vol>$1K |
 
-### Volume Momentum Filter
-• High 1min% + **declining volume** = **TOP FORMING** (reject)
-• High 1min% + **increasing volume** = momentum still going (hold)
+**Peak** = highest price seen in first 60 seconds
 
 ---
 
@@ -61,8 +61,9 @@ Turn 1.0 SOL → 100 SOL
 
 ## 🔧 FILTERS
 
-• 30% dip from local peak (all pairs)
-• Volume momentum confirmation
+• Age-based BS ratio
+• 11-39% peak dip
+• Multi-timeframe confirmation for older pairs
 • Liquidity > $1K
 • 60s startup delay
 
