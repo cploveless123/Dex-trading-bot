@@ -74,7 +74,7 @@ GMGN_VOL_MCAP_MAX = 15.0
 
 # Simulation reset timestamp
 SIM_RESET_TIMESTAMP = '2026-04-09T03:50:50'
-CHRIS_STARTING_BALANCE = 1.0   # Reset for fresh simulation
+CHRIS_STARTING_BALANCE = 0.5050   # Reset for fresh simulation
 
 # API Rate Limiting
 DEXSCREENER_INTERVAL = 30
