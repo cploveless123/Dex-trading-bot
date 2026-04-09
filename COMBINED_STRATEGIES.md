@@ -27,11 +27,11 @@ Turn 1.0 SOL → 100 SOL
 ## 📊 BUY CRITERIA
 
 | Rule | Value |
-| --------- | ---------- |
+| ------|------- |
 | Mcap | $5K - $75K |
 | BS ratio | > 0.20 |
 | Holders | > 15 |
-| Vol/Mcap | > 1.25x |
+| Vol/Mcap | > 1.15x |
 | 5 min vol | > $1K |
 | Liquidity | > $1K |
 
@@ -40,7 +40,7 @@ Turn 1.0 SOL → 100 SOL
 | Age | Rule |
 | --------------- | --------------------------- |
 | New (<90 sec) | Initial dip 5-50% from peak |
-| Older (>5 min) | 1min -50% to +5% AND 5min >10% |
+| Older (>5 min) | 1min -50% to +5%, 5min >10%, **24hr >50%**, **1min vol >$1K** |
 
 ---
 
@@ -58,6 +58,6 @@ Turn 1.0 SOL → 100 SOL
 ## 🔧 FILTERS
 
 • Initial dip for new pairs (<90 sec)
-• Dip detection for older pairs
+• Multi-timeframe for older pairs
 • Liquidity > $1K
-• ASCII tickers only
+• 60s startup delay
