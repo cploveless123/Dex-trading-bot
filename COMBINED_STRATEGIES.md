@@ -90,7 +90,7 @@ Turn 1.0 SOL → 100 SOL via compound pump.fun/DEX trades
 3. BS ratio >1.5 (stricter for whale follow)
 4. Holders >20
 5. Vol/mcap >1x
-6. Pullback: 5min change +5% to +25%
+6. Pullback: 5min change 0% to +15%
 
 **Exit rules:**
 - TP1 +50% → sell 50%
