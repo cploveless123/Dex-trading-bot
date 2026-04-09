@@ -342,3 +342,370 @@ Checking every 5s
   Bloomerism: mcap=$19,993 | gain=+18.6% | peak=$20,264 | dd=+0%
   1 sol: mcap=$8,915 | gain=+0.0% | peak=$8,915 | dd=+0%
   Ewon: mcap=$10,566 | gain=-1.8% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$19,993 | gain=+18.6% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,915 | gain=+0.0% | peak=$8,915 | dd=+0%
+  Ewon: mcap=$10,566 | gain=-1.8% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$19,703 | gain=+16.9% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,915 | gain=+0.0% | peak=$8,915 | dd=+0%
+  Ewon: mcap=$10,885 | gain=+1.1% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$19,703 | gain=+16.9% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,333 | gain=-6.5% | peak=$8,915 | dd=+0%
+[03:01:38] Monitor alive | 13 checks | 3 open | next in 5s
+  Ewon: mcap=$10,885 | gain=+1.1% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$19,703 | gain=+16.9% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,333 | gain=-6.5% | peak=$8,915 | dd=+0%
+  Ewon: mcap=$10,885 | gain=+1.1% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$19,703 | gain=+16.9% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,333 | gain=-6.5% | peak=$8,915 | dd=+0%
+  Ewon: mcap=$10,885 | gain=+1.1% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$19,703 | gain=+16.9% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,333 | gain=-6.5% | peak=$8,915 | dd=+0%
+  Ewon: mcap=$10,885 | gain=+1.1% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$19,703 | gain=+16.9% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,333 | gain=-6.5% | peak=$8,915 | dd=+0%
+  Ewon: mcap=$10,885 | gain=+1.1% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$18,931 | gain=+12.3% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,333 | gain=-6.5% | peak=$8,915 | dd=+0%
+  Ewon: mcap=$11,056 | gain=+2.7% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$18,931 | gain=+12.3% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,465 | gain=+17.4% | peak=$10,465 | dd=+0%
+  Ewon: mcap=$11,056 | gain=+2.7% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$18,931 | gain=+12.3% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,465 | gain=+17.4% | peak=$10,465 | dd=+0%
+  Ewon: mcap=$11,056 | gain=+2.7% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$18,931 | gain=+12.3% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,465 | gain=+17.4% | peak=$10,465 | dd=+0%
+  Ewon: mcap=$11,056 | gain=+2.7% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$18,931 | gain=+12.3% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,465 | gain=+17.4% | peak=$10,465 | dd=+0%
+  Ewon: mcap=$11,056 | gain=+2.7% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$18,931 | gain=+12.3% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,465 | gain=+17.4% | peak=$10,465 | dd=+0%
+  Ewon: mcap=$11,056 | gain=+2.7% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$17,986 | gain=+6.7% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$12,882 | gain=+44.5% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$13,090 | gain=+21.6% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$17,986 | gain=+6.7% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$12,882 | gain=+44.5% | peak=$12,882 | dd=+0%
+[03:02:40] Monitor alive | 25 checks | 3 open | next in 5s
+  Ewon: mcap=$13,090 | gain=+21.6% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$17,986 | gain=+6.7% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$12,882 | gain=+44.5% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$13,090 | gain=+21.6% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$17,986 | gain=+6.7% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$12,882 | gain=+44.5% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$13,090 | gain=+21.6% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$17,986 | gain=+6.7% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$12,882 | gain=+44.5% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$13,090 | gain=+21.6% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$17,986 | gain=+6.7% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$12,882 | gain=+44.5% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$13,090 | gain=+21.6% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$18,001 | gain=+6.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,972 | gain=+23.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$12,608 | gain=+17.2% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$18,001 | gain=+6.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,972 | gain=+23.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$12,608 | gain=+17.2% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$18,001 | gain=+6.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,972 | gain=+23.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$12,608 | gain=+17.2% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$18,001 | gain=+6.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,972 | gain=+23.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$12,608 | gain=+17.2% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$18,001 | gain=+6.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,972 | gain=+23.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$12,608 | gain=+17.2% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$19,554 | gain=+16.0% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,972 | gain=+23.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$13,341 | gain=+24.0% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,554 | gain=+16.0% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,060 | gain=+12.9% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$13,341 | gain=+24.0% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,554 | gain=+16.0% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,060 | gain=+12.9% | peak=$12,882 | dd=+0%
+[03:03:43] Monitor alive | 37 checks | 3 open | next in 5s
+  Ewon: mcap=$13,341 | gain=+24.0% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,554 | gain=+16.0% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,060 | gain=+12.9% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$13,341 | gain=+24.0% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,554 | gain=+16.0% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,060 | gain=+12.9% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$13,341 | gain=+24.0% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,554 | gain=+16.0% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,060 | gain=+12.9% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$13,341 | gain=+24.0% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$18,189 | gain=+7.9% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,060 | gain=+12.9% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,980 | gain=+11.3% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$18,189 | gain=+7.9% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,306 | gain=+15.6% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,980 | gain=+11.3% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$18,189 | gain=+7.9% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,306 | gain=+15.6% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,980 | gain=+11.3% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$18,189 | gain=+7.9% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,306 | gain=+15.6% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,980 | gain=+11.3% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$18,189 | gain=+7.9% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,306 | gain=+15.6% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,980 | gain=+11.3% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$18,189 | gain=+7.9% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,306 | gain=+15.6% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,980 | gain=+11.3% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$18,162 | gain=+7.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$10,306 | gain=+15.6% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,693 | gain=+8.7% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$18,162 | gain=+7.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$11,600 | gain=+30.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,693 | gain=+8.7% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$18,162 | gain=+7.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$11,600 | gain=+30.1% | peak=$12,882 | dd=+0%
+[03:04:45] Monitor alive | 49 checks | 3 open | next in 5s
+  Ewon: mcap=$11,693 | gain=+8.7% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$18,162 | gain=+7.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$11,600 | gain=+30.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,693 | gain=+8.7% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$18,162 | gain=+7.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$11,600 | gain=+30.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,693 | gain=+8.7% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$18,162 | gain=+7.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$11,600 | gain=+30.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,693 | gain=+8.7% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,138 | gain=+1.7% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,925 | gain=+0.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$12,109 | gain=+12.5% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,138 | gain=+1.7% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,925 | gain=+0.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$12,109 | gain=+12.5% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,138 | gain=+1.7% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,925 | gain=+0.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$12,109 | gain=+12.5% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,138 | gain=+1.7% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,925 | gain=+0.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$12,109 | gain=+12.5% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,138 | gain=+1.7% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,925 | gain=+0.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$12,109 | gain=+12.5% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,153 | gain=+1.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,925 | gain=+0.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$12,364 | gain=+14.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,153 | gain=+1.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,282 | gain=-7.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$12,364 | gain=+14.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,153 | gain=+1.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,282 | gain=-7.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$12,364 | gain=+14.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,153 | gain=+1.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,282 | gain=-7.1% | peak=$12,882 | dd=+0%
+[03:05:48] Monitor alive | 61 checks | 3 open | next in 5s
+  Ewon: mcap=$12,364 | gain=+14.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,153 | gain=+1.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,282 | gain=-7.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$12,364 | gain=+14.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,153 | gain=+1.8% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,282 | gain=-7.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$12,364 | gain=+14.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,432 | gain=+3.4% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,282 | gain=-7.1% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,260 | gain=+4.6% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,432 | gain=+3.4% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,332 | gain=-6.5% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,260 | gain=+4.6% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,432 | gain=+3.4% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,332 | gain=-6.5% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,260 | gain=+4.6% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,432 | gain=+3.4% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,332 | gain=-6.5% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,260 | gain=+4.6% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,432 | gain=+3.4% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,332 | gain=-6.5% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,260 | gain=+4.6% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$17,432 | gain=+3.4% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,332 | gain=-6.5% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$11,260 | gain=+4.6% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,119 | gain=+13.4% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,332 | gain=-6.5% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,718 | gain=-0.4% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,119 | gain=+13.4% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,317 | gain=-6.7% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,718 | gain=-0.4% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,119 | gain=+13.4% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,317 | gain=-6.7% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,718 | gain=-0.4% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,119 | gain=+13.4% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,317 | gain=-6.7% | peak=$12,882 | dd=+0%
+[03:06:50] Monitor alive | 73 checks | 3 open | next in 5s
+  Ewon: mcap=$10,718 | gain=-0.4% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,119 | gain=+13.4% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,317 | gain=-6.7% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,718 | gain=-0.4% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,119 | gain=+13.4% | peak=$20,264 | dd=+0%
+  1 sol: mcap=$8,317 | gain=-6.7% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,718 | gain=-0.4% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,555 | gain=+22.0% | peak=$20,555 | dd=+0%
+  1 sol: mcap=$8,989 | gain=+0.8% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,572 | gain=-1.8% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,555 | gain=+22.0% | peak=$20,555 | dd=+0%
+  1 sol: mcap=$8,989 | gain=+0.8% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,572 | gain=-1.8% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,555 | gain=+22.0% | peak=$20,555 | dd=+0%
+  1 sol: mcap=$8,989 | gain=+0.8% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,572 | gain=-1.8% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,555 | gain=+22.0% | peak=$20,555 | dd=+0%
+  1 sol: mcap=$8,989 | gain=+0.8% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,572 | gain=-1.8% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,555 | gain=+22.0% | peak=$20,555 | dd=+0%
+  1 sol: mcap=$8,989 | gain=+0.8% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,572 | gain=-1.8% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,555 | gain=+22.0% | peak=$20,555 | dd=+0%
+  1 sol: mcap=$8,989 | gain=+0.8% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,572 | gain=-1.8% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,887 | gain=+23.9% | peak=$20,887 | dd=+0%
+  1 sol: mcap=$8,996 | gain=+0.9% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,478 | gain=-2.6% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,887 | gain=+23.9% | peak=$20,887 | dd=+0%
+  1 sol: mcap=$8,996 | gain=+0.9% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,478 | gain=-2.6% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,887 | gain=+23.9% | peak=$20,887 | dd=+0%
+  1 sol: mcap=$8,996 | gain=+0.9% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,478 | gain=-2.6% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,887 | gain=+23.9% | peak=$20,887 | dd=+0%
+  1 sol: mcap=$8,996 | gain=+0.9% | peak=$12,882 | dd=+0%
+[03:07:53] Monitor alive | 85 checks | 3 open | next in 5s
+  Ewon: mcap=$10,478 | gain=-2.6% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,887 | gain=+23.9% | peak=$20,887 | dd=+0%
+  1 sol: mcap=$8,996 | gain=+0.9% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,478 | gain=-2.6% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,014 | gain=+12.8% | peak=$20,887 | dd=+0%
+  1 sol: mcap=$8,996 | gain=+0.9% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,236 | gain=-4.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,014 | gain=+12.8% | peak=$20,887 | dd=+0%
+  1 sol: mcap=$9,395 | gain=+5.4% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,236 | gain=-4.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,014 | gain=+12.8% | peak=$20,887 | dd=+0%
+  1 sol: mcap=$9,395 | gain=+5.4% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,236 | gain=-4.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,014 | gain=+12.8% | peak=$20,887 | dd=+0%
+  1 sol: mcap=$9,395 | gain=+5.4% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,236 | gain=-4.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,014 | gain=+12.8% | peak=$20,887 | dd=+0%
+  1 sol: mcap=$9,395 | gain=+5.4% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,236 | gain=-4.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,014 | gain=+12.8% | peak=$20,887 | dd=+0%
+  1 sol: mcap=$9,395 | gain=+5.4% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,236 | gain=-4.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,804 | gain=+23.4% | peak=$20,887 | dd=+0%
+  1 sol: mcap=$9,395 | gain=+5.4% | peak=$12,882 | dd=+0%
+  Ewon: mcap=$10,251 | gain=-4.7% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,804 | gain=+23.4% | peak=$20,887 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 1 sol STOP LOSS @ $6,977 (-21.7%)
+  Ewon: mcap=$10,251 | gain=-4.7% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,804 | gain=+23.4% | peak=$20,887 | dd=+0%
+  Ewon: mcap=$10,251 | gain=-4.7% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,804 | gain=+23.4% | peak=$20,887 | dd=+0%
+  Ewon: mcap=$10,251 | gain=-4.7% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,804 | gain=+23.4% | peak=$20,887 | dd=+0%
+[03:08:57] Monitor alive | 97 checks | 2 open | next in 5s
+  Ewon: mcap=$10,251 | gain=-4.7% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,804 | gain=+23.4% | peak=$20,887 | dd=+0%
+  Ewon: mcap=$10,251 | gain=-4.7% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$22,641 | gain=+34.3% | peak=$22,641 | dd=+0%
+  Ewon: mcap=$10,124 | gain=-5.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$22,641 | gain=+34.3% | peak=$22,641 | dd=+0%
+  Ewon: mcap=$10,124 | gain=-5.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$22,641 | gain=+34.3% | peak=$22,641 | dd=+0%
+  Ewon: mcap=$10,124 | gain=-5.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$22,641 | gain=+34.3% | peak=$22,641 | dd=+0%
+  Ewon: mcap=$10,124 | gain=-5.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$22,641 | gain=+34.3% | peak=$22,641 | dd=+0%
+  Verde: mcap=$11,597 | gain=+0.0% | peak=$11,597 | dd=+0%
+  Ewon: mcap=$10,124 | gain=-5.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$22,641 | gain=+34.3% | peak=$22,641 | dd=+0%
+  Verde: mcap=$11,597 | gain=+0.0% | peak=$11,597 | dd=+0%
+  Ewon: mcap=$10,124 | gain=-5.9% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,294 | gain=+20.4% | peak=$22,641 | dd=+0%
+  Verde: mcap=$12,396 | gain=+6.9% | peak=$12,396 | dd=+0%
+  Ewon: mcap=$9,561 | gain=-11.2% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,294 | gain=+20.4% | peak=$22,641 | dd=+0%
+  Verde: mcap=$12,396 | gain=+6.9% | peak=$12,396 | dd=+0%
+  Ewon: mcap=$9,561 | gain=-11.2% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,294 | gain=+20.4% | peak=$22,641 | dd=+0%
+  Verde: mcap=$12,396 | gain=+6.9% | peak=$12,396 | dd=+0%
+  Ewon: mcap=$9,561 | gain=-11.2% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,294 | gain=+20.4% | peak=$22,641 | dd=+0%
+  Verde: mcap=$12,396 | gain=+6.9% | peak=$12,396 | dd=+0%
+  Ewon: mcap=$9,561 | gain=-11.2% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$20,294 | gain=+20.4% | peak=$22,641 | dd=+0%
+  Verde: mcap=$12,396 | gain=+6.9% | peak=$12,396 | dd=+0%
+[03:09:59] Monitor alive | 109 checks | 3 open | next in 5s
+  Ewon: mcap=$9,561 | gain=-11.2% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,610 | gain=+16.4% | peak=$22,641 | dd=+0%
+  Verde: mcap=$12,396 | gain=+6.9% | peak=$12,396 | dd=+0%
+  Ewon: mcap=$9,033 | gain=-16.1% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,610 | gain=+16.4% | peak=$22,641 | dd=+0%
+  Verde: mcap=$11,412 | gain=-1.6% | peak=$12,396 | dd=+0%
+  Ewon: mcap=$9,033 | gain=-16.1% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,610 | gain=+16.4% | peak=$22,641 | dd=+0%
+  Verde: mcap=$11,412 | gain=-1.6% | peak=$12,396 | dd=+0%
+  Ewon: mcap=$9,033 | gain=-16.1% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,610 | gain=+16.4% | peak=$22,641 | dd=+0%
+  Verde: mcap=$11,412 | gain=-1.6% | peak=$12,396 | dd=+0%
+  Ewon: mcap=$9,033 | gain=-16.1% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,610 | gain=+16.4% | peak=$22,641 | dd=+0%
+  Verde: mcap=$11,412 | gain=-1.6% | peak=$12,396 | dd=+0%
+  Ewon: mcap=$9,033 | gain=-16.1% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,610 | gain=+16.4% | peak=$22,641 | dd=+0%
+  Verde: mcap=$11,412 | gain=-1.6% | peak=$12,396 | dd=+0%
+  Ewon: mcap=$9,033 | gain=-16.1% | peak=$13,341 | dd=+0%
+  Bloomerism: mcap=$19,539 | gain=+15.9% | peak=$22,641 | dd=+0%
+  Verde: mcap=$11,412 | gain=-1.6% | peak=$12,396 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Ewon STOP LOSS @ $7,919 (-26.4%)
+  Bloomerism: mcap=$19,539 | gain=+15.9% | peak=$22,641 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Verde STOP LOSS @ $9,033 (-22.1%)
+  Bloomerism: mcap=$19,539 | gain=+15.9% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$19,539 | gain=+15.9% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$19,539 | gain=+15.9% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$19,539 | gain=+15.9% | peak=$22,641 | dd=+0%
+[03:11:02] Monitor alive | 121 checks | 1 open | next in 5s
+  Bloomerism: mcap=$21,808 | gain=+29.4% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,808 | gain=+29.4% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,808 | gain=+29.4% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,808 | gain=+29.4% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,808 | gain=+29.4% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,808 | gain=+29.4% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,331 | gain=+26.6% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,331 | gain=+26.6% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,331 | gain=+26.6% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,331 | gain=+26.6% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,331 | gain=+26.6% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,331 | gain=+26.6% | peak=$22,641 | dd=+0%
+[03:12:03] Monitor alive | 133 checks | 1 open | next in 5s
+  Bloomerism: mcap=$21,742 | gain=+29.0% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,742 | gain=+29.0% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,742 | gain=+29.0% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,742 | gain=+29.0% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,742 | gain=+29.0% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,742 | gain=+29.0% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,843 | gain=+29.6% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,843 | gain=+29.6% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,843 | gain=+29.6% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,843 | gain=+29.6% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,843 | gain=+29.6% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,843 | gain=+29.6% | peak=$22,641 | dd=+0%
+[03:13:04] Monitor alive | 145 checks | 1 open | next in 5s
+  Bloomerism: mcap=$21,713 | gain=+28.8% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,713 | gain=+28.8% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,713 | gain=+28.8% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,713 | gain=+28.8% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$21,713 | gain=+28.8% | peak=$22,641 | dd=+0%
+  TOLY: mcap=$11,251 | gain=+0.0% | peak=$11,251 | dd=+0%
+  Bloomerism: mcap=$21,713 | gain=+28.8% | peak=$22,641 | dd=+0%
+  TOLY: mcap=$14,534 | gain=+29.2% | peak=$14,534 | dd=+0%
+  Bloomerism: mcap=$21,829 | gain=+29.5% | peak=$22,641 | dd=+0%
+  TOLY: mcap=$14,534 | gain=+29.2% | peak=$14,534 | dd=+0%
+  Bloomerism: mcap=$21,829 | gain=+29.5% | peak=$22,641 | dd=+0%
+  TOLY: mcap=$14,534 | gain=+29.2% | peak=$14,534 | dd=+0%
