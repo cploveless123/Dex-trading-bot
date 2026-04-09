@@ -73,8 +73,8 @@ def scan_strategy_a(p, m, v5, bs, holders, chg5, sym, addr, pair_addr, dex, p_da
         return False, None
     
     # Pullback required
-    if chg5 > 40:
-        return False, "A: chasing top"
+    if chg5 > 25:
+        return False, "A: chasing top (>25% pump)"
     
     return True, {
         "strategy": "WHALE_COATTAIL",
@@ -103,9 +103,9 @@ def scan_strategy_b(p, m, v5, bs, holders, chg5, sym, addr, pair_addr, dex, p_da
         return False, "B: low vol/mcap"
     
     # Pullback zone: 0-20% or negative with good BS
-    if chg5 > 20:
-        return False, "B: not pullback"
-    if chg5 < -20:
+    if chg5 > 15:
+        return False, "B: >15% pump"
+    if chg5 < -15:
         return False, "B: too deep"
     if chg5 < 0 and bs < 2.0:
         return False, "B: dip no support"
@@ -127,12 +127,12 @@ def scan_strategy_c(p, m, v5, bs, holders, chg5, sym, addr, pair_addr, dex, p_da
         return False, None
     
     # Extreme BS
-    if bs < 2.0:
-        return False, None
+    if bs < 2.5:
+        return False, "C: weak BS"
     
     # High holders
-    if holders < 200:
-        return False, None
+    if holders < 300:
+        return False, "C: few holders"
     
     # High vol/mcap
     v = p.get('volume', {}).get('h24', 0) or 0

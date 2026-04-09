@@ -3,9 +3,9 @@ Exit Plan: TP1 +50% (sell 50%) | TP2 +200% | TP3 +500% | Trailing 30% | Stop -20
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
-  AGENTIC: mcap=$18,937 | gain=+0.0% | peak=$18,937 | dd=+0%
-  AGENTIC: mcap=$18,937 | gain=+0.0% | peak=$18,937 | dd=+0%
-  AGENTIC: mcap=$18,937 | gain=+0.0% | peak=$18,937 | dd=+0%
-  AGENTIC: mcap=$18,937 | gain=+0.0% | peak=$18,937 | dd=+0%
-  AGENTIC: mcap=$18,937 | gain=+0.0% | peak=$18,937 | dd=+0%
-  AGENTIC: mcap=$18,937 | gain=+0.0% | peak=$18,937 | dd=+0%
+  AGENTIC: mcap=$21,284 | gain=+12.4% | peak=$22,048 | dd=+0%
+  Enough: mcap=$14,099 | gain=+0.0% | peak=$15,321 | dd=+7%
+  AGENTIC: mcap=$19,229 | gain=+1.5% | peak=$22,048 | dd=+0%
+  Enough: mcap=$14,099 | gain=+0.0% | peak=$15,321 | dd=+7%
+  AGENTIC: mcap=$19,229 | gain=+1.5% | peak=$22,048 | dd=+0%
+  Enough: mcap=$14,099 | gain=+0.0% | peak=$15,321 | dd=+7%
