@@ -128,7 +128,8 @@ def check_positions():
 💰 {sym}
 📍 Entry MC: ${int(entry):,}
 📊 Exit MC: ${int(mcap):,} ({gains_pct:.1f}%)
-💰 Loss: {t['pnl_sol']:.4f} SOL
+💰 Balance: {get_balance()} SOL
+💰 Loss: {t["pnl_sol"]:.4f} SOL
 
 🔗 https://dexscreener.com/solana/{ca}
 🥧 https://pump.fun/{ca}
@@ -163,6 +164,7 @@ def check_positions():
 📍 Entry MC: ${int(entry):,}
 📊 Sold at MC: ${int(mcap):,} (+{sell_pct:.1f}%)
 💵 Sold: {TP1_SELL_PCT}% of position
+💰 Balance: {get_balance()} SOL
 💰 PnL so far: {pnl_tp1:.4f} SOL
 
 💵 Remaining 50% still riding
@@ -197,6 +199,7 @@ def check_positions():
 📍 Entry MC: ${int(entry):,}
 📊 Current MC: ${int(mcap):,} (+{gains_pct:.0f}%)
 💵 Sold another {TP2_SELL_PCT}% @ MC ${int(mcap):,}
+💰 Balance: {get_balance()} SOL
 💰 Total PnL so far: {t['pnl_sol']:.4f} SOL
 
 💵 Remaining 25% still riding
@@ -230,6 +233,7 @@ def check_positions():
 📍 Entry MC: ${int(entry):,}
 📊 Current MC: ${int(mcap):,} (+{gains_pct:.0f}%)
 💵 Sold final {TP3_SELL_PCT}% @ MC ${int(mcap):,}
+💰 Balance: {get_balance()} SOL
 💰 TOTAL PNL: {t['pnl_sol']:.4f} SOL 🚀🚀🚀
 
 🔗 https://dexscreener.com/solana/{ca}
@@ -259,6 +263,7 @@ def check_positions():
 💰 {sym}
 📍 Entry MC: ${int(entry):,}
 📊 Exit MC: ${int(mcap):,} (+{gains_pct:.1f}%)
+💰 Balance: {get_balance()} SOL
 💰 Total PnL: {t['pnl_sol']:.4f} SOL
 
 🔗 https://dexscreener.com/solana/{ca}
@@ -321,3 +326,16 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+def get_balance():
+    """Calculate current balance from trades"""
+    from trading_constants import CHRIS_STARTING_BALANCE as BAL, SIM_RESET_TIMESTAMP as RESET
+    try:
+        with open(TRADES_FILE) as f:
+            lines = f.readlines()
+        rt = [json.loads(l) for l in lines if json.loads(l).get('opened_at','') > RESET]
+        has_pnl = [t for t in rt if t.get('pnl_sol') is not None]
+        total_pnl = sum(t.get('pnl_sol',0) for t in has_pnl)
+        return round(BAL + total_pnl, 4)
+    except:
+        return 0.0
