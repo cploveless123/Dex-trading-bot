@@ -3,52 +3,15 @@ Exit Plan: TP1 +50% (sell 50%) | TP2 +200% | TP3 +500% | Trailing 30% | Stop -20
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
-  Autofare: mcap=$11,414 | gain=-9.4% | peak=$12,596 | dd=+0%
-  Lenny: mcap=$32,153 | gain=+116.1% | peak=$32,153 | dd=+0%
-  Nguyen: mcap=$15,103 | gain=+6.3% | peak=$15,103 | dd=+0%
-[STOP_LOSS] Alert sent
-🔴 MEMEX STOP LOSS @ $2,441 (-74.7%)
-  MOODUANG: mcap=$120,738 | gain=+75.3% | peak=$120,738 | dd=+0%
-  Kurum: mcap=$9,308 | gain=-13.3% | peak=$10,734 | dd=+0%
-  Autofare: mcap=$11,414 | gain=-9.4% | peak=$12,596 | dd=+0%
-  Lenny: mcap=$32,153 | gain=+116.1% | peak=$32,153 | dd=+0%
-  Nguyen: mcap=$15,355 | gain=+8.1% | peak=$15,355 | dd=+0%
-  MOODUANG: mcap=$120,738 | gain=+75.3% | peak=$120,738 | dd=+0%
-[STOP_LOSS] Alert sent
-🔴 Kurum STOP LOSS @ $8,293 (-22.7%)
-  Autofare: mcap=$11,414 | gain=-9.4% | peak=$12,596 | dd=+0%
-  Lenny: mcap=$32,100 | gain=+115.7% | peak=$32,153 | dd=+0%
-  Nguyen: mcap=$15,355 | gain=+8.1% | peak=$15,355 | dd=+0%
-  MOODUANG: mcap=$120,738 | gain=+75.3% | peak=$120,738 | dd=+0%
-  Autofare: mcap=$11,414 | gain=-9.4% | peak=$12,596 | dd=+0%
-  Lenny: mcap=$32,100 | gain=+115.7% | peak=$32,153 | dd=+0%
-  Nguyen: mcap=$15,355 | gain=+8.1% | peak=$15,355 | dd=+0%
-  MOODUANG: mcap=$120,738 | gain=+75.3% | peak=$120,738 | dd=+0%
-  Autofare: mcap=$11,586 | gain=-8.0% | peak=$12,596 | dd=+0%
-  Lenny: mcap=$32,100 | gain=+115.7% | peak=$32,153 | dd=+0%
-  Nguyen: mcap=$15,355 | gain=+8.1% | peak=$15,355 | dd=+0%
-  MOODUANG: mcap=$112,874 | gain=+63.9% | peak=$120,738 | dd=+0%
-  Autofare: mcap=$11,586 | gain=-8.0% | peak=$12,596 | dd=+0%
-  Lenny: mcap=$32,100 | gain=+115.7% | peak=$32,153 | dd=+0%
-  Nguyen: mcap=$15,355 | gain=+8.1% | peak=$15,355 | dd=+0%
-  MOODUANG: mcap=$112,874 | gain=+63.9% | peak=$120,738 | dd=+0%
-  Autofare: mcap=$11,586 | gain=-8.0% | peak=$12,596 | dd=+0%
-  Lenny: mcap=$32,100 | gain=+115.7% | peak=$32,153 | dd=+0%
-  Nguyen: mcap=$15,355 | gain=+8.1% | peak=$15,355 | dd=+0%
-  MOODUANG: mcap=$112,874 | gain=+63.9% | peak=$120,738 | dd=+0%
-  Autofare: mcap=$11,586 | gain=-8.0% | peak=$12,596 | dd=+0%
-  Lenny: mcap=$32,100 | gain=+115.7% | peak=$32,153 | dd=+0%
-  Nguyen: mcap=$15,355 | gain=+8.1% | peak=$15,355 | dd=+0%
-  MOODUANG: mcap=$112,874 | gain=+63.9% | peak=$120,738 | dd=+0%
-  Autofare: mcap=$11,586 | gain=-8.0% | peak=$12,596 | dd=+0%
-  Lenny: mcap=$32,100 | gain=+115.7% | peak=$32,153 | dd=+0%
-  Nguyen: mcap=$15,355 | gain=+8.1% | peak=$15,355 | dd=+0%
-  MOODUANG: mcap=$112,874 | gain=+63.9% | peak=$120,738 | dd=+0%
-  Autofare: mcap=$11,586 | gain=-8.0% | peak=$12,596 | dd=+0%
-  Lenny: mcap=$32,100 | gain=+115.7% | peak=$32,153 | dd=+0%
-  Nguyen: mcap=$15,355 | gain=+8.1% | peak=$15,355 | dd=+0%
-  MOODUANG: mcap=$102,857 | gain=+49.3% | peak=$120,738 | dd=+0%
-  Autofare: mcap=$11,492 | gain=-8.8% | peak=$12,596 | dd=+0%
-  Lenny: mcap=$32,100 | gain=+115.7% | peak=$32,153 | dd=+0%
-  Nguyen: mcap=$15,355 | gain=+8.1% | peak=$15,355 | dd=+0%
-  MOODUANG: mcap=$102,857 | gain=+49.3% | peak=$120,738 | dd=+0%
+  Autofare: mcap=$11,254 | gain=-10.7% | peak=$12,596 | dd=+0%
+  Lenny: mcap=$30,062 | gain=+102.0% | peak=$33,275 | dd=+0%
+  Nguyen: mcap=$13,705 | gain=-3.6% | peak=$15,435 | dd=+0%
+  MOODUANG: mcap=$90,103 | gain=+30.8% | peak=$120,738 | dd=+0%
+  Muskism: mcap=$9,936 | gain=+6.1% | peak=$9,936 | dd=+0%
+  Throat: mcap=$25,826 | gain=+0.0% | peak=$25,826 | dd=+0%
+  Autofare: mcap=$11,254 | gain=-10.7% | peak=$12,596 | dd=+0%
+  Lenny: mcap=$30,062 | gain=+102.0% | peak=$33,275 | dd=+0%
+  Nguyen: mcap=$13,705 | gain=-3.6% | peak=$15,435 | dd=+0%
+  MOODUANG: mcap=$90,103 | gain=+30.8% | peak=$120,738 | dd=+0%
+  Muskism: mcap=$9,936 | gain=+6.1% | peak=$9,936 | dd=+0%
+  Throat: mcap=$25,826 | gain=+0.0% | peak=$25,826 | dd=+0%

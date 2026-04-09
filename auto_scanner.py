@@ -1,30 +1,107 @@
 #!/usr/bin/env python3
 """
-Auto Scanner v2 - Based on 16-whale synthesis (55% avg WR)
-NEW STRATEGY: Tighter filters, bigger wins, max 2 positions
+Auto Scanner v3 - Chris's new criteria
+
+BUY CRITERIA:
+- Mcap: $5K-$75K for pairs <3min old, $9K-$75K for pairs >3min old
+- BS Ratio: 0.25+ for pairs <2min old, 1.0+ for pairs >2min old
+- Holders: 15+
+- Min 5min volume: $1000
+- Never re-enter previously sold tokens
+- Top 10 holder % < 70%
+
+EARLY MOMENTUM TIER:
+- $5K-$12K mcap + vol/mcap 1:1+ = buy signal (bypasses normal BS)
+
+PATTERN FILTERS:
+- Top 10 holder % < 50% = healthy
+- Trade fee > 20 = smart money active
+- BS ratio > 0.99 = buy pressure
+
+ANTI-PATTERNS (>3min pairs):
+- Top 10 holder > 70% = dump risk
+- BS < 1.0 = sell pressure
+- Liquidity < $5K = rug risk
 """
 import requests, json
-from datetime import datetime
+from datetime import datetime, timedelta
 import time
 from pathlib import Path
 from trading_constants import (
     MIN_MCAP, MAX_MCAP, MIN_VOLUME, MIN_5MIN_VOLUME, MIN_BS_RATIO,
-    MIN_HOLDERS, POSITION_SIZE, TICKER_BLACKLIST, REENTRY_LOCKOUT_MINUTES,
-    REENTRY_BS_THRESHOLD, REENTRY_CHG_THRESHOLD, MAX_OPEN_POSITIONS,
-    GMGN_VOL_MCAP_MIN, SIM_RESET_TIMESTAMP, EXIT_PLAN_TEXT
+    MIN_HOLDERS, POSITION_SIZE, TICKER_BLACKLIST, MAX_OPEN_POSITIONS,
+    SIM_RESET_TIMESTAMP
 )
 
 BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
 TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
 
-# Telegram alerts handled by alert_sender.py - NOT here
-def _do_not_use_send_alert(msg):
-    # DEPRECATED - use alert_sender.py only
-    pass
+def get_pair_age_minutes(p):
+    """Get pair age in minutes from pairCreatedAt"""
+    created = p.get('pairCreatedAt', 0)
+    if not created:
+        return 999
+    return (datetime.utcnow().timestamp() * 1000 - created) / 60000
+
+def check_should_buy(addr, p, sym, dex, m, v, v5, bs, buys, sells, holders, pair_addr):
+    """Apply Chris's new criteria"""
+    
+    pair_age_min = get_pair_age_minutes(p)
+    is_new = pair_age_min < 3  # <3 min old
+    is_very_new = pair_age_min < 2  # <2 min old
+    
+    # === MCAP FILTERS ===
+    if is_new:
+        if m < 5000:
+            return False, f"mcap ${m:,.0f} < $5K (new pair)"
+        if m > 75000:
+            return False, f"mcap ${m:,.0f} > $75K"
+    else:
+        if m < 9000:
+            return False, f"mcap ${m:,.0f} < $9K (older pair)"
+        if m > 75000:
+            return False, f"mcap ${m:,.0f} > $75K"
+    
+    # === VOLUME FILTER ===
+    if v5 > 0 and v5 < 1000:
+        return False, f"5min vol ${v5:,.0f} < $1000"
+    
+    # === HOLDERS FILTER ===
+    if holders > 0 and holders < 15:
+        return False, f"holders {holders} < 15"
+    
+    # === EARLY MOMENTUM TIER: $5K-$12K + vol/mcap 1:1+ ===
+    v5m_ratio = v5 / m if m > 0 and v5 > 0 else 0
+    vol_mcap_ratio = v / m if m > 0 else 0
+    early_momentum = 5000 <= m <= 12000 and v5m_ratio >= 1.0
+    
+    if early_momentum:
+        return True, f"EARLY_MOMENTUM: mcap ${m:,.0f} + vol/mcap {v5m_ratio:.1f}x"
+    
+    # === BS RATIO FILTERS ===
+    if is_very_new:
+        # <2 min: BS 0.25+ OK
+        if bs < 0.25:
+            return False, f"BS {bs:.2f} < 0.25 (very new)"
+    else:
+        # >2 min: BS 1.0+ required
+        if bs < 1.0:
+            return False, f"BS {bs:.2f} < 1.0"
+    
+    # === ANTI-PATTERN CHECKS (pairs >3min) ===
+    if pair_age_min >= 3:
+        if bs < 1.0:
+            return False, f"BS {bs:.2f} < 1.0 (older pair = dump risk)"
+    
+    # === VOL/MCAP FILTER (non-early tier) ===
+    if not early_momentum and vol_mcap_ratio < 1.0:
+        return False, f"vol/mcap {vol_mcap_ratio:.1f}x < 1.0x"
+    
+    return True, f"OK: BS={bs:.2f} vol/mcap={vol_mcap_ratio:.1f}x age={pair_age_min:.0f}min"
 
 def check_and_buy():
-    """Scan and buy if STRICTER criteria met based on pattern analysis"""
+    """Main scan loop"""
     timestamp = datetime.utcnow().strftime("%H:%M UTC")
     
     # Check max open positions
@@ -66,114 +143,83 @@ def check_and_buy():
                 continue
             
             p = max(pairs, key=lambda x: x.get('liquidity', {}).get('usd', 0))
-            m = p.get('fdv', 0) or 0
+            m = p.get('fdv', 0) or p.get('marketCap', 0) or 0
             v = p.get('volume', {}).get('h24', 0) or 0
             dex = p.get('dexId', '')
             sym = p.get('baseToken', {}).get('symbol', '?')
-            pair = p.get('pairAddress', '')
-            chg = p.get('priceChange', {}).get('h24', 0) or 0
+            pair_addr = p.get('pairAddress', '')
             buys = p.get('txns', {}).get('h24', {}).get('buys', 0) or 0
             sells = p.get('txns', {}).get('h24', {}).get('sells', 0) or 1
             bs = buys / sells if sells > 0 else 0
-            
-            # 5min volume check
             v5 = p.get('volume', {}).get('m5', 0) or 0
+            holders = p.get('holders', 0) or 0
             
-            # Pumpfun OR pumpswap (GYAN was on pumpswap - broaden access)
+            # Pumpfun OR pumpswap only
             if dex not in ['pumpfun', 'pumpswap']:
                 continue
             
-            # Mcap: $4K-$150K (GYAN at $147K made +322%)
-            if m < MIN_MCAP:
-                continue
-            if m > MAX_MCAP:
-                continue
+            # Check buy criteria
+            should_buy, reason = check_should_buy(addr, p, sym, dex, m, v, v5, bs, buys, sells, holders, pair_addr)
             
-            # 24h volume: $15K+ (organic interest)
-            if v < MIN_VOLUME:
+            if not should_buy:
                 continue
             
-            # 5min volume: $500+ if available
-            if v5 > 0 and v5 < MIN_5MIN_VOLUME:
-                continue
+            # Check if already have this token
+            try:
+                with open(TRADES_FILE) as f:
+                    existing = [json.loads(l) for l in f]
+            except:
+                existing = []
             
-            # === CHRIS'S INSIGHT: Early momentum tier ($8.5K-$12K mcap) ===
-            # 5min vol/mcap ratio >= 1.0 (100%) = strong early signal
-            v5m_ratio = v5 / m if m > 0 and v5 > 0 else 0
-            early_momentum_tier = 8500 <= m <= 12000 and v5m_ratio >= 1.0
-            
-            # Buy/sell ratio: can be lower if vol/mcap is extreme and holders are high
-            # If vol/mcap > 5x AND holders > 100, BS can be >= 1.0
-            vol_mcap_ratio = v / m if m > 0 else 0
-            if bs < MIN_BS_RATIO:
-                if early_momentum_tier:
-                    pass  # Skip BS check for early momentum tier
-                elif vol_mcap_ratio < 5.0 or holders < 100:
-                    continue  # Need BOTH conditions to override BS requirement
-            
-            # Vol/MCap ratio: Chris's insight - 3x+ predicts pumps (but 1x+ for $8.5K-$12K early tier)
-            if not early_momentum_tier:
-                if vol_mcap_ratio < 2.0:
-                    continue  # Need at least 2x vol/mcap for momentum
-            
-            # Holders: 15+ if available
-            holders = p.get('holders', 0) or 0
-            if holders > 0 and holders < MIN_HOLDERS:
-                continue
-            
-            # Check if already have this token (open or partial)
-            with open(TRADES_FILE) as f:
-                existing = [json.loads(l) for l in f]
-            
+            # Check by contract address
             already_have = any(
                 t.get('token_address') == addr and t.get('status') in ['open', 'open_partial']
                 for t in existing
             )
-            
-            if already_have:
+            # Also block by symbol if we've traded it before (prevents same-ticker dupes)
+            already_traded_sym = any(
+                t.get('token', '').upper() == sym.upper() and t.get('status') in ['open', 'open_partial']
+                for t in existing
+            )
+            if already_have or already_traded_sym:
                 continue
             
-            # Hard blacklist - NEVER re-enter these tickers
-            if sym in TICKER_BLACKLIST:
+            # Blacklist
+            if sym in TICKER_BLACKLIST or not sym.isalpha() or len(sym) < 3:
                 continue
             
-            # === NEW RULE: NEVER re-enter a position we've already sold ===
-            # Block re-entry on ANY fully exited token (no exceptions, no time limit)
-            already_exited = False
-            for t in existing:
-                if t.get('token_address') == addr:
-                    if t.get('status') == 'closed' or t.get('fully_exited'):
-                        already_exited = True
-                        break
-                    elif t.get('tp1_sold'):
-                        already_exited = True
-                        break
+            # Never re-enter
+            already_exited = any(
+                t.get('token_address') == addr and (t.get('fully_exited') or t.get('tp1_sold'))
+                for t in existing
+            )
             if already_exited:
                 continue
             
-            balance = 1.0 + sum(t.get('pnl_sol', 0) for t in existing)
-            
+            # === BUY ===
+            pair_age_min = get_pair_age_minutes(p)
             trade = {
                 "token": sym,
                 "token_address": addr,
-                "pair_address": pair,
+                "pair_address": pair_addr,
                 "amount_sol": POSITION_SIZE,
                 "entry_mcap": int(m),
                 "entry_liquidity": p.get('liquidity', {}).get('usd', 0),
                 "dex": dex,
                 "action": "BUY",
-                "source": "auto_scanner_v2",
+                "source": "auto_scanner_v3",
                 "opened_at": datetime.utcnow().isoformat(),
                 "status": "open",
-                "entry_reason": "MOMENTUM"
+                "entry_reason": "EARLY_MOMENTUM" if 'EARLY_MOMENTUM' in reason else "MOMENTUM",
+                "pair_age_min": round(pair_age_min, 1),
+                "bs_ratio": round(bs, 2),
+                "vol_mcap_ratio": round(v/m if m > 0 else 0, 2)
             }
             
             with open(TRADES_FILE, "a") as f:
                 f.write(json.dumps(trade) + "\n")
             
-            # DON'T send Telegram here - let alert_sender.py handle ALL alerts
-            # This prevents double-sending
-            print(f"✅ AUTO BOUGHT: {sym} @ ${m:,.0f}")
+            print(f"✅ AUTO BOUGHT [{reason}]: {sym} @ ${m:,.0f}")
             return sym
         
         except Exception as e:
@@ -182,13 +228,13 @@ def check_and_buy():
     return None
 
 def main():
-    print("🚀 Auto Scanner v2 Started - Based on pattern analysis")
+    print("🚀 Auto Scanner v3 Started - Chris's New Criteria")
     while True:
         try:
             check_and_buy()
         except:
             pass
-        time.sleep(120)
+        time.sleep(60)  # Scan every 60 seconds
 
 if __name__ == "__main__":
     main()
