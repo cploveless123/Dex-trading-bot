@@ -20,8 +20,6 @@ Turn 1.0 SOL → 100 SOL
 
 • Top10% > 70% = dump
 • Liquidity < $1K = rug
-• 5min change > 50% = chasing top
-• 5min change < -50% = falling knife
 • Non-ASCII ticker = reject
 
 ---
@@ -41,8 +39,8 @@ Turn 1.0 SOL → 100 SOL
 
 | Age | Rule |
 | --------------- | --------------------------- |
-| **New (<2 min)** | 11-39% dip from peak |
-| **Older (>2 min)** | 11-39% dip + h1>+5% + 5min<0% + 5min vol>$1K |
+| **New (<2 min)** | 11-39% dip + h1>+200% + 5min>+100% + vol>$1K |
+| **Older (>2 min)** | 11-39% dip + h1>+200% + 5min>+50% + vol>$1K |
 
 **Peak** = highest price seen in first 60 seconds
 
@@ -63,7 +61,7 @@ Turn 1.0 SOL → 100 SOL
 
 • Age-based BS ratio
 • 11-39% peak dip
-• Multi-timeframe confirmation for older pairs
+• High momentum confirmation (h1+200%)
 • Liquidity > $1K
 • 60s startup delay
 
