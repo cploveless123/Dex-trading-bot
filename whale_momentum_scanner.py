@@ -40,10 +40,10 @@ def check_anti_patterns(p, m, bs, holders, v5m_ratio, chg5):
     # BS check
     if bs < 1.0:
         return True, "BS < 1.0"
-    # Liquidity check
+    # Liquidity check - reject anything under $1K
     liq = p.get('liquidity', {}).get('usd', 0) or 0
-    if liq > 0 and liq < 5000:
-        return True, "Low liquidity"
+    if liq < 1000:
+        return True, "Zero/low liquidity"
     # Pullback check
     if chg5 > 50:
         return True, "Chasing top"
@@ -101,6 +101,11 @@ def scan_strategy_b(p, m, v5, bs, holders, chg5, sym, addr, pair_addr, dex, p_da
     vol_mcap = v / m if m > 0 else 0
     if vol_mcap < 2.0:
         return False, "B: low vol/mcap"
+    
+    # Liquidity check - reject zero liquidity
+    liq = p.get('liquidity', {}).get('usd', 0) or 0
+    if liq < 1000:
+        return False, "B: zero/low liquidity"
     
     # Pullback zone: 0-20% or negative with good BS
     if chg5 > 15:
