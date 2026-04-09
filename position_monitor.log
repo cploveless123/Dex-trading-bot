@@ -14,3 +14,66 @@ Checking every 5s
 [19:57:46] Monitor alive | 109 checks | 0 open | next in 5s
 [19:58:46] Monitor alive | 121 checks | 0 open | next in 5s
 [19:59:46] Monitor alive | 133 checks | 0 open | next in 5s
+[20:00:46] Monitor alive | 145 checks | 0 open | next in 5s
+[20:01:46] Monitor alive | 157 checks | 0 open | next in 5s
+[20:02:47] Monitor alive | 169 checks | 0 open | next in 5s
+[20:03:47] Monitor alive | 181 checks | 0 open | next in 5s
+[20:04:47] Monitor alive | 193 checks | 0 open | next in 5s
+[20:05:47] Monitor alive | 205 checks | 0 open | next in 5s
+[20:06:47] Monitor alive | 217 checks | 0 open | next in 5s
+[20:07:47] Monitor alive | 229 checks | 0 open | next in 5s
+[20:08:47] Monitor alive | 241 checks | 0 open | next in 5s
+[20:09:47] Monitor alive | 253 checks | 0 open | next in 5s
+[20:10:47] Monitor alive | 265 checks | 0 open | next in 5s
+[20:11:47] Monitor alive | 277 checks | 0 open | next in 5s
+[20:12:47] Monitor alive | 289 checks | 0 open | next in 5s
+[20:13:47] Monitor alive | 301 checks | 0 open | next in 5s
+[20:14:47] Monitor alive | 313 checks | 0 open | next in 5s
+[20:15:47] Monitor alive | 325 checks | 0 open | next in 5s
+[20:16:47] Monitor alive | 337 checks | 0 open | next in 5s
+[20:17:47] Monitor alive | 349 checks | 0 open | next in 5s
+[20:18:48] Monitor alive | 361 checks | 0 open | next in 5s
+[20:19:48] Monitor alive | 373 checks | 0 open | next in 5s
+[20:20:48] Monitor alive | 385 checks | 0 open | next in 5s
+[20:21:48] Monitor alive | 397 checks | 0 open | next in 5s
+[20:22:48] Monitor alive | 409 checks | 0 open | next in 5s
+[20:23:48] Monitor alive | 421 checks | 0 open | next in 5s
+[20:24:48] Monitor alive | 433 checks | 0 open | next in 5s
+[20:25:48] Monitor alive | 445 checks | 0 open | next in 5s
+[20:26:48] Monitor alive | 457 checks | 0 open | next in 5s
+  YEET: mcap=$10,912 | gain=+0.0% | peak=$10,912 | dd=+0%
+  YEET: mcap=$11,573 | gain=+6.1% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,573 | gain=+6.1% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,573 | gain=+6.1% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,573 | gain=+6.1% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,573 | gain=+6.1% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,573 | gain=+6.1% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,326 | gain=+3.8% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,326 | gain=+3.8% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,326 | gain=+3.8% | peak=$11,573 | dd=+0%
+[20:27:49] Monitor alive | 469 checks | 1 open | next in 5s
+  YEET: mcap=$11,326 | gain=+3.8% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,326 | gain=+3.8% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,326 | gain=+3.8% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,197 | gain=+2.6% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,197 | gain=+2.6% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,197 | gain=+2.6% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,197 | gain=+2.6% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,197 | gain=+2.6% | peak=$11,573 | dd=+0%
+  YEET: mcap=$11,197 | gain=+2.6% | peak=$11,573 | dd=+0%
+  YEET: mcap=$10,603 | gain=-2.8% | peak=$11,573 | dd=+0%
+  YEET: mcap=$10,603 | gain=-2.8% | peak=$11,573 | dd=+0%
+  YEET: mcap=$10,603 | gain=-2.8% | peak=$11,573 | dd=+0%
+[20:28:50] Monitor alive | 481 checks | 1 open | next in 5s
+  YEET: mcap=$10,603 | gain=-2.8% | peak=$11,573 | dd=+0%
+  YEET: mcap=$10,603 | gain=-2.8% | peak=$11,573 | dd=+0%
+  YEET: mcap=$10,603 | gain=-2.8% | peak=$11,573 | dd=+0%
+  YEET: mcap=$10,022 | gain=-8.2% | peak=$11,573 | dd=+0%
+  YEET: mcap=$10,022 | gain=-8.2% | peak=$11,573 | dd=+0%
+  YEET: mcap=$10,022 | gain=-8.2% | peak=$11,573 | dd=+0%
+  YEET: mcap=$10,022 | gain=-8.2% | peak=$11,573 | dd=+0%
+  YEET: mcap=$10,022 | gain=-8.2% | peak=$11,573 | dd=+0%
+  YEET: mcap=$10,022 | gain=-8.2% | peak=$11,573 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 YEET STOP LOSS @ $4,122 (-62.2%)
+[20:29:51] Monitor alive | 493 checks | 0 open | next in 5s
