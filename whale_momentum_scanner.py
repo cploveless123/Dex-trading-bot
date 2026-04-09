@@ -169,6 +169,7 @@ def scan_token(addr):
         bs = buys / sells if sells > 0 else 0
         holders = p.get('holders', 0) or 0
         chg5 = p.get('priceChange', {}).get('m5', 0) or 0
+        chg5 = chg5 if chg5 is not None else 0
         
         # Anti-pattern check
         is_anti, reason = check_anti_patterns(p, m, bs, holders, v5/m if m > 0 else 0, chg5)
