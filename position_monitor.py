@@ -28,6 +28,19 @@ _MIN_FETCH_INTERVAL = 5
 
 BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 
+def get_balance():
+    """Calculate current balance from trades"""
+    from trading_constants import CHRIS_STARTING_BALANCE as BAL, SIM_RESET_TIMESTAMP as RESET
+    try:
+        with open(TRADES_FILE) as f:
+            lines = f.readlines()
+        rt = [json.loads(l) for l in lines if json.loads(l).get('opened_at','') > RESET]
+        has_pnl = [t for t in rt if t.get('pnl_sol') is not None]
+        total_pnl = sum(t.get('pnl_sol',0) for t in has_pnl)
+        return round(BAL + total_pnl, 4)
+    except:
+        return 0.0
+
 def send_alert(msg, label="ALERT"):
     """Send alert via Telegram"""
     import urllib.request, urllib.parse

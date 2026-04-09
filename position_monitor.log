@@ -3,15 +3,20 @@ Exit Plan: TP1 +50% (sell 50%) | TP2 +200% | TP3 +500% | Trailing 30% | Stop -20
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
-  Autofare: mcap=$12,896 | gain=+2.4% | peak=$17,001 | dd=+0%
-  Lenny: mcap=$32,671 | gain=+119.5% | peak=$32,671 | dd=-6%
-  Nguyen: mcap=$16,688 | gain=+17.4% | peak=$23,139 | dd=+0%
-Error: name 'get_balance' is not defined
-  Autofare: mcap=$12,905 | gain=+2.5% | peak=$17,001 | dd=+0%
-  Lenny: mcap=$32,671 | gain=+119.5% | peak=$32,671 | dd=-6%
-  Nguyen: mcap=$16,688 | gain=+17.4% | peak=$23,139 | dd=+0%
-Error: name 'get_balance' is not defined
-  Autofare: mcap=$12,905 | gain=+2.5% | peak=$17,001 | dd=+0%
-  Lenny: mcap=$32,671 | gain=+119.5% | peak=$32,671 | dd=-6%
-  Nguyen: mcap=$16,688 | gain=+17.4% | peak=$23,139 | dd=+0%
-Error: name 'get_balance' is not defined
+  Autofare: mcap=$11,414 | gain=-9.4% | peak=$12,596 | dd=+0%
+  Lenny: mcap=$32,153 | gain=+116.1% | peak=$32,153 | dd=+0%
+  Nguyen: mcap=$15,103 | gain=+6.3% | peak=$15,103 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 MEMEX STOP LOSS @ $2,441 (-74.7%)
+  MOODUANG: mcap=$120,738 | gain=+75.3% | peak=$120,738 | dd=+0%
+  Kurum: mcap=$9,308 | gain=-13.3% | peak=$10,734 | dd=+0%
+  Autofare: mcap=$11,414 | gain=-9.4% | peak=$12,596 | dd=+0%
+  Lenny: mcap=$32,153 | gain=+116.1% | peak=$32,153 | dd=+0%
+  Nguyen: mcap=$15,355 | gain=+8.1% | peak=$15,355 | dd=+0%
+  MOODUANG: mcap=$120,738 | gain=+75.3% | peak=$120,738 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Kurum STOP LOSS @ $8,293 (-22.7%)
+  Autofare: mcap=$11,414 | gain=-9.4% | peak=$12,596 | dd=+0%
+  Lenny: mcap=$32,100 | gain=+115.7% | peak=$32,153 | dd=+0%
+  Nguyen: mcap=$15,355 | gain=+8.1% | peak=$15,355 | dd=+0%
+  MOODUANG: mcap=$120,738 | gain=+75.3% | peak=$120,738 | dd=+0%
