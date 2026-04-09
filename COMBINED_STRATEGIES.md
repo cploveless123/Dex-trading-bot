@@ -39,8 +39,8 @@ Turn 1.0 SOL → 100 SOL
 
 | Age | Rule |
 | --------------- | --------------------------- |
-| New (<90 sec) | Initial dip 5-30% from peak |
-| Older (>90 sec) | h1 positive + m5 negative |
+| New (<90 sec) | Initial dip 5-50% from peak |
+| Older (>5 min) | 1min -50% to +5% AND 5min >10% |
 
 ---
 
@@ -58,7 +58,6 @@ Turn 1.0 SOL → 100 SOL
 ## 🔧 FILTERS
 
 • Initial dip for new pairs (<90 sec)
-• Multi-timeframe for older pairs
+• Dip detection for older pairs
 • Liquidity > $1K
 • ASCII tickers only
-
