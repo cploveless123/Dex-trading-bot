@@ -1130,3 +1130,58 @@ Checking every 5s
   Cupsey: mcap=$84,844 | gain=+31.7% | peak=$103,098 | dd=+0%
   Cupsey: mcap=$84,844 | gain=+31.7% | peak=$103,098 | dd=+0%
   Fig: mcap=$22,794 | gain=+0.0% | peak=$22,794 | dd=+0%
+  Cupsey: mcap=$84,844 | gain=+31.7% | peak=$103,098 | dd=+0%
+  Fig: mcap=$22,794 | gain=+0.0% | peak=$22,794 | dd=+0%
+  Cupsey: mcap=$84,844 | gain=+31.7% | peak=$103,098 | dd=+0%
+  Fig: mcap=$22,794 | gain=+0.0% | peak=$22,794 | dd=+0%
+[01:56:00] Monitor alive | 829 checks | 2 open | next in 5s
+  Cupsey: mcap=$85,506 | gain=+32.8% | peak=$103,098 | dd=+0%
+  Fig: mcap=$22,794 | gain=+0.0% | peak=$22,794 | dd=+0%
+  Cupsey: mcap=$85,506 | gain=+32.8% | peak=$103,098 | dd=+0%
+  Fig: mcap=$22,794 | gain=+0.0% | peak=$22,794 | dd=+0%
+  Cupsey: mcap=$85,506 | gain=+32.8% | peak=$103,098 | dd=+0%
+  Fig: mcap=$23,486 | gain=+3.0% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$85,506 | gain=+32.8% | peak=$103,098 | dd=+0%
+  Fig: mcap=$23,486 | gain=+3.0% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$85,506 | gain=+32.8% | peak=$103,098 | dd=+0%
+  Fig: mcap=$23,486 | gain=+3.0% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$100,015 | gain=+55.3% | peak=$103,098 | dd=+0%
+  Fig: mcap=$23,486 | gain=+3.0% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$100,015 | gain=+55.3% | peak=$103,098 | dd=+0%
+  Fig: mcap=$23,486 | gain=+3.0% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$100,015 | gain=+55.3% | peak=$103,098 | dd=+0%
+  Fig: mcap=$23,486 | gain=+3.0% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$100,015 | gain=+55.3% | peak=$103,098 | dd=+0%
+  Fig: mcap=$20,008 | gain=-12.2% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$100,015 | gain=+55.3% | peak=$103,098 | dd=+0%
+  Fig: mcap=$20,008 | gain=-12.2% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$100,015 | gain=+55.3% | peak=$103,098 | dd=+0%
+  Fig: mcap=$20,008 | gain=-12.2% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$106,966 | gain=+66.1% | peak=$106,966 | dd=+0%
+  Fig: mcap=$20,008 | gain=-12.2% | peak=$23,486 | dd=+0%
+[01:57:01] Monitor alive | 841 checks | 2 open | next in 5s
+  Cupsey: mcap=$106,966 | gain=+66.1% | peak=$106,966 | dd=+0%
+  Fig: mcap=$20,008 | gain=-12.2% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$106,966 | gain=+66.1% | peak=$106,966 | dd=+0%
+  Fig: mcap=$20,008 | gain=-12.2% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$106,966 | gain=+66.1% | peak=$106,966 | dd=+0%
+  Fig: mcap=$21,072 | gain=-7.5% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$106,966 | gain=+66.1% | peak=$106,966 | dd=+0%
+  Fig: mcap=$21,072 | gain=-7.5% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$106,966 | gain=+66.1% | peak=$106,966 | dd=+0%
+  Fig: mcap=$21,072 | gain=-7.5% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$101,736 | gain=+58.0% | peak=$106,966 | dd=+0%
+  Fig: mcap=$21,072 | gain=-7.5% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$101,736 | gain=+58.0% | peak=$106,966 | dd=+0%
+  Fig: mcap=$21,072 | gain=-7.5% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$101,736 | gain=+58.0% | peak=$106,966 | dd=+0%
+  Fig: mcap=$21,072 | gain=-7.5% | peak=$23,486 | dd=+0%
+  Cupsey: mcap=$101,736 | gain=+58.0% | peak=$106,966 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Fig STOP LOSS @ $13,142 (-42.3%)
+  Cupsey: mcap=$101,736 | gain=+58.0% | peak=$106,966 | dd=+0%
+  Cupsey: mcap=$101,736 | gain=+58.0% | peak=$106,966 | dd=+0%
+  Cupsey: mcap=$101,807 | gain=+58.1% | peak=$106,966 | dd=+0%
+[01:58:03] Monitor alive | 853 checks | 1 open | next in 5s
+  Cupsey: mcap=$101,807 | gain=+58.1% | peak=$106,966 | dd=+0%
+  Cupsey: mcap=$101,807 | gain=+58.1% | peak=$106,966 | dd=+0%
