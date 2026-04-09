@@ -4271,3 +4271,95 @@ Checking every 5s
 [05:59:49] Monitor alive | 817 checks | 1 open | next in 5s
   AIPAAS: mcap=$15,070 | gain=+20.8% | peak=$15,070 | dd=+0%
   AIPAAS: mcap=$15,070 | gain=+20.8% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$15,070 | gain=+20.8% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$15,070 | gain=+20.8% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$15,070 | gain=+20.8% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,619 | gain=+17.2% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,619 | gain=+17.2% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,619 | gain=+17.2% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,619 | gain=+17.2% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,619 | gain=+17.2% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,619 | gain=+17.2% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,671 | gain=+17.6% | peak=$15,070 | dd=+0%
+[06:00:50] Monitor alive | 829 checks | 1 open | next in 5s
+  AIPAAS: mcap=$14,671 | gain=+17.6% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,671 | gain=+17.6% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,671 | gain=+17.6% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,671 | gain=+17.6% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,671 | gain=+17.6% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,660 | gain=+17.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,660 | gain=+17.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,660 | gain=+17.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,660 | gain=+17.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,660 | gain=+17.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$14,660 | gain=+17.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,979 | gain=+4.0% | peak=$15,070 | dd=+0%
+[06:01:51] Monitor alive | 841 checks | 1 open | next in 5s
+  AIPAAS: mcap=$12,979 | gain=+4.0% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,979 | gain=+4.0% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,979 | gain=+4.0% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,979 | gain=+4.0% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,979 | gain=+4.0% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,591 | gain=-7.1% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,591 | gain=-7.1% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,591 | gain=-7.1% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,591 | gain=-7.1% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,591 | gain=-7.1% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,591 | gain=-7.1% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,847 | gain=-5.1% | peak=$15,070 | dd=+0%
+[06:02:52] Monitor alive | 853 checks | 1 open | next in 5s
+  AIPAAS: mcap=$11,847 | gain=-5.1% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,847 | gain=-5.1% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,847 | gain=-5.1% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,847 | gain=-5.1% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,847 | gain=-5.1% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$10,519 | gain=-15.7% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$10,519 | gain=-15.7% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$10,519 | gain=-15.7% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$10,519 | gain=-15.7% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$10,519 | gain=-15.7% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$10,519 | gain=-15.7% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$10,494 | gain=-15.9% | peak=$15,070 | dd=+0%
+[06:03:53] Monitor alive | 865 checks | 1 open | next in 5s
+  AIPAAS: mcap=$10,494 | gain=-15.9% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$10,494 | gain=-15.9% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$10,494 | gain=-15.9% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$10,494 | gain=-15.9% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$10,494 | gain=-15.9% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,001 | gain=-3.8% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,001 | gain=-3.8% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,001 | gain=-3.8% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,001 | gain=-3.8% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,001 | gain=-3.8% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,001 | gain=-3.8% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,046 | gain=-3.5% | peak=$15,070 | dd=+0%
+[06:04:54] Monitor alive | 877 checks | 1 open | next in 5s
+  AIPAAS: mcap=$12,046 | gain=-3.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,046 | gain=-3.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,046 | gain=-3.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,046 | gain=-3.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,046 | gain=-3.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,168 | gain=-2.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,168 | gain=-2.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,168 | gain=-2.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,168 | gain=-2.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,168 | gain=-2.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,168 | gain=-2.5% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,980 | gain=-4.0% | peak=$15,070 | dd=+0%
+[06:05:55] Monitor alive | 889 checks | 1 open | next in 5s
+  AIPAAS: mcap=$11,980 | gain=-4.0% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,980 | gain=-4.0% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,980 | gain=-4.0% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,980 | gain=-4.0% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,974 | gain=-4.0% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,974 | gain=-4.0% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,974 | gain=-4.0% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,974 | gain=-4.0% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,974 | gain=-4.0% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$11,974 | gain=-4.0% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,422 | gain=-0.4% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,422 | gain=-0.4% | peak=$15,070 | dd=+0%
+[06:06:55] Monitor alive | 901 checks | 1 open | next in 5s
+  AIPAAS: mcap=$12,422 | gain=-0.4% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,422 | gain=-0.4% | peak=$15,070 | dd=+0%
+  AIPAAS: mcap=$12,422 | gain=-0.4% | peak=$15,070 | dd=+0%
