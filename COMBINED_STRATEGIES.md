@@ -1,12 +1,7 @@
 # Trading Strategy v1.0
-## Chris's Full Trade Strategy
-
----
 
 ## 🎯 OBJECTIVE
 Turn 1.0 SOL → 100 SOL
-
----
 
 ## ✅ WINNER TRAITS
 - Top10% holder < 50%
@@ -16,11 +11,7 @@ Turn 1.0 SOL → 100 SOL
 ## ❌ ANTI-PATTERNS (REJECT)
 - Top10% > 70% = dump
 - Liquidity < $1K = rug
-- 5min change > 50% = chasing top
-- 5min change < -50% = falling knife
 - Non-ASCII ticker = reject
-
----
 
 ## 📊 BUY CRITERIA
 
@@ -30,15 +21,12 @@ Turn 1.0 SOL → 100 SOL
 | BS ratio | > 0.20 |
 | Holders | > 15 |
 | Vol/Mcap | > 1.25x |
-| **1 min change** | **-50% to +5% (PULLBACK ONLY)** |
+| **Age >10 min** | **1min -50% to +5% (PULLBACK)** |
+| **Age <10 min** | **1min -50% to +30%** |
 | 5 min vol | > $1K |
 | Liquidity | > $1K |
-| Target WR | 35%+ |
 
----
-
-## 📈 EXIT STRATEGY (tax-adjusted 2.5% per round trip)
-
+## 📈 EXIT STRATEGY
 | Target | Action |
 |--------|--------|
 | TP1 +50% | Sell 50%, trail 15% |
@@ -46,19 +34,8 @@ Turn 1.0 SOL → 100 SOL
 | Trailing | 30% from peak |
 | Stop | -20% |
 
----
-
 ## 🔧 FILTERS
-- Confirmed pullback only (1min change -50% to +5%)
+- Age-based 1min rules (>10min = dip only)
 - Liquidity > $1K
 - ASCII tickers only
 - 60s startup delay
-
----
-
-## ⚙️ ACTIVE SCANNER
-| Scanner | Strategy |
-|---------|----------|
-| whale_momentum_scanner.py | PULLBACK_MOMENTUM |
-
----
