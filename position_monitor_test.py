@@ -11,6 +11,10 @@ EXIT STRATEGY (Chris's):
 - Stop: -20%
 """
 import requests, json
+import logging
+LOG_FILE = "/root/Dex-trading-bot/position_monitor.log"
+logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format="%(message)s")
+logger = logging.getLogger()
 from datetime import datetime
 import time
 from pathlib import Path
@@ -36,9 +40,9 @@ def send_alert(msg, label="ALERT"):
     try:
         req = urllib.request.Request(url, data=urllib.parse.urlencode(data).encode())
         resp = urllib.request.urlopen(req, timeout=10)
-        print(f"[{label}] Alert sent")
+        logger.info(f"[{label}] Alert sent")
     except Exception as e:
-        print(f"[{label}] Alert failed: {e}")
+        logger.info(f"[{label}] Alert failed: {e}")
 
 def load_peak_cache():
     try:
@@ -101,7 +105,7 @@ def check_positions():
         # Update peak with current mcap
         mcap = get_mcap_from_dex(ca)
         if mcap is None:
-            print(f"  {sym}: error fetching mcap")
+            logger.info(f"  {sym}: error fetching mcap")
             continue
 
         if mcap > cache['peak_mcap']:
@@ -136,7 +140,7 @@ def check_positions():
 
 📋 Stop loss triggered"""
             send_alert(msg, "STOP_LOSS")
-            print(f"🔴 {sym} STOP LOSS @ ${mcap:,.0f} ({gains_pct:.1f}%)")
+            logger.info(f"🔴 {sym} STOP LOSS @ ${mcap:,.0f} ({gains_pct:.1f}%)")
             continue
 
         # === TP1 HIT (+50% minimum → 10% trailing from peak) ===
@@ -175,7 +179,7 @@ def check_positions():
 📈 TP3: +{TP3_PERCENT}% → Sell remaining {TP3_SELL_PCT}%
 📊 Trailing: {TRAILING_STOP_PCT}% from peak"""
                         send_alert(msg, "TP1")
-                        print(f"✅ {sym} TP1 HIT @ ${mcap:,.0f} (+{sell_pct:.1f}%)")
+                        logger.info(f"✅ {sym} TP1 HIT @ ${mcap:,.0f} (+{sell_pct:.1f}%)")
                         continue
 
         # === TP2 HIT (+200%) ===
@@ -208,7 +212,7 @@ def check_positions():
 📈 TP3: +{TP3_PERCENT}% → Sell remaining {TP3_SELL_PCT}%
 📊 Trailing: {TRAILING_STOP_PCT}% from peak"""
                 send_alert(msg, "TP2")
-                print(f"✅ {sym} TP2 HIT @ ${mcap:,.0f} (+{gains_pct:.0f}%)")
+                logger.info(f"✅ {sym} TP2 HIT @ ${mcap:,.0f} (+{gains_pct:.0f}%)")
                 continue
 
         # === TP3 HIT (+500%) ===
@@ -238,7 +242,7 @@ def check_positions():
 
 ✅ FULL EXIT COMPLETE"""
                 send_alert(msg, "TP3")
-                print(f"✅ {sym} TP3 HIT @ ${mcap:,.0f} (+{gains_pct:.0f}%) - FULL EXIT")
+                logger.info(f"✅ {sym} TP3 HIT @ ${mcap:,.0f} (+{gains_pct:.0f}%) - FULL EXIT")
                 continue
 
         # === TRAILING STOP (remaining position after TP1) ===
@@ -266,7 +270,7 @@ def check_positions():
 
 📋 Trailing {TRAILING_STOP_PCT}% drop from peak ${int(peak):,}"""
                     send_alert(msg, "TRAILING_STOP")
-                    print(f"✅ {sym} TRAILING STOP @ ${mcap:,.0f} ({drawdown_pct:.0f}% drop from peak)")
+                    logger.info(f"✅ {sym} TRAILING STOP @ ${mcap:,.0f} ({drawdown_pct:.0f}% drop from peak)")
                     continue
 
         # === LIVE PEAK MONITOR ===
@@ -276,7 +280,7 @@ def check_positions():
                 drawdown = ((baseline - mcap) / baseline) * 100
             else:
                 drawdown = 0
-            print(f"  {sym}: mcap=${mcap:,.0f} | gain={gains_pct:+.1f}% | peak=${peak:,.0f} | dd={drawdown:+.0f}%")
+            logger.info(f"  {sym}: mcap=${mcap:,.0f} | gain={gains_pct:+.1f}% | peak=${peak:,.0f} | dd={drawdown:+.0f}%")
 
     save_peak_cache(peak_cache)
 
@@ -288,10 +292,10 @@ def check_positions():
     return updated
 
 def main():
-    print(f"Position Monitor v3 starting...")
-    print(f"Exit Plan: TP1 +{TP1_PERCENT}% (sell {TP1_SELL_PCT}%) | TP2 +{TP2_PERCENT}% | TP3 +{TP3_PERCENT}% | Trailing {TRAILING_STOP_PCT}% | Stop {STOP_LOSS_PERCENT}%")
-    print(f"Peak cache: {PEAK_CACHE_FILE}")
-    print(f"Checking every {CHECK_INTERVAL}s")
+    logger.info(f"Position Monitor v3 starting...")
+    logger.info(f"Exit Plan: TP1 +{TP1_PERCENT}% (sell {TP1_SELL_PCT}%) | TP2 +{TP2_PERCENT}% | TP3 +{TP3_PERCENT}% | Trailing {TRAILING_STOP_PCT}% | Stop {STOP_LOSS_PERCENT}%")
+    logger.info(f"Peak cache: {PEAK_CACHE_FILE}")
+    logger.info(f"Checking every {CHECK_INTERVAL}s")
     send_alert(f"Position Monitor v3 online | TP1 +{TP1_PERCENT}% | Stop {STOP_LOSS_PERCENT}%", "STARTUP")
 
     check_count = 0
@@ -313,10 +317,10 @@ def main():
                     open_count = len([t for t in trades if t.get('opened_at','') > reset and not t.get('closed_at') and t.get('status') != 'closed'])
                 except:
                     pass
-                print(f"[{datetime.utcnow().strftime('%H:%M:%S')}] Monitor alive | {check_count} checks | {open_count} open | next in {CHECK_INTERVAL}s")
+                logger.info(f"[{datetime.utcnow().strftime('%H:%M:%S')}] Monitor alive | {check_count} checks | {open_count} open | next in {CHECK_INTERVAL}s")
                 last_status_time = time.time()
         except Exception as e:
-            print(f"Error: {e}")
+            logger.info(f"Error: {e}")
         time.sleep(CHECK_INTERVAL)
 
 if __name__ == '__main__':
