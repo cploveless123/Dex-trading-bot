@@ -176,12 +176,11 @@ def scan_token(addr):
             return None
         
         # Ticker check
-        if not sym.isalpha() or len(sym) < 3:
+        if not sym.isascii() or not sym.isalpha() or len(sym) < 3:
             return None
         
         # Try strategies
         for scan_fn, strat_name in [
-            (scan_strategy_a, "A"),
             (scan_strategy_b, "B"),
             (scan_strategy_c, "C")
         ]:
@@ -288,6 +287,8 @@ def main():
     whales = load_whales()
     print(f"🚀 Whale Momentum Scanner v2 - {len(whales)} whales loaded")
     
+    time.sleep(60)
+    print("Starting scans now")
     while True:
         try:
             check_and_buy()

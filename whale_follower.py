@@ -216,13 +216,27 @@ def check_whale_new_positions():
 def main():
     whales = load_whales()
     print(f"🐋 Whale Follower v2 started - tracking {len(whales)} whales (WR >50%)")
+    print("Waiting 2 min for whale balances to stabilize before detecting new positions...")
+    
+    # PRE-LOAD current whale balances so we only detect NEW buys after this point
+    print("Pre-loading whale balances...")
+    whales_with_balances = 0
+    last_balances = {}
+    for whale in whales:
+        wallet = whale['wallet']
+        current = get_token_balances(wallet)
+        if current:
+            last_balances[wallet] = {b['mint']: b['amount'] for b in current}
+            whales_with_balances += 1
+    save_last_balances(last_balances)
+    print(f"Pre-loaded {whales_with_balances} whale balances - will detect only NEW buys after this point")
     
     while True:
         try:
             check_whale_new_positions()
         except Exception as e:
             print(f"Whale follower error: {e}")
-        time.sleep(45)  # Check every 45 seconds
+        time.sleep(90)  # Check every 90 seconds (slower to avoid rate limits)
 
 if __name__ == "__main__":
     main()
