@@ -1403,3 +1403,44 @@ Checking every 5s
 [03:49:54] Monitor alive | 577 checks | 1 open | next in 5s
   Bloomerism: mcap=$15,889 | gain=-5.7% | peak=$22,641 | dd=+0%
   Bloomerism: mcap=$15,889 | gain=-5.7% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$15,889 | gain=-5.7% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$15,889 | gain=-5.7% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$14,830 | gain=-12.0% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$14,830 | gain=-12.0% | peak=$22,641 | dd=+0%
+  Bloomerism: mcap=$14,830 | gain=-12.0% | peak=$22,641 | dd=+0%
+Position Monitor v3 starting...
+Exit Plan: TP1 +50% (sell 50%) | TP2 +200% | TP3 +500% | Trailing 30% | Stop -20%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
+  Bloomerism: mcap=$15,885 | gain=+9.4% | peak=$15,885 | dd=+0%
+  Bloomerism: mcap=$15,885 | gain=+9.4% | peak=$15,885 | dd=+0%
+  Bloomerism: mcap=$15,885 | gain=+9.4% | peak=$15,885 | dd=+0%
+Position Monitor v3 starting...
+Exit Plan: TP1 +50% (sell 50%) | TP2 +200% | TP3 +500% | Trailing 30% | Stop -20%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
+  Bloomerism: mcap=$15,885 | gain=+9.4% | peak=$15,885 | dd=+0%
+  Bloomerism: mcap=$15,885 | gain=+9.4% | peak=$15,885 | dd=+0%
+  Bloomerism: mcap=$15,885 | gain=+9.4% | peak=$15,885 | dd=+0%
+  Bloomerism: mcap=$15,515 | gain=+6.9% | peak=$15,885 | dd=+0%
+  Bloomerism: mcap=$15,515 | gain=+6.9% | peak=$15,885 | dd=+0%
+  Bloomerism: mcap=$15,515 | gain=+6.9% | peak=$15,885 | dd=+0%
+  Bloomerism: mcap=$15,515 | gain=+6.9% | peak=$15,885 | dd=+0%
+  Bloomerism: mcap=$15,515 | gain=+6.9% | peak=$15,885 | dd=+0%
+  Bloomerism: mcap=$15,515 | gain=+6.9% | peak=$15,885 | dd=+0%
+  Bloomerism: mcap=$15,515 | gain=+6.9% | peak=$15,885 | dd=+0%
+  Bloomerism: mcap=$15,515 | gain=+6.9% | peak=$15,885 | dd=+0%
+  Bloomerism: mcap=$15,515 | gain=+6.9% | peak=$15,885 | dd=+0%
+  Bloomerism: mcap=$15,515 | gain=+6.9% | peak=$15,515 | dd=+0%
+  Bloomerism: mcap=$15,515 | gain=+6.9% | peak=$15,515 | dd=+0%
+  Bloomerism: mcap=$15,515 | gain=+6.9% | peak=$15,515 | dd=+0%
+  Bloomerism: mcap=$15,668 | gain=+7.9% | peak=$15,668 | dd=+0%
+  Bloomerism: mcap=$15,668 | gain=+7.9% | peak=$15,668 | dd=+0%
+  Bloomerism: mcap=$15,668 | gain=+7.9% | peak=$15,668 | dd=+0%
+  Bloomerism: mcap=$15,668 | gain=+7.9% | peak=$15,668 | dd=+0%
+  Bloomerism: mcap=$15,668 | gain=+7.9% | peak=$15,668 | dd=+0%
+[03:53:00] Monitor alive | 13 checks | 1 open | next in 5s
+  Bloomerism: mcap=$15,668 | gain=+7.9% | peak=$15,668 | dd=+0%
+  Bloomerism: mcap=$15,668 | gain=+7.9% | peak=$15,668 | dd=+0%
