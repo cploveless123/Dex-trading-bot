@@ -165,15 +165,25 @@ def check_whale_new_positions():
         except:
             continue
         
-        # Apply filters
-        if m < 5000 or m > 75000:
+        # Apply filters - STRICTER for whale follow
+        # Whales prefer sub-$10K mcap entries
+        if m > 75000:
+            continue  # Too mature
+        
+        # Strict BS requirement
+        if bs < 1.5:
             continue
+        
+        # Volume filter
         if v5 > 0 and v5 < 1000:
             continue
-        if bs < 1.2:  # Moderate BS for whale-follow
+        
+        # Holders filter
+        if holders > 0 and holders < 20:
             continue
-        if holders > 0 and holders < 15:
-            continue
+        
+        # PRIORITIZE sub-$10K entries (whale preference)
+        is_sub_10k = m < 10000
         
         # === WHALE FOLLOW BUY ===
         trade = {
@@ -192,13 +202,13 @@ def check_whale_new_positions():
             "whale_wallet": buy['wallet'][:20],
             "whale_winrate": round(buy['winrate'] * 100, 1),
             "whale_avg_hold_hours": round(buy['avg_hold'], 1),
-            "bs_ratio": round(bs, 2)
+            "bs_ratio": round(bs, 2), "whale_sub_10k": is_sub_10k
         }
         
         with open(TRADES_FILE, "a") as f:
             f.write(json.dumps(trade) + "\n")
         
-        print(f"🐋 WHALE FOLLOW: {sym} @ ${m:,.0f} (whale WR {buy['winrate']*100:.0f}%)")
+        print(f"🐋 WHALE FOLLOW: {sym} @ ${m:,.0f} {'[SUB-10K]' if is_sub_10k else ''} (whale WR {buy['winrate']*100:.0f}%)")
         return sym
     
     return None
