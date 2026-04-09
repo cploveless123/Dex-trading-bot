@@ -98,3 +98,206 @@ Checking every 5s
   Boo: mcap=$11,734 | gain=+1.4% | peak=$13,068 | dd=+0%
 [02:29:52] Monitor alive | 85 checks | 1 open | next in 5s
   Boo: mcap=$11,734 | gain=+1.4% | peak=$13,068 | dd=+0%
+  Boo: mcap=$11,734 | gain=+1.4% | peak=$13,068 | dd=+0%
+  Boo: mcap=$11,734 | gain=+1.4% | peak=$13,068 | dd=+0%
+  Boo: mcap=$11,734 | gain=+1.4% | peak=$13,068 | dd=+0%
+  Boo: mcap=$12,195 | gain=+5.4% | peak=$13,068 | dd=+0%
+  Boo: mcap=$12,195 | gain=+5.4% | peak=$13,068 | dd=+0%
+  Boo: mcap=$12,195 | gain=+5.4% | peak=$13,068 | dd=+0%
+  Boo: mcap=$12,195 | gain=+5.4% | peak=$13,068 | dd=+0%
+  Boo: mcap=$12,195 | gain=+5.4% | peak=$13,068 | dd=+0%
+  Boo: mcap=$12,195 | gain=+5.4% | peak=$13,068 | dd=+0%
+  Boo: mcap=$11,656 | gain=+0.7% | peak=$13,068 | dd=+0%
+  Boo: mcap=$11,656 | gain=+0.7% | peak=$13,068 | dd=+0%
+[02:30:53] Monitor alive | 97 checks | 1 open | next in 5s
+  Boo: mcap=$11,656 | gain=+0.7% | peak=$13,068 | dd=+0%
+  Boo: mcap=$11,656 | gain=+0.7% | peak=$13,068 | dd=+0%
+  Boo: mcap=$11,656 | gain=+0.7% | peak=$13,068 | dd=+0%
+  Boo: mcap=$11,656 | gain=+0.7% | peak=$13,068 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Boo STOP LOSS @ $9,118 (-21.2%)
+[02:31:54] Monitor alive | 109 checks | 0 open | next in 5s
+  BEEF: mcap=$10,553 | gain=+0.0% | peak=$10,553 | dd=+0%
+[02:32:55] Monitor alive | 121 checks | 1 open | next in 5s
+  BEEF: mcap=$10,553 | gain=+0.0% | peak=$10,553 | dd=+0%
+  BEEF: mcap=$10,553 | gain=+0.0% | peak=$10,553 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 BEEF STOP LOSS @ $7,468 (-29.2%)
+[02:33:55] Monitor alive | 133 checks | 0 open | next in 5s
+  BOOMERS: mcap=$15,039 | gain=+0.0% | peak=$15,039 | dd=+0%
+[02:34:55] Monitor alive | 145 checks | 1 open | next in 5s
+  BOOMERS: mcap=$15,039 | gain=+0.0% | peak=$15,039 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 BOOMERS STOP LOSS @ $11,543 (-23.2%)
+[02:35:56] Monitor alive | 157 checks | 0 open | next in 5s
+[02:36:56] Monitor alive | 169 checks | 0 open | next in 5s
+[02:37:56] Monitor alive | 181 checks | 0 open | next in 5s
+[02:38:56] Monitor alive | 193 checks | 0 open | next in 5s
+[02:39:56] Monitor alive | 205 checks | 0 open | next in 5s
+[02:40:56] Monitor alive | 217 checks | 0 open | next in 5s
+[02:41:56] Monitor alive | 229 checks | 0 open | next in 5s
+[02:42:57] Monitor alive | 241 checks | 0 open | next in 5s
+[02:43:57] Monitor alive | 253 checks | 0 open | next in 5s
+[02:44:57] Monitor alive | 265 checks | 0 open | next in 5s
+[02:45:57] Monitor alive | 277 checks | 0 open | next in 5s
+[02:46:57] Monitor alive | 289 checks | 0 open | next in 5s
+[02:47:57] Monitor alive | 301 checks | 0 open | next in 5s
+[02:48:57] Monitor alive | 313 checks | 0 open | next in 5s
+  Ewon: mcap=$10,762 | gain=+0.0% | peak=$10,762 | dd=+0%
+  Ewon: mcap=$10,762 | gain=+0.0% | peak=$10,762 | dd=+0%
+  Ewon: mcap=$10,762 | gain=+0.0% | peak=$10,762 | dd=+0%
+  Ewon: mcap=$10,762 | gain=+0.0% | peak=$10,762 | dd=+0%
+  Ewon: mcap=$10,762 | gain=+0.0% | peak=$10,762 | dd=+0%
+  Ewon: mcap=$11,869 | gain=+10.3% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$11,869 | gain=+10.3% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$11,869 | gain=+10.3% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$11,869 | gain=+10.3% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$11,869 | gain=+10.3% | peak=$11,869 | dd=+0%
+[02:49:58] Monitor alive | 325 checks | 1 open | next in 5s
+  Ewon: mcap=$11,593 | gain=+7.7% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$11,593 | gain=+7.7% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$11,593 | gain=+7.7% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$11,593 | gain=+7.7% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$11,593 | gain=+7.7% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$11,593 | gain=+7.7% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$11,832 | gain=+9.9% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$11,832 | gain=+9.9% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$11,832 | gain=+9.9% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$11,832 | gain=+9.9% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$11,832 | gain=+9.9% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$11,832 | gain=+9.9% | peak=$11,869 | dd=+0%
+[02:50:59] Monitor alive | 337 checks | 1 open | next in 5s
+  Ewon: mcap=$10,311 | gain=-4.2% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$10,311 | gain=-4.2% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$10,311 | gain=-4.2% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$10,311 | gain=-4.2% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$10,311 | gain=-4.2% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$10,311 | gain=-4.2% | peak=$11,869 | dd=+0%
+  Ewon: mcap=$12,582 | gain=+16.9% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,582 | gain=+16.9% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,582 | gain=+16.9% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,582 | gain=+16.9% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,582 | gain=+16.9% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,582 | gain=+16.9% | peak=$12,582 | dd=+0%
+[02:52:00] Monitor alive | 349 checks | 1 open | next in 5s
+  Ewon: mcap=$12,006 | gain=+11.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,006 | gain=+11.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,006 | gain=+11.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,006 | gain=+11.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,006 | gain=+11.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,006 | gain=+11.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$8,777 | gain=-18.4% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$8,777 | gain=-18.4% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$8,777 | gain=-18.4% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$8,777 | gain=-18.4% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$8,777 | gain=-18.4% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$8,777 | gain=-18.4% | peak=$12,582 | dd=+0%
+[02:53:01] Monitor alive | 361 checks | 1 open | next in 5s
+  Ewon: mcap=$9,943 | gain=-7.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$9,943 | gain=-7.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$9,943 | gain=-7.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$9,943 | gain=-7.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$9,943 | gain=-7.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$9,943 | gain=-7.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,364 | gain=+5.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,364 | gain=+5.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,364 | gain=+5.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,364 | gain=+5.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,364 | gain=+5.6% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,364 | gain=+5.6% | peak=$12,582 | dd=+0%
+[02:54:01] Monitor alive | 373 checks | 1 open | next in 5s
+  Ewon: mcap=$11,124 | gain=+3.4% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,124 | gain=+3.4% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,124 | gain=+3.4% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,124 | gain=+3.4% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,124 | gain=+3.4% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,124 | gain=+3.4% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$10,519 | gain=-2.3% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$10,519 | gain=-2.3% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$10,519 | gain=-2.3% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$10,519 | gain=-2.3% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$10,519 | gain=-2.3% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$10,519 | gain=-2.3% | peak=$12,582 | dd=+0%
+[02:55:02] Monitor alive | 385 checks | 1 open | next in 5s
+  Ewon: mcap=$10,681 | gain=-0.8% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$10,681 | gain=-0.8% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$10,681 | gain=-0.8% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$10,681 | gain=-0.8% | peak=$12,582 | dd=+0%
+Position Monitor v3 starting...
+Exit Plan: TP1 +50% (sell 50%) | TP2 +200% | TP3 +500% | Trailing 20% | Stop -20%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
+[TRAILING_STOP] Alert sent
+✅ LAPD TRAILING STOP @ $3,523 (75% drop from peak)
+[TRAILING_STOP] Alert sent
+✅ LOY-002 TRAILING STOP @ $4,488 (74% drop from peak)
+[TRAILING_STOP] Alert sent
+✅ LOY-002 TRAILING STOP @ $9,504 (38% drop from peak)
+[TRAILING_STOP] Alert sent
+✅ Cupsey TRAILING STOP @ $59,499 (42% drop from peak)
+  Ewon: mcap=$10,681 | gain=-0.8% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,546 | gain=+7.3% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,546 | gain=+7.3% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,546 | gain=+7.3% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,546 | gain=+7.3% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,546 | gain=+7.3% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$11,546 | gain=+7.3% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,384 | gain=+15.1% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,384 | gain=+15.1% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,384 | gain=+15.1% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,384 | gain=+15.1% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,384 | gain=+15.1% | peak=$12,582 | dd=+0%
+  Ewon: mcap=$12,384 | gain=+15.1% | peak=$12,582 | dd=+0%
+[02:56:32] Monitor alive | 13 checks | 1 open | next in 5s
+  Ewon: mcap=$13,239 | gain=+23.0% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$13,239 | gain=+23.0% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$13,239 | gain=+23.0% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$13,239 | gain=+23.0% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$13,239 | gain=+23.0% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$13,239 | gain=+23.0% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$10,424 | gain=-3.1% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$10,424 | gain=-3.1% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$10,424 | gain=-3.1% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$10,424 | gain=-3.1% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$10,424 | gain=-3.1% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$10,424 | gain=-3.1% | peak=$13,239 | dd=+0%
+[02:57:33] Monitor alive | 25 checks | 1 open | next in 5s
+  Ewon: mcap=$10,658 | gain=-1.0% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$10,658 | gain=-1.0% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$10,658 | gain=-1.0% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$10,658 | gain=-1.0% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$10,658 | gain=-1.0% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$10,658 | gain=-1.0% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$11,106 | gain=+3.2% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$11,106 | gain=+3.2% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$11,106 | gain=+3.2% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$11,106 | gain=+3.2% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$11,106 | gain=+3.2% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$11,106 | gain=+3.2% | peak=$13,239 | dd=+0%
+[02:58:34] Monitor alive | 37 checks | 1 open | next in 5s
+  Ewon: mcap=$12,040 | gain=+11.9% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$12,040 | gain=+11.9% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$12,040 | gain=+11.9% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$12,040 | gain=+11.9% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$12,040 | gain=+11.9% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$12,040 | gain=+11.9% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$10,303 | gain=-4.3% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$10,303 | gain=-4.3% | peak=$13,239 | dd=+0%
+  Ewon: mcap=$10,303 | gain=-4.3% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$16,854 | gain=+0.0% | peak=$16,854 | dd=+0%
+  Ewon: mcap=$10,303 | gain=-4.3% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$16,854 | gain=+0.0% | peak=$16,854 | dd=+0%
+  Ewon: mcap=$10,303 | gain=-4.3% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$17,522 | gain=+4.0% | peak=$17,522 | dd=+0%
+  Ewon: mcap=$10,938 | gain=+1.6% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$17,522 | gain=+4.0% | peak=$17,522 | dd=+0%
+[02:59:35] Monitor alive | 49 checks | 2 open | next in 5s
+  Ewon: mcap=$10,938 | gain=+1.6% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$17,522 | gain=+4.0% | peak=$17,522 | dd=+0%
+  Ewon: mcap=$10,938 | gain=+1.6% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$17,522 | gain=+4.0% | peak=$17,522 | dd=+0%
+  Ewon: mcap=$10,938 | gain=+1.6% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$17,522 | gain=+4.0% | peak=$17,522 | dd=+0%
+  Ewon: mcap=$10,938 | gain=+1.6% | peak=$13,239 | dd=+0%
+  Bloomerism: mcap=$17,522 | gain=+4.0% | peak=$17,522 | dd=+0%

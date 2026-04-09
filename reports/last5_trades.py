@@ -18,7 +18,7 @@ with open('/root/Dex-trading-bot/trades/sim_trades.jsonl') as f:
 # Only count session trades (after SIM_RESET_TIMESTAMP)
 reset_ts = SIM_RESET_TIMESTAMP
 session_trades = [t for t in trades if t.get('opened_at', '') > reset_ts]
-closed_all = [t for t in session_trades if t.get('closed_at')]
+closed_all = [t for t in session_trades if t.get('fully_exited') or t.get('trailing_stopped') or t.get('status') == 'closed']
 open_full = [t for t in session_trades if t.get('status') == 'open']
 open_partial = [t for t in session_trades if t.get('status') == 'open_partial']
 

@@ -81,11 +81,10 @@ def check_positions():
     for t in trades:
         if t.get('opened_at', '') <= reset:
             continue
-        if t.get('closed_at'):
+        if t.get('closed_at') and t.get('fully_exited'):
             continue
-        if t.get('status') not in ('open', 'open_partial'):
+        if t.get('status') not in ('open', 'open_partial') and t.get('fully_exited'):
             continue
-
         ca = t.get('token_address', '')
         sym = t.get('token', '?')
         entry = t.get('entry_mcap', 0)
@@ -116,7 +115,7 @@ def check_positions():
 
         # === STOP LOSS (-20%) ===
         if not tp1_sold and gains_pct <= STOP_LOSS_PERCENT:
-            t['status'] = 'closed'
+            t['status'] = 'closed'; t['fully_exited'] = True
             t['exit_reason'] = 'STOP_AUTO'
             t['closed_at'] = datetime.utcnow().isoformat()
             t['pnl_sol'] = POSITION_SIZE * (gains_pct / 100)
@@ -247,6 +246,7 @@ def check_positions():
                 drawdown_pct = ((peak - mcap) / peak) * 100
                 if drawdown_pct >= TRAILING_STOP_PCT:
                     t['trailing_stopped'] = True
+                    t['fully_exited'] = True
                     t['exit_reason'] = 'TRAILING_STOP'
                     t['closed_at'] = datetime.utcnow().isoformat()
                     remaining_pnl = POSITION_SIZE * (100 - TP1_SELL_PCT - TP2_SELL_PCT - TP3_SELL_PCT) / 100 * (gains_pct / 100)
