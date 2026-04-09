@@ -82,7 +82,7 @@ def scan_strategy_a(p, m, v5, bs, holders, chg5, sym, addr, pair_addr, dex, p_da
         "bs_strict": True
     }
 
-def scan_strategy_b(p, m, v5, bs, holders, chg5, sym, addr, pair_addr, dex, p_data):
+def scan_strategy_b(p, m, v5, bs, holders, chg5, sym, addr, pair_addr, dex, p_data, chg1=0):
     """Strategy B: Pullback Momentum"""
     # BS requirement
     if bs < 1.5:
@@ -175,6 +175,7 @@ def scan_token(addr):
         holders = p.get('holders', 0) or 0
         chg5 = p.get('priceChange', {}).get('m5', 0) or 0
         chg5 = chg5 if chg5 is not None else 0
+        chg1 = p.get('priceChange', {}).get('m1', 0) or 0
         
         # Anti-pattern check
         is_anti, reason = check_anti_patterns(p, m, bs, holders, v5/m if m > 0 else 0, chg5)
