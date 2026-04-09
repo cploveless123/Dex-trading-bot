@@ -1531,3 +1531,420 @@ Checking every 5s
   Bloomerism: mcap=$14,805 | gain=+2.0% | peak=$15,874 | dd=+0%
   Bloomerism: mcap=$14,805 | gain=+2.0% | peak=$15,874 | dd=+0%
   Bloomerism: mcap=$14,805 | gain=+2.0% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,805 | gain=+2.0% | peak=$15,874 | dd=+0%
+[04:00:06] Monitor alive | 97 checks | 1 open | next in 5s
+  Bloomerism: mcap=$14,805 | gain=+2.0% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,805 | gain=+2.0% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,805 | gain=+2.0% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,805 | gain=+2.0% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,805 | gain=+2.0% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,805 | gain=+2.0% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,805 | gain=+2.0% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,805 | gain=+2.0% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,776 | gain=+1.8% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,776 | gain=+1.8% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,776 | gain=+1.8% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,776 | gain=+1.8% | peak=$15,874 | dd=+0%
+[04:01:07] Monitor alive | 109 checks | 1 open | next in 5s
+  Bloomerism: mcap=$14,776 | gain=+1.8% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,776 | gain=+1.8% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+[04:02:08] Monitor alive | 121 checks | 1 open | next in 5s
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,387 | gain=-0.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,239 | gain=-1.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,239 | gain=-1.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,239 | gain=-1.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,239 | gain=-1.9% | peak=$15,874 | dd=+0%
+[04:03:09] Monitor alive | 133 checks | 1 open | next in 5s
+  Bloomerism: mcap=$14,239 | gain=-1.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$14,239 | gain=-1.9% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$13,484 | gain=-7.1% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$13,484 | gain=-7.1% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$13,484 | gain=-7.1% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$13,484 | gain=-7.1% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$13,484 | gain=-7.1% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$13,484 | gain=-7.1% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$12,694 | gain=-12.5% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$12,694 | gain=-12.5% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$12,694 | gain=-12.5% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$12,694 | gain=-12.5% | peak=$15,874 | dd=+0%
+[04:04:10] Monitor alive | 145 checks | 1 open | next in 5s
+  Bloomerism: mcap=$12,694 | gain=-12.5% | peak=$15,874 | dd=+0%
+  Bloomerism: mcap=$12,694 | gain=-12.5% | peak=$15,874 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Bloomerism STOP LOSS @ $11,213 (-22.8%)
+[04:05:11] Monitor alive | 157 checks | 0 open | next in 5s
+  Piecoin: mcap=$10,123 | gain=+0.0% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$10,123 | gain=+0.0% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$9,615 | gain=-5.0% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$9,615 | gain=-5.0% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$9,615 | gain=-5.0% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$9,615 | gain=-5.0% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$9,615 | gain=-5.0% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$9,615 | gain=-5.0% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$8,758 | gain=-13.5% | peak=$10,123 | dd=+0%
+[04:06:11] Monitor alive | 169 checks | 1 open | next in 5s
+  Piecoin: mcap=$8,758 | gain=-13.5% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$8,758 | gain=-13.5% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$8,758 | gain=-13.5% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$8,758 | gain=-13.5% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$8,758 | gain=-13.5% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$9,160 | gain=-9.5% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$9,160 | gain=-9.5% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$9,160 | gain=-9.5% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$9,160 | gain=-9.5% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$9,160 | gain=-9.5% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$9,160 | gain=-9.5% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$8,638 | gain=-14.7% | peak=$10,123 | dd=+0%
+[04:07:12] Monitor alive | 181 checks | 1 open | next in 5s
+  Piecoin: mcap=$8,638 | gain=-14.7% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$8,638 | gain=-14.7% | peak=$10,123 | dd=+0%
+  Piecoin: mcap=$8,638 | gain=-14.7% | peak=$10,123 | dd=+0%
+  meyhum: mcap=$36,547 | gain=+23.5% | peak=$36,547 | dd=+0%
+  Piecoin: mcap=$8,638 | gain=-14.7% | peak=$10,123 | dd=+0%
+  meyhum: mcap=$36,547 | gain=+23.5% | peak=$36,547 | dd=+0%
+  Piecoin: mcap=$8,638 | gain=-14.7% | peak=$10,123 | dd=+0%
+  meyhum: mcap=$36,547 | gain=+23.5% | peak=$36,547 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Piecoin STOP LOSS @ $7,386 (-27.0%)
+  meyhum: mcap=$36,547 | gain=+23.5% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$36,547 | gain=+23.5% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$36,547 | gain=+23.5% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$29,032 | gain=-1.9% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$29,032 | gain=-1.9% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$29,032 | gain=-1.9% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$29,032 | gain=-1.9% | peak=$36,547 | dd=+0%
+[04:08:14] Monitor alive | 193 checks | 1 open | next in 5s
+  meyhum: mcap=$29,032 | gain=-1.9% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$29,032 | gain=-1.9% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$25,739 | gain=-13.0% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$25,739 | gain=-13.0% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$25,739 | gain=-13.0% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$25,739 | gain=-13.0% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$25,739 | gain=-13.0% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$25,739 | gain=-13.0% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$29,259 | gain=-1.2% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$29,259 | gain=-1.2% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$29,259 | gain=-1.2% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$29,259 | gain=-1.2% | peak=$36,547 | dd=+0%
+[04:09:15] Monitor alive | 205 checks | 1 open | next in 5s
+  meyhum: mcap=$29,259 | gain=-1.2% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$29,259 | gain=-1.2% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$31,812 | gain=+7.5% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$31,812 | gain=+7.5% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$31,812 | gain=+7.5% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$31,812 | gain=+7.5% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$31,812 | gain=+7.5% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$31,812 | gain=+7.5% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$33,658 | gain=+13.7% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$33,658 | gain=+13.7% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$33,658 | gain=+13.7% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$33,658 | gain=+13.7% | peak=$36,547 | dd=+0%
+[04:10:15] Monitor alive | 217 checks | 1 open | next in 5s
+  meyhum: mcap=$33,658 | gain=+13.7% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$33,658 | gain=+13.7% | peak=$36,547 | dd=+0%
+  meyhum: mcap=$38,313 | gain=+29.4% | peak=$38,313 | dd=+0%
+  meyhum: mcap=$38,313 | gain=+29.4% | peak=$38,313 | dd=+0%
+  meyhum: mcap=$38,313 | gain=+29.4% | peak=$38,313 | dd=+0%
+  meyhum: mcap=$38,313 | gain=+29.4% | peak=$38,313 | dd=+0%
+  meyhum: mcap=$38,313 | gain=+29.4% | peak=$38,313 | dd=+0%
+  meyhum: mcap=$38,313 | gain=+29.4% | peak=$38,313 | dd=+0%
+  meyhum: mcap=$32,205 | gain=+8.8% | peak=$38,313 | dd=+0%
+  meyhum: mcap=$32,205 | gain=+8.8% | peak=$38,313 | dd=+0%
+  meyhum: mcap=$32,205 | gain=+8.8% | peak=$38,313 | dd=+0%
+  meyhum: mcap=$32,205 | gain=+8.8% | peak=$38,313 | dd=+0%
+[04:11:16] Monitor alive | 229 checks | 1 open | next in 5s
+  meyhum: mcap=$32,205 | gain=+8.8% | peak=$38,313 | dd=+0%
+  meyhum: mcap=$32,205 | gain=+8.8% | peak=$38,313 | dd=+0%
+  meyhum: mcap=$25,903 | gain=-12.5% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$18,705 | gain=+0.0% | peak=$18,705 | dd=+0%
+  meyhum: mcap=$25,903 | gain=-12.5% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$18,705 | gain=+0.0% | peak=$18,705 | dd=+0%
+  meyhum: mcap=$25,903 | gain=-12.5% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$18,431 | gain=-1.5% | peak=$18,705 | dd=+0%
+  meyhum: mcap=$25,903 | gain=-12.5% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$18,431 | gain=-1.5% | peak=$18,705 | dd=+0%
+  meyhum: mcap=$25,903 | gain=-12.5% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$18,431 | gain=-1.5% | peak=$18,705 | dd=+0%
+  meyhum: mcap=$25,903 | gain=-12.5% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$18,431 | gain=-1.5% | peak=$18,705 | dd=+0%
+  meyhum: mcap=$24,935 | gain=-15.8% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$18,431 | gain=-1.5% | peak=$18,705 | dd=+0%
+  meyhum: mcap=$24,935 | gain=-15.8% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$18,431 | gain=-1.5% | peak=$18,705 | dd=+0%
+  meyhum: mcap=$24,935 | gain=-15.8% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$19,616 | gain=+4.9% | peak=$19,616 | dd=+0%
+  meyhum: mcap=$24,935 | gain=-15.8% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$19,616 | gain=+4.9% | peak=$19,616 | dd=+0%
+[04:12:18] Monitor alive | 241 checks | 2 open | next in 5s
+  meyhum: mcap=$24,935 | gain=-15.8% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$19,616 | gain=+4.9% | peak=$19,616 | dd=+0%
+  meyhum: mcap=$24,935 | gain=-15.8% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$19,616 | gain=+4.9% | peak=$19,616 | dd=+0%
+  meyhum: mcap=$28,604 | gain=-3.4% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$19,616 | gain=+4.9% | peak=$19,616 | dd=+0%
+  meyhum: mcap=$28,604 | gain=-3.4% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$19,616 | gain=+4.9% | peak=$19,616 | dd=+0%
+  meyhum: mcap=$28,604 | gain=-3.4% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$18,916 | gain=+1.1% | peak=$19,616 | dd=+0%
+  meyhum: mcap=$28,604 | gain=-3.4% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$18,916 | gain=+1.1% | peak=$19,616 | dd=+0%
+  meyhum: mcap=$28,604 | gain=-3.4% | peak=$38,313 | dd=+0%
+  KhunSak: mcap=$18,916 | gain=+1.1% | peak=$19,616 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 meyhum STOP LOSS @ $22,328 (-24.6%)
+  KhunSak: mcap=$18,916 | gain=+1.1% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,916 | gain=+1.1% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,907 | gain=+1.1% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,907 | gain=+1.1% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,907 | gain=+1.1% | peak=$19,616 | dd=+0%
+[04:13:20] Monitor alive | 253 checks | 1 open | next in 5s
+  KhunSak: mcap=$18,907 | gain=+1.1% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,907 | gain=+1.1% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,907 | gain=+1.1% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,620 | gain=-0.5% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,620 | gain=-0.5% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,620 | gain=-0.5% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,620 | gain=-0.5% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,620 | gain=-0.5% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,620 | gain=-0.5% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,218 | gain=-2.6% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,218 | gain=-2.6% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,218 | gain=-2.6% | peak=$19,616 | dd=+0%
+[04:14:21] Monitor alive | 265 checks | 1 open | next in 5s
+  KhunSak: mcap=$18,218 | gain=-2.6% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,218 | gain=-2.6% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,218 | gain=-2.6% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,023 | gain=-9.0% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,023 | gain=-9.0% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,023 | gain=-9.0% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,023 | gain=-9.0% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,023 | gain=-9.0% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,023 | gain=-9.0% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,637 | gain=-11.1% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,637 | gain=-11.1% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,637 | gain=-11.1% | peak=$19,616 | dd=+0%
+[04:15:22] Monitor alive | 277 checks | 1 open | next in 5s
+  KhunSak: mcap=$16,637 | gain=-11.1% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,637 | gain=-11.1% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,637 | gain=-11.1% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,454 | gain=-6.7% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,454 | gain=-6.7% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,454 | gain=-6.7% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,454 | gain=-6.7% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,454 | gain=-6.7% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,454 | gain=-6.7% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,060 | gain=-3.4% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,060 | gain=-3.4% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,060 | gain=-3.4% | peak=$19,616 | dd=+0%
+[04:16:23] Monitor alive | 289 checks | 1 open | next in 5s
+  KhunSak: mcap=$18,060 | gain=-3.4% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,060 | gain=-3.4% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,060 | gain=-3.4% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$15,728 | gain=-15.9% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$15,728 | gain=-15.9% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$15,728 | gain=-15.9% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$15,728 | gain=-15.9% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$15,728 | gain=-15.9% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$15,728 | gain=-15.9% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,265 | gain=-13.0% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,265 | gain=-13.0% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,265 | gain=-13.0% | peak=$19,616 | dd=+0%
+[04:17:23] Monitor alive | 301 checks | 1 open | next in 5s
+  KhunSak: mcap=$16,265 | gain=-13.0% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,265 | gain=-13.0% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,265 | gain=-13.0% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,775 | gain=-10.3% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,775 | gain=-10.3% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,775 | gain=-10.3% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,775 | gain=-10.3% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,775 | gain=-10.3% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,775 | gain=-10.3% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,294 | gain=-2.2% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,294 | gain=-2.2% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,294 | gain=-2.2% | peak=$19,616 | dd=+0%
+[04:18:24] Monitor alive | 313 checks | 1 open | next in 5s
+  KhunSak: mcap=$18,294 | gain=-2.2% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,294 | gain=-2.2% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$18,294 | gain=-2.2% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,102 | gain=-8.6% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,102 | gain=-8.6% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,102 | gain=-8.6% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,102 | gain=-8.6% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,102 | gain=-8.6% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,102 | gain=-8.6% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,845 | gain=-9.9% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,845 | gain=-9.9% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,845 | gain=-9.9% | peak=$19,616 | dd=+0%
+[04:19:25] Monitor alive | 325 checks | 1 open | next in 5s
+  KhunSak: mcap=$16,845 | gain=-9.9% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,845 | gain=-9.9% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,845 | gain=-9.9% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,309 | gain=-12.8% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,309 | gain=-12.8% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,309 | gain=-12.8% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,309 | gain=-12.8% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,309 | gain=-12.8% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$16,309 | gain=-12.8% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,130 | gain=-8.4% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,130 | gain=-8.4% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,130 | gain=-8.4% | peak=$19,616 | dd=+0%
+[04:20:26] Monitor alive | 337 checks | 1 open | next in 5s
+  KhunSak: mcap=$17,130 | gain=-8.4% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,130 | gain=-8.4% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,130 | gain=-8.4% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,899 | gain=-4.3% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,899 | gain=-4.3% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,899 | gain=-4.3% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,899 | gain=-4.3% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$17,899 | gain=-4.3% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$19,028 | gain=+1.7% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$19,028 | gain=+1.7% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$19,028 | gain=+1.7% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$19,028 | gain=+1.7% | peak=$19,616 | dd=+0%
+[04:21:27] Monitor alive | 349 checks | 1 open | next in 5s
+  KhunSak: mcap=$19,028 | gain=+1.7% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$19,028 | gain=+1.7% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$19,109 | gain=+2.2% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$19,109 | gain=+2.2% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$19,109 | gain=+2.2% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$19,109 | gain=+2.2% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$19,109 | gain=+2.2% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$19,109 | gain=+2.2% | peak=$19,616 | dd=+0%
+  KhunSak: mcap=$19,778 | gain=+5.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$19,778 | gain=+5.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$19,778 | gain=+5.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$19,778 | gain=+5.7% | peak=$19,778 | dd=+0%
+[04:22:28] Monitor alive | 361 checks | 1 open | next in 5s
+  KhunSak: mcap=$19,778 | gain=+5.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$19,778 | gain=+5.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$19,087 | gain=+2.0% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$19,087 | gain=+2.0% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$19,087 | gain=+2.0% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$19,087 | gain=+2.0% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$19,087 | gain=+2.0% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$19,087 | gain=+2.0% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$18,282 | gain=-2.3% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$18,282 | gain=-2.3% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$18,282 | gain=-2.3% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$18,282 | gain=-2.3% | peak=$19,778 | dd=+0%
+[04:23:29] Monitor alive | 373 checks | 1 open | next in 5s
+  KhunSak: mcap=$18,282 | gain=-2.3% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$18,282 | gain=-2.3% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$18,076 | gain=-3.4% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$18,076 | gain=-3.4% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$18,076 | gain=-3.4% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$18,076 | gain=-3.4% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$18,076 | gain=-3.4% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$18,076 | gain=-3.4% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$17,261 | gain=-7.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$17,261 | gain=-7.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$17,261 | gain=-7.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$17,261 | gain=-7.7% | peak=$19,778 | dd=+0%
+[04:24:30] Monitor alive | 385 checks | 1 open | next in 5s
+  KhunSak: mcap=$17,261 | gain=-7.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$17,261 | gain=-7.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$17,857 | gain=-4.5% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$17,857 | gain=-4.5% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$17,857 | gain=-4.5% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$17,857 | gain=-4.5% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$17,857 | gain=-4.5% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$17,857 | gain=-4.5% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,654 | gain=-11.0% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,654 | gain=-11.0% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,654 | gain=-11.0% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,654 | gain=-11.0% | peak=$19,778 | dd=+0%
+[04:25:30] Monitor alive | 397 checks | 1 open | next in 5s
+  KhunSak: mcap=$16,654 | gain=-11.0% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,654 | gain=-11.0% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,766 | gain=-10.4% | peak=$19,778 | dd=+0%
+  CALM: mcap=$18,029 | gain=+0.0% | peak=$18,029 | dd=+0%
+  KhunSak: mcap=$16,766 | gain=-10.4% | peak=$19,778 | dd=+0%
+  CALM: mcap=$17,204 | gain=-4.6% | peak=$18,029 | dd=+0%
+  KhunSak: mcap=$16,766 | gain=-10.4% | peak=$19,778 | dd=+0%
+  CALM: mcap=$17,204 | gain=-4.6% | peak=$18,029 | dd=+0%
+  KhunSak: mcap=$16,766 | gain=-10.4% | peak=$19,778 | dd=+0%
+  CALM: mcap=$17,204 | gain=-4.6% | peak=$18,029 | dd=+0%
+  KhunSak: mcap=$16,766 | gain=-10.4% | peak=$19,778 | dd=+0%
+  CALM: mcap=$17,204 | gain=-4.6% | peak=$18,029 | dd=+0%
+  KhunSak: mcap=$16,766 | gain=-10.4% | peak=$19,778 | dd=+0%
+  CALM: mcap=$17,204 | gain=-4.6% | peak=$18,029 | dd=+0%
+  KhunSak: mcap=$16,963 | gain=-9.3% | peak=$19,778 | dd=+0%
+  CALM: mcap=$17,204 | gain=-4.6% | peak=$18,029 | dd=+0%
+  KhunSak: mcap=$16,963 | gain=-9.3% | peak=$19,778 | dd=+0%
+  CALM: mcap=$18,748 | gain=+4.0% | peak=$18,748 | dd=+0%
+  KhunSak: mcap=$16,963 | gain=-9.3% | peak=$19,778 | dd=+0%
+  CALM: mcap=$18,748 | gain=+4.0% | peak=$18,748 | dd=+0%
+  KhunSak: mcap=$16,963 | gain=-9.3% | peak=$19,778 | dd=+0%
+  CALM: mcap=$18,748 | gain=+4.0% | peak=$18,748 | dd=+0%
+[04:26:32] Monitor alive | 409 checks | 2 open | next in 5s
+  KhunSak: mcap=$16,963 | gain=-9.3% | peak=$19,778 | dd=+0%
+  CALM: mcap=$18,748 | gain=+4.0% | peak=$18,748 | dd=+0%
+  KhunSak: mcap=$16,963 | gain=-9.3% | peak=$19,778 | dd=+0%
+  CALM: mcap=$18,748 | gain=+4.0% | peak=$18,748 | dd=+0%
+  KhunSak: mcap=$17,298 | gain=-7.5% | peak=$19,778 | dd=+0%
+  CALM: mcap=$18,748 | gain=+4.0% | peak=$18,748 | dd=+0%
+  KhunSak: mcap=$17,298 | gain=-7.5% | peak=$19,778 | dd=+0%
+  CALM: mcap=$17,673 | gain=-2.0% | peak=$18,748 | dd=+0%
+  KhunSak: mcap=$17,298 | gain=-7.5% | peak=$19,778 | dd=+0%
+  CALM: mcap=$17,673 | gain=-2.0% | peak=$18,748 | dd=+0%
+  KhunSak: mcap=$17,298 | gain=-7.5% | peak=$19,778 | dd=+0%
+  CALM: mcap=$17,673 | gain=-2.0% | peak=$18,748 | dd=+0%
+  KhunSak: mcap=$17,298 | gain=-7.5% | peak=$19,778 | dd=+0%
+  CALM: mcap=$17,673 | gain=-2.0% | peak=$18,748 | dd=+0%
+  KhunSak: mcap=$17,298 | gain=-7.5% | peak=$19,778 | dd=+0%
+  CALM: mcap=$17,673 | gain=-2.0% | peak=$18,748 | dd=+0%
+  KhunSak: mcap=$15,933 | gain=-14.8% | peak=$19,778 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 CALM STOP LOSS @ $11,362 (-37.0%)
+  KhunSak: mcap=$15,933 | gain=-14.8% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$15,933 | gain=-14.8% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$15,933 | gain=-14.8% | peak=$19,778 | dd=+0%
+[04:27:34] Monitor alive | 421 checks | 1 open | next in 5s
+  KhunSak: mcap=$15,933 | gain=-14.8% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,522 | gain=-11.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,522 | gain=-11.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,522 | gain=-11.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,522 | gain=-11.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,522 | gain=-11.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,522 | gain=-11.7% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,131 | gain=-13.8% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,131 | gain=-13.8% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,131 | gain=-13.8% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,131 | gain=-13.8% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,131 | gain=-13.8% | peak=$19,778 | dd=+0%
+[04:28:35] Monitor alive | 433 checks | 1 open | next in 5s
+  KhunSak: mcap=$16,131 | gain=-13.8% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,040 | gain=-14.2% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,040 | gain=-14.2% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,040 | gain=-14.2% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,040 | gain=-14.2% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,040 | gain=-14.2% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,040 | gain=-14.2% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,262 | gain=-13.1% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,262 | gain=-13.1% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,262 | gain=-13.1% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,262 | gain=-13.1% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$16,262 | gain=-13.1% | peak=$19,778 | dd=+0%
+[04:29:36] Monitor alive | 445 checks | 1 open | next in 5s
+  KhunSak: mcap=$16,262 | gain=-13.1% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$15,657 | gain=-16.3% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$15,657 | gain=-16.3% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$15,657 | gain=-16.3% | peak=$19,778 | dd=+0%
+  KhunSak: mcap=$15,657 | gain=-16.3% | peak=$19,778 | dd=+0%
