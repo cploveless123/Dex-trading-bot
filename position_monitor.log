@@ -3,9 +3,27 @@ Exit Plan: TP1 +50% (sell 50%) | TP2 +200% | TP3 +500% | Trailing 30% | Stop -20
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
-  AGENTIC: mcap=$21,284 | gain=+12.4% | peak=$22,048 | dd=+0%
-  Enough: mcap=$14,099 | gain=+0.0% | peak=$15,321 | dd=+7%
-  AGENTIC: mcap=$19,229 | gain=+1.5% | peak=$22,048 | dd=+0%
-  Enough: mcap=$14,099 | gain=+0.0% | peak=$15,321 | dd=+7%
-  AGENTIC: mcap=$19,229 | gain=+1.5% | peak=$22,048 | dd=+0%
-  Enough: mcap=$14,099 | gain=+0.0% | peak=$15,321 | dd=+7%
+  AGENTIC: mcap=$18,406 | gain=-2.8% | peak=$22,048 | dd=+0%
+  Enough: mcap=$15,134 | gain=+0.0% | peak=$15,321 | dd=+0%
+  AGENTIC: mcap=$18,406 | gain=-2.8% | peak=$22,048 | dd=+0%
+  Enough: mcap=$15,134 | gain=+0.0% | peak=$15,321 | dd=+0%
+  AGENTIC: mcap=$18,406 | gain=-2.8% | peak=$22,048 | dd=+0%
+  Enough: mcap=$15,290 | gain=+1.0% | peak=$15,321 | dd=-1%
+  AGENTIC: mcap=$18,406 | gain=-2.8% | peak=$22,048 | dd=+0%
+  Enough: mcap=$15,290 | gain=+1.0% | peak=$15,321 | dd=-1%
+  AGENTIC: mcap=$18,357 | gain=-3.1% | peak=$22,048 | dd=+0%
+  Enough: mcap=$15,290 | gain=+1.0% | peak=$15,321 | dd=-1%
+  AGENTIC: mcap=$18,357 | gain=-3.1% | peak=$22,048 | dd=+0%
+  Enough: mcap=$15,290 | gain=+1.0% | peak=$15,321 | dd=-1%
+  AGENTIC: mcap=$18,357 | gain=-3.1% | peak=$22,048 | dd=+0%
+  Enough: mcap=$15,290 | gain=+1.0% | peak=$15,321 | dd=-1%
+  AGENTIC: mcap=$18,357 | gain=-3.1% | peak=$22,048 | dd=+0%
+  Enough: mcap=$15,290 | gain=+1.0% | peak=$15,321 | dd=-1%
+  AGENTIC: mcap=$18,357 | gain=-3.1% | peak=$22,048 | dd=+0%
+  Enough: mcap=$14,226 | gain=-6.0% | peak=$15,321 | dd=+6%
+  AGENTIC: mcap=$18,357 | gain=-3.1% | peak=$22,048 | dd=+0%
+  Enough: mcap=$14,226 | gain=-6.0% | peak=$15,321 | dd=+6%
+  AGENTIC: mcap=$18,451 | gain=-2.6% | peak=$22,048 | dd=+0%
+  Enough: mcap=$14,226 | gain=-6.0% | peak=$15,321 | dd=+6%
+  AGENTIC: mcap=$18,451 | gain=-2.6% | peak=$22,048 | dd=+0%
+  Enough: mcap=$14,226 | gain=-6.0% | peak=$15,321 | dd=+6%

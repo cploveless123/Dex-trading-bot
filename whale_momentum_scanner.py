@@ -73,8 +73,8 @@ def scan_strategy_a(p, m, v5, bs, holders, chg5, sym, addr, pair_addr, dex, p_da
         return False, None
     
     # Pullback required
-    if chg5 > 25:
-        return False, "A: chasing top (>25% pump)"
+    if chg5 > 15:
+        return False, "A: chasing top (need pullback <+15%)"
     
     return True, {
         "strategy": "WHALE_COATTAIL",
