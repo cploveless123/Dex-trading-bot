@@ -20,6 +20,9 @@ from trading_constants import (
 TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
 WHALE_DB = Path("/root/Dex-trading-bot/whales/whale_db.json")
 
+# Track initial peak price for new pairs (first 90 seconds)
+_initial_peak = {}
+
 def get_pair_age_minutes(p):
     created = p.get('pairCreatedAt', 0)
     if not created:

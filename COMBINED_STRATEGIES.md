@@ -21,10 +21,12 @@ Turn 1.0 SOL → 100 SOL
 | BS ratio | > 0.20 |
 | Holders | > 15 |
 | Vol/Mcap | > 1.25x |
-| **Age >10 min** | **1min -50% to +5% (PULLBACK)** |
-| **Age <10 min** | **1min -50% to +30%** |
 | 5 min vol | > $1K |
 | Liquidity | > $1K |
+
+### Pullback Detection (Multi-timeframe)
+- **New pairs (<90 sec):** Buy initial dip 5-30% from peak
+- **Older pairs:** h1 positive + m5 negative = pullback
 
 ## 📈 EXIT STRATEGY
 | Target | Action |
@@ -35,7 +37,7 @@ Turn 1.0 SOL → 100 SOL
 | Stop | -20% |
 
 ## 🔧 FILTERS
-- Age-based 1min rules (>10min = dip only)
+- Initial dip for new pairs (<90 sec)
+- Multi-timeframe for older pairs
 - Liquidity > $1K
 - ASCII tickers only
-- 60s startup delay
