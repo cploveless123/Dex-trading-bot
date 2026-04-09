@@ -81,9 +81,9 @@ def check_positions():
     for t in trades:
         if t.get('opened_at', '') <= reset:
             continue
-        if t.get('closed_at') and t.get('fully_exited'):
+        if t.get('fully_exited'):
             continue
-        if t.get('status') not in ('open', 'open_partial') and t.get('fully_exited'):
+        if t.get('status') not in ('open', 'open_partial'):
             continue
         ca = t.get('token_address', '')
         sym = t.get('token', '?')
