@@ -1,11 +1,1 @@
-/root/.openclaw/workspace/venv/bin/python: can't open file '/root/.openclaw/workspace/scripts/alert_sender.py': [Errno 2] No such file or directory
-Traceback (most recent call last):
-  File "/root/Dex-trading-bot/alert_sender.py", line 1, in <module>
-    from trading_constants import EXIT_PLAN_TEXT, TP1_SELL_PCT, POSITION_SIZE
-ImportError: cannot import name 'POSITION_SIZE' from 'trading_constants' (/root/Dex-trading-bot/trading_constants.py)
-Traceback (most recent call last):
-  File "/root/Dex-trading-bot/alert_sender.py", line 1, in <module>
-    from trading_constants import EXIT_PLAN_TEXT, TP1_SELL_PCT, POSITION_SIZE
-ImportError: cannot import name 'POSITION_SIZE' from 'trading_constants' (/root/Dex-trading-bot/trading_constants.py)
-📱 Alert sender started
 📱 Alert sender started
