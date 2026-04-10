@@ -3,9 +3,5 @@ Exit Plan: TP1 +40% (sell 30%) | TP2 +100% | TP3 +200% | Trailing 35% | Stop -30
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
-  elondog: mcap=$10,987 | gain=+96.5% | peak=$13,739 | dd=-29%
-  rawr: mcap=$11,755 | gain=+65.0% | peak=$13,137 | dd=+0%
-  elondog: mcap=$10,987 | gain=+25.1% | peak=$13,739 | dd=+0%
-  elondog: mcap=$10,987 | gain=+96.5% | peak=$13,739 | dd=-29%
-  rawr: mcap=$11,755 | gain=+65.0% | peak=$13,137 | dd=+0%
-  elondog: mcap=$10,987 | gain=+25.1% | peak=$13,739 | dd=+0%
+Error: name 'tp4_sold' is not defined
+Error: name 'tp4_sold' is not defined

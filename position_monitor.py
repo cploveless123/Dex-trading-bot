@@ -229,7 +229,7 @@ def check_positions():
                 print(f"✅ {sym} TP2 HIT @ ${mcap:,.0f} (+{gains_pct:.0f}%)")
                 continue
 
-        # === TP3 HIT (+500%) ===
+        # === TP3 HIT (+200%) ===
         if tp2_sold and not tp3_sold:
             if gains_pct >= TP3_PERCENT:
                 t['tp3_sold'] = True
@@ -243,12 +243,83 @@ def check_positions():
                 cache['peak_mcap'] = mcap
                 save_peak_cache(peak_cache)
                 updated = True
+                remaining = 100 - TP1_SELL_PCT - TP2_SELL_PCT - TP3_SELL_PCT
                 msg = f"""🏆🏆🏆 TP3 HIT (+{TP3_PERCENT}%) | {datetime.utcnow().strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
 💰 {sym}
 📍 Entry MC: ${int(entry):,}
 📊 Current MC: ${int(mcap):,} (+{gains_pct:.0f}%)
-💵 Sold final {TP3_SELL_PCT}% @ MC ${int(mcap):,}
+💵 Sold {TP3_SELL_PCT}% @ MC ${int(mcap):,}
+💰 Balance: {get_balance()} SOL
+💰 Total PnL so far: {t['pnl_sol']:.4f} SOL
+
+💵 Remaining {remaining}% still riding
+🔗 https://dexscreener.com/solana/{ca}
+🥧 https://pump.fun/{ca}
+
+📊 Next Targets:
+📈 TP4: +{TP4_PERCENT}% → Sell {TP4_SELL_PCT}% more
+📈 TP5: +{TP5_PERCENT}% → Sell remaining {TP5_SELL_PCT}%
+📊 Trailing: {TRAILING_STOP_PCT}% from peak"""
+                send_alert(msg, "TP3")
+                print(f"✅ {sym} TP3 HIT @ ${mcap:,.0f} (+{gains_pct:.0f}%)")
+                continue
+
+        # === TP4 HIT (+300%) ===
+        if tp3_sold and not tp4_sold:
+            if gains_pct >= TP4_PERCENT:
+                t['tp4_sold'] = True
+                t['partial_exit'] = True
+                t['status'] = 'open_partial'
+                t['closed_at'] = datetime.utcnow().isoformat()
+                t['exit_reason'] = 'TP4_AUTO'
+                pnl_tp4 = POSITION_SIZE * TP4_SELL_PCT / 100 * (gains_pct / 100)
+                prev_pnl = t.get('pnl_sol', 0)
+                t['pnl_sol'] = prev_pnl + pnl_tp4
+                cache['peak_mcap'] = mcap
+                save_peak_cache(peak_cache)
+                updated = True
+                remaining = 100 - TP1_SELL_PCT - TP2_SELL_PCT - TP3_SELL_PCT - TP4_SELL_PCT
+                msg = f"""🏆🏆🏆🏆 TP4 HIT (+{TP4_PERCENT}%) | {datetime.utcnow().strftime('%H:%M UTC')}
+━━━━━━━━━━━━━━━
+💰 {sym}
+📍 Entry MC: ${int(entry):,}
+📊 Current MC: ${int(mcap):,} (+{gains_pct:.0f}%)
+💵 Sold {TP4_SELL_PCT}% @ MC ${int(mcap):,}
+💰 Balance: {get_balance()} SOL
+💰 Total PnL so far: {t['pnl_sol']:.4f} SOL
+
+💵 Remaining {remaining}% still riding
+🔗 https://dexscreener.com/solana/{ca}
+🥧 https://pump.fun/{ca}
+
+📊 Next Target:
+📈 TP5: +{TP5_PERCENT}% → Sell remaining {TP5_SELL_PCT}%
+📊 Trailing: {TRAILING_STOP_PCT}% from peak"""
+                send_alert(msg, "TP4")
+                print(f"✅ {sym} TP4 HIT @ ${mcap:,.0f} (+{gains_pct:.0f}%)")
+                continue
+
+        # === TP5 HIT (+1000%) - FULL EXIT ===
+        if tp4_sold and not tp5_sold:
+            if gains_pct >= TP5_PERCENT:
+                t['tp5_sold'] = True
+                t['partial_exit'] = True
+                t['status'] = 'open_partial'
+                t['closed_at'] = datetime.utcnow().isoformat()
+                t['exit_reason'] = 'TP5_AUTO'
+                pnl_tp5 = POSITION_SIZE * TP5_SELL_PCT / 100 * (gains_pct / 100)
+                prev_pnl = t.get('pnl_sol', 0)
+                t['pnl_sol'] = prev_pnl + pnl_tp5
+                cache['peak_mcap'] = mcap
+                save_peak_cache(peak_cache)
+                updated = True
+                msg = f"""🏆🏆🏆🏆🏆 TP5 HIT (+{TP5_PERCENT}%) | {datetime.utcnow().strftime('%H:%M UTC')}
+━━━━━━━━━━━━━━━
+💰 {sym}
+📍 Entry MC: ${int(entry):,}
+📊 Current MC: ${int(mcap):,} (+{gains_pct:.0f}%)
+💵 Sold final {TP5_SELL_PCT}% @ MC ${int(mcap):,}
 💰 Balance: {get_balance()} SOL
 💰 TOTAL PNL: {t['pnl_sol']:.4f} SOL 🚀🚀🚀
 
@@ -256,8 +327,8 @@ def check_positions():
 🥧 https://pump.fun/{ca}
 
 ✅ FULL EXIT COMPLETE"""
-                send_alert(msg, "TP3")
-                print(f"✅ {sym} TP3 HIT @ ${mcap:,.0f} (+{gains_pct:.0f}%) - FULL EXIT")
+                send_alert(msg, "TP5")
+                print(f"✅ {sym} TP5 HIT @ ${mcap:,.0f} (+{gains_pct:.0f}%) - FULL EXIT")
                 continue
 
         # === TRAILING STOP (remaining position after TP1) ===
@@ -269,7 +340,8 @@ def check_positions():
                     t['fully_exited'] = True
                     t['exit_reason'] = 'TRAILING_STOP'
                     t['closed_at'] = datetime.utcnow().isoformat()
-                    remaining_pnl = POSITION_SIZE * (100 - TP1_SELL_PCT - TP2_SELL_PCT - TP3_SELL_PCT) / 100 * (gains_pct / 100)
+                    remaining_pct = 100 - TP1_SELL_PCT - TP2_SELL_PCT - TP3_SELL_PCT - TP4_SELL_PCT - TP5_SELL_PCT
+                    remaining_pnl = POSITION_SIZE * remaining_pct / 100 * (gains_pct / 100)
                     prev_pnl = t.get('pnl_sol', 0)
                     t['pnl_sol'] = prev_pnl + remaining_pnl
                     updated = True
