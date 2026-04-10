@@ -22,14 +22,22 @@ MIN_BS_RATIO = 1.5         # BS ratio (kept for compatibility)
 MIN_BS_NEW = 0.2          # Pairs <5 min old
 MIN_BS_OLD = 0.9          # Pairs >5 min old
 
-# Exit Plan
-TP1_PERCENT = 50          # +50% → sell 50%, trail 15%
+# Exit Plan (v2.0 - progressive selling)
+TP1_PERCENT = 50           # +50% → sell 30%, trail 15%
 TP1_TRAILING_PCT = 15
-TP1_SELL_PCT = 50
-TP2_PERCENT = 150         # +150% → sell 25%
-TP2_SELL_PCT = 25
-TP3_PERCENT = 500         # +500% → sell remaining 25%
-TP3_SELL_PCT = 25
+TP1_SELL_PCT = 30          # sell 30% at TP1 (was 50%)
+TP2_PERCENT = 100          # +100% → sell 20%, trail 15%
+TP2_TRAILING_PCT = 15
+TP2_SELL_PCT = 20          # sell 20% at TP2 (was 25%)
+TP3_PERCENT = 200          # +200% → sell 20%, trail 15%
+TP3_TRAILING_PCT = 15
+TP3_SELL_PCT = 20          # new in v2.0
+TP4_PERCENT = 300          # +300% → sell 20%
+TP4_TRAILING_PCT = 15
+TP4_SELL_PCT = 20          # new in v2.0
+TP5_PERCENT = 1000         # +1000% → sell remaining 10%
+TP5_TRAILING_PCT = 15
+TP5_SELL_PCT = 10          # new in v2.0
 TRAILING_STOP_PCT = 30    # 30% from peak on remaining
 STOP_LOSS_PERCENT = -30    # -30% stop
 
@@ -73,7 +81,7 @@ CHECK_BLACKLIST = True
 TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
 
 # Simulation
-SIM_RESET_TIMESTAMP = '2026-04-10T19:58:00.000000'  # Fresh start at 1.0 SOL
+SIM_RESET_TIMESTAMP = '2026-04-10T21:04:00.000000'  # Fresh start at 1.0 SOL
 CHRIS_STARTING_BALANCE = 1.0
 
 # Scan intervals
