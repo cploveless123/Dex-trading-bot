@@ -3,10 +3,38 @@ Exit Plan: TP1 +50% (sell 50%) | TP2 +150% | TP3 +500% | Trailing 30% | Stop -20
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
-  Emy: mcap=$9,449 | gain=+0.0% | peak=$9,449 | dd=+0%
-  Emy: mcap=$9,449 | gain=+0.0% | peak=$9,449 | dd=+0%
-  Emy: mcap=$8,442 | gain=-10.7% | peak=$9,449 | dd=+0%
-  Emy: mcap=$8,442 | gain=-10.7% | peak=$9,449 | dd=+0%
-  Emy: mcap=$8,442 | gain=-10.7% | peak=$9,449 | dd=+0%
-  Emy: mcap=$8,442 | gain=-10.7% | peak=$9,449 | dd=+0%
-  Emy: mcap=$8,442 | gain=-10.7% | peak=$9,449 | dd=+0%
+[18:02:43] Monitor alive | 13 checks | 0 open | next in 5s
+[18:03:43] Monitor alive | 25 checks | 0 open | next in 5s
+[18:04:43] Monitor alive | 37 checks | 0 open | next in 5s
+  GRANDE: mcap=$9,620 | gain=+0.0% | peak=$9,620 | dd=+0%
+  GRANDE: mcap=$9,620 | gain=+0.0% | peak=$9,620 | dd=+0%
+  GRANDE: mcap=$9,620 | gain=+0.0% | peak=$9,620 | dd=+0%
+  GRANDE: mcap=$9,620 | gain=+0.0% | peak=$9,620 | dd=+0%
+  GRANDE: mcap=$9,620 | gain=+0.0% | peak=$9,620 | dd=+0%
+[18:05:43] Monitor alive | 49 checks | 1 open | next in 5s
+  GRANDE: mcap=$9,620 | gain=+0.0% | peak=$9,620 | dd=+0%
+  GRANDE: mcap=$9,620 | gain=+0.0% | peak=$9,620 | dd=+0%
+  GRANDE: mcap=$9,620 | gain=+0.0% | peak=$9,620 | dd=+0%
+  GRANDE: mcap=$9,620 | gain=+0.0% | peak=$9,620 | dd=+0%
+  GRANDE: mcap=$9,620 | gain=+0.0% | peak=$9,620 | dd=+0%
+  GRANDE: mcap=$9,620 | gain=+0.0% | peak=$9,620 | dd=+0%
+  GRANDE: error fetching mcap
+  GRANDE: error fetching mcap
+  GRANDE: error fetching mcap
+  GRANDE: error fetching mcap
+  GRANDE: error fetching mcap
+  GRANDE: error fetching mcap
+[18:06:44] Monitor alive | 61 checks | 1 open | next in 5s
+  GRANDE: error fetching mcap
+  GRANDE: error fetching mcap
+  GRANDE: error fetching mcap
+  GRANDE: error fetching mcap
+  GRANDE: error fetching mcap
+  GRANDE: error fetching mcap
+  GRANDE: mcap=$8,939 | gain=-7.1% | peak=$9,620 | dd=+0%
+  GRANDE: mcap=$8,939 | gain=-7.1% | peak=$9,620 | dd=+0%
+  GRANDE: mcap=$8,939 | gain=-7.1% | peak=$9,620 | dd=+0%
+  GRANDE: mcap=$8,939 | gain=-7.1% | peak=$9,620 | dd=+0%
+  GRANDE: mcap=$8,939 | gain=-7.1% | peak=$9,620 | dd=+0%
+  GRANDE: mcap=$9,132 | gain=-5.1% | peak=$9,620 | dd=+0%
+[18:07:45] Monitor alive | 73 checks | 1 open | next in 5s
