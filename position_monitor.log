@@ -3,3 +3,96 @@ Exit Plan: TP1 +50% (sell 50%) | TP2 +200% | TP3 +500% | Trailing 30% | Stop -20
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
+  BABYPEPE: mcap=$37,644 | gain=+0.0% | peak=$37,644 | dd=+0%
+  BABYPEPE: mcap=$37,644 | gain=+0.0% | peak=$37,644 | dd=+0%
+  BABYPEPE: mcap=$38,581 | gain=+2.5% | peak=$38,581 | dd=+0%
+[01:22:59] Monitor alive | 13 checks | 1 open | next in 5s
+  BABYPEPE: mcap=$38,581 | gain=+2.5% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,581 | gain=+2.5% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,581 | gain=+2.5% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,581 | gain=+2.5% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,581 | gain=+2.5% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,724 | gain=+0.2% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,724 | gain=+0.2% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,724 | gain=+0.2% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,724 | gain=+0.2% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,724 | gain=+0.2% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,724 | gain=+0.2% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,625 | gain=-0.1% | peak=$38,581 | dd=+0%
+[01:24:00] Monitor alive | 25 checks | 1 open | next in 5s
+  BABYPEPE: mcap=$37,625 | gain=-0.1% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,625 | gain=-0.1% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,625 | gain=-0.1% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,625 | gain=-0.1% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,625 | gain=-0.1% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$36,795 | gain=-2.3% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$36,795 | gain=-2.3% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$36,795 | gain=-2.3% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$36,795 | gain=-2.3% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$36,795 | gain=-2.3% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$36,795 | gain=-2.3% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$36,902 | gain=-2.0% | peak=$38,581 | dd=+0%
+[01:25:01] Monitor alive | 37 checks | 1 open | next in 5s
+  BABYPEPE: mcap=$36,902 | gain=-2.0% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$36,902 | gain=-2.0% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$36,902 | gain=-2.0% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$36,902 | gain=-2.0% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$36,902 | gain=-2.0% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$33,245 | gain=-11.7% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$33,245 | gain=-11.7% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$33,245 | gain=-11.7% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$33,245 | gain=-11.7% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$33,245 | gain=-11.7% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$33,245 | gain=-11.7% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$35,174 | gain=-6.6% | peak=$38,581 | dd=+0%
+[01:26:02] Monitor alive | 49 checks | 1 open | next in 5s
+  BABYPEPE: mcap=$35,174 | gain=-6.6% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$35,174 | gain=-6.6% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$35,174 | gain=-6.6% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$35,174 | gain=-6.6% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$35,174 | gain=-6.6% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,387 | gain=+2.0% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,387 | gain=+2.0% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,387 | gain=+2.0% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,387 | gain=+2.0% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,387 | gain=+2.0% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,387 | gain=+2.0% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,948 | gain=+0.8% | peak=$38,581 | dd=+0%
+[01:27:03] Monitor alive | 61 checks | 1 open | next in 5s
+  BABYPEPE: mcap=$37,948 | gain=+0.8% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,948 | gain=+0.8% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,948 | gain=+0.8% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,948 | gain=+0.8% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,948 | gain=+0.8% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,252 | gain=+1.6% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,252 | gain=+1.6% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,252 | gain=+1.6% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,252 | gain=+1.6% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,252 | gain=+1.6% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,252 | gain=+1.6% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,138 | gain=+1.3% | peak=$38,581 | dd=+0%
+[01:28:04] Monitor alive | 73 checks | 1 open | next in 5s
+  BABYPEPE: mcap=$38,138 | gain=+1.3% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,138 | gain=+1.3% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,138 | gain=+1.3% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,138 | gain=+1.3% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,138 | gain=+1.3% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,556 | gain=+2.4% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,556 | gain=+2.4% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,556 | gain=+2.4% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,556 | gain=+2.4% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,556 | gain=+2.4% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$38,556 | gain=+2.4% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,496 | gain=-0.4% | peak=$38,581 | dd=+0%
+[01:29:05] Monitor alive | 85 checks | 1 open | next in 5s
+  BABYPEPE: mcap=$37,496 | gain=-0.4% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,496 | gain=-0.4% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,496 | gain=-0.4% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,496 | gain=-0.4% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,496 | gain=-0.4% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,219 | gain=-1.1% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,219 | gain=-1.1% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,219 | gain=-1.1% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,219 | gain=-1.1% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,219 | gain=-1.1% | peak=$38,581 | dd=+0%
+  BABYPEPE: mcap=$37,219 | gain=-1.1% | peak=$38,581 | dd=+0%
