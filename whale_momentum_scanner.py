@@ -263,7 +263,16 @@ def check_and_buy():
         
         # Skip if already open OR previously sold
         # Check both in-memory set AND trade file
-        # PERMANENT BLACKLIST - never re-buy any closed position
+        # PERMANENT BLACKLIST - check trade file EVERY time
+        try:
+            with open(TRADES_FILE) as f:
+                for line in f:
+                    t = json.loads(line)
+                    if t.get('token_address') == addr and t.get('status') == 'closed' and t.get('action') == 'BUY':
+                        _sold_tokens.add(addr)
+                        break
+        except:
+            pass
         if addr in _sold_tokens:
             continue
         
