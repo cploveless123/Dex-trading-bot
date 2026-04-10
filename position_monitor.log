@@ -3,3 +3,7 @@ Exit Plan: TP1 +50% (sell 50%) | TP2 +150% | TP3 +500% | Trailing 30% | Stop -30
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
+  FEP: mcap=$12,326 | gain=-15.3% | peak=$14,551 | dd=+0%
+  FEP: mcap=$12,326 | gain=-15.3% | peak=$14,551 | dd=+0%
+  FEP: mcap=$12,326 | gain=-15.3% | peak=$14,551 | dd=+0%
+  FEP: mcap=$12,326 | gain=-15.3% | peak=$14,551 | dd=+0%
