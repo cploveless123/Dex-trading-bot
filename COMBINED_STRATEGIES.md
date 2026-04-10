@@ -33,7 +33,6 @@ Turn 1.0 SOL → 100 SOL
 | Mcap | $5K - $75K |
 | BS ratio | > 0.2 (<5 min) / >0.9 (>5 min) |
 | Holders | > 15 |
-| Vol/Mcap | > 1.1x |
 | 5 min vol | > $1K |
 | Liquidity | > $1K (waived for bonding curve) |
 
@@ -42,7 +41,7 @@ Turn 1.0 SOL → 100 SOL
 | Age | Rule |
 | --------------- | --------------------------- |
 | **New (<5 min)** | 11-39% dip + h1>+50% + 5min>+50% + vol>$1K |
-| **Older (>5 min)** | 11-39% dip + h1>+1% + 5min>+1% + vol>$1K |
+| **Older (>5 min)** | 11-39% dip + h1>+1% + 5min> **-39%** + vol>$1K |
 
 **Peak** = highest price seen in first 60 seconds
 
@@ -64,6 +63,7 @@ Turn 1.0 SOL → 100 SOL
 • NoMint / Blacklist checks
 • Age-based BS ratio
 • 11-39% peak dip
+• **5min allows negative (up to -39%) for older pairs**
 • Liquidity waived for bonding curve pairs
 • 60s startup delay
 
