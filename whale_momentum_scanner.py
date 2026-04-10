@@ -207,10 +207,13 @@ def scan_token(addr):
                 return None, f"B: new h1 <+50%"
             if chg5 < -10:
                 return None, f"B: new 5min <-10% (too deep)"
-            if dip_pct < 10:
-                return None, f"B: dip <10%"
-            if dip_pct > 50:
-                return None, f"B: dip >50%"
+            if dip_pct < DIP_MIN:
+                return None, f"B: dip <{DIP_MIN}%"
+            if dip_pct > DIP_MAX:
+                return None, f"B: dip >{DIP_MAX}%"
+            # Anti-momentum: chg5 must be negative (dipping, not pumping)
+            if chg5 >= 0:
+                return None, f"B: chg5 +{chg5:.1f}% (momentum, not dip)"
         else:
             # OLDER PAIRS (>5 min): 24hr > +25%, h1 > -39%, 5min > -39%
             if chg24 < 25:
@@ -219,10 +222,13 @@ def scan_token(addr):
                 return None, f"B: h1 <-39%"
             if chg5 < -39:
                 return None, f"B: 5min <-39%"
-            if dip_pct < 10:
-                return None, f"B: dip <10%"
-            if dip_pct > 50:
-                return None, f"B: dip >50%"
+            if dip_pct < DIP_MIN:
+                return None, f"B: dip <{DIP_MIN}%"
+            if dip_pct > DIP_MAX:
+                return None, f"B: dip >{DIP_MAX}%"
+            # Anti-momentum for older pairs: if 5min is climbing hard, reject
+            if chg5 > 5:
+                return None, f"B: chg5 +{chg5:.1f}% (momentum pump)"
             
             # COOLDOWN: If h1 >+150%, we need to have been watching for 2+ min
             # This prevents buying immediately after a parabolic pump
