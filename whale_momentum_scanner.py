@@ -304,7 +304,7 @@ def check_and_buy():
                         if t.get('action') == 'BUY' and not t.get('closed_at'):
                             already_open_or_sold = True
                             break
-                        # Add to blacklist if ever closed
+                        # PERMANENT BLACKLIST - never re-buy if ever closed
                         if t.get('status') == 'closed' and t.get('action') == 'BUY':
                             _sold_tokens.add(addr)
         except:
