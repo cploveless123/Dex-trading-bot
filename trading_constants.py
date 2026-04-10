@@ -13,7 +13,7 @@ MAX_OPEN_POSITIONS = 5     # Max concurrent positions - aggressive deployment
 
 # Entry Filters - AGGRESSIVE for 100x growth
 MIN_MCAP = 5000            # $8.5K floor - early momentum plays
-MAX_MCAP = 75000           # $75K ceiling
+MAX_MCAP = 95000           # $75K ceiling
 MIN_VOLUME = 5000          # Minimum 24h volume ($)
 MIN_5MIN_VOLUME = 1000     # Minimum 5min volume ($)
 MIN_BS_RATIO = 1.5        # BS ratio 1.5+ - momentum only
@@ -73,7 +73,7 @@ GMGN_VOL_MCAP_MIN = 2.0    # 2x vol/mcap - captures more setups
 GMGN_VOL_MCAP_MAX = 15.0
 
 # Simulation reset timestamp
-SIM_RESET_TIMESTAMP = '2026-04-10T01:43:36.507363'
+SIM_RESET_TIMESTAMP = '2026-04-10T02:27:54.333349'
 CHRIS_STARTING_BALANCE = 1.0   # Reset for fresh simulation
 
 # API Rate Limiting

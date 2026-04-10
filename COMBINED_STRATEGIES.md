@@ -10,16 +10,15 @@ Turn 1.0 SOL → 100 SOL
 
 ## ✅ WINNER TRAITS
 
-• Top10% holder < 50%
-• BS ratio > 1.15
-• Liquidity > $1K
+• Top10% holder < 50% (ignore if 0)
+• BS ratio > 0.9 (>5 min) / >0.2 (<5 min)
+• Liquidity > $1K (waived for bonding curve)
 
 ---
 
 ## ❌ ANTI-PATTERNS (REJECT)
 
-• Top10% > 70% = dump
-• Liquidity < $1K = rug (unless bonding curve)
+• Top10% > 70% = dump (ignore if 0)
 • NoMint / Mintable tokens
 • Blacklisted tokens
 • Non-ASCII ticker = reject
@@ -30,8 +29,8 @@ Turn 1.0 SOL → 100 SOL
 
 | Rule | Value |
 | ------|------- |
-| Mcap | $5K - $75K |
-| BS ratio | > 0.2 (<5 min) / >0.9 (>5 min) |
+| Mcap | $5K - $95K |
+| BS ratio | > 0.2 (<5 min) / > 0.9 (>5 min) |
 | Holders | > 15 |
 | 5 min vol | > $1K |
 | Liquidity | > $1K (waived for bonding curve) |
@@ -40,8 +39,8 @@ Turn 1.0 SOL → 100 SOL
 
 | Age | Rule |
 | --------------- | --------------------------- |
-| **New (<5 min)** | 11-39% dip + h1>+50% + 5min>+50% + vol>$1K |
-| **Older (>5 min)** | 11-39% dip + h1>+1% + 5min> **-39%** + vol>$1K |
+| **New (<5 min)** | 11-39% dip + h1>+50% + 5min>+50% |
+| **Older (>5 min)** | 11-39% dip + **24hr>+25%** + **h1>-39%** + **5min>-39%** |
 
 **Peak** = highest price seen in first 60 seconds
 
@@ -63,9 +62,10 @@ Turn 1.0 SOL → 100 SOL
 • NoMint / Blacklist checks
 • Age-based BS ratio
 • 11-39% peak dip
-• **5min allows negative (up to -39%) for older pairs**
-• Liquidity waived for bonding curve pairs
-• 60s startup delay
+• **24hr > +25% for older pairs**
+• **Allows negative h1 and 5min for older pairs**
+• Liquidity waived for bonding curve
+• 15 second scan interval
 
 ---
 

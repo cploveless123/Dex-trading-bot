@@ -1,15 +1,25 @@
 #!/usr/bin/env python3
 """
-Whale Momentum Scanner v2
-Combines whale patterns + token recognition for multi-strategy entry
+Whale Momentum Scanner v3
+Chris's Strategy: Dip detection with age-based rules
 
-Strategy A: Whale Coattail - whale buys in sub-$10K mcap
-Strategy B: Pullback Momentum - pullback entries with whale confirmation
-Strategy C: Pump Graduate - pump.fun graduation candidates
+Rules:
+- Mcap: $5K - $95K
+- BS: >0.2 (<5 min), >0.9 (>5 min)
+- Liquidity: >$1K (waived for bonding curve)
+- Top10%: ignore if 0
+- 5min vol: >$1K
+
+New pairs (<5 min):
+- h1 > +50%, 5min > +50%
+
+Older pairs (>5 min):
+- 24hr > +25%, h1 > -39%, 5min > -39%
+
+Dip: 11-39% from peak
 """
-import requests, json
+import requests, json, time
 from datetime import datetime
-import time
 from pathlib import Path
 from trading_constants import (
     MIN_MCAP, MAX_MCAP, MIN_BS_RATIO,
@@ -29,133 +39,22 @@ def get_pair_age_minutes(p):
         return 999
     return (datetime.utcnow().timestamp() * 1000 - created) / 60000
 
-def load_whales():
+def is_ascii(s):
     try:
-        with open(WHALE_DB) as f:
-            d = json.load(f)
-        return [w['wallet'] for w in d.get('whales', []) if w.get('winrate', 0) >= 0.5 and w.get('buy_count', 0) >= 3]
+        return s.isascii()
     except:
-        return []
+        return True
 
-def check_anti_patterns(p, m, bs, holders, v5m_ratio, chg5):
-    """Reject tokens with anti-patterns"""
-    # Top10 holder check requires gmgn - skip for now
-    # BS check
-    if bs < 1.0:
-        return True, "BS < 1.0"
-    # Liquidity check - reject anything under $1K
-    liq = p.get('liquidity', {}).get('usd', 0) or 0
-    if liq < 1000:
-        return True, "Zero/low liquidity"
-    # Pullback check
-    if chg5 > 50:
-        return True, "Chasing top"
-    if chg5 < -30:
-        return True, "Falling knife"
+def check_blacklist(p_data):
+    """Check NoMint and Blacklist"""
+    if p_data.get('mintable') or p_data.get('immutable') == False:
+        return True, "mintable"
+    if p_data.get('blacklist'):
+        return True, "blacklisted"
     return False, "OK"
 
-def scan_strategy_a(p, m, v5, bs, holders, chg5, sym, addr, pair_addr, dex, p_data):
-    """Strategy A: Whale Coattail - stricter filters"""
-    # Sub-$10K mcap (whale preference)
-    is_sub_10k = m < 10000
-    
-    # Stricter BS
-    if bs < 1.5:
-        return False, None
-    
-    # Holders
-    if holders > 0 and holders < 20:
-        return False, None
-    
-    # Volume
-    if v5 > 0 and v5 < 1000:
-        return False, None
-    
-    # Mcap
-    if m > 75000:
-        return False, None
-    
-    # Pullback required
-    if chg5 > 15:
-        return False, "A: chasing top (need pullback <+15%)"
-    
-    return True, {
-        "strategy": "WHALE_COATTAIL",
-        "sub_10k": is_sub_10k,
-        "bs_strict": True
-    }
-
-def scan_strategy_b(p, m, v5, bs, holders, chg5, sym, addr, pair_addr, dex, p_data, chg1=0):
-    """Strategy B: Pullback Momentum"""
-    # BS requirement
-    if bs < 1.5:
-        return False, None
-    
-    # Holders
-    if holders > 0 and holders < 20:
-        return False, None
-    
-    # Mcap
-    if m < 5000 or m > 75000:
-        return False, None
-    
-    # Volume/mcap
-    v = p.get('volume', {}).get('h24', 0) or 0
-    vol_mcap = v / m if m > 0 else 0
-    if vol_mcap < 2.0:
-        return False, "B: low vol/mcap"
-    
-    # Liquidity check - reject zero liquidity
-    liq = p.get('liquidity', {}).get('usd', 0) or 0
-    if liq < 1000:
-        return False, "B: zero/low liquidity"
-    
-    # Pullback zone: 0-20% or negative with good BS
-    if chg5 > 15:
-        return False, "B: >15% pump"
-    if chg5 < -15:
-        return False, "B: too deep"
-    if chg5 < 0 and bs < 2.0:
-        return False, "B: dip no support"
-    
-    return True, {
-        "strategy": "PULLBACK_MOMENTUM",
-        "pullback": True,
-        "bs_strict": True
-    }
-
-def scan_strategy_c(p, m, v5, bs, holders, chg5, sym, addr, pair_addr, dex, p_data):
-    """Strategy C: Pump Graduate - pump.fun with graduation signals"""
-    # Must be pump.fun
-    if dex != 'pumpfun':
-        return False, None
-    
-    # Mcap in graduation zone
-    if m < 30000 or m > 75000:
-        return False, None
-    
-    # Extreme BS
-    if bs < 2.5:
-        return False, "C: weak BS"
-    
-    # High holders
-    if holders < 300:
-        return False, "C: few holders"
-    
-    # High vol/mcap
-    v = p.get('volume', {}).get('h24', 0) or 0
-    vol_mcap = v / m if m > 0 else 0
-    if vol_mcap < 5.0:
-        return False, None
-    
-    return True, {
-        "strategy": "PUMP_GRADUATE",
-        "graduation_zone": True,
-        "bs_boost": True
-    }
-
 def scan_token(addr):
-    """Scan a single token across all strategies"""
+    """Scan a single token"""
     try:
         r = requests.get(f'https://api.dexscreener.com/latest/dex/tokens/{addr}', timeout=10)
         if r.status_code != 200:
@@ -166,52 +65,124 @@ def scan_token(addr):
             return None
         
         p = max(pairs, key=lambda x: x.get('liquidity', {}).get('usd', 0))
-        m = p.get('fdv', 0) or p.get('marketCap', 0) or 0
-        v = p.get('volume', {}).get('h24', 0) or 0
-        v5 = p.get('volume', {}).get('m5', 0) or 0
+        m = float(p.get('fdv', 0) or p.get('marketCap', 0) or 0)
+        v5 = float(p.get('volume', {}).get('m5', 0) or 0)
+        v24 = float(p.get('volume', {}).get('h24', 0) or 0)
         sym = p.get('baseToken', {}).get('symbol', '?')
         pair_addr = p.get('pairAddress', '')
         dex = p.get('dexId', '')
-        buys = p.get('txns', {}).get('h24', {}).get('buys', 0) or 0
-        sells = p.get('txns', {}).get('h24', {}).get('sells', 0) or 1
-        bs = buys / sells if sells > 0 else 0
-        holders = p.get('holders', 0) or 0
-        chg5 = p.get('priceChange', {}).get('m5', 0) or 0
-        chg5 = chg5 if chg5 is not None else 0
-        chg1 = p.get('priceChange', {}).get('m1', 0) or 0
         
-        # Anti-pattern check
-        is_anti, reason = check_anti_patterns(p, m, bs, holders, v5/m if m > 0 else 0, chg5)
-        if is_anti:
+        # Basic checks
+        if not is_ascii(sym):
+            return None
+        if sym in TICKER_BLACKLIST:
             return None
         
-        # Ticker check
-        if not sym.isascii() or not sym.isalpha() or len(sym) < 3:
+        # Get price changes
+        chg1 = float(p.get('priceChange', {}).get('m1', 0) or 0)
+        chg5 = float(p.get('priceChange', {}).get('m5', 0) or 0)
+        chg60 = float(p.get('priceChange', {}).get('h1', 0) or 0)
+        chg24 = float(p.get('priceChange', {}).get('h24', 0) or 0)
+        
+        # BS ratio
+        liq = float(p.get('liquidity', {}).get('usd', 0) or 0)
+        bs_mcap = float(p.get('bondingCurve', {}).get('mcap', 0) or 0)
+        bs = bs_mcap / max(liq, 1) if bs_mcap > 0 else (m / max(liq, 1) if liq > 0 else 1)
+        
+        # Holders
+        holders = int(p.get('holders', 0) or 0)
+        
+        # Get extra data from p
+        p_data = p
+        
+        # Anti-patterns
+        top10 = float(p.get('topHolderPercent', 0) or 0)
+        if top10 > 70:
+            return None  # Dumper
+        
+        # Blacklist check
+        is_bl, bl_reason = check_blacklist(p_data)
+        if is_bl:
             return None
         
-        # Try strategies
-        for scan_fn, strat_name in [
-            (scan_strategy_b, "B"),
-            (scan_strategy_c, "C")
-        ]:
-            should_buy, meta = scan_fn(p, m, v5, bs, holders, chg5, sym, addr, pair_addr, dex, p)
-            if should_buy and meta:
-                meta['token'] = sym
-                meta['mcap'] = m
-                meta['bs'] = bs
-                meta['holders'] = holders
-                return meta
+        # Mcap range: $5K - $95K
+        if m < 5000 or m > 95000:
+            return None
         
-        return None
-    
-    except:
-        return None
+        # Holders
+        if holders > 0 and holders < 15:
+            return None
+        
+        # Liquidity (waived for bonding curve)
+        if liq < 1000 and bs_mcap == 0:
+            return None
+        
+        # 5min vol
+        if v5 < 1000:
+            return None
+        
+        # Peak tracking
+        if addr not in _peak_prices or m > _peak_prices[addr]:
+            _peak_prices[addr] = m
+        
+        peak = _peak_prices.get(addr, m)
+        if peak > 0:
+            dip_pct = (peak - m) / peak * 100
+        else:
+            dip_pct = 0
+        
+        pair_age = get_pair_age_minutes(p)
+        
+        if pair_age < 5:
+            # NEW PAIRS (<5 min): h1 > +50%, 5min > +50%
+            if chg60 < 50:
+                return None, f"B: new h1 <+50%"
+            if chg5 < 50:
+                return None, f"B: new 5min <+50%"
+            if dip_pct < 10:
+                return None, f"B: dip <10%"
+            if dip_pct > 39:
+                return None, f"B: dip >39%"
+        else:
+            # OLDER PAIRS (>5 min): 24hr > +25%, h1 > -39%, 5min > -39%
+            if chg24 < 25:
+                return None, f"B: 24hr <+25%"
+            if chg60 < -39:
+                return None, f"B: h1 <-39%"
+            if chg5 < -39:
+                return None, f"B: 5min <-39%"
+            if dip_pct < 10:
+                return None, f"B: dip <10%"
+            if dip_pct > 39:
+                return None, f"B: dip >39%"
+            
+            # BS ratio for older
+            if bs < 0.9:
+                return None, f"B: BS <0.9"
+        
+        return {
+            "token": sym,
+            "address": addr,
+            "mcap": m,
+            "bs": bs,
+            "holders": holders,
+            "chg1": chg1,
+            "chg5": chg5,
+            "chg60": chg60,
+            "chg24": chg24,
+            "v5": v5,
+            "liq": liq,
+            "dip_pct": dip_pct,
+            "age": pair_age,
+            "dex": dex
+        }, "OK"
+        
+    except Exception as e:
+        return None, str(e)
 
 def check_and_buy():
     """Main scan + buy loop"""
     whales = load_whales()
-    if not whales:
-        return None
     
     # Get tokens from DexScreener
     try:
@@ -244,67 +215,68 @@ def check_and_buy():
         if not addr:
             continue
         
-        # Check if already tracked
-        already = any(t.get('token_address') == addr and t.get('status') in ['open', 'open_partial'] for t in existing)
+        # Skip if already open
+        already = any(t.get('token_address') == addr and not t.get('closed_at') for t in existing)
         if already:
             continue
         
-        # Never re-enter
-        already_exited = any(t.get('token_address') == addr and t.get('fully_exited') for t in existing)
-        if already_exited:
+        result, msg = scan_token(addr)
+        if result is None:
             continue
         
-        result = scan_token(addr)
-        if not result:
-            continue
+        # Log the scan
+        print(f"✅ CANDIDATE: {result['token']} | Mcap ${result['mcap']:,.0f} | Age {result['age']:.1f}min | Dip {result['dip_pct']:.1f}% | h1 {result['chg60']:+.1f}% | 5m {result['chg5']:+.1f}%")
         
-        # Get full token data for trade
-        try:
-            r = requests.get(f'https://api.dexscreener.com/latest/dex/tokens/{addr}', timeout=10)
-            p = max(r.json().get('pairs', []), key=lambda x: x.get('liquidity', {}).get('usd', 0))
-            m = p.get('fdv', 0) or p.get('marketCap', 0) or 0
-        except:
-            continue
-        
+        # Execute buy (simulated)
         trade = {
             "token": result['token'],
             "token_address": addr,
-            "pair_address": p.get('pairAddress', ''),
+            "pair_address": addr,
             "amount_sol": POSITION_SIZE,
-            "entry_mcap": int(m),
-            "entry_liquidity": p.get('liquidity', {}).get('usd', 0),
-            "dex": p.get('dexId', 'unknown'),
+            "entry_mcap": int(result['mcap']),
+            "entry_liquidity": result['liq'],
+            "dex": result['dex'],
             "action": "BUY",
-            "source": f"whale_momentum_{result['strategy']}",
+            "source": "whale_momentum_SCANNER",
             "opened_at": datetime.utcnow().isoformat(),
             "status": "open",
-            "entry_reason": result['strategy'],
-            "strategy_details": result,
-            "bs_ratio": round(result.get('bs', 0), 2),
-            "whale_sub_10k": result.get('sub_10k', False)
+            "entry_reason": "SCAN_DIP",
+            "bs_ratio": result['bs'],
+            "chg60": result['chg60'],
+            "chg5": result['chg5'],
+            "dip_pct": result['dip_pct']
         }
         
         with open(TRADES_FILE, "a") as f:
             f.write(json.dumps(trade) + "\n")
         
-        print(f"✅ {result['strategy']}: {result['token']} @ ${m:,.0f}")
-        bought = result['token']
+        print(f"✅ BUY: {result['token']} @ ${result['mcap']:,.0f}")
+        bought = result
         break
     
     return bought
 
+def load_whales():
+    try:
+        with open(WHALE_DB) as f:
+            d = json.load(f)
+        return [w['wallet'] for w in d.get('whales', []) if w.get('winrate', 0) >= 0.5 and w.get('buy_count', 0) >= 3]
+    except:
+        return []
+
 def main():
+    print("🚀 Whale Momentum Scanner v3 - Chris's Strategy")
+    print(f"   Mcap: $5K-$95K | Dip: 11-39% | Age-based rules")
     whales = load_whales()
-    print(f"🚀 Whale Momentum Scanner v2 - {len(whales)} whales loaded")
+    print(f"   Loaded {len(whales)} whales")
+    print("Starting scans...")
     
-    time.sleep(60)
-    print("Starting scans now")
     while True:
         try:
             check_and_buy()
         except Exception as e:
             print(f"Error: {e}")
-        time.sleep(60)
+        time.sleep(15)  # Scan every 15 seconds
 
 if __name__ == "__main__":
     main()
