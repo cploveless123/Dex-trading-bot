@@ -295,7 +295,7 @@ def check_and_buy():
             continue
         
         # Log the scan
-        bonded_tag = " [BONDED]" if is_bonded else ""
+        bonded_tag = " [BONDED]" if result.get('is_bonded') else ""
         print(f"✅ CANDIDATE: {result['token']}{bonded_tag} | Mcap ${result['mcap']:,.0f} | Age {result['age']:.1f}min | Dip {result['dip_pct']:.1f}% | h1 {result['chg60']:+.1f}% | 5m {result['chg5']:+.1f}%")
         
         # Execute buy (simulated)
