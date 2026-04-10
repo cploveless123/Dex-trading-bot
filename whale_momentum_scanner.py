@@ -213,8 +213,8 @@ def scan_token(addr):
                 return None, f"B: dip <{DIP_MIN}%"
             if dip_pct > DIP_MAX:
                 return None, f"B: dip >{DIP_MAX}%"
-            # Anti-momentum: chg5 must be negative (dipping, not pumping)
-            if chg5 >= 0:
+            # Anti-momentum: chg5 must be < +15% (dipping or mild pump)
+            if chg5 > 15:
                 return None, f"B: chg5 +{chg5:.1f}% (momentum, not dip)"
         else:
             # OLDER PAIRS (>5 min): 24hr > +25%, h1 > -39%, 5min > -39%
@@ -229,7 +229,7 @@ def scan_token(addr):
             if dip_pct > DIP_MAX:
                 return None, f"B: dip >{DIP_MAX}%"
             # Anti-momentum for older pairs: if 5min is climbing hard, reject
-            if chg5 > 5:
+            if chg5 > 15:
                 return None, f"B: chg5 +{chg5:.1f}% (momentum pump)"
             
             # COOLDOWN: If h1 >+150%, we need to have been watching for 2+ min

@@ -3,70 +3,9 @@ Exit Plan: TP1 +40% (sell 30%) | TP2 +100% | TP3 +200% | Trailing 35% | Stop -30
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
-  elondog: mcap=$12,025 | gain=+115.0% | peak=$13,739 | dd=-41%
-  elondog: mcap=$12,025 | gain=+36.9% | peak=$13,739 | dd=+0%
-  elondog: mcap=$12,025 | gain=+115.0% | peak=$13,739 | dd=-41%
-  elondog: mcap=$12,025 | gain=+36.9% | peak=$13,739 | dd=+0%
-  elondog: mcap=$12,025 | gain=+115.0% | peak=$13,739 | dd=-41%
-  elondog: mcap=$12,025 | gain=+36.9% | peak=$13,739 | dd=+0%
-  elondog: mcap=$12,380 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,380 | gain=+41.0% | peak=$13,739 | dd=+0%
-  elondog: mcap=$12,380 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,380 | gain=+41.0% | peak=$13,739 | dd=+0%
-  elondog: mcap=$12,380 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,380 | gain=+41.0% | peak=$13,739 | dd=+0%
-  elondog: mcap=$12,380 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,380 | gain=+41.0% | peak=$13,739 | dd=+0%
-  elondog: mcap=$12,380 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,380 | gain=+41.0% | peak=$13,739 | dd=+0%
-  elondog: mcap=$12,380 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,380 | gain=+41.0% | peak=$13,739 | dd=+0%
-  elondog: mcap=$12,380 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,380 | gain=+41.0% | peak=$13,739 | dd=+0%
-  GEM: mcap=$6,874 | gain=+0.0% | peak=$6,874 | dd=+0%
-  elondog: mcap=$12,380 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,380 | gain=+41.0% | peak=$13,739 | dd=+0%
-  GEM: mcap=$6,874 | gain=+0.0% | peak=$6,874 | dd=+0%
-  elondog: mcap=$12,380 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,380 | gain=+41.0% | peak=$13,739 | dd=+0%
-  GEM: mcap=$6,874 | gain=+0.0% | peak=$6,874 | dd=+0%
-  elondog: mcap=$12,380 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,380 | gain=+41.0% | peak=$13,739 | dd=+0%
-  GEM: mcap=$6,870 | gain=-0.1% | peak=$6,874 | dd=+0%
-[22:58:47] Monitor alive | 13 checks | 2 open | next in 5s
-  elondog: mcap=$12,380 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,380 | gain=+41.0% | peak=$13,739 | dd=+0%
-  GEM: mcap=$6,870 | gain=-0.1% | peak=$6,874 | dd=+0%
-  elondog: mcap=$12,383 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
-  GEM: mcap=$6,870 | gain=-0.1% | peak=$6,874 | dd=+0%
-  elondog: mcap=$12,383 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
-  GEM: mcap=$6,870 | gain=-0.1% | peak=$6,874 | dd=+0%
-  elondog: mcap=$12,383 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
-  GEM: mcap=$6,870 | gain=-0.1% | peak=$6,874 | dd=+0%
-  elondog: mcap=$12,383 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
-  GEM: mcap=$6,870 | gain=-0.1% | peak=$6,874 | dd=+0%
-  elondog: mcap=$12,383 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
-[STOP_LOSS] Alert sent
-🔴 GEM STOP LOSS @ $4,150 (-39.6%)
-  elondog: mcap=$12,383 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
-  elondog: mcap=$12,383 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
-  elondog: mcap=$12,383 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
-  elondog: mcap=$12,383 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
-  elondog: mcap=$12,383 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
-  elondog: mcap=$12,383 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
-[22:59:49] Monitor alive | 25 checks | 1 open | next in 5s
-  elondog: mcap=$12,383 | gain=+121.4% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
-  elondog: mcap=$12,345 | gain=+120.8% | peak=$13,739 | dd=-45%
-  elondog: mcap=$12,345 | gain=+40.6% | peak=$13,739 | dd=+0%
+  elondog: mcap=$11,856 | gain=+112.0% | peak=$13,739 | dd=-39%
+  elondog: mcap=$11,856 | gain=+35.0% | peak=$13,739 | dd=+0%
+  MaoMao: mcap=$18,519 | gain=+0.9% | peak=$18,733 | dd=+0%
+  elondog: mcap=$11,856 | gain=+112.0% | peak=$13,739 | dd=-39%
+  elondog: mcap=$11,856 | gain=+35.0% | peak=$13,739 | dd=+0%
+  MaoMao: mcap=$18,519 | gain=+0.9% | peak=$18,733 | dd=+0%

@@ -132,7 +132,7 @@ def check_should_buy(addr, p, sym, dex, m, v, v5, bs, buys, sells, holders, pair
     
     # === ANTI-MOMENTUM CHECK ===
     # If chg5 is climbing hard, we're chasing — reject
-    if chg5 > 5:
+    if chg5 > 15:
         return False, f"chg5 +{chg5:.1f}% (momentum pump, not dip)"
     
     # === VOL/MCAP FILTER (non-early tier) ===
