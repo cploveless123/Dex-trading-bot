@@ -23,19 +23,43 @@ ANTI-PATTERNS (>3min pairs):
 - BS < 1.0 = sell pressure
 - Liquidity < $5K = rug risk
 """
-import requests, json
+import requests, json, subprocess
 from datetime import datetime, timedelta
 import time
 from pathlib import Path
 from trading_constants import (
     MIN_MCAP, MAX_MCAP, MIN_VOLUME, MIN_5MIN_VOLUME, MIN_BS_RATIO,
     MIN_HOLDERS, POSITION_SIZE, TICKER_BLACKLIST, MAX_OPEN_POSITIONS,
-    SIM_RESET_TIMESTAMP
+    SIM_RESET_TIMESTAMP, ATH_DIVERGENCE_REJECT
 )
 
 BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
 TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
+
+def get_gmgn_ath(addr):
+    """Get GMGN ATH mcap for a token"""
+    try:
+        r = subprocess.run(
+            ['gmgn-cli', 'token', 'info', '--chain', 'sol', '--address', addr],
+            capture_output=True, text=True, timeout=15
+        )
+        if r.returncode == 0:
+            d = json.loads(r.stdout)
+            ath_price = d.get('ath_price', 0)
+            supply_str = d.get('total_supply', d.get('circulating_supply', '0'))
+            try:
+                supply = float(supply_str)
+            except:
+                supply = 0
+            ath_price_val = float(ath_price) if ath_price else 0
+            ath_mcap = None
+            if ath_price_val > 0 and supply > 0:
+                ath_mcap = ath_price_val * supply
+            return ath_mcap, ath_price_val, True
+    except:
+        pass
+    return None, None, False
 
 def get_pair_age_minutes(p):
     """Get pair age in minutes from pairCreatedAt"""
@@ -75,6 +99,13 @@ def check_should_buy(addr, p, sym, dex, m, v, v5, bs, buys, sells, holders, pair
     v5m_ratio = v5 / m if m > 0 and v5 > 0 else 0
     vol_mcap_ratio = v / m if m > 0 else 0
     early_momentum = 5000 <= m <= 12000 and v5m_ratio >= 1.0
+    
+    # === ATH DIVERGENCE CHECK (reject if local peak >40% from ATH) ===
+    ath_mcap, _, _ = get_gmgn_ath(addr)
+    if ath_mcap and ath_mcap > 0:
+        divergence = (ath_mcap - m) / ath_mcap * 100
+        if divergence > ATH_DIVERGENCE_REJECT:
+            return False, f"ATH reject: {divergence:.0f}% from ATH (parabolic)"
     
     if early_momentum:
         return True, f"EARLY_MOMENTUM: mcap ${m:,.0f} + vol/mcap {v5m_ratio:.1f}x"
