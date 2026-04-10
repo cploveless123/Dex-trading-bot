@@ -1,47 +1,36 @@
 #!/usr/bin/env python3
 """
-Trading Constants - Shared configuration for all trading scripts
-
-NEW STRATEGY: Based on 16-whale synthesis (55% avg WR)
-Goal: Turn 1 SOL to 100 SOL via compounding 2-5x wins
+Trading Constants - v1.4 Strategy
+Goal: Turn 1.0 SOL → 100 SOL via compound pump.fun trades
 """
 
 # Position sizing
-POSITION_SIZE = 0.10      # Normal position size (doubled from 0.05 for bigger wins)
-KOL_BUY_POSITION_SIZE = 0.10  # KOL_BUY signals: double down
-MAX_OPEN_POSITIONS = 5     # Max concurrent positions - aggressive deployment
+POSITION_SIZE = 0.10      # Per trade
+KOL_BUY_POSITION_SIZE = 0.10
+MAX_OPEN_POSITIONS = 5     # Max concurrent positions
 
-# Entry Filters - AGGRESSIVE for 100x growth
-MIN_MCAP = 5000            # $8.5K floor - early momentum plays
-MAX_MCAP = 95000           # $75K ceiling
-MIN_VOLUME = 5000          # Minimum 24h volume ($)
-MIN_5MIN_VOLUME = 1000     # Minimum 5min volume ($)
-MIN_BS_RATIO = 1.5        # BS ratio 1.5+ - momentum only
-MIN_HOLDERS = 15           # Holders 30+ - decent distribution
-TOP10_HOLDER_MAX = 45     # Max top 10 holder % - prevents honeypots
+# Entry Filters
+MIN_MCAP = 5000            # $5K floor
+MAX_MCAP = 95000           # $95K ceiling
+MIN_5MIN_VOLUME = 1000     # 5min volume > $1K
+MIN_HOLDERS = 15           # Holders > 15
+TOP10_HOLDER_MAX = 50      # Top10% < 50% (ignore if 0)
 
-# GMGN Scoring
-MIN_GMGN_SCORE = 55       # Minimum GMGN API score to buy
+# Liquidity rule: ignore if mcap < $50K OR new pair OR bonding curve
+# (enforced in scanner logic)
 
-# Entry criteria
-MIN_ENTRY_MCAP = 3000     # Absolute minimum entry mcap ($)
-PUMP_FUN_ONLY = False     # Trade pump.fun AND pumpswap tokens
+# BS ratio
+MIN_BS_NEW = 0.2          # Pairs <5 min old
+MIN_BS_OLD = 0.9          # Pairs >5 min old
 
-# Exit Plan - CHRIS'S NEW STRATEGY
-# TP1: +50% minimum → then 10% trailing from peak → sell 50%
-# TP2: +200% → sell 25%
-# TP3: +500% → sell 25%
-# Trailing: 20% from peak on remaining 25%
-# Stop: -20%
-TP1_PERCENT = 50         # First target: +50% minimum before trailing activates
-TP1_TRAILING_PCT = 15   # 15% trailing stop from peak after hitting +50%
-TP1_SELL_PCT = 50         # Sell 50% at TP1
-TP2_PERCENT = 200         # Second target: +200%
-TP2_SELL_PCT = 25         # Sell 25% more at TP2
-TP3_PERCENT = 500         # Third target: +500%
-TP3_SELL_PCT = 25         # Sell remaining 25% at TP3
-STOP_LOSS_PERCENT = -30   # Stop loss: -30% (widened from -20% for volatility room)
-TRAILING_STOP_PCT = 30    # Trailing stop: 30% from peak on remaining
+# Exit Plan
+TP1_PERCENT = 50          # +50% → sell 50%, trail 15%
+TP1_TRAILING_PCT = 15
+TP1_SELL_PCT = 50
+TP2_PERCENT = 150         # +150% → sell 25%
+TP2_SELL_PCT = 25
+TRAILING_STOP_PCT = 30    # 30% from peak on remaining
+STOP_LOSS_PERCENT = -20    # -20% stop
 
 # Slippage & Tax Correction
 SLIPPAGE_TAX_COST = 0.025   # ~2.5% per round trip
@@ -49,37 +38,52 @@ SLIPPAGE_TAX_COST = 0.025   # ~2.5% per round trip
 # Real net exit percentages (after tax)
 REAL_TP1_PCT = round(TP1_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_TP2_PCT = round(TP2_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
-REAL_TP3_PCT = round(TP3_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_STOP_PCT = round(STOP_LOSS_PERCENT * (1 + SLIPPAGE_TAX_COST), 1)
 
 EXIT_PLAN_TEXT = f"""🎯 Exit Plan (tax-adjusted):
-+{TP1_PERCENT}% minimum → then {TP1_TRAILING_PCT}% trailing from peak → Sell {TP1_SELL_PCT}%
++{TP1_PERCENT}% → Sell {TP1_SELL_PCT}%, trail {TP1_TRAILING_PCT}%
 +{TP2_PERCENT}% → Sell {TP2_SELL_PCT}% more
-+{TP3_PERCENT}% → Sell remaining {TP3_SELL_PCT}%
 📊 Trailing: {TRAILING_STOP_PCT}% from peak on remaining
 ⚠️ Stop: {STOP_LOSS_PERCENT}% (net: {REAL_STOP_PCT}% after {SLIPPAGE_TAX_COST*100}% tax/slippage)"""
 
-# Re-entry lockout after close
-REENTRY_LOCKOUT_MINUTES = 30
-REENTRY_BS_THRESHOLD = 3.0
-REENTRY_CHG_THRESHOLD = 60
+# Dip / Pullback Detection
+# Pairs <5 min old: dip 5-39% from peak (first 60s), h1 >+50%, 5min >+50%
+# Pairs >5 min old: dip 5-39% from peak, 24hr >+25%, h1 >-39%, 5min >-39%
+DIP_MIN = 5
+DIP_MAX = 39
+PEAK_WINDOW_SECONDS = 60   # Peak = highest price in first 60 seconds
+
+# Cooldown rules (avoid parabolic tops)
+# New (<5 min): h1 >+100% → wait 45s before buying
+# Older (>5 min): 5min >+1% → wait 90s before buying
+NEW_PUMP_COOLDOWN = 45     # seconds
+OLD_PUMP_COOLDOWN = 90     # seconds
+NEW_PUMP_HS1_THRESHOLD = 100  # h1 >+100% triggers cooldown
+OLD_PUMP_5M_THRESHOLD = 1     # 5min >+1% triggers cooldown
+
+# If local peak >40% from ATH → reject (parabolic warning)
+ATH_DIVERGENCE_REJECT = 40  # %
+
+# NoMint and Blacklist checks
+CHECK_NOMINT = True
+CHECK_BLACKLIST = True
 
 # Ticker blacklist
 TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
 
-# GMGN Signal Settings
-GMGN_SCORE_THRESHOLD = 50
-GMGN_VOL_MCAP_MIN = 2.0    # 2x vol/mcap - captures more setups
-GMGN_VOL_MCAP_MAX = 15.0
+# Re-entry lockout (permanent - never re-buy sold tokens)
+# Already enforced via _sold_tokens set in scanner
 
-# Simulation reset timestamp
-SIM_RESET_TIMESTAMP = '2026-04-10T03:18:27.828364'
-CHRIS_STARTING_BALANCE = 1.0   # Reset for fresh simulation
+# Simulation
+SIM_RESET_TIMESTAMP = '2026-04-10T17:45:00.000000'  # Fresh start at 1.0 SOL
+CHRIS_STARTING_BALANCE = 1.0
+
+# Scan intervals
+SCAN_INTERVAL = 15        # 15 seconds
+MONITOR_INTERVAL = 5       # 5 seconds
+ALERT_INTERVAL = 30        # 30 seconds
 
 # API Rate Limiting
-DEXSCREENER_INTERVAL = 30
-SCAN_INTERVAL = 300
-GMGN_INTERVAL = 60
 MAX_RETRIES = 3
 CIRCUIT_BREAKER_THRESHOLD = 5
 CIRCUIT_BREAKER_WAIT = 300
