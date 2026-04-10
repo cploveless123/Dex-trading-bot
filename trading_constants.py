@@ -28,6 +28,8 @@ TP1_TRAILING_PCT = 15
 TP1_SELL_PCT = 50
 TP2_PERCENT = 150         # +150% → sell 25%
 TP2_SELL_PCT = 25
+TP3_PERCENT = 0          # +500% removed in v1.7
+TP3_SELL_PCT = 0         # removed in v1.7
 TRAILING_STOP_PCT = 30    # 30% from peak on remaining
 STOP_LOSS_PERCENT = -30    # -30% stop
 
@@ -71,7 +73,7 @@ CHECK_BLACKLIST = True
 TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
 
 # Simulation
-SIM_RESET_TIMESTAMP = '2026-04-10T18:00:00.000000'  # Fresh start at 1.0 SOL
+SIM_RESET_TIMESTAMP = '2026-04-10T19:00:00.000000'  # Fresh start at 1.0 SOL
 CHRIS_STARTING_BALANCE = 1.0
 
 # Scan intervals
