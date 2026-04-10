@@ -12,9 +12,11 @@ MAX_OPEN_POSITIONS = 5     # Max concurrent positions
 # Entry Filters
 MIN_MCAP = 5000            # $5K floor
 MAX_MCAP = 95000           # $95K ceiling
+MIN_VOLUME = 5000          # 24h volume (kept for compatibility)
 MIN_5MIN_VOLUME = 1000     # 5min volume > $1K
 MIN_HOLDERS = 15           # Holders > 15
 TOP10_HOLDER_MAX = 50      # Top10% < 50% (ignore if 0)
+MIN_BS_RATIO = 1.5         # BS ratio (kept for compatibility)
 
 # Liquidity rule: ignore if mcap < $50K OR new pair OR bonding curve
 # (enforced in scanner logic)
@@ -29,6 +31,8 @@ TP1_TRAILING_PCT = 15
 TP1_SELL_PCT = 50
 TP2_PERCENT = 150         # +150% → sell 25%
 TP2_SELL_PCT = 25
+TP3_PERCENT = 500         # +500% → sell remaining 25%
+TP3_SELL_PCT = 25
 TRAILING_STOP_PCT = 30    # 30% from peak on remaining
 STOP_LOSS_PERCENT = -20    # -20% stop
 
