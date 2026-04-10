@@ -3,8 +3,9 @@ Exit Plan: TP1 +50% (sell 50%) | TP2 +150% | TP3 +500% | Trailing 30% | Stop -30
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
-  BOATGUY: mcap=$91,044 | gain=+287.1% | peak=$124,050 | dd=+0%
-  BOATGUY: mcap=$99,696 | gain=+323.9% | peak=$124,050 | dd=-9%
-  BOATGUY: mcap=$99,696 | gain=+323.9% | peak=$124,050 | dd=-9%
-  BOATGUY: mcap=$99,696 | gain=+323.9% | peak=$124,050 | dd=-9%
-  BOATGUY: mcap=$99,696 | gain=+323.9% | peak=$124,050 | dd=-9%
+  BOATGUY: mcap=$103,292 | gain=+339.2% | peak=$124,050 | dd=-13%
+  LEXA: mcap=$8,114 | gain=+8.0% | peak=$8,114 | dd=+0%
+  BOATGUY: mcap=$110,722 | gain=+370.8% | peak=$124,050 | dd=-22%
+  LEXA: mcap=$8,114 | gain=+8.0% | peak=$8,114 | dd=+0%
+  BOATGUY: mcap=$110,722 | gain=+370.8% | peak=$124,050 | dd=-22%
+  LEXA: mcap=$8,114 | gain=+8.0% | peak=$8,114 | dd=+0%
