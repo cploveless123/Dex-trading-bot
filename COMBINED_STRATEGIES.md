@@ -12,14 +12,16 @@ Turn 1.0 SOL → 100 SOL
 
 • Top10% holder < 50%
 • BS ratio > 1.15
-• Liquidity > $1K
+• Liquidity > $1K (except bonding curve pairs)
 
 ---
 
 ## ❌ ANTI-PATTERNS (REJECT)
 
 • Top10% > 70% = dump
-• Liquidity < $1K = rug
+• Liquidity < $1K = rug (unless <$50K mcap bonding curve)
+• NoMint / Mintable tokens
+• Blacklisted tokens
 • Non-ASCII ticker = reject
 
 ---
@@ -33,7 +35,7 @@ Turn 1.0 SOL → 100 SOL
 | Holders | > 15 |
 | Vol/Mcap | > 1.1x |
 | 5 min vol | > $1K |
-| Liquidity | > $1K |
+| Liquidity | > $1K (waived for new pairs <$50K mcap) |
 
 ### Dip Detection
 
@@ -59,10 +61,10 @@ Turn 1.0 SOL → 100 SOL
 
 ## 🔧 FILTERS
 
+• NoMint / Blacklist checks
 • Age-based BS ratio
 • 11-39% peak dip
-• Momentum confirmation
-• Liquidity > $1K
+• Liquidity waived for bonding curve pairs (<$50K mcap)
 • 60s startup delay
 
 ---
