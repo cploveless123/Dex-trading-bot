@@ -125,6 +125,8 @@ def check_positions():
         tp1_sold = t.get('tp1_sold')
         tp2_sold = t.get('tp2_sold')
         tp3_sold = t.get('tp3_sold')
+        tp4_sold = t.get('tp4_sold')
+        tp5_sold = t.get('tp5_sold')
         trailing_stopped = t.get('trailing_stopped')
         peak = cache['peak_mcap']
         gains_pct = ((mcap - entry) / entry) * 100
