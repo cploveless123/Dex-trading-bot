@@ -14,5 +14,21 @@
       "bs_mcap": "$0 (graduated from bonding curve)"
     },
     "notes": "Graduated from bonding curve. Was likely up huge in first hour then cooled. Mcap $927K too high for our range but shows what launch winners look like."
+  },
+  {
+    "symbol": "BURNIE",
+    "address": "CGEDT9QZDvvH5GmVkWJH2BXiMJqMJySC9ihWyr7Spump",
+    "added_at": "2026-04-10T01:57:42.136415",
+    "stage": "graduated_mature",
+    "mcap_at_analysis": "$2.3M (7 days old)",
+    "launch_profile": {
+      "age_at_analysis": "~7 days",
+      "1h_change_at_analysis": "-6.6%",
+      "5m_change_at_analysis": "-2.0%",
+      "liquidity": "$165K",
+      "graduated": true,
+      "bs_mcap": "$0 (graduated)"
+    },
+    "notes": "Mature token, $2.3M mcap too high for our range. Looking for launch patterns in $5K-$75K range."
   }
 ]
