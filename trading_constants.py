@@ -73,7 +73,7 @@ CHECK_BLACKLIST = True
 TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
 
 # Simulation
-SIM_RESET_TIMESTAMP = '2026-04-10T19:09:36.614356'  # Fresh start at 1.0 SOL
+SIM_RESET_TIMESTAMP = '2026-04-10T19:58:00.000000'  # Fresh start at 1.0 SOL
 CHRIS_STARTING_BALANCE = 1.0
 
 # Scan intervals
