@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Whale Momentum Scanner v3
-Chris's Strategy v1.8 - Dip 15-50%, TP3 restored
+Chris's Strategy v1.9 - Dip 15-50%, TP3 restored
 
 Rules:
 - Mcap: $5K - $95K
