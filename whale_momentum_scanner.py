@@ -114,10 +114,7 @@ def scan_token(addr):
             return None, None
         
         # Liquidity: ignore if mcap < $50K AND (new pair OR bonding curve)
-        is_new = pair_age < 5
-        is_bonding = bs_mcap > 0
-        if liq < 1000 and not (m < 50000 and (is_new or is_bonding)):
-            return None, None
+        # (deferred until after we calculate pair_age)
         
         # 5min vol
         if v5 < 1000:
@@ -134,6 +131,10 @@ def scan_token(addr):
             dip_pct = 0
         
         pair_age = get_pair_age_minutes(p)
+        
+        # Liquidity: ignore for mcap < $50K (still building)
+        if liq < 1000 and m >= 50000:
+            return None, None
         
         if pair_age < 5:
             # NEW PAIRS (<5 min): h1 > +50%, 5min > +50%
