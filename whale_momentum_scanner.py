@@ -33,8 +33,20 @@ WHALE_DB = Path("/root/Dex-trading-bot/whales/whale_db.json")
 # Track peak price for each token
 _peak_prices = {}
 
-# Track sold tokens - NEVER re-buy these
+# Track sold tokens - NEVER re-buy these (permanent blacklist)
 _sold_tokens = set()
+
+def init_sold_tokens():
+    """Load ALL closed positions from trade history - NEVER re-buy these"""
+    try:
+        with open(TRADES_FILE) as f:
+            for line in f:
+                t = json.loads(line)
+                # Any token we've ever closed (sold) goes on blacklist
+                if t.get('token_address') and t.get('status') == 'closed' and t.get('action') == 'BUY':
+                    _sold_tokens.add(t['token_address'])
+    except:
+        pass
 
 def get_pair_age_minutes(p):
     created = p.get('pairCreatedAt', 0)
@@ -251,22 +263,8 @@ def check_and_buy():
         
         # Skip if already open OR previously sold
         # Check both in-memory set AND trade file
+        # PERMANENT BLACKLIST - never re-buy any closed position
         if addr in _sold_tokens:
-            continue
-        # Also check trade file for any closed position with this address
-        try:
-            with open(TRADES_FILE) as f:
-                for line in f:
-                    t = json.loads(line)
-                    if t.get('token_address') == addr and t.get('status') == 'closed' and t.get('action') == 'BUY':
-                        _sold_tokens.add(addr)  # Add to memory
-                        break
-        except:
-            pass
-        if addr in _sold_tokens:
-            continue
-        already = any(t.get('token_address') == addr and not t.get('closed_at') for t in existing)
-        if already:
             continue
         
         result, msg = scan_token(addr)
@@ -327,7 +325,7 @@ def load_whales():
 def main():
     print("🚀 Whale Momentum Scanner v3 - Chris's Strategy")
     print(f"   Mcap: $5K-$95K | Dip: 11-39% | Age-based rules")
-    load_sold_tokens()
+    init_sold_tokens()  # Load ALL closed positions
     whales = load_whales()
     print(f"   Loaded {len(whales)} whales, {len(_sold_tokens)} sold (blacklisted)")
     print("Starting scans...")
