@@ -731,3 +731,66 @@ Checking every 5s
   STACK: mcap=$9,610 | gain=-13.6% | peak=$11,477 | dd=+0%
   3: mcap=$11,202 | gain=+0.9% | peak=$14,274 | dd=+0%
   JOB : mcap=$15,714 | gain=-1.0% | peak=$15,966 | dd=+0%
+  Hotate: mcap=$17,479 | gain=+14.5% | peak=$18,319 | dd=+0%
+  PUMP: error fetching mcap
+  STACK: mcap=$9,610 | gain=-13.6% | peak=$11,477 | dd=+0%
+  3: mcap=$11,202 | gain=+0.9% | peak=$14,274 | dd=+0%
+  JOB : mcap=$15,714 | gain=-1.0% | peak=$15,966 | dd=+0%
+  Hotate: mcap=$17,479 | gain=+14.5% | peak=$18,319 | dd=+0%
+  PUMP: error fetching mcap
+  STACK: mcap=$9,610 | gain=-13.6% | peak=$11,477 | dd=+0%
+  3: mcap=$11,202 | gain=+0.9% | peak=$14,274 | dd=+0%
+  JOB : mcap=$15,714 | gain=-1.0% | peak=$15,966 | dd=+0%
+  Hotate: mcap=$17,479 | gain=+14.5% | peak=$18,319 | dd=+0%
+  PUMP: error fetching mcap
+  STACK: mcap=$9,610 | gain=-13.6% | peak=$11,477 | dd=+0%
+  3: mcap=$11,202 | gain=+0.9% | peak=$14,274 | dd=+0%
+  JOB : mcap=$15,714 | gain=-1.0% | peak=$15,966 | dd=+0%
+  Hotate: mcap=$17,479 | gain=+14.5% | peak=$18,319 | dd=+0%
+  PUMP: error fetching mcap
+  STACK: mcap=$9,610 | gain=-13.6% | peak=$11,477 | dd=+0%
+  3: mcap=$10,081 | gain=-9.2% | peak=$14,274 | dd=+0%
+  JOB : mcap=$15,714 | gain=-1.0% | peak=$15,966 | dd=+0%
+  Hotate: mcap=$17,479 | gain=+14.5% | peak=$18,319 | dd=+0%
+  PUMP: error fetching mcap
+[STOP_LOSS] Alert sent
+🔴 STACK STOP LOSS @ $8,801 (-20.9%)
+  3: mcap=$10,081 | gain=-9.2% | peak=$14,274 | dd=+0%
+  JOB : mcap=$15,714 | gain=-1.0% | peak=$15,966 | dd=+0%
+  Hotate: mcap=$18,124 | gain=+18.7% | peak=$18,319 | dd=+0%
+  PUMP: error fetching mcap
+  3: mcap=$10,081 | gain=-9.2% | peak=$14,274 | dd=+0%
+  JOB : mcap=$15,725 | gain=-0.9% | peak=$15,966 | dd=+0%
+  Hotate: mcap=$18,124 | gain=+18.7% | peak=$18,319 | dd=+0%
+  PUMP: error fetching mcap
+  3: mcap=$10,081 | gain=-9.2% | peak=$14,274 | dd=+0%
+  JOB : mcap=$15,725 | gain=-0.9% | peak=$15,966 | dd=+0%
+  Hotate: mcap=$18,124 | gain=+18.7% | peak=$18,319 | dd=+0%
+  PUMP: error fetching mcap
+  3: mcap=$10,081 | gain=-9.2% | peak=$14,274 | dd=+0%
+  JOB : mcap=$15,725 | gain=-0.9% | peak=$15,966 | dd=+0%
+  Hotate: mcap=$18,124 | gain=+18.7% | peak=$18,319 | dd=+0%
+  PUMP: error fetching mcap
+  3: mcap=$10,081 | gain=-9.2% | peak=$14,274 | dd=+0%
+  JOB : mcap=$15,725 | gain=-0.9% | peak=$15,966 | dd=+0%
+[03:59:32] Monitor alive | 481 checks | 4 open | next in 5s
+  Hotate: mcap=$18,124 | gain=+18.7% | peak=$18,319 | dd=+0%
+  PUMP: error fetching mcap
+  3: mcap=$10,876 | gain=-2.0% | peak=$14,274 | dd=+0%
+  JOB : mcap=$15,725 | gain=-0.9% | peak=$15,966 | dd=+0%
+  Hotate: mcap=$18,124 | gain=+18.7% | peak=$18,319 | dd=+0%
+  PUMP: error fetching mcap
+  3: mcap=$10,876 | gain=-2.0% | peak=$14,274 | dd=+0%
+  JOB : mcap=$15,725 | gain=-0.9% | peak=$15,966 | dd=+0%
+  Hotate: mcap=$15,732 | gain=+3.1% | peak=$18,319 | dd=+0%
+  PUMP: error fetching mcap
+  3: mcap=$10,876 | gain=-2.0% | peak=$14,274 | dd=+0%
+  JOB : mcap=$18,858 | gain=+18.8% | peak=$18,858 | dd=+0%
+  Hotate: mcap=$15,732 | gain=+3.1% | peak=$18,319 | dd=+0%
+  PUMP: error fetching mcap
+  3: mcap=$10,876 | gain=-2.0% | peak=$14,274 | dd=+0%
+  JOB : mcap=$18,858 | gain=+18.8% | peak=$18,858 | dd=+0%
+  Hotate: mcap=$15,732 | gain=+3.1% | peak=$18,319 | dd=+0%
+  PUMP: error fetching mcap
+  3: mcap=$10,876 | gain=-2.0% | peak=$14,274 | dd=+0%
+  JOB : mcap=$18,858 | gain=+18.8% | peak=$18,858 | dd=+0%
