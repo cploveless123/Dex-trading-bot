@@ -53,6 +53,30 @@ def check_blacklist(p_data):
         return True, "blacklisted"
     return False, "OK"
 
+def get_ath_from_gmgn(addr):
+    """Get ATH data from GMGN CLI - returns (ath_mcap, ath_price)"""
+    try:
+        import subprocess
+        r = subprocess.run(
+            ['gmgn-cli', 'token', 'info', '--chain', 'sol', '--address', addr],
+            capture_output=True, text=True, timeout=15
+        )
+        if r.returncode == 0:
+            d = json.loads(r.stdout)
+            ath_price = d.get('ath_price', 0)
+            supply_str = d.get('total_supply', d.get('circulating_supply', '0'))
+            try:
+                supply = float(supply_str)
+            except:
+                supply = 0
+            ath_price_val = float(ath_price) if ath_price else 0
+            if ath_price_val > 0 and supply > 0:
+                ath_mcap = ath_price_val * supply
+                return float(ath_mcap), float(ath_price)
+    except:
+        pass
+    return None, None
+
 def scan_token(addr):
     """Scan a single token"""
     try:
@@ -120,11 +144,15 @@ def scan_token(addr):
         if v5 < 1000:
             return None, None
         
-        # Peak tracking
-        if addr not in _peak_prices or m > _peak_prices[addr]:
-            _peak_prices[addr] = m
+        # Peak tracking - use GMGN ATH mcap if available
+        ath_mcap, _ = get_ath_from_gmgn(addr)
+        if ath_mcap and ath_mcap > m:
+            peak = ath_mcap  # Use ATH as reference if token has pumped before
+        else:
+            if addr not in _peak_prices or m > _peak_prices[addr]:
+                _peak_prices[addr] = m
+            peak = _peak_prices.get(addr, m)
         
-        peak = _peak_prices.get(addr, m)
         if peak > 0:
             dip_pct = (peak - m) / peak * 100
         else:
