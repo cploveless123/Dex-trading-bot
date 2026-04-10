@@ -200,8 +200,8 @@ def scan_token(addr):
                 return None, f"B: new 5min <-10% (too deep)"
             if dip_pct < 10:
                 return None, f"B: dip <10%"
-            if dip_pct > 39:
-                return None, f"B: dip >39%"
+            if dip_pct > 50:
+                return None, f"B: dip >50%"
         else:
             # OLDER PAIRS (>5 min): 24hr > +25%, h1 > -39%, 5min > -39%
             if chg24 < 25:
@@ -212,8 +212,8 @@ def scan_token(addr):
                 return None, f"B: 5min <-39%"
             if dip_pct < 10:
                 return None, f"B: dip <10%"
-            if dip_pct > 39:
-                return None, f"B: dip >39%"
+            if dip_pct > 50:
+                return None, f"B: dip >50%"
             
             # BS ratio for older
             if bs < 0.9:
@@ -348,7 +348,7 @@ def load_whales():
 
 def main():
     print("🚀 Whale Momentum Scanner v3 - Chris's Strategy")
-    print(f"   Mcap: $5K-$95K | Dip: 11-39% | Age-based rules")
+    print(f"   Mcap: $5K-$95K | Dip: 10-50% | Age-based rules")
     init_sold_tokens()  # Load ALL closed positions
     whales = load_whales()
     print(f"   Loaded {len(whales)} whales, {len(_sold_tokens)} sold (blacklisted)")
