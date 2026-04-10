@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Trading Constants - v1.4 Strategy
+Trading Constants - v1.5 Strategy
 Goal: Turn 1.0 SOL → 100 SOL via compound pump.fun trades
 """
 
@@ -17,9 +17,6 @@ MIN_5MIN_VOLUME = 1000     # 5min volume > $1K
 MIN_HOLDERS = 15           # Holders > 15
 TOP10_HOLDER_MAX = 50      # Top10% < 50% (ignore if 0)
 MIN_BS_RATIO = 1.5         # BS ratio (kept for compatibility)
-
-# Liquidity rule: ignore if mcap < $50K OR new pair OR bonding curve
-# (enforced in scanner logic)
 
 # BS ratio
 MIN_BS_NEW = 0.2          # Pairs <5 min old
@@ -51,10 +48,10 @@ EXIT_PLAN_TEXT = f"""🎯 Exit Plan (tax-adjusted):
 ⚠️ Stop: {STOP_LOSS_PERCENT}% (net: {REAL_STOP_PCT}% after {SLIPPAGE_TAX_COST*100}% tax/slippage)"""
 
 # Dip / Pullback Detection
-# Pairs <5 min old: dip 5-39% from peak (first 60s), h1 >+50%, 5min >+50%
-# Pairs >5 min old: dip 5-39% from peak, 24hr >+25%, h1 >-39%, 5min >-39%
-DIP_MIN = 5
-DIP_MAX = 39
+# New (<5 min): dip 10-50%, h1 >+50%, 5min >-10%
+# Older (>5 min): dip 10-50%, 24hr >+25%, h1 >-39%, 5min >-39%
+DIP_MIN = 10
+DIP_MAX = 50
 PEAK_WINDOW_SECONDS = 60   # Peak = highest price in first 60 seconds
 
 # Cooldown rules (avoid parabolic tops)
@@ -75,16 +72,13 @@ CHECK_BLACKLIST = True
 # Ticker blacklist
 TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
 
-# Re-entry lockout (permanent - never re-buy sold tokens)
-# Already enforced via _sold_tokens set in scanner
-
 # Simulation
 SIM_RESET_TIMESTAMP = '2026-04-10T17:45:00.000000'  # Fresh start at 1.0 SOL
 CHRIS_STARTING_BALANCE = 1.0
 
 # Scan intervals
 SCAN_INTERVAL = 15        # 15 seconds
-MONITOR_INTERVAL = 5       # 5 seconds
+MONITOR_INTERVAL = 5        # 5 seconds
 ALERT_INTERVAL = 30        # 30 seconds
 
 # API Rate Limiting
