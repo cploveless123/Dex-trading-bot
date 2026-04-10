@@ -33,6 +33,9 @@ WHALE_DB = Path("/root/Dex-trading-bot/whales/whale_db.json")
 # Track peak price for each token
 _peak_prices = {}
 
+# Track first observation time for cooldown after big pumps
+_token_first_seen = {}
+
 # Track sold tokens - NEVER re-buy these (permanent blacklist)
 _sold_tokens = set()
 
@@ -178,6 +181,12 @@ def scan_token(addr):
             _peak_prices[addr] = m
         peak = _peak_prices.get(addr, m)
         
+        # Track first seen time
+        import time
+        now = time.time()
+        if addr not in _token_first_seen:
+            _token_first_seen[addr] = now
+        
         if peak > 0:
             dip_pct = (peak - m) / peak * 100
         else:
@@ -214,6 +223,13 @@ def scan_token(addr):
                 return None, f"B: dip <10%"
             if dip_pct > 50:
                 return None, f"B: dip >50%"
+            
+            # COOLDOWN: If h1 >+150%, we need to have been watching for 2+ min
+            # This prevents buying immediately after a parabolic pump
+            if chg60 > 150:
+                time_watching = now - _token_first_seen.get(addr, now)
+                if time_watching < 120:  # 2 minutes
+                    return None, f"B: pump cooldown ({int(time_watching)}s < 2min)"
             
             # BS ratio for older
             if bs < 0.9:
