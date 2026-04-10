@@ -30769,3 +30769,386 @@ Checking every 5s
   PreSPAX: mcap=$5,330 | gain=-61.4% | peak=$13,791 | dd=+0%
   GENZ: error fetching mcap
   CHIMPE: mcap=$15,472 | gain=+13.5% | peak=$16,152 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,330 | gain=-61.4% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,472 | gain=+13.5% | peak=$16,152 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,330 | gain=-61.4% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,472 | gain=+13.5% | peak=$16,152 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,167 | gain=-62.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,472 | gain=+13.5% | peak=$16,152 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,167 | gain=-62.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,472 | gain=+13.5% | peak=$16,152 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,167 | gain=-62.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,472 | gain=+13.5% | peak=$16,152 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,167 | gain=-62.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,472 | gain=+13.5% | peak=$16,152 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,167 | gain=-62.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,472 | gain=+13.5% | peak=$16,152 | dd=+0%
+[16:54:42] Monitor alive | 9338 checks | 4 open | next in 5s
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,167 | gain=-62.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,506 | gain=+13.7% | peak=$16,152 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,237 | gain=-62.0% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,506 | gain=+13.7% | peak=$16,152 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,237 | gain=-62.0% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,506 | gain=+13.7% | peak=$16,152 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,237 | gain=-62.0% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,506 | gain=+13.7% | peak=$16,152 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,237 | gain=-62.0% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,506 | gain=+13.7% | peak=$16,152 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,237 | gain=-62.0% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,506 | gain=+13.7% | peak=$16,152 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,088 | gain=-63.1% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,515 | gain=+13.8% | peak=$16,152 | dd=+0%
+  BOP: mcap=$55,202 | gain=+0.0% | peak=$55,202 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,088 | gain=-63.1% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,515 | gain=+13.8% | peak=$16,152 | dd=+0%
+  BOP: mcap=$55,202 | gain=+0.0% | peak=$55,202 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,088 | gain=-63.1% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,515 | gain=+13.8% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,359 | gain=-1.5% | peak=$55,202 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,088 | gain=-63.1% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,515 | gain=+13.8% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,359 | gain=-1.5% | peak=$55,202 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,088 | gain=-63.1% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,515 | gain=+13.8% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,359 | gain=-1.5% | peak=$55,202 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$5,088 | gain=-63.1% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,514 | gain=+13.8% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,359 | gain=-1.5% | peak=$55,202 | dd=+0%
+[16:55:48] Monitor alive | 9350 checks | 5 open | next in 5s
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,676 | gain=-66.1% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,514 | gain=+13.8% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,359 | gain=-1.5% | peak=$55,202 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,676 | gain=-66.1% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,514 | gain=+13.8% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,359 | gain=-1.5% | peak=$55,202 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,676 | gain=-66.1% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,514 | gain=+13.8% | peak=$16,152 | dd=+0%
+  BOP: mcap=$53,403 | gain=-3.3% | peak=$55,202 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,676 | gain=-66.1% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,514 | gain=+13.8% | peak=$16,152 | dd=+0%
+  BOP: mcap=$53,403 | gain=-3.3% | peak=$55,202 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,676 | gain=-66.1% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,514 | gain=+13.8% | peak=$16,152 | dd=+0%
+  BOP: mcap=$53,403 | gain=-3.3% | peak=$55,202 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,866 | gain=-64.7% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$53,403 | gain=-3.3% | peak=$55,202 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,866 | gain=-64.7% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$53,403 | gain=-3.3% | peak=$55,202 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,866 | gain=-64.7% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$56,451 | gain=+2.3% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,866 | gain=-64.7% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$56,451 | gain=+2.3% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,866 | gain=-64.7% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$56,451 | gain=+2.3% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,866 | gain=-64.7% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$56,451 | gain=+2.3% | peak=$56,451 | dd=+0%
+[16:56:48] Monitor alive | 9361 checks | 5 open | next in 5s
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,866 | gain=-64.7% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$56,451 | gain=+2.3% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,866 | gain=-64.7% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$56,451 | gain=+2.3% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,866 | gain=-64.7% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,917 | gain=-0.5% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,866 | gain=-64.7% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,917 | gain=-0.5% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,866 | gain=-64.7% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,917 | gain=-0.5% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,763 | gain=-65.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,917 | gain=-0.5% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,763 | gain=-65.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,917 | gain=-0.5% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,763 | gain=-65.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,930 | gain=-0.5% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,763 | gain=-65.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,930 | gain=-0.5% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,763 | gain=-65.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,559 | gain=+14.1% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,930 | gain=-0.5% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,763 | gain=-65.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,930 | gain=-0.5% | peak=$56,451 | dd=+0%
+[16:57:49] Monitor alive | 9372 checks | 5 open | next in 5s
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,763 | gain=-65.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,930 | gain=-0.5% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,763 | gain=-65.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$56,080 | gain=+1.6% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,763 | gain=-65.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$56,080 | gain=+1.6% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,763 | gain=-65.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$56,080 | gain=+1.6% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,763 | gain=-65.5% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$56,080 | gain=+1.6% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,651 | gain=-66.3% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$56,080 | gain=+1.6% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,651 | gain=-66.3% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$56,080 | gain=+1.6% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,651 | gain=-66.3% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$51,420 | gain=-6.9% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,651 | gain=-66.3% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$51,420 | gain=-6.9% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,651 | gain=-66.3% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$51,420 | gain=-6.9% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,651 | gain=-66.3% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$51,420 | gain=-6.9% | peak=$56,451 | dd=+0%
+[16:58:49] Monitor alive | 9383 checks | 5 open | next in 5s
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,608 | gain=-66.6% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$51,420 | gain=-6.9% | peak=$56,451 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,608 | gain=-66.6% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$57,481 | gain=+4.1% | peak=$57,481 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,608 | gain=-66.6% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$57,481 | gain=+4.1% | peak=$57,481 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,608 | gain=-66.6% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$57,481 | gain=+4.1% | peak=$57,481 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,608 | gain=-66.6% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$57,481 | gain=+4.1% | peak=$57,481 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,608 | gain=-66.6% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$57,481 | gain=+4.1% | peak=$57,481 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,608 | gain=-66.6% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$57,481 | gain=+4.1% | peak=$57,481 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,608 | gain=-66.6% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,748 | gain=-0.8% | peak=$57,481 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,608 | gain=-66.6% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,748 | gain=-0.8% | peak=$57,481 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,608 | gain=-66.6% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,748 | gain=-0.8% | peak=$57,481 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,608 | gain=-66.6% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,748 | gain=-0.8% | peak=$57,481 | dd=+0%
+[16:59:49] Monitor alive | 9394 checks | 5 open | next in 5s
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,608 | gain=-66.6% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$54,748 | gain=-0.8% | peak=$57,481 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$4,608 | gain=-66.6% | peak=$13,791 | dd=+0%
+  GENZ: error fetching mcap
+  CHIMPE: mcap=$15,612 | gain=+14.5% | peak=$16,152 | dd=+0%
+  BOP: mcap=$52,498 | gain=-4.9% | peak=$57,481 | dd=+0%
