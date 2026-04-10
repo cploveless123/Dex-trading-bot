@@ -130,6 +130,11 @@ def check_should_buy(addr, p, sym, dex, m, v, v5, bs, buys, sells, holders, pair
         if bs < 1.0:
             return False, f"BS {bs:.2f} < 1.0 (older pair = dump risk)"
     
+    # === ANTI-MOMENTUM CHECK ===
+    # If chg5 is climbing hard, we're chasing — reject
+    if chg5 > 5:
+        return False, f"chg5 +{chg5:.1f}% (momentum pump, not dip)"
+    
     # === VOL/MCAP FILTER (non-early tier) ===
     if not early_momentum and vol_mcap_ratio < 1.0:
         return False, f"vol/mcap {vol_mcap_ratio:.1f}x < 1.0x"

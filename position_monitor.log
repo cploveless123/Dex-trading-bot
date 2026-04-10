@@ -3,15 +3,15 @@ Exit Plan: TP1 +50% (sell 30%) | TP2 +100% | TP3 +200% | Trailing 30% | Stop -30
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
-  elondog: mcap=$10,197 | gain=+82.3% | peak=$13,739 | dd=-20%
-  ENU: mcap=$18,947 | gain=+10.0% | peak=$23,134 | dd=+0%
-  rawr: mcap=$7,953 | gain=+11.6% | peak=$9,431 | dd=+0%
-  elondog: mcap=$10,197 | gain=+16.1% | peak=$13,739 | dd=+0%
-  FIQUE: mcap=$6,391 | gain=-22.7% | peak=$12,189 | dd=+0%
-  SPBC: mcap=$45,931 | gain=+13.2% | peak=$45,931 | dd=+0%
-  elondog: mcap=$10,197 | gain=+82.3% | peak=$13,739 | dd=-20%
-  ENU: mcap=$18,947 | gain=+10.0% | peak=$23,134 | dd=+0%
-  rawr: mcap=$7,953 | gain=+11.6% | peak=$9,431 | dd=+0%
-  elondog: mcap=$10,197 | gain=+16.1% | peak=$13,739 | dd=+0%
-  FIQUE: mcap=$6,391 | gain=-22.7% | peak=$12,189 | dd=+0%
-  SPBC: mcap=$45,931 | gain=+13.2% | peak=$45,931 | dd=+0%
+  elondog: mcap=$10,012 | gain=+79.0% | peak=$13,739 | dd=-18%
+  ENU: mcap=$18,020 | gain=+4.7% | peak=$23,134 | dd=+0%
+  rawr: mcap=$7,059 | gain=-0.9% | peak=$9,431 | dd=+0%
+  elondog: mcap=$10,012 | gain=+14.0% | peak=$13,739 | dd=+0%
+  FIQUE: mcap=$6,473 | gain=-21.7% | peak=$12,189 | dd=+0%
+  SPBC: mcap=$50,842 | gain=+25.3% | peak=$50,842 | dd=+0%
+  elondog: mcap=$10,012 | gain=+79.0% | peak=$13,739 | dd=-18%
+  ENU: mcap=$18,020 | gain=+4.7% | peak=$23,134 | dd=+0%
+  rawr: mcap=$7,059 | gain=-0.9% | peak=$9,431 | dd=+0%
+  elondog: mcap=$10,012 | gain=+14.0% | peak=$13,739 | dd=+0%
+  FIQUE: mcap=$6,473 | gain=-21.7% | peak=$12,189 | dd=+0%
+  SPBC: mcap=$50,842 | gain=+25.3% | peak=$50,842 | dd=+0%
