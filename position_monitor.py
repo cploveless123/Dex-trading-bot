@@ -16,8 +16,11 @@ import time
 from pathlib import Path
 from trading_constants import (
     TP1_PERCENT, TP1_TRAILING_PCT, TP1_SELL_PCT,
-    TP2_PERCENT, TP2_SELL_PCT, TP3_PERCENT, TP3_SELL_PCT,
-    STOP_LOSS_PERCENT, TRAILING_STOP_PCT, EXIT_PLAN_TEXT, SIM_RESET_TIMESTAMP,
+    TP2_PERCENT, TP2_TRAILING_PCT, TP2_SELL_PCT,
+    TP3_PERCENT, TP3_TRAILING_PCT, TP3_SELL_PCT,
+    TP4_PERCENT, TP4_TRAILING_PCT, TP4_SELL_PCT,
+    TP5_PERCENT, TP5_TRAILING_PCT, TP5_SELL_PCT,
+    STOP_LOSS_PERCENT, TRAILING_STOP_PCT, SIM_RESET_TIMESTAMP,
     POSITION_SIZE, MAX_OPEN_POSITIONS
 )
 
@@ -171,7 +174,7 @@ def check_positions():
                         cache['peak_mcap'] = mcap
                         save_peak_cache(peak_cache)
                         updated = True
-                        msg = f"""🏆 TP1 (+50% min → 10% trailing) | {datetime.utcnow().strftime('%H:%M UTC')}
+                        msg = f"""🏆 TP1 (+{TP1_PERCENT}% → {TP1_TRAILING_PCT}% trailing) | {datetime.utcnow().strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
 💰 {sym}
 📍 Entry MC: ${int(entry):,}
@@ -180,7 +183,7 @@ def check_positions():
 💰 Balance: {get_balance()} SOL
 💰 PnL so far: {pnl_tp1:.4f} SOL
 
-💵 Remaining 50% still riding
+💵 Remaining {100 - TP1_SELL_PCT}% still riding
 🔗 https://dexscreener.com/solana/{ca}
 🥧 https://pump.fun/{ca}
 
@@ -215,7 +218,7 @@ def check_positions():
 💰 Balance: {get_balance()} SOL
 💰 Total PnL so far: {t['pnl_sol']:.4f} SOL
 
-💵 Remaining 25% still riding
+💵 Remaining {100 - TP1_SELL_PCT - TP2_SELL_PCT}% still riding
 🔗 https://dexscreener.com/solana/{ca}
 🥧 https://pump.fun/{ca}
 

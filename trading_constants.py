@@ -22,23 +22,23 @@ MIN_BS_RATIO = 1.5         # BS ratio (kept for compatibility)
 MIN_BS_NEW = 0.2          # Pairs <5 min old
 MIN_BS_OLD = 0.9          # Pairs >5 min old
 
-# Exit Plan (v2.0 - progressive selling)
-TP1_PERCENT = 50           # +50% → sell 30%, trail 15%
-TP1_TRAILING_PCT = 15
-TP1_SELL_PCT = 30          # sell 30% at TP1 (was 50%)
-TP2_PERCENT = 100          # +100% → sell 20%, trail 15%
-TP2_TRAILING_PCT = 15
-TP2_SELL_PCT = 20          # sell 20% at TP2 (was 25%)
-TP3_PERCENT = 200          # +200% → sell 20%, trail 15%
-TP3_TRAILING_PCT = 15
-TP3_SELL_PCT = 20          # new in v2.0
+# Exit Plan v2.1 - 35% trailing, looser for winners
+TP1_PERCENT = 40           # +40% → sell 30%, trail 35%
+TP1_TRAILING_PCT = 35
+TP1_SELL_PCT = 30
+TP2_PERCENT = 100          # +100% → sell 20%, trail 35%
+TP2_TRAILING_PCT = 35
+TP2_SELL_PCT = 20
+TP3_PERCENT = 200          # +200% → sell 20%, trail 35%
+TP3_TRAILING_PCT = 35
+TP3_SELL_PCT = 20
 TP4_PERCENT = 300          # +300% → sell 20%
-TP4_TRAILING_PCT = 15
-TP4_SELL_PCT = 20          # new in v2.0
+TP4_TRAILING_PCT = 35
+TP4_SELL_PCT = 20
 TP5_PERCENT = 1000         # +1000% → sell remaining 10%
-TP5_TRAILING_PCT = 15
-TP5_SELL_PCT = 10          # new in v2.0
-TRAILING_STOP_PCT = 30    # 30% from peak on remaining
+TP5_TRAILING_PCT = 35
+TP5_SELL_PCT = 10
+TRAILING_STOP_PCT = 35    # 35% from peak on remaining
 STOP_LOSS_PERCENT = -30    # -30% stop
 
 # Slippage & Tax Correction
