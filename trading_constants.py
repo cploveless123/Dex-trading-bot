@@ -55,10 +55,10 @@ DIP_MAX = 50
 PEAK_WINDOW_SECONDS = 60   # Peak = highest price in first 60 seconds
 
 # Cooldown rules (avoid parabolic tops)
-# New (<5 min): h1 >+100% → wait 45s before buying
-# Older (>5 min): 5min >+1% → wait 90s before buying
-NEW_PUMP_COOLDOWN = 45     # seconds
-OLD_PUMP_COOLDOWN = 90     # seconds
+# New (<5 min): h1 >+100% → wait 60s before buying
+# Older (>5 min): 5min >+1% → wait 120s before buying
+NEW_PUMP_COOLDOWN = 60     # seconds (was 45)
+OLD_PUMP_COOLDOWN = 120     # seconds (was 90)
 NEW_PUMP_HS1_THRESHOLD = 100  # h1 >+100% triggers cooldown
 OLD_PUMP_5M_THRESHOLD = 1     # 5min >+1% triggers cooldown
 
