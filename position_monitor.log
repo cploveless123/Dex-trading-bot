@@ -20673,3 +20673,89 @@ Checking every 5s
   PreSPAX: mcap=$18,832 | gain=+36.6% | peak=$20,433 | dd=+0%
   PreSPAX: mcap=$18,832 | gain=+36.6% | peak=$20,433 | dd=+0%
   RINA: mcap=$10,812 | gain=+2.4% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$19,053 | gain=+38.2% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$19,053 | gain=+38.2% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,826 | gain=+2.5% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$19,053 | gain=+38.2% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$19,053 | gain=+38.2% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,826 | gain=+2.5% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$19,053 | gain=+38.2% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$19,053 | gain=+38.2% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,826 | gain=+2.5% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$19,053 | gain=+38.2% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$19,053 | gain=+38.2% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,826 | gain=+2.5% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$19,053 | gain=+38.2% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$19,053 | gain=+38.2% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,826 | gain=+2.5% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$19,053 | gain=+38.2% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$19,053 | gain=+38.2% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,643 | gain=+0.8% | peak=$11,263 | dd=+0%
+[14:22:50] Monitor alive | 7677 checks | 5 open | next in 5s
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$20,094 | gain=+45.7% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$20,094 | gain=+45.7% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,643 | gain=+0.8% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$20,094 | gain=+45.7% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$20,094 | gain=+45.7% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,643 | gain=+0.8% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$20,094 | gain=+45.7% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$20,094 | gain=+45.7% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,643 | gain=+0.8% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$20,094 | gain=+45.7% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$20,094 | gain=+45.7% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,643 | gain=+0.8% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$20,094 | gain=+45.7% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$20,094 | gain=+45.7% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,643 | gain=+0.8% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$20,160 | gain=+46.2% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$20,160 | gain=+46.2% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,346 | gain=-2.0% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$20,160 | gain=+46.2% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$20,160 | gain=+46.2% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,346 | gain=-2.0% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$20,160 | gain=+46.2% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$20,160 | gain=+46.2% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,346 | gain=-2.0% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$20,160 | gain=+46.2% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$20,160 | gain=+46.2% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,346 | gain=-2.0% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$20,160 | gain=+46.2% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$20,160 | gain=+46.2% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,346 | gain=-2.0% | peak=$11,263 | dd=+0%
+  PUMP: error fetching mcap
+  $RISE: error fetching mcap
+  PreSPAX: mcap=$20,160 | gain=+46.2% | peak=$20,433 | dd=+0%
+  PreSPAX: mcap=$20,160 | gain=+46.2% | peak=$20,433 | dd=+0%
+  RINA: mcap=$10,189 | gain=-3.5% | peak=$11,263 | dd=+0%
