@@ -7,7 +7,7 @@ Goal: Turn 1 SOL to 100 SOL via compounding 2-5x wins
 """
 
 # Position sizing
-POSITION_SIZE = 0.05      # Normal position size
+POSITION_SIZE = 0.10      # Normal position size (doubled from 0.05 for bigger wins)
 KOL_BUY_POSITION_SIZE = 0.10  # KOL_BUY signals: double down
 MAX_OPEN_POSITIONS = 5     # Max concurrent positions - aggressive deployment
 
@@ -40,7 +40,7 @@ TP2_PERCENT = 200         # Second target: +200%
 TP2_SELL_PCT = 25         # Sell 25% more at TP2
 TP3_PERCENT = 500         # Third target: +500%
 TP3_SELL_PCT = 25         # Sell remaining 25% at TP3
-STOP_LOSS_PERCENT = -20   # Stop loss: -20%
+STOP_LOSS_PERCENT = -30   # Stop loss: -30% (widened from -20% for volatility room)
 TRAILING_STOP_PCT = 30    # Trailing stop: 30% from peak on remaining
 
 # Slippage & Tax Correction
