@@ -68,8 +68,8 @@ def check_blacklist(p_data):
         return True, "blacklisted"
     return False, "OK"
 
-def get_ath_from_gmgn(addr):
-    """Get ATH data from GMGN CLI - returns (ath_mcap, ath_price)"""
+def get_gmgn_token_data(addr):
+    """Get full GMGN token data - ATH, bonded status, etc"""
     try:
         import subprocess
         r = subprocess.run(
@@ -78,6 +78,8 @@ def get_ath_from_gmgn(addr):
         )
         if r.returncode == 0:
             d = json.loads(r.stdout)
+            
+            # ATH mcap
             ath_price = d.get('ath_price', 0)
             supply_str = d.get('total_supply', d.get('circulating_supply', '0'))
             try:
@@ -85,12 +87,23 @@ def get_ath_from_gmgn(addr):
             except:
                 supply = 0
             ath_price_val = float(ath_price) if ath_price else 0
+            ath_mcap = None
             if ath_price_val > 0 and supply > 0:
                 ath_mcap = ath_price_val * supply
-                return float(ath_mcap), float(ath_price)
+            
+            # Bonded status
+            migrated_pool = d.get('migrated_pool', '')
+            is_bonded = migrated_pool and len(str(migrated_pool)) > 5
+            
+            return ath_mcap, ath_price_val, is_bonded
     except:
         pass
-    return None, None
+    return None, None, False
+
+def get_ath_from_gmgn(addr):
+    """Get ATH data from GMGN CLI - returns (ath_mcap, ath_price)"""
+    ath_mcap, ath_price, _ = get_gmgn_token_data(addr)
+    return ath_mcap, ath_price
 
 def scan_token(addr):
     """Scan a single token"""
@@ -180,11 +193,11 @@ def scan_token(addr):
             return None, None
         
         if pair_age < 5:
-            # NEW PAIRS (<5 min): h1 > +50%, 5min > +50%
+            # NEW PAIRS (<5 min): h1 > +50%, allow 5min dips
             if chg60 < 50:
                 return None, f"B: new h1 <+50%"
-            if chg5 < 50:
-                return None, f"B: new 5min <+50%"
+            if chg5 < -10:
+                return None, f"B: new 5min <-10% (too deep)"
             if dip_pct < 10:
                 return None, f"B: dip <10%"
             if dip_pct > 39:
@@ -220,7 +233,8 @@ def scan_token(addr):
             "liq": liq,
             "dip_pct": dip_pct,
             "age": pair_age,
-            "dex": dex
+            "dex": dex,
+            "is_bonded": is_bonded
         }, "OK"
         
     except Exception as e:
@@ -281,7 +295,8 @@ def check_and_buy():
             continue
         
         # Log the scan
-        print(f"✅ CANDIDATE: {result['token']} | Mcap ${result['mcap']:,.0f} | Age {result['age']:.1f}min | Dip {result['dip_pct']:.1f}% | h1 {result['chg60']:+.1f}% | 5m {result['chg5']:+.1f}%")
+        bonded_tag = " [BONDED]" if is_bonded else ""
+        print(f"✅ CANDIDATE: {result['token']}{bonded_tag} | Mcap ${result['mcap']:,.0f} | Age {result['age']:.1f}min | Dip {result['dip_pct']:.1f}% | h1 {result['chg60']:+.1f}% | 5m {result['chg5']:+.1f}%")
         
         # Execute buy (simulated)
         trade = {
