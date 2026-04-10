@@ -30,12 +30,17 @@ from pathlib import Path
 from trading_constants import (
     MIN_MCAP, MAX_MCAP, MIN_VOLUME, MIN_5MIN_VOLUME, MIN_BS_RATIO,
     MIN_HOLDERS, POSITION_SIZE, TICKER_BLACKLIST, MAX_OPEN_POSITIONS,
-    SIM_RESET_TIMESTAMP, ATH_DIVERGENCE_REJECT
+    SIM_RESET_TIMESTAMP, ATH_DIVERGENCE_REJECT, NEW_PUMP_COOLDOWN, OLD_PUMP_COOLDOWN,
+    NEW_PUMP_HS1_THRESHOLD, OLD_PUMP_5M_THRESHOLD
 )
 
 BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
 TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
+
+# Track first seen time for cooldown
+_auto_first_seen = {}
+_auto_cooldown_tokens = set()  # tokens on cooldown
 
 def get_gmgn_ath(addr):
     """Get GMGN ATH mcap for a token"""
