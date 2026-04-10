@@ -250,6 +250,19 @@ def check_and_buy():
             continue
         
         # Skip if already open OR previously sold
+        # Check both in-memory set AND trade file
+        if addr in _sold_tokens:
+            continue
+        # Also check trade file for any closed position with this address
+        try:
+            with open(TRADES_FILE) as f:
+                for line in f:
+                    t = json.loads(line)
+                    if t.get('token_address') == addr and t.get('status') == 'closed' and t.get('action') == 'BUY':
+                        _sold_tokens.add(addr)  # Add to memory
+                        break
+        except:
+            pass
         if addr in _sold_tokens:
             continue
         already = any(t.get('token_address') == addr and not t.get('closed_at') for t in existing)
