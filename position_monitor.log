@@ -3,39 +3,3 @@ Exit Plan: TP1 +50% (sell 50%) | TP2 +200% | TP3 +500% | Trailing 30% | Stop -20
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
-[00:34:14] Monitor alive | 13 checks | 0 open | next in 5s
-[00:35:14] Monitor alive | 25 checks | 0 open | next in 5s
-[00:36:14] Monitor alive | 37 checks | 0 open | next in 5s
-[00:37:14] Monitor alive | 49 checks | 0 open | next in 5s
-[00:38:14] Monitor alive | 61 checks | 0 open | next in 5s
-[00:39:14] Monitor alive | 73 checks | 0 open | next in 5s
-[00:40:14] Monitor alive | 85 checks | 0 open | next in 5s
-[00:41:14] Monitor alive | 97 checks | 0 open | next in 5s
-[00:42:14] Monitor alive | 109 checks | 0 open | next in 5s
-[00:43:14] Monitor alive | 121 checks | 0 open | next in 5s
-[00:44:14] Monitor alive | 133 checks | 0 open | next in 5s
-[00:45:14] Monitor alive | 145 checks | 0 open | next in 5s
-[00:46:14] Monitor alive | 157 checks | 0 open | next in 5s
-[00:47:15] Monitor alive | 169 checks | 0 open | next in 5s
-[00:48:15] Monitor alive | 181 checks | 0 open | next in 5s
-[00:49:15] Monitor alive | 193 checks | 0 open | next in 5s
-[00:50:15] Monitor alive | 205 checks | 0 open | next in 5s
-[00:51:15] Monitor alive | 217 checks | 0 open | next in 5s
-[00:52:15] Monitor alive | 229 checks | 0 open | next in 5s
-[00:53:15] Monitor alive | 241 checks | 0 open | next in 5s
-[00:54:15] Monitor alive | 253 checks | 0 open | next in 5s
-[00:55:15] Monitor alive | 265 checks | 0 open | next in 5s
-[00:56:15] Monitor alive | 277 checks | 0 open | next in 5s
-[00:57:15] Monitor alive | 289 checks | 0 open | next in 5s
-[00:58:15] Monitor alive | 301 checks | 0 open | next in 5s
-[00:59:15] Monitor alive | 313 checks | 0 open | next in 5s
-[01:00:15] Monitor alive | 325 checks | 0 open | next in 5s
-[01:01:15] Monitor alive | 337 checks | 0 open | next in 5s
-[01:02:15] Monitor alive | 349 checks | 0 open | next in 5s
-[01:03:16] Monitor alive | 361 checks | 0 open | next in 5s
-[01:04:16] Monitor alive | 373 checks | 0 open | next in 5s
-[01:05:16] Monitor alive | 385 checks | 0 open | next in 5s
-[01:06:16] Monitor alive | 397 checks | 0 open | next in 5s
-[01:07:16] Monitor alive | 409 checks | 0 open | next in 5s
-[01:08:16] Monitor alive | 421 checks | 0 open | next in 5s
-[01:09:16] Monitor alive | 433 checks | 0 open | next in 5s
