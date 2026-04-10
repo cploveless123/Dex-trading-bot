@@ -97,7 +97,7 @@ def scan_token(addr):
         
         # Anti-patterns
         top10 = float(p.get('topHolderPercent', 0) or 0)
-        if top10 > 70:
+        if top10 > 50:
             return None, None  # Dumper
         
         # Blacklist check
@@ -113,8 +113,10 @@ def scan_token(addr):
         if holders > 0 and holders < 15:
             return None, None
         
-        # Liquidity (waived for bonding curve)
-        if liq < 1000 and bs_mcap == 0:
+        # Liquidity: ignore if mcap < $50K AND (new pair OR bonding curve)
+        is_new = pair_age < 5
+        is_bonding = bs_mcap > 0
+        if liq < 1000 and not (m < 50000 and (is_new or is_bonding)):
             return None, None
         
         # 5min vol
