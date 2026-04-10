@@ -30,5 +30,22 @@
       "bs_mcap": "$0 (graduated)"
     },
     "notes": "Mature token, $2.3M mcap too high for our range. Looking for launch patterns in $5K-$75K range."
+  },
+  {
+    "symbol": "ETF",
+    "address": "FR5HcckLPzRJSogmgnJaCHW6hyrQZmR2n9a4Qw1fpump",
+    "added_at": "2026-04-10T02:45:41.725086",
+    "stage": "graduated_early",
+    "mcap_at_analysis": "$108K (12.6 min old)",
+    "launch_profile": {
+      "age_at_analysis": "12.6 minutes",
+      "24h_change_at_analysis": "+157%",
+      "1h_change_at_analysis": "+157%",
+      "5m_change_at_analysis": "-7.3% (DIP)",
+      "liquidity": "$25K",
+      "5min_vol": "$11K",
+      "graduated": true
+    },
+    "notes": "Textbook dip in uptrend: 24h +157%, 5m -7.3%. Mcap $108K was over our $95K max. Looking for this pattern in our mcap range."
   }
 ]

@@ -58,11 +58,11 @@ def scan_token(addr):
     try:
         r = requests.get(f'https://api.dexscreener.com/latest/dex/tokens/{addr}', timeout=10)
         if r.status_code != 200:
-            return None
+            return None, None
         data = r.json()
         pairs = data.get('pairs', [])
         if not pairs:
-            return None
+            return None, None
         
         p = max(pairs, key=lambda x: x.get('liquidity', {}).get('usd', 0))
         m = float(p.get('fdv', 0) or p.get('marketCap', 0) or 0)
@@ -74,9 +74,9 @@ def scan_token(addr):
         
         # Basic checks
         if not is_ascii(sym):
-            return None
+            return None, None
         if sym in TICKER_BLACKLIST:
-            return None
+            return None, None
         
         # Get price changes
         chg1 = float(p.get('priceChange', {}).get('m1', 0) or 0)
@@ -98,28 +98,28 @@ def scan_token(addr):
         # Anti-patterns
         top10 = float(p.get('topHolderPercent', 0) or 0)
         if top10 > 70:
-            return None  # Dumper
+            return None, None  # Dumper
         
         # Blacklist check
         is_bl, bl_reason = check_blacklist(p_data)
         if is_bl:
-            return None
+            return None, None
         
         # Mcap range: $5K - $95K
         if m < 5000 or m > 95000:
-            return None
+            return None, None
         
         # Holders
         if holders > 0 and holders < 15:
-            return None
+            return None, None
         
         # Liquidity (waived for bonding curve)
         if liq < 1000 and bs_mcap == 0:
-            return None
+            return None, None
         
         # 5min vol
         if v5 < 1000:
-            return None
+            return None, None
         
         # Peak tracking
         if addr not in _peak_prices or m > _peak_prices[addr]:
@@ -192,10 +192,10 @@ def check_and_buy():
             timeout=10
         )
         if resp.status_code != 200:
-            return None
+            return None, None
         tokens = resp.json()[:50]
     except:
-        return None
+        return None, None
     
     # Check max positions
     try:
@@ -204,7 +204,7 @@ def check_and_buy():
         reset = SIM_RESET_TIMESTAMP
         open_pos = [t for t in existing if t.get('opened_at','') > reset and not t.get('closed_at')]
         if len(open_pos) >= MAX_OPEN_POSITIONS:
-            return None
+            return None, None
     except:
         existing = []
     

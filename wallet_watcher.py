@@ -10,21 +10,29 @@ from pathlib import Path
 WALLET_FILE = Path("/root/.openclaw/workspace/memory/wallets/watchlist.json")
 LOG_FILE = Path("/root/Dex-trading-bot/wallet_activity.log")
 
+RPC_ENDPOINT = "https://api.mainnet-beta.solana.com"
+
 def get_sol_balance(addr):
-    cmd = f'''curl -s -X POST https://api.mainnet-beta.solana.com -H "Content-Type: application/json" -d '{{"jsonrpc": "2.0", "id": 1, "method": "getBalance", "params": ["{addr}"]}}' '''
-    result = subprocess.run(cmd, shell=True, capture_output=True)
+    cmd = f'''curl -s --max-time 10 -X POST {RPC_ENDPOINT} -H "Content-Type: application/json" -d '{{"jsonrpc": "2.0", "id": 1, "method": "getBalance", "params": ["{addr}"]}}' '''
+    result = subprocess.run(cmd, shell=True, capture_output=True, timeout=15)
     try:
         data = json.loads(result.stdout)
         return data.get('result', {}).get('value', 0) / 1e9
+    except subprocess.TimeoutExpired:
+        print("Timeout getting balance")
+        return 0
     except:
         return 0
 
 def get_recent_tokens(addr, limit=3):
-    cmd = f'''curl -s -X POST https://api.mainnet-beta.solana.com -H "Content-Type: application/json" -d '{{"jsonrpc": "2.0", "id": 1, "method": "getSignaturesForAddress", "params": ["{addr}", {{"limit": {limit}}}]}}' '''
-    result = subprocess.run(cmd, shell=True, capture_output=True)
+    cmd = f'''curl -s --max-time 10 -X POST {RPC_ENDPOINT} -H "Content-Type: application/json" -d '{{"jsonrpc": "2.0", "id": 1, "method": "getSignaturesForAddress", "params": ["{addr}", {{"limit": {limit}}}]}}' '''
+    result = subprocess.run(cmd, shell=True, capture_output=True, timeout=15)
     try:
         data = json.loads(result.stdout)
         return [s['signature'] for s in data.get('result', [])]
+    except subprocess.TimeoutExpired:
+        print("Timeout getting signatures")
+        return []
     except:
         return []
 
