@@ -172,19 +172,19 @@ def scan_token(addr):
         if v5 < 1000:
             return None, None
         
-        # Peak tracking - use GMGN ATH mcap if available
-        ath_mcap, _ = get_ath_from_gmgn(addr)
-        if ath_mcap and ath_mcap > m:
-            peak = ath_mcap  # Use ATH as reference if token has pumped before
-        else:
-            if addr not in _peak_prices or m > _peak_prices[addr]:
-                _peak_prices[addr] = m
-            peak = _peak_prices.get(addr, m)
+        # Peak tracking - use LOCAL peak only (not GMGN ATH which can be parabolic pump peak)
+        # Track peak from observed prices during this session
+        if addr not in _peak_prices or m > _peak_prices[addr]:
+            _peak_prices[addr] = m
+        peak = _peak_prices.get(addr, m)
         
         if peak > 0:
             dip_pct = (peak - m) / peak * 100
         else:
             dip_pct = 0
+        
+        # Get GMGN data only for bonded status (informational), NOT for peak
+        _, _, is_bonded = get_gmgn_token_data(addr)
         
         pair_age = get_pair_age_minutes(p)
         
