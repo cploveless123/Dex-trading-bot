@@ -28,10 +28,8 @@ TP1_TRAILING_PCT = 15
 TP1_SELL_PCT = 50
 TP2_PERCENT = 150         # +150% → sell 25%
 TP2_SELL_PCT = 25
-TP3_PERCENT = 500         # +500% → sell remaining 25%
-TP3_SELL_PCT = 25
 TRAILING_STOP_PCT = 30    # 30% from peak on remaining
-STOP_LOSS_PERCENT = -30    # -20% stop
+STOP_LOSS_PERCENT = -30    # -30% stop
 
 # Slippage & Tax Correction
 SLIPPAGE_TAX_COST = 0.025   # ~2.5% per round trip
