@@ -3,3 +3,10 @@ Exit Plan: TP1 +50% (sell 50%) | TP2 +150% | TP3 +500% | Trailing 30% | Stop -20
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
+  Emy: mcap=$9,449 | gain=+0.0% | peak=$9,449 | dd=+0%
+  Emy: mcap=$9,449 | gain=+0.0% | peak=$9,449 | dd=+0%
+  Emy: mcap=$8,442 | gain=-10.7% | peak=$9,449 | dd=+0%
+  Emy: mcap=$8,442 | gain=-10.7% | peak=$9,449 | dd=+0%
+  Emy: mcap=$8,442 | gain=-10.7% | peak=$9,449 | dd=+0%
+  Emy: mcap=$8,442 | gain=-10.7% | peak=$9,449 | dd=+0%
+  Emy: mcap=$8,442 | gain=-10.7% | peak=$9,449 | dd=+0%

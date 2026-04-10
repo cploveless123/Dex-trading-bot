@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Whale Momentum Scanner v1.5
-Chris's Strategy v1.5 - Dip Detection Fix
+Whale Momentum Scanner v1.6
+Chris's Strategy v1.6 - Dip Detection Fix
 """
 
 import requests
@@ -304,7 +304,7 @@ def load_whales():
         return []
 
 if __name__ == "__main__":
-    print("🚀 Whale Momentum Scanner v1.5 - Chris's Strategy v1.5")
+    print("🚀 Whale Momentum Scanner v1.6 - Chris's Strategy v1.6")
     print(f"   Mcap: ${MIN_MCAP:,}-${MAX_MCAP:,} | Dip: 10-50% | Peak: {PEAK_WINDOW_SECONDS}s window")
     init_sold_tokens()
     check_and_buy()
