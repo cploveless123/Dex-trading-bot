@@ -1,0 +1,18 @@
+[
+  {
+    "symbol": "GENZ",
+    "address": "6EGYXQAVXkaQJurhhq1M5MJzjXpguhEG6CN35sA3qJg",
+    "added_at": "2026-04-10T01:36:48.963896",
+    "stage": "graduated",
+    "mcap_at_analysis": "$927K (10h old)",
+    "launch_profile": {
+      "age_range": "~10 hours",
+      "1h_change_at_10h": "-17.2%",
+      "5m_change_at_10h": "+1.9%",
+      "liquidity": "$87K",
+      "graduated": true,
+      "bs_mcap": "$0 (graduated from bonding curve)"
+    },
+    "notes": "Graduated from bonding curve. Was likely up huge in first hour then cooled. Mcap $927K too high for our range but shows what launch winners look like."
+  }
+]
