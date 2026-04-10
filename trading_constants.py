@@ -28,8 +28,8 @@ TP1_TRAILING_PCT = 15
 TP1_SELL_PCT = 50
 TP2_PERCENT = 150         # +150% → sell 25%
 TP2_SELL_PCT = 25
-TP3_PERCENT = 0          # +500% removed in v1.7
-TP3_SELL_PCT = 0         # removed in v1.7
+TP3_PERCENT = 500         # +500% → sell remaining 25%
+TP3_SELL_PCT = 25
 TRAILING_STOP_PCT = 30    # 30% from peak on remaining
 STOP_LOSS_PERCENT = -30    # -30% stop
 
@@ -50,7 +50,7 @@ EXIT_PLAN_TEXT = f"""🎯 Exit Plan (tax-adjusted):
 # Dip / Pullback Detection
 # New (<5 min): dip 10-50%, h1 >+50%, 5min >-10%
 # Older (>5 min): dip 10-50%, 24hr >+25%, h1 >-39%, 5min >-39%
-DIP_MIN = 10
+DIP_MIN = 15
 DIP_MAX = 50
 PEAK_WINDOW_SECONDS = 60   # Peak = highest price in first 60 seconds
 
