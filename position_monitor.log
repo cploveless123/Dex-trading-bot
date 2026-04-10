@@ -245,3 +245,21 @@ Checking every 5s
   MIME: mcap=$14,469 | gain=-16.1% | peak=$17,455 | dd=+0%
   MIME: mcap=$14,469 | gain=-16.1% | peak=$17,455 | dd=+0%
   MIME: mcap=$14,469 | gain=-16.1% | peak=$17,455 | dd=+0%
+  MIME: mcap=$14,469 | gain=-16.1% | peak=$17,455 | dd=+0%
+  MIME: mcap=$14,572 | gain=-15.5% | peak=$17,455 | dd=+0%
+  MIME: mcap=$14,572 | gain=-15.5% | peak=$17,455 | dd=+0%
+  MIME: mcap=$14,572 | gain=-15.5% | peak=$17,455 | dd=+0%
+  MIME: mcap=$14,572 | gain=-15.5% | peak=$17,455 | dd=+0%
+  MIME: mcap=$14,572 | gain=-15.5% | peak=$17,455 | dd=+0%
+  MIME: mcap=$13,538 | gain=-21.5% | peak=$17,455 | dd=+0%
+[19:30:34] Monitor alive | 205 checks | 1 open | next in 5s
+  MIME: mcap=$13,538 | gain=-21.5% | peak=$17,455 | dd=+0%
+  MIME: mcap=$13,538 | gain=-21.5% | peak=$17,455 | dd=+0%
+  MIME: mcap=$13,538 | gain=-21.5% | peak=$17,455 | dd=+0%
+  MIME: mcap=$13,538 | gain=-21.5% | peak=$17,455 | dd=+0%
+  MIME: mcap=$13,538 | gain=-21.5% | peak=$17,455 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 MIME STOP LOSS @ $10,478 (-39.3%)
+[19:31:35] Monitor alive | 217 checks | 0 open | next in 5s
+[19:32:35] Monitor alive | 229 checks | 0 open | next in 5s
+[19:33:35] Monitor alive | 241 checks | 0 open | next in 5s
