@@ -33,6 +33,9 @@ WHALE_DB = Path("/root/Dex-trading-bot/whales/whale_db.json")
 # Track peak price for each token
 _peak_prices = {}
 
+# Track sold tokens - NEVER re-buy these
+_sold_tokens = set()
+
 def get_pair_age_minutes(p):
     created = p.get('pairCreatedAt', 0)
     if not created:
@@ -246,7 +249,9 @@ def check_and_buy():
         if not addr:
             continue
         
-        # Skip if already open
+        # Skip if already open OR previously sold
+        if addr in _sold_tokens:
+            continue
         already = any(t.get('token_address') == addr and not t.get('closed_at') for t in existing)
         if already:
             continue
@@ -287,6 +292,17 @@ def check_and_buy():
     
     return bought
 
+def load_sold_tokens():
+    """Load tokens we've sold from trade history"""
+    try:
+        with open(TRADES_FILE) as f:
+            for line in f:
+                t = json.loads(line)
+                if t.get('token_address') and t.get('status') == 'closed' and t.get('action') == 'BUY':
+                    _sold_tokens.add(t['token_address'])
+    except:
+        pass
+
 def load_whales():
     try:
         with open(WHALE_DB) as f:
@@ -298,8 +314,9 @@ def load_whales():
 def main():
     print("🚀 Whale Momentum Scanner v3 - Chris's Strategy")
     print(f"   Mcap: $5K-$95K | Dip: 11-39% | Age-based rules")
+    load_sold_tokens()
     whales = load_whales()
-    print(f"   Loaded {len(whales)} whales")
+    print(f"   Loaded {len(whales)} whales, {len(_sold_tokens)} sold (blacklisted)")
     print("Starting scans...")
     
     while True:
