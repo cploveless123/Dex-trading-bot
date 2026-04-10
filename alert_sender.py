@@ -210,18 +210,18 @@ def get_status():
         return "💰 Balance: 1.0 SOL | No trades yet"
     
     with open(TRADES_FILE) as f:
-        lines = [json.loads(l) for l in f.readlines() if l.strip()]
+        all_trades = [json.loads(l) for l in f.readlines() if l.strip()]
     
-    # Treat old trades (status=None) as closed
-    closed_pnl = sum(t.get('pnl_sol', 0) for t in lines if t.get('status') in ['closed', 'open_partial', None])
-    # Full open positions: 0.05 locked each
-    open_full = len([t for t in lines if t.get('status') == 'open'])
-    # Partial exits: remaining % locked (~26% with current TP1_SELL_PCT)
-    open_partial = len([t for t in lines if t.get('status') == 'open_partial'])
+    # Only count trades since reset
+    reset_trades = [t for t in all_trades if t.get('opened_at', '') > SIM_RESET_TIMESTAMP]
+    closed_pnl = sum(t.get('pnl_sol', 0) for t in reset_trades if t.get('status') in ['closed', 'open_partial', None])
+    open_full = len([t for t in reset_trades if t.get('status') == 'open'])
+    open_partial = len([t for t in reset_trades if t.get('status') == 'open_partial'])
     locked = open_full * POSITION_SIZE + open_partial * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100)
     balance = CHRIS_STARTING_BALANCE + closed_pnl - locked
-    wins = len([t for t in lines if t.get('pnl_sol', 0) > 0])
-    return f"💰 Balance: {balance:.4f} SOL\n📈 {len(lines)} trades | {wins}W"
+    wins = len([t for t in reset_trades if t.get('pnl_sol', 0) > 0])
+    losses = len([t for t in reset_trades if t.get('pnl_sol', 0) < 0])
+    return f"💰 Balance: {balance:.4f} SOL\n📈 {len(reset_trades)} trades | {wins}W/{losses}L"
 
 def main():
     print("📱 Alert sender started")
