@@ -63,3 +63,10 @@ Checking every 5s
   elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
   elondog: mcap=$12,383 | gain=+121.4% | peak=$13,739 | dd=-45%
   elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
+  elondog: mcap=$12,383 | gain=+121.4% | peak=$13,739 | dd=-45%
+  elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
+[22:59:49] Monitor alive | 25 checks | 1 open | next in 5s
+  elondog: mcap=$12,383 | gain=+121.4% | peak=$13,739 | dd=-45%
+  elondog: mcap=$12,383 | gain=+41.0% | peak=$13,739 | dd=+0%
+  elondog: mcap=$12,345 | gain=+120.8% | peak=$13,739 | dd=-45%
+  elondog: mcap=$12,345 | gain=+40.6% | peak=$13,739 | dd=+0%
