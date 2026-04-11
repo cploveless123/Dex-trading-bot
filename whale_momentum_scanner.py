@@ -163,19 +163,17 @@ def scan_token(addr):
             return None, None
         
         # Mcap range: $5K - $95K
-        if m < 5000 or m > 95000:
+        if m < 3000 or m > 95000:
             return None, None
         
         # Holders
         if holders > 0 and holders < 15:
             return None, None
         
-        # Liquidity: ignore if mcap < $50K AND (new pair OR bonding curve)
-        # (deferred until after we calculate pair_age)
+        # Liquidity: ignore if mcap < $50K (still building)
         
-        # 5min vol
-        if v5 < 1000:
-            return None, None
+        # 5min vol: ignore for fresh tokens (<20min) since volume builds up
+        # (pair_age check deferred until after pair_age is defined below)
         
         # Peak tracking - use LOCAL peak only (not GMGN ATH which can be parabolic pump peak)
         # Track peak from observed prices during this session
@@ -203,29 +201,25 @@ def scan_token(addr):
         if liq < 1000 and m >= 50000:
             return None, None
         
-        # STRATEGY v5: Fresh launches (<10min) with momentum + pullback
-        # Focus: local dip from peak, not 5m direction
+        # 5min vol: ignore for fresh tokens (<20min) since volume builds up
+        if pair_age >= 20 and v5 < 1000:
+            return None, None
         
-        if pair_age > 30:
-            return None, f"B: age {pair_age:.1f}min >30min (too old)"
+        # STRATEGY v5: Fresh launches (<60min) with proven momentum + pullback
+        # Momentum = h1 or 24h showing big move, dip = pullback from peak
         
-        if chg60 < 50:
-            return None, f"B: h1 {chg60:+.1f}% <+50% (no momentum)"
+        if pair_age > 60:
+            return None, f"B: age {pair_age:.1f}min >60min (too old)"
         
-        if chg5 > 30:
-            return None, f"B: 5m +{chg5:.1f}% >+30% (too parabolic)"
+        # Need proven momentum (h1 or 24h > +50%)
+        if chg60 < 50 and chg24 < 50:
+            return None, f"B: h1 {chg60:+.1f}% 24h {chg24:+.1f}% (no momentum)"
         
-        # Dip from local peak: 15-35% (tightened range)
+        # Dip from local peak: 15-35%
         if dip_pct < 15:
             return None, f"B: dip {dip_pct:.1f}% <15% (not enough pullback)"
         if dip_pct > 35:
             return None, f"B: dip {dip_pct:.1f}% >35% (too deep)"
-        
-        # ATH divergence check - reject if >45% from ATH
-        if ath_mcap and ath_mcap > 0:
-            ath_div = (ath_mcap - m) / ath_mcap * 100
-            if ath_div > 45:
-                return None, f"B: ATH div {ath_div:.0f}% >45% (from ATH)"
             
             # BS ratio for older: pump.fun tokens BS=0 is OK (bonding curve), raydium needs BS > 0.9
             if dex == 'raydium' and bs < 0.9:
