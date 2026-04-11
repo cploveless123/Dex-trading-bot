@@ -1962,3 +1962,54 @@ Checking every 5s
 [10:59:43] Monitor alive | 1957 checks | 1 open | next in 5s
 [STOP_LOSS] Alert sent
 🔴 NOBIKO STOP LOSS @ $2,416 (-96.9%)
+[11:00:44] Monitor alive | 1969 checks | 0 open | next in 5s
+[11:01:44] Monitor alive | 1981 checks | 0 open | next in 5s
+[11:02:44] Monitor alive | 1993 checks | 0 open | next in 5s
+[11:03:44] Monitor alive | 2005 checks | 0 open | next in 5s
+[11:04:44] Monitor alive | 2017 checks | 0 open | next in 5s
+[11:05:44] Monitor alive | 2029 checks | 0 open | next in 5s
+[11:06:44] Monitor alive | 2041 checks | 0 open | next in 5s
+[11:07:45] Monitor alive | 2053 checks | 0 open | next in 5s
+[11:08:45] Monitor alive | 2065 checks | 0 open | next in 5s
+[11:09:45] Monitor alive | 2077 checks | 0 open | next in 5s
+  MUSK: mcap=$21,629 | gain=+0.0% | peak=$21,629 | dd=+0%
+  MUSK: mcap=$21,629 | gain=+0.0% | peak=$21,629 | dd=+0%
+  MUSK: mcap=$21,629 | gain=+0.0% | peak=$21,629 | dd=+0%
+[11:10:45] Monitor alive | 2089 checks | 1 open | next in 5s
+  MUSK: mcap=$21,629 | gain=+0.0% | peak=$21,629 | dd=+0%
+  MUSK: mcap=$21,629 | gain=+0.0% | peak=$21,629 | dd=+0%
+  MUSK: mcap=$23,608 | gain=+9.2% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$23,608 | gain=+9.2% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$23,608 | gain=+9.2% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$23,608 | gain=+9.2% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$23,608 | gain=+9.2% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$23,274 | gain=+7.6% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$23,274 | gain=+7.6% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$23,274 | gain=+7.6% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$23,274 | gain=+7.6% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$23,274 | gain=+7.6% | peak=$23,608 | dd=+0%
+[11:11:46] Monitor alive | 2101 checks | 1 open | next in 5s
+  MUSK: mcap=$23,274 | gain=+7.6% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$22,034 | gain=+1.9% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$22,034 | gain=+1.9% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$22,034 | gain=+1.9% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$22,034 | gain=+1.9% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$22,034 | gain=+1.9% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$22,034 | gain=+1.9% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$18,097 | gain=-16.3% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$18,097 | gain=-16.3% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$18,097 | gain=-16.3% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$18,097 | gain=-16.3% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$18,097 | gain=-16.3% | peak=$23,608 | dd=+0%
+[11:12:47] Monitor alive | 2113 checks | 1 open | next in 5s
+  MUSK: mcap=$18,097 | gain=-16.3% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$19,411 | gain=-10.2% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$19,411 | gain=-10.2% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$19,411 | gain=-10.2% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$19,411 | gain=-10.2% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$19,411 | gain=-10.2% | peak=$23,608 | dd=+0%
+  MUSK: mcap=$19,411 | gain=-10.2% | peak=$23,608 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 MUSK STOP LOSS @ $15,856 (-26.7%)
+[11:13:48] Monitor alive | 2125 checks | 0 open | next in 5s
+[11:14:48] Monitor alive | 2137 checks | 0 open | next in 5s
