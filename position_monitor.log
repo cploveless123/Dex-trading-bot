@@ -100,3 +100,96 @@ Error: local variable 'gains_pct' referenced before assignment
 [16:49:54] Monitor alive | 205 checks | 0 open | next in 5s
 [16:50:54] Monitor alive | 217 checks | 0 open | next in 5s
 [16:51:54] Monitor alive | 229 checks | 0 open | next in 5s
+  SCD: mcap=$11,422 | gain=+0.0% | peak=$11,422 | dd=+0%
+  SCD: mcap=$11,422 | gain=+0.0% | peak=$11,422 | dd=+0%
+  SCD: mcap=$11,422 | gain=+0.0% | peak=$11,422 | dd=+0%
+  SCD: mcap=$11,422 | gain=+0.0% | peak=$11,422 | dd=+0%
+  SCD: mcap=$11,422 | gain=+0.0% | peak=$11,422 | dd=+0%
+  SCD: mcap=$14,354 | gain=+25.7% | peak=$14,354 | dd=+0%
+[16:52:55] Monitor alive | 241 checks | 1 open | next in 5s
+  SCD: mcap=$14,354 | gain=+25.7% | peak=$14,354 | dd=+0%
+  SCD: mcap=$14,354 | gain=+25.7% | peak=$14,354 | dd=+0%
+  SCD: mcap=$14,354 | gain=+25.7% | peak=$14,354 | dd=+0%
+  SCD: mcap=$14,354 | gain=+25.7% | peak=$14,354 | dd=+0%
+  SCD: mcap=$14,354 | gain=+25.7% | peak=$14,354 | dd=+0%
+[TP1_HOLD] Alert sent
+🚀 SCD TP1 HIT - HOLDING @ $15,681 (+37.3%)
+  SCD: mcap=$15,681 | gain=+37.3% | peak=$15,681 | dd=+0%
+  SCD: mcap=$15,681 | gain=+37.3% | peak=$15,681 | dd=+0%
+  SCD: mcap=$15,681 | gain=+37.3% | peak=$15,681 | dd=+0%
+  SCD: mcap=$15,681 | gain=+37.3% | peak=$15,681 | dd=+0%
+  SCD: mcap=$14,595 | gain=+27.8% | peak=$15,681 | dd=+7%
+  SCD: mcap=$14,595 | gain=+27.8% | peak=$15,681 | dd=+7%
+[16:53:56] Monitor alive | 253 checks | 1 open | next in 5s
+  SCD: mcap=$14,595 | gain=+27.8% | peak=$15,681 | dd=+7%
+  SCD: mcap=$14,595 | gain=+27.8% | peak=$15,681 | dd=+7%
+  SCD: mcap=$14,595 | gain=+27.8% | peak=$15,681 | dd=+7%
+  SCD: mcap=$14,595 | gain=+27.8% | peak=$15,681 | dd=+7%
+  SCD: mcap=$13,609 | gain=+19.1% | peak=$15,681 | dd=+13%
+  SCD: mcap=$13,609 | gain=+19.1% | peak=$15,681 | dd=+13%
+  SCD: mcap=$13,609 | gain=+19.1% | peak=$15,681 | dd=+13%
+  SCD: mcap=$13,609 | gain=+19.1% | peak=$15,681 | dd=+13%
+  SCD: mcap=$13,609 | gain=+19.1% | peak=$15,681 | dd=+13%
+  SCD: mcap=$13,609 | gain=+19.1% | peak=$15,681 | dd=+13%
+  SCD: mcap=$17,399 | gain=+52.3% | peak=$17,399 | dd=-11%
+  SCD: mcap=$17,399 | gain=+52.3% | peak=$17,399 | dd=-11%
+[16:54:57] Monitor alive | 265 checks | 1 open | next in 5s
+  SCD: mcap=$17,399 | gain=+52.3% | peak=$17,399 | dd=-11%
+  SCD: mcap=$17,399 | gain=+52.3% | peak=$17,399 | dd=-11%
+  SCD: mcap=$17,399 | gain=+52.3% | peak=$17,399 | dd=-11%
+  SCD: mcap=$17,399 | gain=+52.3% | peak=$17,399 | dd=-11%
+  SCD: mcap=$19,143 | gain=+67.6% | peak=$19,143 | dd=-22%
+  SCD: mcap=$19,143 | gain=+67.6% | peak=$19,143 | dd=-22%
+  SCD: mcap=$19,143 | gain=+67.6% | peak=$19,143 | dd=-22%
+  SCD: mcap=$19,143 | gain=+67.6% | peak=$19,143 | dd=-22%
+  SCD: mcap=$19,143 | gain=+67.6% | peak=$19,143 | dd=-22%
+  SCD: mcap=$19,143 | gain=+67.6% | peak=$19,143 | dd=-22%
+  SCD: mcap=$18,853 | gain=+65.1% | peak=$19,143 | dd=-20%
+  SCD: mcap=$18,853 | gain=+65.1% | peak=$19,143 | dd=-20%
+[16:55:58] Monitor alive | 277 checks | 1 open | next in 5s
+  SCD: mcap=$18,853 | gain=+65.1% | peak=$19,143 | dd=-20%
+  SCD: mcap=$18,853 | gain=+65.1% | peak=$19,143 | dd=-20%
+  SCD: mcap=$18,853 | gain=+65.1% | peak=$19,143 | dd=-20%
+  SCD: mcap=$18,853 | gain=+65.1% | peak=$19,143 | dd=-20%
+  SCD: mcap=$22,235 | gain=+94.7% | peak=$22,235 | dd=-42%
+  SCD: mcap=$22,235 | gain=+94.7% | peak=$22,235 | dd=-42%
+  SCD: mcap=$22,235 | gain=+94.7% | peak=$22,235 | dd=-42%
+  SCD: mcap=$22,235 | gain=+94.7% | peak=$22,235 | dd=-42%
+  SCD: mcap=$22,235 | gain=+94.7% | peak=$22,235 | dd=-42%
+  SCD: mcap=$22,235 | gain=+94.7% | peak=$22,235 | dd=-42%
+[TP2] Alert sent
+✅ SCD TP2 HIT @ $28,119 (+146%)
+  SCD: mcap=$28,119 | gain=+146.2% | peak=$28,119 | dd=-79%
+[16:56:59] Monitor alive | 289 checks | 0 open | next in 5s
+  SCD: mcap=$28,119 | gain=+146.2% | peak=$28,119 | dd=-79%
+  SCD: mcap=$28,119 | gain=+146.2% | peak=$28,119 | dd=-79%
+  SCD: mcap=$28,119 | gain=+146.2% | peak=$28,119 | dd=-79%
+  SCD: mcap=$28,119 | gain=+146.2% | peak=$28,119 | dd=-79%
+  SCD: mcap=$29,316 | gain=+156.7% | peak=$29,316 | dd=-87%
+  SCD: mcap=$29,316 | gain=+156.7% | peak=$29,316 | dd=-87%
+  SCD: mcap=$29,316 | gain=+156.7% | peak=$29,316 | dd=-87%
+  SCD: mcap=$29,316 | gain=+156.7% | peak=$29,316 | dd=-87%
+  SCD: mcap=$29,316 | gain=+156.7% | peak=$29,316 | dd=-87%
+  SCD: mcap=$29,316 | gain=+156.7% | peak=$29,316 | dd=-87%
+  SCD: mcap=$30,598 | gain=+167.9% | peak=$30,598 | dd=-95%
+  SCD: mcap=$30,598 | gain=+167.9% | peak=$30,598 | dd=-95%
+[16:58:00] Monitor alive | 301 checks | 0 open | next in 5s
+  SCD: mcap=$30,598 | gain=+167.9% | peak=$30,598 | dd=-95%
+  SCD: mcap=$30,598 | gain=+167.9% | peak=$30,598 | dd=-95%
+  SCD: mcap=$30,598 | gain=+167.9% | peak=$30,598 | dd=-95%
+  SCD: mcap=$30,598 | gain=+167.9% | peak=$30,598 | dd=-95%
+  SCD: mcap=$31,077 | gain=+172.1% | peak=$31,077 | dd=-98%
+  SCD: mcap=$31,077 | gain=+172.1% | peak=$31,077 | dd=-98%
+  SCD: mcap=$31,077 | gain=+172.1% | peak=$31,077 | dd=-98%
+  SCD: mcap=$31,077 | gain=+172.1% | peak=$31,077 | dd=-98%
+  SCD: mcap=$31,077 | gain=+172.1% | peak=$31,077 | dd=-98%
+  SCD: mcap=$31,077 | gain=+172.1% | peak=$31,077 | dd=-98%
+  SCD: mcap=$30,995 | gain=+171.4% | peak=$31,077 | dd=-98%
+  SCD: mcap=$30,995 | gain=+171.4% | peak=$31,077 | dd=-98%
+[16:59:01] Monitor alive | 313 checks | 0 open | next in 5s
+  SCD: mcap=$30,995 | gain=+171.4% | peak=$31,077 | dd=-98%
+  SCD: mcap=$30,995 | gain=+171.4% | peak=$31,077 | dd=-98%
+  SCD: mcap=$30,995 | gain=+171.4% | peak=$31,077 | dd=-98%
+  SCD: mcap=$30,995 | gain=+171.4% | peak=$31,077 | dd=-98%
+[TRAILING_STOP] Alert sent
+✅ SCD TRAILING STOP @ $23,877 (23% drop from peak)
