@@ -5,3 +5,16 @@ Checking every 5s
 [STARTUP] Alert sent
   monitoring: mcap=$7,098 | gain=+9.0% | peak=$7,098 | dd=+0%
   monitoring: mcap=$7,098 | gain=+9.0% | peak=$7,098 | dd=+0%
+  monitoring: mcap=$6,351 | gain=-2.5% | peak=$7,098 | dd=+0%
+  monitoring: mcap=$6,351 | gain=-2.5% | peak=$7,098 | dd=+0%
+  monitoring: mcap=$6,351 | gain=-2.5% | peak=$7,098 | dd=+0%
+  monitoring: mcap=$6,351 | gain=-2.5% | peak=$7,098 | dd=+0%
+  monitoring: mcap=$6,351 | gain=-2.5% | peak=$7,098 | dd=+0%
+  monitoring: mcap=$6,341 | gain=-2.6% | peak=$7,098 | dd=+0%
+  monitoring: mcap=$6,341 | gain=-2.6% | peak=$7,098 | dd=+0%
+  monitoring: mcap=$6,341 | gain=-2.6% | peak=$7,098 | dd=+0%
+  FEP: mcap=$5,080 | gain=+0.0% | peak=$5,080 | dd=+0%
+  monitoring: mcap=$6,341 | gain=-2.6% | peak=$7,098 | dd=+0%
+  FEP: mcap=$5,080 | gain=+0.0% | peak=$5,080 | dd=+0%
+  monitoring: mcap=$6,341 | gain=-2.6% | peak=$7,098 | dd=+0%
+  FEP: mcap=$5,080 | gain=+0.0% | peak=$5,080 | dd=+0%
