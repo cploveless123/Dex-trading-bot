@@ -218,6 +218,8 @@ def scan_token(addr):
             return None, None
         
         # Holders
+        if holders == 0 or top10 == 0:
+            return None, f"B: holders={holders} top10={top10}% (bot farm)"
         if holders > 0 and holders < 15:
             return None, None
         

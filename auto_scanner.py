@@ -140,6 +140,8 @@ def check_should_buy(addr, p, sym, dex, m, v, v5, bs, buys, sells, holders, pair
         return False, f"5min vol ${v5:,.0f} < $1000"
     
     # === HOLDERS FILTER ===
+    if holders == 0 or top10 == 0:
+        return False, f"holders={holders} top10={top10}% (bot farm)"
     if holders > 0 and holders < 15:
         return False, f"holders {holders} < 15"
     
