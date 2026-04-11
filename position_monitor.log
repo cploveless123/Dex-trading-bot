@@ -2795,3 +2795,197 @@ Checking every 5s
 [11:44:44] Monitor alive | 2485 checks | 1 open | next in 5s
   DICKTATOR: mcap=$11,226 | gain=+24.9% | peak=$11,226 | dd=+0%
   DICKTATOR: mcap=$11,226 | gain=+24.9% | peak=$11,226 | dd=+0%
+  DICKTATOR: mcap=$10,665 | gain=+18.7% | peak=$11,226 | dd=+0%
+  DICKTATOR: mcap=$10,665 | gain=+18.7% | peak=$11,226 | dd=+0%
+  DICKTATOR: mcap=$10,665 | gain=+18.7% | peak=$11,226 | dd=+0%
+  DICKTATOR: mcap=$10,665 | gain=+18.7% | peak=$11,226 | dd=+0%
+  DICKTATOR: mcap=$10,665 | gain=+18.7% | peak=$11,226 | dd=+0%
+  DICKTATOR: mcap=$10,665 | gain=+18.7% | peak=$11,226 | dd=+0%
+  DICKTATOR: mcap=$9,721 | gain=+8.2% | peak=$11,226 | dd=+0%
+  DICKTATOR: mcap=$9,721 | gain=+8.2% | peak=$11,226 | dd=+0%
+  DICKTATOR: mcap=$9,721 | gain=+8.2% | peak=$11,226 | dd=+0%
+  DICKTATOR: mcap=$9,721 | gain=+8.2% | peak=$11,226 | dd=+0%
+[11:45:45] Monitor alive | 2497 checks | 1 open | next in 5s
+  DICKTATOR: mcap=$9,721 | gain=+8.2% | peak=$11,226 | dd=+0%
+  DICKTATOR: mcap=$9,721 | gain=+8.2% | peak=$11,226 | dd=+0%
+[TP1] Alert sent
+✅ DICKTATOR TP1 HIT @ $12,470 (+38.7%)
+  DICKTATOR: mcap=$12,470 | gain=+38.7% | peak=$12,470 | dd=+0%
+  DICKTATOR: mcap=$12,470 | gain=+38.7% | peak=$12,470 | dd=+0%
+  DICKTATOR: mcap=$12,470 | gain=+38.7% | peak=$12,470 | dd=+0%
+  DICKTATOR: mcap=$12,470 | gain=+38.7% | peak=$12,470 | dd=+0%
+  DICKTATOR: mcap=$12,470 | gain=+38.7% | peak=$12,470 | dd=+0%
+  DICKTATOR: mcap=$12,407 | gain=+38.0% | peak=$12,470 | dd=+1%
+  DICKTATOR: mcap=$12,407 | gain=+38.0% | peak=$12,470 | dd=+1%
+  DICKTATOR: mcap=$12,407 | gain=+38.0% | peak=$12,470 | dd=+1%
+  DICKTATOR: mcap=$12,407 | gain=+38.0% | peak=$12,470 | dd=+1%
+[11:46:46] Monitor alive | 2509 checks | 0 open | next in 5s
+  DICKTATOR: mcap=$12,407 | gain=+38.0% | peak=$12,470 | dd=+1%
+  DICKTATOR: mcap=$12,407 | gain=+38.0% | peak=$12,470 | dd=+1%
+  DICKTATOR: mcap=$12,496 | gain=+39.0% | peak=$12,496 | dd=-0%
+  DICKTATOR: mcap=$12,496 | gain=+39.0% | peak=$12,496 | dd=-0%
+  DICKTATOR: mcap=$12,496 | gain=+39.0% | peak=$12,496 | dd=-0%
+  DICKTATOR: mcap=$12,496 | gain=+39.0% | peak=$12,496 | dd=-0%
+  DICKTATOR: mcap=$12,496 | gain=+39.0% | peak=$12,496 | dd=-0%
+  DICKTATOR: mcap=$12,496 | gain=+39.0% | peak=$12,496 | dd=-0%
+  DICKTATOR: mcap=$12,197 | gain=+35.7% | peak=$12,496 | dd=+2%
+  DICKTATOR: mcap=$12,197 | gain=+35.7% | peak=$12,496 | dd=+2%
+  DICKTATOR: mcap=$12,197 | gain=+35.7% | peak=$12,496 | dd=+2%
+  DICKTATOR: mcap=$12,197 | gain=+35.7% | peak=$12,496 | dd=+2%
+[11:47:47] Monitor alive | 2521 checks | 0 open | next in 5s
+  DICKTATOR: mcap=$12,197 | gain=+35.7% | peak=$12,496 | dd=+2%
+  DICKTATOR: mcap=$12,197 | gain=+35.7% | peak=$12,496 | dd=+2%
+  DICKTATOR: mcap=$11,600 | gain=+29.1% | peak=$12,496 | dd=+7%
+  DICKTATOR: mcap=$11,600 | gain=+29.1% | peak=$12,496 | dd=+7%
+  DICKTATOR: mcap=$11,600 | gain=+29.1% | peak=$12,496 | dd=+7%
+  DICKTATOR: mcap=$11,600 | gain=+29.1% | peak=$12,496 | dd=+7%
+  DICKTATOR: mcap=$11,600 | gain=+29.1% | peak=$12,496 | dd=+7%
+  DICKTATOR: mcap=$11,599 | gain=+29.0% | peak=$12,496 | dd=+7%
+  DICKTATOR: mcap=$11,599 | gain=+29.0% | peak=$12,496 | dd=+7%
+  DICKTATOR: mcap=$11,599 | gain=+29.0% | peak=$12,496 | dd=+7%
+  DICKTATOR: mcap=$11,599 | gain=+29.0% | peak=$12,496 | dd=+7%
+  DICKTATOR: mcap=$11,599 | gain=+29.0% | peak=$12,496 | dd=+7%
+[11:48:48] Monitor alive | 2533 checks | 0 open | next in 5s
+  DICKTATOR: mcap=$11,599 | gain=+29.0% | peak=$12,496 | dd=+7%
+  DICKTATOR: mcap=$11,837 | gain=+31.7% | peak=$12,496 | dd=+5%
+  DICKTATOR: mcap=$11,837 | gain=+31.7% | peak=$12,496 | dd=+5%
+  DICKTATOR: mcap=$11,837 | gain=+31.7% | peak=$12,496 | dd=+5%
+  DICKTATOR: mcap=$11,837 | gain=+31.7% | peak=$12,496 | dd=+5%
+  DICKTATOR: mcap=$11,837 | gain=+31.7% | peak=$12,496 | dd=+5%
+  DICKTATOR: mcap=$11,837 | gain=+31.7% | peak=$12,496 | dd=+5%
+  DICKTATOR: mcap=$12,141 | gain=+35.1% | peak=$12,496 | dd=+3%
+  DICKTATOR: mcap=$12,141 | gain=+35.1% | peak=$12,496 | dd=+3%
+  DICKTATOR: mcap=$12,141 | gain=+35.1% | peak=$12,496 | dd=+3%
+  DICKTATOR: mcap=$12,141 | gain=+35.1% | peak=$12,496 | dd=+3%
+  DICKTATOR: mcap=$12,141 | gain=+35.1% | peak=$12,496 | dd=+3%
+[11:49:49] Monitor alive | 2545 checks | 0 open | next in 5s
+  DICKTATOR: mcap=$12,141 | gain=+35.1% | peak=$12,496 | dd=+3%
+  DICKTATOR: mcap=$12,296 | gain=+36.8% | peak=$12,496 | dd=+1%
+  DICKTATOR: mcap=$12,296 | gain=+36.8% | peak=$12,496 | dd=+1%
+  DICKTATOR: mcap=$12,296 | gain=+36.8% | peak=$12,496 | dd=+1%
+  DICKTATOR: mcap=$12,296 | gain=+36.8% | peak=$12,496 | dd=+1%
+  DICKTATOR: mcap=$12,296 | gain=+36.8% | peak=$12,496 | dd=+1%
+  DICKTATOR: mcap=$12,296 | gain=+36.8% | peak=$12,496 | dd=+1%
+  DICKTATOR: mcap=$12,296 | gain=+36.8% | peak=$12,496 | dd=+1%
+  DICKTATOR: mcap=$12,296 | gain=+36.8% | peak=$12,496 | dd=+1%
+  DICKTATOR: mcap=$12,296 | gain=+36.8% | peak=$12,496 | dd=+1%
+  DICKTATOR: mcap=$12,296 | gain=+36.8% | peak=$12,496 | dd=+1%
+  DICKTATOR: mcap=$12,296 | gain=+36.8% | peak=$12,496 | dd=+1%
+[11:50:50] Monitor alive | 2557 checks | 0 open | next in 5s
+  DICKTATOR: mcap=$12,296 | gain=+36.8% | peak=$12,496 | dd=+1%
+  DICKTATOR: mcap=$13,373 | gain=+48.8% | peak=$13,373 | dd=-7%
+  DICKTATOR: mcap=$13,373 | gain=+48.8% | peak=$13,373 | dd=-7%
+  DICKTATOR: mcap=$13,373 | gain=+48.8% | peak=$13,373 | dd=-7%
+  DICKTATOR: mcap=$13,373 | gain=+48.8% | peak=$13,373 | dd=-7%
+  DICKTATOR: mcap=$13,373 | gain=+48.8% | peak=$13,373 | dd=-7%
+  DICKTATOR: mcap=$13,373 | gain=+48.8% | peak=$13,373 | dd=-7%
+  DICKTATOR: mcap=$13,827 | gain=+53.8% | peak=$13,827 | dd=-11%
+  DICKTATOR: mcap=$13,827 | gain=+53.8% | peak=$13,827 | dd=-11%
+  DICKTATOR: mcap=$13,827 | gain=+53.8% | peak=$13,827 | dd=-11%
+  DICKTATOR: mcap=$13,827 | gain=+53.8% | peak=$13,827 | dd=-11%
+  DICKTATOR: mcap=$13,827 | gain=+53.8% | peak=$13,827 | dd=-11%
+[11:51:51] Monitor alive | 2569 checks | 0 open | next in 5s
+  DICKTATOR: mcap=$13,827 | gain=+53.8% | peak=$13,827 | dd=-11%
+  DICKTATOR: mcap=$13,847 | gain=+54.1% | peak=$13,847 | dd=-11%
+  DICKTATOR: mcap=$13,847 | gain=+54.1% | peak=$13,847 | dd=-11%
+  DICKTATOR: mcap=$13,847 | gain=+54.1% | peak=$13,847 | dd=-11%
+  DICKTATOR: mcap=$13,847 | gain=+54.1% | peak=$13,847 | dd=-11%
+  DICKTATOR: mcap=$13,847 | gain=+54.1% | peak=$13,847 | dd=-11%
+  DICKTATOR: mcap=$13,847 | gain=+54.1% | peak=$13,847 | dd=-11%
+  DICKTATOR: mcap=$14,031 | gain=+56.1% | peak=$14,031 | dd=-13%
+  DICKTATOR: mcap=$14,031 | gain=+56.1% | peak=$14,031 | dd=-13%
+  DICKTATOR: mcap=$14,031 | gain=+56.1% | peak=$14,031 | dd=-13%
+  DICKTATOR: mcap=$14,031 | gain=+56.1% | peak=$14,031 | dd=-13%
+  DICKTATOR: mcap=$14,031 | gain=+56.1% | peak=$14,031 | dd=-13%
+[11:52:52] Monitor alive | 2581 checks | 0 open | next in 5s
+  DICKTATOR: mcap=$14,031 | gain=+56.1% | peak=$14,031 | dd=-13%
+  DICKTATOR: mcap=$13,367 | gain=+48.7% | peak=$14,031 | dd=-7%
+  DICKTATOR: mcap=$13,367 | gain=+48.7% | peak=$14,031 | dd=-7%
+  DICKTATOR: mcap=$13,367 | gain=+48.7% | peak=$14,031 | dd=-7%
+  DICKTATOR: mcap=$13,367 | gain=+48.7% | peak=$14,031 | dd=-7%
+  DICKTATOR: mcap=$13,367 | gain=+48.7% | peak=$14,031 | dd=-7%
+  DICKTATOR: mcap=$13,367 | gain=+48.7% | peak=$14,031 | dd=-7%
+  DICKTATOR: mcap=$13,525 | gain=+50.5% | peak=$14,031 | dd=-8%
+  DICKTATOR: mcap=$13,525 | gain=+50.5% | peak=$14,031 | dd=-8%
+  DICKTATOR: mcap=$13,525 | gain=+50.5% | peak=$14,031 | dd=-8%
+  DICKTATOR: mcap=$13,525 | gain=+50.5% | peak=$14,031 | dd=-8%
+  DICKTATOR: mcap=$13,525 | gain=+50.5% | peak=$14,031 | dd=-8%
+[11:53:53] Monitor alive | 2593 checks | 0 open | next in 5s
+  DICKTATOR: mcap=$13,525 | gain=+50.5% | peak=$14,031 | dd=-8%
+  DICKTATOR: mcap=$14,060 | gain=+56.4% | peak=$14,060 | dd=-13%
+  DICKTATOR: mcap=$14,060 | gain=+56.4% | peak=$14,060 | dd=-13%
+  DICKTATOR: mcap=$14,060 | gain=+56.4% | peak=$14,060 | dd=-13%
+  DICKTATOR: mcap=$14,060 | gain=+56.4% | peak=$14,060 | dd=-13%
+  DICKTATOR: mcap=$14,060 | gain=+56.4% | peak=$14,060 | dd=-13%
+  DICKTATOR: mcap=$14,060 | gain=+56.4% | peak=$14,060 | dd=-13%
+  DICKTATOR: mcap=$14,037 | gain=+56.2% | peak=$14,060 | dd=-13%
+  DICKTATOR: mcap=$14,037 | gain=+56.2% | peak=$14,060 | dd=-13%
+  DICKTATOR: mcap=$14,037 | gain=+56.2% | peak=$14,060 | dd=-13%
+  DICKTATOR: mcap=$14,037 | gain=+56.2% | peak=$14,060 | dd=-13%
+  DICKTATOR: mcap=$14,037 | gain=+56.2% | peak=$14,060 | dd=-13%
+[11:54:54] Monitor alive | 2605 checks | 0 open | next in 5s
+  DICKTATOR: mcap=$14,037 | gain=+56.2% | peak=$14,060 | dd=-13%
+  DICKTATOR: mcap=$15,492 | gain=+72.4% | peak=$15,492 | dd=-24%
+  DICKTATOR: mcap=$15,492 | gain=+72.4% | peak=$15,492 | dd=-24%
+  DICKTATOR: mcap=$15,492 | gain=+72.4% | peak=$15,492 | dd=-24%
+  DICKTATOR: mcap=$15,492 | gain=+72.4% | peak=$15,492 | dd=-24%
+  DICKTATOR: mcap=$15,492 | gain=+72.4% | peak=$15,492 | dd=-24%
+  DICKTATOR: mcap=$15,492 | gain=+72.4% | peak=$15,492 | dd=-24%
+  DICKTATOR: mcap=$15,493 | gain=+72.4% | peak=$15,493 | dd=-24%
+  DICKTATOR: mcap=$15,493 | gain=+72.4% | peak=$15,493 | dd=-24%
+  DICKTATOR: mcap=$15,493 | gain=+72.4% | peak=$15,493 | dd=-24%
+  DICKTATOR: mcap=$15,493 | gain=+72.4% | peak=$15,493 | dd=-24%
+  DICKTATOR: mcap=$15,493 | gain=+72.4% | peak=$15,493 | dd=-24%
+[11:55:54] Monitor alive | 2617 checks | 0 open | next in 5s
+  DICKTATOR: mcap=$15,493 | gain=+72.4% | peak=$15,493 | dd=-24%
+  DICKTATOR: mcap=$15,305 | gain=+70.3% | peak=$15,493 | dd=-23%
+  DICKTATOR: mcap=$15,305 | gain=+70.3% | peak=$15,493 | dd=-23%
+  DICKTATOR: mcap=$15,305 | gain=+70.3% | peak=$15,493 | dd=-23%
+  DICKTATOR: mcap=$15,305 | gain=+70.3% | peak=$15,493 | dd=-23%
+  DICKTATOR: mcap=$15,305 | gain=+70.3% | peak=$15,493 | dd=-23%
+  DICKTATOR: mcap=$15,305 | gain=+70.3% | peak=$15,493 | dd=-23%
+  DICKTATOR: mcap=$15,276 | gain=+70.0% | peak=$15,493 | dd=-23%
+  DICKTATOR: mcap=$15,276 | gain=+70.0% | peak=$15,493 | dd=-23%
+  DICKTATOR: mcap=$15,276 | gain=+70.0% | peak=$15,493 | dd=-23%
+  DICKTATOR: mcap=$15,276 | gain=+70.0% | peak=$15,493 | dd=-23%
+  DICKTATOR: mcap=$15,276 | gain=+70.0% | peak=$15,493 | dd=-23%
+[11:56:55] Monitor alive | 2629 checks | 0 open | next in 5s
+  DICKTATOR: mcap=$15,122 | gain=+68.2% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,122 | gain=+68.2% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,122 | gain=+68.2% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,122 | gain=+68.2% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,122 | gain=+68.2% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,122 | gain=+68.2% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,079 | gain=+67.8% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,079 | gain=+67.8% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,079 | gain=+67.8% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,079 | gain=+67.8% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,079 | gain=+67.8% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,079 | gain=+67.8% | peak=$15,493 | dd=-21%
+[11:57:56] Monitor alive | 2641 checks | 0 open | next in 5s
+  DICKTATOR: mcap=$15,079 | gain=+67.8% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,079 | gain=+67.8% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,079 | gain=+67.8% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,079 | gain=+67.8% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,079 | gain=+67.8% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$15,079 | gain=+67.8% | peak=$15,493 | dd=-21%
+  DICKTATOR: mcap=$13,905 | gain=+54.7% | peak=$15,493 | dd=-12%
+  DICKTATOR: mcap=$13,905 | gain=+54.7% | peak=$15,493 | dd=-12%
+  DICKTATOR: mcap=$13,905 | gain=+54.7% | peak=$15,493 | dd=-12%
+  DICKTATOR: mcap=$13,905 | gain=+54.7% | peak=$15,493 | dd=-12%
+  DICKTATOR: mcap=$13,905 | gain=+54.7% | peak=$15,493 | dd=-12%
+  DICKTATOR: mcap=$13,905 | gain=+54.7% | peak=$15,493 | dd=-12%
+[11:58:57] Monitor alive | 2653 checks | 0 open | next in 5s
+  DICKTATOR: mcap=$14,434 | gain=+60.6% | peak=$15,493 | dd=-16%
+  DICKTATOR: mcap=$14,434 | gain=+60.6% | peak=$15,493 | dd=-16%
+  DICKTATOR: mcap=$14,434 | gain=+60.6% | peak=$15,493 | dd=-16%
+  DICKTATOR: mcap=$14,434 | gain=+60.6% | peak=$15,493 | dd=-16%
+  DICKTATOR: mcap=$14,434 | gain=+60.6% | peak=$15,493 | dd=-16%
+  DICKTATOR: mcap=$14,434 | gain=+60.6% | peak=$15,493 | dd=-16%
+  DICKTATOR: mcap=$14,376 | gain=+59.9% | peak=$15,493 | dd=-15%
+  DICKTATOR: mcap=$14,376 | gain=+59.9% | peak=$15,493 | dd=-15%
+  DICKTATOR: mcap=$14,376 | gain=+59.9% | peak=$15,493 | dd=-15%
+  DICKTATOR: mcap=$14,376 | gain=+59.9% | peak=$15,493 | dd=-15%
+  DICKTATOR: mcap=$14,376 | gain=+59.9% | peak=$15,493 | dd=-15%
+  DICKTATOR: mcap=$14,376 | gain=+59.9% | peak=$15,493 | dd=-15%
+[11:59:58] Monitor alive | 2665 checks | 0 open | next in 5s
