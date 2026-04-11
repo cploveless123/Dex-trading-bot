@@ -195,7 +195,7 @@ def scan_token(addr):
             dip_pct = 0
         
         # Get GMGN data only for bonded status (informational), NOT for peak
-        _, _, is_bonded = get_gmgn_token_data(addr)
+        ath_mcap, _, is_bonded = get_gmgn_token_data(addr)
         
         pair_age = get_pair_age_minutes(p)
         
@@ -203,28 +203,29 @@ def scan_token(addr):
         if liq < 1000 and m >= 50000:
             return None, None
         
-        # STRATEGY: Buy the dip, not the pump
-        # Key filter: 5m must be < +15% (reject parabolic pumps)
-        # For pump.fun: h1 can be wild, focus on 5m and dip%
+        # STRATEGY v5: Fresh launches (<10min) with momentum + pullback
+        # Focus: local dip from peak, not 5m direction
         
-        if pair_age < 5:
-            # NEW PAIRS (<5 min): 5m < +15%, dip 15-50%
-            if chg5 > 15:
-                return None, f"B: 5m +{chg5:.1f}% (parabolic pump)"
-            if dip_pct < DIP_MIN:
-                return None, f"B: dip <{DIP_MIN}% (no pullback)"
-            if dip_pct > DIP_MAX:
-                return None, f"B: dip >{DIP_MAX}% (too deep)"
-        else:
-            # OLDER PAIRS (>5 min): 5m < +15%, dip 15-50%, h1 not deeply red
-            if chg5 > 15:
-                return None, f"B: 5m +{chg5:.1f}% (parabolic pump)"
-            if chg60 < -75:
-                return None, f"B: h1 {chg60:+.1f}% (coin is dying)"
-            if dip_pct < DIP_MIN:
-                return None, f"B: dip <{DIP_MIN}% (no pullback)"
-            if dip_pct > DIP_MAX:
-                return None, f"B: dip >{DIP_MAX}% (too deep)"
+        if pair_age > 30:
+            return None, f"B: age {pair_age:.1f}min >30min (too old)"
+        
+        if chg60 < 50:
+            return None, f"B: h1 {chg60:+.1f}% <+50% (no momentum)"
+        
+        if chg5 > 30:
+            return None, f"B: 5m +{chg5:.1f}% >+30% (too parabolic)"
+        
+        # Dip from local peak: 15-35% (tightened range)
+        if dip_pct < 15:
+            return None, f"B: dip {dip_pct:.1f}% <15% (not enough pullback)"
+        if dip_pct > 35:
+            return None, f"B: dip {dip_pct:.1f}% >35% (too deep)"
+        
+        # ATH divergence check - reject if >45% from ATH
+        if ath_mcap and ath_mcap > 0:
+            ath_div = (ath_mcap - m) / ath_mcap * 100
+            if ath_div > 45:
+                return None, f"B: ATH div {ath_div:.0f}% >45% (from ATH)"
             
             # BS ratio for older: pump.fun tokens BS=0 is OK (bonding curve), raydium needs BS > 0.9
             if dex == 'raydium' and bs < 0.9:
@@ -364,7 +365,7 @@ def load_whales():
         return []
 
 def main():
-    print("🚀 Whale Momentum Scanner v4 - Dip in Momentum")
+    print("🚀 Whale Momentum Scanner v5 - Dip in Momentum")
     print(f"   Mcap: $5K-$95K | Dip: 10-50% | Age-based rules")
     init_sold_tokens()  # Load ALL closed positions
     whales = load_whales()
