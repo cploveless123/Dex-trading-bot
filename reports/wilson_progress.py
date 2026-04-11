@@ -16,8 +16,8 @@ with open(TRADES_FILE) as f:
 reset_ts = SIM_RESET_TIMESTAMP
 reset_trades = [t for t in trades if t.get('opened_at', '') > reset_ts]
 closed_all = [t for t in reset_trades if t.get('closed_at')]
-open_full = [t for t in reset_trades if t.get('status') == 'open']
-open_partial = [t for t in reset_trades if t.get('status') == 'open_partial']
+open_full = [t for t in reset_trades if t.get('status') == 'open' and not t.get('closed_at')]
+open_partial = [t for t in reset_trades if t.get('status') == 'open_partial' and not t.get('closed_at')]
 open_pos = open_full + open_partial
 
 closed_pnl = sum(t.get('pnl_sol', 0) for t in closed_all)

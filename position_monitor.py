@@ -336,6 +336,7 @@ def check_positions():
                 if drawdown_pct >= TRAILING_STOP_PCT:
                     t['trailing_stopped'] = True
                     t['fully_exited'] = True
+                    t['status'] = 'closed'
                     t['exit_reason'] = 'TRAILING_STOP'
                     t['closed_at'] = datetime.utcnow().isoformat()
                     remaining_pct = 100 - TP1_SELL_PCT - TP2_SELL_PCT - TP3_SELL_PCT - TP4_SELL_PCT - TP5_SELL_PCT
