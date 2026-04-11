@@ -158,13 +158,21 @@ def check_should_buy(addr, p, sym, dex, m, v, v5, bs, buys, sells, holders, pair
     if v5 > 0 and v5 < 1000:
         return False, f"5min vol ${v5:,.0f} < $1000"
     
-    # === HOLDERS FILTER (use GMGN if DexScreener shows 0) ===
+    # === HOLDERS/LIQUIDITY: Use GMGN as primary, DexScreener as backup ===
     gmgn_data = get_gmgn_data(addr)
-    if gmgn_data:
-        if holders == 0 and gmgn_data.get('holder_count', 0) > 0:
-            holders = gmgn_data['holder_count']
-        if top10 == 0 and gmgn_data.get('top_10_holder_rate', 0) > 0:
-            top10 = gmgn_data['top_10_holder_rate']
+    holders = gmgn_data.get('holder_count', 0) if gmgn_data else 0
+    top10 = gmgn_data.get('top_10_holder_rate', 0) if gmgn_data else 0
+    gmgn_liq = gmgn_data.get('liquidity', 0) if gmgn_data else 0
+    
+    # Fall back to DexScreener if GMGN doesn't have it
+    if holders == 0:
+        holders = int(p.get('holders', 0) or 0)
+    if top10 == 0:
+        top10 = float(p.get('topHolderPercent', 0) or 0)
+    if gmgn_liq == 0:
+        liq = float(p.get('liquidity', {}).get('usd', 0) or 0)
+    else:
+        liq = gmgn_liq
     
     if holders == 0 or top10 == 0:
         return False, f"holders={holders} top10={top10}% (bot farm)"

@@ -219,49 +219,37 @@ def scan_token(addr):
         bs_mcap = float(p.get('bondingCurve', {}).get('mcap', 0) or 0)
         bs = bs_mcap / max(liq, 1) if bs_mcap > 0 else (m / max(liq, 1) if liq > 0 else 1)
         
-        # Holders
-        holders = int(p.get('holders', 0) or 0)
-        
-        # Get extra data from p
-        p_data = p
-        
-        # Anti-patterns
-        top10 = float(p.get('topHolderPercent', 0) or 0)
-        if top10 > 50:
-            return None, None  # Dumper
-        
-        # Blacklist check
-        is_bl, bl_reason = check_blacklist(p_data)
-        if is_bl:
-            return None, None
-        
-        # Mcap range: $5K - $95K
-        if m < MIN_MCAP or m > MAX_MCAP:
-            return None, None
-        
-        # Holders
-        if holders == 0 or top10 == 0:
-            return None, f"B: holders={holders} top10={top10}% (bot farm)"
-        if holders > 0 and holders < 15:
-            return None, None
-        
-        # Liquidity: ignore if mcap < $50K (still building)
-        
-        # 5min vol: ignore for fresh tokens (<20min) since volume builds up
-        # (pair_age check deferred until after pair_age is defined below)
-        
-        # Get GMGN data for ATH divergence check + holder data (more accurate)
+        # Get GMGN data FIRST (primary source)
         gmgn_data = get_gmgn_token_data(addr)
         ath_mcap = gmgn_data.get('ath_mcap') if gmgn_data else None
         is_bonded = gmgn_data.get('is_bonded', False) if gmgn_data else False
         gmgn_holders = gmgn_data.get('holder_count', 0) if gmgn_data else 0
         gmgn_top10 = gmgn_data.get('top_10_holder_rate', 0) if gmgn_data else 0
+        gmgn_liq = gmgn_data.get('liquidity', 0) if gmgn_data else 0
         
-        # Use GMGN holder data if DexScreener shows 0/None
-        if holders == 0 and gmgn_holders > 0:
-            holders = gmgn_holders
-        if top10 == 0 and gmgn_top10 > 0:
-            top10 = gmgn_top10
+        # Use GMGN holders/liquidity as primary, DexScreener as backup
+        holders = gmgn_holders if gmgn_holders > 0 else int(p.get('holders', 0) or 0)
+        top10 = gmgn_top10 if gmgn_top10 > 0 else float(p.get('topHolderPercent', 0) or 0)
+        liq = gmgn_liq if gmgn_liq > 0 else float(p.get('liquidity', {}).get('usd', 0) or 0)
+        
+        # Anti-patterns
+        if top10 > 50:
+            return None, None  # Dumper
+        
+        # Blacklist check
+        is_bl, bl_reason = check_blacklist(p)
+        if is_bl:
+            return None, None
+        
+        # Mcap range
+        if m < MIN_MCAP or m > MAX_MCAP:
+            return None, None
+        
+        # Holders check (bot farm / min holders)
+        if holders == 0 or top10 == 0:
+            return None, f"B: holders={holders} top10={top10}% (bot farm)"
+        if holders > 0 and holders < 15:
+            return None, None
         
         # Track first seen time for peak window
         import time
