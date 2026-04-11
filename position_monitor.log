@@ -193,3 +193,196 @@ Error: local variable 'gains_pct' referenced before assignment
   SCD: mcap=$30,995 | gain=+171.4% | peak=$31,077 | dd=-98%
 [TRAILING_STOP] Alert sent
 ✅ SCD TRAILING STOP @ $23,877 (23% drop from peak)
+[17:00:02] Monitor alive | 325 checks | 0 open | next in 5s
+[17:01:02] Monitor alive | 337 checks | 0 open | next in 5s
+[17:02:02] Monitor alive | 349 checks | 0 open | next in 5s
+[17:03:02] Monitor alive | 361 checks | 0 open | next in 5s
+  Kyupiin: mcap=$12,001 | gain=+0.0% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$12,001 | gain=+0.0% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$12,001 | gain=+0.0% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$12,001 | gain=+0.0% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$12,001 | gain=+0.0% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$10,993 | gain=-8.4% | peak=$12,001 | dd=+0%
+[17:04:03] Monitor alive | 373 checks | 1 open | next in 5s
+  Kyupiin: mcap=$10,993 | gain=-8.4% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$10,993 | gain=-8.4% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$10,993 | gain=-8.4% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$10,993 | gain=-8.4% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$10,993 | gain=-8.4% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$10,951 | gain=-8.8% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$10,951 | gain=-8.8% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$10,951 | gain=-8.8% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$10,951 | gain=-8.8% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$10,951 | gain=-8.8% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$10,951 | gain=-8.8% | peak=$12,001 | dd=+0%
+  Kyupiin: mcap=$11,833 | gain=-1.4% | peak=$12,001 | dd=+0%
+[17:05:04] Monitor alive | 385 checks | 1 open | next in 5s
+  Kyupiin: mcap=$11,833 | gain=-1.4% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$14,081 | gain=+0.0% | peak=$14,081 | dd=+0%
+  Kyupiin: mcap=$11,833 | gain=-1.4% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$14,081 | gain=+0.0% | peak=$14,081 | dd=+0%
+  Kyupiin: mcap=$11,833 | gain=-1.4% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$14,081 | gain=+0.0% | peak=$14,081 | dd=+0%
+  Kyupiin: mcap=$11,833 | gain=-1.4% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$14,081 | gain=+0.0% | peak=$14,081 | dd=+0%
+  Kyupiin: mcap=$11,898 | gain=-0.9% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$16,107 | gain=+14.4% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,898 | gain=-0.9% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$16,107 | gain=+14.4% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,898 | gain=-0.9% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$16,107 | gain=+14.4% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,898 | gain=-0.9% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$16,107 | gain=+14.4% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,898 | gain=-0.9% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$16,107 | gain=+14.4% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,898 | gain=-0.9% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$16,107 | gain=+14.4% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,959 | gain=-0.3% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,993 | gain=+13.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,959 | gain=-0.3% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,993 | gain=+13.6% | peak=$16,107 | dd=+0%
+[17:06:06] Monitor alive | 397 checks | 2 open | next in 5s
+  Kyupiin: mcap=$11,959 | gain=-0.3% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,993 | gain=+13.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,959 | gain=-0.3% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,993 | gain=+13.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,959 | gain=-0.3% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,993 | gain=+13.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,959 | gain=-0.3% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,993 | gain=+13.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,959 | gain=-0.3% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,991 | gain=+13.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,959 | gain=-0.3% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,991 | gain=+13.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,959 | gain=-0.3% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,991 | gain=+13.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,959 | gain=-0.3% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,991 | gain=+13.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,959 | gain=-0.3% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,991 | gain=+13.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,959 | gain=-0.3% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,991 | gain=+13.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,890 | gain=-0.9% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,880 | gain=+12.8% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,890 | gain=-0.9% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,880 | gain=+12.8% | peak=$16,107 | dd=+0%
+[17:07:07] Monitor alive | 409 checks | 2 open | next in 5s
+  Kyupiin: mcap=$11,890 | gain=-0.9% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,880 | gain=+12.8% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,890 | gain=-0.9% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,880 | gain=+12.8% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,890 | gain=-0.9% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,880 | gain=+12.8% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,890 | gain=-0.9% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,880 | gain=+12.8% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,028 | gain=+6.7% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,028 | gain=+6.7% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,028 | gain=+6.7% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,028 | gain=+6.7% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,028 | gain=+6.7% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$14,475 | gain=+2.8% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$14,475 | gain=+2.8% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$14,475 | gain=+2.8% | peak=$16,107 | dd=+0%
+[17:08:09] Monitor alive | 421 checks | 2 open | next in 5s
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$14,475 | gain=+2.8% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$14,475 | gain=+2.8% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$14,475 | gain=+2.8% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,293 | gain=+8.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,293 | gain=+8.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,293 | gain=+8.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,293 | gain=+8.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,293 | gain=+8.6% | peak=$16,107 | dd=+0%
+  Kyupiin: mcap=$11,442 | gain=-4.7% | peak=$12,001 | dd=+0%
+  trenchguy: mcap=$15,293 | gain=+8.6% | peak=$16,107 | dd=+0%
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
+Error: local variable 'gains_pct' referenced before assignment
