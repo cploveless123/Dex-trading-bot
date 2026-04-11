@@ -3554,3 +3554,31 @@ Checking every 5s
   MARIMO: mcap=$10,785 | gain=-5.1% | peak=$11,363 | dd=+0%
   MARIMO: mcap=$10,785 | gain=-5.1% | peak=$11,363 | dd=+0%
   MARIMO: mcap=$10,180 | gain=-10.4% | peak=$11,363 | dd=+0%
+  MARIMO: mcap=$10,180 | gain=-10.4% | peak=$11,363 | dd=+0%
+  MARIMO: mcap=$10,180 | gain=-10.4% | peak=$11,363 | dd=+0%
+  MARIMO: mcap=$10,180 | gain=-10.4% | peak=$11,363 | dd=+0%
+  MARIMO: mcap=$10,180 | gain=-10.4% | peak=$11,363 | dd=+0%
+  MARIMO: mcap=$10,180 | gain=-10.4% | peak=$11,363 | dd=+0%
+  MARIMO: mcap=$10,180 | gain=-10.4% | peak=$11,363 | dd=+0%
+  MARIMO: mcap=$10,180 | gain=-10.4% | peak=$11,363 | dd=+0%
+  MARIMO: mcap=$10,180 | gain=-10.4% | peak=$11,363 | dd=+0%
+[13:30:41] Monitor alive | 3745 checks | 1 open | next in 5s
+  MARIMO: mcap=$10,180 | gain=-10.4% | peak=$11,363 | dd=+0%
+  MARIMO: mcap=$10,180 | gain=-10.4% | peak=$11,363 | dd=+0%
+  MARIMO: mcap=$10,180 | gain=-10.4% | peak=$11,363 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 MARIMO STOP LOSS @ $8,490 (-25.3%)
+[13:31:41] Monitor alive | 3757 checks | 0 open | next in 5s
+[13:32:41] Monitor alive | 3769 checks | 0 open | next in 5s
+[13:33:41] Monitor alive | 3781 checks | 0 open | next in 5s
+[13:34:42] Monitor alive | 3793 checks | 0 open | next in 5s
+[13:35:42] Monitor alive | 3805 checks | 0 open | next in 5s
+[13:36:42] Monitor alive | 3817 checks | 0 open | next in 5s
+[13:37:42] Monitor alive | 3829 checks | 0 open | next in 5s
+[13:38:42] Monitor alive | 3841 checks | 0 open | next in 5s
+[13:39:42] Monitor alive | 3853 checks | 0 open | next in 5s
+[13:40:42] Monitor alive | 3865 checks | 0 open | next in 5s
+[13:41:42] Monitor alive | 3877 checks | 0 open | next in 5s
+[13:42:42] Monitor alive | 3889 checks | 0 open | next in 5s
+[13:43:42] Monitor alive | 3901 checks | 0 open | next in 5s
+[13:44:42] Monitor alive | 3913 checks | 0 open | next in 5s
