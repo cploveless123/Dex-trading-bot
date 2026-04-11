@@ -4709,3 +4709,32 @@ Checking every 5s
   elondog: mcap=$9,101 | gain=+3.6% | peak=$13,739 | dd=+0%
   Skibidi: mcap=$145,416 | gain=+93.8% | peak=$145,416 | dd=+0%
   Oke: mcap=$10,386 | gain=+32.7% | peak=$12,260 | dd=+0%
+  elondog: mcap=$9,101 | gain=+62.7% | peak=$13,739 | dd=-7%
+  elondog: mcap=$9,101 | gain=+3.6% | peak=$13,739 | dd=+0%
+  Skibidi: mcap=$145,416 | gain=+93.8% | peak=$145,416 | dd=+0%
+  Oke: mcap=$10,386 | gain=+32.7% | peak=$12,260 | dd=+0%
+  elondog: mcap=$9,101 | gain=+62.7% | peak=$13,739 | dd=-7%
+  elondog: mcap=$9,101 | gain=+3.6% | peak=$13,739 | dd=+0%
+  Skibidi: mcap=$145,416 | gain=+93.8% | peak=$145,416 | dd=+0%
+  Oke: mcap=$10,386 | gain=+32.7% | peak=$12,260 | dd=+0%
+  elondog: mcap=$8,938 | gain=+59.8% | peak=$13,739 | dd=-5%
+  elondog: mcap=$8,938 | gain=+1.8% | peak=$13,739 | dd=+0%
+  Skibidi: mcap=$145,416 | gain=+93.8% | peak=$145,416 | dd=+0%
+  Oke: mcap=$10,386 | gain=+32.7% | peak=$12,260 | dd=+0%
+  elondog: mcap=$8,938 | gain=+59.8% | peak=$13,739 | dd=-5%
+  elondog: mcap=$8,938 | gain=+1.8% | peak=$13,739 | dd=+0%
+  Skibidi: mcap=$141,104 | gain=+88.0% | peak=$145,416 | dd=+0%
+  Oke: mcap=$10,386 | gain=+32.7% | peak=$12,260 | dd=+0%
+  elondog: mcap=$8,938 | gain=+59.8% | peak=$13,739 | dd=-5%
+  elondog: mcap=$8,938 | gain=+1.8% | peak=$13,739 | dd=+0%
+  Skibidi: mcap=$141,104 | gain=+88.0% | peak=$145,416 | dd=+0%
+  Oke: mcap=$10,386 | gain=+32.7% | peak=$12,260 | dd=+0%
+  elondog: mcap=$8,938 | gain=+59.8% | peak=$13,739 | dd=-5%
+  elondog: mcap=$8,938 | gain=+1.8% | peak=$13,739 | dd=+0%
+  Skibidi: mcap=$141,104 | gain=+88.0% | peak=$145,416 | dd=+0%
+  Oke: mcap=$10,423 | gain=+33.2% | peak=$12,260 | dd=+0%
+[00:29:51] Monitor alive | 912 checks | 3 open | next in 5s
+  elondog: mcap=$8,938 | gain=+59.8% | peak=$13,739 | dd=-5%
+  elondog: mcap=$8,938 | gain=+1.8% | peak=$13,739 | dd=+0%
+  Skibidi: mcap=$141,104 | gain=+88.0% | peak=$145,416 | dd=+0%
+  Oke: mcap=$10,423 | gain=+33.2% | peak=$12,260 | dd=+0%
