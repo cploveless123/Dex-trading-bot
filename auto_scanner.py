@@ -42,6 +42,49 @@ TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
 _auto_first_seen = {}
 _auto_cooldown_tokens = set()  # tokens on cooldown
 
+# Track price history for falling knife detection
+_auto_price_history = {}
+
+def is_falling_knife(addr, current_price):
+    """
+    Detect falling knife: price dropping 3+ consecutive scans.
+    Returns (True, reason) if falling knife, (False, None) if stable/recovering.
+    """
+    now = time.time()
+    
+    # Initialize tracking for this token
+    if addr not in _auto_price_history:
+        _auto_price_history[addr] = []
+    
+    # Add current price to history
+    _auto_price_history[addr].append((now, current_price))
+    
+    # Keep only last 10 observations (~10 min of history at 60s scans)
+    _auto_price_history[addr] = _auto_price_history[addr][-10:]
+    
+    history = _auto_price_history[addr]
+    
+    # Need at least 2 data points to detect trend
+    if len(history) < 2:
+        return False, None
+    
+    # Check consecutive drops
+    drops = 0
+    for i in range(len(history) - 1, 0, -1):
+        prev_time, prev_price = history[i - 1]
+        curr_time, curr_price = history[i]
+        if now - prev_time > 120:  # Skip if old data point
+            continue
+        if curr_price < prev_price:
+            drops += 1
+        else:
+            break  # Found a rise, reset count
+    
+    if drops >= 3:
+        return True, f"Falling knife: {drops} consecutive drops"
+    
+    return False, None
+
 def get_gmgn_ath(addr):
     """Get GMGN ATH mcap for a token"""
     try:
@@ -220,39 +263,6 @@ def check_and_buy():
             if not should_buy:
                 continue
             
-            # === FALLING KNIFE GUARD: If chg5 < 0, wait 60s and recheck ===
-            # This prevents buying during a dip that keeps falling
-            chg5_now = float(p.get('priceChange', {}).get('m5', 0) or 0)
-            if chg5_now < 0:
-                print(f"⏳ {sym}: chg5 {chg5_now:+.1f}% (negative) - monitoring 60s for stabilization...")
-                time.sleep(60)
-                # Re-fetch price after delay
-                try:
-                    r2 = requests.get(f"https://api.dexscreener.com/latest/dex/tokens/{addr}", timeout=10)
-                    if r2.status_code == 200:
-                        data2 = r2.json()
-                        pairs2 = data2.get('pairs', [])
-                        if pairs2:
-                            p2 = max(pairs2, key=lambda x: x.get('liquidity', {}).get('usd', 0))
-                            chg5_after = float(p2.get('priceChange', {}).get('m5', 0) or 0)
-                            m2 = p2.get('fdv', 0) or p2.get('marketCap', 0) or 0
-                            print(f"   → After 60s: chg5 {chg5_after:+.1f}%, mcap ${m2:,.0f}")
-                            # If price dropped further (more negative), skip - falling knife
-                            if chg5_after < chg5_now - 5:  # got worse by >5%
-                                print(f"   ❌ SKIP: Still falling ({chg5_after:+.1f}%), not a bounce")
-                                continue
-                            # Update to new price data
-                            m = m2
-                            v5 = p2.get('volume', {}).get('m5', 0) or 0
-                            v = p2.get('volume', {}).get('h24', 0) or 0
-                            buys = p2.get('txns', {}).get('h24', {}).get('buys', 0) or 0
-                            sells = p2.get('txns', {}).get('h24', {}).get('sells', 0) or 1
-                            bs = buys / sells if sells > 0 else 0
-                            holders = p2.get('holders', 0) or 0
-                            p = p2
-                except:
-                    pass
-            
             # Check if already have this token
             try:
                 with open(TRADES_FILE) as f:
@@ -283,6 +293,12 @@ def check_and_buy():
                 for t in existing
             )
             if already_exited:
+                continue
+            
+            # === FALLING KNIFE CHECK ===
+            is_falling, fk_reason = is_falling_knife(addr, m)
+            if is_falling:
+                print(f"   ❌ REJECT: {fk_reason} - skipping")
                 continue
             
             # === BUY ===

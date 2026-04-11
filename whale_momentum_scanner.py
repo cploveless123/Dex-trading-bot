@@ -41,6 +41,57 @@ _token_first_seen = {}
 # Track sold tokens - NEVER re-buy these (permanent blacklist)
 _sold_tokens = set()
 
+# Track price history for falling knife detection
+# Key = token address, Value = list of (timestamp, price) tuples
+_price_history = {}
+
+# Track consecutive drops - if price drops 3+ times in a row, it's a falling knife
+_consecutive_drops = {}
+
+def is_falling_knife(addr, current_price):
+    """
+    Detect falling knife: price dropping 3+ consecutive scans.
+    Returns (True, reason) if falling knife, (False, None) if stable/recovering.
+    """
+    now = time.time()
+    
+    # Initialize tracking for this token
+    if addr not in _price_history:
+        _price_history[addr] = []
+        _consecutive_drops[addr] = 0
+    
+    # Add current price to history
+    _price_history[addr].append((now, current_price))
+    
+    # Keep only last 10 observations (scans ~15s apart, so ~2.5 min of history)
+    _price_history[addr] = _price_history[addr][-10:]
+    
+    history = _price_history[addr]
+    
+    # Need at least 2 data points to detect trend
+    if len(history) < 2:
+        return False, None
+    
+    # Check consecutive drops
+    drops = 0
+    for i in range(len(history) - 1, 0, -1):
+        prev_time, prev_price = history[i - 1]
+        curr_time, curr_price = history[i]
+        # Only count if within last 3 observations
+        if now - prev_time > 60:  # Skip if old data point
+            continue
+        if curr_price < prev_price:
+            drops += 1
+        else:
+            break  # Found a rise, reset count
+    
+    _consecutive_drops[addr] = drops
+    
+    if drops >= 3:
+        return True, f"Falling knife: {drops} consecutive drops"
+    
+    return False, None
+
 def init_sold_tokens():
     """Load ALL closed positions from trade history - NEVER re-buy these"""
     try:
@@ -326,6 +377,13 @@ def check_and_buy():
         # Log the scan
         bonded_tag = " [BONDED]" if result.get('is_bonded') else ""
         print(f"✅ CANDIDATE: {result['token']}{bonded_tag} | Mcap ${result['mcap']:,.0f} | Age {result['age']:.1f}min | Dip {result['dip_pct']:.1f}% | h1 {result['chg60']:+.1f}% | 5m {result['chg5']:+.1f}%")
+        
+        # === FALLING KNIFE CHECK ===
+        # Track price across scans - reject if 3+ consecutive drops
+        is_falling, fk_reason = is_falling_knife(addr, result['mcap'])
+        if is_falling:
+            print(f"   ❌ REJECT: {fk_reason} - skipping")
+            continue
         
         # Execute buy (simulated)
         trade = {
