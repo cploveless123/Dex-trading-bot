@@ -67,8 +67,8 @@ def save_peak_cache(cache):
     with open(PEAK_CACHE_FILE, 'w') as f:
         json.dump(cache, f)
 
-def get_mcap_from_dex(ca):
-    """Fetch current mcap from DexScreener"""
+def get_mcap_and_volume(ca):
+    """Fetch current mcap and 5min volume from DexScreener"""
     try:
         r = requests.get(
             f"https://api.dexscreener.com/latest/dex/tokens/{ca}",
@@ -80,10 +80,12 @@ def get_mcap_from_dex(ca):
             if data.get('pairs'):
                 for p in data['pairs']:
                     if p.get('chainId') == 'solana' and p.get('marketCap'):
-                        return float(p['marketCap'])
+                        mcap = float(p['marketCap'])
+                        v5 = p.get('volume', {}).get('m5', 0) or 0
+                        return mcap, v5
     except:
         pass
-    return None
+    return None, None
 
 def check_positions():
     """Check all open positions for TP/stop triggers"""
@@ -113,10 +115,39 @@ def check_positions():
 
         cache = peak_cache[ca_key]
 
-        # Update peak with current mcap
-        mcap = get_mcap_from_dex(ca)
+        # Update peak with current mcap + volume check
+        mcap, v5 = get_mcap_and_volume(ca)
         if mcap is None:
             print(f"  {sym}: error fetching mcap")
+            continue
+
+        # === LOW VOLUME EXIT: v5 < $600 → sell ===
+        if v5 > 0 and v5 < 600:
+            pnl = POSITION_SIZE * (gains_pct / 100)
+            t['status'] = 'closed'
+            t['fully_exited'] = True
+            t['exit_reason'] = 'LOW_VOLUME'
+            t['closed_at'] = datetime.utcnow().isoformat()
+            t['pnl_sol'] = pnl
+            t['pnl_pct'] = gains_pct
+            updated = True
+            if ca_key in peak_cache:
+                del peak_cache[ca_key]
+            msg = f"""💨 LOW VOLUME EXIT | {datetime.utcnow().strftime('%H:%M UTC')}
+━━━━━━━━━━━━━━━
+💰 {sym}
+📍 Entry MC: ${int(entry):,}
+📊 Current MC: ${int(mcap):,} ({gains_pct:+.1f}%)
+💵 5min vol: ${v5:,.0f} (< $600)
+💰 Balance: {get_balance()} SOL
+💰 PnL: {pnl:.4f} SOL
+
+🔗 https://dexscreener.com/solana/{ca}
+🥧 https://pump.fun/{ca}
+
+📋 Dumping volume = dump risk"""
+            send_alert(msg, "LOW_VOLUME")
+            print(f"💨 {sym} LOW VOLUME EXIT @ ${mcap:,.0f} (v5=${v5:,.0f})")
             continue
 
         if mcap > cache['peak_mcap']:
