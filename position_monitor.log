@@ -339,3 +339,110 @@ Checking every 5s
 [TRAILING_STOP] Alert sent
 ✅ CATFISH TRAILING STOP @ $103,231 (18% drop from peak)
 [18:01:47] Monitor alive | 361 checks | 0 open | next in 5s
+  risk: mcap=$9,136 | gain=+0.0% | peak=$9,136 | dd=+0%
+  risk: mcap=$9,136 | gain=+0.0% | peak=$9,136 | dd=+0%
+  risk: mcap=$9,136 | gain=+0.0% | peak=$9,136 | dd=+0%
+  risk: mcap=$9,136 | gain=+0.0% | peak=$9,136 | dd=+0%
+[18:02:47] Monitor alive | 373 checks | 1 open | next in 5s
+  risk: mcap=$9,563 | gain=+4.7% | peak=$9,563 | dd=+0%
+  risk: mcap=$9,563 | gain=+4.7% | peak=$9,563 | dd=+0%
+  risk: mcap=$9,563 | gain=+4.7% | peak=$9,563 | dd=+0%
+  risk: mcap=$9,563 | gain=+4.7% | peak=$9,563 | dd=+0%
+  risk: mcap=$9,563 | gain=+4.7% | peak=$9,563 | dd=+0%
+  risk: mcap=$9,563 | gain=+4.7% | peak=$9,563 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 risk STOP LOSS @ $6,077 (-33.5%)
+[18:03:48] Monitor alive | 385 checks | 0 open | next in 5s
+  Whiskey: mcap=$9,775 | gain=+0.0% | peak=$9,775 | dd=+0%
+  Whiskey: mcap=$9,775 | gain=+0.0% | peak=$9,775 | dd=+0%
+[18:04:48] Monitor alive | 397 checks | 1 open | next in 5s
+  Whiskey: mcap=$9,775 | gain=+0.0% | peak=$9,775 | dd=+0%
+  Whiskey: mcap=$9,775 | gain=+0.0% | peak=$9,775 | dd=+0%
+  Whiskey: mcap=$11,257 | gain=+15.2% | peak=$11,257 | dd=+0%
+  Whiskey: mcap=$11,257 | gain=+15.2% | peak=$11,257 | dd=+0%
+  Whiskey: mcap=$11,257 | gain=+15.2% | peak=$11,257 | dd=+0%
+  Whiskey: mcap=$11,257 | gain=+15.2% | peak=$11,257 | dd=+0%
+  Whiskey: mcap=$11,257 | gain=+15.2% | peak=$11,257 | dd=+0%
+  Whiskey: mcap=$11,257 | gain=+15.2% | peak=$11,257 | dd=+0%
+[TP1_HOLD] Alert sent
+🚀 Whiskey TP1 HIT - HOLDING @ $14,672 (+50.1%)
+  Whiskey: mcap=$14,672 | gain=+50.1% | peak=$14,672 | dd=+0%
+  Whiskey: mcap=$14,672 | gain=+50.1% | peak=$14,672 | dd=+0%
+  Whiskey: mcap=$14,672 | gain=+50.1% | peak=$14,672 | dd=+0%
+[18:05:49] Monitor alive | 409 checks | 1 open | next in 5s
+  Whiskey: mcap=$14,672 | gain=+50.1% | peak=$14,672 | dd=+0%
+  Whiskey: mcap=$14,672 | gain=+50.1% | peak=$14,672 | dd=+0%
+[TRAILING_STOP] Alert sent
+✅ Whiskey TRAILING STOP @ $12,282 (16% drop from peak)
+[18:06:50] Monitor alive | 421 checks | 0 open | next in 5s
+[18:07:50] Monitor alive | 433 checks | 0 open | next in 5s
+[18:08:50] Monitor alive | 445 checks | 0 open | next in 5s
+[18:09:50] Monitor alive | 457 checks | 0 open | next in 5s
+[18:10:51] Monitor alive | 469 checks | 0 open | next in 5s
+[18:11:51] Monitor alive | 481 checks | 0 open | next in 5s
+[18:12:51] Monitor alive | 493 checks | 0 open | next in 5s
+  Muhoozi: mcap=$11,768 | gain=+0.0% | peak=$11,768 | dd=+0%
+  Muhoozi: mcap=$11,768 | gain=+0.0% | peak=$11,768 | dd=+0%
+  Muhoozi: mcap=$11,768 | gain=+0.0% | peak=$11,768 | dd=+0%
+[TP1_HOLD] Alert sent
+🚀 Muhoozi TP1 HIT - HOLDING @ $18,365 (+56.1%)
+  Muhoozi: mcap=$18,365 | gain=+56.1% | peak=$18,365 | dd=+0%
+  Muhoozi: mcap=$18,365 | gain=+56.1% | peak=$18,365 | dd=+0%
+  Muhoozi: mcap=$18,365 | gain=+56.1% | peak=$18,365 | dd=+0%
+[18:13:52] Monitor alive | 505 checks | 1 open | next in 5s
+  Muhoozi: mcap=$18,365 | gain=+56.1% | peak=$18,365 | dd=+0%
+  Muhoozi: mcap=$18,365 | gain=+56.1% | peak=$18,365 | dd=+0%
+  Muhoozi: mcap=$17,314 | gain=+47.1% | peak=$18,365 | dd=+6%
+  Muhoozi: mcap=$17,314 | gain=+47.1% | peak=$18,365 | dd=+6%
+  Muhoozi: mcap=$17,314 | gain=+47.1% | peak=$18,365 | dd=+6%
+  Muhoozi: mcap=$17,314 | gain=+47.1% | peak=$18,365 | dd=+6%
+  Muhoozi: mcap=$17,314 | gain=+47.1% | peak=$18,365 | dd=+6%
+  Muhoozi: mcap=$17,314 | gain=+47.1% | peak=$18,365 | dd=+6%
+[TP2] Alert sent
+✅ Muhoozi TP2 HIT @ $25,129 (+114%)
+  Muhoozi: mcap=$25,129 | gain=+113.5% | peak=$25,129 | dd=-37%
+  Muhoozi: mcap=$25,129 | gain=+113.5% | peak=$25,129 | dd=-37%
+  Muhoozi: mcap=$25,129 | gain=+113.5% | peak=$25,129 | dd=-37%
+[18:14:53] Monitor alive | 517 checks | 0 open | next in 5s
+  Muhoozi: mcap=$25,129 | gain=+113.5% | peak=$25,129 | dd=-37%
+  Muhoozi: mcap=$22,530 | gain=+91.5% | peak=$25,129 | dd=-23%
+  Muhoozi: mcap=$22,530 | gain=+91.5% | peak=$25,129 | dd=-23%
+  Muhoozi: mcap=$22,530 | gain=+91.5% | peak=$25,129 | dd=-23%
+  Muhoozi: mcap=$22,530 | gain=+91.5% | peak=$25,129 | dd=-23%
+  Muhoozi: mcap=$22,530 | gain=+91.5% | peak=$25,129 | dd=-23%
+  Muhoozi: mcap=$22,530 | gain=+91.5% | peak=$25,129 | dd=-23%
+  Muhoozi: mcap=$22,620 | gain=+92.2% | peak=$25,129 | dd=-23%
+  Muhoozi: mcap=$22,620 | gain=+92.2% | peak=$25,129 | dd=-23%
+  Muhoozi: mcap=$22,620 | gain=+92.2% | peak=$25,129 | dd=-23%
+  Muhoozi: mcap=$22,620 | gain=+92.2% | peak=$25,129 | dd=-23%
+  Muhoozi: mcap=$22,620 | gain=+92.2% | peak=$25,129 | dd=-23%
+[18:15:54] Monitor alive | 529 checks | 0 open | next in 5s
+  Muhoozi: mcap=$22,620 | gain=+92.2% | peak=$25,129 | dd=-23%
+  Muhoozi: mcap=$22,326 | gain=+89.7% | peak=$25,129 | dd=-22%
+  Muhoozi: mcap=$22,326 | gain=+89.7% | peak=$25,129 | dd=-22%
+  Muhoozi: mcap=$22,326 | gain=+89.7% | peak=$25,129 | dd=-22%
+  Muhoozi: mcap=$22,326 | gain=+89.7% | peak=$25,129 | dd=-22%
+  Muhoozi: mcap=$22,326 | gain=+89.7% | peak=$25,129 | dd=-22%
+  Muhoozi: mcap=$22,326 | gain=+89.7% | peak=$25,129 | dd=-22%
+  Muhoozi: mcap=$22,066 | gain=+87.5% | peak=$25,129 | dd=-20%
+  Muhoozi: mcap=$22,066 | gain=+87.5% | peak=$25,129 | dd=-20%
+  Muhoozi: mcap=$22,066 | gain=+87.5% | peak=$25,129 | dd=-20%
+  Muhoozi: mcap=$22,066 | gain=+87.5% | peak=$25,129 | dd=-20%
+  Muhoozi: mcap=$22,066 | gain=+87.5% | peak=$25,129 | dd=-20%
+[18:16:55] Monitor alive | 541 checks | 0 open | next in 5s
+  Muhoozi: mcap=$22,066 | gain=+87.5% | peak=$25,129 | dd=-20%
+[TRAILING_STOP] Alert sent
+✅ Muhoozi TRAILING STOP @ $18,882 (25% drop from peak)
+[18:17:56] Monitor alive | 553 checks | 0 open | next in 5s
+[18:18:56] Monitor alive | 565 checks | 0 open | next in 5s
+[18:19:56] Monitor alive | 577 checks | 0 open | next in 5s
+[18:20:56] Monitor alive | 589 checks | 0 open | next in 5s
+[18:21:56] Monitor alive | 601 checks | 0 open | next in 5s
+[18:22:56] Monitor alive | 613 checks | 0 open | next in 5s
+[18:23:56] Monitor alive | 625 checks | 0 open | next in 5s
+[18:24:56] Monitor alive | 637 checks | 0 open | next in 5s
+[18:25:56] Monitor alive | 649 checks | 0 open | next in 5s
+[18:26:56] Monitor alive | 661 checks | 0 open | next in 5s
+[18:27:56] Monitor alive | 673 checks | 0 open | next in 5s
+[18:28:57] Monitor alive | 685 checks | 0 open | next in 5s
+[18:29:57] Monitor alive | 697 checks | 0 open | next in 5s
