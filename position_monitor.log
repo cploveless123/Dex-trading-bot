@@ -3,3 +3,18 @@ Exit Plan: TP1 +35% (sell 10%) | TP2 +100% | TP3 +200% | Trailing 15% | Stop -25
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
+[08:15:25] Monitor alive | 13 checks | 0 open | next in 5s
+[08:16:25] Monitor alive | 25 checks | 0 open | next in 5s
+[08:17:25] Monitor alive | 37 checks | 0 open | next in 5s
+[08:18:25] Monitor alive | 49 checks | 0 open | next in 5s
+[08:19:25] Monitor alive | 61 checks | 0 open | next in 5s
+[08:20:25] Monitor alive | 73 checks | 0 open | next in 5s
+[08:21:25] Monitor alive | 85 checks | 0 open | next in 5s
+[08:22:25] Monitor alive | 97 checks | 0 open | next in 5s
+[08:23:25] Monitor alive | 109 checks | 0 open | next in 5s
+[08:24:25] Monitor alive | 121 checks | 0 open | next in 5s
+[08:25:26] Monitor alive | 133 checks | 0 open | next in 5s
+[08:26:26] Monitor alive | 145 checks | 0 open | next in 5s
+[08:27:26] Monitor alive | 157 checks | 0 open | next in 5s
+[08:28:26] Monitor alive | 169 checks | 0 open | next in 5s
+[08:29:26] Monitor alive | 181 checks | 0 open | next in 5s
