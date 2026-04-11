@@ -1756,3 +1756,35 @@ Checking every 5s
   AGI: mcap=$7,594 | gain=+80.5% | peak=$11,142 | dd=+0%
   MOTHER: mcap=$37,555 | gain=+45.6% | peak=$43,628 | dd=+0%
   PND: mcap=$12,225 | gain=+83.6% | peak=$12,225 | dd=+0%
+  elondog: mcap=$9,518 | gain=+8.4% | peak=$10,769 | dd=+0%
+  Skibidi: mcap=$126,633 | gain=+68.7% | peak=$145,416 | dd=+0%
+  AGI: mcap=$7,594 | gain=+80.5% | peak=$11,142 | dd=+0%
+  MOTHER: mcap=$37,555 | gain=+45.6% | peak=$43,628 | dd=+0%
+  PND: mcap=$12,225 | gain=+83.6% | peak=$12,225 | dd=+0%
+  elondog: mcap=$9,518 | gain=+8.4% | peak=$10,769 | dd=+0%
+  Skibidi: mcap=$126,633 | gain=+68.7% | peak=$145,416 | dd=+0%
+  AGI: mcap=$7,594 | gain=+80.5% | peak=$11,142 | dd=+0%
+  MOTHER: mcap=$37,555 | gain=+45.6% | peak=$43,628 | dd=+0%
+  PND: mcap=$12,225 | gain=+83.6% | peak=$12,225 | dd=+0%
+  elondog: mcap=$9,518 | gain=+8.4% | peak=$10,769 | dd=+0%
+  Skibidi: mcap=$126,633 | gain=+68.7% | peak=$145,416 | dd=+0%
+[TP1] Alert sent
+✅ AGI TP1 HIT @ $6,500 (+54.5%)
+  MOTHER: mcap=$37,555 | gain=+45.6% | peak=$43,628 | dd=+0%
+  PND: mcap=$12,225 | gain=+83.6% | peak=$12,225 | dd=+0%
+  elondog: mcap=$9,518 | gain=+8.4% | peak=$10,769 | dd=+0%
+  Skibidi: mcap=$126,633 | gain=+68.7% | peak=$145,416 | dd=+0%
+  AGI: mcap=$6,500 | gain=+54.5% | peak=$6,500 | dd=+0%
+  MOTHER: mcap=$38,627 | gain=+49.7% | peak=$43,628 | dd=+0%
+  PND: mcap=$12,225 | gain=+83.6% | peak=$12,225 | dd=+0%
+  elondog: mcap=$9,518 | gain=+8.4% | peak=$10,769 | dd=+0%
+  Skibidi: mcap=$126,633 | gain=+68.7% | peak=$145,416 | dd=+0%
+  AGI: mcap=$6,500 | gain=+54.5% | peak=$6,500 | dd=+0%
+  MOTHER: mcap=$38,627 | gain=+49.7% | peak=$43,628 | dd=+0%
+  PND: mcap=$12,225 | gain=+83.6% | peak=$12,225 | dd=+0%
+[01:49:25] Monitor alive | 372 checks | 4 open | next in 5s
+  elondog: mcap=$9,518 | gain=+8.4% | peak=$10,769 | dd=+0%
+  Skibidi: mcap=$121,821 | gain=+62.3% | peak=$145,416 | dd=+0%
+  AGI: mcap=$6,500 | gain=+54.5% | peak=$6,500 | dd=+0%
+  MOTHER: mcap=$38,627 | gain=+49.7% | peak=$43,628 | dd=+0%
+  PND: mcap=$11,178 | gain=+67.9% | peak=$12,225 | dd=+0%
