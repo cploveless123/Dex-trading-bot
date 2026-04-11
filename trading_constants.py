@@ -51,8 +51,10 @@ REAL_STOP_PCT = round(STOP_LOSS_PERCENT * (1 + SLIPPAGE_TAX_COST), 1)
 
 EXIT_PLAN_TEXT = f"""🎯 Exit Plan (tax-adjusted):
 +{TP1_PERCENT}% → Sell {TP1_SELL_PCT}%, trail {TP1_TRAILING_PCT}%
-+{TP2_PERCENT}% → Sell {TP2_SELL_PCT}% more
-📊 Trailing: {TRAILING_STOP_PCT}% from peak on remaining
++{TP2_PERCENT}% → Sell {TP2_SELL_PCT}%, trail {TP2_TRAILING_PCT}%
++{TP3_PERCENT}% → Sell {TP3_SELL_PCT}%, trail {TP3_TRAILING_PCT}%
++{TP4_PERCENT}% → Sell {TP4_SELL_PCT}%, trail {TP4_TRAILING_PCT}%
++{TP5_PERCENT}% → Sell {TP5_SELL_PCT}%, trail {TP5_TRAILING_PCT}%
 ⚠️ Stop: {STOP_LOSS_PERCENT}% (net: {REAL_STOP_PCT}% after {SLIPPAGE_TAX_COST*100}% tax/slippage)"""
 
 # Dip / Pullback Detection

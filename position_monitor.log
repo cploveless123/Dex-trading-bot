@@ -444,3 +444,63 @@ Checking every 5s
   WLFI: mcap=$19,727 | gain=+12.3% | peak=$20,822 | dd=+0%
   WLFI: mcap=$19,727 | gain=+12.3% | peak=$20,822 | dd=+0%
   WLFI: mcap=$19,727 | gain=+12.3% | peak=$20,822 | dd=+0%
+  WLFI: mcap=$19,005 | gain=+8.2% | peak=$20,822 | dd=+0%
+  WLFI: mcap=$19,005 | gain=+8.2% | peak=$20,822 | dd=+0%
+  WLFI: mcap=$19,005 | gain=+8.2% | peak=$20,822 | dd=+0%
+  WLFI: mcap=$19,005 | gain=+8.2% | peak=$20,822 | dd=+0%
+  WLFI: mcap=$19,005 | gain=+8.2% | peak=$20,822 | dd=+0%
+  WLFI: mcap=$19,005 | gain=+8.2% | peak=$20,822 | dd=+0%
+[TP1] Alert sent
+✅ WLFI TP1 HIT @ $24,342 (+38.6%)
+  WLFI: mcap=$24,342 | gain=+38.6% | peak=$24,342 | dd=+0%
+[05:16:16] Monitor alive | 1069 checks | 0 open | next in 5s
+  WLFI: mcap=$24,342 | gain=+38.6% | peak=$24,342 | dd=+0%
+  WLFI: mcap=$24,342 | gain=+38.6% | peak=$24,342 | dd=+0%
+  WLFI: mcap=$24,342 | gain=+38.6% | peak=$24,342 | dd=+0%
+  WLFI: mcap=$24,342 | gain=+38.6% | peak=$24,342 | dd=+0%
+  WLFI: mcap=$27,663 | gain=+57.5% | peak=$27,663 | dd=-14%
+  WLFI: mcap=$27,663 | gain=+57.5% | peak=$27,663 | dd=-14%
+  WLFI: mcap=$27,663 | gain=+57.5% | peak=$27,663 | dd=-14%
+  WLFI: mcap=$27,663 | gain=+57.5% | peak=$27,663 | dd=-14%
+  WLFI: mcap=$27,663 | gain=+57.5% | peak=$27,663 | dd=-14%
+  WLFI: mcap=$27,663 | gain=+57.5% | peak=$27,663 | dd=-14%
+  WLFI: mcap=$30,233 | gain=+72.2% | peak=$30,233 | dd=-24%
+  WLFI: mcap=$30,233 | gain=+72.2% | peak=$30,233 | dd=-24%
+[05:17:17] Monitor alive | 1081 checks | 0 open | next in 5s
+  WLFI: mcap=$30,233 | gain=+72.2% | peak=$30,233 | dd=-24%
+  WLFI: mcap=$30,233 | gain=+72.2% | peak=$30,233 | dd=-24%
+  WLFI: mcap=$30,233 | gain=+72.2% | peak=$30,233 | dd=-24%
+  WLFI: mcap=$30,233 | gain=+72.2% | peak=$30,233 | dd=-24%
+  WLFI: mcap=$30,488 | gain=+73.6% | peak=$30,488 | dd=-25%
+  WLFI: mcap=$30,488 | gain=+73.6% | peak=$30,488 | dd=-25%
+  WLFI: mcap=$30,488 | gain=+73.6% | peak=$30,488 | dd=-25%
+  WLFI: mcap=$30,488 | gain=+73.6% | peak=$30,488 | dd=-25%
+  WLFI: mcap=$30,488 | gain=+73.6% | peak=$30,488 | dd=-25%
+  WLFI: mcap=$30,488 | gain=+73.6% | peak=$30,488 | dd=-25%
+  WLFI: mcap=$30,139 | gain=+71.6% | peak=$30,488 | dd=-24%
+  WLFI: mcap=$30,139 | gain=+71.6% | peak=$30,488 | dd=-24%
+[05:18:18] Monitor alive | 1093 checks | 0 open | next in 5s
+  WLFI: mcap=$30,139 | gain=+71.6% | peak=$30,488 | dd=-24%
+  WLFI: mcap=$30,139 | gain=+71.6% | peak=$30,488 | dd=-24%
+  WLFI: mcap=$30,139 | gain=+71.6% | peak=$30,488 | dd=-24%
+  WLFI: mcap=$30,139 | gain=+71.6% | peak=$30,488 | dd=-24%
+  WLFI: mcap=$33,356 | gain=+90.0% | peak=$33,356 | dd=-37%
+  WLFI: mcap=$33,356 | gain=+90.0% | peak=$33,356 | dd=-37%
+  WLFI: mcap=$33,356 | gain=+90.0% | peak=$33,356 | dd=-37%
+  WLFI: mcap=$33,356 | gain=+90.0% | peak=$33,356 | dd=-37%
+  WLFI: mcap=$33,356 | gain=+90.0% | peak=$33,356 | dd=-37%
+  WLFI: mcap=$33,356 | gain=+90.0% | peak=$33,356 | dd=-37%
+  WLFI: mcap=$32,436 | gain=+84.7% | peak=$33,356 | dd=-33%
+  WLFI: mcap=$32,436 | gain=+84.7% | peak=$33,356 | dd=-33%
+[05:19:19] Monitor alive | 1105 checks | 0 open | next in 5s
+  WLFI: mcap=$32,436 | gain=+84.7% | peak=$33,356 | dd=-33%
+  WLFI: mcap=$32,436 | gain=+84.7% | peak=$33,356 | dd=-33%
+  WLFI: mcap=$32,436 | gain=+84.7% | peak=$33,356 | dd=-33%
+  WLFI: mcap=$32,436 | gain=+84.7% | peak=$33,356 | dd=-33%
+  WLFI: mcap=$32,686 | gain=+86.2% | peak=$33,356 | dd=-34%
+  WLFI: mcap=$32,686 | gain=+86.2% | peak=$33,356 | dd=-34%
+  WLFI: mcap=$32,686 | gain=+86.2% | peak=$33,356 | dd=-34%
+  WLFI: mcap=$32,686 | gain=+86.2% | peak=$33,356 | dd=-34%
+  WLFI: mcap=$32,686 | gain=+86.2% | peak=$33,356 | dd=-34%
+  WLFI: mcap=$32,686 | gain=+86.2% | peak=$33,356 | dd=-34%
+  WLFI: mcap=$29,435 | gain=+67.6% | peak=$33,356 | dd=-21%
