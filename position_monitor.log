@@ -513,3 +513,50 @@ Checking every 5s
   SYS32: mcap=$13,385 | gain=+9.4% | peak=$15,348 | dd=+13%
   SYS32: mcap=$13,385 | gain=+9.4% | peak=$15,348 | dd=+13%
   SYS32: mcap=$13,385 | gain=+9.4% | peak=$15,348 | dd=+13%
+  SYS32: mcap=$13,287 | gain=+8.6% | peak=$15,348 | dd=+13%
+  SYS32: mcap=$13,287 | gain=+8.6% | peak=$15,348 | dd=+13%
+  SYS32: mcap=$13,287 | gain=+8.6% | peak=$15,348 | dd=+13%
+  SYS32: mcap=$13,287 | gain=+8.6% | peak=$15,348 | dd=+13%
+  SYS32: mcap=$13,287 | gain=+8.6% | peak=$15,348 | dd=+13%
+  SYS32: mcap=$13,287 | gain=+8.6% | peak=$15,348 | dd=+13%
+[TRAILING_STOP] Alert sent
+✅ SYS32 TRAILING STOP @ $9,159 (40% drop from peak)
+[19:35:51] Monitor alive | 397 checks | 0 open | next in 5s
+[19:36:51] Monitor alive | 409 checks | 0 open | next in 5s
+  MOJO: mcap=$6,962 | gain=+0.0% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$6,962 | gain=+0.0% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$6,962 | gain=+0.0% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$6,614 | gain=-5.0% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$6,614 | gain=-5.0% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$6,614 | gain=-5.0% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$6,614 | gain=-5.0% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$6,614 | gain=-5.0% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$6,614 | gain=-5.0% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$5,572 | gain=-19.9% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$5,572 | gain=-19.9% | peak=$6,962 | dd=+0%
+[19:37:52] Monitor alive | 421 checks | 1 open | next in 5s
+  MOJO: mcap=$5,572 | gain=-19.9% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$5,572 | gain=-19.9% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$5,572 | gain=-19.9% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$5,572 | gain=-19.9% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$5,427 | gain=-22.0% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$5,427 | gain=-22.0% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$5,427 | gain=-22.0% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$5,427 | gain=-22.0% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$5,427 | gain=-22.0% | peak=$6,962 | dd=+0%
+  MOJO: mcap=$5,427 | gain=-22.0% | peak=$6,962 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 MOJO STOP LOSS @ $4,998 (-28.2%)
+[19:38:53] Monitor alive | 433 checks | 0 open | next in 5s
+[19:39:53] Monitor alive | 445 checks | 0 open | next in 5s
+[19:40:53] Monitor alive | 457 checks | 0 open | next in 5s
+[19:41:53] Monitor alive | 469 checks | 0 open | next in 5s
+[19:42:53] Monitor alive | 481 checks | 0 open | next in 5s
+[19:43:53] Monitor alive | 493 checks | 0 open | next in 5s
+[19:44:54] Monitor alive | 505 checks | 0 open | next in 5s
+[19:45:54] Monitor alive | 517 checks | 0 open | next in 5s
+[19:46:54] Monitor alive | 529 checks | 0 open | next in 5s
+[19:47:54] Monitor alive | 541 checks | 0 open | next in 5s
+[19:48:54] Monitor alive | 553 checks | 0 open | next in 5s
+[19:49:54] Monitor alive | 565 checks | 0 open | next in 5s
+[19:50:54] Monitor alive | 577 checks | 0 open | next in 5s
