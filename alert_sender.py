@@ -41,7 +41,7 @@ def format_trade_alert(trade):
         all_trades = [json.loads(l) for l in f]
     reset_ts = SIM_RESET_TIMESTAMP
     reset_trades = [t for t in all_trades if t.get('opened_at', '') > reset_ts]
-    closed_pnl = sum(t.get('pnl_sol', 0) for t in reset_trades if t.get('status') == 'closed')
+    closed_pnl = sum(t.get('pnl_sol', 0) for t in reset_trades if t.get('closed_at'))
     # Full open positions: 0.05 locked each
     open_full = len([t for t in all_trades if t.get('status') == 'open'])
     # Partial exits: remaining % locked (~26% with current TP1_SELL_PCT)
