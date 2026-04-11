@@ -131,6 +131,7 @@ def check_positions():
             t['fully_exited'] = True
             t['exit_reason'] = 'LOW_VOLUME'
             t['closed_at'] = datetime.utcnow().isoformat()
+            t['exit_mcap'] = int(mcap)
             t['pnl_sol'] = pnl
             t['pnl_pct'] = gains_pct
             updated = True
@@ -169,6 +170,7 @@ def check_positions():
             t['status'] = 'closed'; t['fully_exited'] = True
             t['exit_reason'] = 'STOP_AUTO'
             t['closed_at'] = datetime.utcnow().isoformat()
+            t['exit_mcap'] = int(mcap)
             t['pnl_sol'] = POSITION_SIZE * (gains_pct / 100)
             t['pnl_pct'] = gains_pct
             updated = True
@@ -202,6 +204,7 @@ def check_positions():
                 t['partial_exit'] = True
                 t['status'] = 'open_partial'
                 t['closed_at'] = datetime.utcnow().isoformat()
+                t['exit_mcap'] = int(mcap)
                 t['exit_reason'] = 'TP1_AUTO'
                 sell_pct = (mcap - entry) / entry * 100
                 pnl_tp1 = POSITION_SIZE * TP1_SELL_PCT / 100 * (sell_pct / 100)
@@ -254,6 +257,7 @@ def check_positions():
                 t['partial_exit'] = True
                 t['status'] = 'open_partial'
                 t['closed_at'] = datetime.utcnow().isoformat()
+                t['exit_mcap'] = int(mcap)
                 t['exit_reason'] = 'TP2_AUTO'
                 pnl_tp2 = POSITION_SIZE * TP2_SELL_PCT / 100 * (gains_pct / 100)
                 prev_pnl = t.get('pnl_sol', 0)
@@ -288,6 +292,7 @@ def check_positions():
                 t['partial_exit'] = True
                 t['status'] = 'open_partial'
                 t['closed_at'] = datetime.utcnow().isoformat()
+                t['exit_mcap'] = int(mcap)
                 t['exit_reason'] = 'TP3_AUTO'
                 pnl_tp3 = POSITION_SIZE * TP3_SELL_PCT / 100 * (gains_pct / 100)
                 prev_pnl = t.get('pnl_sol', 0)
@@ -324,6 +329,7 @@ def check_positions():
                 t['partial_exit'] = True
                 t['status'] = 'open_partial'
                 t['closed_at'] = datetime.utcnow().isoformat()
+                t['exit_mcap'] = int(mcap)
                 t['exit_reason'] = 'TP4_AUTO'
                 pnl_tp4 = POSITION_SIZE * TP4_SELL_PCT / 100 * (gains_pct / 100)
                 prev_pnl = t.get('pnl_sol', 0)
@@ -359,6 +365,7 @@ def check_positions():
                 t['partial_exit'] = True
                 t['status'] = 'open_partial'
                 t['closed_at'] = datetime.utcnow().isoformat()
+                t['exit_mcap'] = int(mcap)
                 t['exit_reason'] = 'TP5_AUTO'
                 pnl_tp5 = POSITION_SIZE * TP5_SELL_PCT / 100 * (gains_pct / 100)
                 prev_pnl = t.get('pnl_sol', 0)
@@ -393,6 +400,7 @@ def check_positions():
                     t['status'] = 'closed'
                     t['exit_reason'] = 'TRAILING_STOP'
                     t['closed_at'] = datetime.utcnow().isoformat()
+                    t['exit_mcap'] = int(mcap)
                     # Calculate remaining % - only subtract what was actually sold
                     # If TP1 sold 0%, full 100% is still in play for trailing stop
                     tp1_actually_sold = TP1_SELL_PCT if TP1_SELL_PCT > 0 else 0
