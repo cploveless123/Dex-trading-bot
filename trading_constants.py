@@ -24,7 +24,7 @@ MIN_BS_OLD = 0.9          # Pairs >5 min old
 
 # Exit Plan v5.5 - Hold through TP1, let winners run
 TP1_PERCENT = 35           # +35% → HOLD 100%, trail 30%
-TP1_TRAILING_PCT = 30
+TP1_TRAILING_PCT = 35
 TP1_SELL_PCT = 0           # NO SELL at TP1 - let it ride
 TP2_PERCENT = 100          # +100% → sell 40%, trail 30%
 TP2_TRAILING_PCT = 30
