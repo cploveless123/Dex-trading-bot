@@ -1655,3 +1655,127 @@ Checking every 5s
 [10:27:21] Monitor alive | 1573 checks | 0 open | next in 5s
 [10:28:21] Monitor alive | 1585 checks | 0 open | next in 5s
 [10:29:21] Monitor alive | 1597 checks | 0 open | next in 5s
+[10:30:22] Monitor alive | 1609 checks | 0 open | next in 5s
+[10:31:22] Monitor alive | 1621 checks | 0 open | next in 5s
+[10:32:22] Monitor alive | 1633 checks | 0 open | next in 5s
+[10:33:22] Monitor alive | 1645 checks | 0 open | next in 5s
+[10:34:22] Monitor alive | 1657 checks | 0 open | next in 5s
+[10:35:22] Monitor alive | 1669 checks | 0 open | next in 5s
+  fishious: mcap=$16,488 | gain=+0.0% | peak=$16,488 | dd=+0%
+  fishious: mcap=$16,488 | gain=+0.0% | peak=$16,488 | dd=+0%
+  fishious: mcap=$16,488 | gain=+0.0% | peak=$16,488 | dd=+0%
+  fishious: mcap=$16,488 | gain=+0.0% | peak=$16,488 | dd=+0%
+  fishious: mcap=$16,488 | gain=+0.0% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,569 | gain=-5.6% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,569 | gain=-5.6% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,569 | gain=-5.6% | peak=$16,488 | dd=+0%
+[10:36:23] Monitor alive | 1681 checks | 1 open | next in 5s
+  fishious: mcap=$15,569 | gain=-5.6% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,569 | gain=-5.6% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,569 | gain=-5.6% | peak=$16,488 | dd=+0%
+  fishious: mcap=$12,402 | gain=-24.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$12,402 | gain=-24.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$12,402 | gain=-24.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$12,402 | gain=-24.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$12,402 | gain=-24.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$12,402 | gain=-24.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$14,781 | gain=-10.4% | peak=$16,488 | dd=+0%
+  fishious: mcap=$14,781 | gain=-10.4% | peak=$16,488 | dd=+0%
+  fishious: mcap=$14,781 | gain=-10.4% | peak=$16,488 | dd=+0%
+[10:37:23] Monitor alive | 1693 checks | 1 open | next in 5s
+  fishious: mcap=$14,781 | gain=-10.4% | peak=$16,488 | dd=+0%
+  fishious: mcap=$14,781 | gain=-10.4% | peak=$16,488 | dd=+0%
+  fishious: mcap=$14,781 | gain=-10.4% | peak=$16,488 | dd=+0%
+  fishious: mcap=$14,219 | gain=-13.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$14,219 | gain=-13.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$14,219 | gain=-13.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$14,219 | gain=-13.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$14,219 | gain=-13.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$14,219 | gain=-13.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$16,110 | gain=-2.3% | peak=$16,488 | dd=+0%
+  fishious: mcap=$16,110 | gain=-2.3% | peak=$16,488 | dd=+0%
+  fishious: mcap=$16,110 | gain=-2.3% | peak=$16,488 | dd=+0%
+[10:38:24] Monitor alive | 1705 checks | 1 open | next in 5s
+  fishious: mcap=$16,110 | gain=-2.3% | peak=$16,488 | dd=+0%
+  fishious: mcap=$16,110 | gain=-2.3% | peak=$16,488 | dd=+0%
+  fishious: mcap=$16,110 | gain=-2.3% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,099 | gain=-8.4% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,099 | gain=-8.4% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,099 | gain=-8.4% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,099 | gain=-8.4% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,099 | gain=-8.4% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,099 | gain=-8.4% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,868 | gain=-3.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,868 | gain=-3.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,868 | gain=-3.8% | peak=$16,488 | dd=+0%
+[10:39:25] Monitor alive | 1717 checks | 1 open | next in 5s
+  fishious: mcap=$15,868 | gain=-3.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,868 | gain=-3.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$15,868 | gain=-3.8% | peak=$16,488 | dd=+0%
+  fishious: mcap=$16,912 | gain=+2.6% | peak=$16,912 | dd=+0%
+  fishious: mcap=$16,912 | gain=+2.6% | peak=$16,912 | dd=+0%
+  fishious: mcap=$16,912 | gain=+2.6% | peak=$16,912 | dd=+0%
+  fishious: mcap=$16,912 | gain=+2.6% | peak=$16,912 | dd=+0%
+  fishious: mcap=$16,912 | gain=+2.6% | peak=$16,912 | dd=+0%
+  fishious: mcap=$16,912 | gain=+2.6% | peak=$16,912 | dd=+0%
+  fishious: mcap=$17,211 | gain=+4.4% | peak=$17,211 | dd=+0%
+  fishious: mcap=$17,211 | gain=+4.4% | peak=$17,211 | dd=+0%
+  fishious: mcap=$17,211 | gain=+4.4% | peak=$17,211 | dd=+0%
+[10:40:26] Monitor alive | 1729 checks | 1 open | next in 5s
+  fishious: mcap=$17,211 | gain=+4.4% | peak=$17,211 | dd=+0%
+  fishious: mcap=$17,211 | gain=+4.4% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,890 | gain=-3.6% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,890 | gain=-3.6% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,890 | gain=-3.6% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,890 | gain=-3.6% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,890 | gain=-3.6% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,890 | gain=-3.6% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,102 | gain=-8.4% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,102 | gain=-8.4% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,102 | gain=-8.4% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,102 | gain=-8.4% | peak=$17,211 | dd=+0%
+[10:41:27] Monitor alive | 1741 checks | 1 open | next in 5s
+  fishious: mcap=$15,102 | gain=-8.4% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,102 | gain=-8.4% | peak=$17,211 | dd=+0%
+  fishious: mcap=$13,170 | gain=-20.1% | peak=$17,211 | dd=+0%
+  fishious: mcap=$13,170 | gain=-20.1% | peak=$17,211 | dd=+0%
+  fishious: mcap=$13,170 | gain=-20.1% | peak=$17,211 | dd=+0%
+  fishious: mcap=$13,170 | gain=-20.1% | peak=$17,211 | dd=+0%
+  fishious: mcap=$13,170 | gain=-20.1% | peak=$17,211 | dd=+0%
+  fishious: mcap=$13,170 | gain=-20.1% | peak=$17,211 | dd=+0%
+  fishious: mcap=$14,253 | gain=-13.6% | peak=$17,211 | dd=+0%
+  fishious: mcap=$14,253 | gain=-13.6% | peak=$17,211 | dd=+0%
+  fishious: mcap=$14,253 | gain=-13.6% | peak=$17,211 | dd=+0%
+  fishious: mcap=$14,253 | gain=-13.6% | peak=$17,211 | dd=+0%
+[10:42:28] Monitor alive | 1753 checks | 1 open | next in 5s
+  fishious: mcap=$14,253 | gain=-13.6% | peak=$17,211 | dd=+0%
+  Popo-Chan: mcap=$5,976 | gain=+0.0% | peak=$5,976 | dd=+0%
+  fishious: mcap=$14,253 | gain=-13.6% | peak=$17,211 | dd=+0%
+  Popo-Chan: mcap=$5,976 | gain=+0.0% | peak=$5,976 | dd=+0%
+  fishious: mcap=$13,673 | gain=-17.1% | peak=$17,211 | dd=+0%
+  Popo-Chan: mcap=$5,976 | gain=+0.0% | peak=$5,976 | dd=+0%
+  fishious: mcap=$13,673 | gain=-17.1% | peak=$17,211 | dd=+0%
+  Popo-Chan: mcap=$5,976 | gain=+0.0% | peak=$5,976 | dd=+0%
+  fishious: mcap=$13,673 | gain=-17.1% | peak=$17,211 | dd=+0%
+  Popo-Chan: mcap=$5,976 | gain=+0.0% | peak=$5,976 | dd=+0%
+  fishious: mcap=$13,673 | gain=-17.1% | peak=$17,211 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Popo-Chan STOP LOSS @ $2,851 (-52.3%)
+  fishious: mcap=$13,673 | gain=-17.1% | peak=$17,211 | dd=+0%
+  fishious: mcap=$13,673 | gain=-17.1% | peak=$17,211 | dd=+0%
+  fishious: mcap=$14,030 | gain=-14.9% | peak=$17,211 | dd=+0%
+  fishious: mcap=$14,030 | gain=-14.9% | peak=$17,211 | dd=+0%
+  fishious: mcap=$14,030 | gain=-14.9% | peak=$17,211 | dd=+0%
+  fishious: mcap=$14,030 | gain=-14.9% | peak=$17,211 | dd=+0%
+[10:43:29] Monitor alive | 1765 checks | 1 open | next in 5s
+  fishious: mcap=$14,030 | gain=-14.9% | peak=$17,211 | dd=+0%
+  fishious: mcap=$14,030 | gain=-14.9% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,111 | gain=-8.3% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,111 | gain=-8.3% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,111 | gain=-8.3% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,111 | gain=-8.3% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,111 | gain=-8.3% | peak=$17,211 | dd=+0%
+  fishious: mcap=$15,111 | gain=-8.3% | peak=$17,211 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 fishious STOP LOSS @ $12,364 (-25.0%)
+[10:44:31] Monitor alive | 1777 checks | 0 open | next in 5s
