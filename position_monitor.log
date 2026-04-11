@@ -320,3 +320,22 @@ Checking every 5s
   CATFISH: mcap=$119,287 | gain=+60.9% | peak=$119,287 | dd=-13%
   CATFISH: mcap=$119,287 | gain=+60.9% | peak=$119,287 | dd=-13%
   CATFISH: mcap=$119,287 | gain=+60.9% | peak=$119,287 | dd=-13%
+  CATFISH: mcap=$119,287 | gain=+60.9% | peak=$119,287 | dd=-13%
+  CATFISH: mcap=$119,287 | gain=+60.9% | peak=$119,287 | dd=-13%
+  CATFISH: mcap=$119,287 | gain=+60.9% | peak=$119,287 | dd=-13%
+  CATFISH: mcap=$125,783 | gain=+69.6% | peak=$125,783 | dd=-19%
+  CATFISH: mcap=$125,783 | gain=+69.6% | peak=$125,783 | dd=-19%
+  CATFISH: mcap=$125,783 | gain=+69.6% | peak=$125,783 | dd=-19%
+  CATFISH: mcap=$125,783 | gain=+69.6% | peak=$125,783 | dd=-19%
+  CATFISH: mcap=$125,783 | gain=+69.6% | peak=$125,783 | dd=-19%
+  CATFISH: mcap=$125,783 | gain=+69.6% | peak=$125,783 | dd=-19%
+[18:00:45] Monitor alive | 349 checks | 1 open | next in 5s
+  CATFISH: mcap=$108,465 | gain=+46.3% | peak=$125,783 | dd=-3%
+  CATFISH: mcap=$108,465 | gain=+46.3% | peak=$125,783 | dd=-3%
+  CATFISH: mcap=$108,465 | gain=+46.3% | peak=$125,783 | dd=-3%
+  CATFISH: mcap=$108,465 | gain=+46.3% | peak=$125,783 | dd=-3%
+  CATFISH: mcap=$108,465 | gain=+46.3% | peak=$125,783 | dd=-3%
+  CATFISH: mcap=$108,465 | gain=+46.3% | peak=$125,783 | dd=-3%
+[TRAILING_STOP] Alert sent
+✅ CATFISH TRAILING STOP @ $103,231 (18% drop from peak)
+[18:01:47] Monitor alive | 361 checks | 0 open | next in 5s
