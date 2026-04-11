@@ -3582,3 +3582,48 @@ Checking every 5s
 [13:42:42] Monitor alive | 3889 checks | 0 open | next in 5s
 [13:43:42] Monitor alive | 3901 checks | 0 open | next in 5s
 [13:44:42] Monitor alive | 3913 checks | 0 open | next in 5s
+[13:45:42] Monitor alive | 3925 checks | 0 open | next in 5s
+[13:46:43] Monitor alive | 3937 checks | 0 open | next in 5s
+[13:47:43] Monitor alive | 3949 checks | 0 open | next in 5s
+  Seednee: mcap=$80,332 | gain=+0.0% | peak=$80,332 | dd=+0%
+  Seednee: mcap=$80,332 | gain=+0.0% | peak=$80,332 | dd=+0%
+  Seednee: mcap=$80,332 | gain=+0.0% | peak=$80,332 | dd=+0%
+  Seednee: mcap=$80,332 | gain=+0.0% | peak=$80,332 | dd=+0%
+  Seednee: mcap=$80,332 | gain=+0.0% | peak=$80,332 | dd=+0%
+  Seednee: mcap=$79,063 | gain=-1.6% | peak=$80,332 | dd=+0%
+  Seednee: mcap=$79,063 | gain=-1.6% | peak=$80,332 | dd=+0%
+[13:48:43] Monitor alive | 3961 checks | 1 open | next in 5s
+  Seednee: mcap=$79,063 | gain=-1.6% | peak=$80,332 | dd=+0%
+  Seednee: mcap=$79,063 | gain=-1.6% | peak=$80,332 | dd=+0%
+  Seednee: mcap=$79,063 | gain=-1.6% | peak=$80,332 | dd=+0%
+  Seednee: mcap=$79,063 | gain=-1.6% | peak=$80,332 | dd=+0%
+  Seednee: mcap=$82,547 | gain=+2.8% | peak=$82,547 | dd=+0%
+  Seednee: mcap=$82,547 | gain=+2.8% | peak=$82,547 | dd=+0%
+  Seednee: mcap=$82,547 | gain=+2.8% | peak=$82,547 | dd=+0%
+  Seednee: mcap=$82,547 | gain=+2.8% | peak=$82,547 | dd=+0%
+  Seednee: mcap=$82,547 | gain=+2.8% | peak=$82,547 | dd=+0%
+  Seednee: mcap=$82,547 | gain=+2.8% | peak=$82,547 | dd=+0%
+  Seednee: mcap=$85,663 | gain=+6.6% | peak=$85,663 | dd=+0%
+  Seednee: mcap=$85,663 | gain=+6.6% | peak=$85,663 | dd=+0%
+[13:49:44] Monitor alive | 3973 checks | 1 open | next in 5s
+  Seednee: mcap=$85,663 | gain=+6.6% | peak=$85,663 | dd=+0%
+  Seednee: mcap=$85,663 | gain=+6.6% | peak=$85,663 | dd=+0%
+  Seednee: mcap=$85,663 | gain=+6.6% | peak=$85,663 | dd=+0%
+  Seednee: mcap=$85,663 | gain=+6.6% | peak=$85,663 | dd=+0%
+  Seednee: mcap=$83,861 | gain=+4.4% | peak=$85,663 | dd=+0%
+  Seednee: mcap=$83,861 | gain=+4.4% | peak=$85,663 | dd=+0%
+  Seednee: mcap=$83,861 | gain=+4.4% | peak=$85,663 | dd=+0%
+  Seednee: mcap=$83,861 | gain=+4.4% | peak=$85,663 | dd=+0%
+  Seednee: mcap=$83,861 | gain=+4.4% | peak=$85,663 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Seednee STOP LOSS @ $2,204 (-97.3%)
+[13:50:45] Monitor alive | 3985 checks | 0 open | next in 5s
+[13:51:45] Monitor alive | 3997 checks | 0 open | next in 5s
+[13:52:45] Monitor alive | 4009 checks | 0 open | next in 5s
+[13:53:46] Monitor alive | 4021 checks | 0 open | next in 5s
+[13:54:46] Monitor alive | 4033 checks | 0 open | next in 5s
+[13:55:46] Monitor alive | 4045 checks | 0 open | next in 5s
+[13:56:46] Monitor alive | 4057 checks | 0 open | next in 5s
+[13:57:46] Monitor alive | 4069 checks | 0 open | next in 5s
+[13:58:46] Monitor alive | 4081 checks | 0 open | next in 5s
+[13:59:46] Monitor alive | 4093 checks | 0 open | next in 5s
