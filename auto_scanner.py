@@ -189,6 +189,10 @@ def check_should_buy(addr, p, sym, dex, m, v, v5, bs, buys, sells, holders, pair
     if chg5 < 0:
         return False, f"chg5 {chg5:+.1f}% (falling knife, not a dip)"
     
+    # Parabolic pump check: if chg5 > 30% of h1, it's parabolic
+    if chg60 > 0 and chg5 / chg60 > 0.30:
+        return False, f"chg5 {chg5:.1f}% / h1 {chg60:.0f}% = {chg5/chg60*100:.0f}% (parabolic pump)"
+    
     if chg5 > 50:
         return False, f"chg5 +{chg5:.1f}% (extreme pump)"
     if chg5 > 15 and not sustained_momentum:

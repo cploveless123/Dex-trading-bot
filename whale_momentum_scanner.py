@@ -292,6 +292,11 @@ def scan_token(addr):
         if chg5 < 0:
             return None, f"B: chg5 {chg5:+.1f}% (falling knife, not a dip)"
         
+        # Parabolic pump check: if chg5 > 30% of h1, it's parabolic
+        # e.g. h1 +144%, chg5 +50% → 50/144 = 35% → parabolic, reject
+        if chg60 > 0 and chg5 / chg60 > 0.30:
+            return None, f"B: chg5 {chg5:.1f}% / h1 {chg60:.0f}% = {chg5/chg60*100:.0f}% (parabolic pump)"
+        
         if chg5 > 50:
             return None, f"B: chg5 +{chg5:.1f}% (extreme pump)"
         if chg5 > 15 and not sustained_momentum:
