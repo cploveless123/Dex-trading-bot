@@ -163,7 +163,7 @@ def scan_token(addr):
             return None, None
         
         # Mcap range: $5K - $95K
-        if m < 3000 or m > 95000:
+        if m < MIN_MCAP or m > MAX_MCAP:
             return None, None
         
         # Holders
@@ -175,27 +175,35 @@ def scan_token(addr):
         # 5min vol: ignore for fresh tokens (<20min) since volume builds up
         # (pair_age check deferred until after pair_age is defined below)
         
-        # Peak tracking - use LOCAL peak only (not GMGN ATH which can be parabolic pump peak)
-        # Track peak from observed prices during this session
-        if addr not in _peak_prices or m > _peak_prices[addr]:
-            _peak_prices[addr] = m
-        peak = _peak_prices.get(addr, m)
+        # Get GMGN data for ATH divergence check
+        ath_mcap, _, is_bonded = get_gmgn_token_data(addr)
         
-        # Track first seen time
+        # Track first seen time for peak window
         import time
         now = time.time()
         if addr not in _token_first_seen:
             _token_first_seen[addr] = now
         
-        if peak > 0:
-            dip_pct = (peak - m) / peak * 100
-        else:
-            dip_pct = 0
-        
-        # Get GMGN data only for bonded status (informational), NOT for peak
-        ath_mcap, _, is_bonded = get_gmgn_token_data(addr)
-        
+        # Get pair age for peak window selection
         pair_age = get_pair_age_minutes(p)
+        
+        # Peak tracking - use LOCAL peak only
+        # New pairs (<10 min): track peak for PEAK_WINDOW_NEW (90s)
+        # Older pairs (>10 min): track peak for PEAK_WINDOW_OLD (180s)
+        peak_window = PEAK_WINDOW_NEW if pair_age < 10 else PEAK_WINDOW_OLD
+        
+        time_watching = now - _token_first_seen[addr]
+        if time_watching < peak_window:
+            # Still within peak window - update peak if higher
+            if addr not in _peak_prices or m > _peak_prices[addr]:
+                _peak_prices[addr] = m
+        else:
+            # Past peak window - don't update peak anymore
+            if addr not in _peak_prices:
+                _peak_prices[addr] = m
+        
+        peak = _peak_prices.get(addr, m)
+        dip_pct = (peak - m) / peak * 100 if peak > 0 else 0
         
         # Liquidity: ignore for mcap < $50K (still building)
         if liq < 1000 and m >= 50000:
@@ -216,14 +224,14 @@ def scan_token(addr):
             return None, f"B: h1 {chg60:+.1f}% 24h {chg24:+.1f}% (no momentum)"
         
         # Dip from local peak: 15-35%
-        if dip_pct < 15:
-            return None, f"B: dip {dip_pct:.1f}% <15% (not enough pullback)"
-        if dip_pct > 35:
-            return None, f"B: dip {dip_pct:.1f}% >35% (too deep)"
-            
-            # BS ratio for older: pump.fun tokens BS=0 is OK (bonding curve), raydium needs BS > 0.9
-            if dex == 'raydium' and bs < 0.9:
-                return None, f"B: BS <0.9"
+        if dip_pct < DIP_MIN:
+            return None, f"B: dip {dip_pct:.1f}% <{DIP_MIN}% (not enough pullback)"
+        if dip_pct > DIP_MAX:
+            return None, f"B: dip {dip_pct:.1f}% >{DIP_MAX}% (too deep)"
+        
+        # BS ratio for raydium: must be > 0.9 (pump.fun BS=0 is OK)
+        if dex == 'raydium' and bs < 0.9:
+            return None, f"B: BS {bs:.2f} <0.9"
         
         return {
             "token": sym,
@@ -359,7 +367,7 @@ def load_whales():
         return []
 
 def main():
-    print("🚀 Whale Momentum Scanner v5 - Dip in Momentum")
+    print("🚀 Whale Momentum Scanner v5.1 - Dip in Momentum")
     print(f"   Mcap: $5K-$95K | Dip: 10-50% | Age-based rules")
     init_sold_tokens()  # Load ALL closed positions
     whales = load_whales()

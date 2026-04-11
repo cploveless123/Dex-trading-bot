@@ -7,10 +7,10 @@ Goal: Turn 1.0 SOL → 100 SOL via compound pump.fun trades
 # Position sizing
 POSITION_SIZE = 0.10      # Per trade
 KOL_BUY_POSITION_SIZE = 0.10
-MAX_OPEN_POSITIONS = 5     # Max concurrent positions
+MAX_OPEN_POSITIONS = 9     # Max concurrent positions
 
 # Entry Filters
-MIN_MCAP = 5000            # $5K floor
+MIN_MCAP = 3000            # $3K floor (v5.1)
 MAX_MCAP = 95000           # $95K ceiling
 MIN_VOLUME = 5000          # 24h volume (kept for compatibility)
 MIN_5MIN_VOLUME = 1000     # 5min volume > $1K
@@ -22,24 +22,24 @@ MIN_BS_RATIO = 1.5         # BS ratio (kept for compatibility)
 MIN_BS_NEW = 0.2          # Pairs <5 min old
 MIN_BS_OLD = 0.9          # Pairs >5 min old
 
-# Exit Plan v2.1 - 35% trailing, looser for winners
-TP1_PERCENT = 40           # +40% → sell 30%, trail 35%
-TP1_TRAILING_PCT = 35
-TP1_SELL_PCT = 30
-TP2_PERCENT = 100          # +100% → sell 20%, trail 35%
-TP2_TRAILING_PCT = 35
-TP2_SELL_PCT = 20
-TP3_PERCENT = 200          # +200% → sell 20%, trail 35%
-TP3_TRAILING_PCT = 35
-TP3_SELL_PCT = 20
-TP4_PERCENT = 300          # +300% → sell 20%
-TP4_TRAILING_PCT = 35
-TP4_SELL_PCT = 20
-TP5_PERCENT = 1000         # +1000% → sell remaining 10%
-TP5_TRAILING_PCT = 35
-TP5_SELL_PCT = 10
-TRAILING_STOP_PCT = 35    # 35% from peak on remaining
-STOP_LOSS_PERCENT = -30    # -30% stop
+# Exit Plan v5.1 - Progressive selling with tighter stops
+TP1_PERCENT = 35           # +35% → sell 22%, trail 26%
+TP1_TRAILING_PCT = 26
+TP1_SELL_PCT = 22
+TP2_PERCENT = 100          # +100% → sell 22%, trail 26%
+TP2_TRAILING_PCT = 26
+TP2_SELL_PCT = 22
+TP3_PERCENT = 200          # +200% → sell 22%, trail 26%
+TP3_TRAILING_PCT = 26
+TP3_SELL_PCT = 22
+TP4_PERCENT = 300          # +300% → sell 22%
+TP4_TRAILING_PCT = 26
+TP4_SELL_PCT = 22
+TP5_PERCENT = 1000         # +1000% → sell remaining 12%
+TP5_TRAILING_PCT = 26
+TP5_SELL_PCT = 12
+TRAILING_STOP_PCT = 26    # 26% from peak on remaining
+STOP_LOSS_PERCENT = -20    # -20% stop (tighter than before)
 
 # Slippage & Tax Correction
 SLIPPAGE_TAX_COST = 0.025   # ~2.5% per round trip
@@ -59,10 +59,10 @@ EXIT_PLAN_TEXT = f"""🎯 Exit Plan (tax-adjusted):
 # New (<5 min): dip 10-50%, h1 >+50%, 5min >-10%
 # Older (>5 min): dip 10-50%, 24hr >+25%, h1 >-39%, 5min >-39%
 DIP_MIN = 15
-DIP_MAX = 50
+DIP_MAX = 35
 PEAK_WINDOW_SECONDS = 60   # Peak = highest price in first 60 seconds
-PEAK_WINDOW_NEW = 60       # Peak window for new pairs (<5 min)
-PEAK_WINDOW_OLD = 120      # Peak window for older pairs (>5 min)
+PEAK_WINDOW_NEW = 90       # Peak window for new pairs (<10 min) - v5.1
+PEAK_WINDOW_OLD = 180      # Peak window for older pairs (>10 min) - v5.1
 
 # Cooldown rules (avoid parabolic tops)
 # New (<5 min): h1 >+100% → wait 60s before buying
@@ -83,7 +83,7 @@ CHECK_BLACKLIST = True
 TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
 
 # Simulation
-SIM_RESET_TIMESTAMP = '2026-04-11T01:49:00.000000'  # Fresh start at 1.0 SOL
+SIM_RESET_TIMESTAMP = '2026-04-11T01:50:00.000000'  # Fresh start at 1.0 SOL
 CHRIS_STARTING_BALANCE = 1.0
 
 # Scan intervals
