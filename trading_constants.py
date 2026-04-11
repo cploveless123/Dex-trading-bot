@@ -22,24 +22,24 @@ MIN_BS_RATIO = 1.5         # BS ratio (kept for compatibility)
 MIN_BS_NEW = 0.2          # Pairs <5 min old
 MIN_BS_OLD = 0.9          # Pairs >5 min old
 
-# Exit Plan v5.1 - Progressive selling with tighter stops
-TP1_PERCENT = 35           # +35% → sell 22%, trail 26%
-TP1_TRAILING_PCT = 26
-TP1_SELL_PCT = 22
-TP2_PERCENT = 100          # +100% → sell 22%, trail 26%
-TP2_TRAILING_PCT = 26
-TP2_SELL_PCT = 22
-TP3_PERCENT = 200          # +200% → sell 22%, trail 26%
-TP3_TRAILING_PCT = 26
-TP3_SELL_PCT = 22
-TP4_PERCENT = 300          # +300% → sell 22%
-TP4_TRAILING_PCT = 26
-TP4_SELL_PCT = 22
-TP5_PERCENT = 1000         # +1000% → sell remaining 12%
-TP5_TRAILING_PCT = 26
-TP5_SELL_PCT = 12
-TRAILING_STOP_PCT = 26    # 26% from peak on remaining
-STOP_LOSS_PERCENT = -20    # -20% stop (tighter than before)
+# Exit Plan v5.2 - Progressive selling with front-loaded wins
+TP1_PERCENT = 35           # +35% → sell 10%, trail 30%
+TP1_TRAILING_PCT = 30
+TP1_SELL_PCT = 10
+TP2_PERCENT = 100          # +100% → sell 35%, trail 30%
+TP2_TRAILING_PCT = 30
+TP2_SELL_PCT = 35
+TP3_PERCENT = 200          # +200% → sell 35%, trail 30%
+TP3_TRAILING_PCT = 30
+TP3_SELL_PCT = 35
+TP4_PERCENT = 300          # +300% → sell 10%
+TP4_TRAILING_PCT = 20
+TP4_SELL_PCT = 10
+TP5_PERCENT = 1000         # +1000% → sell remaining 10%
+TP5_TRAILING_PCT = 20
+TP5_SELL_PCT = 10
+TRAILING_STOP_PCT = 20    # 20% from peak on remaining
+STOP_LOSS_PERCENT = -20    # -20% stop
 
 # Slippage & Tax Correction
 SLIPPAGE_TAX_COST = 0.025   # ~2.5% per round trip
