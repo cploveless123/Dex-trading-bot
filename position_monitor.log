@@ -93,3 +93,4 @@ Error: local variable 'gains_pct' referenced before assignment
 [STOP_LOSS] Alert sent
 🔴 ALLIES STOP LOSS @ $3,041 (-71.4%)
 [16:44:54] Monitor alive | 145 checks | 0 open | next in 5s
+[16:45:54] Monitor alive | 157 checks | 0 open | next in 5s

@@ -113,6 +113,12 @@ def check_should_buy(addr, p, sym, dex, m, v, v5, bs, buys, sells, holders, pair
             return False, f"ATH reject: {divergence:.0f}% from ATH (parabolic)"
     
     if early_momentum:
+        # Even early momentum needs to pass anti-momentum check
+        # Reject if chg5 > +15% (still chasing) - extreme pumps excluded
+        if chg5 > 50:
+            return False, f"chg5 +{chg5:.1f}% (extreme pump)"
+        if chg5 > 15:
+            return False, f"chg5 +{chg5:.1f}% (momentum pump, not dip)"
         return True, f"EARLY_MOMENTUM: mcap ${m:,.0f} + vol/mcap {v5m_ratio:.1f}x"
     
     # === BS RATIO FILTERS ===
