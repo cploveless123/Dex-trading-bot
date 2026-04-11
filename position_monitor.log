@@ -18,3 +18,164 @@ Checking every 5s
 [08:27:26] Monitor alive | 157 checks | 0 open | next in 5s
 [08:28:26] Monitor alive | 169 checks | 0 open | next in 5s
 [08:29:26] Monitor alive | 181 checks | 0 open | next in 5s
+[08:30:26] Monitor alive | 193 checks | 0 open | next in 5s
+[08:31:26] Monitor alive | 205 checks | 0 open | next in 5s
+[08:32:26] Monitor alive | 217 checks | 0 open | next in 5s
+  SELLECK: mcap=$11,656 | gain=+0.0% | peak=$11,656 | dd=+0%
+  SELLECK: mcap=$11,656 | gain=+0.0% | peak=$11,656 | dd=+0%
+  SELLECK: mcap=$11,656 | gain=+0.0% | peak=$11,656 | dd=+0%
+  SELLECK: mcap=$11,656 | gain=+0.0% | peak=$11,656 | dd=+0%
+  SELLECK: mcap=$11,656 | gain=+0.0% | peak=$11,656 | dd=+0%
+  SELLECK: mcap=$11,870 | gain=+1.8% | peak=$11,870 | dd=+0%
+  SELLECK: mcap=$11,870 | gain=+1.8% | peak=$11,870 | dd=+0%
+  SELLECK: mcap=$11,870 | gain=+1.8% | peak=$11,870 | dd=+0%
+  SELLECK: mcap=$11,870 | gain=+1.8% | peak=$11,870 | dd=+0%
+[08:33:27] Monitor alive | 229 checks | 1 open | next in 5s
+  SELLECK: mcap=$11,870 | gain=+1.8% | peak=$11,870 | dd=+0%
+  SELLECK: mcap=$11,870 | gain=+1.8% | peak=$11,870 | dd=+0%
+  SELLECK: mcap=$12,148 | gain=+4.2% | peak=$12,148 | dd=+0%
+  SELLECK: mcap=$12,148 | gain=+4.2% | peak=$12,148 | dd=+0%
+  SELLECK: mcap=$12,148 | gain=+4.2% | peak=$12,148 | dd=+0%
+  SELLECK: mcap=$12,148 | gain=+4.2% | peak=$12,148 | dd=+0%
+  SELLECK: mcap=$12,148 | gain=+4.2% | peak=$12,148 | dd=+0%
+  SELLECK: mcap=$12,148 | gain=+4.2% | peak=$12,148 | dd=+0%
+  SELLECK: mcap=$12,264 | gain=+5.2% | peak=$12,264 | dd=+0%
+  SELLECK: mcap=$12,264 | gain=+5.2% | peak=$12,264 | dd=+0%
+  SELLECK: mcap=$12,264 | gain=+5.2% | peak=$12,264 | dd=+0%
+  SELLECK: mcap=$12,264 | gain=+5.2% | peak=$12,264 | dd=+0%
+[08:34:28] Monitor alive | 241 checks | 1 open | next in 5s
+  SELLECK: mcap=$12,264 | gain=+5.2% | peak=$12,264 | dd=+0%
+  SELLECK: mcap=$12,264 | gain=+5.2% | peak=$12,264 | dd=+0%
+  SELLECK: mcap=$11,339 | gain=-2.7% | peak=$12,264 | dd=+0%
+  SELLECK: mcap=$11,339 | gain=-2.7% | peak=$12,264 | dd=+0%
+  SELLECK: mcap=$11,339 | gain=-2.7% | peak=$12,264 | dd=+0%
+  SELLECK: mcap=$11,339 | gain=-2.7% | peak=$12,264 | dd=+0%
+  SELLECK: mcap=$11,339 | gain=-2.7% | peak=$12,264 | dd=+0%
+  SELLECK: mcap=$11,339 | gain=-2.7% | peak=$12,264 | dd=+0%
+  SELLECK: mcap=$12,280 | gain=+5.4% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$12,280 | gain=+5.4% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$12,280 | gain=+5.4% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$12,280 | gain=+5.4% | peak=$12,280 | dd=+0%
+[08:35:29] Monitor alive | 253 checks | 1 open | next in 5s
+  SELLECK: mcap=$12,280 | gain=+5.4% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$12,280 | gain=+5.4% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$11,756 | gain=+0.9% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$11,756 | gain=+0.9% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$11,756 | gain=+0.9% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$11,756 | gain=+0.9% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$11,756 | gain=+0.9% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$11,756 | gain=+0.9% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$11,847 | gain=+1.6% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$11,847 | gain=+1.6% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$11,847 | gain=+1.6% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$11,847 | gain=+1.6% | peak=$12,280 | dd=+0%
+[08:36:29] Monitor alive | 265 checks | 1 open | next in 5s
+  SELLECK: mcap=$11,847 | gain=+1.6% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$11,847 | gain=+1.6% | peak=$12,280 | dd=+0%
+  SELLECK: mcap=$12,572 | gain=+7.9% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,572 | gain=+7.9% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,572 | gain=+7.9% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,572 | gain=+7.9% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,572 | gain=+7.9% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,572 | gain=+7.9% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,559 | gain=-0.8% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,559 | gain=-0.8% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,559 | gain=-0.8% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,559 | gain=-0.8% | peak=$12,572 | dd=+0%
+[08:37:30] Monitor alive | 277 checks | 1 open | next in 5s
+  SELLECK: mcap=$11,559 | gain=-0.8% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,559 | gain=-0.8% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$10,656 | gain=-8.6% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$10,656 | gain=-8.6% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$10,656 | gain=-8.6% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$10,656 | gain=-8.6% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$10,656 | gain=-8.6% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$10,656 | gain=-8.6% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,061 | gain=+3.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,061 | gain=+3.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,061 | gain=+3.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,061 | gain=+3.5% | peak=$12,572 | dd=+0%
+[08:38:31] Monitor alive | 289 checks | 1 open | next in 5s
+  SELLECK: mcap=$12,061 | gain=+3.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,061 | gain=+3.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,683 | gain=+0.2% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,683 | gain=+0.2% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,683 | gain=+0.2% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,683 | gain=+0.2% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,683 | gain=+0.2% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,683 | gain=+0.2% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,009 | gain=-5.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,009 | gain=-5.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,009 | gain=-5.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,009 | gain=-5.5% | peak=$12,572 | dd=+0%
+[08:39:32] Monitor alive | 301 checks | 1 open | next in 5s
+  SELLECK: mcap=$11,009 | gain=-5.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,009 | gain=-5.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,714 | gain=+0.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,714 | gain=+0.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,714 | gain=+0.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,714 | gain=+0.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,714 | gain=+0.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$11,714 | gain=+0.5% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,350 | gain=+6.0% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,350 | gain=+6.0% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,350 | gain=+6.0% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,350 | gain=+6.0% | peak=$12,572 | dd=+0%
+[08:40:33] Monitor alive | 313 checks | 1 open | next in 5s
+  SELLECK: mcap=$12,350 | gain=+6.0% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,350 | gain=+6.0% | peak=$12,572 | dd=+0%
+  SELLECK: mcap=$12,642 | gain=+8.5% | peak=$12,642 | dd=+0%
+  SELLECK: mcap=$12,642 | gain=+8.5% | peak=$12,642 | dd=+0%
+  SELLECK: mcap=$12,642 | gain=+8.5% | peak=$12,642 | dd=+0%
+  SELLECK: mcap=$12,642 | gain=+8.5% | peak=$12,642 | dd=+0%
+  SELLECK: mcap=$12,642 | gain=+8.5% | peak=$12,642 | dd=+0%
+  SELLECK: mcap=$12,734 | gain=+9.3% | peak=$12,734 | dd=+0%
+  SELLECK: mcap=$12,734 | gain=+9.3% | peak=$12,734 | dd=+0%
+  SELLECK: mcap=$12,734 | gain=+9.3% | peak=$12,734 | dd=+0%
+  SELLECK: mcap=$12,734 | gain=+9.3% | peak=$12,734 | dd=+0%
+  SELLECK: mcap=$12,734 | gain=+9.3% | peak=$12,734 | dd=+0%
+[08:41:34] Monitor alive | 325 checks | 1 open | next in 5s
+  SELLECK: mcap=$12,734 | gain=+9.3% | peak=$12,734 | dd=+0%
+  SELLECK: mcap=$13,067 | gain=+12.1% | peak=$13,067 | dd=+0%
+  SELLECK: mcap=$13,067 | gain=+12.1% | peak=$13,067 | dd=+0%
+  SELLECK: mcap=$13,067 | gain=+12.1% | peak=$13,067 | dd=+0%
+  SELLECK: mcap=$13,067 | gain=+12.1% | peak=$13,067 | dd=+0%
+  SELLECK: mcap=$13,067 | gain=+12.1% | peak=$13,067 | dd=+0%
+  SELLECK: mcap=$13,067 | gain=+12.1% | peak=$13,067 | dd=+0%
+  SELLECK: mcap=$13,218 | gain=+13.4% | peak=$13,218 | dd=+0%
+  SELLECK: mcap=$13,218 | gain=+13.4% | peak=$13,218 | dd=+0%
+  SELLECK: mcap=$13,218 | gain=+13.4% | peak=$13,218 | dd=+0%
+  SELLECK: mcap=$13,218 | gain=+13.4% | peak=$13,218 | dd=+0%
+  SELLECK: mcap=$13,218 | gain=+13.4% | peak=$13,218 | dd=+0%
+[08:42:35] Monitor alive | 337 checks | 1 open | next in 5s
+  SELLECK: mcap=$13,218 | gain=+13.4% | peak=$13,218 | dd=+0%
+  SELLECK: mcap=$13,539 | gain=+16.2% | peak=$13,539 | dd=+0%
+  SELLECK: mcap=$13,539 | gain=+16.2% | peak=$13,539 | dd=+0%
+  SELLECK: mcap=$13,539 | gain=+16.2% | peak=$13,539 | dd=+0%
+  SELLECK: mcap=$13,539 | gain=+16.2% | peak=$13,539 | dd=+0%
+  SELLECK: mcap=$13,539 | gain=+16.2% | peak=$13,539 | dd=+0%
+  SELLECK: mcap=$13,539 | gain=+16.2% | peak=$13,539 | dd=+0%
+  SELLECK: mcap=$14,045 | gain=+20.5% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$14,045 | gain=+20.5% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$14,045 | gain=+20.5% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$14,045 | gain=+20.5% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$14,045 | gain=+20.5% | peak=$14,045 | dd=+0%
+[08:43:36] Monitor alive | 349 checks | 1 open | next in 5s
+  SELLECK: mcap=$14,045 | gain=+20.5% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$13,776 | gain=+18.2% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$13,776 | gain=+18.2% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$13,776 | gain=+18.2% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$13,776 | gain=+18.2% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$13,776 | gain=+18.2% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$13,776 | gain=+18.2% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$11,270 | gain=-3.3% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$11,270 | gain=-3.3% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$11,270 | gain=-3.3% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$11,270 | gain=-3.3% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$11,270 | gain=-3.3% | peak=$14,045 | dd=+0%
+[08:44:37] Monitor alive | 361 checks | 1 open | next in 5s
+  SELLECK: mcap=$11,270 | gain=-3.3% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$12,558 | gain=+7.7% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$12,558 | gain=+7.7% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$12,558 | gain=+7.7% | peak=$14,045 | dd=+0%
+  SELLECK: mcap=$12,558 | gain=+7.7% | peak=$14,045 | dd=+0%
