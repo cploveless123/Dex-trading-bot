@@ -160,9 +160,9 @@ def check_should_buy(addr, p, sym, dex, m, v, v5, bs, buys, sells, holders, pair
     
     # === HOLDERS/LIQUIDITY: Use GMGN as primary, DexScreener as backup ===
     gmgn_data = get_gmgn_data(addr)
-    holders = gmgn_data.get('holder_count', 0) if gmgn_data else 0
-    top10 = gmgn_data.get('top_10_holder_rate', 0) if gmgn_data else 0
-    gmgn_liq = gmgn_data.get('liquidity', 0) if gmgn_data else 0
+    holders = int(gmgn_data.get('holder_count', 0)) if gmgn_data and gmgn_data.get('holder_count') else 0
+    top10 = float(gmgn_data.get('top_10_holder_rate', 0)) if gmgn_data and gmgn_data.get('top_10_holder_rate') else 0.0
+    gmgn_liq = float(gmgn_data.get('liquidity', 0)) if gmgn_data and gmgn_data.get('liquidity') else 0.0
     
     # Fall back to DexScreener if GMGN doesn't have it
     if holders == 0:

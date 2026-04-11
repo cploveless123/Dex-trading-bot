@@ -697,3 +697,5 @@ Git backup...
 To https://github.com/cploveless123/Dex-trading-bot.git
    455d683..e37c48c  master -> master
 [17:26:47] Systems: 3/3
+[Sat Apr 11 10:05:01 PM UTC 2026] position_monitor DOWN - restarting
+[Sat Apr 11 10:05:06 PM UTC 2026] Systems restarted - whale:2 monitor:1 alert:2 auto:1

@@ -228,6 +228,9 @@ def scan_token(addr):
         gmgn_liq = gmgn_data.get('liquidity', 0) if gmgn_data else 0
         
         # Use GMGN holders/liquidity as primary, DexScreener as backup
+        gmgn_holders = int(gmgn_holders) if gmgn_holders else 0
+        gmgn_top10 = float(gmgn_top10) if gmgn_top10 else 0.0
+        gmgn_liq = float(gmgn_liq) if gmgn_liq else 0.0
         holders = gmgn_holders if gmgn_holders > 0 else int(p.get('holders', 0) or 0)
         top10 = gmgn_top10 if gmgn_top10 > 0 else float(p.get('topHolderPercent', 0) or 0)
         liq = gmgn_liq if gmgn_liq > 0 else float(p.get('liquidity', {}).get('usd', 0) or 0)
