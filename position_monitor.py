@@ -157,26 +157,22 @@ def check_positions():
             print(f"🔴 {sym} STOP LOSS @ ${mcap:,.0f} ({gains_pct:.1f}%)")
             continue
 
-        # === TP1 HIT (+50% minimum → 10% trailing from peak) ===
-        if not tp1_sold:
-            if gains_pct >= TP1_PERCENT:
-                if peak > entry:
-                    drawdown_from_peak = ((peak - mcap) / peak) * 100
-                    if drawdown_from_peak >= TP1_TRAILING_PCT:
-                        t['tp1_sold'] = True
-                        t['partial_exit'] = True
-                        t['status'] = 'open_partial'
-                        t['closed_at'] = datetime.utcnow().isoformat()
-                        t['exit_reason'] = 'TP1_AUTO'
-                        sell_pct = (mcap - entry) / entry * 100
-                        pnl_tp1 = POSITION_SIZE * TP1_SELL_PCT / 100 * (sell_pct / 100)
-                        t['pnl_sol'] = pnl_tp1
-                        t['pnl_pct'] = sell_pct
-                        cache['baseline'] = mcap
-                        cache['peak_mcap'] = mcap
-                        save_peak_cache(peak_cache)
-                        updated = True
-                        msg = f"""🏆 TP1 (+{TP1_PERCENT}% → {TP1_TRAILING_PCT}% trailing) | {datetime.utcnow().strftime('%H:%M UTC')}
+        # === TP1 HIT (+35% → sell 22%) ===
+        if not tp1_sold and gains_pct >= TP1_PERCENT:
+            t['tp1_sold'] = True
+            t['partial_exit'] = True
+            t['status'] = 'open_partial'
+            t['closed_at'] = datetime.utcnow().isoformat()
+            t['exit_reason'] = 'TP1_AUTO'
+            sell_pct = (mcap - entry) / entry * 100
+            pnl_tp1 = POSITION_SIZE * TP1_SELL_PCT / 100 * (sell_pct / 100)
+            t['pnl_sol'] = pnl_tp1
+            t['pnl_pct'] = sell_pct
+            cache['baseline'] = mcap
+            cache['peak_mcap'] = mcap
+            save_peak_cache(peak_cache)
+            updated = True
+            msg = f"""🏆 TP1 (+{TP1_PERCENT}% → sell {TP1_SELL_PCT}%) | {datetime.utcnow().strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
 💰 {sym}
 📍 Entry MC: ${int(entry):,}
@@ -193,11 +189,11 @@ def check_positions():
 📈 TP2: +{TP2_PERCENT}% → Sell {TP2_SELL_PCT}% more
 📈 TP3: +{TP3_PERCENT}% → Sell remaining {TP3_SELL_PCT}%
 📊 Trailing: {TRAILING_STOP_PCT}% from peak"""
-                        send_alert(msg, "TP1")
-                        print(f"✅ {sym} TP1 HIT @ ${mcap:,.0f} (+{sell_pct:.1f}%)")
-                        continue
+            send_alert(msg, "TP1")
+            print(f"✅ {sym} TP1 HIT @ ${mcap:,.0f} (+{sell_pct:.1f}%)")
+            continue
 
-        # === TP2 HIT (+200%) ===
+    # === TP2 HIT (+100%) ===
         if tp1_sold and not tp2_sold:
             if gains_pct >= TP2_PERCENT:
                 t['tp2_sold'] = True
