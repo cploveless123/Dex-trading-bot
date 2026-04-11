@@ -484,3 +484,32 @@ Checking every 5s
   SYS32: mcap=$13,982 | gain=+14.3% | peak=$15,348 | dd=+9%
 [TRAILING_STOP] Alert sent
 ✅ cat TRAILING STOP @ $4,258 (80% drop from peak)
+  SYS32: mcap=$13,982 | gain=+14.3% | peak=$15,348 | dd=+9%
+  SYS32: mcap=$13,982 | gain=+14.3% | peak=$15,348 | dd=+9%
+  SYS32: mcap=$13,982 | gain=+14.3% | peak=$15,348 | dd=+9%
+  SYS32: mcap=$13,792 | gain=+12.7% | peak=$15,348 | dd=+10%
+  SYS32: mcap=$13,792 | gain=+12.7% | peak=$15,348 | dd=+10%
+  SYS32: mcap=$13,792 | gain=+12.7% | peak=$15,348 | dd=+10%
+  SYS32: mcap=$13,792 | gain=+12.7% | peak=$15,348 | dd=+10%
+  SYS32: mcap=$13,792 | gain=+12.7% | peak=$15,348 | dd=+10%
+  SYS32: mcap=$13,792 | gain=+12.7% | peak=$15,348 | dd=+10%
+  SYS32: mcap=$14,280 | gain=+16.7% | peak=$15,348 | dd=+7%
+  SYS32: mcap=$14,280 | gain=+16.7% | peak=$15,348 | dd=+7%
+[19:33:49] Monitor alive | 373 checks | 1 open | next in 5s
+  SYS32: mcap=$14,280 | gain=+16.7% | peak=$15,348 | dd=+7%
+  SYS32: mcap=$14,280 | gain=+16.7% | peak=$15,348 | dd=+7%
+  SYS32: mcap=$14,280 | gain=+16.7% | peak=$15,348 | dd=+7%
+  SYS32: mcap=$14,280 | gain=+16.7% | peak=$15,348 | dd=+7%
+  SYS32: mcap=$13,894 | gain=+13.5% | peak=$15,348 | dd=+9%
+  SYS32: mcap=$13,894 | gain=+13.5% | peak=$15,348 | dd=+9%
+  SYS32: mcap=$13,894 | gain=+13.5% | peak=$15,348 | dd=+9%
+  SYS32: mcap=$13,894 | gain=+13.5% | peak=$15,348 | dd=+9%
+  SYS32: mcap=$13,894 | gain=+13.5% | peak=$15,348 | dd=+9%
+  SYS32: mcap=$13,894 | gain=+13.5% | peak=$15,348 | dd=+9%
+  SYS32: mcap=$13,385 | gain=+9.4% | peak=$15,348 | dd=+13%
+  SYS32: mcap=$13,385 | gain=+9.4% | peak=$15,348 | dd=+13%
+[19:34:49] Monitor alive | 385 checks | 1 open | next in 5s
+  SYS32: mcap=$13,385 | gain=+9.4% | peak=$15,348 | dd=+13%
+  SYS32: mcap=$13,385 | gain=+9.4% | peak=$15,348 | dd=+13%
+  SYS32: mcap=$13,385 | gain=+9.4% | peak=$15,348 | dd=+13%
+  SYS32: mcap=$13,385 | gain=+9.4% | peak=$15,348 | dd=+13%

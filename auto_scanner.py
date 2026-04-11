@@ -185,6 +185,10 @@ def check_should_buy(addr, p, sym, dex, m, v, v5, bs, buys, sells, holders, pair
     # (strong h1 proves sustained buying pressure, high 5m is continuation not a rug)
     sustained_momentum = chg60 > 100 and m < 60000
     
+    # Falling knife check - reject if price is still falling on 5m
+    if chg5 < 0:
+        return False, f"chg5 {chg5:+.1f}% (falling knife, not a dip)"
+    
     if chg5 > 50:
         return False, f"chg5 +{chg5:.1f}% (extreme pump)"
     if chg5 > 15 and not sustained_momentum:

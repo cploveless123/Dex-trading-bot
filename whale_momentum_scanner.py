@@ -288,6 +288,10 @@ def scan_token(addr):
         # EXCEPTION: Sustained momentum - if h1 > +100% and mcap < $60K, allow up to +50%
         sustained_momentum = chg60 > 100 and m < 60000
         
+        # Falling knife check - reject if price is still falling on 5m
+        if chg5 < 0:
+            return None, f"B: chg5 {chg5:+.1f}% (falling knife, not a dip)"
+        
         if chg5 > 50:
             return None, f"B: chg5 +{chg5:.1f}% (extreme pump)"
         if chg5 > 15 and not sustained_momentum:
