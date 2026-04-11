@@ -169,3 +169,60 @@ Checking every 5s
 [04:01:54] Monitor alive | 181 checks | 0 open | next in 5s
 [04:02:54] Monitor alive | 193 checks | 0 open | next in 5s
 [04:03:54] Monitor alive | 205 checks | 0 open | next in 5s
+[04:04:54] Monitor alive | 217 checks | 0 open | next in 5s
+[04:05:54] Monitor alive | 229 checks | 0 open | next in 5s
+[04:06:54] Monitor alive | 241 checks | 0 open | next in 5s
+[04:07:55] Monitor alive | 253 checks | 0 open | next in 5s
+[04:08:55] Monitor alive | 265 checks | 0 open | next in 5s
+[04:09:55] Monitor alive | 277 checks | 0 open | next in 5s
+  (F)art: mcap=$11,053 | gain=+0.0% | peak=$11,053 | dd=+0%
+  (F)art: mcap=$11,053 | gain=+0.0% | peak=$11,053 | dd=+0%
+  (F)art: mcap=$11,053 | gain=+0.0% | peak=$11,053 | dd=+0%
+[04:10:55] Monitor alive | 289 checks | 1 open | next in 5s
+  (F)art: mcap=$11,053 | gain=+0.0% | peak=$11,053 | dd=+0%
+  (F)art: mcap=$11,321 | gain=+2.4% | peak=$11,321 | dd=+0%
+  (F)art: mcap=$11,321 | gain=+2.4% | peak=$11,321 | dd=+0%
+  (F)art: mcap=$11,321 | gain=+2.4% | peak=$11,321 | dd=+0%
+  (F)art: mcap=$11,321 | gain=+2.4% | peak=$11,321 | dd=+0%
+  (F)art: mcap=$11,321 | gain=+2.4% | peak=$11,321 | dd=+0%
+  (F)art: mcap=$11,321 | gain=+2.4% | peak=$11,321 | dd=+0%
+  (F)art: mcap=$8,913 | gain=-19.4% | peak=$11,321 | dd=+0%
+  (F)art: mcap=$8,913 | gain=-19.4% | peak=$11,321 | dd=+0%
+  (F)art: mcap=$8,913 | gain=-19.4% | peak=$11,321 | dd=+0%
+  (F)art: mcap=$8,913 | gain=-19.4% | peak=$11,321 | dd=+0%
+  (F)art: mcap=$8,913 | gain=-19.4% | peak=$11,321 | dd=+0%
+[04:11:56] Monitor alive | 301 checks | 1 open | next in 5s
+  (F)art: mcap=$8,913 | gain=-19.4% | peak=$11,321 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 (F)art STOP LOSS @ $6,947 (-37.1%)
+[04:12:56] Monitor alive | 313 checks | 0 open | next in 5s
+  bunbun: mcap=$73,427 | gain=+0.0% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$73,427 | gain=+0.0% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$73,427 | gain=+0.0% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$73,427 | gain=+0.0% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$68,235 | gain=-7.1% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$68,235 | gain=-7.1% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$68,235 | gain=-7.1% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$68,235 | gain=-7.1% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$68,235 | gain=-7.1% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$68,235 | gain=-7.1% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$69,636 | gain=-5.2% | peak=$73,427 | dd=+0%
+[04:13:57] Monitor alive | 325 checks | 1 open | next in 5s
+  bunbun: mcap=$69,636 | gain=-5.2% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$69,636 | gain=-5.2% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$69,636 | gain=-5.2% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$69,636 | gain=-5.2% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$69,636 | gain=-5.2% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$59,533 | gain=-18.9% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$59,533 | gain=-18.9% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$59,533 | gain=-18.9% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$59,533 | gain=-18.9% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$59,533 | gain=-18.9% | peak=$73,427 | dd=+0%
+  bunbun: mcap=$59,533 | gain=-18.9% | peak=$73,427 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 bunbun STOP LOSS @ $57,958 (-21.1%)
+[04:14:59] Monitor alive | 337 checks | 0 open | next in 5s
+[04:15:59] Monitor alive | 349 checks | 0 open | next in 5s
+[04:16:59] Monitor alive | 361 checks | 0 open | next in 5s
+[04:17:59] Monitor alive | 373 checks | 0 open | next in 5s
+[04:18:59] Monitor alive | 385 checks | 0 open | next in 5s
