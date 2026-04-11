@@ -2989,3 +2989,76 @@ Checking every 5s
   DICKTATOR: mcap=$14,376 | gain=+59.9% | peak=$15,493 | dd=-15%
   DICKTATOR: mcap=$14,376 | gain=+59.9% | peak=$15,493 | dd=-15%
 [11:59:58] Monitor alive | 2665 checks | 0 open | next in 5s
+  DICKTATOR: mcap=$13,469 | gain=+49.9% | peak=$15,493 | dd=-8%
+  DICKTATOR: mcap=$13,469 | gain=+49.9% | peak=$15,493 | dd=-8%
+  DICKTATOR: mcap=$13,469 | gain=+49.9% | peak=$15,493 | dd=-8%
+  DICKTATOR: mcap=$13,469 | gain=+49.9% | peak=$15,493 | dd=-8%
+  DICKTATOR: mcap=$13,469 | gain=+49.9% | peak=$15,493 | dd=-8%
+  DICKTATOR: mcap=$13,469 | gain=+49.9% | peak=$15,493 | dd=-8%
+[TRAILING_STOP] Alert sent
+✅ DICKTATOR TRAILING STOP @ $12,075 (22% drop from peak)
+[12:00:59] Monitor alive | 2677 checks | 0 open | next in 5s
+[12:01:59] Monitor alive | 2689 checks | 0 open | next in 5s
+[12:02:59] Monitor alive | 2701 checks | 0 open | next in 5s
+[12:03:59] Monitor alive | 2713 checks | 0 open | next in 5s
+[12:05:00] Monitor alive | 2725 checks | 0 open | next in 5s
+[12:06:00] Monitor alive | 2737 checks | 0 open | next in 5s
+[12:07:00] Monitor alive | 2749 checks | 0 open | next in 5s
+[12:08:00] Monitor alive | 2761 checks | 0 open | next in 5s
+[12:09:00] Monitor alive | 2773 checks | 0 open | next in 5s
+[12:10:00] Monitor alive | 2785 checks | 0 open | next in 5s
+  GoldDancer: mcap=$52,904 | gain=+0.0% | peak=$52,904 | dd=+0%
+  GoldDancer: mcap=$52,904 | gain=+0.0% | peak=$52,904 | dd=+0%
+  GoldDancer: mcap=$52,904 | gain=+0.0% | peak=$52,904 | dd=+0%
+  GoldDancer: mcap=$52,904 | gain=+0.0% | peak=$52,904 | dd=+0%
+  GoldDancer: mcap=$52,926 | gain=+0.0% | peak=$52,926 | dd=+0%
+  GoldDancer: mcap=$52,926 | gain=+0.0% | peak=$52,926 | dd=+0%
+[12:11:00] Monitor alive | 2797 checks | 1 open | next in 5s
+  GoldDancer: mcap=$52,926 | gain=+0.0% | peak=$52,926 | dd=+0%
+  GoldDancer: mcap=$52,926 | gain=+0.0% | peak=$52,926 | dd=+0%
+  GoldDancer: mcap=$52,926 | gain=+0.0% | peak=$52,926 | dd=+0%
+  GoldDancer: mcap=$52,926 | gain=+0.0% | peak=$52,926 | dd=+0%
+  GoldDancer: mcap=$62,304 | gain=+17.8% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$62,304 | gain=+17.8% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$62,304 | gain=+17.8% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$62,304 | gain=+17.8% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$62,304 | gain=+17.8% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,640 | gain=+10.8% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,640 | gain=+10.8% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,640 | gain=+10.8% | peak=$62,304 | dd=+0%
+[12:12:01] Monitor alive | 2809 checks | 1 open | next in 5s
+  GoldDancer: mcap=$58,640 | gain=+10.8% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,640 | gain=+10.8% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,640 | gain=+10.8% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,736 | gain=+11.0% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,736 | gain=+11.0% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,736 | gain=+11.0% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,736 | gain=+11.0% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,736 | gain=+11.0% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,736 | gain=+11.0% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,143 | gain=+9.9% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,143 | gain=+9.9% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,143 | gain=+9.9% | peak=$62,304 | dd=+0%
+[12:13:02] Monitor alive | 2821 checks | 1 open | next in 5s
+  GoldDancer: mcap=$58,143 | gain=+9.9% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,143 | gain=+9.9% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$58,143 | gain=+9.9% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$56,679 | gain=+7.1% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$56,679 | gain=+7.1% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$56,679 | gain=+7.1% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$56,679 | gain=+7.1% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$56,679 | gain=+7.1% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$56,679 | gain=+7.1% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$56,614 | gain=+7.0% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$56,614 | gain=+7.0% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$56,614 | gain=+7.0% | peak=$62,304 | dd=+0%
+[12:14:03] Monitor alive | 2833 checks | 1 open | next in 5s
+  GoldDancer: mcap=$56,614 | gain=+7.0% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$56,614 | gain=+7.0% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$56,614 | gain=+7.0% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$55,589 | gain=+5.1% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$55,589 | gain=+5.1% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$55,589 | gain=+5.1% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$55,589 | gain=+5.1% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$55,589 | gain=+5.1% | peak=$62,304 | dd=+0%
+  GoldDancer: mcap=$55,589 | gain=+5.1% | peak=$62,304 | dd=+0%
