@@ -1779,3 +1779,186 @@ Checking every 5s
 [STOP_LOSS] Alert sent
 🔴 fishious STOP LOSS @ $12,364 (-25.0%)
 [10:44:31] Monitor alive | 1777 checks | 0 open | next in 5s
+[10:45:31] Monitor alive | 1789 checks | 0 open | next in 5s
+  NOBIKO: mcap=$77,131 | gain=+0.0% | peak=$77,131 | dd=+0%
+  NOBIKO: mcap=$77,131 | gain=+0.0% | peak=$77,131 | dd=+0%
+  NOBIKO: mcap=$77,131 | gain=+0.0% | peak=$77,131 | dd=+0%
+[10:46:31] Monitor alive | 1801 checks | 1 open | next in 5s
+  NOBIKO: mcap=$77,131 | gain=+0.0% | peak=$77,131 | dd=+0%
+  NOBIKO: mcap=$83,603 | gain=+8.4% | peak=$83,603 | dd=+0%
+  NOBIKO: mcap=$83,603 | gain=+8.4% | peak=$83,603 | dd=+0%
+  NOBIKO: mcap=$83,603 | gain=+8.4% | peak=$83,603 | dd=+0%
+  NOBIKO: mcap=$83,603 | gain=+8.4% | peak=$83,603 | dd=+0%
+  NOBIKO: mcap=$83,603 | gain=+8.4% | peak=$83,603 | dd=+0%
+  NOBIKO: mcap=$83,603 | gain=+8.4% | peak=$83,603 | dd=+0%
+  NOBIKO: mcap=$86,163 | gain=+11.7% | peak=$86,163 | dd=+0%
+  NOBIKO: mcap=$86,163 | gain=+11.7% | peak=$86,163 | dd=+0%
+  NOBIKO: mcap=$86,163 | gain=+11.7% | peak=$86,163 | dd=+0%
+  NOBIKO: mcap=$86,163 | gain=+11.7% | peak=$86,163 | dd=+0%
+  NOBIKO: mcap=$86,163 | gain=+11.7% | peak=$86,163 | dd=+0%
+[10:47:32] Monitor alive | 1813 checks | 1 open | next in 5s
+  NOBIKO: mcap=$86,163 | gain=+11.7% | peak=$86,163 | dd=+0%
+  NOBIKO: mcap=$91,356 | gain=+18.4% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$91,356 | gain=+18.4% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$91,356 | gain=+18.4% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$91,356 | gain=+18.4% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$91,356 | gain=+18.4% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$91,356 | gain=+18.4% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$88,188 | gain=+14.3% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$88,188 | gain=+14.3% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$88,188 | gain=+14.3% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$88,188 | gain=+14.3% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$88,188 | gain=+14.3% | peak=$91,356 | dd=+0%
+[10:48:33] Monitor alive | 1825 checks | 1 open | next in 5s
+  NOBIKO: mcap=$88,188 | gain=+14.3% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$80,682 | gain=+4.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$80,682 | gain=+4.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$80,682 | gain=+4.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$80,682 | gain=+4.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$80,682 | gain=+4.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$80,682 | gain=+4.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$86,703 | gain=+12.4% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$86,703 | gain=+12.4% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$86,703 | gain=+12.4% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$86,703 | gain=+12.4% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$86,703 | gain=+12.4% | peak=$91,356 | dd=+0%
+[10:49:34] Monitor alive | 1837 checks | 1 open | next in 5s
+  NOBIKO: mcap=$86,703 | gain=+12.4% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$80,840 | gain=+4.8% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$80,840 | gain=+4.8% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$80,840 | gain=+4.8% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$80,840 | gain=+4.8% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$80,840 | gain=+4.8% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$80,840 | gain=+4.8% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$74,799 | gain=-3.0% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$74,799 | gain=-3.0% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$74,799 | gain=-3.0% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$74,799 | gain=-3.0% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$74,799 | gain=-3.0% | peak=$91,356 | dd=+0%
+[10:50:35] Monitor alive | 1849 checks | 1 open | next in 5s
+  NOBIKO: mcap=$74,799 | gain=-3.0% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$68,657 | gain=-11.0% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$68,657 | gain=-11.0% | peak=$91,356 | dd=+0%
+  GAMBLE: mcap=$11,423 | gain=+0.0% | peak=$11,423 | dd=+0%
+  NOBIKO: mcap=$68,657 | gain=-11.0% | peak=$91,356 | dd=+0%
+  GAMBLE: mcap=$11,423 | gain=+0.0% | peak=$11,423 | dd=+0%
+  NOBIKO: mcap=$68,657 | gain=-11.0% | peak=$91,356 | dd=+0%
+  GAMBLE: mcap=$11,423 | gain=+0.0% | peak=$11,423 | dd=+0%
+  NOBIKO: mcap=$68,657 | gain=-11.0% | peak=$91,356 | dd=+0%
+  GAMBLE: mcap=$11,423 | gain=+0.0% | peak=$11,423 | dd=+0%
+  NOBIKO: mcap=$68,657 | gain=-11.0% | peak=$91,356 | dd=+0%
+  GAMBLE: mcap=$11,423 | gain=+0.0% | peak=$11,423 | dd=+0%
+  NOBIKO: mcap=$68,656 | gain=-11.0% | peak=$91,356 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 GAMBLE STOP LOSS @ $4,790 (-58.1%)
+  NOBIKO: mcap=$68,656 | gain=-11.0% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$68,656 | gain=-11.0% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$68,656 | gain=-11.0% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$68,656 | gain=-11.0% | peak=$91,356 | dd=+0%
+[10:51:36] Monitor alive | 1861 checks | 1 open | next in 5s
+  NOBIKO: mcap=$68,656 | gain=-11.0% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$73,103 | gain=-5.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$73,103 | gain=-5.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$73,103 | gain=-5.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$73,103 | gain=-5.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$73,103 | gain=-5.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$73,103 | gain=-5.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$76,958 | gain=-0.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$76,958 | gain=-0.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$76,958 | gain=-0.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$76,958 | gain=-0.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$76,958 | gain=-0.2% | peak=$91,356 | dd=+0%
+[10:52:37] Monitor alive | 1873 checks | 1 open | next in 5s
+  NOBIKO: mcap=$89,180 | gain=+15.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$89,180 | gain=+15.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$89,180 | gain=+15.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$89,180 | gain=+15.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$89,180 | gain=+15.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$89,180 | gain=+15.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$89,918 | gain=+16.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$89,918 | gain=+16.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$89,918 | gain=+16.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$89,918 | gain=+16.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$89,918 | gain=+16.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$89,918 | gain=+16.6% | peak=$91,356 | dd=+0%
+[10:53:38] Monitor alive | 1885 checks | 1 open | next in 5s
+  NOBIKO: mcap=$78,853 | gain=+2.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,853 | gain=+2.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,853 | gain=+2.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,853 | gain=+2.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,853 | gain=+2.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,853 | gain=+2.2% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,391 | gain=+1.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,391 | gain=+1.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,391 | gain=+1.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,391 | gain=+1.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,391 | gain=+1.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,391 | gain=+1.6% | peak=$91,356 | dd=+0%
+[10:54:39] Monitor alive | 1897 checks | 1 open | next in 5s
+  NOBIKO: mcap=$85,332 | gain=+10.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$85,332 | gain=+10.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$85,332 | gain=+10.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$85,332 | gain=+10.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$85,332 | gain=+10.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$85,332 | gain=+10.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,294 | gain=+1.5% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,294 | gain=+1.5% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,294 | gain=+1.5% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,294 | gain=+1.5% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,294 | gain=+1.5% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$78,294 | gain=+1.5% | peak=$91,356 | dd=+0%
+[10:55:40] Monitor alive | 1909 checks | 1 open | next in 5s
+  NOBIKO: mcap=$69,320 | gain=-10.1% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$69,320 | gain=-10.1% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$69,320 | gain=-10.1% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$69,320 | gain=-10.1% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$69,320 | gain=-10.1% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$69,320 | gain=-10.1% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$85,344 | gain=+10.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$85,344 | gain=+10.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$85,344 | gain=+10.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$85,344 | gain=+10.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$85,344 | gain=+10.6% | peak=$91,356 | dd=+0%
+  NOBIKO: mcap=$85,344 | gain=+10.6% | peak=$91,356 | dd=+0%
+[10:56:41] Monitor alive | 1921 checks | 1 open | next in 5s
+  NOBIKO: mcap=$93,435 | gain=+21.1% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$93,435 | gain=+21.1% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$93,435 | gain=+21.1% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$93,435 | gain=+21.1% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$93,435 | gain=+21.1% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$93,435 | gain=+21.1% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$91,432 | gain=+18.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$91,432 | gain=+18.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$91,432 | gain=+18.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$91,432 | gain=+18.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$91,432 | gain=+18.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$91,432 | gain=+18.5% | peak=$93,435 | dd=+0%
+[10:57:42] Monitor alive | 1933 checks | 1 open | next in 5s
+  NOBIKO: mcap=$85,976 | gain=+11.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$85,976 | gain=+11.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$85,976 | gain=+11.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$85,976 | gain=+11.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$85,976 | gain=+11.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$85,976 | gain=+11.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$80,627 | gain=+4.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$80,627 | gain=+4.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$80,627 | gain=+4.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$80,627 | gain=+4.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$80,627 | gain=+4.5% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$80,627 | gain=+4.5% | peak=$93,435 | dd=+0%
+[10:58:43] Monitor alive | 1945 checks | 1 open | next in 5s
+  NOBIKO: mcap=$72,786 | gain=-5.6% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$72,786 | gain=-5.6% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$72,786 | gain=-5.6% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$72,786 | gain=-5.6% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$72,786 | gain=-5.6% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$72,786 | gain=-5.6% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$80,829 | gain=+4.8% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$80,829 | gain=+4.8% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$80,829 | gain=+4.8% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$80,829 | gain=+4.8% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$80,829 | gain=+4.8% | peak=$93,435 | dd=+0%
+  NOBIKO: mcap=$80,829 | gain=+4.8% | peak=$93,435 | dd=+0%
+[10:59:43] Monitor alive | 1957 checks | 1 open | next in 5s
+[STOP_LOSS] Alert sent
+🔴 NOBIKO STOP LOSS @ $2,416 (-96.9%)
