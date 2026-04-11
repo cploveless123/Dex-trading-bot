@@ -1469,3 +1469,159 @@ Checking every 5s
 [09:43:07] Monitor alive | 1045 checks | 0 open | next in 5s
 [09:44:07] Monitor alive | 1057 checks | 0 open | next in 5s
   LIFE: mcap=$5,729 | gain=+0.0% | peak=$5,729 | dd=+0%
+  LIFE: mcap=$5,729 | gain=+0.0% | peak=$5,729 | dd=+0%
+  LIFE: mcap=$5,729 | gain=+0.0% | peak=$5,729 | dd=+0%
+  LIFE: mcap=$5,972 | gain=+4.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,972 | gain=+4.2% | peak=$5,972 | dd=+0%
+[09:45:08] Monitor alive | 1069 checks | 1 open | next in 5s
+  LIFE: mcap=$5,972 | gain=+4.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,972 | gain=+4.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,972 | gain=+4.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,972 | gain=+4.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,214 | gain=-9.0% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,214 | gain=-9.0% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,214 | gain=-9.0% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,214 | gain=-9.0% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,214 | gain=-9.0% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,214 | gain=-9.0% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,587 | gain=-2.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,587 | gain=-2.5% | peak=$5,972 | dd=+0%
+[09:46:09] Monitor alive | 1081 checks | 1 open | next in 5s
+  LIFE: mcap=$5,587 | gain=-2.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,587 | gain=-2.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,587 | gain=-2.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,587 | gain=-2.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,530 | gain=-3.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,530 | gain=-3.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,530 | gain=-3.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,530 | gain=-3.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,530 | gain=-3.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,530 | gain=-3.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,539 | gain=-20.8% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,539 | gain=-20.8% | peak=$5,972 | dd=+0%
+[09:47:10] Monitor alive | 1093 checks | 1 open | next in 5s
+  LIFE: mcap=$4,539 | gain=-20.8% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,539 | gain=-20.8% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,539 | gain=-20.8% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,539 | gain=-20.8% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,460 | gain=-22.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,460 | gain=-22.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,460 | gain=-22.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,460 | gain=-22.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,460 | gain=-22.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,460 | gain=-22.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,525 | gain=-21.0% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,525 | gain=-21.0% | peak=$5,972 | dd=+0%
+[09:48:11] Monitor alive | 1105 checks | 1 open | next in 5s
+  LIFE: mcap=$4,525 | gain=-21.0% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,525 | gain=-21.0% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,525 | gain=-21.0% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,525 | gain=-21.0% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,959 | gain=-13.4% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,959 | gain=-13.4% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,959 | gain=-13.4% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,959 | gain=-13.4% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$4,959 | gain=-13.4% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,355 | gain=-6.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,355 | gain=-6.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,355 | gain=-6.5% | peak=$5,972 | dd=+0%
+[09:49:11] Monitor alive | 1117 checks | 1 open | next in 5s
+  LIFE: mcap=$5,355 | gain=-6.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,355 | gain=-6.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,355 | gain=-6.5% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,605 | gain=-2.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,605 | gain=-2.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,605 | gain=-2.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,605 | gain=-2.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,605 | gain=-2.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,605 | gain=-2.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,716 | gain=-0.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,716 | gain=-0.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,716 | gain=-0.2% | peak=$5,972 | dd=+0%
+[09:50:12] Monitor alive | 1129 checks | 1 open | next in 5s
+  LIFE: mcap=$5,716 | gain=-0.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,716 | gain=-0.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$5,716 | gain=-0.2% | peak=$5,972 | dd=+0%
+  LIFE: mcap=$6,927 | gain=+20.9% | peak=$6,927 | dd=+0%
+  LIFE: mcap=$6,927 | gain=+20.9% | peak=$6,927 | dd=+0%
+  LIFE: mcap=$6,927 | gain=+20.9% | peak=$6,927 | dd=+0%
+  LIFE: mcap=$6,927 | gain=+20.9% | peak=$6,927 | dd=+0%
+  LIFE: mcap=$6,927 | gain=+20.9% | peak=$6,927 | dd=+0%
+  LIFE: mcap=$6,927 | gain=+20.9% | peak=$6,927 | dd=+0%
+  LIFE: mcap=$6,563 | gain=+14.5% | peak=$6,927 | dd=+0%
+  LIFE: mcap=$6,563 | gain=+14.5% | peak=$6,927 | dd=+0%
+  LIFE: mcap=$6,563 | gain=+14.5% | peak=$6,927 | dd=+0%
+[09:51:13] Monitor alive | 1141 checks | 1 open | next in 5s
+  LIFE: mcap=$6,563 | gain=+14.5% | peak=$6,927 | dd=+0%
+  LIFE: mcap=$6,563 | gain=+14.5% | peak=$6,927 | dd=+0%
+  LIFE: mcap=$6,563 | gain=+14.5% | peak=$6,927 | dd=+0%
+  LIFE: mcap=$7,285 | gain=+27.2% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$7,285 | gain=+27.2% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$7,285 | gain=+27.2% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$7,285 | gain=+27.2% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$7,285 | gain=+27.2% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$7,285 | gain=+27.2% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,442 | gain=+12.5% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,442 | gain=+12.5% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,442 | gain=+12.5% | peak=$7,285 | dd=+0%
+[09:52:14] Monitor alive | 1153 checks | 1 open | next in 5s
+  LIFE: mcap=$6,442 | gain=+12.5% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,442 | gain=+12.5% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,442 | gain=+12.5% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,377 | gain=+11.3% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,377 | gain=+11.3% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,377 | gain=+11.3% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,377 | gain=+11.3% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,377 | gain=+11.3% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,377 | gain=+11.3% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,352 | gain=+10.9% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,352 | gain=+10.9% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,352 | gain=+10.9% | peak=$7,285 | dd=+0%
+[09:53:15] Monitor alive | 1165 checks | 1 open | next in 5s
+  LIFE: mcap=$6,352 | gain=+10.9% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,352 | gain=+10.9% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,352 | gain=+10.9% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,495 | gain=+13.4% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,495 | gain=+13.4% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,495 | gain=+13.4% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,495 | gain=+13.4% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,495 | gain=+13.4% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,495 | gain=+13.4% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,489 | gain=+13.3% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,489 | gain=+13.3% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,489 | gain=+13.3% | peak=$7,285 | dd=+0%
+[09:54:16] Monitor alive | 1177 checks | 1 open | next in 5s
+  LIFE: mcap=$6,489 | gain=+13.3% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,489 | gain=+13.3% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$6,489 | gain=+13.3% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$7,042 | gain=+22.9% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$7,042 | gain=+22.9% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$7,042 | gain=+22.9% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$7,042 | gain=+22.9% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$7,042 | gain=+22.9% | peak=$7,285 | dd=+0%
+  LIFE: mcap=$7,042 | gain=+22.9% | peak=$7,285 | dd=+0%
+[TP1] Alert sent
+✅ LIFE TP1 HIT @ $8,095 (+41.3%)
+  LIFE: mcap=$8,095 | gain=+41.3% | peak=$8,095 | dd=+0%
+  LIFE: mcap=$8,095 | gain=+41.3% | peak=$8,095 | dd=+0%
+[09:55:17] Monitor alive | 1189 checks | 0 open | next in 5s
+  LIFE: mcap=$8,095 | gain=+41.3% | peak=$8,095 | dd=+0%
+  LIFE: mcap=$8,095 | gain=+41.3% | peak=$8,095 | dd=+0%
+  LIFE: mcap=$8,272 | gain=+44.4% | peak=$8,272 | dd=-2%
+  LIFE: mcap=$8,272 | gain=+44.4% | peak=$8,272 | dd=-2%
+  LIFE: mcap=$8,272 | gain=+44.4% | peak=$8,272 | dd=-2%
+  LIFE: mcap=$8,272 | gain=+44.4% | peak=$8,272 | dd=-2%
+  LIFE: mcap=$8,272 | gain=+44.4% | peak=$8,272 | dd=-2%
+  LIFE: mcap=$8,272 | gain=+44.4% | peak=$8,272 | dd=-2%
+  LIFE: mcap=$7,475 | gain=+30.5% | peak=$8,272 | dd=+8%
+  LIFE: mcap=$7,475 | gain=+30.5% | peak=$8,272 | dd=+8%
+  LIFE: mcap=$7,475 | gain=+30.5% | peak=$8,272 | dd=+8%
+  LIFE: mcap=$7,475 | gain=+30.5% | peak=$8,272 | dd=+8%
+[09:56:18] Monitor alive | 1201 checks | 0 open | next in 5s
+  LIFE: mcap=$7,475 | gain=+30.5% | peak=$8,272 | dd=+8%
+  LIFE: mcap=$7,475 | gain=+30.5% | peak=$8,272 | dd=+8%
+[TRAILING_STOP] Alert sent
+✅ LIFE TRAILING STOP @ $6,240 (25% drop from peak)
+[09:57:19] Monitor alive | 1213 checks | 0 open | next in 5s
+[09:58:19] Monitor alive | 1225 checks | 0 open | next in 5s
+[09:59:19] Monitor alive | 1237 checks | 0 open | next in 5s
