@@ -203,44 +203,31 @@ def scan_token(addr):
         if liq < 1000 and m >= 50000:
             return None, None
         
+        # STRATEGY: Buy the dip, not the pump
+        # Key filter: 5m must be < +15% (reject parabolic pumps)
+        # For pump.fun: h1 can be wild, focus on 5m and dip%
+        
         if pair_age < 5:
-            # NEW PAIRS (<5 min): h1 > +50%, allow 5min dips
-            if chg60 < 50:
-                return None, f"B: new h1 <+50%"
-            if chg5 < -10:
-                return None, f"B: new 5min <-10% (too deep)"
-            if dip_pct < DIP_MIN:
-                return None, f"B: dip <{DIP_MIN}%"
-            if dip_pct > DIP_MAX:
-                return None, f"B: dip >{DIP_MAX}%"
-            # Anti-momentum: chg5 must be < +15% (dipping or mild pump)
+            # NEW PAIRS (<5 min): 5m < +15%, dip 15-50%
             if chg5 > 15:
-                return None, f"B: chg5 +{chg5:.1f}% (momentum, not dip)"
+                return None, f"B: 5m +{chg5:.1f}% (parabolic pump)"
+            if dip_pct < DIP_MIN:
+                return None, f"B: dip <{DIP_MIN}% (no pullback)"
+            if dip_pct > DIP_MAX:
+                return None, f"B: dip >{DIP_MAX}% (too deep)"
         else:
-            # OLDER PAIRS (>5 min): 24hr > +25%, h1 > -39%, 5min > -39%
-            if chg24 < 25:
-                return None, f"B: 24hr <+25%"
-            if chg60 < -39:
-                return None, f"B: h1 <-39%"
-            if chg5 < -39:
-                return None, f"B: 5min <-39%"
-            if dip_pct < DIP_MIN:
-                return None, f"B: dip <{DIP_MIN}%"
-            if dip_pct > DIP_MAX:
-                return None, f"B: dip >{DIP_MAX}%"
-            # Anti-momentum for older pairs: if 5min is climbing hard, reject
+            # OLDER PAIRS (>5 min): 5m < +15%, dip 15-50%, h1 not deeply red
             if chg5 > 15:
-                return None, f"B: chg5 +{chg5:.1f}% (momentum pump)"
+                return None, f"B: 5m +{chg5:.1f}% (parabolic pump)"
+            if chg60 < -75:
+                return None, f"B: h1 {chg60:+.1f}% (coin is dying)"
+            if dip_pct < DIP_MIN:
+                return None, f"B: dip <{DIP_MIN}% (no pullback)"
+            if dip_pct > DIP_MAX:
+                return None, f"B: dip >{DIP_MAX}% (too deep)"
             
-            # COOLDOWN: If h1 >+150%, we need to have been watching for 2+ min
-            # This prevents buying immediately after a parabolic pump
-            if chg60 > 150:
-                time_watching = now - _token_first_seen.get(addr, now)
-                if time_watching < 120:  # 2 minutes
-                    return None, f"B: pump cooldown ({int(time_watching)}s < 2min)"
-            
-            # BS ratio for older
-            if bs < 0.9:
+            # BS ratio for older: pump.fun tokens BS=0 is OK (bonding curve), raydium needs BS > 0.9
+            if dex == 'raydium' and bs < 0.9:
                 return None, f"B: BS <0.9"
         
         return {
@@ -377,7 +364,7 @@ def load_whales():
         return []
 
 def main():
-    print("🚀 Whale Momentum Scanner v3 - Chris's Strategy")
+    print("🚀 Whale Momentum Scanner v4 - Dip in Momentum")
     print(f"   Mcap: $5K-$95K | Dip: 10-50% | Age-based rules")
     init_sold_tokens()  # Load ALL closed positions
     whales = load_whales()
