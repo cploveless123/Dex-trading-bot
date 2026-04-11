@@ -12,3 +12,149 @@ Checking every 5s
   Villain: mcap=$10,213 | gain=+55.8% | peak=$10,422 | dd=+2%
   Villain: mcap=$10,213 | gain=+55.8% | peak=$10,422 | dd=+2%
   Villain: mcap=$10,213 | gain=+55.8% | peak=$10,422 | dd=+2%
+  Villain: mcap=$10,213 | gain=+55.8% | peak=$10,422 | dd=+2%
+  Villain: mcap=$9,134 | gain=+39.3% | peak=$10,422 | dd=+12%
+  Villain: mcap=$9,134 | gain=+39.3% | peak=$10,422 | dd=+12%
+  Villain: mcap=$9,134 | gain=+39.3% | peak=$10,422 | dd=+12%
+  Villain: mcap=$9,134 | gain=+39.3% | peak=$10,422 | dd=+12%
+[18:32:18] Monitor alive | 13 checks | 1 open | next in 5s
+  Villain: mcap=$9,134 | gain=+39.3% | peak=$10,422 | dd=+12%
+  Villain: mcap=$9,134 | gain=+39.3% | peak=$10,422 | dd=+12%
+  Villain: mcap=$10,484 | gain=+59.9% | peak=$10,484 | dd=-1%
+  Villain: mcap=$10,484 | gain=+59.9% | peak=$10,484 | dd=-1%
+  Villain: mcap=$10,484 | gain=+59.9% | peak=$10,484 | dd=-1%
+  Villain: mcap=$10,484 | gain=+59.9% | peak=$10,484 | dd=-1%
+  Villain: mcap=$10,484 | gain=+59.9% | peak=$10,484 | dd=-1%
+  Villain: mcap=$10,484 | gain=+59.9% | peak=$10,484 | dd=-1%
+  Villain: mcap=$10,957 | gain=+67.2% | peak=$10,957 | dd=-5%
+  Villain: mcap=$10,957 | gain=+67.2% | peak=$10,957 | dd=-5%
+  Villain: mcap=$10,957 | gain=+67.2% | peak=$10,957 | dd=-5%
+  Villain: mcap=$10,957 | gain=+67.2% | peak=$10,957 | dd=-5%
+[18:33:19] Monitor alive | 25 checks | 1 open | next in 5s
+  Villain: mcap=$10,957 | gain=+67.2% | peak=$10,957 | dd=-5%
+  Villain: mcap=$10,957 | gain=+67.2% | peak=$10,957 | dd=-5%
+[TP2] Alert sent
+✅ Villain TP2 HIT @ $13,309 (+103%)
+  Villain: mcap=$13,309 | gain=+103.0% | peak=$13,309 | dd=-28%
+  Villain: mcap=$13,309 | gain=+103.0% | peak=$13,309 | dd=-28%
+  Villain: mcap=$13,309 | gain=+103.0% | peak=$13,309 | dd=-28%
+  Villain: mcap=$13,309 | gain=+103.0% | peak=$13,309 | dd=-28%
+  Villain: mcap=$13,309 | gain=+103.0% | peak=$13,309 | dd=-28%
+  Villain: mcap=$12,465 | gain=+90.2% | peak=$13,309 | dd=-20%
+  Villain: mcap=$12,465 | gain=+90.2% | peak=$13,309 | dd=-20%
+  Villain: mcap=$12,465 | gain=+90.2% | peak=$13,309 | dd=-20%
+  Villain: mcap=$12,465 | gain=+90.2% | peak=$13,309 | dd=-20%
+[18:34:20] Monitor alive | 37 checks | 0 open | next in 5s
+  Villain: mcap=$12,465 | gain=+90.2% | peak=$13,309 | dd=-20%
+  Villain: mcap=$12,465 | gain=+90.2% | peak=$13,309 | dd=-20%
+[TRAILING_STOP] Alert sent
+✅ Villain TRAILING STOP @ $10,809 (19% drop from peak)
+  MANTIS: mcap=$11,942 | gain=+0.0% | peak=$11,942 | dd=+0%
+  MANTIS: mcap=$11,942 | gain=+0.0% | peak=$11,942 | dd=+0%
+  MANTIS: mcap=$11,942 | gain=+0.0% | peak=$11,942 | dd=+0%
+[18:35:21] Monitor alive | 49 checks | 1 open | next in 5s
+  MANTIS: mcap=$11,942 | gain=+0.0% | peak=$11,942 | dd=+0%
+  MANTIS: mcap=$13,067 | gain=+9.4% | peak=$13,067 | dd=+0%
+  MANTIS: mcap=$13,067 | gain=+9.4% | peak=$13,067 | dd=+0%
+  MANTIS: mcap=$13,067 | gain=+9.4% | peak=$13,067 | dd=+0%
+  MANTIS: mcap=$13,067 | gain=+9.4% | peak=$13,067 | dd=+0%
+  MANTIS: mcap=$13,067 | gain=+9.4% | peak=$13,067 | dd=+0%
+  MANTIS: mcap=$13,067 | gain=+9.4% | peak=$13,067 | dd=+0%
+  MANTIS: mcap=$14,123 | gain=+18.3% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$13,823 | gain=+0.0% | peak=$13,823 | dd=+0%
+  MANTIS: mcap=$14,123 | gain=+18.3% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$13,823 | gain=+0.0% | peak=$13,823 | dd=+0%
+  MANTIS: mcap=$14,123 | gain=+18.3% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$13,823 | gain=+0.0% | peak=$13,823 | dd=+0%
+  MANTIS: mcap=$14,123 | gain=+18.3% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$13,823 | gain=+0.0% | peak=$13,823 | dd=+0%
+  MANTIS: mcap=$14,123 | gain=+18.3% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$13,823 | gain=+0.0% | peak=$13,823 | dd=+0%
+[18:36:23] Monitor alive | 61 checks | 2 open | next in 5s
+  MANTIS: mcap=$14,123 | gain=+18.3% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,122 | gain=+2.2% | peak=$14,122 | dd=+0%
+  MANTIS: mcap=$13,088 | gain=+9.6% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,122 | gain=+2.2% | peak=$14,122 | dd=+0%
+  MANTIS: mcap=$13,088 | gain=+9.6% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,122 | gain=+2.2% | peak=$14,122 | dd=+0%
+  MANTIS: mcap=$13,088 | gain=+9.6% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,122 | gain=+2.2% | peak=$14,122 | dd=+0%
+  MANTIS: mcap=$13,088 | gain=+9.6% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,122 | gain=+2.2% | peak=$14,122 | dd=+0%
+  MANTIS: mcap=$13,088 | gain=+9.6% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,122 | gain=+2.2% | peak=$14,122 | dd=+0%
+  MANTIS: mcap=$11,748 | gain=-1.6% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$15,471 | gain=+11.9% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$11,748 | gain=-1.6% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$15,471 | gain=+11.9% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$11,748 | gain=-1.6% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$15,471 | gain=+11.9% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$11,748 | gain=-1.6% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$15,471 | gain=+11.9% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$11,748 | gain=-1.6% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$15,471 | gain=+11.9% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$11,748 | gain=-1.6% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$15,471 | gain=+11.9% | peak=$15,471 | dd=+0%
+[18:37:24] Monitor alive | 73 checks | 2 open | next in 5s
+  MANTIS: mcap=$12,034 | gain=+0.8% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$12,995 | gain=-6.0% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,034 | gain=+0.8% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$12,995 | gain=-6.0% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,034 | gain=+0.8% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$12,995 | gain=-6.0% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,034 | gain=+0.8% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$12,995 | gain=-6.0% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,034 | gain=+0.8% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$12,995 | gain=-6.0% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,034 | gain=+0.8% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$12,995 | gain=-6.0% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,654 | gain=+6.0% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$13,746 | gain=-0.6% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,654 | gain=+6.0% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$13,746 | gain=-0.6% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,654 | gain=+6.0% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$13,746 | gain=-0.6% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,654 | gain=+6.0% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$13,746 | gain=-0.6% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,654 | gain=+6.0% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$13,746 | gain=-0.6% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,654 | gain=+6.0% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,466 | gain=+4.7% | peak=$15,471 | dd=+0%
+[18:38:26] Monitor alive | 85 checks | 2 open | next in 5s
+  MANTIS: mcap=$12,739 | gain=+6.7% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,466 | gain=+4.7% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,739 | gain=+6.7% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,466 | gain=+4.7% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,739 | gain=+6.7% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,466 | gain=+4.7% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,739 | gain=+6.7% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,466 | gain=+4.7% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,739 | gain=+6.7% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,466 | gain=+4.7% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$12,739 | gain=+6.7% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,819 | gain=+7.2% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$11,943 | gain=+0.0% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,819 | gain=+7.2% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$11,943 | gain=+0.0% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,819 | gain=+7.2% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$11,943 | gain=+0.0% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,819 | gain=+7.2% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$11,943 | gain=+0.0% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,819 | gain=+7.2% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$11,943 | gain=+0.0% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,819 | gain=+7.2% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$11,943 | gain=+0.0% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,091 | gain=+1.9% | peak=$15,471 | dd=+0%
+[18:39:28] Monitor alive | 97 checks | 2 open | next in 5s
+  MANTIS: mcap=$13,354 | gain=+11.8% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,091 | gain=+1.9% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$13,354 | gain=+11.8% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,091 | gain=+1.9% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$13,354 | gain=+11.8% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,091 | gain=+1.9% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$13,354 | gain=+11.8% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,091 | gain=+1.9% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$13,354 | gain=+11.8% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$14,091 | gain=+1.9% | peak=$15,471 | dd=+0%
+  MANTIS: mcap=$13,354 | gain=+11.8% | peak=$14,123 | dd=+0%
+  Bugs: mcap=$16,241 | gain=+17.5% | peak=$16,241 | dd=+0%

@@ -42,11 +42,11 @@ def format_trade_alert(trade):
     reset_ts = SIM_RESET_TIMESTAMP
     reset_trades = [t for t in all_trades if t.get('opened_at', '') > reset_ts]
     closed_pnl = sum(t.get('pnl_sol', 0) for t in reset_trades if t.get('closed_at'))
-    # Full open positions: 0.05 locked each
-    open_full = len([t for t in all_trades if t.get('status') == 'open'])
-    # Partial exits: remaining % locked (~26% with current TP1_SELL_PCT)
-    open_partial = len([t for t in all_trades if t.get('status') == 'open_partial'])
-    locked = open_full * POSITION_SIZE + open_partial * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100)
+    # Full open positions: locked at POSITION_SIZE each
+    open_full = len([t for t in reset_trades if t.get('status') == 'open'])
+    # Partial exits: remaining % locked (v5.5 = 100% - 40% = 60% at TP2)
+    open_partial = len([t for t in reset_trades if t.get('status') == 'open_partial'])
+    locked = open_full * POSITION_SIZE + open_partial * POSITION_SIZE * 0.60
     balance = CHRIS_STARTING_BALANCE + closed_pnl - locked
     
     if action == "BUY":
