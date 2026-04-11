@@ -237,3 +237,26 @@ Checking every 5s
 [04:28:00] Monitor alive | 493 checks | 0 open | next in 5s
 [04:29:00] Monitor alive | 505 checks | 0 open | next in 5s
 [04:30:00] Monitor alive | 517 checks | 0 open | next in 5s
+[04:31:00] Monitor alive | 529 checks | 0 open | next in 5s
+[04:32:00] Monitor alive | 541 checks | 0 open | next in 5s
+[04:33:00] Monitor alive | 553 checks | 0 open | next in 5s
+[04:34:00] Monitor alive | 565 checks | 0 open | next in 5s
+[04:35:00] Monitor alive | 577 checks | 0 open | next in 5s
+[04:36:00] Monitor alive | 589 checks | 0 open | next in 5s
+[04:37:00] Monitor alive | 601 checks | 0 open | next in 5s
+[04:38:00] Monitor alive | 613 checks | 0 open | next in 5s
+[04:39:01] Monitor alive | 625 checks | 0 open | next in 5s
+  COLORS: mcap=$11,396 | gain=+0.0% | peak=$11,396 | dd=+0%
+  COLORS: mcap=$11,396 | gain=+0.0% | peak=$11,396 | dd=+0%
+  COLORS: mcap=$11,396 | gain=+0.0% | peak=$11,396 | dd=+0%
+  COLORS: mcap=$11,396 | gain=+0.0% | peak=$11,396 | dd=+0%
+  COLORS: mcap=$9,729 | gain=-14.6% | peak=$11,396 | dd=+0%
+  COLORS: mcap=$9,729 | gain=-14.6% | peak=$11,396 | dd=+0%
+  COLORS: mcap=$9,729 | gain=-14.6% | peak=$11,396 | dd=+0%
+  COLORS: mcap=$9,729 | gain=-14.6% | peak=$11,396 | dd=+0%
+  COLORS: mcap=$9,729 | gain=-14.6% | peak=$11,396 | dd=+0%
+[04:40:01] Monitor alive | 637 checks | 1 open | next in 5s
+  COLORS: mcap=$9,729 | gain=-14.6% | peak=$11,396 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 COLORS STOP LOSS @ $4,206 (-63.1%)
+[04:41:02] Monitor alive | 649 checks | 0 open | next in 5s
