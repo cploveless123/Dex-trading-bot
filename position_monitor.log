@@ -3,7 +3,3 @@ Exit Plan: TP1 +35% (sell 10%) | TP2 +100% | TP3 +200% | Trailing 15% | Stop -25
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
-  PETS: mcap=$9,342 | gain=-15.3% | peak=$12,436 | dd=+0%
-  PETS: mcap=$9,342 | gain=-15.3% | peak=$12,436 | dd=+0%
-[STOP_LOSS] Alert sent
-🔴 PETS STOP LOSS @ $5,091 (-53.8%)
