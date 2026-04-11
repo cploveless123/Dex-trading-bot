@@ -53,3 +53,115 @@ Checking every 5s
   Speedrun: mcap=$26,853 | gain=+6.8% | peak=$26,853 | dd=+0%
   Chick: mcap=$24,585 | gain=+232.2% | peak=$24,585 | dd=-88%
   Speedrun: mcap=$26,853 | gain=+6.8% | peak=$26,853 | dd=+0%
+  Chick: mcap=$24,585 | gain=+232.2% | peak=$24,585 | dd=-88%
+  Speedrun: mcap=$26,853 | gain=+6.8% | peak=$26,853 | dd=+0%
+  Chick: mcap=$25,413 | gain=+243.4% | peak=$25,413 | dd=-94%
+  Speedrun: mcap=$26,853 | gain=+6.8% | peak=$26,853 | dd=+0%
+  Chick: mcap=$25,413 | gain=+243.4% | peak=$25,413 | dd=-94%
+  Speedrun: mcap=$29,614 | gain=+17.8% | peak=$29,614 | dd=+0%
+  Chick: mcap=$25,413 | gain=+243.4% | peak=$25,413 | dd=-94%
+  Speedrun: mcap=$29,614 | gain=+17.8% | peak=$29,614 | dd=+0%
+[03:49:46] Monitor alive | 37 checks | 1 open | next in 5s
+  Chick: mcap=$25,413 | gain=+243.4% | peak=$25,413 | dd=-94%
+  Speedrun: mcap=$29,614 | gain=+17.8% | peak=$29,614 | dd=+0%
+  Chick: mcap=$25,413 | gain=+243.4% | peak=$25,413 | dd=-94%
+  Speedrun: mcap=$29,614 | gain=+17.8% | peak=$29,614 | dd=+0%
+  Chick: mcap=$25,413 | gain=+243.4% | peak=$25,413 | dd=-94%
+  Speedrun: mcap=$29,614 | gain=+17.8% | peak=$29,614 | dd=+0%
+  Chick: mcap=$24,108 | gain=+225.8% | peak=$25,413 | dd=-84%
+  Speedrun: mcap=$26,392 | gain=+5.0% | peak=$29,614 | dd=+0%
+  Chick: mcap=$24,108 | gain=+225.8% | peak=$25,413 | dd=-84%
+  Speedrun: mcap=$26,392 | gain=+5.0% | peak=$29,614 | dd=+0%
+  Chick: mcap=$24,108 | gain=+225.8% | peak=$25,413 | dd=-84%
+  Speedrun: mcap=$26,392 | gain=+5.0% | peak=$29,614 | dd=+0%
+  Chick: mcap=$24,108 | gain=+225.8% | peak=$25,413 | dd=-84%
+  Speedrun: mcap=$26,392 | gain=+5.0% | peak=$29,614 | dd=+0%
+  Chick: mcap=$24,108 | gain=+225.8% | peak=$25,413 | dd=-84%
+  Speedrun: mcap=$26,392 | gain=+5.0% | peak=$29,614 | dd=+0%
+  Chick: mcap=$28,033 | gain=+278.8% | peak=$28,033 | dd=-114%
+  Speedrun: mcap=$26,392 | gain=+5.0% | peak=$29,614 | dd=+0%
+  Chick: mcap=$28,033 | gain=+278.8% | peak=$28,033 | dd=-114%
+  Speedrun: mcap=$24,802 | gain=-1.3% | peak=$29,614 | dd=+0%
+  Chick: mcap=$28,033 | gain=+278.8% | peak=$28,033 | dd=-114%
+  Speedrun: mcap=$24,802 | gain=-1.3% | peak=$29,614 | dd=+0%
+  Chick: mcap=$28,033 | gain=+278.8% | peak=$28,033 | dd=-114%
+  Speedrun: mcap=$24,802 | gain=-1.3% | peak=$29,614 | dd=+0%
+[03:50:47] Monitor alive | 49 checks | 1 open | next in 5s
+  Chick: mcap=$28,033 | gain=+278.8% | peak=$28,033 | dd=-114%
+  Speedrun: mcap=$24,802 | gain=-1.3% | peak=$29,614 | dd=+0%
+  Chick: mcap=$28,033 | gain=+278.8% | peak=$28,033 | dd=-114%
+  Speedrun: mcap=$24,802 | gain=-1.3% | peak=$29,614 | dd=+0%
+  Chick: mcap=$26,059 | gain=+252.2% | peak=$28,033 | dd=-99%
+  Speedrun: mcap=$24,802 | gain=-1.3% | peak=$29,614 | dd=+0%
+  Chick: mcap=$26,059 | gain=+252.2% | peak=$28,033 | dd=-99%
+  Speedrun: mcap=$26,741 | gain=+6.4% | peak=$29,614 | dd=+0%
+  Chick: mcap=$26,059 | gain=+252.2% | peak=$28,033 | dd=-99%
+  Speedrun: mcap=$26,741 | gain=+6.4% | peak=$29,614 | dd=+0%
+  Chick: mcap=$26,059 | gain=+252.2% | peak=$28,033 | dd=-99%
+  Speedrun: mcap=$26,741 | gain=+6.4% | peak=$29,614 | dd=+0%
+  Chick: mcap=$26,059 | gain=+252.2% | peak=$28,033 | dd=-99%
+  Speedrun: mcap=$26,741 | gain=+6.4% | peak=$29,614 | dd=+0%
+  Chick: mcap=$26,059 | gain=+252.2% | peak=$28,033 | dd=-99%
+  Speedrun: mcap=$26,741 | gain=+6.4% | peak=$29,614 | dd=+0%
+  Chick: mcap=$26,413 | gain=+256.9% | peak=$28,033 | dd=-101%
+  Speedrun: mcap=$26,741 | gain=+6.4% | peak=$29,614 | dd=+0%
+  Chick: mcap=$26,413 | gain=+256.9% | peak=$28,033 | dd=-101%
+  Speedrun: mcap=$31,990 | gain=+27.3% | peak=$31,990 | dd=+0%
+  Chick: mcap=$26,413 | gain=+256.9% | peak=$28,033 | dd=-101%
+  Speedrun: mcap=$31,990 | gain=+27.3% | peak=$31,990 | dd=+0%
+  Chick: mcap=$26,413 | gain=+256.9% | peak=$28,033 | dd=-101%
+  Speedrun: mcap=$31,990 | gain=+27.3% | peak=$31,990 | dd=+0%
+[03:51:49] Monitor alive | 61 checks | 1 open | next in 5s
+  Chick: mcap=$26,413 | gain=+256.9% | peak=$28,033 | dd=-101%
+  Speedrun: mcap=$31,990 | gain=+27.3% | peak=$31,990 | dd=+0%
+  Chick: mcap=$26,413 | gain=+256.9% | peak=$28,033 | dd=-101%
+  Speedrun: mcap=$31,990 | gain=+27.3% | peak=$31,990 | dd=+0%
+  Chick: mcap=$28,194 | gain=+281.0% | peak=$28,194 | dd=-115%
+  Speedrun: mcap=$31,990 | gain=+27.3% | peak=$31,990 | dd=+0%
+  Chick: mcap=$28,194 | gain=+281.0% | peak=$28,194 | dd=-115%
+  Speedrun: mcap=$33,012 | gain=+31.3% | peak=$33,012 | dd=+0%
+  Chick: mcap=$28,194 | gain=+281.0% | peak=$28,194 | dd=-115%
+  Speedrun: mcap=$33,012 | gain=+31.3% | peak=$33,012 | dd=+0%
+  Chick: mcap=$28,194 | gain=+281.0% | peak=$28,194 | dd=-115%
+  Speedrun: mcap=$33,012 | gain=+31.3% | peak=$33,012 | dd=+0%
+  Chick: mcap=$28,194 | gain=+281.0% | peak=$28,194 | dd=-115%
+  Speedrun: mcap=$33,012 | gain=+31.3% | peak=$33,012 | dd=+0%
+  Chick: mcap=$28,194 | gain=+281.0% | peak=$28,194 | dd=-115%
+  Speedrun: mcap=$33,012 | gain=+31.3% | peak=$33,012 | dd=+0%
+  Chick: mcap=$27,609 | gain=+273.1% | peak=$28,194 | dd=-111%
+  Speedrun: mcap=$33,012 | gain=+31.3% | peak=$33,012 | dd=+0%
+  Chick: mcap=$27,609 | gain=+273.1% | peak=$28,194 | dd=-111%
+[TP1] Alert sent
+✅ Speedrun TP1 HIT @ $34,030 (+35.4%)
+  Chick: mcap=$27,609 | gain=+273.1% | peak=$28,194 | dd=-111%
+  Speedrun: mcap=$34,030 | gain=+35.4% | peak=$34,030 | dd=+0%
+  Chick: mcap=$27,609 | gain=+273.1% | peak=$28,194 | dd=-111%
+  Speedrun: mcap=$34,030 | gain=+35.4% | peak=$34,030 | dd=+0%
+[03:52:51] Monitor alive | 73 checks | 0 open | next in 5s
+  Chick: mcap=$27,609 | gain=+273.1% | peak=$28,194 | dd=-111%
+  Speedrun: mcap=$34,030 | gain=+35.4% | peak=$34,030 | dd=+0%
+  Chick: mcap=$27,609 | gain=+273.1% | peak=$28,194 | dd=-111%
+  Speedrun: mcap=$34,030 | gain=+35.4% | peak=$34,030 | dd=+0%
+  Chick: mcap=$29,281 | gain=+295.7% | peak=$29,281 | dd=-123%
+  Speedrun: mcap=$29,530 | gain=+17.5% | peak=$34,030 | dd=+13%
+  Chick: mcap=$29,281 | gain=+295.7% | peak=$29,281 | dd=-123%
+  Speedrun: mcap=$29,530 | gain=+17.5% | peak=$34,030 | dd=+13%
+  Chick: mcap=$29,281 | gain=+295.7% | peak=$29,281 | dd=-123%
+  Speedrun: mcap=$29,530 | gain=+17.5% | peak=$34,030 | dd=+13%
+  Chick: mcap=$29,281 | gain=+295.7% | peak=$29,281 | dd=-123%
+  Speedrun: mcap=$29,530 | gain=+17.5% | peak=$34,030 | dd=+13%
+  Chick: mcap=$29,281 | gain=+295.7% | peak=$29,281 | dd=-123%
+  Speedrun: mcap=$29,530 | gain=+17.5% | peak=$34,030 | dd=+13%
+  Chick: mcap=$29,281 | gain=+295.7% | peak=$29,281 | dd=-123%
+  Speedrun: mcap=$29,530 | gain=+17.5% | peak=$34,030 | dd=+13%
+[TRAILING_STOP] Alert sent
+✅ Chick TRAILING STOP @ $16,092 (45% drop from peak)
+[TRAILING_STOP] Alert sent
+✅ Speedrun TRAILING STOP @ $20,193 (41% drop from peak)
+[03:53:53] Monitor alive | 85 checks | 0 open | next in 5s
+[03:54:54] Monitor alive | 97 checks | 0 open | next in 5s
+[03:55:54] Monitor alive | 109 checks | 0 open | next in 5s
+[03:56:54] Monitor alive | 121 checks | 0 open | next in 5s
+[03:57:54] Monitor alive | 133 checks | 0 open | next in 5s
+[03:58:54] Monitor alive | 145 checks | 0 open | next in 5s
+[03:59:54] Monitor alive | 157 checks | 0 open | next in 5s
