@@ -3304,3 +3304,191 @@ Checking every 5s
   SMILE: mcap=$11,212 | gain=+11.9% | peak=$11,659 | dd=+0%
   SMILE: mcap=$11,212 | gain=+11.9% | peak=$11,659 | dd=+0%
   SMILE: mcap=$10,619 | gain=+6.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,619 | gain=+6.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,619 | gain=+6.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,619 | gain=+6.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,619 | gain=+6.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,619 | gain=+6.0% | peak=$11,659 | dd=+0%
+[12:30:22] Monitor alive | 3025 checks | 1 open | next in 5s
+  SMILE: mcap=$10,469 | gain=+4.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,469 | gain=+4.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,469 | gain=+4.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,469 | gain=+4.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,469 | gain=+4.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,469 | gain=+4.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,821 | gain=+8.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,821 | gain=+8.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,821 | gain=+8.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,821 | gain=+8.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,821 | gain=+8.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,821 | gain=+8.0% | peak=$11,659 | dd=+0%
+[12:31:23] Monitor alive | 3037 checks | 1 open | next in 5s
+  SMILE: mcap=$9,780 | gain=-2.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,780 | gain=-2.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,780 | gain=-2.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,780 | gain=-2.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,780 | gain=-2.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,780 | gain=-2.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,812 | gain=-2.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,812 | gain=-2.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,812 | gain=-2.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,812 | gain=-2.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,812 | gain=-2.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,812 | gain=-2.1% | peak=$11,659 | dd=+0%
+[12:32:24] Monitor alive | 3049 checks | 1 open | next in 5s
+  SMILE: mcap=$9,723 | gain=-3.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,723 | gain=-3.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,723 | gain=-3.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,723 | gain=-3.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,723 | gain=-3.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,723 | gain=-3.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,518 | gain=-5.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,518 | gain=-5.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,518 | gain=-5.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,518 | gain=-5.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,518 | gain=-5.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,518 | gain=-5.0% | peak=$11,659 | dd=+0%
+[12:33:25] Monitor alive | 3061 checks | 1 open | next in 5s
+  SMILE: mcap=$9,835 | gain=-1.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,835 | gain=-1.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,835 | gain=-1.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,835 | gain=-1.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,835 | gain=-1.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,835 | gain=-1.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,111 | gain=+0.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,111 | gain=+0.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,111 | gain=+0.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,111 | gain=+0.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,111 | gain=+0.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,111 | gain=+0.9% | peak=$11,659 | dd=+0%
+[12:34:26] Monitor alive | 3073 checks | 1 open | next in 5s
+  SMILE: mcap=$10,199 | gain=+1.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,199 | gain=+1.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,199 | gain=+1.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,199 | gain=+1.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,199 | gain=+1.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,343 | gain=+3.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,343 | gain=+3.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,343 | gain=+3.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,343 | gain=+3.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,343 | gain=+3.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,343 | gain=+3.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,657 | gain=+6.4% | peak=$11,659 | dd=+0%
+[12:35:26] Monitor alive | 3085 checks | 1 open | next in 5s
+  SMILE: mcap=$10,657 | gain=+6.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,657 | gain=+6.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,657 | gain=+6.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,657 | gain=+6.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,657 | gain=+6.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,719 | gain=+7.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,719 | gain=+7.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,719 | gain=+7.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,719 | gain=+7.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,719 | gain=+7.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,719 | gain=+7.0% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,648 | gain=+6.3% | peak=$11,659 | dd=+0%
+[12:36:27] Monitor alive | 3097 checks | 1 open | next in 5s
+  SMILE: mcap=$10,648 | gain=+6.3% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,648 | gain=+6.3% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,648 | gain=+6.3% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,648 | gain=+6.3% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,648 | gain=+6.3% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,502 | gain=+4.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,502 | gain=+4.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,502 | gain=+4.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,502 | gain=+4.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,502 | gain=+4.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,502 | gain=+4.8% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,531 | gain=+5.1% | peak=$11,659 | dd=+0%
+[12:37:28] Monitor alive | 3109 checks | 1 open | next in 5s
+  SMILE: mcap=$10,531 | gain=+5.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,531 | gain=+5.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,531 | gain=+5.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,531 | gain=+5.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,531 | gain=+5.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,551 | gain=-4.7% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,551 | gain=-4.7% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,551 | gain=-4.7% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,551 | gain=-4.7% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,551 | gain=-4.7% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,551 | gain=-4.7% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,352 | gain=-6.7% | peak=$11,659 | dd=+0%
+[12:38:29] Monitor alive | 3121 checks | 1 open | next in 5s
+  SMILE: mcap=$9,352 | gain=-6.7% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,352 | gain=-6.7% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,352 | gain=-6.7% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,352 | gain=-6.7% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,352 | gain=-6.7% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,632 | gain=-3.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,632 | gain=-3.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,632 | gain=-3.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,632 | gain=-3.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,632 | gain=-3.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,632 | gain=-3.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,849 | gain=+8.3% | peak=$11,659 | dd=+0%
+[12:39:30] Monitor alive | 3133 checks | 1 open | next in 5s
+  SMILE: mcap=$10,849 | gain=+8.3% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,849 | gain=+8.3% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,849 | gain=+8.3% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,849 | gain=+8.3% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,849 | gain=+8.3% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,627 | gain=+6.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,627 | gain=+6.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,627 | gain=+6.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,627 | gain=+6.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,627 | gain=+6.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,627 | gain=+6.1% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,613 | gain=+5.9% | peak=$11,659 | dd=+0%
+[12:40:31] Monitor alive | 3145 checks | 1 open | next in 5s
+  SMILE: mcap=$10,613 | gain=+5.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,613 | gain=+5.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,613 | gain=+5.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,613 | gain=+5.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,613 | gain=+5.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,613 | gain=+5.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,613 | gain=+5.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,613 | gain=+5.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,613 | gain=+5.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,613 | gain=+5.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,613 | gain=+5.9% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,141 | gain=+1.2% | peak=$11,659 | dd=+0%
+[12:41:32] Monitor alive | 3157 checks | 1 open | next in 5s
+  SMILE: mcap=$10,141 | gain=+1.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,141 | gain=+1.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,141 | gain=+1.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,141 | gain=+1.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,141 | gain=+1.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,258 | gain=+2.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,258 | gain=+2.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,258 | gain=+2.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,258 | gain=+2.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$10,258 | gain=+2.4% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,063 | gain=-9.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,063 | gain=-9.5% | peak=$11,659 | dd=+0%
+[12:42:33] Monitor alive | 3169 checks | 1 open | next in 5s
+  SMILE: mcap=$9,063 | gain=-9.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,063 | gain=-9.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,063 | gain=-9.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,063 | gain=-9.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,296 | gain=-7.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,296 | gain=-7.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,296 | gain=-7.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,296 | gain=-7.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,296 | gain=-7.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,296 | gain=-7.2% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,756 | gain=-2.6% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,756 | gain=-2.6% | peak=$11,659 | dd=+0%
+[12:43:34] Monitor alive | 3181 checks | 1 open | next in 5s
+  SMILE: mcap=$9,756 | gain=-2.6% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,756 | gain=-2.6% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,756 | gain=-2.6% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,756 | gain=-2.6% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,870 | gain=-1.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,870 | gain=-1.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,870 | gain=-1.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,870 | gain=-1.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,870 | gain=-1.5% | peak=$11,659 | dd=+0%
+  SMILE: mcap=$9,870 | gain=-1.5% | peak=$11,659 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 SMILE STOP LOSS @ $7,039 (-29.8%)
+[12:44:35] Monitor alive | 3193 checks | 0 open | next in 5s
