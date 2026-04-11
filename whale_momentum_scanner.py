@@ -125,7 +125,7 @@ def check_blacklist(p_data):
     return False, "OK"
 
 def get_gmgn_token_data(addr):
-    """Get full GMGN token data - ATH, bonded status, etc"""
+    """Get full GMGN token data - ATH, bonded status, holder data"""
     try:
         import subprocess
         r = subprocess.run(
@@ -151,15 +151,37 @@ def get_gmgn_token_data(addr):
             migrated_pool = d.get('migrated_pool', '')
             is_bonded = migrated_pool and len(str(migrated_pool)) > 5
             
-            return ath_mcap, ath_price_val, is_bonded
+            # Holder data from GMGN (more accurate than DexScreener)
+            holder_count = d.get('holder_count', 0) or 0
+            top_10_holder_rate = d.get('top_10_holder_rate', 0) or 0
+            if top_10_holder_rate == 0 and d.get('dev'):
+                top_10_holder_rate = d['dev'].get('top_10_holder_rate', 0) or 0
+            
+            return {
+                'ath_mcap': ath_mcap,
+                'ath_price': ath_price_val,
+                'is_bonded': is_bonded,
+                'holder_count': holder_count,
+                'top_10_holder_rate': top_10_holder_rate,
+                'liquidity': d.get('liquidity', 0)
+            }
     except:
         pass
-    return None, None, False
+    return None
 
 def get_ath_from_gmgn(addr):
     """Get ATH data from GMGN CLI - returns (ath_mcap, ath_price)"""
-    ath_mcap, ath_price, _ = get_gmgn_token_data(addr)
-    return ath_mcap, ath_price
+    data = get_gmgn_token_data(addr)
+    if data:
+        return data.get('ath_mcap'), data.get('ath_price')
+    return None, None
+
+def get_gmgn_holder_data(addr):
+    """Get holder data from GMGN - returns (holder_count, top_10_holder_rate)"""
+    data = get_gmgn_token_data(addr)
+    if data:
+        return data.get('holder_count', 0), data.get('top_10_holder_rate', 0)
+    return 0, 0
 
 def scan_token(addr):
     """Scan a single token"""
@@ -228,8 +250,18 @@ def scan_token(addr):
         # 5min vol: ignore for fresh tokens (<20min) since volume builds up
         # (pair_age check deferred until after pair_age is defined below)
         
-        # Get GMGN data for ATH divergence check
-        ath_mcap, _, is_bonded = get_gmgn_token_data(addr)
+        # Get GMGN data for ATH divergence check + holder data (more accurate)
+        gmgn_data = get_gmgn_token_data(addr)
+        ath_mcap = gmgn_data.get('ath_mcap') if gmgn_data else None
+        is_bonded = gmgn_data.get('is_bonded', False) if gmgn_data else False
+        gmgn_holders = gmgn_data.get('holder_count', 0) if gmgn_data else 0
+        gmgn_top10 = gmgn_data.get('top_10_holder_rate', 0) if gmgn_data else 0
+        
+        # Use GMGN holder data if DexScreener shows 0/None
+        if holders == 0 and gmgn_holders > 0:
+            holders = gmgn_holders
+        if top10 == 0 and gmgn_top10 > 0:
+            top10 = gmgn_top10
         
         # Track first seen time for peak window
         import time

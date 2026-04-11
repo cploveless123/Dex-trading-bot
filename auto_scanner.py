@@ -85,8 +85,8 @@ def is_falling_knife(addr, current_price):
     
     return False, None
 
-def get_gmgn_ath(addr):
-    """Get GMGN ATH mcap for a token"""
+def get_gmgn_data(addr):
+    """Get GMGN full data - ATH + holders"""
     try:
         r = subprocess.run(
             ['gmgn-cli', 'token', 'info', '--chain', 'sol', '--address', addr],
@@ -104,9 +104,28 @@ def get_gmgn_ath(addr):
             ath_mcap = None
             if ath_price_val > 0 and supply > 0:
                 ath_mcap = ath_price_val * supply
-            return ath_mcap, ath_price_val, True
+            
+            # Holder data from GMGN
+            holder_count = d.get('holder_count', 0) or 0
+            top_10_holder_rate = d.get('top_10_holder_rate', 0) or 0
+            if top_10_holder_rate == 0 and d.get('dev'):
+                top_10_holder_rate = d['dev'].get('top_10_holder_rate', 0) or 0
+            
+            return {
+                'ath_mcap': ath_mcap,
+                'ath_price': ath_price_val,
+                'holder_count': holder_count,
+                'top_10_holder_rate': top_10_holder_rate
+            }
     except:
         pass
+    return None
+
+def get_gmgn_ath(addr):
+    """Get GMGN ATH mcap for a token"""
+    data = get_gmgn_data(addr)
+    if data:
+        return data.get('ath_mcap'), data.get('ath_price'), True
     return None, None, False
 
 def get_pair_age_minutes(p):
@@ -139,7 +158,14 @@ def check_should_buy(addr, p, sym, dex, m, v, v5, bs, buys, sells, holders, pair
     if v5 > 0 and v5 < 1000:
         return False, f"5min vol ${v5:,.0f} < $1000"
     
-    # === HOLDERS FILTER ===
+    # === HOLDERS FILTER (use GMGN if DexScreener shows 0) ===
+    gmgn_data = get_gmgn_data(addr)
+    if gmgn_data:
+        if holders == 0 and gmgn_data.get('holder_count', 0) > 0:
+            holders = gmgn_data['holder_count']
+        if top10 == 0 and gmgn_data.get('top_10_holder_rate', 0) > 0:
+            top10 = gmgn_data['top_10_holder_rate']
+    
     if holders == 0 or top10 == 0:
         return False, f"holders={holders} top10={top10}% (bot farm)"
     if holders > 0 and holders < 15:
