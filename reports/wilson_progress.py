@@ -24,6 +24,7 @@ closed_pnl = sum(t.get('pnl_sol', 0) for t in closed_all)
 locked = (len(open_full) * POSITION_SIZE) + (len(open_partial) * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100))
 balance = CHRIS_STARTING_BALANCE + closed_pnl
 available = CHRIS_STARTING_BALANCE + closed_pnl - locked
+real_balance = available  # This is actual available balance
 
 wins = len([t for t in closed_all if t.get('pnl_sol', 0) > 0])
 losses = len([t for t in closed_all if t.get('pnl_sol', 0) < 0])
@@ -44,7 +45,7 @@ lines.append(f"")
 lines.append(f"💰 SIM WALLET")
 lines.append(f"• Available: {available:.4f} SOL")
 lines.append(f"• Locked (open positions): {locked:.4f} SOL")
-lines.append(f"• Balance (after locks): {balance:.4f} SOL")
+lines.append(f"• Balance (after locks): {available:.4f} SOL")
 lines.append(f"")
 lines.append(f"📈 RECORD: {wins}W / {losses}L ({winrate:.0f}% win rate)")
 lines.append(f"• Total closed: {len(closed_all)} trades")
@@ -88,4 +89,4 @@ resp = requests.post(
     "https://api.telegram.org/bot8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg/sendMessage",
     json={"chat_id": "6402511249", "text": msg, "parse_mode": "HTML"}
 )
-print(f"Sent: {resp.status_code == 200}, Balance: {balance:.4f} SOL, {wins}W/{losses}L")
+print(f"Sent: {resp.status_code == 200}, Balance: {available:.4f} SOL, {wins}W/{losses}L")
