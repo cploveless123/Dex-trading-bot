@@ -22,20 +22,20 @@ MIN_BS_RATIO = 1.5         # BS ratio (kept for compatibility)
 MIN_BS_NEW = 0.2          # Pairs <5 min old
 MIN_BS_OLD = 0.9          # Pairs >5 min old
 
-# Exit Plan v5.4 - Tighter trailing on big winners
-TP1_PERCENT = 35           # +35% → sell 10%, trail 30%
+# Exit Plan v5.5 - Hold through TP1, let winners run
+TP1_PERCENT = 35           # +35% → HOLD 100%, trail 30%
 TP1_TRAILING_PCT = 30
-TP1_SELL_PCT = 10
-TP2_PERCENT = 100          # +100% → sell 30%, trail 30%
+TP1_SELL_PCT = 0           # NO SELL at TP1 - let it ride
+TP2_PERCENT = 100          # +100% → sell 40%, trail 30%
 TP2_TRAILING_PCT = 30
-TP2_SELL_PCT = 30
+TP2_SELL_PCT = 40
 TP3_PERCENT = 200          # +200% → sell 30%, trail 30%
 TP3_TRAILING_PCT = 30
 TP3_SELL_PCT = 30
 TP4_PERCENT = 300          # +300% → sell 20%
 TP4_TRAILING_PCT = 30
 TP4_SELL_PCT = 20
-TP5_PERCENT = 1000         # +1000% → sell remaining 10%
+TP5_PERCENT = 1000         # +1000% → sell remaining 10% (all done)
 TP5_TRAILING_PCT = 15
 TP5_SELL_PCT = 10
 TRAILING_STOP_PCT = 15    # 15% from peak on remaining
@@ -49,12 +49,12 @@ REAL_TP1_PCT = round(TP1_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_TP2_PCT = round(TP2_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_STOP_PCT = round(STOP_LOSS_PERCENT * (1 + SLIPPAGE_TAX_COST), 1)
 
-EXIT_PLAN_TEXT = f"""🎯 Exit Plan (tax-adjusted):
-+{TP1_PERCENT}% → Sell {TP1_SELL_PCT}%, trail {TP1_TRAILING_PCT}%
+EXIT_PLAN_TEXT = f"""🎯 Exit Plan v5.5 (tax-adjusted):
++{TP1_PERCENT}% → Hold (no sell), trail {TP1_TRAILING_PCT}%
 +{TP2_PERCENT}% → Sell {TP2_SELL_PCT}%, trail {TP2_TRAILING_PCT}%
 +{TP3_PERCENT}% → Sell {TP3_SELL_PCT}%, trail {TP3_TRAILING_PCT}%
 +{TP4_PERCENT}% → Sell {TP4_SELL_PCT}%, trail {TP4_TRAILING_PCT}%
-+{TP5_PERCENT}% → Sell {TP5_SELL_PCT}%, trail {TP5_TRAILING_PCT}%
++{TP5_PERCENT}% → Sell remaining, trail {TP5_TRAILING_PCT}%
 ⚠️ Stop: {STOP_LOSS_PERCENT}% (net: {REAL_STOP_PCT}% after {SLIPPAGE_TAX_COST*100}% tax/slippage)"""
 
 # Dip / Pullback Detection

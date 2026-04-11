@@ -132,8 +132,17 @@ def check_should_buy(addr, p, sym, dex, m, v, v5, bs, buys, sells, holders, pair
     
     # === ANTI-MOMENTUM CHECK ===
     # If chg5 is climbing hard, we're chasing — reject
-    if chg5 > 15:
+    # EXCEPTION: Sustained momentum - if h1 > +100% and mcap < $60K, allow up to +50% chg5
+    # (strong h1 proves sustained buying pressure, high 5m is continuation not a rug)
+    sustained_momentum = chg60 > 100 and m < 60000
+    
+    if chg5 > 50:
+        return False, f"chg5 +{chg5:.1f}% (extreme pump)"
+    if chg5 > 15 and not sustained_momentum:
         return False, f"chg5 +{chg5:.1f}% (momentum pump, not dip)"
+    
+    if sustained_momentum and chg5 <= 50:
+        return True, f"SUSTAINED_MOMENTUM: h1 {chg60:.0f}% + chg5 {chg5:.1f}% + mcap ${m:,.0f} (holders growing = real)"
     
     # === VOL/MCAP FILTER (non-early tier) ===
     if not early_momentum and vol_mcap_ratio < 1.0:

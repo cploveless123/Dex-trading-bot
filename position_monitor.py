@@ -157,22 +157,24 @@ def check_positions():
             print(f"🔴 {sym} STOP LOSS @ ${mcap:,.0f} ({gains_pct:.1f}%)")
             continue
 
-        # === TP1 HIT (+35% → sell 22%) ===
+        # === TP1 HIT (+35% → HOLD for v5.5) ===
         if not tp1_sold and gains_pct >= TP1_PERCENT:
             t['tp1_sold'] = True
-            t['partial_exit'] = True
-            t['status'] = 'open_partial'
-            t['closed_at'] = datetime.utcnow().isoformat()
-            t['exit_reason'] = 'TP1_AUTO'
-            sell_pct = (mcap - entry) / entry * 100
-            pnl_tp1 = POSITION_SIZE * TP1_SELL_PCT / 100 * (sell_pct / 100)
-            t['pnl_sol'] = pnl_tp1
-            t['pnl_pct'] = sell_pct
             cache['baseline'] = mcap
             cache['peak_mcap'] = mcap
             save_peak_cache(peak_cache)
             updated = True
-            msg = f"""🏆 TP1 (+{TP1_PERCENT}% → sell {TP1_SELL_PCT}%) | {datetime.utcnow().strftime('%H:%M UTC')}
+            if TP1_SELL_PCT > 0:
+                # v5.4: actual partial sell
+                t['partial_exit'] = True
+                t['status'] = 'open_partial'
+                t['closed_at'] = datetime.utcnow().isoformat()
+                t['exit_reason'] = 'TP1_AUTO'
+                sell_pct = (mcap - entry) / entry * 100
+                pnl_tp1 = POSITION_SIZE * TP1_SELL_PCT / 100 * (sell_pct / 100)
+                t['pnl_sol'] = pnl_tp1
+                t['pnl_pct'] = sell_pct
+                msg = f"""🏆 TP1 (+{TP1_PERCENT}% → sell {TP1_SELL_PCT}%) | {datetime.utcnow().strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
 💰 {sym}
 📍 Entry MC: ${int(entry):,}
@@ -189,8 +191,27 @@ def check_positions():
 📈 TP2: +{TP2_PERCENT}% → Sell {TP2_SELL_PCT}% more
 📈 TP3: +{TP3_PERCENT}% → Sell remaining {TP3_SELL_PCT}%
 📊 Trailing: {TRAILING_STOP_PCT}% from peak"""
-            send_alert(msg, "TP1")
-            print(f"✅ {sym} TP1 HIT @ ${mcap:,.0f} (+{sell_pct:.1f}%)")
+                send_alert(msg, "TP1")
+                print(f"✅ {sym} TP1 HIT @ ${mcap:,.0f} (+{sell_pct:.1f}%)")
+            else:
+                # v5.5: TP1 reached but HOLDING - no sell, just track peak
+                msg = f"""🚀 TP1 (+{TP1_PERCENT}% HIT - HOLDING) | {datetime.utcnow().strftime('%H:%M UTC')}
+━━━━━━━━━━━━━━━
+💰 {sym}
+📍 Entry MC: ${int(entry):,}
+📊 Current MC: ${int(mcap):,} (+{gains_pct:.1f}%)
+💵 Position: Full ride in play (100% held)
+
+🔗 https://dexscreener.com/solana/{ca}
+🥧 https://pump.fun/{ca}
+
+📊 Next Targets:
+📈 TP2: +{TP2_PERCENT}% → Sell {TP2_SELL_PCT}%
+📈 TP3: +{TP3_PERCENT}% → Sell {TP3_SELL_PCT}%
+📈 TP5: +{TP5_PERCENT}% → Sell remaining!
+⚠️ Stop: {STOP_LOSS_PERCENT}%"""
+                send_alert(msg, "TP1_HOLD")
+                print(f"🚀 {sym} TP1 HIT - HOLDING @ ${mcap:,.0f} (+{gains_pct:.1f}%)")
             continue
 
     # === TP2 HIT (+100%) ===
