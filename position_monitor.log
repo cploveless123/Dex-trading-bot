@@ -520,3 +520,141 @@ Checking every 5s
   Arm: mcap=$11,026 | gain=+0.0% | peak=$11,026 | dd=+0%
   WLFI: mcap=$34,157 | gain=+94.5% | peak=$34,157 | dd=-40%
   Arm: mcap=$13,152 | gain=+19.3% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$34,157 | gain=+94.5% | peak=$34,157 | dd=-40%
+  Arm: mcap=$13,152 | gain=+19.3% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$34,157 | gain=+94.5% | peak=$34,157 | dd=-40%
+  Arm: mcap=$13,152 | gain=+19.3% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$34,157 | gain=+94.5% | peak=$34,157 | dd=-40%
+  Arm: mcap=$13,152 | gain=+19.3% | peak=$13,152 | dd=+0%
+[TP2] Alert sent
+✅ WLFI TP2 HIT @ $37,824 (+115%)
+  Arm: mcap=$13,152 | gain=+19.3% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$37,824 | gain=+115.4% | peak=$37,824 | dd=-55%
+  Arm: mcap=$13,152 | gain=+19.3% | peak=$13,152 | dd=+0%
+[05:21:22] Monitor alive | 1129 checks | 1 open | next in 5s
+  WLFI: mcap=$37,824 | gain=+115.4% | peak=$37,824 | dd=-55%
+  Arm: mcap=$12,797 | gain=+16.1% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$37,824 | gain=+115.4% | peak=$37,824 | dd=-55%
+  Arm: mcap=$12,797 | gain=+16.1% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$37,824 | gain=+115.4% | peak=$37,824 | dd=-55%
+  Arm: mcap=$12,797 | gain=+16.1% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$44,302 | gain=+152.3% | peak=$44,302 | dd=-82%
+  Arm: mcap=$12,797 | gain=+16.1% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$44,302 | gain=+152.3% | peak=$44,302 | dd=-82%
+  Arm: mcap=$12,797 | gain=+16.1% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$44,302 | gain=+152.3% | peak=$44,302 | dd=-82%
+  Arm: mcap=$12,732 | gain=+15.5% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$44,302 | gain=+152.3% | peak=$44,302 | dd=-82%
+  Arm: mcap=$12,732 | gain=+15.5% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$44,302 | gain=+152.3% | peak=$44,302 | dd=-82%
+  Arm: mcap=$12,732 | gain=+15.5% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$44,302 | gain=+152.3% | peak=$44,302 | dd=-82%
+  Arm: mcap=$12,732 | gain=+15.5% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$40,908 | gain=+133.0% | peak=$44,302 | dd=-68%
+  Arm: mcap=$12,732 | gain=+15.5% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$40,908 | gain=+133.0% | peak=$44,302 | dd=-68%
+  Arm: mcap=$12,732 | gain=+15.5% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$40,908 | gain=+133.0% | peak=$44,302 | dd=-68%
+  Arm: mcap=$11,227 | gain=+1.8% | peak=$13,152 | dd=+0%
+[05:22:24] Monitor alive | 1141 checks | 1 open | next in 5s
+  WLFI: mcap=$40,908 | gain=+133.0% | peak=$44,302 | dd=-68%
+  Arm: mcap=$11,227 | gain=+1.8% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$40,908 | gain=+133.0% | peak=$44,302 | dd=-68%
+  Arm: mcap=$11,227 | gain=+1.8% | peak=$13,152 | dd=+0%
+  WLFI: mcap=$40,908 | gain=+133.0% | peak=$44,302 | dd=-68%
+  Arm: mcap=$11,227 | gain=+1.8% | peak=$13,152 | dd=+0%
+[TRAILING_STOP] Alert sent
+✅ WLFI TRAILING STOP @ $32,257 (27% drop from peak)
+  Arm: mcap=$11,227 | gain=+1.8% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,227 | gain=+1.8% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,811 | gain=+7.1% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,811 | gain=+7.1% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,811 | gain=+7.1% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,811 | gain=+7.1% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,811 | gain=+7.1% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,811 | gain=+7.1% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,477 | gain=+4.1% | peak=$13,152 | dd=+0%
+[05:23:25] Monitor alive | 1153 checks | 1 open | next in 5s
+  Arm: mcap=$11,477 | gain=+4.1% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,477 | gain=+4.1% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,477 | gain=+4.1% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,477 | gain=+4.1% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,477 | gain=+4.1% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,396 | gain=+3.4% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,396 | gain=+3.4% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,396 | gain=+3.4% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,396 | gain=+3.4% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,396 | gain=+3.4% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,396 | gain=+3.4% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,651 | gain=+5.7% | peak=$13,152 | dd=+0%
+[05:24:26] Monitor alive | 1165 checks | 1 open | next in 5s
+  Arm: mcap=$11,651 | gain=+5.7% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,651 | gain=+5.7% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,651 | gain=+5.7% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,651 | gain=+5.7% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,651 | gain=+5.7% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,374 | gain=+3.2% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,374 | gain=+3.2% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,374 | gain=+3.2% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,374 | gain=+3.2% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,374 | gain=+3.2% | peak=$13,152 | dd=+0%
+  Arm: mcap=$11,374 | gain=+3.2% | peak=$13,152 | dd=+0%
+  Arm: mcap=$10,514 | gain=-4.6% | peak=$13,152 | dd=+0%
+[05:25:27] Monitor alive | 1177 checks | 1 open | next in 5s
+  Arm: mcap=$10,514 | gain=-4.6% | peak=$13,152 | dd=+0%
+  Arm: mcap=$10,514 | gain=-4.6% | peak=$13,152 | dd=+0%
+  Arm: mcap=$10,514 | gain=-4.6% | peak=$13,152 | dd=+0%
+  Arm: mcap=$10,514 | gain=-4.6% | peak=$13,152 | dd=+0%
+  Arm: mcap=$10,514 | gain=-4.6% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,669 | gain=-12.3% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,669 | gain=-12.3% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,669 | gain=-12.3% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,669 | gain=-12.3% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,669 | gain=-12.3% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,669 | gain=-12.3% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,486 | gain=-14.0% | peak=$13,152 | dd=+0%
+[05:26:28] Monitor alive | 1189 checks | 1 open | next in 5s
+  Arm: mcap=$9,486 | gain=-14.0% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,486 | gain=-14.0% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,486 | gain=-14.0% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,486 | gain=-14.0% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,486 | gain=-14.0% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,634 | gain=-12.6% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,634 | gain=-12.6% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,634 | gain=-12.6% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,634 | gain=-12.6% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,634 | gain=-12.6% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,634 | gain=-12.6% | peak=$13,152 | dd=+0%
+  Arm: mcap=$10,052 | gain=-8.8% | peak=$13,152 | dd=+0%
+[05:27:29] Monitor alive | 1201 checks | 1 open | next in 5s
+  Arm: mcap=$10,052 | gain=-8.8% | peak=$13,152 | dd=+0%
+  Arm: mcap=$10,052 | gain=-8.8% | peak=$13,152 | dd=+0%
+  Arm: mcap=$10,052 | gain=-8.8% | peak=$13,152 | dd=+0%
+  Arm: mcap=$10,052 | gain=-8.8% | peak=$13,152 | dd=+0%
+  Arm: mcap=$10,052 | gain=-8.8% | peak=$13,152 | dd=+0%
+  Arm: mcap=$10,052 | gain=-8.8% | peak=$13,152 | dd=+0%
+  Arm: mcap=$10,052 | gain=-8.8% | peak=$13,152 | dd=+0%
+  Arm: mcap=$10,052 | gain=-8.8% | peak=$13,152 | dd=+0%
+  Arm: mcap=$10,052 | gain=-8.8% | peak=$13,152 | dd=+0%
+  Arm: mcap=$10,052 | gain=-8.8% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,073 | gain=-17.7% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,073 | gain=-17.7% | peak=$13,152 | dd=+0%
+[05:28:30] Monitor alive | 1213 checks | 1 open | next in 5s
+  Arm: mcap=$9,073 | gain=-17.7% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,073 | gain=-17.7% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,073 | gain=-17.7% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,073 | gain=-17.7% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,208 | gain=-16.5% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,208 | gain=-16.5% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,208 | gain=-16.5% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,208 | gain=-16.5% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,208 | gain=-16.5% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,208 | gain=-16.5% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,678 | gain=-12.2% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,678 | gain=-12.2% | peak=$13,152 | dd=+0%
+[05:29:31] Monitor alive | 1225 checks | 1 open | next in 5s
+  Arm: mcap=$9,678 | gain=-12.2% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,678 | gain=-12.2% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,678 | gain=-12.2% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,678 | gain=-12.2% | peak=$13,152 | dd=+0%
+  Arm: mcap=$9,238 | gain=-16.2% | peak=$13,152 | dd=+0%
