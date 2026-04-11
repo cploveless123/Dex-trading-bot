@@ -10,8 +10,8 @@ KOL_BUY_POSITION_SIZE = 0.10
 MAX_OPEN_POSITIONS = 9     # Max concurrent positions
 
 # Entry Filters
-MIN_MCAP = 3000            # $3K floor (v5.1)
-MAX_MCAP = 95000           # $95K ceiling
+MIN_MCAP = 4000            # $4K floor (v5.1)
+MAX_MCAP = 75000           # $75K ceiling
 MIN_VOLUME = 5000          # 24h volume (kept for compatibility)
 MIN_5MIN_VOLUME = 1000     # 5min volume > $1K
 MIN_HOLDERS = 15           # Holders > 15
@@ -61,7 +61,7 @@ EXIT_PLAN_TEXT = f"""🎯 Exit Plan v5.5 (tax-adjusted):
 # New (<5 min): dip 10-50%, h1 >+50%, 5min >-10%
 # Older (>5 min): dip 10-50%, 24hr >+25%, h1 >-39%, 5min >-39%
 DIP_MIN = 15
-DIP_MAX = 35
+DIP_MAX = 40
 PEAK_WINDOW_SECONDS = 60   # Peak = highest price in first 60 seconds
 PEAK_WINDOW_NEW = 90       # Peak window for new pairs (<10 min) - v5.1
 PEAK_WINDOW_OLD = 180      # Peak window for older pairs (>10 min) - v5.1
@@ -85,7 +85,7 @@ CHECK_BLACKLIST = True
 TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
 
 # Simulation
-SIM_RESET_TIMESTAMP = '2026-04-11T16:32:47.000000'  # Fresh start at 1.0 SOL
+SIM_RESET_TIMESTAMP = '2026-04-11T20:53:55.000000'  # Fresh start at 1.0 SOL
 CHRIS_STARTING_BALANCE = 1.0
 
 # Scan intervals
