@@ -214,6 +214,39 @@ def check_and_buy():
             if not should_buy:
                 continue
             
+            # === FALLING KNIFE GUARD: If chg5 < 0, wait 60s and recheck ===
+            # This prevents buying during a dip that keeps falling
+            chg5_now = float(p.get('priceChange', {}).get('m5', 0) or 0)
+            if chg5_now < 0:
+                print(f"⏳ {sym}: chg5 {chg5_now:+.1f}% (negative) - monitoring 60s for stabilization...")
+                time.sleep(60)
+                # Re-fetch price after delay
+                try:
+                    r2 = requests.get(f"https://api.dexscreener.com/latest/dex/tokens/{addr}", timeout=10)
+                    if r2.status_code == 200:
+                        data2 = r2.json()
+                        pairs2 = data2.get('pairs', [])
+                        if pairs2:
+                            p2 = max(pairs2, key=lambda x: x.get('liquidity', {}).get('usd', 0))
+                            chg5_after = float(p2.get('priceChange', {}).get('m5', 0) or 0)
+                            m2 = p2.get('fdv', 0) or p2.get('marketCap', 0) or 0
+                            print(f"   → After 60s: chg5 {chg5_after:+.1f}%, mcap ${m2:,.0f}")
+                            # If price dropped further (more negative), skip - falling knife
+                            if chg5_after < chg5_now - 5:  # got worse by >5%
+                                print(f"   ❌ SKIP: Still falling ({chg5_after:+.1f}%), not a bounce")
+                                continue
+                            # Update to new price data
+                            m = m2
+                            v5 = p2.get('volume', {}).get('m5', 0) or 0
+                            v = p2.get('volume', {}).get('h24', 0) or 0
+                            buys = p2.get('txns', {}).get('h24', {}).get('buys', 0) or 0
+                            sells = p2.get('txns', {}).get('h24', {}).get('sells', 0) or 1
+                            bs = buys / sells if sells > 0 else 0
+                            holders = p2.get('holders', 0) or 0
+                            p = p2
+                except:
+                    pass
+            
             # Check if already have this token
             try:
                 with open(TRADES_FILE) as f:

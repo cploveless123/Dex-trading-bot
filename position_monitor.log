@@ -3,9 +3,11 @@ Exit Plan: TP1 +35% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 15% | Stop -25%
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
-  JASON: mcap=$9,870 | gain=+26.7% | peak=$10,292 | dd=+0%
-  Everett: mcap=$6,076 | gain=-18.8% | peak=$8,876 | dd=+0%
-  JASON: mcap=$9,567 | gain=+22.8% | peak=$10,292 | dd=+0%
-  Everett: mcap=$6,076 | gain=-18.8% | peak=$8,876 | dd=+0%
-  JASON: mcap=$9,567 | gain=+22.8% | peak=$10,292 | dd=+0%
-  Everett: mcap=$6,076 | gain=-18.8% | peak=$8,876 | dd=+0%
+  JASON: mcap=$9,291 | gain=+19.2% | peak=$10,487 | dd=+0%
+  FADED: mcap=$18,245 | gain=-14.2% | peak=$21,264 | dd=+0%
+  BABY: mcap=$18,643 | gain=-7.0% | peak=$20,411 | dd=+0%
+  Gochiyo: mcap=$22,742 | gain=+14.9% | peak=$24,687 | dd=+0%
+  JASON: mcap=$9,787 | gain=+25.6% | peak=$10,487 | dd=+0%
+  FADED: mcap=$18,245 | gain=-14.2% | peak=$21,264 | dd=+0%
+  BABY: mcap=$18,643 | gain=-7.0% | peak=$20,411 | dd=+0%
+  Gochiyo: mcap=$22,742 | gain=+14.9% | peak=$24,687 | dd=+0%
