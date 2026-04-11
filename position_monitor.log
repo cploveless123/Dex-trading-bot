@@ -3627,3 +3627,172 @@ Checking every 5s
 [13:57:46] Monitor alive | 4069 checks | 0 open | next in 5s
 [13:58:46] Monitor alive | 4081 checks | 0 open | next in 5s
 [13:59:46] Monitor alive | 4093 checks | 0 open | next in 5s
+[14:00:46] Monitor alive | 4105 checks | 0 open | next in 5s
+[14:01:46] Monitor alive | 4117 checks | 0 open | next in 5s
+  JASON: mcap=$7,793 | gain=+0.0% | peak=$7,793 | dd=+0%
+  JASON: mcap=$7,793 | gain=+0.0% | peak=$7,793 | dd=+0%
+  JASON: mcap=$7,793 | gain=+0.0% | peak=$7,793 | dd=+0%
+  JASON: mcap=$7,793 | gain=+0.0% | peak=$7,793 | dd=+0%
+  JASON: mcap=$7,793 | gain=+0.0% | peak=$7,793 | dd=+0%
+  JASON: mcap=$8,043 | gain=+3.2% | peak=$8,043 | dd=+0%
+  JASON: mcap=$8,043 | gain=+3.2% | peak=$8,043 | dd=+0%
+  JASON: mcap=$8,043 | gain=+3.2% | peak=$8,043 | dd=+0%
+  JASON: mcap=$8,043 | gain=+3.2% | peak=$8,043 | dd=+0%
+  JASON: mcap=$8,043 | gain=+3.2% | peak=$8,043 | dd=+0%
+  JASON: mcap=$8,043 | gain=+3.2% | peak=$8,043 | dd=+0%
+  JASON: mcap=$8,258 | gain=+6.0% | peak=$8,258 | dd=+0%
+[14:02:47] Monitor alive | 4129 checks | 1 open | next in 5s
+  JASON: mcap=$8,258 | gain=+6.0% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,258 | gain=+6.0% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,258 | gain=+6.0% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,258 | gain=+6.0% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,258 | gain=+6.0% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,226 | gain=+5.6% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,226 | gain=+5.6% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,226 | gain=+5.6% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,226 | gain=+5.6% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,226 | gain=+5.6% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,226 | gain=+5.6% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,090 | gain=+3.8% | peak=$8,258 | dd=+0%
+[14:03:48] Monitor alive | 4141 checks | 1 open | next in 5s
+  JASON: mcap=$8,090 | gain=+3.8% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,090 | gain=+3.8% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,090 | gain=+3.8% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,090 | gain=+3.8% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,090 | gain=+3.8% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,239 | gain=+5.7% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,239 | gain=+5.7% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,239 | gain=+5.7% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,239 | gain=+5.7% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,239 | gain=+5.7% | peak=$8,258 | dd=+0%
+  JASON: mcap=$8,373 | gain=+7.5% | peak=$8,373 | dd=+0%
+  JASON: mcap=$8,373 | gain=+7.5% | peak=$8,373 | dd=+0%
+[14:04:49] Monitor alive | 4153 checks | 1 open | next in 5s
+  JASON: mcap=$8,373 | gain=+7.5% | peak=$8,373 | dd=+0%
+  JASON: mcap=$8,373 | gain=+7.5% | peak=$8,373 | dd=+0%
+  JASON: mcap=$8,373 | gain=+7.5% | peak=$8,373 | dd=+0%
+  JASON: mcap=$8,373 | gain=+7.5% | peak=$8,373 | dd=+0%
+  JASON: mcap=$8,437 | gain=+8.3% | peak=$8,437 | dd=+0%
+  JASON: mcap=$8,437 | gain=+8.3% | peak=$8,437 | dd=+0%
+  JASON: mcap=$8,437 | gain=+8.3% | peak=$8,437 | dd=+0%
+  JASON: mcap=$8,437 | gain=+8.3% | peak=$8,437 | dd=+0%
+  JASON: mcap=$8,437 | gain=+8.3% | peak=$8,437 | dd=+0%
+  JASON: mcap=$8,437 | gain=+8.3% | peak=$8,437 | dd=+0%
+  JASON: mcap=$8,469 | gain=+8.7% | peak=$8,469 | dd=+0%
+  JASON: mcap=$8,469 | gain=+8.7% | peak=$8,469 | dd=+0%
+[14:05:50] Monitor alive | 4165 checks | 1 open | next in 5s
+  JASON: mcap=$8,469 | gain=+8.7% | peak=$8,469 | dd=+0%
+  JASON: mcap=$8,469 | gain=+8.7% | peak=$8,469 | dd=+0%
+  JASON: mcap=$8,469 | gain=+8.7% | peak=$8,469 | dd=+0%
+  JASON: mcap=$8,469 | gain=+8.7% | peak=$8,469 | dd=+0%
+  JASON: mcap=$8,307 | gain=+6.6% | peak=$8,469 | dd=+0%
+  JASON: mcap=$8,307 | gain=+6.6% | peak=$8,469 | dd=+0%
+  JASON: mcap=$8,307 | gain=+6.6% | peak=$8,469 | dd=+0%
+  JASON: mcap=$8,307 | gain=+6.6% | peak=$8,469 | dd=+0%
+  JASON: mcap=$8,307 | gain=+6.6% | peak=$8,469 | dd=+0%
+  JASON: mcap=$8,307 | gain=+6.6% | peak=$8,469 | dd=+0%
+  JASON: mcap=$8,499 | gain=+9.1% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,499 | gain=+9.1% | peak=$8,499 | dd=+0%
+[14:06:51] Monitor alive | 4177 checks | 1 open | next in 5s
+  JASON: mcap=$8,499 | gain=+9.1% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,499 | gain=+9.1% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,499 | gain=+9.1% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,499 | gain=+9.1% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,322 | gain=+6.8% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,322 | gain=+6.8% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,322 | gain=+6.8% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,322 | gain=+6.8% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,322 | gain=+6.8% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,322 | gain=+6.8% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,438 | gain=+8.3% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,438 | gain=+8.3% | peak=$8,499 | dd=+0%
+[14:07:52] Monitor alive | 4189 checks | 1 open | next in 5s
+  JASON: mcap=$8,438 | gain=+8.3% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,438 | gain=+8.3% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,438 | gain=+8.3% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,438 | gain=+8.3% | peak=$8,499 | dd=+0%
+  JASON: mcap=$8,849 | gain=+13.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,849 | gain=+13.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,849 | gain=+13.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,849 | gain=+13.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,849 | gain=+13.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,849 | gain=+13.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,702 | gain=+11.7% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,702 | gain=+11.7% | peak=$8,849 | dd=+0%
+[14:08:53] Monitor alive | 4201 checks | 1 open | next in 5s
+  JASON: mcap=$8,702 | gain=+11.7% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,702 | gain=+11.7% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,702 | gain=+11.7% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,702 | gain=+11.7% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,483 | gain=+8.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,483 | gain=+8.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,483 | gain=+8.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,483 | gain=+8.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,483 | gain=+8.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,483 | gain=+8.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,838 | gain=+0.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,838 | gain=+0.6% | peak=$8,849 | dd=+0%
+[14:09:54] Monitor alive | 4213 checks | 1 open | next in 5s
+  JASON: mcap=$7,838 | gain=+0.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,838 | gain=+0.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,838 | gain=+0.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,838 | gain=+0.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,993 | gain=+2.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,993 | gain=+2.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,993 | gain=+2.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,993 | gain=+2.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,993 | gain=+2.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,993 | gain=+2.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,020 | gain=+2.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,020 | gain=+2.9% | peak=$8,849 | dd=+0%
+[14:10:55] Monitor alive | 4225 checks | 1 open | next in 5s
+  JASON: mcap=$8,020 | gain=+2.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,020 | gain=+2.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,020 | gain=+2.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,020 | gain=+2.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,863 | gain=+0.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,863 | gain=+0.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,863 | gain=+0.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,863 | gain=+0.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,863 | gain=+0.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,863 | gain=+0.9% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,009 | gain=+2.8% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,009 | gain=+2.8% | peak=$8,849 | dd=+0%
+[14:11:55] Monitor alive | 4237 checks | 1 open | next in 5s
+  JASON: mcap=$8,009 | gain=+2.8% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,009 | gain=+2.8% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,009 | gain=+2.8% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,009 | gain=+2.8% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,828 | gain=+0.5% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,828 | gain=+0.5% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,828 | gain=+0.5% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,828 | gain=+0.5% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,828 | gain=+0.5% | peak=$8,849 | dd=+0%
+  JASON: mcap=$7,828 | gain=+0.5% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,118 | gain=+4.2% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,118 | gain=+4.2% | peak=$8,849 | dd=+0%
+[14:12:56] Monitor alive | 4249 checks | 1 open | next in 5s
+  JASON: mcap=$8,118 | gain=+4.2% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,118 | gain=+4.2% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,118 | gain=+4.2% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,118 | gain=+4.2% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,381 | gain=+7.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,381 | gain=+7.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,381 | gain=+7.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,381 | gain=+7.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,381 | gain=+7.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,381 | gain=+7.6% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,649 | gain=+11.0% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,649 | gain=+11.0% | peak=$8,849 | dd=+0%
+[14:13:57] Monitor alive | 4261 checks | 1 open | next in 5s
+  JASON: mcap=$8,649 | gain=+11.0% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,649 | gain=+11.0% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,649 | gain=+11.0% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,649 | gain=+11.0% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,630 | gain=+10.8% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,630 | gain=+10.8% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,630 | gain=+10.8% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,630 | gain=+10.8% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,630 | gain=+10.8% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,506 | gain=+9.2% | peak=$8,849 | dd=+0%
+  JASON: mcap=$8,506 | gain=+9.2% | peak=$8,849 | dd=+0%
