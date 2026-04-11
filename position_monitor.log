@@ -18,3 +18,44 @@ Checking every 5s
 [TP2] Alert sent
 ✅ ASCEND TP2 HIT @ $21,499 (+114%)
   TRUE: mcap=$10,434 | gain=+32.0% | peak=$11,026 | dd=+0%
+  MarsCoin: mcap=$76,679 | gain=+42.4% | peak=$76,679 | dd=-4%
+  AGI: mcap=$5,297 | gain=-10.5% | peak=$6,500 | dd=+19%
+  ASCEND: mcap=$21,499 | gain=+114.1% | peak=$21,499 | dd=-15%
+  TRUE: mcap=$10,434 | gain=+32.0% | peak=$11,026 | dd=+0%
+  MarsCoin: mcap=$76,679 | gain=+42.4% | peak=$76,679 | dd=-4%
+  AGI: mcap=$5,297 | gain=-10.5% | peak=$6,500 | dd=+19%
+  ASCEND: mcap=$21,499 | gain=+114.1% | peak=$21,499 | dd=-15%
+  TRUE: mcap=$10,434 | gain=+32.0% | peak=$11,026 | dd=+0%
+  MarsCoin: mcap=$76,679 | gain=+42.4% | peak=$76,679 | dd=-4%
+  AGI: mcap=$5,297 | gain=-10.5% | peak=$6,500 | dd=+19%
+  ASCEND: mcap=$21,499 | gain=+114.1% | peak=$21,499 | dd=-15%
+  TRUE: mcap=$10,434 | gain=+32.0% | peak=$11,026 | dd=+0%
+  MarsCoin: mcap=$76,679 | gain=+42.4% | peak=$76,679 | dd=-4%
+  AGI: mcap=$5,297 | gain=-10.5% | peak=$6,500 | dd=+19%
+  ASCEND: mcap=$21,499 | gain=+114.1% | peak=$21,499 | dd=-15%
+  TRUE: mcap=$10,434 | gain=+32.0% | peak=$11,026 | dd=+0%
+  MarsCoin: mcap=$76,679 | gain=+42.4% | peak=$76,679 | dd=-4%
+  AGI: mcap=$5,297 | gain=-10.5% | peak=$6,500 | dd=+19%
+  ASCEND: mcap=$22,129 | gain=+120.4% | peak=$22,129 | dd=-18%
+  TRUE: mcap=$10,388 | gain=+31.4% | peak=$11,026 | dd=+0%
+  MarsCoin: mcap=$76,679 | gain=+42.4% | peak=$76,679 | dd=-4%
+  AGI: mcap=$5,297 | gain=-10.5% | peak=$6,500 | dd=+19%
+  ASCEND: mcap=$22,129 | gain=+120.4% | peak=$22,129 | dd=-18%
+  TRUE: mcap=$10,388 | gain=+31.4% | peak=$11,026 | dd=+0%
+  MarsCoin: mcap=$68,372 | gain=+27.0% | peak=$76,679 | dd=+7%
+  AGI: mcap=$5,297 | gain=-10.5% | peak=$6,500 | dd=+19%
+  ASCEND: mcap=$22,129 | gain=+120.4% | peak=$22,129 | dd=-18%
+  TRUE: mcap=$10,388 | gain=+31.4% | peak=$11,026 | dd=+0%
+  MarsCoin: mcap=$68,372 | gain=+27.0% | peak=$76,679 | dd=+7%
+  AGI: mcap=$5,297 | gain=-10.5% | peak=$6,500 | dd=+19%
+  ASCEND: mcap=$22,129 | gain=+120.4% | peak=$22,129 | dd=-18%
+  TRUE: mcap=$10,388 | gain=+31.4% | peak=$11,026 | dd=+0%
+  MarsCoin: mcap=$68,372 | gain=+27.0% | peak=$76,679 | dd=+7%
+  AGI: mcap=$5,297 | gain=-10.5% | peak=$6,500 | dd=+19%
+  ASCEND: mcap=$22,129 | gain=+120.4% | peak=$22,129 | dd=-18%
+  TRUE: mcap=$10,388 | gain=+31.4% | peak=$11,026 | dd=+0%
+[02:19:25] Monitor alive | 12 checks | 2 open | next in 5s
+  MarsCoin: mcap=$68,372 | gain=+27.0% | peak=$76,679 | dd=+7%
+  AGI: mcap=$5,297 | gain=-10.5% | peak=$6,500 | dd=+19%
+  ASCEND: mcap=$22,129 | gain=+120.4% | peak=$22,129 | dd=-18%
+  TRUE: mcap=$10,388 | gain=+31.4% | peak=$11,026 | dd=+0%
