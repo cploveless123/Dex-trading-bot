@@ -152,10 +152,21 @@ def get_gmgn_token_data(addr):
             is_bonded = migrated_pool and len(str(migrated_pool)) > 5
             
             # Holder data from GMGN (more accurate than DexScreener)
-            holder_count = d.get('holder_count', 0) or 0
-            top_10_holder_rate = d.get('top_10_holder_rate', 0) or 0
-            if top_10_holder_rate == 0 and d.get('dev'):
-                top_10_holder_rate = d['dev'].get('top_10_holder_rate', 0) or 0
+            # GMGN returns strings for some fields - convert properly
+            holder_raw = d.get('holder_count', 0)
+            holder_count = int(holder_raw) if holder_raw else 0
+            
+            top10_raw = d.get('top_10_holder_rate', 0) or d.get('dev', {}).get('top_10_holder_rate', 0) or 0
+            try:
+                top_10_holder_rate = float(top10_raw) if top10_raw else 0.0
+            except (ValueError, TypeError):
+                top_10_holder_rate = 0.0
+            
+            liq_raw = d.get('liquidity', 0)
+            try:
+                liq = float(liq_raw) if liq_raw else 0.0
+            except (ValueError, TypeError):
+                liq = 0.0
             
             return {
                 'ath_mcap': ath_mcap,
@@ -163,7 +174,7 @@ def get_gmgn_token_data(addr):
                 'is_bonded': is_bonded,
                 'holder_count': holder_count,
                 'top_10_holder_rate': top_10_holder_rate,
-                'liquidity': d.get('liquidity', 0)
+                'liquidity': liq
             }
     except:
         pass
@@ -219,20 +230,40 @@ def scan_token(addr):
         bs_mcap = float(p.get('bondingCurve', {}).get('mcap', 0) or 0)
         bs = bs_mcap / max(liq, 1) if bs_mcap > 0 else (m / max(liq, 1) if liq > 0 else 1)
         
-        # Get GMGN data FIRST (primary source)
-        gmgn_data = get_gmgn_token_data(addr)
-        ath_mcap = gmgn_data.get('ath_mcap') if gmgn_data else None
-        is_bonded = gmgn_data.get('is_bonded', False) if gmgn_data else False
-        gmgn_holders = gmgn_data.get('holder_count', 0) if gmgn_data else 0
-        gmgn_top10 = gmgn_data.get('top_10_holder_rate', 0) if gmgn_data else 0
-        gmgn_liq = gmgn_data.get('liquidity', 0) if gmgn_data else 0
+        # Get GMGN data AFTER basic filters pass (optimization - GMGN is slow)
+        # Only fetch GMGN if DexScreener data looks promising
+        ath_mcap = None
+        is_bonded = False
+        gmgn_holders = 0
+        gmgn_top10 = 0.0
+        gmgn_liq = 0.0
+        
+        # Quick DexScreener holder check first (before slow GMGN call)
+        ds_holders = int(p.get('holders', 0) or 0)
+        ds_top10 = float(p.get('topHolderPercent', 0) or 0)
+        
+        # Only call GMGN if DexScreener shows 0 holders (need GMGN backup)
+        # This is the main optimization to avoid slow GMGN calls
+        gmgn_data = None
+        if ds_holders == 0 or ds_top10 == 0:
+            gmgn_data = get_gmgn_token_data(addr)
+        
+        if gmgn_data:
+            ath_mcap = gmgn_data.get('ath_mcap')
+            is_bonded = gmgn_data.get('is_bonded', False)
+            gmgn_holders = int(gmgn_data.get('holder_count', 0)) if gmgn_data.get('holder_count') else 0
+            gmgn_top10 = float(gmgn_data.get('top_10_holder_rate', 0)) if gmgn_data.get('top_10_holder_rate') else 0.0
+            gmgn_liq = float(gmgn_data.get('liquidity', 0)) if gmgn_data.get('liquidity') else 0.0
+        else:
+            ath_mcap = None
+            is_bonded = False
+            gmgn_holders = 0
+            gmgn_top10 = 0.0
+            gmgn_liq = 0.0
         
         # Use GMGN holders/liquidity as primary, DexScreener as backup
-        gmgn_holders = int(gmgn_holders) if gmgn_holders else 0
-        gmgn_top10 = float(gmgn_top10) if gmgn_top10 else 0.0
-        gmgn_liq = float(gmgn_liq) if gmgn_liq else 0.0
-        holders = gmgn_holders if gmgn_holders > 0 else int(p.get('holders', 0) or 0)
-        top10 = gmgn_top10 if gmgn_top10 > 0 else float(p.get('topHolderPercent', 0) or 0)
+        holders = gmgn_holders if gmgn_holders > 0 else ds_holders
+        top10 = gmgn_top10 if gmgn_top10 > 0 else ds_top10
         liq = gmgn_liq if gmgn_liq > 0 else float(p.get('liquidity', {}).get('usd', 0) or 0)
         
         # Anti-patterns
@@ -383,26 +414,28 @@ def check_and_buy():
         if not addr:
             continue
         
-        # Skip if already open OR previously sold
-        # Check both in-memory set AND trade file
-        # PERMANENT BLACKLIST - check trade file EVERY time
-        already_open_or_sold = False
-        try:
-            with open(TRADES_FILE) as f:
-                for line in f:
-                    t = json.loads(line)
-                    if t.get('token_address') == addr:
-                        # Skip if currently open (any status with no closed_at)
-                        if t.get('action') == 'BUY' and not t.get('closed_at'):
-                            already_open_or_sold = True
-                            break
-                        # PERMANENT BLACKLIST - never re-buy if closed (closed_at is set)
-                        if t.get('action') == 'BUY' and t.get('closed_at'):
-                            _sold_tokens.add(addr)
-        except:
-            pass
-        if addr in _sold_tokens or already_open_or_sold:
+        # Skip if already in permanent blacklist (in-memory set - fast)
+        if addr in _sold_tokens:
             continue
+        
+        # Only check file if we don't know about this token yet
+        if addr not in _sold_tokens:
+            already_open_or_sold = False
+            try:
+                with open(TRADES_FILE) as f:
+                    for line in f:
+                        t = json.loads(line)
+                        if t.get('token_address') == addr:
+                            if t.get('action') == 'BUY' and not t.get('closed_at'):
+                                already_open_or_sold = True
+                                break
+                            if t.get('action') == 'BUY' and t.get('closed_at'):
+                                _sold_tokens.add(addr)
+                                break
+            except:
+                pass
+            if addr in _sold_tokens or already_open_or_sold:
+                continue
         
         result, msg = scan_token(addr)
         if result is None:
