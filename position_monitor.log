@@ -389,3 +389,98 @@ Checking every 5s
   USD0: mcap=$9,889 | gain=+1.9% | peak=$11,840 | dd=+0%
   SYS32: mcap=$13,982 | gain=+14.3% | peak=$15,139 | dd=+0%
   cat: mcap=$11,991 | gain=-1.9% | peak=$12,227 | dd=+0%
+  USD0: mcap=$9,889 | gain=+1.9% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$13,982 | gain=+14.3% | peak=$15,139 | dd=+0%
+  cat: mcap=$11,991 | gain=-1.9% | peak=$12,227 | dd=+0%
+  USD0: mcap=$9,889 | gain=+1.9% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$13,982 | gain=+14.3% | peak=$15,139 | dd=+0%
+  cat: mcap=$11,991 | gain=-1.9% | peak=$12,227 | dd=+0%
+  USD0: mcap=$9,889 | gain=+1.9% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$13,878 | gain=+13.4% | peak=$15,139 | dd=+0%
+  cat: mcap=$11,991 | gain=-1.9% | peak=$12,227 | dd=+0%
+  USD0: mcap=$9,889 | gain=+1.9% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$13,878 | gain=+13.4% | peak=$15,139 | dd=+0%
+  cat: mcap=$11,991 | gain=-1.9% | peak=$12,227 | dd=+0%
+  USD0: mcap=$10,211 | gain=+5.2% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$13,878 | gain=+13.4% | peak=$15,139 | dd=+0%
+[TP1_HOLD] Alert sent
+🚀 cat TP1 HIT - HOLDING @ $18,155 (+48.5%)
+  USD0: mcap=$10,211 | gain=+5.2% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$13,878 | gain=+13.4% | peak=$15,139 | dd=+0%
+  cat: mcap=$18,155 | gain=+48.5% | peak=$18,155 | dd=+0%
+  USD0: mcap=$10,211 | gain=+5.2% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$13,878 | gain=+13.4% | peak=$15,139 | dd=+0%
+  cat: mcap=$18,155 | gain=+48.5% | peak=$18,155 | dd=+0%
+  USD0: mcap=$10,211 | gain=+5.2% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$14,901 | gain=+21.8% | peak=$15,139 | dd=+0%
+  cat: mcap=$18,155 | gain=+48.5% | peak=$18,155 | dd=+0%
+[19:30:42] Monitor alive | 337 checks | 3 open | next in 5s
+  USD0: mcap=$10,211 | gain=+5.2% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$14,901 | gain=+21.8% | peak=$15,139 | dd=+0%
+  cat: mcap=$18,155 | gain=+48.5% | peak=$18,155 | dd=+0%
+  USD0: mcap=$10,211 | gain=+5.2% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$14,901 | gain=+21.8% | peak=$15,139 | dd=+0%
+  cat: mcap=$16,942 | gain=+38.6% | peak=$18,155 | dd=+7%
+  USD0: mcap=$9,618 | gain=-0.9% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$14,901 | gain=+21.8% | peak=$15,139 | dd=+0%
+  cat: mcap=$16,942 | gain=+38.6% | peak=$18,155 | dd=+7%
+  USD0: mcap=$9,618 | gain=-0.9% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$14,901 | gain=+21.8% | peak=$15,139 | dd=+0%
+  cat: mcap=$16,942 | gain=+38.6% | peak=$18,155 | dd=+7%
+  USD0: mcap=$9,618 | gain=-0.9% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$14,901 | gain=+21.8% | peak=$15,139 | dd=+0%
+  cat: mcap=$16,942 | gain=+38.6% | peak=$18,155 | dd=+7%
+  USD0: mcap=$9,618 | gain=-0.9% | peak=$11,840 | dd=+0%
+[TP1_HOLD] Alert sent
+🚀 SYS32 TP1 HIT - HOLDING @ $15,348 (+25.4%)
+  cat: mcap=$16,942 | gain=+38.6% | peak=$18,155 | dd=+7%
+  USD0: mcap=$9,618 | gain=-0.9% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$15,348 | gain=+25.4% | peak=$15,348 | dd=+0%
+  cat: mcap=$16,942 | gain=+38.6% | peak=$18,155 | dd=+7%
+  USD0: mcap=$9,618 | gain=-0.9% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$15,348 | gain=+25.4% | peak=$15,348 | dd=+0%
+  cat: mcap=$19,646 | gain=+60.7% | peak=$19,646 | dd=-8%
+  USD0: mcap=$9,637 | gain=-0.7% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$15,348 | gain=+25.4% | peak=$15,348 | dd=+0%
+  cat: mcap=$19,646 | gain=+60.7% | peak=$19,646 | dd=-8%
+  USD0: mcap=$9,637 | gain=-0.7% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$15,348 | gain=+25.4% | peak=$15,348 | dd=+0%
+  cat: mcap=$19,646 | gain=+60.7% | peak=$19,646 | dd=-8%
+  USD0: mcap=$9,637 | gain=-0.7% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$15,348 | gain=+25.4% | peak=$15,348 | dd=+0%
+  cat: mcap=$19,646 | gain=+60.7% | peak=$19,646 | dd=-8%
+  USD0: mcap=$9,637 | gain=-0.7% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$15,163 | gain=+23.9% | peak=$15,348 | dd=+1%
+  cat: mcap=$19,646 | gain=+60.7% | peak=$19,646 | dd=-8%
+[19:31:45] Monitor alive | 349 checks | 3 open | next in 5s
+  USD0: mcap=$9,637 | gain=-0.7% | peak=$11,840 | dd=+0%
+  SYS32: mcap=$15,163 | gain=+23.9% | peak=$15,348 | dd=+1%
+  cat: mcap=$19,646 | gain=+60.7% | peak=$19,646 | dd=-8%
+[STOP_LOSS] Alert sent
+🔴 USD0 STOP LOSS @ $6,511 (-32.9%)
+  SYS32: mcap=$15,163 | gain=+23.9% | peak=$15,348 | dd=+1%
+  cat: mcap=$21,066 | gain=+72.3% | peak=$21,066 | dd=-16%
+  SYS32: mcap=$15,163 | gain=+23.9% | peak=$15,348 | dd=+1%
+  cat: mcap=$21,066 | gain=+72.3% | peak=$21,066 | dd=-16%
+  SYS32: mcap=$15,163 | gain=+23.9% | peak=$15,348 | dd=+1%
+  cat: mcap=$21,066 | gain=+72.3% | peak=$21,066 | dd=-16%
+  SYS32: mcap=$15,163 | gain=+23.9% | peak=$15,348 | dd=+1%
+  cat: mcap=$21,066 | gain=+72.3% | peak=$21,066 | dd=-16%
+  SYS32: mcap=$15,163 | gain=+23.9% | peak=$15,348 | dd=+1%
+  cat: mcap=$21,066 | gain=+72.3% | peak=$21,066 | dd=-16%
+  SYS32: mcap=$15,163 | gain=+23.9% | peak=$15,348 | dd=+1%
+  cat: mcap=$21,066 | gain=+72.3% | peak=$21,066 | dd=-16%
+  SYS32: mcap=$15,163 | gain=+23.9% | peak=$15,348 | dd=+1%
+  cat: mcap=$19,272 | gain=+57.6% | peak=$21,066 | dd=-6%
+  SYS32: mcap=$15,163 | gain=+23.9% | peak=$15,348 | dd=+1%
+  cat: mcap=$19,272 | gain=+57.6% | peak=$21,066 | dd=-6%
+  SYS32: mcap=$15,163 | gain=+23.9% | peak=$15,348 | dd=+1%
+  cat: mcap=$19,272 | gain=+57.6% | peak=$21,066 | dd=-6%
+  SYS32: mcap=$13,982 | gain=+14.3% | peak=$15,348 | dd=+9%
+  cat: mcap=$19,272 | gain=+57.6% | peak=$21,066 | dd=-6%
+  SYS32: mcap=$13,982 | gain=+14.3% | peak=$15,348 | dd=+9%
+  cat: mcap=$19,272 | gain=+57.6% | peak=$21,066 | dd=-6%
+[19:32:47] Monitor alive | 361 checks | 2 open | next in 5s
+  SYS32: mcap=$13,982 | gain=+14.3% | peak=$15,348 | dd=+9%
+[TRAILING_STOP] Alert sent
+✅ cat TRAILING STOP @ $4,258 (80% drop from peak)
