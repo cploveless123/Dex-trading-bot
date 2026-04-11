@@ -90,3 +90,24 @@ Checking every 5s
   5: mcap=$78,746 | gain=+33.5% | peak=$78,746 | dd=+0%
   5: mcap=$78,746 | gain=+33.5% | peak=$78,746 | dd=+0%
   5: mcap=$78,746 | gain=+33.5% | peak=$78,746 | dd=+0%
+[TP1] Alert sent
+✅ 5 TP1 HIT @ $79,799 (+35.3%)
+  5: mcap=$79,799 | gain=+35.3% | peak=$79,799 | dd=+0%
+  5: mcap=$79,799 | gain=+35.3% | peak=$79,799 | dd=+0%
+  5: mcap=$79,799 | gain=+35.3% | peak=$79,799 | dd=+0%
+  5: mcap=$79,799 | gain=+35.3% | peak=$79,799 | dd=+0%
+  5: mcap=$79,799 | gain=+35.3% | peak=$79,799 | dd=+0%
+[07:18:08] Monitor alive | 157 checks | 0 open | next in 5s
+  5: mcap=$86,624 | gain=+46.9% | peak=$86,624 | dd=-9%
+  5: mcap=$86,624 | gain=+46.9% | peak=$86,624 | dd=-9%
+  5: mcap=$86,624 | gain=+46.9% | peak=$86,624 | dd=-9%
+  5: mcap=$86,624 | gain=+46.9% | peak=$86,624 | dd=-9%
+  5: mcap=$86,624 | gain=+46.9% | peak=$86,624 | dd=-9%
+  5: mcap=$86,624 | gain=+46.9% | peak=$86,624 | dd=-9%
+  5: mcap=$85,362 | gain=+44.7% | peak=$86,624 | dd=-7%
+  5: mcap=$85,362 | gain=+44.7% | peak=$86,624 | dd=-7%
+  5: mcap=$85,362 | gain=+44.7% | peak=$86,624 | dd=-7%
+  5: mcap=$85,362 | gain=+44.7% | peak=$86,624 | dd=-7%
+  5: mcap=$85,362 | gain=+44.7% | peak=$86,624 | dd=-7%
+  5: mcap=$85,362 | gain=+44.7% | peak=$86,624 | dd=-7%
+[07:19:09] Monitor alive | 169 checks | 0 open | next in 5s
