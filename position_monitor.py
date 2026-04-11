@@ -360,7 +360,14 @@ def check_positions():
                     t['status'] = 'closed'
                     t['exit_reason'] = 'TRAILING_STOP'
                     t['closed_at'] = datetime.utcnow().isoformat()
-                    remaining_pct = 100 - TP1_SELL_PCT - TP2_SELL_PCT - TP3_SELL_PCT - TP4_SELL_PCT - TP5_SELL_PCT
+                    # Calculate remaining % - only subtract what was actually sold
+                    # If TP1 sold 0%, full 100% is still in play for trailing stop
+                    tp1_actually_sold = TP1_SELL_PCT if TP1_SELL_PCT > 0 else 0
+                    tp2_actually_sold = TP2_SELL_PCT if tp2_sold else 0
+                    tp3_actually_sold = TP3_SELL_PCT if tp3_sold else 0
+                    tp4_actually_sold = TP4_SELL_PCT if tp4_sold else 0
+                    tp5_actually_sold = TP5_SELL_PCT if tp5_sold else 0
+                    remaining_pct = max(0, 100 - tp1_actually_sold - tp2_actually_sold - tp3_actually_sold - tp4_actually_sold - tp5_actually_sold)
                     remaining_pnl = POSITION_SIZE * remaining_pct / 100 * (gains_pct / 100)
                     prev_pnl = t.get('pnl_sol', 0)
                     t['pnl_sol'] = prev_pnl + remaining_pnl
