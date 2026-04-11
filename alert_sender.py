@@ -214,9 +214,9 @@ def get_status():
     
     # Only count trades since reset
     reset_trades = [t for t in all_trades if t.get('opened_at', '') > SIM_RESET_TIMESTAMP]
-    closed_pnl = sum(t.get('pnl_sol', 0) for t in reset_trades if t.get('status') in ['closed', 'open_partial', None])
-    open_full = len([t for t in reset_trades if t.get('status') == 'open'])
-    open_partial = len([t for t in reset_trades if t.get('status') == 'open_partial'])
+    closed_pnl = sum(t.get('pnl_sol', 0) for t in reset_trades if t.get('closed_at'))
+    open_full = len([t for t in reset_trades if t.get('status') == 'open' and not t.get('closed_at')])
+    open_partial = len([t for t in reset_trades if t.get('status') == 'open_partial' and not t.get('closed_at')])
     locked = open_full * POSITION_SIZE + open_partial * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100)
     balance = CHRIS_STARTING_BALANCE + closed_pnl - locked
     wins = len([t for t in reset_trades if t.get('pnl_sol', 0) > 0])
