@@ -121,6 +121,9 @@ def check_positions():
             print(f"  {sym}: error fetching mcap")
             continue
 
+        # Calculate gains immediately so it's available for all exit conditions
+        gains_pct = ((mcap - entry) / entry) * 100 if entry > 0 else 0
+
         # === LOW VOLUME EXIT: v5 < $600 → sell ===
         if v5 > 0 and v5 < 600:
             pnl = POSITION_SIZE * (gains_pct / 100)
@@ -160,7 +163,6 @@ def check_positions():
         tp5_sold = t.get('tp5_sold')
         trailing_stopped = t.get('trailing_stopped')
         peak = cache['peak_mcap']
-        gains_pct = ((mcap - entry) / entry) * 100
 
         # === STOP LOSS (-20%) ===
         if not tp1_sold and gains_pct <= STOP_LOSS_PERCENT:
