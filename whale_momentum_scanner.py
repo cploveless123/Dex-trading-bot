@@ -233,6 +233,15 @@ def scan_token(addr):
         if dex == 'raydium' and bs < 0.9:
             return None, f"B: BS {bs:.2f} <0.9"
         
+        # ANTI-MOMENTUM: If chg5 > +15%, we're chasing — reject
+        # EXCEPTION: Sustained momentum - if h1 > +100% and mcap < $60K, allow up to +50%
+        sustained_momentum = chg60 > 100 and m < 60000
+        
+        if chg5 > 50:
+            return None, f"B: chg5 +{chg5:.1f}% (extreme pump)"
+        if chg5 > 15 and not sustained_momentum:
+            return None, f"B: chg5 +{chg5:.1f}% (momentum pump, not dip)"
+        
         return {
             "token": sym,
             "address": addr,
