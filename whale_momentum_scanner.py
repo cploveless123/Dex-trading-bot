@@ -47,8 +47,8 @@ def init_sold_tokens():
         with open(TRADES_FILE) as f:
             for line in f:
                 t = json.loads(line)
-                # Any token we've ever closed (sold) goes on blacklist
-                if t.get('token_address') and t.get('status') == 'closed' and t.get('action') == 'BUY':
+                # Any token we've ever closed (closed_at is set) goes on blacklist
+                if t.get('token_address') and t.get('closed_at') and t.get('action') == 'BUY':
                     _sold_tokens.add(t['token_address'])
     except:
         pass
@@ -302,8 +302,8 @@ def check_and_buy():
                         if t.get('action') == 'BUY' and not t.get('closed_at'):
                             already_open_or_sold = True
                             break
-                        # PERMANENT BLACKLIST - never re-buy if ever closed
-                        if t.get('status') == 'closed' and t.get('action') == 'BUY':
+                        # PERMANENT BLACKLIST - never re-buy if closed (closed_at is set)
+                        if t.get('action') == 'BUY' and t.get('closed_at'):
                             _sold_tokens.add(addr)
         except:
             pass

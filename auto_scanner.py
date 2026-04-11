@@ -229,9 +229,9 @@ def check_and_buy():
             if sym in TICKER_BLACKLIST or not sym.isalpha() or len(sym) < 3:
                 continue
             
-            # Never re-enter
+            # Never re-enter - if closed_at is set, don't rebuy
             already_exited = any(
-                t.get('token_address') == addr and (t.get('fully_exited') or t.get('tp1_sold'))
+                t.get('token_address') == addr and t.get('closed_at')
                 for t in existing
             )
             if already_exited:
