@@ -134,6 +134,10 @@ def scan_gmgn_token(token_data, whales):
     sells = int(token_data.get('sells', 0) or 0)
     volume = float(token_data.get('volume', 0) or 0)
     
+    # REJECT if GMGN has no history (all fields are 0/None) — too risky, no data
+    if mcap == 0 and h1 == 0 and m5 == 0:
+        return None, "No GMGN history (mcap=0, h1=0, m5=0) - too risky"
+    
     # Calculate BS ratio
     bs = (buys / sells) if sells > 0 else (1.0 if buys > sells else 0.5)
     
