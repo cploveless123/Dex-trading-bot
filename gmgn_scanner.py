@@ -332,7 +332,25 @@ def check_cooldown(whales):
         result2['current_mcap'] = result2.get('mcap', 0)
         
         if elapsed >= data['cooldown_secs']:
-            # Cooldown passed - check if we should buy
+            # Cooldown passed - get fresh chg1 from DexScreener
+            chg1 = 0.0
+            try:
+                r = requests.get(f'https://api.dexscreener.com/latest/dex/tokens/{addr}', timeout=5)
+                if r.status_code == 200:
+                    pairs = r.json().get('pairs', [])
+                    if pairs:
+                        chg1 = float(pairs[0].get('priceChange', {}).get('m1', 0) or 0)
+            except:
+                pass
+            
+            # If chg1 < 0%, wait 15s more and recheck
+            if chg1 < 0:
+                data['cooldown_secs'] += 15
+                data['first_seen'] = time.time()  # Reset timer to avoid repeated prints
+                print(f"   ⏳ {result['token']}: chg1={chg1:+.1f}% < 0%, waiting 15s more to recheck")
+                continue
+            
+            # chg1 >= 0 - safe to proceed
             should_buy_flag, buy_reason = should_buy(result2, whales)
             if should_buy_flag:
                 trade = buy_token(addr, result2)
@@ -474,7 +492,7 @@ def main():
                         cooldown_secs = 0
                         
                         if age < 10 and result['m5'] > 50:
-                            cooldown_secs = 60  # Young + parabolic
+                            cooldown_secs = 120  # Young + parabolic
                         elif age >= 10 and result['m5'] > 1:
                             cooldown_secs = 120  # Older + positive chg5
                         
