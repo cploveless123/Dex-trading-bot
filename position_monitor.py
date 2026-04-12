@@ -12,6 +12,7 @@ EXIT STRATEGY (Chris's):
 """
 import requests, json
 from datetime import datetime
+import pytz
 import time
 from pathlib import Path
 from trading_constants import (
