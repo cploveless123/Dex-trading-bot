@@ -478,6 +478,10 @@ def main():
                         elif age >= 10 and result['m5'] > 1:
                             cooldown_secs = 120  # Older + positive chg5
                         
+                        # If chg5 > +100% (very parabolic), add 60s extra
+                        if result['m5'] > 100:
+                            cooldown_secs += 60
+                        
                         # If chg1 (1min change) is negative, add 60s extra cooldown
                         if result.get('chg1', 0) < 0:
                             cooldown_secs += 60
