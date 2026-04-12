@@ -186,12 +186,15 @@ def scan_gmgn_token(token_data, whales):
     if age >= 20 and volume < MIN_VOLUME_5M:
         return None, f"Vol ${volume:,.0f} < ${MIN_VOLUME_5M:,}"
     
-    # 10. Liquidity
-    if liq < 1000 and mcap >= 50000:
-        return None, f"LiQ ${liq:,.0f} < $1K"
+    # 10. Liquidity - Chris's rule:
+    # Pump.fun coins: allow as low as $500 (still building)
+    # Non-pump.fun coins: require > $1,000
+    is_pump = launchpad == 'pump'
+    min_liq = 500 if is_pump else 1000
+    if liq < min_liq:
+        return None, f"LiQ ${liq:,.0f} < ${min_liq:,} ({'pump.fun' if is_pump else 'non-pump'})"
     
     # 11. Pump.fun preferred
-    is_pump = launchpad == 'pump'
     lp_burnt = burn_status == 'burn'
     
     return {
