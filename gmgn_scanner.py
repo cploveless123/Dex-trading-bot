@@ -19,7 +19,7 @@ DIP_MIN = 15
 DIP_MAX = 40
 MIN_MOMENTUM = 50  # h1 or 24h must be > +50%
 MIN_HOLDERS = 15
-MAX_TOP10 = 50
+MAX_TOP10 = 40
 MIN_BS_RATIO = 1.5
 MIN_VOLUME_5M = 1000
 MAX_AGE_MINUTES = 180
@@ -135,20 +135,32 @@ def scan_gmgn_token(token_data, whales):
     sells = int(token_data.get('sells', 0) or 0)
     volume = float(token_data.get('volume', 0) or 0)
     
-    # Get chg1 (1min change) from DexScreener
+    # Get chg1 and m5 volume from DexScreener
     chg1 = 0.0
+    m5_vol = 0.0
     try:
         r = requests.get(f'https://api.dexscreener.com/latest/dex/tokens/{addr}', timeout=5)
         if r.status_code == 200:
             pairs = r.json().get('pairs', [])
             if pairs:
                 chg1 = float(pairs[0].get('priceChange', {}).get('m1', 0) or 0)
+                m5_vol = float(pairs[0].get('volume', {}).get('m5', 0) or 0)
     except:
         pass
+    
+    # Volume sanity: m5 volume should be > 5% of mcap (organic momentum, not one wallet)
+    if mcap > 0 and m5_vol > 0:
+        vol_ratio = m5_vol / mcap
+        if vol_ratio < 0.05:
+            return None, f"m5 vol ${m5_vol:.0f} < 5% of mcap ${mcap:.0f} (suspect pump)"
     
     # REJECT if chg5 > +200% (too parabolic - likely to reverse)
     if m5 > 200:
         return None, f"chg5 {m5:+.1f}% > +200% (too parabolic)"
+    
+    # REJECT if chg5 > +100% AND holders < 20 (artificial pump with low organic interest)
+    if m5 > 100 and holders < 20:
+        return None, f"chg5 {m5:+.1f}% > +100% with only {holders} holders (low organic interest)"
     
     # REJECT if GMGN has no history (all fields are 0/None) — too risky, no data
     if mcap == 0 and h1 == 0 and m5 == 0:
