@@ -135,6 +135,17 @@ def scan_gmgn_token(token_data, whales):
     sells = int(token_data.get('sells', 0) or 0)
     volume = float(token_data.get('volume', 0) or 0)
     
+    # Get chg1 (1min change) from DexScreener
+    chg1 = 0.0
+    try:
+        r = requests.get(f'https://api.dexscreener.com/latest/dex/tokens/{addr}', timeout=5)
+        if r.status_code == 200:
+            pairs = r.json().get('pairs', [])
+            if pairs:
+                chg1 = float(pairs[0].get('priceChange', {}).get('m1', 0) or 0)
+    except:
+        pass
+    
     # REJECT if GMGN has no history (all fields are 0/None) — too risky, no data
     if mcap == 0 and h1 == 0 and m5 == 0:
         return None, "No GMGN history (mcap=0, h1=0, m5=0) - too risky"
@@ -467,8 +478,8 @@ def main():
                         elif age >= 10 and result['m5'] > 1:
                             cooldown_secs = 120  # Older + positive chg5
                         
-                        # If m5 (5min change) is negative, add 60s extra cooldown
-                        if result.get('m5', 0) < 0:
+                        # If chg1 (1min change) is negative, add 60s extra cooldown
+                        if result.get('chg1', 0) < 0:
                             cooldown_secs += 60
                         
                         if cooldown_secs > 0:
