@@ -460,12 +460,16 @@ def main():
                                 pass
                         
                         # Calculate cooldown based on chg5 and age
+                        extra_cooldown = 0
+                        if result.get('h1', 0) < 0:
+                            extra_cooldown = 60  # h1 is negative - add 60s recovery time
+                        
                         if age < 10 and result['m5'] > 50:
-                            cooldown_secs = 60  # Young + parabolic = 60s cooldown
+                            cooldown_secs = 60 + extra_cooldown  # Young + parabolic
                         elif age >= 10 and result['m5'] > 1:
-                            cooldown_secs = 120  # Older + positive chg5 = 120s cooldown
+                            cooldown_secs = 120 + extra_cooldown  # Older + positive chg5
                         else:
-                            cooldown_secs = 0  # No cooldown needed
+                            cooldown_secs = 0 + extra_cooldown  # Base cooldown
                         
                         if cooldown_secs > 0:
                             if addr not in COOLDOWN_WATCH:
