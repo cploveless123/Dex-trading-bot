@@ -267,13 +267,14 @@ def should_buy(result, whales):
     if addr in _sold_tokens:
         return False, "Blacklisted (memory)"
     
-    # Also check trade file for permanently closed positions
+    # Also check trade file for permanently closed OR currently open positions
     if TRADES_FILE.exists():
         with open(TRADES_FILE) as f:
             for line in f:
                 try:
                     t = json.loads(line)
-                    if t.get('token_address') == addr and t.get('action') == 'BUY' and t.get('closed_at'):
+                    # Reject if ever bought (closed OR still open - either way, don't rebuy)
+                    if t.get('token_address') == addr and t.get('action') == 'BUY':
                         return False, "Blacklisted (trade file)"
                 except:
                     pass
