@@ -258,9 +258,20 @@ def should_buy(result, whales):
     if addr in _open_positions:
         return False, "Already open"
     
-    # Blacklisted?
+    # Blacklisted? Check BOTH in-memory set AND trade file
     if addr in _sold_tokens:
-        return False, "Blacklisted"
+        return False, "Blacklisted (memory)"
+    
+    # Also check trade file for permanently closed positions
+    if TRADES_FILE.exists():
+        with open(TRADES_FILE) as f:
+            for line in f:
+                try:
+                    t = json.loads(line)
+                    if t.get('token_address') == addr and t.get('action') == 'BUY' and t.get('closed_at'):
+                        return False, "Blacklisted (trade file)"
+                except:
+                    pass
     
     # Check open positions limit - count from TRADE FILE (not in-memory)
     open_count = 0
