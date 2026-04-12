@@ -3,3 +3,53 @@ Exit Plan: TP1 +35% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 15% | Stop -20%
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
+  ?: mcap=$54,853 | gain=-7.9% | peak=$60,012 | dd=+0%
+  ?: mcap=$17,629 | gain=+50.1% | peak=$17,629 | dd=-4%
+  ?: mcap=$54,853 | gain=-7.9% | peak=$60,012 | dd=+0%
+  ?: mcap=$17,629 | gain=+50.1% | peak=$17,629 | dd=-4%
+  ?: mcap=$51,169 | gain=-14.1% | peak=$60,012 | dd=+0%
+  ?: mcap=$17,629 | gain=+50.1% | peak=$17,629 | dd=-4%
+  ?: mcap=$51,169 | gain=-14.1% | peak=$60,012 | dd=+0%
+[TRAILING_STOP] Alert sent
+✅ ? TRAILING STOP @ $14,273 (19% drop from peak)
+  ?: mcap=$51,169 | gain=-14.1% | peak=$60,012 | dd=+0%
+  ?: mcap=$51,169 | gain=-14.1% | peak=$60,012 | dd=+0%
+  ?: mcap=$51,169 | gain=-14.1% | peak=$60,012 | dd=+0%
+  ?: mcap=$51,169 | gain=-14.1% | peak=$60,012 | dd=+0%
+  ?: mcap=$90,134 | gain=+27.7% | peak=$90,134 | dd=+0%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$70,720 | gain=+0.2% | peak=$90,134 | dd=+0%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$70,720 | gain=+0.2% | peak=$90,134 | dd=+0%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$70,720 | gain=+0.2% | peak=$90,134 | dd=+0%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$70,720 | gain=+0.2% | peak=$90,134 | dd=+0%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$70,720 | gain=+0.2% | peak=$90,134 | dd=+0%
+[03:40:41] Monitor alive | 13 checks | 2 open | next in 5s
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$70,720 | gain=+0.2% | peak=$90,134 | dd=+0%
+[LOW_VOLUME] Alert failed: HTTP Error 400: Bad Request
+💨 ? LOW VOLUME EXIT @ $51,104 (v5=$330)
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$95,011 | gain=+34.6% | peak=$95,011 | dd=+0%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$95,011 | gain=+34.6% | peak=$95,011 | dd=+0%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$95,011 | gain=+34.6% | peak=$95,011 | dd=+0%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$95,011 | gain=+34.6% | peak=$95,011 | dd=+0%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$95,011 | gain=+34.6% | peak=$95,011 | dd=+0%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+[TP1_HOLD] Alert sent
+🚀 ? TP1 HIT - HOLDING @ $108,018 (+53.0%)
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$108,018 | gain=+53.0% | peak=$108,018 | dd=+0%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$108,018 | gain=+53.0% | peak=$108,018 | dd=+0%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$108,018 | gain=+53.0% | peak=$108,018 | dd=+0%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$108,018 | gain=+53.0% | peak=$108,018 | dd=+0%
