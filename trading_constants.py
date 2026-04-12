@@ -63,8 +63,8 @@ EXIT_PLAN_TEXT = f"""🎯 Exit Plan v5.5 (tax-adjusted):
 DIP_MIN = 15
 DIP_MAX = 40
 PEAK_WINDOW_SECONDS = 60   # Peak = highest price in first 60 seconds
-PEAK_WINDOW_NEW = 90       # Peak window for new pairs (<10 min) - v5.1
-PEAK_WINDOW_OLD = 180      # Peak window for older pairs (>10 min) - v5.1
+PEAK_WINDOW_NEW = 300       # Peak window for new pairs (<10 min) - v5.7 (expanded for parabolic catches)
+PEAK_WINDOW_OLD = 300      # Peak window for older pairs (>10 min) - v5.7 (expanded for parabolic catches)
 
 # Cooldown rules (avoid parabolic tops)
 # New (<5 min): h1 >+100% → wait 60s before buying

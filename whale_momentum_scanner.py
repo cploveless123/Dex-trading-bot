@@ -330,9 +330,15 @@ def scan_token(addr):
         if chg60 < 50 and chg24 < 50:
             return None, f"B: h1 {chg60:+.1f}% 24h {chg24:+.1f}% (no momentum)"
         
-        # Dip from local peak: 15-35%
+        # Dip from local peak: 15-40%
         if dip_pct < DIP_MIN:
-            return None, f"B: dip {dip_pct:.1f}% <{DIP_MIN}% (not enough pullback)"
+            # PARABOLIC EXCEPTION v5.7: For very young (<10min) HIGH momentum coins,
+            # if h1 > +300% AND price is still climbing (chg5 > 0), the "dip" is the 
+            # brief pause in an ongoing pump. Allow if momentum is still strong.
+            if chg60 >= 300 and pair_age < 10 and chg5 > 0:
+                dip_pct = 5.0  # Treat as a shallow 5% dip
+            else:
+                return None, f"B: dip {dip_pct:.1f}% <{DIP_MIN}% (not enough pullback)"
         if dip_pct > DIP_MAX:
             return None, f"B: dip {dip_pct:.1f}% >{DIP_MAX}% (too deep)"
         
@@ -502,7 +508,7 @@ def load_whales():
 
 def main():
     print("🚀 Whale Momentum Scanner v5.1 - Dip in Momentum")
-    print(f"   Mcap: $5K-$95K | Dip: 10-50% | Age-based rules")
+    print(f"   Mcap: $5K-$95K | Dip: 10-50% (+200% h1 exception) | Age-based rules")
     init_sold_tokens()  # Load ALL closed positions
     whales = load_whales()
     print(f"   Loaded {len(whales)} whales, {len(_sold_tokens)} sold (blacklisted)")
