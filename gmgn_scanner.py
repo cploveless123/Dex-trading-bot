@@ -275,6 +275,21 @@ def should_buy(result, whales):
 
 def buy_token(addr, result):
     """Execute buy - adds to trade file"""
+    # VERIFY via DexScreener before buying - only pump.fun or raydium
+    try:
+        r = requests.get(f'https://api.dexscreener.com/latest/dex/tokens/{addr}', timeout=10)
+        if r.status_code == 200:
+            data = r.json()
+            pairs = data.get('pairs', [])
+            if pairs:
+                p = max(pairs, key=lambda x: x.get('liquidity', {}).get('usd', 0))
+                dex = p.get('dexId', '').lower()
+                if dex not in ('pumpfun', 'raydium', 'raydium2'):
+                    print(f"❌ {result['token']}: DexScreener says {dex} - not buying")
+                    return None
+    except Exception as e:
+        print(f"⚠️ Could not verify DEX: {e}")
+    
     now = datetime.utcnow().isoformat()
     trade = {
         'action': 'BUY',
