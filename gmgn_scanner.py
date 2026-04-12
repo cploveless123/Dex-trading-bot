@@ -187,15 +187,14 @@ def scan_gmgn_token(token_data, whales):
         return None, f"Vol ${volume:,.0f} < ${MIN_VOLUME_5M:,}"
     
     # 10. Liquidity - Chris's rule:
-    # Pump.fun coins: allow as low as $500 (still building)
-    # Non-pump.fun coins: require > $1,000
-    is_pump = launchpad == 'pump'
-    min_liq = 500 if is_pump else 1000
-    if liq < min_liq:
-        return None, f"LiQ ${liq:,.0f} < ${min_liq:,} ({'pump.fun' if is_pump else 'non-pump'})"
+    # mcap > $60K: require > $1,000 liquidity
+    # mcap <= $60K: don't check (pump.fun coins still building)
+    if mcap > 60000 and liq < 1000:
+        return None, f"LiQ ${liq:,.0f} < $1K (mcap ${mcap:,.0f} > $60K)"
     
     # 11. Pump.fun preferred
     lp_burnt = burn_status == 'burn'
+    is_pump = launchpad == 'pump'
     
     return {
         'token': symbol,
@@ -236,9 +235,20 @@ def should_buy(result, whales):
     if addr in _sold_tokens:
         return False, "Blacklisted"
     
-    # Check open positions limit
-    if len(_open_positions) >= MAX_OPEN_POSITIONS:
-        return False, f"{len(_open_positions)}/{MAX_OPEN_POSITIONS} positions open"
+    # Check open positions limit - count from TRADE FILE (not in-memory)
+    open_count = 0
+    if TRADES_FILE.exists():
+        with open(TRADES_FILE) as f:
+            for line in f:
+                try:
+                    t = json.loads(line)
+                    if t.get('action') == 'BUY' and not t.get('closed_at') and t.get('status') in ('open', 'open_partial'):
+                        open_count += 1
+                except:
+                    pass
+    
+    if open_count >= MAX_OPEN_POSITIONS:
+        return False, f"{open_count}/{MAX_OPEN_POSITIONS} positions open"
     
     # Whales check
     if not check_whale_momentum(addr, whales):

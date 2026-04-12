@@ -124,8 +124,9 @@ def check_positions():
         # Calculate gains immediately so it's available for all exit conditions
         gains_pct = ((mcap - entry) / entry) * 100 if entry > 0 else 0
 
-        # === LOW VOLUME EXIT: v5 < $600 → sell ===
-        if v5 > 0 and v5 < 600:
+        # === LOW VOLUME EXIT: v5 < $600 AND mcap > $60K → sell ===
+        # For mcap < $60K (pump.fun building), $0 liquidity is normal
+        if v5 > 0 and v5 < 600 and mcap > 60000:
             pnl = POSITION_SIZE * (gains_pct / 100)
             t['status'] = 'closed'
             t['fully_exited'] = True
