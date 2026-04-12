@@ -147,14 +147,21 @@ def scan_gmgn_token(token_data, whales):
         return None, f"Honeypot"
     
     # 2. Exchange check - only Pump.fun or Raydium
-    # Note: GMGN trending endpoint often has empty exchange data
-    # Only reject if exchange field is populated and NOT pump.fun/raydium
-    launchpad_platform = token_data.get('launchpad_platform', '')
-    exchange = token_data.get('exchange', '')
-    is_pump = 'pump' in launchpad_platform.lower() or 'pump' in exchange.lower()
-    is_raydium = 'raydium' in exchange.lower()
-    # If exchange is populated and not pump/raydium, reject
-    if exchange and not (is_pump or is_raydium):
+    # Indicators: pump.fun address ends in "pump", or exchange contains "pump"/"raydium"
+    # Reject meteora, orinoco, or other DEXes
+    launchpad_platform = token_data.get('launchpad_platform', '').lower()
+    exchange = token_data.get('exchange', '').lower()
+    addr_lower = addr.lower()
+    
+    is_pump = ('pump' in launchpad_platform or 'pump' in exchange or 
+                addr.endswith('pump') or 'pump.fun' in launchpad_platform)
+    is_raydium = 'raydium' in exchange
+    
+    # Reject known bad exchanges
+    bad_exchanges = ['meteora', 'orcan', 'lifinity', 'saber', 'crema', 'cykura', 'port']
+    is_bad = any(bad in exchange for bad in bad_exchanges)
+    
+    if is_bad or (exchange and not is_pump and not is_raydium):
         return None, f"Exchange: {exchange} ({launchpad_platform}) - not pump.fun/raydium"
     
     # 3. Mcap range
