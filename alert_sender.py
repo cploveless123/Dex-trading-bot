@@ -27,7 +27,7 @@ LAST_TRADE_INDEX_FILE = Path("/root/Dex-trading-bot/.last_alert_index")
 
 def format_trade_alert(trade):
     """Format trade alert with full details"""
-    timestamp = datetime.now(pytz.timezone('US/Eastern')).strftime("%H:%M %Z")
+    timestamp = datetime.utcnow().strftime("%H:%M %Z")
     token = trade.get('token_name', trade.get('token', '疯'))
     action = trade.get('action', 'UNKNOWN')
     token_addr = trade.get('token_address', '')
@@ -81,7 +81,7 @@ def format_trade_alert(trade):
 
 def format_tp1_alert(trade):
     """Format TP1 partial exit alert"""
-    timestamp = datetime.now(pytz.timezone('US/Eastern')).strftime("%H:%M %Z")
+    timestamp = datetime.utcnow().strftime("%H:%M %Z")
     token = trade.get('token_name', trade.get('token', '疯'))
     token_addr = trade.get('token_address', '')
     entry_mcap = int(trade.get('entry_mcap', 0))
