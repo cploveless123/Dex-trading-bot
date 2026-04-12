@@ -333,9 +333,9 @@ def scan_token(addr):
         # Dip from local peak: 15-40%
         if dip_pct < DIP_MIN:
             # PARABOLIC EXCEPTION v5.7: For very young (<10min) HIGH momentum coins,
-            # if h1 > +300% AND price is still climbing (chg5 > 0), the "dip" is the 
+            # if h1 > +150% AND price is still climbing (chg5 > 0), the "dip" is the 
             # brief pause in an ongoing pump. Allow if momentum is still strong.
-            if chg60 >= 300 and pair_age < 10 and chg5 > 0:
+            if chg60 >= 150 and pair_age < 10 and chg5 > 0:
                 dip_pct = 5.0  # Treat as a shallow 5% dip
             else:
                 return None, f"B: dip {dip_pct:.1f}% <{DIP_MIN}% (not enough pullback)"
