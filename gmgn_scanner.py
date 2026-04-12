@@ -203,6 +203,10 @@ def scan_gmgn_token(token_data, whales):
     # For very young coins (< 10 min), require h1 > +30% (they're just starting)
     # For older coins, require h1 > +50%
     # If h1 is low but chg5 shows strong momentum AND coin is young, allow it
+    # REJECT if h1 > +500% (too parabolic - likely to reverse)
+    if h1 > 500:
+        return None, f"h1 {h1:+.1f}% > +500% (too parabolic)"
+    
     min_h1 = 30 if age < 10 else MIN_MOMENTUM
     if h1 >= min_h1:
         pass  # Good momentum
