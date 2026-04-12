@@ -146,6 +146,10 @@ def scan_gmgn_token(token_data, whales):
     except:
         pass
     
+    # REJECT if chg5 > +200% (too parabolic - likely to reverse)
+    if m5 > 200:
+        return None, f"chg5 {m5:+.1f}% > +200% (too parabolic)"
+    
     # REJECT if GMGN has no history (all fields are 0/None) — too risky, no data
     if mcap == 0 and h1 == 0 and m5 == 0:
         return None, "No GMGN history (mcap=0, h1=0, m5=0) - too risky"
