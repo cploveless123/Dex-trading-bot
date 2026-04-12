@@ -183,11 +183,17 @@ def scan_gmgn_token(token_data, whales):
     if top10 > MAX_TOP10:
         return None, f"Top10 {top10:.1f}% > {MAX_TOP10}%"
     
-    # 6. Momentum (h1 or 24h)
+    # 6. Momentum (h1 or chg5 as proxy)
     # For very young coins (< 10 min), require h1 > +30% (they're just starting)
     # For older coins, require h1 > +50%
+    # If h1 is low but chg5 shows strong momentum AND coin is young, allow it
     min_h1 = 30 if age < 10 else MIN_MOMENTUM
-    if h1 < min_h1:
+    if h1 >= min_h1:
+        pass  # Good momentum
+    elif age < 15 and m5 >= min_h1:
+        # For young coins: use chg5 as momentum proxy when h1 is low
+        pass  # chg5 shows momentum
+    else:
         return None, f"h1 {h1:+.1f}% < +{min_h1}% ({'young' if age < 10 else 'normal'})"
     
     # 7. No falling knife (m5 must be positive for momentum)
