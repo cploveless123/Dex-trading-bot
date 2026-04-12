@@ -26,7 +26,7 @@ fi
 cd /root/.openclaw/workspace
 
 # Core identity files
-CORE_FILES="AGENTS.md SOUL.md USER.md TOOLS.md MEMORY.md HEARTBEAT.md IDENTITY.md RECOVERY_INSTRUCTIONS.md BOOTSTRAP.md"
+CORE_FILES="AGENTS.md SOUL.md USER.md TOOLS.md MEMORY.md HEARTBEAT.md IDENTITY.md RECOVERY_INSTRUCTIONS.md BOOTSTRAP.md STRATEGY*.md"
 
 # Memory files
 MEMORY_FILES=$(ls memory/*.md 2>/dev/null | tr '\n' ' ')
@@ -40,6 +40,8 @@ git commit -m "Wilson auto backup $(date)" >> $LOG_FILE 2>&1
 WS_STATUS=$(git push origin master 2>&1)
 if [[ "$WS_STATUS" == *"Everything up-to-date"* ]] || [[ "$WS_STATUS" == *"to"* ]]; then
     echo "[$DATE] Workspace: OK" >> $LOG_FILE
+elif [[ "$WS_STATUS" == *"Repository not found"* ]]; then
+    echo "[$DATE] Workspace: Repo not found - needs creating" >> $LOG_FILE
 else
     echo "[$DATE] Workspace: $WS_STATUS" >> $LOG_FILE
 fi
@@ -48,19 +50,38 @@ fi
 # OPENCLAW SYSTEM SKILLS  
 # ======================
 cd /opt/node22/lib/node_modules/openclaw/skills
-git add -A >> $LOG_FILE 2>&1
-git commit -m "Skills backup $(date)" >> $LOG_FILE 2>&1
-git push origin master >> $LOG_FILE 2>&1
+if [ -d ".git" ]; then
+    git add -A >> $LOG_FILE 2>&1
+    git commit -m "Skills backup $(date)" >> $LOG_FILE 2>&1
+    SKILLS_STATUS=$(git push origin master 2>&1)
+    if [[ "$SKILLS_STATUS" == *"Everything up-to-date"* ]] || [[ "$SKILLS_STATUS" == *"to"* ]]; then
+        echo "[$DATE] Skills: OK" >> $LOG_FILE
+    elif [[ "$SKILLS_STATUS" == *"Repository not found"* ]]; then
+        echo "[$DATE] Skills: Repo not found - create github.com/cploveless123/openclaw-skills" >> $LOG_FILE
+    else
+        echo "[$DATE] Skills: $SKILLS_STATUS" >> $LOG_FILE
+    fi
+else
+    echo "[$DATE] Skills: Not a git repo" >> $LOG_FILE
+fi
 
 # ======================
 # CRON JOBS
 # ======================
 cd /root/.openclaw/cron
-if [ -f jobs.json ]; then
-    git add -A >> $LOG_FILE 2>&1
+if [ -d ".git" ] && [ -f "jobs.json" ]; then
+    git add jobs.json >> $LOG_FILE 2>&1
     git commit -m "Cron backup $(date)" >> $LOG_FILE 2>&1
-    git push origin master >> $LOG_FILE 2>&1
-    echo "[$DATE] Cron: OK" >> $LOG_FILE
+    CRON_STATUS=$(git push origin master 2>&1)
+    if [[ "$CRON_STATUS" == *"Everything up-to-date"* ]] || [[ "$CRON_STATUS" == *"to"* ]]; then
+        echo "[$DATE] Cron: OK" >> $LOG_FILE
+    elif [[ "$CRON_STATUS" == *"Repository not found"* ]]; then
+        echo "[$DATE] Cron: Repo not found - create github.com/cploveless123/openclaw-cron" >> $LOG_FILE
+    else
+        echo "[$DATE] Cron: $CRON_STATUS" >> $LOG_FILE
+    fi
+else
+    echo "[$DATE] Cron: Not a git repo or no jobs.json" >> $LOG_FILE
 fi
 
 echo "[$DATE] Wilson backup complete" >> $LOG_FILE
