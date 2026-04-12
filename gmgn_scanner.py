@@ -13,7 +13,7 @@ from datetime import datetime
 from pathlib import Path
 
 # === TRADING CONSTANTS ===
-MIN_MCAP = 4000
+MIN_MCAP = 3000
 MAX_MCAP = 75000
 DIP_MIN = 15
 DIP_MAX = 40
@@ -184,8 +184,11 @@ def scan_gmgn_token(token_data, whales):
         return None, f"Top10 {top10:.1f}% > {MAX_TOP10}%"
     
     # 6. Momentum (h1 or 24h)
-    if h1 < MIN_MOMENTUM:
-        return None, f"h1 {h1:+.1f}% < +{MIN_MOMENTUM}%"
+    # For very young coins (< 10 min), require h1 > +30% (they're just starting)
+    # For older coins, require h1 > +50%
+    min_h1 = 30 if age < 10 else MIN_MOMENTUM
+    if h1 < min_h1:
+        return None, f"h1 {h1:+.1f}% < +{min_h1}% ({'young' if age < 10 else 'normal'})"
     
     # 7. No falling knife (m5 must be positive for momentum)
     if m5 < 0:
@@ -322,7 +325,7 @@ def buy_token(addr, result):
 
 def main():
     print("🚀 GMGN Scanner v1.0 - Wilson Bot")
-    print(f"   Mcap: ${MIN_MCAP:,}-${MAX_MCAP:,} | Dip: {DIP_MIN}-{DIP_MAX}% | Age <{MAX_AGE_MINUTES}min")
+    print(f"   Mcap: ${MIN_MCAP:,}-${MAX_MCAP:,} | Dip: {DIP_MIN}-{DIP_MAX}% | Age <{MAX_AGE_MINUTES}min (<10min: h1>+30%)")
     
     init_sold_tokens()
     print(f"   Blacklist: {len(_sold_tokens)} tokens")
