@@ -279,7 +279,7 @@ def should_buy(result, whales):
 
 def buy_token(addr, result):
     """Execute buy - adds to trade file"""
-    # VERIFY via DexScreener before buying - only pump.fun or raydium
+    # VERIFY via DexScreener before buying - only pump.fun, pumpswap, or raydium
     try:
         r = requests.get(f'https://api.dexscreener.com/latest/dex/tokens/{addr}', timeout=10)
         if r.status_code == 200:
@@ -288,9 +288,18 @@ def buy_token(addr, result):
             if pairs:
                 p = max(pairs, key=lambda x: x.get('liquidity', {}).get('usd', 0))
                 dex = p.get('dexId', '').lower()
+                pair_addr = p.get('pairAddress', '').lower()
+                
                 if dex not in ('pumpfun', 'raydium', 'raydium2', 'pumpswap'):
                     print(f"❌ {result['token']}: DexScreener says {dex} - not buying")
                     return None
+                
+                # For pump.fun and pumpswap: pair address must end in "pump"
+                # For raydium: no such requirement
+                if dex in ('pumpfun', 'pumpswap'):
+                    if not (pair_addr.endswith('pump') or addr.lower().endswith('pump')):
+                        print(f"❌ {result['token']}: {dex} pair doesn't end in 'pump' - not buying")
+                        return None
     except Exception as e:
         print(f"⚠️ Could not verify DEX: {e}")
     
