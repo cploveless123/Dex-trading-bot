@@ -323,8 +323,8 @@ def scan_token(addr):
         # STRATEGY v5: Fresh launches (<60min) with proven momentum + pullback
         # Momentum = h1 or 24h showing big move, dip = pullback from peak
         
-        if pair_age > 60:
-            return None, f"B: age {pair_age:.1f}min >60min (too old)"
+        if pair_age > 180:
+            return None, f"B: age {pair_age:.1f}min >180min (too old)"
         
         # Need proven momentum (h1 or 24h > +50%)
         if chg60 < 50 and chg24 < 50:
@@ -508,7 +508,7 @@ def load_whales():
 
 def main():
     print("🚀 Whale Momentum Scanner v5.1 - Dip in Momentum")
-    print(f"   Mcap: $5K-$95K | Dip: 10-50% (+200% h1 exception) | Age-based rules")
+    print(f"   Mcap: $5K-$95K | Dip: 15-40% (<15min focus) | Age <3hr")
     init_sold_tokens()  # Load ALL closed positions
     whales = load_whales()
     print(f"   Loaded {len(whales)} whales, {len(_sold_tokens)} sold (blacklisted)")
