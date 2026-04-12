@@ -53,3 +53,12 @@ Checking every 5s
   ?: mcap=$108,018 | gain=+53.0% | peak=$108,018 | dd=+0%
   ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
   ?: mcap=$108,018 | gain=+53.0% | peak=$108,018 | dd=+0%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$108,018 | gain=+53.0% | peak=$108,018 | dd=+0%
+[03:41:43] Monitor alive | 25 checks | 2 open | next in 5s
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$115,962 | gain=+64.3% | peak=$115,962 | dd=-7%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$115,962 | gain=+64.3% | peak=$115,962 | dd=-7%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$115,962 | gain=+64.3% | peak=$115,962 | dd=-7%
