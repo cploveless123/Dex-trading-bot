@@ -146,7 +146,18 @@ def scan_gmgn_token(token_data, whales):
     if is_honeypot == 1:
         return None, f"Honeypot"
     
-    # 2. Mcap range
+    # 2. Exchange check - only Pump.fun or Raydium
+    # Note: GMGN trending endpoint often has empty exchange data
+    # Only reject if exchange field is populated and NOT pump.fun/raydium
+    launchpad_platform = token_data.get('launchpad_platform', '')
+    exchange = token_data.get('exchange', '')
+    is_pump = 'pump' in launchpad_platform.lower() or 'pump' in exchange.lower()
+    is_raydium = 'raydium' in exchange.lower()
+    # If exchange is populated and not pump/raydium, reject
+    if exchange and not (is_pump or is_raydium):
+        return None, f"Exchange: {exchange} ({launchpad_platform}) - not pump.fun/raydium"
+    
+    # 3. Mcap range
     if mcap < MIN_MCAP:
         return None, f"Mcap ${mcap:,.0f} < ${MIN_MCAP:,}"
     if mcap > MAX_MCAP:
@@ -194,7 +205,6 @@ def scan_gmgn_token(token_data, whales):
     
     # 11. Pump.fun preferred
     lp_burnt = burn_status == 'burn'
-    is_pump = launchpad == 'pump'
     
     return {
         'token': symbol,
