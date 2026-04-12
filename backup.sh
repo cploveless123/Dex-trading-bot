@@ -1,38 +1,24 @@
 #!/bin/bash
-set -e
+# Hourly backup for both Dex-trading-bot and workspace
+# Runs every 30 minutes
 
+LOG_FILE="/root/Dex-trading-bot/backup.log"
+DATE=$(date "+%Y-%m-%d %H:%M UTC")
+
+echo "[$DATE] Backup started" >> $LOG_FILE
+
+# Backup Dex-trading-bot
 cd /root/Dex-trading-bot
+git add -A >> $LOG_FILE 2>&1
+git commit -m "Auto backup $(date)" >> $LOG_FILE 2>&1
+GIT_STATUS=$(git push origin master 2>&1)
+echo "[$DATE] Dex: $GIT_STATUS" >> $LOG_FILE
 
-# Run health check first
-echo "[$(date)] Running health check..."
-python3 health_check.py > /tmp/health_check.log 2>&1
-HC_RESULT=$?
-
-if [ $HC_RESULT -ne 0 ]; then
-    echo "[$(date)] Health check found issues"
-fi
-
-# Commit bot repo
-git add -A
-git commit -m "Auto-backup $(date -u '+%Y-%m-%d %H:%M UTC')" || true
-git push origin master 2>/dev/null || echo "Git push failed"
-
-# Workspace backup
+# Backup workspace
 cd /root/.openclaw/workspace
-git add -A
-git commit -m "Auto-backup $(date -u '+%Y-%m-%d %H:%M UTC')" 2>/dev/null || true
-git push origin master 2>/dev/null || echo "Workspace push failed"
+git add -A >> $LOG_FILE 2>&1  
+git commit -m "Auto backup $(date)" >> $LOG_FILE 2>&1
+WS_STATUS=$(git push origin master 2>&1)
+echo "[$DATE] Workspace: $WS_STATUS" >> $LOG_FILE
 
-# Copy workspace files to bot workspace-backup dir
-mkdir -p /root/Dex-trading-bot/workspace-backup/memory
-cp /root/.openclaw/workspace/memory/2026-04-08.md /root/Dex-trading-bot/workspace-backup/memory/ 2>/dev/null || true
-cp /root/.openclaw/workspace/MEMORY.md /root/Dex-trading-bot/workspace-backup/ 2>/dev/null || true
-cp -r /root/.openclaw/.agents/skills/gmgn-* /root/Dex-trading-bot/workspace-backup/skills/ 2>/dev/null || true
-
-# Commit workspace backup
-cd /root/Dex-trading-bot
-git add workspace-backup/
-git commit -m "Workspace backup $(date -u '+%Y-%m-%d %H:%M UTC')" 2>/dev/null || true
-git push origin master 2>/dev/null || true
-
-echo "[$(date)] Backup complete"
+echo "[$DATE] Backup complete" >> $LOG_FILE
