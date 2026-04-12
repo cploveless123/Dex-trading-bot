@@ -33,6 +33,7 @@ TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
 WHALE_DB = Path("/root/Dex-trading-bot/whales/whale_db.json")
 SIM_RESET_TIMESTAMP = "2026-04-11T20:53:55.000000"
 BUY_TIMEOUT = 30
+COOLDOWN_WATCH = {}  # {addr: {"first_seen": ts, "result": result_dict, "cooldown_secs": int}}
 
 # === STATE ===
 _sold_tokens = set()
@@ -298,6 +299,48 @@ def should_buy(result, whales):
     
     return True, "OK"
 
+def check_cooldown(whales):
+    """Check and process cooldown watch list"""
+    global COOLDOWN_WATCH
+    to_remove = []
+    
+    for addr, data in COOLDOWN_WATCH.items():
+        elapsed = time.time() - data['first_seen']
+        result = data['result']
+        
+        # Check if still passing filters (re-verify)
+        result2, reason2 = scan_gmgn_token(data['token_data'], whales)
+        
+        if result2 is None:
+            # No longer passing filters - remove from cooldown
+            to_remove.append(addr)
+            continue
+        
+        # Update current mcap and price
+        result2['current_mcap'] = result2.get('mcap', 0)
+        
+        if elapsed >= data['cooldown_secs']:
+            # Cooldown passed - check if we should buy
+            should_buy_flag, buy_reason = should_buy(result2, whales)
+            if should_buy_flag:
+                trade = buy_token(addr, result2)
+                if trade:
+                    print(f"   🟢 BUY (after {elapsed:.0f}s cooldown): {result2['token']} @ ${result2['mcap']:,.0f}")
+                    to_remove.append(addr)
+                else:
+                    to_remove.append(addr)
+            else:
+                # Didn't pass should_buy for some reason
+                to_remove.append(addr)
+        else:
+            # Still in cooldown
+            remaining = data['cooldown_secs'] - elapsed
+            print(f"   ⏳ {result['token']}: {remaining:.0f}s left in cooldown")
+    
+    for addr in to_remove:
+        if addr in COOLDOWN_WATCH:
+            del COOLDOWN_WATCH[addr]
+
 def buy_token(addr, result):
     """Execute buy - adds to trade file"""
     # VERIFY via DexScreener before buying - only pump.fun, pumpswap, or raydium
@@ -368,6 +411,8 @@ def main():
     
     while True:
         try:
+            # Check cooldown watch list first
+            check_cooldown(whales)
             tokens = get_gmgn_trending(limit=30)
             scan_count += len(tokens)
             
@@ -397,9 +442,31 @@ def main():
                     print(f"✅ {result['token']}{pump}{bond} | Mcap ${result['mcap']:,.0f} | Age {result['age']:.1f}min | Dip {result['dip']:.1f}% | h1 {result['h1']:+.1f}% | 5m {result['m5']:+.1f}%")
                     
                     if should_buy_flag:
-                        trade = buy_token(addr, result)
-                        buy_count += 1
-                        print(f"   🟢 BUY #{buy_count}: {result['token']} @ ${result['mcap']:,.0f}")
+                        # COOLDOWN LOGIC: Add to watch list instead of buying immediately
+                        # Calculate cooldown based on chg5 and age
+                        if result['age'] < 10 and result['m5'] > 50:
+                            cooldown_secs = 60  # Young + parabolic = 60s cooldown
+                        elif result['age'] >= 10 and result['m5'] > 1:
+                            cooldown_secs = 120  # Older + positive chg5 = 120s cooldown
+                        else:
+                            cooldown_secs = 0  # No cooldown needed
+                        
+                        if cooldown_secs > 0:
+                            if addr not in COOLDOWN_WATCH:
+                                COOLDOWN_WATCH[addr] = {
+                                    'first_seen': time.time(),
+                                    'result': result,
+                                    'token_data': token_data,
+                                    'cooldown_secs': cooldown_secs
+                                }
+                                print(f"   ⏳ {result['token']}: Added to cooldown for {cooldown_secs}s (chg5={result['m5']:+.1f}%, age={result['age']:.1f}min)")
+                            # else already in cooldown
+                        else:
+                            # No cooldown needed - buy immediately
+                            trade = buy_token(addr, result)
+                            if trade:
+                                buy_count += 1
+                                print(f"   🟢 BUY #{buy_count}: {result['token']} @ ${result['mcap']:,.0f}")
                 else:
                     # Show rejections for interesting tokens
                     h1 = float(token_data.get('price_change_percent1h', 0) or 0)
