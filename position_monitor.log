@@ -62,3 +62,11 @@ Checking every 5s
   ?: mcap=$115,962 | gain=+64.3% | peak=$115,962 | dd=-7%
   ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
   ?: mcap=$115,962 | gain=+64.3% | peak=$115,962 | dd=-7%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$115,962 | gain=+64.3% | peak=$115,962 | dd=-7%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$115,962 | gain=+64.3% | peak=$115,962 | dd=-7%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$115,962 | gain=+64.3% | peak=$115,962 | dd=-7%
+  ?: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+  ?: mcap=$114,112 | gain=+61.7% | peak=$115,962 | dd=-6%
