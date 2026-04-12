@@ -147,7 +147,7 @@ def scan_gmgn_token(token_data, whales):
         return None, f"Honeypot"
     
     # 2. Exchange check - only Pump.fun or Raydium
-    # Indicators: pump.fun address ends in "pump", or exchange contains "pump"/"raydium"
+    # Indicators: pump.fun address ends in "pump", or exchange contains "pump"/"raydium"/"pumpswap"
     # Reject meteora, orinoco, or other DEXes
     launchpad_platform = token_data.get('launchpad_platform', '').lower()
     exchange = token_data.get('exchange', '').lower()
@@ -156,13 +156,14 @@ def scan_gmgn_token(token_data, whales):
     is_pump = ('pump' in launchpad_platform or 'pump' in exchange or 
                 addr.endswith('pump') or 'pump.fun' in launchpad_platform)
     is_raydium = 'raydium' in exchange
+    is_pumpswap = 'pumpswap' in exchange
     
     # Reject known bad exchanges
     bad_exchanges = ['meteora', 'orcan', 'lifinity', 'saber', 'crema', 'cykura', 'port']
     is_bad = any(bad in exchange for bad in bad_exchanges)
     
-    if is_bad or (exchange and not is_pump and not is_raydium):
-        return None, f"Exchange: {exchange} ({launchpad_platform}) - not pump.fun/raydium"
+    if is_bad or (exchange and not is_pump and not is_raydium and not is_pumpswap):
+        return None, f"Exchange: {exchange} ({launchpad_platform}) - not pump.fun/raydium/pumpswap"
     
     # 3. Mcap range
     if mcap < MIN_MCAP:
@@ -284,7 +285,7 @@ def buy_token(addr, result):
             if pairs:
                 p = max(pairs, key=lambda x: x.get('liquidity', {}).get('usd', 0))
                 dex = p.get('dexId', '').lower()
-                if dex not in ('pumpfun', 'raydium', 'raydium2'):
+                if dex not in ('pumpfun', 'raydium', 'raydium2', 'pumpswap'):
                     print(f"❌ {result['token']}: DexScreener says {dex} - not buying")
                     return None
     except Exception as e:
