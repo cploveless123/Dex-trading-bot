@@ -444,10 +444,25 @@ def main():
                     
                     if should_buy_flag:
                         # COOLDOWN LOGIC: Add to watch list instead of buying immediately
+                        # If GMGN age=0, try to get age from DexScreener
+                        age = result['age']
+                        if age == 0:
+                            # Try DexScreener fallback for age
+                            try:
+                                r = requests.get(f'https://api.dexscreener.com/latest/dex/tokens/{addr}', timeout=5)
+                                if r.status_code == 200:
+                                    pairs = r.json().get('pairs', [])
+                                    if pairs:
+                                        created_ts = int(pairs[0].get('pairCreatedAt', 0) or 0)
+                                        if created_ts:
+                                            age = (time.time() - created_ts / 1000) / 60
+                            except:
+                                pass
+                        
                         # Calculate cooldown based on chg5 and age
-                        if result['age'] < 10 and result['m5'] > 50:
+                        if age < 10 and result['m5'] > 50:
                             cooldown_secs = 60  # Young + parabolic = 60s cooldown
-                        elif result['age'] >= 10 and result['m5'] > 1:
+                        elif age >= 10 and result['m5'] > 1:
                             cooldown_secs = 120  # Older + positive chg5 = 120s cooldown
                         else:
                             cooldown_secs = 0  # No cooldown needed
