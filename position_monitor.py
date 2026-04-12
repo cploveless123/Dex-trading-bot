@@ -104,7 +104,7 @@ def check_positions():
         if t.get('status') not in ('open', 'open_partial'):
             continue
         ca = t.get('token_address', '')
-        sym = t.get('token', '?')
+        sym = t.get('token_name', '?')
         entry = t.get('entry_mcap', 0)
         if not ca or not entry:
             continue
