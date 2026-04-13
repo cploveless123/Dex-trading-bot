@@ -196,11 +196,8 @@ def check_new_trades():
             LAST_TRADE_INDEX_FILE.write_text(str(i + 1))
             return format_tp1_alert(trade)
         
-        # Trade fully closed (TP2 or stop loss)
-        if status == 'closed' and trade.get('exit_reason'):
-            # Mark as alerted by updating index
-            LAST_TRADE_INDEX_FILE.write_text(str(i + 1))
-            return format_trade_alert(trade)
+        # Trade fully closed (TP2 or stop loss) - position_monitor handles these alerts
+        # So we don't send duplicate alerts here
     
     # No new trades
     LAST_TRADE_INDEX_FILE.write_text(str(len(lines)))
