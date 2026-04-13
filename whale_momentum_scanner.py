@@ -22,7 +22,7 @@ import requests, json, time
 from datetime import datetime
 from pathlib import Path
 from trading_constants import (
-    MIN_MCAP, MAX_MCAP, MIN_BS_RATIO,
+    MIN_MCAP, MAX_MCAP, BS_RATIO_OLD,
     MIN_HOLDERS, MIN_5MIN_VOLUME, POSITION_SIZE,
     TICKER_BLACKLIST, MAX_OPEN_POSITIONS, SIM_RESET_TIMESTAMP,
     DIP_MIN, DIP_MAX, PEAK_WINDOW_NEW, PEAK_WINDOW_OLD,
