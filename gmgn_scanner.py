@@ -20,7 +20,7 @@ from trading_constants import (
     STOP_LOSS_PERCENT as STOP_LOSS, MIN_BS_RATIO, TP1_PERCENT,
     ALLOWED_EXCHANGES, REJECTED_EXCHANGES, LIQUIDITY_MCAP_THRESHOLD,
     LIQUIDITY_MIN, PARABOLIC_DIP_EXCEPTION, H1_PARABOLIC_REJECT,
-    ANTI_MOMENTUM_5M_THRESHOLD, FALLING_KNIFE_CONSECUTIVE,
+    ANTI_MOMENTUM_5M_THRESHOLD, ANTI_MOMENTUM_CHG1_THRESHOLD, FALLING_KNIFE_CONSECUTIVE,
     NEW_PUMP_COOLDOWN, OLD_PUMP_COOLDOWN, NEW_PUMP_5M_THRESHOLD,
     OLD_PUMP_5M_THRESHOLD, MAX_RECHECKS, RECHECK_DELAY, SIM_RESET_TIMESTAMP
 )
@@ -164,8 +164,8 @@ def scan_gmgn_token(token_data, whales):
         return None, f"chg5 {m5:+.1f}% > +200% (too parabolic)"
     
     # ANTI-MOMENTUM: chg5 > +15% AND chg1 < 0% → REJECT (chasing)
-    if m5 > ANTI_MOMENTUM_5M_THRESHOLD and chg1 < 0:
-        return None, f"chg5 {m5:+.1f}% > +{ANTI_MOMENTUM_5M_THRESHOLD}% but chg1 {chg1:+.1f}% < 0 (momentum chase)"
+    if m5 > ANTI_MOMENTUM_5M_THRESHOLD and chg1 < ANTI_MOMENTUM_CHG1_THRESHOLD:
+        return None, f"chg5 {m5:+.1f}% > +{ANTI_MOMENTUM_5M_THRESHOLD}% but chg1 {chg1:+.1f}% < {ANTI_MOMENTUM_CHG1_THRESHOLD}% (momentum chase)"
     
     # REJECT if chg5 > +100% AND holders < 20 (artificial pump with low organic interest)
     if m5 > 100 and holders < 20:

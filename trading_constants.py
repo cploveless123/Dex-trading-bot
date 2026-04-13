@@ -73,7 +73,8 @@ MAX_RECHECKS = 15          # Max 15 rechecks (3 min) before skip
 RECHECK_DELAY = 15          # 15s between rechecks
 
 # Anti-momentum: chg5 >+15% AND chg1 <0% → REJECT
-ANTI_MOMENTUM_5M_THRESHOLD = 15  # chg5 >+15%
+ANTI_MOMENTUM_5M_THRESHOLD = 25  # chg5 >+25%
+ANTI_MOMENTUM_CHG1_THRESHOLD = -3  # AND chg1 < -3%
 FALLING_KNIFE_CONSECUTIVE = 3    # 3 consecutive price drops → reject
 
 # Parabolic rejection
