@@ -468,9 +468,20 @@ def check_cooldown(whales):
                             data['first_seen'] = time.time()
                             print(f"   ⏳ {result['token']}: dip {dip_from_peak:.1f}% (need >15%) chg1 {chg1:+.1f}% (need >+3%) - waiting 15s more")
                             continue
-                    # OPTION 1: Check MIN_CHG1 - chg1 must be > +3% to buy
+                    # OPTION 1: Check MIN_CHG1 - chg1 must be > +5% to buy
                     if chg1 is not None and chg1 >= MIN_CHG1_FOR_BUY:
-                        # Parabolic candidate confirmed - BUY
+                        # Increment recheck count for consecutive positive checks
+                        data['recheck_count'] = data.get('recheck_count', 0) + 1
+                        data['prev_chg1'] = chg1
+                        
+                        # Require 2+ consecutive positive rechecks before buying
+                        if data['recheck_count'] < 2:
+                            print(f"   ⏳ {result['token']}: recheck #{data['recheck_count']} positive (chg1={chg1:.1f}%), need 1 more - waiting 15s")
+                            data['cooldown_secs'] += 15
+                            data['first_seen'] = time.time()
+                            continue
+                        
+                        # Consecutive rechecks confirmed - BUY
                         should_buy_flag, buy_reason = should_buy(result2, whales)
                     else:
                         # chg1 not strong enough - continue watching
@@ -515,6 +526,16 @@ def check_cooldown(whales):
                 
                 improvement = chg1 - prev_chg1
                 if improvement >= 2:
+                    # Increment recheck count
+                    data['recheck_count'] = data.get('recheck_count', 0) + 1
+                    
+                    # Require 2+ consecutive positive rechecks
+                    if data['recheck_count'] < 2:
+                        print(f"   ⏳ {result['token']}: recheck #{data['recheck_count']} positive (chg1={chg1:.1f}%), need 1 more - waiting 15s")
+                        data['cooldown_secs'] += 15
+                        data['first_seen'] = time.time()
+                        continue
+                    
                     # Improvement detected - do final confirmation check
                     print(f"   ⏳ {result['token']}: chg1 improved {improvement:+.1f}% to {chg1:+.1f}% - doing final confirmation...")
                     
@@ -721,7 +742,9 @@ def main():
                                     'cooldown_secs': cooldown_secs,
                                     'parabolic_candidate': result.get('_parabolic_candidate', False),
                                     'peak_mcap': result.get('mcap', 0),
-                                    'needs_peak_tracking': _needs_peak_tracking
+                                    'needs_peak_tracking': _needs_peak_tracking,
+                                    'recheck_count': 0,  # Count consecutive positive rechecks
+                                    'prev_chg1': None
                                 }
                                 peak_msg = " [PEAK TRACK]" if _needs_peak_tracking else ""
                                 parabolic_msg = " [PARABOLIC]" if result.get('_parabolic_candidate') else ""

@@ -12,7 +12,7 @@ MAX_OPEN_POSITIONS = 9     # Max concurrent positions
 # Entry Filters
 MIN_MCAP = 6000            # $6K floor
 MAX_MCAP = 85000           # $85K ceiling
-MIN_AGE_SECONDS = 420      # 7 minutes minimum
+MIN_AGE_SECONDS = 180      # 7 minutes minimum
 MAX_AGE_SECONDS = 10800    # 180 minutes maximum
 MIN_5MIN_VOLUME = 1000    # 5min volume > $1K
 MIN_HOLDERS = 15           # Holders ≥ 15
@@ -77,7 +77,7 @@ ANTI_MOMENTUM_5M_THRESHOLD = 15  # chg5 >+15%
 ANTI_MOMENTUM_CHG1_THRESHOLD = -3  # AND chg1 <-3%
 
 # Chg1 momentum check
-MIN_CHG1_FOR_BUY = 3.0  # chg1 must be > +3% to confirm momentum
+MIN_CHG1_FOR_BUY = 5.0  # chg1 must be > +3% to confirm momentum
 CHG1_DROP_THRESHOLD = 50  # if chg1 drops by >50% from previous, reject (deterioration)
 
 # Parabolic rejection
