@@ -81,7 +81,7 @@ MIN_CHG1_FOR_BUY = 3.0  # chg1 must be > +3% to confirm momentum
 CHG1_DROP_THRESHOLD = 50  # if chg1 drops by >50% from previous, reject (deterioration)
 
 # Parabolic rejection
-H1_PARABOLIC_REJECT = 500  # h1 >+500% → reject (too parabolic)
+H1_PARABOLIC_REJECT = 833  # h1 >+833% → reject (too parabolic)
 
 # Falling knife detection
 FALLING_KNIFE_CONSECUTIVE = 3  # 3 consecutive drops + chg1<0 → reject
