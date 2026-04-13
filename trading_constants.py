@@ -94,7 +94,7 @@ ALLOWED_EXCHANGES = {'pump', 'raydium', 'pumpswap'}
 REJECTED_EXCHANGES = {'meteora', 'orinoco', 'lifinity', 'saber'}
 
 # Simulation - RESET TO 1.0 SOL
-SIM_RESET_TIMESTAMP = '2026-04-13T03:15:00.000000'  # Fresh start v6.0
+SIM_RESET_TIMESTAMP = '2026-04-13T03:25:20.644280.000000'  # Fresh start v6.0
 CHRIS_STARTING_BALANCE = 1.0
 
 # Scan intervals
