@@ -164,7 +164,10 @@ def scan_gmgn_token(token_data, whales):
     if m5 > ANTI_MOMENTUM_5M_THRESHOLD:
         chg1_check = chg1 if chg1 is not None else -999
         if chg1_check < ANTI_MOMENTUM_CHG1_THRESHOLD:
-            return None, f"chg5 {m5:+.1f}% > +{ANTI_MOMENTUM_5M_THRESHOLD}% but chg1 {chg1}" + (f"{chg1:+.1f}% < {ANTI_MOMENTUM_CHG1_THRESHOLD}" if chg1 is not None else " None (unavailable)") + " (momentum chase)"
+            if chg1 is not None:
+                return None, f"chg5 {m5:+.1f}% > +{ANTI_MOMENTUM_5M_THRESHOLD}% but chg1 {chg1:+.1f}% < {ANTI_MOMENTUM_CHG1_THRESHOLD}% (momentum chase)"
+            else:
+                return None, f"chg5 {m5:+.1f}% > +{ANTI_MOMENTUM_5M_THRESHOLD}% but chg1 None (unavailable) (momentum chase)"
     
     # REJECT if chg5 > +100% AND holders < 20 (artificial pump with low organic interest)
     if m5 > 100 and holders < 20:
