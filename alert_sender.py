@@ -213,13 +213,25 @@ def get_status():
     # Only count trades since reset
     reset_trades = [t for t in all_trades if t.get('opened_at', '') > SIM_RESET_TIMESTAMP]
     closed_pnl = sum(t.get('pnl_sol', 0) for t in reset_trades if t.get('closed_at'))
-    open_full = len([t for t in reset_trades if t.get('status') == 'open' and not t.get('closed_at')])
-    open_partial = len([t for t in reset_trades if t.get('status') == 'open_partial' and not t.get('closed_at')])
-    locked = open_full * POSITION_SIZE + open_partial * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100)
+    open_full = [t for t in reset_trades if t.get('status') == 'open' and not t.get('closed_at')]
+    open_partial = [t for t in reset_trades if t.get('status') == 'open_partial' and not t.get('closed_at')]
+    locked = len(open_full) * POSITION_SIZE + len(open_partial) * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100)
     balance = CHRIS_STARTING_BALANCE + closed_pnl - locked
     wins = len([t for t in reset_trades if t.get('pnl_sol', 0) > 0])
     losses = len([t for t in reset_trades if t.get('pnl_sol', 0) < 0])
-    return f"💰 Balance: {balance:.4f} SOL\n📈 {len(reset_trades)} trades | {wins}W/{losses}L"
+    
+    # Build open positions string
+    open_pos_str = ""
+    if open_full or open_partial:
+        open_pos_str = "\n\n📋 OPEN POSITIONS:"
+        for t in open_full + open_partial:
+            name = t.get('token_name', '?')
+            ca = t.get('token_address', '')
+            entry = t.get('entry_mcap', 0)
+            open_pos_str += f"\n• {name} | Entry ${int(entry):,}"
+            open_pos_str += f"\n  🔗 https://dexscreener.com/solana/{ca}"
+    
+    return f"💰 Balance: {balance:.4f} SOL\n📈 {len(reset_trades)} trades | {wins}W/{losses}L{open_pos_str}"
 
 def main():
     print("📱 Alert sender started")
