@@ -374,7 +374,8 @@ def check_cooldown(whales):
         result2['current_mcap'] = result2.get('mcap', 0)
         
         if elapsed >= data['cooldown_secs']:
-            # Cooldown passed - get fresh chg1 from DexScreener
+            # Cooldown passed - now in recheck phase
+            # Get fresh chg1 from DexScreener
             chg1 = None
             try:
                 r = requests.get(f'https://api.dexscreener.com/latest/dex/tokens/{addr}', timeout=5)
@@ -387,25 +388,71 @@ def check_cooldown(whales):
             except:
                 pass
             
-            # If chg1 is None (unavailable) OR negative, wait 15s more and recheck
+            # Initialize previous chg1 for improvement tracking
+            prev_chg1 = data.get('prev_chg1')
+            
+            # If chg1 is None or negative, wait and recheck
             if chg1 is None or chg1 < 0:
                 data['cooldown_secs'] += 15
-                data['first_seen'] = time.time()  # Reset timer to avoid repeated prints
-                print(f"   ⏳ {result['token']}: chg1={chg1:+.1f}% < 0%, waiting 15s more to recheck")
+                data['first_seen'] = time.time()
+                chg1_str = f"{chg1:+.1f}%" if chg1 is not None else "None"
+                print(f"   ⏳ {result['token']}: chg1={chg1_str}% (need +2% improvement), waiting 15s")
+                data['prev_chg1'] = chg1
                 continue
             
-            # chg1 >= 0 - safe to proceed
-            should_buy_flag, buy_reason = should_buy(result2, whales)
-            if should_buy_flag:
-                trade = buy_token(addr, result2)
-                if trade:
-                    print(f"   🟢 BUY (after {elapsed:.0f}s cooldown): {result2['token']} @ ${result2['mcap']:,.0f}")
-                    to_remove.append(addr)
+            # chg1 >= 0 - check if improved by 2% from previous
+            if prev_chg1 is not None and chg1 is not None:
+                improvement = chg1 - prev_chg1
+                if improvement >= 2:
+                    # Improvement detected - do final confirmation check
+                    print(f"   ⏳ {result['token']}: chg1 improved {improvement:+.1f}% to {chg1:+.1f}% - doing final confirmation...")
+                    
+                    # Final check - get fresh chg1
+                    final_chg1 = None
+                    try:
+                        r2 = requests.get(f'https://api.dexscreener.com/latest/dex/tokens/{addr}', timeout=5)
+                        if r2.status_code == 200:
+                            pairs2 = r2.json().get('pairs', [])
+                            if pairs2:
+                                final_chg1_raw = pairs2[0].get('priceChange', {}).get('m1')
+                                if final_chg1_raw is not None:
+                                    final_chg1 = float(final_chg1_raw)
+                    except:
+                        pass
+                    
+                    if final_chg1 is not None and final_chg1 > 0:
+                        # Final confirmation passed - BUY
+                        should_buy_flag, buy_reason = should_buy(result2, whales)
+                        if should_buy_flag:
+                            trade = buy_token(addr, result2)
+                            if trade:
+                                print(f"   🟢 BUY (after {elapsed:.0f}s cooldown): {result2['token']} @ ${result2['mcap']:,.0f}")
+                                to_remove.append(addr)
+                            else:
+                                to_remove.append(addr)
+                        else:
+                            to_remove.append(addr)
+                    else:
+                        # Final check failed - continue watching
+                        print(f"   ⏳ {result['token']}: final check chg1={final_chg1:+.1f}% not positive, continuing to watch")
+                        data['cooldown_secs'] += 15
+                        data['first_seen'] = time.time()
+                        data['prev_chg1'] = final_chg1 if final_chg1 is not None else chg1
+                        continue
                 else:
-                    to_remove.append(addr)
+                    # Not enough improvement yet
+                    data['cooldown_secs'] += 15
+                    data['first_seen'] = time.time()
+                    print(f"   ⏳ {result['token']}: chg1={chg1:+.1f}% (improvement {improvement:+.1f}% < +2%), waiting 15s")
+                    data['prev_chg1'] = chg1
+                    continue
             else:
-                # Didn't pass should_buy for some reason
-                to_remove.append(addr)
+                # First recheck or previous was None - just waiting for improvement
+                data['cooldown_secs'] += 15
+                data['first_seen'] = time.time()
+                print(f"   ⏳ {result['token']}: chg1={chg1:+.1f}%, waiting for +2% improvement")
+                data['prev_chg1'] = chg1
+                continue
         else:
             # Still in cooldown
             remaining = data['cooldown_secs'] - elapsed
