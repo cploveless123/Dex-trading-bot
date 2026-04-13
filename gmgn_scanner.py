@@ -538,7 +538,8 @@ def buy_token(addr, result):
                         print(f"❌ {result['token']}: {dex} pair doesn't end in 'pump' - not buying")
                         return None
     except Exception as e:
-        print(f"⚠️ Could not verify DEX: {e}")
+        print(f"⚠️ Could not verify DEX: {e} - not buying")
+        return None
     
     now = datetime.utcnow().isoformat()
     trade = {
