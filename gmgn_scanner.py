@@ -398,15 +398,32 @@ def check_cooldown(whales):
             except:
                 pass
             
-            # Check if this is a parabolic candidate
-            is_parabolic = data.get('parabolic_candidate', False)
+            # Update peak mcap if current is higher
+            needs_peak_tracking = data.get('needs_peak_tracking', False)
+            current_mcap_recheck = result2.get('current_mcap', 0)
+            peak_mcap = data.get('peak_mcap', 0)
+            if needs_peak_tracking and current_mcap_recheck > peak_mcap:
+                peak_mcap = current_mcap_recheck
+                data['peak_mcap'] = peak_mcap
             
             # Initialize previous chg1 for improvement tracking
             prev_chg1 = data.get('prev_chg1')
             
-            # For parabolic candidates: just check if chg1 > +1%
+            # Check if this is a parabolic candidate
+            is_parabolic = data.get('parabolic_candidate', False)
+            
+            # For parabolic candidates: check if chg1 > +1%
             if is_parabolic:
                 if chg1 is not None and chg1 > 1:
+                    # Check dip from peak > 15% AND chg1 > +3%
+                    if needs_peak_tracking and peak_mcap > 0:
+                        dip_from_peak = ((peak_mcap - current_mcap_recheck) / peak_mcap) * 100
+                        if dip_from_peak < 15 or chg1 < 3:
+                            # Not enough dip from peak or chg1 not strong enough - continue watching
+                            data['cooldown_secs'] += 15
+                            data['first_seen'] = time.time()
+                            print(f"   ⏳ {result['token']}: dip {dip_from_peak:.1f}% (need >15%) chg1 {chg1:+.1f}% (need >+3%) - waiting 15s more")
+                            continue
                     # Parabolic candidate confirmed - BUY
                     should_buy_flag, buy_reason = should_buy(result2, whales)
                     if should_buy_flag:
@@ -618,18 +635,17 @@ def main():
                         # Calculate cooldown based on chg5 and age
                         cooldown_secs = 0
                         
-                        if age < 10 and result['m5'] > 50:
-                            cooldown_secs = 120  # Young + parabolic
-                        elif age >= 10 and result['m5'] > 1:
-                            cooldown_secs = 120  # Older + positive chg5
-                        
-                        # If chg5 > +100% (very parabolic), add 60s extra
+                        # NEW RULE: If m5 > +100%, track peak and require dip > 15% + chg1 > +3%
+                        _needs_peak_tracking = False
                         if result['m5'] > 100:
-                            cooldown_secs += 60
-                        
-                        # If chg5 > +200% (extreme parabolic), add 30s more (total 210s)
-                        if result['m5'] > 200:
-                            cooldown_secs += 30
+                            _needs_peak_tracking = True
+                            cooldown_secs = 150  # Wait 150s first
+                        elif age < 15 and result['m5'] > 50:
+                            cooldown_secs = 120  # Young + parabolic
+                        elif age >= 15 and result['m5'] > 1:
+                            cooldown_secs = 120  # Older + positive chg5
+                        else:
+                            cooldown_secs = 0
                         
                         # If chg1 (1min change) is negative, add 60s extra cooldown
                         if result.get('chg1', 0) < 0:
@@ -642,10 +658,13 @@ def main():
                                     'result': result,
                                     'token_data': token_data,
                                     'cooldown_secs': cooldown_secs,
-                                    'parabolic_candidate': result.get('_parabolic_candidate', False)
+                                    'parabolic_candidate': result.get('_parabolic_candidate', False),
+                                    'peak_mcap': result.get('mcap', 0),
+                                    'needs_peak_tracking': _needs_peak_tracking
                                 }
+                                peak_msg = " [PEAK TRACK]" if _needs_peak_tracking else ""
                                 parabolic_msg = " [PARABOLIC]" if result.get('_parabolic_candidate') else ""
-                                print(f"   ⏳ {result['token']}: Added to cooldown for {cooldown_secs}s (chg5={result['m5']:+.1f}%, age={result['age']:.1f}min){parabolic_msg}")
+                                print(f"   ⏳ {result['token']}: Added to cooldown for {cooldown_secs}s (chg5={result['m5']:+.1f}%, age={result['age']:.1f}min){peak_msg}{parabolic_msg}")
                             # else already in cooldown
                         else:
                             # No cooldown needed - buy immediately
