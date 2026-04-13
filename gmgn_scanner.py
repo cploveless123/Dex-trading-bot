@@ -159,11 +159,8 @@ def scan_gmgn_token(token_data, whales):
         if vol_ratio < 0.05:
             return None, f"m5 vol ${m5_vol:.0f} < 5% of mcap ${mcap:.0f} (suspect pump)"
     
-    # REJECT if chg5 > +200% (too parabolic - likely to reverse)
-    if m5 > 200:
-        return None, f"chg5 {m5:+.1f}% > +200% (too parabolic)"
-    
-    # ANTI-MOMENTUM: chg5 > +15% AND chg1 < 0% → REJECT (chasing)
+    # ANTI-MOMENTUM: chg5 >+15% AND chg1 <-3% → REJECT (chasing)
+    # Note: chg5 > +200% is now handled by anti-momentum, not a hard rejection: chg5 > +15% AND chg1 < 0% → REJECT (chasing)
     if m5 > ANTI_MOMENTUM_5M_THRESHOLD and chg1 < ANTI_MOMENTUM_CHG1_THRESHOLD:
         return None, f"chg5 {m5:+.1f}% > +{ANTI_MOMENTUM_5M_THRESHOLD}% but chg1 {chg1:+.1f}% < {ANTI_MOMENTUM_CHG1_THRESHOLD}% (momentum chase)"
     
