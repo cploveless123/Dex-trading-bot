@@ -22,23 +22,23 @@ BS_RATIO_OLD = 0.8        # BS ratio for pairs > 10 min old
 BS_PUMP_FUN_OK = True      # pump.fun BS=0 is OK
 
 # Exit Plan v6.0 - Hold through TP1, let winners run to TP5
-TP1_PERCENT = 35           # +35% → HOLD 100%, trail 40%
+TP1_PERCENT = 50           # +35% → HOLD 100%, trail 40%
 TP1_TRAILING_PCT = 40
-TP1_SELL_PCT = 0           # NO SELL at TP1 - let it ride
+TP1_SELL_PCT = 10           # NO SELL at TP1 - let it ride
 TP2_PERCENT = 100          # +100% → sell 40%, trail 30%
 TP2_TRAILING_PCT = 30
-TP2_SELL_PCT = 40
+TP2_SELL_PCT = 36
 TP3_PERCENT = 200          # +200% → sell 30%, trail 30%
 TP3_TRAILING_PCT = 30
-TP3_SELL_PCT = 30
+TP3_SELL_PCT = 28
 TP4_PERCENT = 300          # +300% → sell 20%, trail 30%
 TP4_TRAILING_PCT = 30
-TP4_SELL_PCT = 20
+TP4_SELL_PCT = 18
 TP5_PERCENT = 1000         # +1000% → sell 10%, trail 15%
 TP5_TRAILING_PCT = 15
-TP5_SELL_PCT = 10
+TP5_SELL_PCT = 8
 TRAILING_STOP_PCT = 40      # 40% from peak on remaining after TP1
-STOP_LOSS_PERCENT = -25     # -25% stop (NON-NEGOTIABLE)
+STOP_LOSS_PERCENT = -20     # -25% stop (NON-NEGOTIABLE)
 
 # Slippage & Tax Correction
 SLIPPAGE_TAX_COST = 0.025   # ~2.5% per round trip
