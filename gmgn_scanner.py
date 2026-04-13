@@ -12,21 +12,22 @@ import subprocess
 from datetime import datetime
 from pathlib import Path
 
-# === TRADING CONSTANTS ===
-MIN_MCAP = 3000
-MAX_MCAP = 75000
-DIP_MIN = 15
-DIP_MAX = 40
-MIN_MOMENTUM = 50  # h1 or 24h must be > +50%
-MIN_HOLDERS = 15
-MAX_TOP10 = 40
-MIN_BS_RATIO = 1.5
-MIN_VOLUME_5M = 1000
-MAX_AGE_MINUTES = 180
+# === IMPORT FROM TRADING CONSTANTS ===
+from trading_constants import (
+    MIN_MCAP, MAX_MCAP, MIN_HOLDERS, TOP10_HOLDER_MAX as MAX_TOP10,
+    DIP_MIN, DIP_MAX, MIN_5MIN_VOLUME as MIN_VOLUME_5M,
+    MIN_AGE_SECONDS, MAX_AGE_SECONDS, MAX_OPEN_POSITIONS, POSITION_SIZE,
+    STOP_LOSS_PERCENT as STOP_LOSS, MIN_BS_RATIO, TP1_PERCENT,
+    ALLOWED_EXCHANGES, REJECTED_EXCHANGES, LIQUIDITY_MCAP_THRESHOLD,
+    LIQUIDITY_MIN, PARABOLIC_DIP_EXCEPTION, H1_PARABOLIC_REJECT,
+    ANTI_MOMENTUM_5M_THRESHOLD, FALLING_KNIFE_CONSECUTIVE,
+    NEW_PUMP_COOLDOWN, OLD_PUMP_COOLDOWN, NEW_PUMP_5M_THRESHOLD,
+    OLD_PUMP_5M_THRESHOLD, MAX_RECHECKS, RECHECK_DELAY, SIM_RESET_TIMESTAMP
+)
+
+# Additional hardcoded
 FOCUS_AGE_MINUTES = 15
-POSITION_SIZE = 0.1
-MAX_OPEN_POSITIONS = 9
-STOP_LOSS = 20
+MIN_MOMENTUM = 50  # h1 or 24h must be > +50%
 
 # === FILES ===
 TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
@@ -145,6 +146,10 @@ def scan_gmgn_token(token_data, whales):
             if pairs:
                 chg1 = float(pairs[0].get('priceChange', {}).get('m1', 0) or 0)
                 m5_vol = float(pairs[0].get('volume', {}).get('m5', 0) or 0)
+                
+                # Liquidity check: mcap > $60K requires > $1K liquidity
+                if mcap > LIQUIDITY_MCAP_THRESHOLD and liq < LIQUIDITY_MIN:
+                    return None, f"Mcap ${mcap:,.0f} > $60K but liq ${liq:,.0f} < $1K"
     except:
         pass
     
@@ -158,6 +163,10 @@ def scan_gmgn_token(token_data, whales):
     if m5 > 200:
         return None, f"chg5 {m5:+.1f}% > +200% (too parabolic)"
     
+    # ANTI-MOMENTUM: chg5 > +15% AND chg1 < 0% → REJECT (chasing)
+    if m5 > ANTI_MOMENTUM_5M_THRESHOLD and chg1 < 0:
+        return None, f"chg5 {m5:+.1f}% > +{ANTI_MOMENTUM_5M_THRESHOLD}% but chg1 {chg1:+.1f}% < 0 (momentum chase)"
+    
     # REJECT if chg5 > +100% AND holders < 20 (artificial pump with low organic interest)
     if m5 > 100 and holders < 20:
         return None, f"chg5 {m5:+.1f}% > +100% with only {holders} holders (low organic interest)"
@@ -165,6 +174,12 @@ def scan_gmgn_token(token_data, whales):
     # REJECT if GMGN has no history (all fields are 0/None) — too risky, no data
     if mcap == 0 and h1 == 0 and m5 == 0:
         return None, "No GMGN history (mcap=0, h1=0, m5=0) - too risky"
+    
+    # REJECT if too young (< 3 min) or too old (> 180 min)
+    if age < MIN_AGE_SECONDS / 60:
+        return None, f"Age {age:.1f}min < 3min (too young)"
+    if age > MAX_AGE_SECONDS / 60:
+        return None, f"Age {age:.1f}min > 180min (too old)"
     
     # Calculate BS ratio
     bs = (buys / sells) if sells > 0 else (1.0 if buys > sells else 0.5)
@@ -199,9 +214,9 @@ def scan_gmgn_token(token_data, whales):
     
     # 3. Mcap range
     if mcap < MIN_MCAP:
-        return None, f"Mcap ${mcap:,.0f} < ${MIN_MCAP:,}"
+        return None, f"Mcap ${mcap:,.0f} < ${MIN_MCAP:,} (too low)"
     if mcap > MAX_MCAP:
-        return None, f"Mcap ${mcap:,.0f} > ${MAX_MCAP:,}"
+        return None, f"Mcap ${mcap:,.0f} > ${MAX_MCAP:,} (too high)"
     
     # 3. Age limit
     if age > MAX_AGE_MINUTES:
@@ -213,15 +228,15 @@ def scan_gmgn_token(token_data, whales):
     
     # 5. Top 10% 
     if top10 > MAX_TOP10:
-        return None, f"Top10 {top10:.1f}% > {MAX_TOP10}%"
+        return None, f"Top10 {top10:.1f}% > {MAX_TOP10}% (dumper risk)"
     
     # 6. Momentum (h1 or chg5 as proxy)
     # For very young coins (< 10 min), require h1 > +30% (they're just starting)
     # For older coins, require h1 > +50%
     # If h1 is low but chg5 shows strong momentum AND coin is young, allow it
     # REJECT if h1 > +500% (too parabolic - likely to reverse)
-    if h1 > 500:
-        return None, f"h1 {h1:+.1f}% > +500% (too parabolic)"
+    if h1 > H1_PARABOLIC_REJECT:
+        return None, f"h1 {h1:+.1f}% > +{H1_PARABOLIC_REJECT}% (too parabolic)"
     
     min_h1 = 30 if age < 10 else MIN_MOMENTUM
     if h1 >= min_h1:
@@ -236,11 +251,11 @@ def scan_gmgn_token(token_data, whales):
     if m5 < 0:
         return None, f"m5 {m5:+.1f}% < 0 (falling)"
     
-    # 8. Dip filter (15-40%)
+    # 8. Dip filter (15-45%)
     if dip < DIP_MIN:
-        # PARABOLIC EXCEPTION: h1 > +150% AND age < 10 min AND m5 > 0
-        if h1 >= 150 and age < 10 and m5 > 0:
-            dip = 5.0  # Treat as shallow dip
+        # PARABOLIC EXCEPTION: h1 > +100% AND age < 15 min AND chg1 > 0 → allow dip as low as 5%
+        if h1 >= 100 and age < 15 and chg1 > 0:
+            dip = PARABOLIC_DIP_EXCEPTION  # Treat as 5% dip
         else:
             return None, f"Dip {dip:.1f}% < {DIP_MIN}%"
     if dip > DIP_MAX:

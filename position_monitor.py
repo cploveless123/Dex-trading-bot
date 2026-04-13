@@ -228,7 +228,7 @@ def check_positions():
 📊 Next Targets:
 📈 TP2: +{TP2_PERCENT}% → Sell {TP2_SELL_PCT}% more
 📈 TP3: +{TP3_PERCENT}% → Sell remaining {TP3_SELL_PCT}%
-📊 Trailing: {TRAILING_STOP_PCT}% from peak"""
+📊 Trailing: {TP1_TRAILING_PCT}% from peak"""
                 send_alert(msg, "TP1")
                 print(f"✅ {sym} TP1 HIT @ ${mcap:,.0f} (+{sell_pct:.1f}%)")
             else:
@@ -282,7 +282,7 @@ def check_positions():
 
 📊 Next Target:
 📈 TP3: +{TP3_PERCENT}% → Sell remaining {TP3_SELL_PCT}%
-📊 Trailing: {TRAILING_STOP_PCT}% from peak"""
+📊 Trailing: {TP2_TRAILING_PCT}% from peak"""
                 send_alert(msg, "TP2")
                 print(f"✅ {sym} TP2 HIT @ ${mcap:,.0f} (+{gains_pct:.0f}%)")
                 continue
@@ -319,7 +319,7 @@ def check_positions():
 📊 Next Targets:
 📈 TP4: +{TP4_PERCENT}% → Sell {TP4_SELL_PCT}% more
 📈 TP5: +{TP5_PERCENT}% → Sell remaining {TP5_SELL_PCT}%
-📊 Trailing: {TRAILING_STOP_PCT}% from peak"""
+📊 Trailing: {TP3_TRAILING_PCT}% from peak"""
                 send_alert(msg, "TP3")
                 print(f"✅ {sym} TP3 HIT @ ${mcap:,.0f} (+{gains_pct:.0f}%)")
                 continue
@@ -355,7 +355,7 @@ def check_positions():
 
 📊 Next Target:
 📈 TP5: +{TP5_PERCENT}% → Sell remaining {TP5_SELL_PCT}%
-📊 Trailing: {TRAILING_STOP_PCT}% from peak"""
+📊 Trailing: {TP4_TRAILING_PCT}% from peak"""
                 send_alert(msg, "TP4")
                 print(f"✅ {sym} TP4 HIT @ ${mcap:,.0f} (+{gains_pct:.0f}%)")
                 continue

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Trading Constants - v1.5 Strategy
-Goal: Turn 1.0 SOL → 100 SOL via compound pump.fun trades
+Trading Constants - Wilson v6.0 Strategy
+Goal: Turn 1.0 SOL → 100 SOL via compound TP5 winners on pump.fun
 """
 
 # Position sizing
@@ -10,36 +10,35 @@ KOL_BUY_POSITION_SIZE = 0.10
 MAX_OPEN_POSITIONS = 9     # Max concurrent positions
 
 # Entry Filters
-MIN_MCAP = 4000            # $4K floor (v5.1)
-MAX_MCAP = 75000           # $75K ceiling
+MIN_MCAP = 6000            # $6K floor (v6.0)
+MAX_MCAP = 85000           # $85K ceiling (v6.0)
+MIN_AGE_SECONDS = 180      # 3 minutes minimum (v6.0)
+MAX_AGE_SECONDS = 10800    # 180 minutes maximum (v6.0)
 MIN_VOLUME = 5000          # 24h volume (kept for compatibility)
 MIN_5MIN_VOLUME = 1000     # 5min volume > $1K
-MIN_HOLDERS = 15           # Holders > 15
-TOP10_HOLDER_MAX = 50      # Top10% < 50% (ignore if 0)
-MIN_BS_RATIO = 1.5         # BS ratio (kept for compatibility)
+MIN_HOLDERS = 15           # Holders ≥ 15
+TOP10_HOLDER_MAX = 40      # Top10% < 40% (v6.0, was 50%)
+MIN_BS_RATIO = 1.5         # BS ratio for raydium
+BS_PUMP_FUN_OK = True      # pump.fun BS=0 is OK
 
-# BS ratio
-MIN_BS_NEW = 0.2          # Pairs <5 min old
-MIN_BS_OLD = 0.9          # Pairs >5 min old
-
-# Exit Plan v5.5 - Hold through TP1, let winners run
-TP1_PERCENT = 35           # +35% → HOLD 100%, trail 40%
-TP1_TRAILING_PCT = 40
+# Exit Plan v6.0 - Hold through TP1, let winners run to TP5
+TP1_PERCENT = 35           # +35% → HOLD 100%, trail 25%
+TP1_TRAILING_PCT = 25
 TP1_SELL_PCT = 0           # NO SELL at TP1 - let it ride
-TP2_PERCENT = 100          # +100% → sell 40%, trail 30%
-TP2_TRAILING_PCT = 30
+TP2_PERCENT = 100          # +100% → sell 40%, trail 25%
+TP2_TRAILING_PCT = 25
 TP2_SELL_PCT = 40
-TP3_PERCENT = 200          # +200% → sell 30%, trail 30%
-TP3_TRAILING_PCT = 30
+TP3_PERCENT = 200          # +200% → sell 30%, trail 20%
+TP3_TRAILING_PCT = 20
 TP3_SELL_PCT = 30
-TP4_PERCENT = 300          # +300% → sell 20%
-TP4_TRAILING_PCT = 30
-TP4_SELL_PCT = 20
-TP5_PERCENT = 1000         # +1000% → sell remaining 10% (all done)
+TP4_PERCENT = 500          # +500% → sell 50% of remaining
+TP4_TRAILING_PCT = 15
+TP4_SELL_PCT = 50
+TP5_PERCENT = 1000         # +1000% → sell remaining 15%
 TP5_TRAILING_PCT = 15
-TP5_SELL_PCT = 10
-TRAILING_STOP_PCT = 15    # 15% from peak on remaining
-STOP_LOSS_PERCENT = -20    # -25% stop
+TP5_SELL_PCT = 100
+TRAILING_STOP_PCT = 25      # 25% from peak on remaining after TP1
+STOP_LOSS_PERCENT = -20     # -20% stop
 
 # Slippage & Tax Correction
 SLIPPAGE_TAX_COST = 0.025   # ~2.5% per round trip
@@ -49,48 +48,55 @@ REAL_TP1_PCT = round(TP1_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_TP2_PCT = round(TP2_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_STOP_PCT = round(STOP_LOSS_PERCENT * (1 + SLIPPAGE_TAX_COST), 1)
 
-EXIT_PLAN_TEXT = f"""🎯 Exit Plan v5.5 (tax-adjusted):
-+{TP1_PERCENT}% → Hold (no sell), trail {TP1_TRAILING_PCT}%
+EXIT_PLAN_TEXT = f"""🎯 Exit Plan v6.0:
++{TP1_PERCENT}% → HOLD (sell 0%), trail {TP1_TRAILING_PCT}%
 +{TP2_PERCENT}% → Sell {TP2_SELL_PCT}%, trail {TP2_TRAILING_PCT}%
 +{TP3_PERCENT}% → Sell {TP3_SELL_PCT}%, trail {TP3_TRAILING_PCT}%
-+{TP4_PERCENT}% → Sell {TP4_SELL_PCT}%, trail {TP4_TRAILING_PCT}%
-+{TP5_PERCENT}% → Sell remaining, trail {TP5_TRAILING_PCT}%
-⚠️ Stop: {STOP_LOSS_PERCENT}% (net: {REAL_STOP_PCT}% after {SLIPPAGE_TAX_COST*100}% tax/slippage)"""
++{TP4_PERCENT}% → Sell {TP4_SELL_PCT}% remaining, trail {TP4_TRAILING_PCT}%
++{TP5_PERCENT}% → Sell all, trail {TP5_TRAILING_PCT}%
+⚠️ Stop: {STOP_LOSS_PERCENT}%"""
 
 # Dip / Pullback Detection
-# New (<5 min): dip 10-50%, h1 >+50%, 5min >-10%
-# Older (>5 min): dip 10-50%, 24hr >+25%, h1 >-39%, 5min >-39%
 DIP_MIN = 15
-DIP_MAX = 40
-PEAK_WINDOW_SECONDS = 60   # Peak = highest price in first 60 seconds
-PEAK_WINDOW_NEW = 90       # Peak window for new pairs (<10 min) - back to v5.5 settings
-PEAK_WINDOW_OLD = 180      # Peak window for older pairs (>10 min) - back to v5.5 settings
+DIP_MAX = 45              # v6.0: 45% (was 40%)
+PARABOLIC_DIP_EXCEPTION = 5  # h1 >+100% AND age <15min → allow dip as low as 5%
+PEAK_WINDOW_SECONDS = 60
+PEAK_WINDOW_NEW = 90       # Peak window for new pairs (<15 min)
+PEAK_WINDOW_OLD = 180     # Peak window for older pairs (>15 min)
 
-# Cooldown rules (avoid parabolic tops)
-# New (<5 min): h1 >+100% → wait 60s before buying
-# Older (>5 min): 5min >+1% → wait 120s before buying
-NEW_PUMP_COOLDOWN = 60     # seconds (was 45)
-OLD_PUMP_COOLDOWN = 120     # seconds (was 90)
-NEW_PUMP_HS1_THRESHOLD = 100  # h1 >+100% triggers cooldown
-OLD_PUMP_5M_THRESHOLD = 1     # 5min >+1% triggers cooldown
+# Cooldown rules (v6.0)
+NEW_PUMP_COOLDOWN = 120    # Young (<15 min) + chg5 >+50% → 120s
+OLD_PUMP_COOLDOWN = 120    # Older (>15 min) + chg5 >+1% → 120s
+NEW_PUMP_5M_THRESHOLD = 50  # chg5 >+50% triggers cooldown for young coins
+OLD_PUMP_5M_THRESHOLD = 1   # chg5 >+1% triggers cooldown for older coins
+MAX_RECHECKS = 15          # Max 15 rechecks (3 min) before skip
+RECHECK_DELAY = 15          # 15s between rechecks
 
-# If local peak >40% from ATH → reject (parabolic warning)
-ATH_DIVERGENCE_REJECT = 40  # %
+# Anti-momentum: chg5 >+15% AND chg1 <0% → REJECT
+ANTI_MOMENTUM_5M_THRESHOLD = 15  # chg5 >+15%
+FALLING_KNIFE_CONSECUTIVE = 3    # 3 consecutive price drops → reject
 
-# NoMint and Blacklist checks
-CHECK_NOMINT = True
-CHECK_BLACKLIST = True
+# Parabolic rejection
+H1_PARABOLIC_REJECT = 500  # h1 >+500% → reject (too parabolic)
 
-# Ticker blacklist
-TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
+# Liquidity rule
+LIQUIDITY_MCAP_THRESHOLD = 60000  # mcap >$60K requires >$1K liq
+LIQUIDITY_MIN = 1000
 
-# Simulation
-SIM_RESET_TIMESTAMP = '2026-04-11T20:53:55.000000'  # Fresh start at 1.0 SOL
+# Low Volume Exit
+LOW_VOLUME_THRESHOLD = 600   # 5min vol <$600 AND mcap >$60K → exit
+
+# Exchange validation
+ALLOWED_EXCHANGES = {'pump', 'raydium', 'pumpswap'}
+REJECTED_EXCHANGES = {'meteora', 'orinoco', 'lifinity', 'saber'}
+
+# Simulation - RESET TO 1.0 SOL
+SIM_RESET_TIMESTAMP = '2026-04-13T03:15:00.000000'  # Fresh start v6.0
 CHRIS_STARTING_BALANCE = 1.0
 
 # Scan intervals
 SCAN_INTERVAL = 15        # 15 seconds
-MONITOR_INTERVAL = 5        # 5 seconds
+MONITOR_INTERVAL = 5       # 5 seconds
 ALERT_INTERVAL = 30        # 30 seconds
 
 # API Rate Limiting
