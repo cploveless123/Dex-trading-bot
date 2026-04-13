@@ -250,6 +250,7 @@ def check_positions():
 ⚠️ Stop: {STOP_LOSS_PERCENT}%"""
                 send_alert(msg, "TP1_HOLD")
                 print(f"🚀 {sym} TP1 HIT - HOLDING @ ${mcap:,.0f} (+{gains_pct:.1f}%)")
+                t['tp1_sold'] = True  # Enable trailing stop for HOLD case
             continue
 
     # === TP2 HIT (+100%) ===
