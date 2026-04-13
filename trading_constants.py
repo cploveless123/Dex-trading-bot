@@ -12,7 +12,7 @@ MAX_OPEN_POSITIONS = 9     # Max concurrent positions
 # Entry Filters
 MIN_MCAP = 6000            # $6K floor
 MAX_MCAP = 85000           # $85K ceiling
-MIN_AGE_SECONDS = 180      # 3 minutes minimum
+MIN_AGE_SECONDS = 240      # 3 minutes minimum
 MAX_AGE_SECONDS = 10800    # 180 minutes maximum
 MIN_5MIN_VOLUME = 1000    # 5min volume > $1K
 MIN_HOLDERS = 15           # Holders ≥ 15
