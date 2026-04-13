@@ -385,6 +385,48 @@ def check_cooldown(whales):
         
         if elapsed >= data['cooldown_secs']:
             # Cooldown passed - now in recheck phase
+            # OPTION A+C: Get FRESH GMGN data on recheck (not stale cache)
+            fresh_token_data = None
+            try:
+                result_gmgn = subprocess.run(
+                    ['gmgn-cli', 'token', 'info', '--chain', 'sol', '--address', addr],
+                    capture_output=True, text=True, timeout=15
+                )
+                if result_gmgn.returncode == 0:
+                    fresh_token_data = json.loads(result_gmgn.stdout)
+            except:
+                pass
+            
+            if fresh_token_data:
+                # Re-run scan with fresh GMGN data
+                result2, reason2 = scan_gmgn_token(fresh_token_data, whales)
+            else:
+                # Fall back to cached data
+                result2, reason2 = scan_gmgn_token(data['token_data'], whales)
+            
+            # OPTION B: Check if key metrics jumped >2x from previous check (unstable - reject)
+            prev_h1 = data.get('prev_h1')
+            prev_m5 = data.get('prev_m5')
+            if prev_h1 is not None and result2:
+                curr_h1 = result2.get('h1_change', 0)
+                curr_m5 = result2.get('m5_change', 0)
+                if prev_h1 and curr_h1:
+                    h1_ratio = max(curr_h1, prev_h1) / max(min(curr_h1, prev_h1), 0.001)
+                    if h1_ratio > 3:  # More than 3x jump = very unstable
+                        print(f"   ❌ {result['token']}: h1 jumped {prev_h1:.1f}% → {curr_h1:.1f}% ({h1_ratio:.1f}x) - too unstable, rejecting")
+                        to_remove.append(addr)
+                        continue
+                data['prev_h1'] = curr_h1
+                data['prev_m5'] = curr_m5
+            elif result2:
+                data['prev_h1'] = result2.get('h1_change', 0)
+                data['prev_m5'] = result2.get('m5_change', 0)
+            
+            if result2 is None:
+                # No longer passing filters - remove from cooldown
+                to_remove.append(addr)
+                continue
+            
             # Get fresh chg1 from DexScreener
             chg1 = None
             try:
