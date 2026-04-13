@@ -627,6 +627,10 @@ def main():
                         if result['m5'] > 100:
                             cooldown_secs += 60
                         
+                        # If chg5 > +200% (extreme parabolic), add 120s more (total 300s)
+                        if result['m5'] > 200:
+                            cooldown_secs += 120
+                        
                         # If chg1 (1min change) is negative, add 60s extra cooldown
                         if result.get('chg1', 0) < 0:
                             cooldown_secs += 60
