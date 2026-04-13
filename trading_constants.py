@@ -28,15 +28,15 @@ TP1_SELL_PCT = 0           # Sell 10% at TP1
 TP2_PERCENT = 100          # +100% → Sell 36%, trail 30%
 TP2_TRAILING_PCT = 30
 TP2_SELL_PCT = 40
-TP3_PERCENT = 200          # +200% → Sell 28%, trail 30%
+TP3_PERCENT = 200          # +200% → Sell 30%, trail 30%
 TP3_TRAILING_PCT = 30
-TP3_SELL_PCT = 28
-TP4_PERCENT = 300          # +300% → Sell 18%, trail 30%
+TP3_SELL_PCT = 30
+TP4_PERCENT = 300          # +300% → Sell 20%, trail 30%
 TP4_TRAILING_PCT = 30
-TP4_SELL_PCT = 18
+TP4_SELL_PCT = 20
 TP5_PERCENT = 1000         # +1000% → Sell 8%, trail 15%
 TP5_TRAILING_PCT = 20
-TP5_SELL_PCT = 8
+TP5_SELL_PCT = 10
 TRAILING_STOP_PCT = 40      # 40% from peak on remaining after TP1
 STOP_LOSS_PERCENT = -25     # -25% stop (NON-NEGOTIABLE)
 
@@ -48,7 +48,7 @@ REAL_TP1_PCT = round(TP1_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_TP2_PCT = round(TP2_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_STOP_PCT = round(STOP_LOSS_PERCENT * (1 + SLIPPAGE_TAX_COST), 1)
 
-EXIT_PLAN_TEXT = f"""🎯 Exit Plan v8.0 (Progressive):
+EXIT_PLAN_TEXT = f"""🎯 Exit Plan v8.1 (Progressive):
 +{TP1_PERCENT}% → HOLD, trail {TP1_TRAILING_PCT}%
 +{TP2_PERCENT}% → Sell {TP2_SELL_PCT}%, trail {TP2_TRAILING_PCT}%
 +{TP3_PERCENT}% → Sell {TP3_SELL_PCT}%, trail {TP3_TRAILING_PCT}%
