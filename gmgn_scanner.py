@@ -160,9 +160,11 @@ def scan_gmgn_token(token_data, whales):
             return None, f"m5 vol ${m5_vol:.0f} < 5% of mcap ${mcap:.0f} (suspect pump)"
     
     # ANTI-MOMENTUM: chg5 >+15% AND chg1 <-3% → REJECT (chasing)
-    # Note: chg5 > +200% is now handled by anti-momentum, not a hard rejection: chg5 > +15% AND chg1 < 0% → REJECT (chasing)
-    if m5 > ANTI_MOMENTUM_5M_THRESHOLD and chg1 < ANTI_MOMENTUM_CHG1_THRESHOLD:
-        return None, f"chg5 {m5:+.1f}% > +{ANTI_MOMENTUM_5M_THRESHOLD}% but chg1 {chg1:+.1f}% < {ANTI_MOMENTUM_CHG1_THRESHOLD}% (momentum chase)"
+    # If chg1 is None (unavailable), treat as unsafe (negative)
+    if m5 > ANTI_MOMENTUM_5M_THRESHOLD:
+        chg1_check = chg1 if chg1 is not None else -999
+        if chg1_check < ANTI_MOMENTUM_CHG1_THRESHOLD:
+            return None, f"chg5 {m5:+.1f}% > +{ANTI_MOMENTUM_5M_THRESHOLD}% but chg1 {chg1}" + (f"{chg1:+.1f}% < {ANTI_MOMENTUM_CHG1_THRESHOLD}" if chg1 is not None else " None (unavailable)") + " (momentum chase)"
     
     # REJECT if chg5 > +100% AND holders < 20 (artificial pump with low organic interest)
     if m5 > 100 and holders < 20:
@@ -370,18 +372,20 @@ def check_cooldown(whales):
         
         if elapsed >= data['cooldown_secs']:
             # Cooldown passed - get fresh chg1 from DexScreener
-            chg1 = 0.0
+            chg1 = None
             try:
                 r = requests.get(f'https://api.dexscreener.com/latest/dex/tokens/{addr}', timeout=5)
                 if r.status_code == 200:
                     pairs = r.json().get('pairs', [])
                     if pairs:
-                        chg1 = float(pairs[0].get('priceChange', {}).get('m1', 0) or 0)
+                        chg1_raw = pairs[0].get('priceChange', {}).get('m1')
+                        if chg1_raw is not None:
+                            chg1 = float(chg1_raw)
             except:
                 pass
             
-            # If chg1 < 0%, wait 15s more and recheck
-            if chg1 < 0:
+            # If chg1 is None (unavailable) OR negative, wait 15s more and recheck
+            if chg1 is None or chg1 < 0:
                 data['cooldown_secs'] += 15
                 data['first_seen'] = time.time()  # Reset timer to avoid repeated prints
                 print(f"   ⏳ {result['token']}: chg1={chg1:+.1f}% < 0%, waiting 15s more to recheck")
