@@ -23,7 +23,7 @@ BS_PUMP_FUN_OK = True      # pump.fun BS=0 is OK
 
 # Exit Plan v6.0 - Hold through TP1, let winners run to TP5
 TP1_PERCENT = 50           # +50% → Sell 10%, trail 40%
-TP1_TRAILING_PCT = 40
+TP1_TRAILING_PCT = 35
 TP1_SELL_PCT = 0           # Sell 10% at TP1
 TP2_PERCENT = 100          # +100% → Sell 36%, trail 30%
 TP2_TRAILING_PCT = 30
@@ -35,7 +35,7 @@ TP4_PERCENT = 300          # +300% → Sell 18%, trail 30%
 TP4_TRAILING_PCT = 30
 TP4_SELL_PCT = 18
 TP5_PERCENT = 1000         # +1000% → Sell 8%, trail 15%
-TP5_TRAILING_PCT = 15
+TP5_TRAILING_PCT = 30
 TP5_SELL_PCT = 8
 TRAILING_STOP_PCT = 40      # 40% from peak on remaining after TP1
 STOP_LOSS_PERCENT = -25     # -25% stop (NON-NEGOTIABLE)
