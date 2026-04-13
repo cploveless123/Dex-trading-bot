@@ -86,6 +86,9 @@ LIQUIDITY_MIN = 1000
 # Low Volume Exit
 LOW_VOLUME_THRESHOLD = 600   # 5min vol <$600 AND mcap >$60K → exit
 
+# Ticker blacklist
+TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
+
 # Exchange validation
 ALLOWED_EXCHANGES = {'pump', 'raydium', 'pumpswap'}
 REJECTED_EXCHANGES = {'meteora', 'orinoco', 'lifinity', 'saber'}

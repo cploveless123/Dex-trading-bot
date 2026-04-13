@@ -219,8 +219,8 @@ def scan_gmgn_token(token_data, whales):
         return None, f"Mcap ${mcap:,.0f} > ${MAX_MCAP:,} (too high)"
     
     # 3. Age limit
-    if age > MAX_AGE_MINUTES:
-        return None, f"Age {age:.1f}min > {MAX_AGE_MINUTES}min"
+    if age > int(MAX_AGE_SECONDS / 60):
+        return None, f"Age {age:.1f}min > {int(MAX_AGE_SECONDS / 60)}min"
     
     # 4. Holders
     if holders < MIN_HOLDERS:
@@ -463,7 +463,7 @@ def buy_token(addr, result):
 
 def main():
     print("🚀 GMGN Scanner v1.0 - Wilson Bot")
-    print(f"   Mcap: ${MIN_MCAP:,}-${MAX_MCAP:,} | Dip: {DIP_MIN}-{DIP_MAX}% | Age <{MAX_AGE_MINUTES}min (<10min: h1>+30%)")
+    print(f"   Mcap: ${MIN_MCAP:,}-${MAX_MCAP:,} | Dip: {DIP_MIN}-{DIP_MAX}% | Age <{int(MAX_AGE_SECONDS / 60)}min (<10min: h1>+30%)")
     
     init_sold_tokens()
     print(f"   Blacklist: {len(_sold_tokens)} tokens")
