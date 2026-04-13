@@ -22,19 +22,19 @@ BS_RATIO_OLD = 0.8        # BS ratio for pairs > 10 min old
 BS_PUMP_FUN_OK = True      # pump.fun BS=0 is OK
 
 # Exit Plan v6.0 - Hold through TP1, let winners run to TP5
-TP1_PERCENT = 50           # +35% → HOLD 100%, trail 40%
+TP1_PERCENT = 50           # +50% → Sell 10%, trail 40%
 TP1_TRAILING_PCT = 40
-TP1_SELL_PCT = 10           # NO SELL at TP1 - let it ride
-TP2_PERCENT = 100          # +100% → sell 40%, trail 30%
+TP1_SELL_PCT = 10           # Sell 10% at TP1
+TP2_PERCENT = 100          # +100% → Sell 36%, trail 30%
 TP2_TRAILING_PCT = 30
 TP2_SELL_PCT = 36
-TP3_PERCENT = 200          # +200% → sell 30%, trail 30%
+TP3_PERCENT = 200          # +200% → Sell 28%, trail 30%
 TP3_TRAILING_PCT = 30
 TP3_SELL_PCT = 28
-TP4_PERCENT = 300          # +300% → sell 20%, trail 30%
+TP4_PERCENT = 300          # +300% → Sell 18%, trail 30%
 TP4_TRAILING_PCT = 30
 TP4_SELL_PCT = 18
-TP5_PERCENT = 1000         # +1000% → sell 10%, trail 15%
+TP5_PERCENT = 1000         # +1000% → Sell 8%, trail 15%
 TP5_TRAILING_PCT = 15
 TP5_SELL_PCT = 8
 TRAILING_STOP_PCT = 40      # 40% from peak on remaining after TP1
