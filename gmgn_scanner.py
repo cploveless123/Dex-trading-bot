@@ -260,9 +260,15 @@ def scan_gmgn_token(token_data, whales):
     
     # 8. Dip filter (15-45%)
     if dip < DIP_MIN:
-        # PARABOLIC EXCEPTION: h1 > +100% AND age < 15 min AND chg1 > 0 → allow dip as low as 5%
-        if h1 >= 100 and age < 15 and chg1 > 0:
-            dip = PARABOLIC_DIP_EXCEPTION  # Treat as 5% dip
+        # PARABOLIC EXCEPTION: h1 >+100% AND chg5 >+25% AND age <15 AND chg1 >0
+        # → monitor 30s more, if chg1 >+1% then allow (skip to cooldown check)
+        if h1 > 100 and m5 > 25 and age < 15 and chg1 is not None and chg1 > 0:
+            # This is a parabolic candidate - mark for extra 30s cooldown monitoring
+            # Will be handled in cooldown recheck - need chg1 > +1% to buy
+            result['_parabolic_candidate'] = True
+            result['_parabolic_chg1_target'] = 1.0  # chg1 must be > +1%
+            # Allow this dip for now - cooldown logic will handle final check
+            pass
         else:
             return None, f"Dip {dip:.1f}% < {DIP_MIN}%"
     if dip > DIP_MAX:
@@ -373,6 +379,10 @@ def check_cooldown(whales):
         # Update current mcap and price
         result2['current_mcap'] = result2.get('mcap', 0)
         
+        # Preserve parabolic candidate flag
+        if result.get('_parabolic_candidate'):
+            result2['_parabolic_candidate'] = True
+        
         if elapsed >= data['cooldown_secs']:
             # Cooldown passed - now in recheck phase
             # Get fresh chg1 from DexScreener
@@ -388,8 +398,33 @@ def check_cooldown(whales):
             except:
                 pass
             
+            # Check if this is a parabolic candidate
+            is_parabolic = data.get('parabolic_candidate', False)
+            
             # Initialize previous chg1 for improvement tracking
             prev_chg1 = data.get('prev_chg1')
+            
+            # For parabolic candidates: just check if chg1 > +1%
+            if is_parabolic:
+                if chg1 is not None and chg1 > 1:
+                    # Parabolic candidate confirmed - BUY
+                    should_buy_flag, buy_reason = should_buy(result2, whales)
+                    if should_buy_flag:
+                        trade = buy_token(addr, result2)
+                        if trade:
+                            print(f"   🟢 BUY (parabolic confirmed, chg1={chg1:+.1f}%): {result2['token']} @ ${result2['mcap']:,.0f}")
+                            to_remove.append(addr)
+                        else:
+                            to_remove.append(addr)
+                    else:
+                        to_remove.append(addr)
+                else:
+                    # chg1 not > +1% yet - wait 15s more
+                    data['cooldown_secs'] += 15
+                    data['first_seen'] = time.time()
+                    chg1_str = f"{chg1:+.1f}%" if chg1 is not None else "None"
+                    print(f"   ⏳ {result['token']}: parabolic candidate chg1={chg1_str}% (need >+1%), waiting 15s")
+                    continue
             
             # If chg1 is None or negative, wait and recheck
             if chg1 is None or chg1 < 0:
@@ -602,9 +637,11 @@ def main():
                                     'first_seen': time.time(),
                                     'result': result,
                                     'token_data': token_data,
-                                    'cooldown_secs': cooldown_secs
+                                    'cooldown_secs': cooldown_secs,
+                                    'parabolic_candidate': result.get('_parabolic_candidate', False)
                                 }
-                                print(f"   ⏳ {result['token']}: Added to cooldown for {cooldown_secs}s (chg5={result['m5']:+.1f}%, age={result['age']:.1f}min)")
+                                parabolic_msg = " [PARABOLIC]" if result.get('_parabolic_candidate') else ""
+                                print(f"   ⏳ {result['token']}: Added to cooldown for {cooldown_secs}s (chg5={result['m5']:+.1f}%, age={result['age']:.1f}min){parabolic_msg}")
                             # else already in cooldown
                         else:
                             # No cooldown needed - buy immediately
