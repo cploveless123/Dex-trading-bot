@@ -17,7 +17,7 @@ from trading_constants import (
     MIN_MCAP, MAX_MCAP, MIN_HOLDERS, TOP10_HOLDER_MAX as MAX_TOP10,
     DIP_MIN, DIP_MAX, MIN_5MIN_VOLUME as MIN_VOLUME_5M,
     MIN_AGE_SECONDS, MAX_AGE_SECONDS, MAX_OPEN_POSITIONS, POSITION_SIZE,
-    STOP_LOSS_PERCENT as STOP_LOSS, MIN_BS_RATIO, TP1_PERCENT,
+    STOP_LOSS_PERCENT as STOP_LOSS, BS_RATIO_NEW, BS_RATIO_OLD, TP1_PERCENT,
     ALLOWED_EXCHANGES, REJECTED_EXCHANGES, LIQUIDITY_MCAP_THRESHOLD,
     LIQUIDITY_MIN, PARABOLIC_DIP_EXCEPTION, H1_PARABOLIC_REJECT,
     ANTI_MOMENTUM_5M_THRESHOLD, ANTI_MOMENTUM_CHG1_THRESHOLD, FALLING_KNIFE_CONSECUTIVE,
@@ -181,7 +181,12 @@ def scan_gmgn_token(token_data, whales):
     if age > MAX_AGE_SECONDS / 60:
         return None, f"Age {age:.1f}min > 180min (too old)"
     
-    # Calculate BS ratio
+    # Calculate BS ratio - different thresholds by age
+    if age < 5:
+        bs_min = BS_RATIO_NEW  # 0.25 for very young pairs
+    else:
+        bs_min = BS_RATIO_OLD  # 1.0 for older pairs
+    
     bs = (buys / sells) if sells > 0 else (1.0 if buys > sells else 0.5)
     
     # Calculate estimated dip

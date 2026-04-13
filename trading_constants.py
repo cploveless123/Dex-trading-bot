@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Trading Constants - Wilson v6.0 Strategy
+Trading Constants - Wilson v6.0 Strategy (UPDATED)
 Goal: Turn 1.0 SOL → 100 SOL via compound TP5 winners on pump.fun
 """
 
@@ -10,15 +10,15 @@ KOL_BUY_POSITION_SIZE = 0.10
 MAX_OPEN_POSITIONS = 9     # Max concurrent positions
 
 # Entry Filters
-MIN_MCAP = 6000            # $6K floor (v6.0)
-MAX_MCAP = 85000           # $85K ceiling (v6.0)
-MIN_AGE_SECONDS = 180      # 3 minutes minimum (v6.0)
-MAX_AGE_SECONDS = 10800    # 180 minutes maximum (v6.0)
-MIN_VOLUME = 5000          # 24h volume (kept for compatibility)
-MIN_5MIN_VOLUME = 1000     # 5min volume > $1K
+MIN_MCAP = 6000            # $6K floor
+MAX_MCAP = 85000           # $85K ceiling
+MIN_AGE_SECONDS = 180      # 3 minutes minimum
+MAX_AGE_SECONDS = 10800    # 180 minutes maximum
+MIN_5MIN_VOLUME = 1000    # 5min volume > $1K
 MIN_HOLDERS = 15           # Holders ≥ 15
-TOP10_HOLDER_MAX = 40      # Top10% < 40% (v6.0, was 50%)
-MIN_BS_RATIO = 1.5         # BS ratio for raydium
+TOP10_HOLDER_MAX = 50      # Top10% < 50%
+BS_RATIO_NEW = 0.25        # BS ratio for pairs < 5 min old
+BS_RATIO_OLD = 1.0        # BS ratio for pairs > 5 min old
 BS_PUMP_FUN_OK = True      # pump.fun BS=0 is OK
 
 # Exit Plan v6.0 - Hold through TP1, let winners run to TP5
@@ -38,7 +38,7 @@ TP5_PERCENT = 1000         # +1000% → sell remaining 15%
 TP5_TRAILING_PCT = 15
 TP5_SELL_PCT = 100
 TRAILING_STOP_PCT = 25      # 25% from peak on remaining after TP1
-STOP_LOSS_PERCENT = -20     # -20% stop
+STOP_LOSS_PERCENT = -25     # -25% stop (NON-NEGOTIABLE)
 
 # Slippage & Tax Correction
 SLIPPAGE_TAX_COST = 0.025   # ~2.5% per round trip
@@ -57,8 +57,8 @@ EXIT_PLAN_TEXT = f"""🎯 Exit Plan v6.0:
 ⚠️ Stop: {STOP_LOSS_PERCENT}%"""
 
 # Dip / Pullback Detection
-DIP_MIN = 15
-DIP_MAX = 45              # v6.0: 45% (was 40%)
+DIP_MIN = 10              # v6.0: 10% minimum
+DIP_MAX = 45              # v6.0: 45% maximum (from local peak)
 PARABOLIC_DIP_EXCEPTION = 5  # h1 >+100% AND age <15min → allow dip as low as 5%
 PEAK_WINDOW_SECONDS = 60
 PEAK_WINDOW_NEW = 90       # Peak window for new pairs (<15 min)
@@ -72,13 +72,15 @@ OLD_PUMP_5M_THRESHOLD = 1   # chg5 >+1% triggers cooldown for older coins
 MAX_RECHECKS = 15          # Max 15 rechecks (3 min) before skip
 RECHECK_DELAY = 15          # 15s between rechecks
 
-# Anti-momentum: chg5 >+15% AND chg1 <0% → REJECT
-ANTI_MOMENTUM_5M_THRESHOLD = 25  # chg5 >+25%
-ANTI_MOMENTUM_CHG1_THRESHOLD = -3  # AND chg1 < -3%
-FALLING_KNIFE_CONSECUTIVE = 3    # 3 consecutive price drops → reject
+# Anti-momentum: chg5 >+15% AND chg1 <-3% → REJECT
+ANTI_MOMENTUM_5M_THRESHOLD = 15  # chg5 >+15%
+ANTI_MOMENTUM_CHG1_THRESHOLD = -3  # AND chg1 <-3%
 
 # Parabolic rejection
 H1_PARABOLIC_REJECT = 500  # h1 >+500% → reject (too parabolic)
+
+# Falling knife detection
+FALLING_KNIFE_CONSECUTIVE = 3  # 3 consecutive drops + chg1<0 → reject
 
 # Liquidity rule
 LIQUIDITY_MCAP_THRESHOLD = 60000  # mcap >$60K requires >$1K liq
@@ -87,15 +89,15 @@ LIQUIDITY_MIN = 1000
 # Low Volume Exit
 LOW_VOLUME_THRESHOLD = 600   # 5min vol <$600 AND mcap >$60K → exit
 
-# Ticker blacklist
-TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
-
 # Exchange validation
 ALLOWED_EXCHANGES = {'pump', 'raydium', 'pumpswap'}
 REJECTED_EXCHANGES = {'meteora', 'orinoco', 'lifinity', 'saber'}
 
+# Ticker blacklist
+TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
+
 # Simulation - RESET TO 1.0 SOL
-SIM_RESET_TIMESTAMP = '2026-04-13T03:56:28.943101.000000'  # Fresh start v6.0
+SIM_RESET_TIMESTAMP = '2026-04-13T04:05:00.000000'  # Fresh start v6.0
 CHRIS_STARTING_BALANCE = 1.0
 
 # Scan intervals
