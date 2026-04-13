@@ -10,7 +10,7 @@ KOL_BUY_POSITION_SIZE = 0.10
 MAX_OPEN_POSITIONS = 9     # Max concurrent positions
 
 # Entry Filters
-MIN_MCAP = 6000            # $6K floor
+MIN_MCAP = 5000            # $6K floor
 MAX_MCAP = 85000           # $85K ceiling
 MIN_AGE_SECONDS = 180      # 7 minutes minimum
 MAX_AGE_SECONDS = 10800    # 180 minutes maximum
@@ -35,7 +35,7 @@ TP4_PERCENT = 300          # +300% → Sell 20%, trail 30%
 TP4_TRAILING_PCT = 30
 TP4_SELL_PCT = 20
 TP5_PERCENT = 1000         # +1000% → Sell 8%, trail 15%
-TP5_TRAILING_PCT = 20
+TP5_TRAILING_PCT = 30
 TP5_SELL_PCT = 10
 TRAILING_STOP_PCT = 40      # 40% from peak on remaining after TP1
 STOP_LOSS_PERCENT = -25     # -25% stop (NON-NEGOTIABLE)
@@ -48,7 +48,7 @@ REAL_TP1_PCT = round(TP1_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_TP2_PCT = round(TP2_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_STOP_PCT = round(STOP_LOSS_PERCENT * (1 + SLIPPAGE_TAX_COST), 1)
 
-EXIT_PLAN_TEXT = f"""🎯 Exit Plan v8.1 (Progressive):
+EXIT_PLAN_TEXT = f"""🎯 Exit Plan v6.1 (Wilson Strategy):
 +{TP1_PERCENT}% → HOLD, trail {TP1_TRAILING_PCT}%
 +{TP2_PERCENT}% → Sell {TP2_SELL_PCT}%, trail {TP2_TRAILING_PCT}%
 +{TP3_PERCENT}% → Sell {TP3_SELL_PCT}%, trail {TP3_TRAILING_PCT}%
@@ -101,7 +101,7 @@ REJECTED_EXCHANGES = {'meteora', 'orinoco', 'lifinity', 'saber'}
 TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
 
 # Simulation - RESET TO 1.0 SOL
-SIM_RESET_TIMESTAMP = '2026-04-13T23:29:21.091171+00:00'  # Fresh start v6.0
+SIM_RESET_TIMESTAMP = '2026-04-13T23:41:27.858251+00:00'  # Fresh start v6.0
 CHRIS_STARTING_BALANCE = 1.0
 
 # Scan intervals

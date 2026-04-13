@@ -175,6 +175,10 @@ def scan_gmgn_token(token_data, whales):
     if m5 > 100 and holders < 20:
         return None, f"chg5 {m5:+.1f}% > +100% with only {holders} holders (low organic interest)"
     
+    # EXTREME PUMP: chg1 > +50% → REJECT (too parabolic, likely to reverse)
+    if chg1 is not None and chg1 > 50:
+        return None, f"chg1 {chg1:+.1f}% > +50% (extreme pump)"
+    
     # REJECT if GMGN has no history (all fields are 0/None) — too risky, no data
     if mcap == 0 and h1 == 0 and m5 == 0:
         return None, "No GMGN history (mcap=0, h1=0, m5=0) - too risky"
@@ -275,6 +279,13 @@ def scan_gmgn_token(token_data, whales):
             return None, f"Dip {dip:.1f}% < {DIP_MIN}%"
     if dip > DIP_MAX:
         return None, f"Dip {dip:.1f}% > {DIP_MAX}%"
+    
+    # 8b. ATH distance check - must be > 30% below ATH
+    ath_mc = float(token_data.get('history_highest_market_cap', 0) or 0)
+    if ath_mc > 0 and mcap < ath_mc:
+        ath_distance = ((ath_mc - mcap) / ath_mc) * 100
+        if ath_distance < 30:
+            return None, f"ATH distance {ath_distance:.1f}% (need >30% below ATH)"
     
     # 9. Volume filter (for older tokens)
     if age >= 20 and volume < MIN_VOLUME_5M:
