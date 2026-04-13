@@ -674,7 +674,7 @@ def main():
                     pump = " [PUMP]" if result.get('is_pump') else ""
                     dip_val = result.get('dip') or 0
                     
-                    print(f"✅ {result['token']}{pump}{bond} | Mcap ${result['mcap']:,.0f} | Age {result['age']:.1f}min | Dip {dip_val:.1f}% | h1 {result['h1']:+.1f}% | 5m {result['m5']:+.1f}%")
+                    print(f"✅ {result['token']}{pump}{bond} [{addr[:8]}...] | Mcap ${result['mcap']:,.0f} | Age {result['age']:.1f}min | Dip {dip_val:.1f}% | h1 {result['h1']:+.1f}% | 5m {result['m5']:+.1f}%")
                     
                     if should_buy_flag:
                         # COOLDOWN LOGIC: Add to watch list instead of buying immediately
@@ -725,7 +725,7 @@ def main():
                                 }
                                 peak_msg = " [PEAK TRACK]" if _needs_peak_tracking else ""
                                 parabolic_msg = " [PARABOLIC]" if result.get('_parabolic_candidate') else ""
-                                print(f"   ⏳ {result['token']}: Added to cooldown for {cooldown_secs}s (chg5={result['m5']:+.1f}%, age={result['age']:.1f}min){peak_msg}{parabolic_msg}")
+                                print(f"   ⏳ {result['token']} [{addr[:8]}...]: Added to cooldown for {cooldown_secs}s (chg5={result['m5']:+.1f}%, age={result['age']:.1f}min){peak_msg}{parabolic_msg}")
                             # else already in cooldown
                         else:
                             # No cooldown needed - buy immediately
