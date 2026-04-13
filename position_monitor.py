@@ -396,7 +396,18 @@ def check_positions():
         if tp1_sold and not trailing_stopped:
             if peak > entry:
                 drawdown_pct = ((peak - mcap) / peak) * 100
-                if drawdown_pct >= TRAILING_STOP_PCT:
+                
+                # Determine which trailing % to use based on highest TP hit
+                if tp4_sold:
+                    trail_pct = TP4_TRAILING_PCT
+                elif tp3_sold:
+                    trail_pct = TP3_TRAILING_PCT
+                elif tp2_sold:
+                    trail_pct = TP2_TRAILING_PCT
+                else:
+                    trail_pct = TP1_TRAILING_PCT
+                
+                if drawdown_pct >= trail_pct:
                     t['trailing_stopped'] = True
                     t['fully_exited'] = True
                     t['status'] = 'closed'
@@ -427,7 +438,7 @@ def check_positions():
 🔗 https://dexscreener.com/solana/{ca}
 🥧 https://pump.fun/{ca}
 
-📋 Trailing {TRAILING_STOP_PCT}% drop from peak ${int(peak):,}"""
+📋 Trailing {trail_pct}% drop from peak ${int(peak):,}"""
                     send_alert(msg, "TRAILING_STOP")
                     print(f"✅ {sym} TRAILING STOP @ ${mcap:,.0f} ({drawdown_pct:.0f}% drop from peak)")
                     continue
