@@ -1,8 +1,4 @@
-Position Monitor v3 starting...
-Exit Plan: TP1 +35% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 15% | Stop -20%
-Peak cache: /root/Dex-trading-bot/position_peak_cache.json
-Checking every 5s
-[STARTUP] Alert sent
-  Slop: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
-  Slop: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
-  Slop: mcap=$49,595 | gain=-16.7% | peak=$60,012 | dd=+0%
+Traceback (most recent call last):
+  File "/root/Dex-trading-bot/position_monitor.py", line 13, in <module>
+    import requests, json
+ModuleNotFoundError: No module named 'requests'
