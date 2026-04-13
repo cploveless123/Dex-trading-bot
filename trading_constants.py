@@ -17,8 +17,8 @@ MAX_AGE_SECONDS = 10800    # 180 minutes maximum
 MIN_5MIN_VOLUME = 1000    # 5min volume > $1K
 MIN_HOLDERS = 15           # Holders ≥ 15
 TOP10_HOLDER_MAX = 50      # Top10% < 50%
-BS_RATIO_NEW = 0.25        # BS ratio for pairs < 5 min old
-BS_RATIO_OLD = 1.0        # BS ratio for pairs > 5 min old
+BS_RATIO_NEW = 0.1        # BS ratio for pairs < 10 min old
+BS_RATIO_OLD = 0.8        # BS ratio for pairs > 10 min old
 BS_PUMP_FUN_OK = True      # pump.fun BS=0 is OK
 
 # Exit Plan v6.0 - Hold through TP1, let winners run to TP5

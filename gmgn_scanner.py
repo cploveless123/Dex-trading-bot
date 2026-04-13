@@ -182,10 +182,10 @@ def scan_gmgn_token(token_data, whales):
         return None, f"Age {age:.1f}min > 180min (too old)"
     
     # Calculate BS ratio - different thresholds by age
-    if age < 5:
-        bs_min = BS_RATIO_NEW  # 0.25 for very young pairs
+    if age < 10:
+        bs_min = BS_RATIO_NEW  # 0.1 for very young pairs
     else:
-        bs_min = BS_RATIO_OLD  # 1.0 for older pairs
+        bs_min = BS_RATIO_OLD  # 0.8 for older pairs
     
     bs = (buys / sells) if sells > 0 else (1.0 if buys > sells else 0.5)
     
