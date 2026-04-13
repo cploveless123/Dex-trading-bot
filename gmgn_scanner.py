@@ -512,8 +512,9 @@ def main():
                     
                     bond = " [BURNED]" if result.get('lp_burnt') else ""
                     pump = " [PUMP]" if result.get('is_pump') else ""
+                    dip_val = result.get('dip') or 0
                     
-                    print(f"✅ {result['token']}{pump}{bond} | Mcap ${result['mcap']:,.0f} | Age {result['age']:.1f}min | Dip {result['dip']:.1f}% | h1 {result['h1']:+.1f}% | 5m {result['m5']:+.1f}%")
+                    print(f"✅ {result['token']}{pump}{bond} | Mcap ${result['mcap']:,.0f} | Age {result['age']:.1f}min | Dip {dip_val:.1f}% | h1 {result['h1']:+.1f}% | 5m {result['m5']:+.1f}%")
                     
                     if should_buy_flag:
                         # COOLDOWN LOGIC: Add to watch list instead of buying immediately
