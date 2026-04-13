@@ -468,8 +468,17 @@ def check_cooldown(whales):
                             data['first_seen'] = time.time()
                             print(f"   ⏳ {result['token']}: dip {dip_from_peak:.1f}% (need >15%) chg1 {chg1:+.1f}% (need >+3%) - waiting 15s more")
                             continue
-                    # Parabolic candidate confirmed - BUY
-                    should_buy_flag, buy_reason = should_buy(result2, whales)
+                    # OPTION 1: Check MIN_CHG1 - chg1 must be > +3% to buy
+                    if chg1 is not None and chg1 >= MIN_CHG1_FOR_BUY:
+                        # Parabolic candidate confirmed - BUY
+                        should_buy_flag, buy_reason = should_buy(result2, whales)
+                    else:
+                        # chg1 not strong enough - continue watching
+                        print(f"   ⏳ {result['token']}: parabolic chg1={chg1:+.1f}% (need >={MIN_CHG1_FOR_BUY}%) - waiting 15s more")
+                        data['cooldown_secs'] += 15
+                        data['first_seen'] = time.time()
+                        to_remove.append(addr)
+                        continue
                     if should_buy_flag:
                         trade = buy_token(addr, result2)
                         if trade:
@@ -498,6 +507,12 @@ def check_cooldown(whales):
             
             # chg1 >= 0 - check if improved by 2% from previous
             if prev_chg1 is not None and chg1 is not None:
+                # OPTION 2: Chg1 deterioration check - if chg1 dropped >50% from previous, reject
+                if prev_chg1 > 0 and chg1 < prev_chg1 * 0.5:
+                    print(f"   ❌ {result['token']}: chg1 dropped {prev_chg1:.1f}% → {chg1:.1f}% (>{CHG1_DROP_THRESHOLD}% drop) - rejecting")
+                    to_remove.append(addr)
+                    continue
+                
                 improvement = chg1 - prev_chg1
                 if improvement >= 2:
                     # Improvement detected - do final confirmation check
@@ -516,7 +531,8 @@ def check_cooldown(whales):
                     except:
                         pass
                     
-                    if final_chg1 is not None and final_chg1 > 0:
+                    # OPTION 1: Check MIN_CHG1 - chg1 must be > +3% to buy
+                    if final_chg1 is not None and final_chg1 >= MIN_CHG1_FOR_BUY:
                         # Final confirmation passed - BUY
                         should_buy_flag, buy_reason = should_buy(result2, whales)
                         if should_buy_flag:

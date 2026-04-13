@@ -76,6 +76,10 @@ RECHECK_DELAY = 15          # 15s between rechecks
 ANTI_MOMENTUM_5M_THRESHOLD = 15  # chg5 >+15%
 ANTI_MOMENTUM_CHG1_THRESHOLD = -3  # AND chg1 <-3%
 
+# Chg1 momentum check
+MIN_CHG1_FOR_BUY = 3.0  # chg1 must be > +3% to confirm momentum
+CHG1_DROP_THRESHOLD = 50  # if chg1 drops by >50% from previous, reject (deterioration)
+
 # Parabolic rejection
 H1_PARABOLIC_REJECT = 500  # h1 >+500% → reject (too parabolic)
 
