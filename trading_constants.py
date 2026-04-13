@@ -48,8 +48,8 @@ REAL_TP1_PCT = round(TP1_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_TP2_PCT = round(TP2_PERCENT * (1 - SLIPPAGE_TAX_COST), 1)
 REAL_STOP_PCT = round(STOP_LOSS_PERCENT * (1 + SLIPPAGE_TAX_COST), 1)
 
-EXIT_PLAN_TEXT = f"""🎯 Exit Plan v6.0 (Progressive):
-+{TP1_PERCENT}% → HOLD (sell 0%), trail {TP1_TRAILING_PCT}%
+EXIT_PLAN_TEXT = f"""🎯 Exit Plan v7.0 (Progressive):
++{TP1_PERCENT}% → Sell {TP1_SELL_PCT}%, trail {TP1_TRAILING_PCT}%
 +{TP2_PERCENT}% → Sell {TP2_SELL_PCT}%, trail {TP2_TRAILING_PCT}%
 +{TP3_PERCENT}% → Sell {TP3_SELL_PCT}%, trail {TP3_TRAILING_PCT}%
 +{TP4_PERCENT}% → Sell {TP4_SELL_PCT}%, trail {TP4_TRAILING_PCT}%
