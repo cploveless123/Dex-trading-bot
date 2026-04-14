@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
-Position Monitor v3 - Auto-execute TP/stop for open positions
+Position Monitor v6.3 - Auto-execute TP/stop for open positions
 Live peak tracking via persistent cache file
 
-EXIT STRATEGY (Chris's):
-- TP1: +50% minimum → then 10% trailing from peak → sell 50%
-- TP2: +200% → sell 25%
-- TP3: +500% → sell 25%
-- Trailing: 20% from peak on remaining
+EXIT STRATEGY (v6.3 Wilson):
+- TP1: +50% → HOLD (no sell), 40% trailing stop activates
+- TP2: +100% → Sell 40%, trail 35%
+- TP3: +200% → Sell 30%, trail 35%
+- TP4: +300% → Sell 20%, trail 35%
+- TP5: +1000% → Sell remaining 10%, trail 30%
 - Stop: -20%
 """
 import requests, json
