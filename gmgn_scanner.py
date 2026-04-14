@@ -538,7 +538,7 @@ def check_cooldown(whales):
                     continue
                 
                 improvement = chg1 - prev_chg1
-                if improvement >= 2:
+                if improvement >= 3:
                     # Increment recheck count
                     data['recheck_count'] = data.get('recheck_count', 0) + 1
                     
@@ -727,24 +727,22 @@ def main():
                             except:
                                 pass
                         
-                        # Calculate cooldown based on chg5 and age
+                        # Calculate cooldown based on chg5 and age (v6.2)
                         cooldown_secs = 0
                         
-                        # NEW RULE: If m5 > +100%, track peak and require dip > 15% + chg1 > +3%
+                        # v6.2 cooldown rules:
+                        # Young (<15 min) + chg5 >+100% → Wait 30s (too parabolic)
+                        # Older (>15 min) + chg5 >+3% → Wait 30s (watch for pullback)
+                        # Otherwise → Buy immediately
                         _needs_peak_tracking = False
-                        if result['m5'] > 100:
+                        if age < 15 and result['m5'] > 100:
+                            cooldown_secs = 30  # Young + parabolic
                             _needs_peak_tracking = True
-                            cooldown_secs = 150  # Wait 150s first
-                        elif age < 15 and result['m5'] > 50:
-                            cooldown_secs = 120  # Young + parabolic
-                        elif age >= 15 and result['m5'] > 1:
-                            cooldown_secs = 120  # Older + positive chg5
+                        elif age >= 15 and result['m5'] > 3:
+                            cooldown_secs = 30  # Older + positive chg5
+                            _needs_peak_tracking = True
                         else:
-                            cooldown_secs = 0
-                        
-                        # If chg1 (1min change) is negative, add 60s extra cooldown
-                        if result.get('chg1', 0) < 0:
-                            cooldown_secs += 60
+                            cooldown_secs = 0  # Buy immediately
                         
                         if cooldown_secs > 0:
                             if addr not in COOLDOWN_WATCH:
