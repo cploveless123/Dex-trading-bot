@@ -27,9 +27,9 @@ MIN_BS_RATIO = 1.5        # GMGN buyer filter: BS ratio ≥ 1.5
 BS_PUMP_FUN_OK = True      # pump.fun BS=0 is OK
 
 # === MOMENTUM (v6.4) ===
-# REQUIRED: h1 > +30% OR 24h > +30%
-H1_MOMENTUM_MIN = 30      # h1 must be > +30%
-H24_MOMENTUM_MIN = 30     # OR 24h must be > +30%
+# REQUIRED: h1 > +15% OR 24h > +15%
+H1_MOMENTUM_MIN = 15      # h1 must be > +15% (winners avg 13% — catch early momentum)
+H24_MOMENTUM_MIN = 15     # OR 24h must be > +15%
 
 # === CHG1 RULES (v6.4) ===
 MIN_CHG1_FOR_BUY = 2.0    # chg1 must be > +2% to buy
@@ -38,8 +38,8 @@ CHG1_NONE_M5_REJECT = 15  # chg1=None AND m5 > +15% → REJECT immediately
 CHG1_COOLDOWN_TRIGGER = 5 # chg1 must reach >+5% during cooldown to proceed
 
 # === DIP/PULLBACK (v6.4) ===
-DIP_MIN = 5               # 5% minimum dip from local peak
-DIP_MAX = 45              # 45% maximum dip from local peak
+DIP_MIN = 0               # 0% minimum dip (winners avg 1.3% — small dip is fine)
+DIP_MAX = 30              # 30% max dip (winners avg 1.3%, losers avg 8.5%)
 ATH_DIVERGENCE_MIN = 5    # Must be >5% below ATH
 
 # === COOLDOWN RULES (v6.4) ===
