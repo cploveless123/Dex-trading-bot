@@ -66,6 +66,8 @@ PERM_BLACKLIST = set()
 # GMGN throttle tracking
 _gmgn_throttle_count = 0
 _gmgn_last_throttle_alert = 0
+_gmgn_empty_cycle_count = 0
+_gmgn_last_alert_empty = 0
 
 def gmgn_throttle_alert():
     """Send alert if GMGN is throttled"""
@@ -192,9 +194,12 @@ def get_gmgn_token_info(addr):
             capture_output=True, text=True, timeout=15
         )
         if r.returncode == 0:
+            gmgn_success()
             return json.loads(r.stdout)
-    except:
-        pass
+        elif 'rate limit' in r.stderr.lower() or '429' in r.stderr:
+            gmgn_throttle_alert()
+    except Exception as e:
+        gmgn_throttle_alert()
     return None
 
 def get_dexscreener_data(addr):
@@ -808,11 +813,28 @@ def buy_token(addr, result):
 
 def scan_cycle():
     """One scan cycle"""
+    global _gmgn_empty_cycle_count, _gmgn_last_alert_empty
+    
     load_blacklist()
     
     tokens = get_gmgn_trending(50)
     tokens.extend(get_gmgn_new_pairs(30))
     print(f"[SCAN] Found {len(tokens)} tokens from GMGN")
+    
+    # Track empty responses
+    if len(tokens) == 0:
+        _gmgn_empty_cycle_count += 1
+        now = time.time()
+        if _gmgn_empty_cycle_count >= 5 and (now - _gmgn_last_alert_empty) > 300:
+            print(f"🚨 GMGN returning empty data for {_gmgn_empty_cycle_count} consecutive cycles")
+            try:
+                from alert_sender import send_telegram_alert
+                send_telegram_alert(f"🚨 GMGN returning empty data for {_gmgn_empty_cycle_count} cycles. Check scanner.", "SYSTEM_ALERT")
+            except:
+                pass
+            _gmgn_last_alert_empty = now
+    else:
+        _gmgn_empty_cycle_count = 0
     
     # Deduplicate by address
     seen = set()
