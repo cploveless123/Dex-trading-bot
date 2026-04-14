@@ -23,7 +23,7 @@ from trading_constants import (
     H1_MOMENTUM_MIN, H24_MOMENTUM_MIN,
     MIN_CHG1_FOR_BUY, CHG1_DROP_THRESHOLD, CHG1_NONE_M5_REJECT,
     CHG1_COOLDOWN_TRIGGER,
-    DIP_MIN, DIP_MAX, ATH_DIVERGENCE_MIN,
+    DIP_MIN, DIP_MAX,
     YOUNG_PUMP_5M_THRESHOLD, OLD_PUMP_5M_THRESHOLD,
     YOUNG_COOLDOWN, OLD_COOLDOWN,
     CHG1_COOLDOWN_EXTRA, CHG1_COOLDOWN_VERIFY, MAX_RECHECKS, RECHECK_DELAY,
@@ -49,6 +49,7 @@ TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
 WHALE_DB = Path("/root/Dex-trading-bot/wallet_analysis/whale_wallets.jsonl")
 SIGNALS_DIR = Path("/root/Dex-trading-bot/signals")
 PEAK_CACHE = Path("/root/Dex-trading-bot/position_peak_cache.json")
+PERM_BLACKLIST_FILE = Path("/root/Dex-trading-bot/permanent_blacklist.json")
 
 # Cooldown watch: {addr: {"first_seen": ts, "token_data": {}, "result": {}, "cooldown_end": ts, "recheck_count": int, "prev_chg1": float, "peak_mcap": float, "entry_price": float}}
 COOLDOWN_WATCH = {}
@@ -68,6 +69,16 @@ def load_blacklist():
     """Load all ever-bought tokens into permanent blacklist"""
     global PERM_BLACKLIST
     PERM_BLACKLIST = set()
+    
+    # Load from permanent blacklist file (persists across resets)
+    if PERM_BLACKLIST_FILE.exists():
+        try:
+            with open(PERM_BLACKLIST_FILE) as f:
+                PERM_BLACKLIST = set(json.load(f))
+        except:
+            PERM_BLACKLIST = set()
+    
+    # Also load from trades file (any buys in current sim_trades)
     if TRADES_FILE.exists():
         with open(TRADES_FILE) as f:
             for line in f:
@@ -317,12 +328,6 @@ def scan_token(token_data, dex_data, whales):
         return None, f"dip {dip:.1f}% < {DIP_MIN}% (not enough pullback)"
     if dip > DIP_MAX:
         return None, f"dip {dip:.1f}% > {DIP_MAX}% (too deep)"
-    
-    # === ATH DISTANCE CHECK: must be >15% below ATH ===
-    if ath_mcap > 0:
-        ath_distance = ((ath_mcap - mcap) / ath_mcap) * 100
-        if ath_distance < ATH_DIVERGENCE_MIN:
-            return None, f"ATH dist {ath_distance:.1f}% < {ATH_DIVERGENCE_MIN}% (too close to ATH)"
     
     # === BS RATIO ===
     bs_min = BS_RATIO_OLD if age_min >= 15 else BS_RATIO_NEW
@@ -621,8 +626,10 @@ def buy_token(addr, result):
     try:
         with open(TRADES_FILE, 'a') as f:
             f.write(json.dumps(trade) + '\n')
-        # Add to blacklist immediately
+        # Add to permanent blacklist immediately (persists across resets)
         PERM_BLACKLIST.add(addr)
+        with open(PERM_BLACKLIST_FILE, 'w') as f:
+            json.dump(list(PERM_BLACKLIST), f)
         return True
     except Exception as e:
         print(f"Buy error: {e}")

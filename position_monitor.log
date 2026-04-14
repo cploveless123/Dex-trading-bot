@@ -8948,3 +8948,10 @@ Checking every 5s
   JOBLESS: mcap=$17,452 | gain=-1.2% | peak=$17,921 | dd=+0%
 [14:13:29] Monitor alive | 1081 checks | 0 open | next in 5s
   ISING: mcap=$11,176 | gain=-2.5% | peak=$11,460 | dd=+0%
+Position Monitor v3 starting...
+Exit Plan: TP1 +50% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -25%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
+[14:20:21] Monitor alive | 13 checks | 0 open | next in 5s
+[14:21:21] Monitor alive | 25 checks | 0 open | next in 5s
