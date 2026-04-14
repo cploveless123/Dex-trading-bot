@@ -46,6 +46,7 @@ YOUNG_PUMP_5M_THRESHOLD = 25
 YOUNG_COOLDOWN = 30
 # Older (>15 min) + chg5 > +5% → 30s cooldown
 OLD_PUMP_5M_THRESHOLD = 5
+ATH_DIVERGENCE_REJECT = 40       # reject if >40% below ATH (parabolic)
 OLD_COOLDOWN = 30
 # chg1 must reach >+5% to proceed; if <+5%, wait extra 15s and keep checking
 CHG1_COOLDOWN_EXTRA = 15  # extra wait if chg1 < +5%

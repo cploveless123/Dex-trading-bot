@@ -123,15 +123,20 @@ def get_gmgn_trending(limit=50):
     return []
 
 def get_gmgn_new_pairs(limit=30):
-    """Get GMGN new pairs"""
+    """Get GMGN new pairs (using trenches endpoint)"""
     try:
         r = subprocess.run(
-            ['gmgn-cli', 'market', 'newpairs', '--chain', 'sol', '--limit', str(limit)],
+            ['gmgn-cli', 'market', 'trenches', '--chain', 'sol', '--limit', str(limit)],
             capture_output=True, text=True, timeout=15
         )
         if r.returncode == 0:
             data = json.loads(r.stdout)
-            return data.get('data', {}).get('pairs', [])
+            # trenches returns {creating: [], created: [], completed: []}
+            all_pairs = []
+            all_pairs.extend(data.get('creating', []))
+            all_pairs.extend(data.get('created', []))
+            all_pairs.extend(data.get('completed', []))
+            return all_pairs
     except Exception as e:
         print(f"GMGN new pairs error: {e}")
     return []
