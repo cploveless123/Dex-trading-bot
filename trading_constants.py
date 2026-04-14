@@ -29,14 +29,14 @@ BS_PUMP_FUN_OK = True  # pump.fun BS=0 is OK if no data
 H1_MOMENTUM_MIN = 5   # h1 must be > +5%
 H24_MOMENTUM_MIN = 5  # OR 24h must be > +5%
 
-# === PUMP RULE ===
-PUMP_CHG5_THRESHOLD = 20.0  # chg5 > +20% triggers pump rule
-PUMP_WAIT_1 = 45            # First wait
+# === PUMP RULE (chg1) ===
+PUMP_CHG1_THRESHOLD = 5.0   # chg1 > +5% triggers pump rule
+PUMP_WAIT_1 = 45            # First wait after trigger
 PUMP_WAIT_2 = 30            # Second wait
 PUMP_VERIFY_DELAY = 15      # Final verify
 
 # === DIP/PULLBACK ===
-DIP_MIN = 5          # 5% minimum pullback from local peak
+DIP_MIN = 2          # 2% minimum pullback from local peak
 DIP_MAX = 45         # 45% max pullback from local peak
 ATH_DIVERGENCE_MAX = 55  # Max 55% below ATH
 

@@ -13,7 +13,7 @@ from trading_constants import (
     VOL_MCAP_RATIO_MIN,
     BS_RATIO_NEW, BS_RATIO_OLD, BS_PUMP_FUN_OK,
     H1_MOMENTUM_MIN, H24_MOMENTUM_MIN,
-    PUMP_CHG5_THRESHOLD, PUMP_WAIT_1, PUMP_WAIT_2, PUMP_VERIFY_DELAY,
+    PUMP_CHG1_THRESHOLD, PUMP_WAIT_1, PUMP_WAIT_2, PUMP_VERIFY_DELAY,
     DIP_MIN, DIP_MAX, ATH_DIVERGENCE_MAX,
     MIN_CHG5_FOR_BUY, CHG5_REJECT_DROP, CHG5_RECOVERY_THRESHOLD,
     BASE_COOLDOWN, YOUNG_COOLDOWN, OLDER_COOLDOWN, NORMAL_COOLDOWN,
@@ -279,7 +279,7 @@ def add_to_cooldown(addr, token_data, result, dex_data=None):
         'last_price': result['price'],
         'recheck_count': 0,
         'consecutive_ok': 0,
-        '_pump_rule_triggered': chg5 > PUMP_CHG5_THRESHOLD,
+        '_pump_rule_triggered': chg1 is not None and chg1 > PUMP_CHG1_THRESHOLD,
         '_pump_checked_chg5_at_trigger': None,
         '_last_improvement_check': None,
     }
@@ -360,19 +360,19 @@ def check_cooldown_watch():
                 continue
             
             # Check chg5 still > 20%
-            if chg5 > PUMP_CHG5_THRESHOLD:
+            if chg1 is not None and chg1 > PUMP_CHG1_THRESHOLD:
                 data['_pump_checked_chg5_at_trigger'] = chg5
                 data['state'] = STATE_PUMP_WAIT_2
                 data['cooldown_end'] = now + PUMP_WAIT_2
                 data['recheck_count'] = 0
-                print(f"   [PUMP] {result['token']}: chg5={chg5:+.1f}% still >20% | wait {PUMP_WAIT_2}s")
+                print(f"   [PUMP] {result['token']}: chg1={chg1:+.1f}% still >+5% | wait {PUMP_WAIT_2}s")
             else:
                 # Pump failed — fall through to normal path
                 data['_pump_rule_triggered'] = False
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + CHG1_RECOVERY_WAIT
                 data['recheck_count'] = 0
-                print(f"   [PUMP_FAIL] {result['token']}: chg5={chg5:+.1f}% < 20% | recovery path")
+                print(f"   [PUMP_FAIL] {result['token']}: chg1={chg1:+.1f}% < +5% | recovery path")
             continue
         
         elif state == STATE_PUMP_WAIT_2:
@@ -380,15 +380,15 @@ def check_cooldown_watch():
             if remaining > 0:
                 continue
             # Verify chg5 still > 20%
-            if chg5 > PUMP_CHG5_THRESHOLD:
+            if chg1 is not None and chg1 > PUMP_CHG1_THRESHOLD:
                 data['state'] = STATE_PUMP_VERIFY
                 data['cooldown_end'] = now + PUMP_VERIFY_DELAY
-                print(f"   [PUMP_VERIFY] {result['token']}: verify {PUMP_VERIFY_DELAY}s | chg5={chg5:+.1f}%")
+                print(f"   [PUMP_VERIFY] {result['token']}: verify {PUMP_VERIFY_DELAY}s | chg1={chg1:+.1f}%")
             else:
                 data['_pump_rule_triggered'] = False
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + CHG1_RECOVERY_WAIT
-                print(f"   [PUMP_FAIL] {result['token']}: chg5 dropped | recovery path")
+                print(f"   [PUMP_FAIL] {result['token']}: chg1 dropped | recovery path")
             continue
         
         elif state == STATE_PUMP_VERIFY:
