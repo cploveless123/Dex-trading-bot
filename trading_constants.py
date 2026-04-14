@@ -15,11 +15,16 @@ MAX_MCAP = 85000           # $85K ceiling
 MIN_AGE_SECONDS = 180      # 3 minutes minimum
 MAX_AGE_SECONDS = 10800    # 180 minutes maximum
 MIN_5MIN_VOLUME = 1000    # 5min volume > $1K
+MIN_VOLUME = 10000         # 24h volume > $10K
 MIN_HOLDERS = 15           # Holders ≥ 15
+MIN_BS_RATIO = 1.5         # Buy/sell ratio ≥ 1.5
 TOP10_HOLDER_MAX = 50      # Top10% < 50%
 BS_RATIO_NEW = 0.1        # BS ratio for pairs < 10 min old
 BS_RATIO_OLD = 0.8        # BS ratio for pairs > 10 min old
 BS_PUMP_FUN_OK = True      # pump.fun BS=0 is OK
+ATH_DIVERGENCE_REJECT = 40  # Reject if >40% from ATH
+MIN_GMGN_SCORE = 50         # Only buy high quality GMGN signals
+GMGN_VOL_MCAP_MIN = 0.1    # Minimum vol/mcap ratio for GMGN signals
 
 # Exit Plan v6.0 - Hold through TP1, let winners run to TP5
 TP1_PERCENT = 50           # +50% → Sell 10%, trail 40%
@@ -69,6 +74,7 @@ NEW_PUMP_COOLDOWN = 120    # Young (<15 min) + chg5 >+50% → 120s
 OLD_PUMP_COOLDOWN = 120    # Older (>15 min) + chg5 >+1% → 120s
 NEW_PUMP_5M_THRESHOLD = 50  # chg5 >+50% triggers cooldown for young coins
 OLD_PUMP_5M_THRESHOLD = 1   # chg5 >+1% triggers cooldown for older coins
+NEW_PUMP_HS1_THRESHOLD = 5  # chg1 >+5% triggers cooldown for young coins
 MAX_RECHECKS = 15          # Max 15 rechecks (3 min) before skip
 RECHECK_DELAY = 15          # 15s between rechecks
 
@@ -77,8 +83,8 @@ ANTI_MOMENTUM_5M_THRESHOLD = 15  # chg5 >+15%
 ANTI_MOMENTUM_CHG1_THRESHOLD = -3  # AND chg1 <-3%
 
 # Chg1 momentum check
-MIN_CHG1_FOR_BUY = 3.0  # chg1 must be > +5% to confirm momentum
-CHG1_DROP_THRESHOLD = 5  # if chg1 drops by >50% from previous, reject (deterioration)
+MIN_CHG1_FOR_BUY = 5.0  # chg1 must be > +5% to confirm momentum
+CHG1_DROP_THRESHOLD = 50  # if chg1 drops by >50% from previous, reject (deterioration)
 
 # Parabolic rejection
 H1_PARABOLIC_REJECT = 833  # h1 >+833% → reject (too parabolic)
