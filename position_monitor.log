@@ -144,3 +144,406 @@ Checking every 5s
   FATCAT: mcap=$19,641 | gain=+2.0% | peak=$21,042 | dd=+0%
   alon: mcap=$11,495 | gain=+38.2% | peak=$11,495 | dd=+0%
   FATCAT: mcap=$19,641 | gain=+2.0% | peak=$21,042 | dd=+0%
+  alon: mcap=$11,753 | gain=+41.4% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$19,641 | gain=+2.0% | peak=$21,042 | dd=+0%
+  alon: mcap=$11,753 | gain=+41.4% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$19,641 | gain=+2.0% | peak=$21,042 | dd=+0%
+  alon: mcap=$11,753 | gain=+41.4% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$19,641 | gain=+2.0% | peak=$21,042 | dd=+0%
+  alon: mcap=$11,753 | gain=+41.4% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$19,641 | gain=+2.0% | peak=$21,042 | dd=+0%
+  alon: mcap=$11,753 | gain=+41.4% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$19,421 | gain=+0.8% | peak=$21,042 | dd=+0%
+  alon: mcap=$11,753 | gain=+41.4% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$19,421 | gain=+0.8% | peak=$21,042 | dd=+0%
+[08:11:46] Monitor alive | 949 checks | 2 open | next in 5s
+  alon: mcap=$10,271 | gain=+23.5% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$19,421 | gain=+0.8% | peak=$21,042 | dd=+0%
+  alon: mcap=$10,271 | gain=+23.5% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$19,421 | gain=+0.8% | peak=$21,042 | dd=+0%
+  alon: mcap=$10,271 | gain=+23.5% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$19,421 | gain=+0.8% | peak=$21,042 | dd=+0%
+  alon: mcap=$10,271 | gain=+23.5% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$19,421 | gain=+0.8% | peak=$21,042 | dd=+0%
+  alon: mcap=$10,271 | gain=+23.5% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$18,593 | gain=-3.5% | peak=$21,042 | dd=+0%
+  alon: mcap=$10,271 | gain=+23.5% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$18,593 | gain=-3.5% | peak=$21,042 | dd=+0%
+  alon: mcap=$6,968 | gain=-16.2% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$18,593 | gain=-3.5% | peak=$21,042 | dd=+0%
+  alon: mcap=$6,968 | gain=-16.2% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$18,593 | gain=-3.5% | peak=$21,042 | dd=+0%
+  alon: mcap=$6,968 | gain=-16.2% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$18,593 | gain=-3.5% | peak=$21,042 | dd=+0%
+  alon: mcap=$6,968 | gain=-16.2% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$18,593 | gain=-3.5% | peak=$21,042 | dd=+0%
+  alon: mcap=$6,968 | gain=-16.2% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$15,830 | gain=-17.8% | peak=$21,042 | dd=+0%
+  alon: mcap=$6,968 | gain=-16.2% | peak=$11,753 | dd=+0%
+  FATCAT: mcap=$15,830 | gain=-17.8% | peak=$21,042 | dd=+0%
+[08:12:47] Monitor alive | 961 checks | 2 open | next in 5s
+[STOP_LOSS] Alert sent
+🔴 alon STOP LOSS @ $3,278 (-60.6%)
+  FATCAT: mcap=$15,830 | gain=-17.8% | peak=$21,042 | dd=+0%
+  FATCAT: mcap=$15,830 | gain=-17.8% | peak=$21,042 | dd=+0%
+  FATCAT: mcap=$15,830 | gain=-17.8% | peak=$21,042 | dd=+0%
+  FATCAT: mcap=$15,830 | gain=-17.8% | peak=$21,042 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 FATCAT STOP LOSS @ $14,690 (-23.7%)
+  TIP: mcap=$4,274 | gain=-6.3% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,274 | gain=-6.3% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,510 | gain=-1.1% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,510 | gain=-1.1% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,510 | gain=-1.1% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,510 | gain=-1.1% | peak=$4,559 | dd=+0%
+[08:13:49] Monitor alive | 973 checks | 1 open | next in 5s
+  TIP: mcap=$4,510 | gain=-1.1% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,510 | gain=-1.1% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,257 | gain=-6.6% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,257 | gain=-6.6% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,257 | gain=-6.6% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,257 | gain=-6.6% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,257 | gain=-6.6% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,257 | gain=-6.6% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,521 | gain=-0.8% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,521 | gain=-0.8% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,521 | gain=-0.8% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,521 | gain=-0.8% | peak=$4,559 | dd=+0%
+[08:14:50] Monitor alive | 985 checks | 1 open | next in 5s
+  TIP: mcap=$4,521 | gain=-0.8% | peak=$4,559 | dd=+0%
+  TIP: mcap=$4,521 | gain=-0.8% | peak=$4,559 | dd=+0%
+  TIP: mcap=$5,072 | gain=+11.3% | peak=$5,072 | dd=+0%
+  7: mcap=$4,375 | gain=-15.5% | peak=$5,177 | dd=+0%
+  TIP: mcap=$5,072 | gain=+11.3% | peak=$5,072 | dd=+0%
+  7: mcap=$4,375 | gain=-15.5% | peak=$5,177 | dd=+0%
+  TIP: mcap=$5,072 | gain=+11.3% | peak=$5,072 | dd=+0%
+  7: mcap=$4,375 | gain=-15.5% | peak=$5,177 | dd=+0%
+  TIP: mcap=$5,072 | gain=+11.3% | peak=$5,072 | dd=+0%
+  7: mcap=$4,375 | gain=-15.5% | peak=$5,177 | dd=+0%
+  TIP: mcap=$5,072 | gain=+11.3% | peak=$5,072 | dd=+0%
+  7: mcap=$4,375 | gain=-15.5% | peak=$5,177 | dd=+0%
+  TIP: mcap=$5,072 | gain=+11.3% | peak=$5,072 | dd=+0%
+  7: mcap=$4,375 | gain=-15.5% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,220 | gain=+36.4% | peak=$6,220 | dd=+0%
+  7: mcap=$5,034 | gain=-2.8% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,220 | gain=+36.4% | peak=$6,220 | dd=+0%
+  7: mcap=$5,034 | gain=-2.8% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,220 | gain=+36.4% | peak=$6,220 | dd=+0%
+  7: mcap=$5,034 | gain=-2.8% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,220 | gain=+36.4% | peak=$6,220 | dd=+0%
+  7: mcap=$5,034 | gain=-2.8% | peak=$5,177 | dd=+0%
+[08:15:51] Monitor alive | 997 checks | 2 open | next in 5s
+  TIP: mcap=$6,220 | gain=+36.4% | peak=$6,220 | dd=+0%
+  7: mcap=$5,034 | gain=-2.8% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,220 | gain=+36.4% | peak=$6,220 | dd=+0%
+  7: mcap=$5,034 | gain=-2.8% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,271 | gain=+37.5% | peak=$6,271 | dd=+0%
+  7: mcap=$4,873 | gain=-5.9% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,271 | gain=+37.5% | peak=$6,271 | dd=+0%
+  7: mcap=$4,873 | gain=-5.9% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,271 | gain=+37.5% | peak=$6,271 | dd=+0%
+  7: mcap=$4,873 | gain=-5.9% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,271 | gain=+37.5% | peak=$6,271 | dd=+0%
+  7: mcap=$4,873 | gain=-5.9% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,271 | gain=+37.5% | peak=$6,271 | dd=+0%
+  7: mcap=$4,873 | gain=-5.9% | peak=$5,177 | dd=+0%
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+[08:16:53] Monitor alive | 1009 checks | 2 open | next in 5s
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+[TP1_HOLD] Alert sent
+🚀 TIP TP1 HIT - HOLDING @ $7,122 (+56.2%)
+  7: mcap=$4,851 | gain=-6.3% | peak=$5,177 | dd=+0%
+  TIP: mcap=$7,122 | gain=+56.2% | peak=$7,122 | dd=+0%
+  7: mcap=$4,851 | gain=-6.3% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,969 | gain=+52.9% | peak=$7,122 | dd=+2%
+  7: mcap=$4,851 | gain=-6.3% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,969 | gain=+52.9% | peak=$7,122 | dd=+2%
+  7: mcap=$4,851 | gain=-6.3% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,969 | gain=+52.9% | peak=$7,122 | dd=+2%
+  7: mcap=$4,851 | gain=-6.3% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,969 | gain=+52.9% | peak=$7,122 | dd=+2%
+  7: mcap=$4,851 | gain=-6.3% | peak=$5,177 | dd=+0%
+[08:17:55] Monitor alive | 1021 checks | 2 open | next in 5s
+  TIP: mcap=$6,969 | gain=+52.9% | peak=$7,122 | dd=+2%
+  7: mcap=$4,851 | gain=-6.3% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,969 | gain=+52.9% | peak=$7,122 | dd=+2%
+  7: mcap=$4,919 | gain=-5.0% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,954 | gain=+52.5% | peak=$7,122 | dd=+2%
+  7: mcap=$4,919 | gain=-5.0% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,954 | gain=+52.5% | peak=$7,122 | dd=+2%
+  7: mcap=$4,919 | gain=-5.0% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,954 | gain=+52.5% | peak=$7,122 | dd=+2%
+  7: mcap=$4,919 | gain=-5.0% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,954 | gain=+52.5% | peak=$7,122 | dd=+2%
+  7: mcap=$4,919 | gain=-5.0% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,954 | gain=+52.5% | peak=$7,122 | dd=+2%
+  7: mcap=$4,919 | gain=-5.0% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,954 | gain=+52.5% | peak=$7,122 | dd=+2%
+  7: mcap=$4,949 | gain=-4.4% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,269 | gain=+37.5% | peak=$7,122 | dd=+12%
+  7: mcap=$4,949 | gain=-4.4% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,269 | gain=+37.5% | peak=$7,122 | dd=+12%
+  7: mcap=$4,949 | gain=-4.4% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,269 | gain=+37.5% | peak=$7,122 | dd=+12%
+  7: mcap=$4,949 | gain=-4.4% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,269 | gain=+37.5% | peak=$7,122 | dd=+12%
+  7: mcap=$4,949 | gain=-4.4% | peak=$5,177 | dd=+0%
+[08:18:57] Monitor alive | 1033 checks | 2 open | next in 5s
+  TIP: mcap=$6,269 | gain=+37.5% | peak=$7,122 | dd=+12%
+  7: mcap=$4,949 | gain=-4.4% | peak=$5,177 | dd=+0%
+  TIP: mcap=$6,269 | gain=+37.5% | peak=$7,122 | dd=+12%
+  7: mcap=$5,230 | gain=+1.0% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,259 | gain=+37.3% | peak=$7,122 | dd=+12%
+  7: mcap=$5,230 | gain=+1.0% | peak=$5,230 | dd=+0%
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+[08:19:58] Monitor alive | 1045 checks | 2 open | next in 5s
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: error fetching mcap
+  7: error fetching mcap
+  TIP: mcap=$6,227 | gain=+36.6% | peak=$7,122 | dd=+13%
+  7: mcap=$4,765 | gain=-8.0% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,227 | gain=+36.6% | peak=$7,122 | dd=+13%
+  7: mcap=$4,765 | gain=-8.0% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,227 | gain=+36.6% | peak=$7,122 | dd=+13%
+  7: mcap=$4,765 | gain=-8.0% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,227 | gain=+36.6% | peak=$7,122 | dd=+13%
+  7: mcap=$4,765 | gain=-8.0% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,227 | gain=+36.6% | peak=$7,122 | dd=+13%
+  7: mcap=$4,483 | gain=-13.4% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,710 | gain=+47.2% | peak=$7,122 | dd=+6%
+  7: mcap=$4,483 | gain=-13.4% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,710 | gain=+47.2% | peak=$7,122 | dd=+6%
+  7: mcap=$4,483 | gain=-13.4% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,710 | gain=+47.2% | peak=$7,122 | dd=+6%
+  7: mcap=$4,483 | gain=-13.4% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,710 | gain=+47.2% | peak=$7,122 | dd=+6%
+  7: mcap=$4,483 | gain=-13.4% | peak=$5,230 | dd=+0%
+[08:21:00] Monitor alive | 1057 checks | 2 open | next in 5s
+  TIP: mcap=$6,710 | gain=+47.2% | peak=$7,122 | dd=+6%
+  7: mcap=$4,483 | gain=-13.4% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,710 | gain=+47.2% | peak=$7,122 | dd=+6%
+  7: mcap=$4,627 | gain=-10.6% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,714 | gain=+47.3% | peak=$7,122 | dd=+6%
+  7: mcap=$4,627 | gain=-10.6% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,714 | gain=+47.3% | peak=$7,122 | dd=+6%
+  7: mcap=$4,627 | gain=-10.6% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,714 | gain=+47.3% | peak=$7,122 | dd=+6%
+  7: mcap=$4,627 | gain=-10.6% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,714 | gain=+47.3% | peak=$7,122 | dd=+6%
+  7: mcap=$4,627 | gain=-10.6% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,714 | gain=+47.3% | peak=$7,122 | dd=+6%
+  7: mcap=$4,627 | gain=-10.6% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,714 | gain=+47.3% | peak=$7,122 | dd=+6%
+  7: mcap=$4,795 | gain=-7.4% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,714 | gain=+47.3% | peak=$7,122 | dd=+6%
+  7: mcap=$4,795 | gain=-7.4% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,714 | gain=+47.3% | peak=$7,122 | dd=+6%
+  7: mcap=$4,795 | gain=-7.4% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,714 | gain=+47.3% | peak=$7,122 | dd=+6%
+  7: mcap=$4,795 | gain=-7.4% | peak=$5,230 | dd=+0%
+  TIP: mcap=$6,714 | gain=+47.3% | peak=$7,122 | dd=+6%
+  7: mcap=$4,795 | gain=-7.4% | peak=$5,230 | dd=+0%
+[08:22:02] Monitor alive | 1069 checks | 2 open | next in 5s
+  TIP: mcap=$6,714 | gain=+47.3% | peak=$7,122 | dd=+6%
+  7: mcap=$4,795 | gain=-7.4% | peak=$5,230 | dd=+0%
+[TRAILING_STOP] Alert sent
+✅ TIP TRAILING STOP @ $3,689 (48% drop from peak)
+  7: mcap=$4,821 | gain=-6.9% | peak=$5,230 | dd=+0%
+  7: mcap=$4,821 | gain=-6.9% | peak=$5,230 | dd=+0%
+  7: mcap=$4,821 | gain=-6.9% | peak=$5,230 | dd=+0%
+  7: mcap=$4,821 | gain=-6.9% | peak=$5,230 | dd=+0%
+  7: mcap=$4,821 | gain=-6.9% | peak=$5,230 | dd=+0%
+  7: mcap=$4,821 | gain=-6.9% | peak=$5,230 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 7 STOP LOSS @ $3,495 (-32.5%)
+[08:23:03] Monitor alive | 1081 checks | 0 open | next in 5s
+  Mooner: mcap=$32,108 | gain=-4.8% | peak=$33,732 | dd=+0%
+  Mooner: mcap=$32,108 | gain=-4.8% | peak=$33,732 | dd=+0%
+  Mooner: mcap=$32,108 | gain=-4.8% | peak=$33,732 | dd=+0%
+  Mooner: mcap=$33,928 | gain=+0.6% | peak=$33,928 | dd=+0%
+[08:24:04] Monitor alive | 1093 checks | 1 open | next in 5s
+  Mooner: mcap=$33,928 | gain=+0.6% | peak=$33,928 | dd=+0%
+  Mooner: mcap=$33,928 | gain=+0.6% | peak=$33,928 | dd=+0%
+  Mooner: mcap=$33,928 | gain=+0.6% | peak=$33,928 | dd=+0%
+  Mooner: mcap=$33,928 | gain=+0.6% | peak=$33,928 | dd=+0%
+  Mooner: mcap=$33,928 | gain=+0.6% | peak=$33,928 | dd=+0%
+  Mooner: mcap=$34,306 | gain=+1.7% | peak=$34,306 | dd=+0%
+  Mooner: mcap=$34,306 | gain=+1.7% | peak=$34,306 | dd=+0%
+  Mooner: mcap=$34,306 | gain=+1.7% | peak=$34,306 | dd=+0%
+  Mooner: mcap=$34,306 | gain=+1.7% | peak=$34,306 | dd=+0%
+  Allan: mcap=$6,860 | gain=-9.0% | peak=$7,538 | dd=+0%
+  Mooner: mcap=$34,306 | gain=+1.7% | peak=$34,306 | dd=+0%
+  Allan: mcap=$6,860 | gain=-9.0% | peak=$7,538 | dd=+0%
+  Mooner: mcap=$34,306 | gain=+1.7% | peak=$34,306 | dd=+0%
+  Allan: mcap=$6,860 | gain=-9.0% | peak=$7,538 | dd=+0%
+  Mooner: mcap=$31,744 | gain=-5.9% | peak=$34,306 | dd=+0%
+  Allan: mcap=$6,860 | gain=-9.0% | peak=$7,538 | dd=+0%
+[08:25:05] Monitor alive | 1105 checks | 2 open | next in 5s
+  Mooner: mcap=$31,744 | gain=-5.9% | peak=$34,306 | dd=+0%
+  Allan: mcap=$7,538 | gain=+0.0% | peak=$7,538 | dd=+0%
+  Mooner: mcap=$31,744 | gain=-5.9% | peak=$34,306 | dd=+0%
+  Allan: mcap=$7,538 | gain=+0.0% | peak=$7,538 | dd=+0%
+  Mooner: mcap=$31,744 | gain=-5.9% | peak=$34,306 | dd=+0%
+  Allan: mcap=$7,538 | gain=+0.0% | peak=$7,538 | dd=+0%
+  Mooner: mcap=$31,744 | gain=-5.9% | peak=$34,306 | dd=+0%
+  Allan: mcap=$7,538 | gain=+0.0% | peak=$7,538 | dd=+0%
+  Mooner: mcap=$31,744 | gain=-5.9% | peak=$34,306 | dd=+0%
+  Allan: mcap=$7,538 | gain=+0.0% | peak=$7,538 | dd=+0%
+  Mooner: mcap=$30,066 | gain=-10.9% | peak=$34,306 | dd=+0%
+  Allan: mcap=$7,538 | gain=+0.0% | peak=$7,538 | dd=+0%
+  Mooner: mcap=$30,066 | gain=-10.9% | peak=$34,306 | dd=+0%
+  Allan: mcap=$6,754 | gain=-10.4% | peak=$7,538 | dd=+0%
+  Mooner: mcap=$30,066 | gain=-10.9% | peak=$34,306 | dd=+0%
+  Allan: mcap=$6,754 | gain=-10.4% | peak=$7,538 | dd=+0%
+  Mooner: mcap=$30,066 | gain=-10.9% | peak=$34,306 | dd=+0%
+  Allan: mcap=$6,754 | gain=-10.4% | peak=$7,538 | dd=+0%
+  Whenyou: mcap=$11,508 | gain=-1.0% | peak=$11,629 | dd=+0%
+  Mooner: mcap=$30,066 | gain=-10.9% | peak=$34,306 | dd=+0%
+  Allan: mcap=$6,754 | gain=-10.4% | peak=$7,538 | dd=+0%
+  Whenyou: mcap=$11,508 | gain=-1.0% | peak=$11,629 | dd=+0%
+  Mooner: mcap=$30,066 | gain=-10.9% | peak=$34,306 | dd=+0%
+  Allan: mcap=$6,754 | gain=-10.4% | peak=$7,538 | dd=+0%
+  Whenyou: mcap=$11,508 | gain=-1.0% | peak=$11,629 | dd=+0%
+  Mooner: mcap=$32,166 | gain=-4.6% | peak=$34,306 | dd=+0%
+  Allan: mcap=$6,754 | gain=-10.4% | peak=$7,538 | dd=+0%
+  Whenyou: mcap=$11,508 | gain=-1.0% | peak=$11,629 | dd=+0%
+  Allan: mcap=$12,676 | gain=-7.7% | peak=$13,741 | dd=+0%
+[08:26:07] Monitor alive | 1117 checks | 4 open | next in 5s
+  Mooner: mcap=$32,166 | gain=-4.6% | peak=$34,306 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Allan STOP LOSS @ $4,016 (-46.7%)
+  Whenyou: mcap=$11,508 | gain=-1.0% | peak=$11,629 | dd=+0%
+  Allan: mcap=$12,676 | gain=-7.7% | peak=$13,741 | dd=+0%
+  Mooner: mcap=$32,166 | gain=-4.6% | peak=$34,306 | dd=+0%
+  Whenyou: mcap=$11,508 | gain=-1.0% | peak=$11,629 | dd=+0%
+  Allan: mcap=$14,752 | gain=+7.4% | peak=$14,752 | dd=+0%
+  Mooner: mcap=$32,166 | gain=-4.6% | peak=$34,306 | dd=+0%
+  Whenyou: mcap=$10,399 | gain=-10.6% | peak=$11,629 | dd=+0%
+  Allan: mcap=$14,752 | gain=+7.4% | peak=$14,752 | dd=+0%
+  Mooner: mcap=$32,166 | gain=-4.6% | peak=$34,306 | dd=+0%
+  Whenyou: mcap=$10,399 | gain=-10.6% | peak=$11,629 | dd=+0%
+  Allan: mcap=$14,752 | gain=+7.4% | peak=$14,752 | dd=+0%
+  Mooner: mcap=$28,222 | gain=-16.3% | peak=$34,306 | dd=+0%
+  Whenyou: mcap=$10,399 | gain=-10.6% | peak=$11,629 | dd=+0%
+  Allan: mcap=$14,752 | gain=+7.4% | peak=$14,752 | dd=+0%
+  Mooner: mcap=$28,222 | gain=-16.3% | peak=$34,306 | dd=+0%
+  Whenyou: mcap=$10,399 | gain=-10.6% | peak=$11,629 | dd=+0%
+  Allan: mcap=$14,752 | gain=+7.4% | peak=$14,752 | dd=+0%
+  Mooner: mcap=$28,222 | gain=-16.3% | peak=$34,306 | dd=+0%
+  Whenyou: mcap=$10,399 | gain=-10.6% | peak=$11,629 | dd=+0%
+  Allan: mcap=$14,752 | gain=+7.4% | peak=$14,752 | dd=+0%
+  Mooner: mcap=$28,222 | gain=-16.3% | peak=$34,306 | dd=+0%
+  Whenyou: mcap=$10,399 | gain=-10.6% | peak=$11,629 | dd=+0%
+  Allan: mcap=$15,130 | gain=+10.1% | peak=$15,130 | dd=+0%
+  Mooner: mcap=$28,222 | gain=-16.3% | peak=$34,306 | dd=+0%
+  Whenyou: mcap=$9,709 | gain=-16.5% | peak=$11,629 | dd=+0%
+  Allan: mcap=$15,130 | gain=+10.1% | peak=$15,130 | dd=+0%
+  Mooner: mcap=$28,222 | gain=-16.3% | peak=$34,306 | dd=+0%
+  Whenyou: mcap=$9,709 | gain=-16.5% | peak=$11,629 | dd=+0%
+  Allan: mcap=$15,130 | gain=+10.1% | peak=$15,130 | dd=+0%
+  Mooner: mcap=$28,525 | gain=-15.4% | peak=$34,306 | dd=+0%
+  Whenyou: mcap=$9,709 | gain=-16.5% | peak=$11,629 | dd=+0%
+  Allan: mcap=$15,130 | gain=+10.1% | peak=$15,130 | dd=+0%
+  Mooner: error fetching mcap
+  Whenyou: error fetching mcap
+  Allan: error fetching mcap
+[08:27:10] Monitor alive | 1129 checks | 3 open | next in 5s
+  Mooner: error fetching mcap
+  Whenyou: error fetching mcap
+  Allan: error fetching mcap
+  Mooner: error fetching mcap
+  Whenyou: error fetching mcap
+  Allan: error fetching mcap
+  Mooner: error fetching mcap
+  Whenyou: error fetching mcap
+  Allan: error fetching mcap
+  Mooner: error fetching mcap
+  Whenyou: error fetching mcap
+  Allan: error fetching mcap
+  Mooner: error fetching mcap
+  Whenyou: error fetching mcap
+  Allan: error fetching mcap
+  Mooner: error fetching mcap
+  Whenyou: error fetching mcap
+  Allan: error fetching mcap
+  Mooner: error fetching mcap
+  Whenyou: error fetching mcap
+  Allan: error fetching mcap
+  Mooner: error fetching mcap
+  Whenyou: error fetching mcap
+  Allan: error fetching mcap
+  Mooner: error fetching mcap
+  Whenyou: error fetching mcap
+  Allan: error fetching mcap
+  Mooner: error fetching mcap
+  Whenyou: error fetching mcap
+  Allan: error fetching mcap
+[STOP_LOSS] Alert sent
+🔴 Mooner STOP LOSS @ $25,576 (-24.2%)
+[STOP_LOSS] Alert sent
+🔴 Whenyou STOP LOSS @ $4,084 (-64.9%)
+  Allan: mcap=$14,842 | gain=+8.0% | peak=$15,130 | dd=+0%
+  Allan: mcap=$14,842 | gain=+8.0% | peak=$15,130 | dd=+0%
+[08:28:13] Monitor alive | 1141 checks | 1 open | next in 5s
+  Allan: mcap=$12,105 | gain=-11.9% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,105 | gain=-11.9% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,105 | gain=-11.9% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,105 | gain=-11.9% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,105 | gain=-11.9% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,105 | gain=-11.9% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,685 | gain=-7.7% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,685 | gain=-7.7% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,685 | gain=-7.7% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,685 | gain=-7.7% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,685 | gain=-7.7% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,685 | gain=-7.7% | peak=$15,130 | dd=+0%
+[08:29:14] Monitor alive | 1153 checks | 1 open | next in 5s
+  Allan: mcap=$12,686 | gain=-7.7% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,686 | gain=-7.7% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,686 | gain=-7.7% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,686 | gain=-7.7% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,686 | gain=-7.7% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,686 | gain=-7.7% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,643 | gain=-8.0% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,643 | gain=-8.0% | peak=$15,130 | dd=+0%
+  Allan: mcap=$12,643 | gain=-8.0% | peak=$15,130 | dd=+0%
