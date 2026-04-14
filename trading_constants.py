@@ -130,7 +130,15 @@ MAX_RETRIES = 3
 CIRCUIT_BREAKER_THRESHOLD = 5
 CIRCUIT_BREAKER_WAIT = 300
 
+# === PUMP RULE (v6.8e) ===
+PUMP_CHG1_THRESHOLD = 5.0  # chg1 > +5% = confirmed pump
+PUMP_COOLDOWN_1 = 45        # First wait after pump signal
+PUMP_WAIT_2 = 30            # Second wait to confirm
+PUMP_VERIFY_DELAY = 15       # Final 15s verify
+
 # === COOLDOWN STATES (v6.8) ===
 STATE_COOLDOWN = 'COOLDOWN'
+STATE_PUMP_WAIT = 'PUMP_WAIT'   # After 45s, waiting for 2nd check
+STATE_PUMP_VERIFY = 'PUMP_VERIFY' # Final 15s verify
 STATE_WAITING = 'WAITING'
 STATE_VERIFICATION = 'VERIFICATION'
