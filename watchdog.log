@@ -738,3 +738,5 @@ To https://github.com/cploveless123/Dex-trading-bot.git
 [Tue Apr 14 10:30:06 AM UTC 2026] Systems restarted - whale:1 monitor:3 alert:2 auto:2
 [Tue Apr 14 11:55:01 AM UTC 2026] whale_momentum_scanner DOWN - restarting
 [Tue Apr 14 11:55:06 AM UTC 2026] Systems restarted - whale:1 monitor:3 alert:2 auto:2
+[Tue Apr 14 01:00:01 PM UTC 2026] whale_momentum_scanner DOWN - restarting
+[Tue Apr 14 01:00:06 PM UTC 2026] Systems restarted - whale:1 monitor:2 alert:2 auto:3
