@@ -794,3 +794,166 @@ Checking every 5s
   Allan: mcap=$11,278 | gain=-17.9% | peak=$15,130 | dd=+0%
   Ham-chan: mcap=$5,986 | gain=-0.1% | peak=$6,114 | dd=+0%
   NRVX: mcap=$6,197 | gain=+8.8% | peak=$6,371 | dd=+0%
+  Allan: mcap=$11,278 | gain=-17.9% | peak=$15,130 | dd=+0%
+  Ham-chan: mcap=$5,986 | gain=-0.1% | peak=$6,114 | dd=+0%
+  NRVX: mcap=$6,197 | gain=+8.8% | peak=$6,371 | dd=+0%
+  Allan: mcap=$11,278 | gain=-17.9% | peak=$15,130 | dd=+0%
+  Ham-chan: mcap=$5,986 | gain=-0.1% | peak=$6,114 | dd=+0%
+  NRVX: mcap=$6,197 | gain=+8.8% | peak=$6,371 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Allan STOP LOSS @ $7,541 (-45.1%)
+[STOP_LOSS] Alert sent
+🔴 Ham-chan STOP LOSS @ $3,389 (-43.5%)
+  NRVX: mcap=$6,197 | gain=+8.8% | peak=$6,371 | dd=+0%
+  NRVX: mcap=$6,868 | gain=+20.6% | peak=$6,868 | dd=+0%
+  NRVX: mcap=$6,868 | gain=+20.6% | peak=$6,868 | dd=+0%
+[08:41:35] Monitor alive | 1297 checks | 1 open | next in 5s
+  NRVX: mcap=$6,868 | gain=+20.6% | peak=$6,868 | dd=+0%
+  NRVX: mcap=$6,868 | gain=+20.6% | peak=$6,868 | dd=+0%
+  NRVX: mcap=$6,868 | gain=+20.6% | peak=$6,868 | dd=+0%
+  NRVX: mcap=$6,868 | gain=+20.6% | peak=$6,868 | dd=+0%
+  NRVX: mcap=$7,681 | gain=+34.9% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$7,681 | gain=+34.9% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$7,681 | gain=+34.9% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$7,681 | gain=+34.9% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$7,681 | gain=+34.9% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$7,681 | gain=+34.9% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,056 | gain=+6.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,056 | gain=+6.4% | peak=$7,681 | dd=+0%
+[08:42:35] Monitor alive | 1309 checks | 1 open | next in 5s
+  NRVX: mcap=$6,056 | gain=+6.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,056 | gain=+6.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,056 | gain=+6.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,056 | gain=+6.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,950 | gain=+4.5% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,950 | gain=+4.5% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,950 | gain=+4.5% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,950 | gain=+4.5% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,950 | gain=+4.5% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,950 | gain=+4.5% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,960 | gain=+4.7% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,960 | gain=+4.7% | peak=$7,681 | dd=+0%
+[08:43:36] Monitor alive | 1321 checks | 1 open | next in 5s
+  NRVX: mcap=$5,960 | gain=+4.7% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,960 | gain=+4.7% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,960 | gain=+4.7% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,960 | gain=+4.7% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,703 | gain=+0.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,703 | gain=+0.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,703 | gain=+0.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,703 | gain=+0.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,703 | gain=+0.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,703 | gain=+0.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,683 | gain=-0.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,683 | gain=-0.2% | peak=$7,681 | dd=+0%
+[08:44:37] Monitor alive | 1333 checks | 1 open | next in 5s
+  NRVX: mcap=$5,683 | gain=-0.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,683 | gain=-0.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,683 | gain=-0.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,683 | gain=-0.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,513 | gain=+14.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,513 | gain=+14.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,513 | gain=+14.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,513 | gain=+14.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,513 | gain=+14.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,513 | gain=+14.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,486 | gain=+13.9% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,486 | gain=+13.9% | peak=$7,681 | dd=+0%
+[08:45:38] Monitor alive | 1345 checks | 1 open | next in 5s
+  NRVX: mcap=$6,486 | gain=+13.9% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,486 | gain=+13.9% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,486 | gain=+13.9% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,486 | gain=+13.9% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,508 | gain=-3.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,508 | gain=-3.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,508 | gain=-3.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,508 | gain=-3.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,508 | gain=-3.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,508 | gain=-3.2% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,216 | gain=-8.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,216 | gain=-8.4% | peak=$7,681 | dd=+0%
+[08:46:39] Monitor alive | 1357 checks | 1 open | next in 5s
+  NRVX: mcap=$5,216 | gain=-8.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,216 | gain=-8.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,216 | gain=-8.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,216 | gain=-8.4% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,782 | gain=+19.1% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,782 | gain=+19.1% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,782 | gain=+19.1% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,782 | gain=+19.1% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,782 | gain=+19.1% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$6,782 | gain=+19.1% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,221 | gain=-8.3% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,221 | gain=-8.3% | peak=$7,681 | dd=+0%
+[08:47:40] Monitor alive | 1369 checks | 1 open | next in 5s
+  NRVX: mcap=$5,221 | gain=-8.3% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,221 | gain=-8.3% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,221 | gain=-8.3% | peak=$7,681 | dd=+0%
+  NRVX: mcap=$5,221 | gain=-8.3% | peak=$7,681 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 NRVX STOP LOSS @ $3,201 (-43.8%)
+[08:48:41] Monitor alive | 1381 checks | 0 open | next in 5s
+  Pumpy: mcap=$7,259 | gain=+10.5% | peak=$7,259 | dd=+0%
+  Pumpy: mcap=$7,259 | gain=+10.5% | peak=$7,259 | dd=+0%
+  Pumpy: mcap=$7,259 | gain=+10.5% | peak=$7,259 | dd=+0%
+  Pumpy: mcap=$7,259 | gain=+10.5% | peak=$7,259 | dd=+0%
+  Pumpy: mcap=$7,259 | gain=+10.5% | peak=$7,259 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Pumpy STOP LOSS @ $4,405 (-33.0%)
+[08:49:42] Monitor alive | 1393 checks | 0 open | next in 5s
+[08:50:42] Monitor alive | 1405 checks | 0 open | next in 5s
+[08:51:42] Monitor alive | 1417 checks | 0 open | next in 5s
+  vibeshift: mcap=$5,917 | gain=+5.6% | peak=$5,917 | dd=+0%
+  vibeshift: mcap=$5,917 | gain=+5.6% | peak=$5,917 | dd=+0%
+  vibeshift: mcap=$5,627 | gain=+0.4% | peak=$5,917 | dd=+0%
+  vibeshift: mcap=$5,627 | gain=+0.4% | peak=$5,917 | dd=+0%
+  vibeshift: mcap=$5,627 | gain=+0.4% | peak=$5,917 | dd=+0%
+  vibeshift: mcap=$5,627 | gain=+0.4% | peak=$5,917 | dd=+0%
+  vibeshift: mcap=$5,627 | gain=+0.4% | peak=$5,917 | dd=+0%
+  vibeshift: mcap=$5,627 | gain=+0.4% | peak=$5,917 | dd=+0%
+  vibeshift: mcap=$6,852 | gain=+22.3% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,852 | gain=+22.3% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,852 | gain=+22.3% | peak=$6,852 | dd=+0%
+[08:52:43] Monitor alive | 1429 checks | 1 open | next in 5s
+  vibeshift: mcap=$6,852 | gain=+22.3% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,852 | gain=+22.3% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,852 | gain=+22.3% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,671 | gain=+19.1% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,671 | gain=+19.1% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,671 | gain=+19.1% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,671 | gain=+19.1% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,671 | gain=+19.1% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,671 | gain=+19.1% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,409 | gain=+14.4% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,409 | gain=+14.4% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,409 | gain=+14.4% | peak=$6,852 | dd=+0%
+[08:53:43] Monitor alive | 1441 checks | 1 open | next in 5s
+  vibeshift: mcap=$6,409 | gain=+14.4% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,409 | gain=+14.4% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,409 | gain=+14.4% | peak=$6,852 | dd=+0%
+  vibeshift: mcap=$6,997 | gain=+24.9% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$6,997 | gain=+24.9% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$6,997 | gain=+24.9% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$6,997 | gain=+24.9% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$6,997 | gain=+24.9% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$6,997 | gain=+24.9% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$4,844 | gain=-13.6% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$4,844 | gain=-13.6% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$4,844 | gain=-13.6% | peak=$6,997 | dd=+0%
+[08:54:44] Monitor alive | 1453 checks | 1 open | next in 5s
+  vibeshift: mcap=$4,844 | gain=-13.6% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$4,844 | gain=-13.6% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$4,844 | gain=-13.6% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$4,651 | gain=-17.0% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$4,651 | gain=-17.0% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$4,651 | gain=-17.0% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$4,651 | gain=-17.0% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$4,651 | gain=-17.0% | peak=$6,997 | dd=+0%
+  vibeshift: mcap=$4,651 | gain=-17.0% | peak=$6,997 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 vibeshift STOP LOSS @ $4,362 (-22.2%)
+[08:55:45] Monitor alive | 1465 checks | 0 open | next in 5s
+[08:56:45] Monitor alive | 1477 checks | 0 open | next in 5s
+[08:57:46] Monitor alive | 1489 checks | 0 open | next in 5s
+[08:58:46] Monitor alive | 1501 checks | 0 open | next in 5s
+[08:59:46] Monitor alive | 1513 checks | 0 open | next in 5s
