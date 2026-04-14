@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GMGN Scanner v6.5 - Wilson Bot
+GMGN Scanner v6.6 - Wilson Bot
 Primary scanner using GMGN data source
 
 Decision Flow:
@@ -21,13 +21,14 @@ from trading_constants import (
     MIN_5MIN_VOLUME, MIN_HOLDERS, TOP10_HOLDER_MAX,
     BS_RATIO_NEW, BS_RATIO_OLD, BS_PUMP_FUN_OK,
     H1_MOMENTUM_MIN, H24_MOMENTUM_MIN,
-    MIN_CHG1_FOR_BUY, CHG1_DROP_THRESHOLD, CHG1_NONE_M5_REJECT,
-    CHG1_COOLDOWN_TRIGGER,
-    DIP_MIN, DIP_MAX,
+    MIN_CHG1_FOR_BUY, CHG1_NONE_M5_REJECT,
+    DIP_MIN, DIP_MAX, ATH_DIVERGENCE_MAX,
     YOUNG_PUMP_5M_THRESHOLD, OLD_PUMP_5M_THRESHOLD,
     YOUNG_COOLDOWN, OLD_COOLDOWN,
-    CHG1_COOLDOWN_EXTRA, CHG1_COOLDOWN_VERIFY, MAX_RECHECKS, RECHECK_DELAY,
-    PRICE_DROP_THRESHOLD, PRICE_DROP_WAIT_1, PRICE_DROP_WAIT_2, PRICE_DROP_WAIT_3, MCAP_INCREASE_CONFIRM,
+    CHG1_TRIGGER_MIN, CHG1_RECHECK_DELAY, CHG1_VERIFY_DELAY,
+    CHG1_DROP_REJECT, CHG1_RECOVERY_MIN,
+    MAX_RECHECKS, REJECTED_REVISIT_DELAY,
+    PRICE_DROP_REJECT, PRICE_DROP_WAIT_1, PRICE_DROP_WAIT_2, PRICE_DROP_WAIT_3, MCAP_INCREASE_CONFIRM,
     H1_INSTABILITY_MULTIPLIER,
     H1_PARABOLIC_REJECT, FALLING_KNIFE_CONSECUTIVE,
     LIQUIDITY_MCAP_THRESHOLD, LIQUIDITY_MIN,
@@ -41,7 +42,8 @@ from trading_constants import (
     MIN_GMGN_SCORE, GMGN_VOL_MCAP_MIN,
     TICKER_BLACKLIST, SIM_RESET_TIMESTAMP,
     MAX_OPEN_POSITIONS, POSITION_SIZE,
-    LOW_VOLUME_THRESHOLD, SCAN_INTERVAL
+    LOW_VOLUME_THRESHOLD, SCAN_INTERVAL,
+    STATE_COOLDOWN, STATE_WAITING_CHG1, STATE_VERIFICATION, STATE_RECOVERY,
 )
 
 # Files
@@ -236,11 +238,10 @@ def scan_token(token_data, dex_data, whales):
     burn_status = token_data.get('burn_status', '')
     dex_id = token_data.get('exchange', '')
     
-    # DexScreener data (for chg1, m5_vol, holders backup)
+    # DexScreener data (for chg1, m5_vol, holders cross-check)
     chg1 = None
     m5_vol = 0
     ds_holders = 0
-    ds_top10 = 0
 
     # Source 1: DexScreener m1 price change
     if dex_data:
@@ -249,7 +250,6 @@ def scan_token(token_data, dex_data, whales):
             chg1 = float(chg1)
         m5_vol = float(dex_data.get('volume', {}).get('m5', 0) or 0)
         ds_holders = int(dex_data.get('holderCount', 0) or 0)
-        ds_top10 = float(dex_data.get('marketCap', 0) or 0)
 
     # Source 2: GMGN price_change_percent1m (1-minute change) - use as fallback
     if chg1 is None:
@@ -263,11 +263,9 @@ def scan_token(token_data, dex_data, whales):
         if gmgn_generic is not None:
             chg1 = float(gmgn_generic)
     
-    # Fallback from DexScreener
+    # Fallback holders from DexScreener
     if holders == 0 and ds_holders > 0:
         holders = ds_holders
-    if top10 == 0 and ds_top10 > 0:
-        top10 = ds_top10
     
     age_min = get_pair_age_minutes(creation_ts)
     age_sec = age_min * 60
@@ -302,32 +300,42 @@ def scan_token(token_data, dex_data, whales):
     if holders < MIN_HOLDERS:
         return None, f"holders {holders} < {MIN_HOLDERS}"
     
-    # === BOT FARM CHECK: holders=0 OR top10=0 ===
-    if holders == 0 or top10 == 0:
-        return None, f"bot farm (holders={holders} top10={top10:.0f}%)"
+    # === BOT FARM CHECK: holders=0 on BOTH GMGN and DexScreener = bot farm ===
+    # If GMGN shows 0 holders, verify with DexScreener — if also 0, bot farm
+    if holders == 0 and ds_holders == 0:
+        return None, f"bot farm (gmgn_holders={holders} ds_holders={ds_holders})"
+    # top10 = 0 on GMGN = bot farm (DexScreener doesn't have top10% data)
+    if top10 == 0:
+        return None, f"bot farm (top10={top10:.0f}% on GMGN)"
     
     # === TOP10% FILTER ===
     if top10 > TOP10_HOLDER_MAX:
         return None, f"top10 {top10:.1f}% > {TOP10_HOLDER_MAX}% (dumper)"
     
-    # === MOMENTUM FILTER: h1 > +50% OR 24h > +50% ===
+    # === MOMENTUM FILTER: h1 > +5% OR 24h > +5% ===
     if h1 < H1_MOMENTUM_MIN and h24 < H24_MOMENTUM_MIN:
-        return None, f"no momentum (h1={h1:+.1f}% 24h={h24:+.1f}%, need >+50%)"
+        return None, f"no momentum (h1={h1:+.1f}% 24h={h24:+.1f}%, need >+5%)"
     
-    # === PARABOLIC REJECT: h1 > +833% ===
+    # === PARABOLIC: no cap (let winners run) ===
     if h1 > H1_PARABOLIC_REJECT:
         return None, f"h1 {h1:+.1f}% > +{H1_PARABOLIC_REJECT}% (parabolic)"
     
     # === CHG1 RULES ===
-    # chg1 = None AND m5 > +15% → REJECT immediately
+    # chg1 = None AND m5 > +5% → REJECT immediately (no data = unsafe)
     if chg1 is None and m5 > CHG1_NONE_M5_REJECT:
         return None, f"chg1=None but m5 {m5:+.1f}% > +{CHG1_NONE_M5_REJECT}% (unsafe)"
     
-    # === DIP FILTER: 15-45% ===
+    # === DIP FILTER: 0-50% from local peak ===
     if dip < DIP_MIN:
         return None, f"dip {dip:.1f}% < {DIP_MIN}% (not enough pullback)"
     if dip > DIP_MAX:
         return None, f"dip {dip:.1f}% > {DIP_MAX}% (too deep)"
+    
+    # === ATH DIVERGENCE: no more than 45% below ATH ===
+    if ath_mcap > 0:
+        ath_distance = ((ath_mcap - mcap) / ath_mcap) * 100
+        if ath_distance > ATH_DIVERGENCE_MAX:
+            return None, f"ATH dist {ath_distance:.1f}% > {ATH_DIVERGENCE_MAX}% (too far below ATH)"
     
     # === BS RATIO ===
     bs_min = BS_RATIO_OLD if age_min >= 15 else BS_RATIO_NEW
@@ -390,39 +398,46 @@ def scan_token(token_data, dex_data, whales):
     }, "PASS"
 
 def determine_cooldown(result):
-    """Determine cooldown period based on age and momentum"""
-    age_min = result['age_min']
+    """v6.6: cooldown triggered if m5 > -5% (any age)"""
     m5 = result['m5']
-    
-    if age_min < 15 and m5 > YOUNG_PUMP_5M_THRESHOLD:
-        return YOUNG_COOLDOWN
-    elif age_min >= 15 and m5 > OLD_PUMP_5M_THRESHOLD:
-        return OLD_COOLDOWN
+    if m5 > YOUNG_PUMP_5M_THRESHOLD:
+        return YOUNG_COOLDOWN  # 30s
     return 0  # No cooldown, buy immediately
 
-def add_to_cooldown(addr, token_data, result):
-    """Add token to cooldown watch list"""
+def add_to_cooldown(addr, token_data, result, dex_data=None):
+    """Add token to cooldown watch list - v6.6 state machine"""
     cooldown_secs = determine_cooldown(result)
     if cooldown_secs == 0:
-        # No cooldown needed, buy immediately
-        return False
+        return False  # Buy immediately
     
+    now_ts = time.time()
     COOLDOWN_WATCH[addr] = {
-        'first_seen': time.time(),
-        'cooldown_end': time.time() + cooldown_secs,
+        'first_seen': now_ts,
+        'cooldown_end': now_ts + cooldown_secs,
+        'state': STATE_COOLDOWN,
         'token_data': token_data,
         'result': result,
-        'recheck_count': 0,
+        'dex_data': dex_data,
         'prev_chg1': None,
-        'peak_mcap': result['mcap'],
-        'entry_price': result['entry_price'],
+        'recheck_count': 0,
+        'local_peak_mcap': result['mcap'],  # Track local peak during cooldown
+        'lowest_mcap': result['mcap'],       # Track lowest mcap for price stability
         'price_at_add': result['entry_price'],
-        'consecutive_drops': 0,
-        'instability_count': 0,
+        'price_at_state_change': result['entry_price'],
         'prev_h1': result['h1'],
+        '_ready_to_buy': False,
     }
-    print(f"   ⏳ {result['token']}: added to cooldown ({cooldown_secs}s)")
+    print(f"   ⏳ {result['token']}: cooldown {cooldown_secs}s (m5={result['m5']:+.1f}%)")
     return True
+
+def check_deterioration(chg1, prev_chg1):
+    """Check if chg1 dropped >3% from previous — only applies in VERIFY/RECOVERY"""
+    if prev_chg1 is None or chg1 is None:
+        return False
+    if prev_chg1 <= 0:
+        return False
+    drop = prev_chg1 - chg1
+    return drop > CHG1_DROP_REJECT
 
 def check_cooldown_watch():
     """Check and process cooldown watch list"""
