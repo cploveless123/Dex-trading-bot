@@ -4184,3 +4184,296 @@ Checking every 5s
   RichStarry: error fetching mcap
   FATOU: error fetching mcap
   RichStarry: error fetching mcap
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+[11:00:25] Monitor alive | 2917 checks | 2 open | next in 5s
+  FATOU: mcap=$7,499 | gain=+19.8% | peak=$10,861 | dd=+24%
+[TP1_HOLD] Alert sent
+🚀 RichStarry TP1 HIT - HOLDING @ $11,389 (+72.5%)
+  FATOU: mcap=$7,499 | gain=+19.8% | peak=$10,861 | dd=+24%
+  RichStarry: mcap=$11,389 | gain=+72.5% | peak=$11,389 | dd=+0%
+  FATOU: mcap=$7,499 | gain=+19.8% | peak=$10,861 | dd=+24%
+  RichStarry: mcap=$11,389 | gain=+72.5% | peak=$11,389 | dd=+0%
+  FATOU: mcap=$7,499 | gain=+19.8% | peak=$10,861 | dd=+24%
+  RichStarry: mcap=$11,389 | gain=+72.5% | peak=$11,389 | dd=+0%
+  PFPs: mcap=$43,438 | gain=-5.7% | peak=$46,086 | dd=+0%
+  FATOU: mcap=$7,499 | gain=+19.8% | peak=$10,861 | dd=+24%
+  RichStarry: mcap=$10,466 | gain=+58.5% | peak=$11,389 | dd=+8%
+  PFPs: mcap=$43,438 | gain=-5.7% | peak=$46,086 | dd=+0%
+  FATOU: mcap=$7,499 | gain=+19.8% | peak=$10,861 | dd=+24%
+  RichStarry: mcap=$10,466 | gain=+58.5% | peak=$11,389 | dd=+8%
+  PFPs: mcap=$43,438 | gain=-5.7% | peak=$46,086 | dd=+0%
+  FATOU: mcap=$7,499 | gain=+19.8% | peak=$10,861 | dd=+24%
+  RichStarry: mcap=$10,466 | gain=+58.5% | peak=$11,389 | dd=+8%
+  PFPs: mcap=$50,977 | gain=+10.6% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,499 | gain=+19.8% | peak=$10,861 | dd=+24%
+  RichStarry: mcap=$10,466 | gain=+58.5% | peak=$11,389 | dd=+8%
+  PFPs: mcap=$50,977 | gain=+10.6% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,499 | gain=+19.8% | peak=$10,861 | dd=+24%
+  RichStarry: mcap=$10,466 | gain=+58.5% | peak=$11,389 | dd=+8%
+  PFPs: mcap=$50,977 | gain=+10.6% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,499 | gain=+19.8% | peak=$10,861 | dd=+24%
+  RichStarry: mcap=$10,466 | gain=+58.5% | peak=$11,389 | dd=+8%
+  PFPs: mcap=$50,977 | gain=+10.6% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,499 | gain=+19.8% | peak=$10,861 | dd=+24%
+  RichStarry: mcap=$9,849 | gain=+49.2% | peak=$11,389 | dd=+14%
+  PFPs: mcap=$50,977 | gain=+10.6% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,499 | gain=+19.8% | peak=$10,861 | dd=+24%
+  RichStarry: mcap=$9,849 | gain=+49.2% | peak=$11,389 | dd=+14%
+  PFPs: mcap=$49,132 | gain=+6.6% | peak=$50,977 | dd=+0%
+[11:01:28] Monitor alive | 2929 checks | 3 open | next in 5s
+  FATOU: mcap=$7,499 | gain=+19.8% | peak=$10,861 | dd=+24%
+  RichStarry: mcap=$9,849 | gain=+49.2% | peak=$11,389 | dd=+14%
+  PFPs: mcap=$49,132 | gain=+6.6% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,499 | gain=+19.8% | peak=$10,861 | dd=+24%
+  RichStarry: mcap=$9,849 | gain=+49.2% | peak=$11,389 | dd=+14%
+  PFPs: mcap=$49,132 | gain=+6.6% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,499 | gain=+19.8% | peak=$10,861 | dd=+24%
+  RichStarry: mcap=$9,849 | gain=+49.2% | peak=$11,389 | dd=+14%
+  PFPs: mcap=$49,132 | gain=+6.6% | peak=$50,977 | dd=+0%
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+  PFPs: error fetching mcap
+[11:02:30] Monitor alive | 2941 checks | 3 open | next in 5s
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  RichStarry: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: mcap=$7,159 | gain=+14.4% | peak=$10,861 | dd=+28%
+  RichStarry: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: mcap=$7,159 | gain=+14.4% | peak=$10,861 | dd=+28%
+[TRAILING_STOP] Alert sent
+✅ RichStarry TRAILING STOP @ $6,179 (46% drop from peak)
+  PFPs: mcap=$44,602 | gain=-3.2% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,159 | gain=+14.4% | peak=$10,861 | dd=+28%
+  PFPs: mcap=$44,602 | gain=-3.2% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,159 | gain=+14.4% | peak=$10,861 | dd=+28%
+  PFPs: mcap=$43,654 | gain=-5.3% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,159 | gain=+14.4% | peak=$10,861 | dd=+28%
+  PFPs: mcap=$43,654 | gain=-5.3% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,159 | gain=+14.4% | peak=$10,861 | dd=+28%
+  PFPs: mcap=$43,654 | gain=-5.3% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,159 | gain=+14.4% | peak=$10,861 | dd=+28%
+  PFPs: mcap=$43,654 | gain=-5.3% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,159 | gain=+14.4% | peak=$10,861 | dd=+28%
+  PFPs: mcap=$43,654 | gain=-5.3% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,159 | gain=+14.4% | peak=$10,861 | dd=+28%
+  PFPs: mcap=$43,654 | gain=-5.3% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,159 | gain=+14.4% | peak=$10,861 | dd=+28%
+  PFPs: mcap=$42,087 | gain=-8.7% | peak=$50,977 | dd=+0%
+[11:03:32] Monitor alive | 2953 checks | 2 open | next in 5s
+  FATOU: mcap=$7,159 | gain=+14.4% | peak=$10,861 | dd=+28%
+  PFPs: mcap=$42,087 | gain=-8.7% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,159 | gain=+14.4% | peak=$10,861 | dd=+28%
+  PFPs: mcap=$42,087 | gain=-8.7% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,159 | gain=+14.4% | peak=$10,861 | dd=+28%
+  PFPs: mcap=$42,087 | gain=-8.7% | peak=$50,977 | dd=+0%
+  FATOU: mcap=$7,159 | gain=+14.4% | peak=$10,861 | dd=+28%
+  PFPs: mcap=$42,087 | gain=-8.7% | peak=$50,977 | dd=+0%
+  FATOU: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  PFPs: error fetching mcap
+[11:04:34] Monitor alive | 2965 checks | 2 open | next in 5s
+  FATOU: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: error fetching mcap
+  PFPs: error fetching mcap
+  FATOU: mcap=$7,128 | gain=+13.9% | peak=$10,861 | dd=+28%
+[STOP_LOSS] Alert sent
+🔴 PFPs STOP LOSS @ $30,613 (-33.6%)
+  FATOU: mcap=$7,128 | gain=+13.9% | peak=$10,861 | dd=+28%
+  FATOU: mcap=$7,128 | gain=+13.9% | peak=$10,861 | dd=+28%
+  FATOU: mcap=$7,407 | gain=+18.3% | peak=$10,861 | dd=+25%
+  FATOU: mcap=$7,407 | gain=+18.3% | peak=$10,861 | dd=+25%
+  FATOU: mcap=$7,407 | gain=+18.3% | peak=$10,861 | dd=+25%
+  FATOU: mcap=$7,407 | gain=+18.3% | peak=$10,861 | dd=+25%
+  FATOU: mcap=$7,407 | gain=+18.3% | peak=$10,861 | dd=+25%
+  FATOU: mcap=$7,407 | gain=+18.3% | peak=$10,861 | dd=+25%
+[11:05:35] Monitor alive | 2977 checks | 1 open | next in 5s
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,124 | gain=-12.5% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$12,394 | gain=-17.4% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$12,394 | gain=-17.4% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$12,394 | gain=-17.4% | peak=$14,999 | dd=+0%
+[11:06:36] Monitor alive | 2989 checks | 2 open | next in 5s
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$12,394 | gain=-17.4% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$12,394 | gain=-17.4% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$12,394 | gain=-17.4% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,592 | gain=-9.4% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,592 | gain=-9.4% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,592 | gain=-9.4% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,592 | gain=-9.4% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,592 | gain=-9.4% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,592 | gain=-9.4% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,969 | gain=-6.9% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,969 | gain=-6.9% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,969 | gain=-6.9% | peak=$14,999 | dd=+0%
+[11:07:38] Monitor alive | 3001 checks | 2 open | next in 5s
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,969 | gain=-6.9% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,969 | gain=-6.9% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,969 | gain=-6.9% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$12,487 | gain=-16.7% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$12,487 | gain=-16.7% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,406 | gain=+18.3% | peak=$10,861 | dd=+25%
+  Dog: mcap=$12,487 | gain=-16.7% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,410 | gain=+18.4% | peak=$10,861 | dd=+25%
+  Dog: mcap=$12,487 | gain=-16.7% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,410 | gain=+18.4% | peak=$10,861 | dd=+25%
+  Dog: mcap=$12,487 | gain=-16.7% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,410 | gain=+18.4% | peak=$10,861 | dd=+25%
+  Dog: mcap=$14,969 | gain=-0.2% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,410 | gain=+18.4% | peak=$10,861 | dd=+25%
+  Dog: mcap=$14,969 | gain=-0.2% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,410 | gain=+18.4% | peak=$10,861 | dd=+25%
+  Dog: mcap=$14,969 | gain=-0.2% | peak=$14,999 | dd=+0%
+  FATOU: mcap=$7,410 | gain=+18.4% | peak=$10,861 | dd=+25%
+  Dog: mcap=$14,969 | gain=-0.2% | peak=$14,999 | dd=+0%
+[11:08:40] Monitor alive | 3013 checks | 2 open | next in 5s
+  FATOU: mcap=$7,399 | gain=+18.2% | peak=$10,861 | dd=+25%
+  Dog: mcap=$14,969 | gain=-0.2% | peak=$14,999 | dd=+0%
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+[11:09:41] Monitor alive | 3025 checks | 2 open | next in 5s
+  FATOU: mcap=$7,402 | gain=+18.2% | peak=$10,861 | dd=+25%
+  Dog: mcap=$15,520 | gain=+3.5% | peak=$15,520 | dd=+0%
+  FATOU: mcap=$7,402 | gain=+18.2% | peak=$10,861 | dd=+25%
+  Dog: mcap=$15,520 | gain=+3.5% | peak=$15,520 | dd=+0%
+  FATOU: mcap=$7,402 | gain=+18.2% | peak=$10,861 | dd=+25%
+  Dog: mcap=$15,039 | gain=+0.3% | peak=$15,520 | dd=+0%
+  FATOU: mcap=$7,402 | gain=+18.2% | peak=$10,861 | dd=+25%
+  Dog: mcap=$15,039 | gain=+0.3% | peak=$15,520 | dd=+0%
+  FATOU: mcap=$7,402 | gain=+18.2% | peak=$10,861 | dd=+25%
+  Dog: mcap=$15,039 | gain=+0.3% | peak=$15,520 | dd=+0%
+  FATOU: mcap=$7,402 | gain=+18.2% | peak=$10,861 | dd=+25%
+  Dog: mcap=$15,039 | gain=+0.3% | peak=$15,520 | dd=+0%
+  FATOU: mcap=$7,402 | gain=+18.2% | peak=$10,861 | dd=+25%
+  Dog: mcap=$15,039 | gain=+0.3% | peak=$15,520 | dd=+0%
+  FATOU: mcap=$7,402 | gain=+18.2% | peak=$10,861 | dd=+25%
+  Dog: mcap=$15,039 | gain=+0.3% | peak=$15,520 | dd=+0%
+  FATOU: mcap=$7,402 | gain=+18.2% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,229 | gain=-11.8% | peak=$15,520 | dd=+0%
+  FATOU: mcap=$7,402 | gain=+18.2% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,229 | gain=-11.8% | peak=$15,520 | dd=+0%
+  FATOU: mcap=$7,402 | gain=+18.2% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,229 | gain=-11.8% | peak=$15,520 | dd=+0%
+  FATOU: mcap=$7,402 | gain=+18.2% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,229 | gain=-11.8% | peak=$15,520 | dd=+0%
+[11:10:43] Monitor alive | 3037 checks | 2 open | next in 5s
+  FATOU: mcap=$7,402 | gain=+18.2% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,229 | gain=-11.8% | peak=$15,520 | dd=+0%
+  FATOU: mcap=$7,402 | gain=+18.2% | peak=$10,861 | dd=+25%
+  Dog: mcap=$13,229 | gain=-11.8% | peak=$15,520 | dd=+0%
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
+  FATOU: error fetching mcap
+  Dog: error fetching mcap
