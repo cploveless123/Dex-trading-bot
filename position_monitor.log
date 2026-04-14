@@ -7939,3 +7939,174 @@ Checking every 5s
   DUKE: mcap=$18,224 | gain=+39.9% | peak=$20,082 | dd=+9%
   DUKE: mcap=$18,224 | gain=+39.9% | peak=$20,082 | dd=+9%
   DUKE: mcap=$18,224 | gain=+39.9% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,226 | gain=+39.9% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,226 | gain=+39.9% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,226 | gain=+39.9% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,226 | gain=+39.9% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,226 | gain=+39.9% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,226 | gain=+39.9% | peak=$20,082 | dd=+9%
+[13:33:13] Monitor alive | 613 checks | 1 open | next in 5s
+  DUKE: mcap=$18,238 | gain=+40.0% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,238 | gain=+40.0% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,238 | gain=+40.0% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,238 | gain=+40.0% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,238 | gain=+40.0% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,238 | gain=+40.0% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,217 | gain=+39.8% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,217 | gain=+39.8% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,217 | gain=+39.8% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,217 | gain=+39.8% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,217 | gain=+39.8% | peak=$20,082 | dd=+9%
+  DUKE: mcap=$18,217 | gain=+39.8% | peak=$20,082 | dd=+9%
+[13:34:14] Monitor alive | 625 checks | 1 open | next in 5s
+  DUKE: mcap=$19,088 | gain=+46.5% | peak=$20,082 | dd=+5%
+  DUKE: mcap=$19,088 | gain=+46.5% | peak=$20,082 | dd=+5%
+  DUKE: mcap=$19,088 | gain=+46.5% | peak=$20,082 | dd=+5%
+  DUKE: mcap=$19,088 | gain=+46.5% | peak=$20,082 | dd=+5%
+  DUKE: mcap=$19,088 | gain=+46.5% | peak=$20,082 | dd=+5%
+  DUKE: mcap=$19,088 | gain=+46.5% | peak=$20,082 | dd=+5%
+  DUKE: error fetching mcap
+  DUKE: error fetching mcap
+  DUKE: error fetching mcap
+  DUKE: error fetching mcap
+  DUKE: error fetching mcap
+  DUKE: error fetching mcap
+[13:35:15] Monitor alive | 637 checks | 1 open | next in 5s
+  DUKE: error fetching mcap
+  DUKE: error fetching mcap
+  DUKE: error fetching mcap
+  DUKE: error fetching mcap
+  DUKE: error fetching mcap
+  DUKE: error fetching mcap
+  DUKE: mcap=$18,193 | gain=+39.6% | peak=$20,082 | dd=+9%
+  comrades: mcap=$17,913 | gain=-12.0% | peak=$20,346 | dd=+0%
+  DUKE: mcap=$18,193 | gain=+39.6% | peak=$20,082 | dd=+9%
+  comrades: mcap=$17,913 | gain=-12.0% | peak=$20,346 | dd=+0%
+  DUKE: mcap=$18,193 | gain=+39.6% | peak=$20,082 | dd=+9%
+  comrades: mcap=$17,913 | gain=-12.0% | peak=$20,346 | dd=+0%
+  DUKE: mcap=$18,193 | gain=+39.6% | peak=$20,082 | dd=+9%
+  comrades: mcap=$20,291 | gain=-0.3% | peak=$20,346 | dd=+0%
+  DUKE: mcap=$18,193 | gain=+39.6% | peak=$20,082 | dd=+9%
+  comrades: mcap=$20,291 | gain=-0.3% | peak=$20,346 | dd=+0%
+  DUKE: mcap=$18,370 | gain=+41.0% | peak=$20,082 | dd=+9%
+  comrades: mcap=$20,291 | gain=-0.3% | peak=$20,346 | dd=+0%
+[13:36:16] Monitor alive | 649 checks | 2 open | next in 5s
+  DUKE: mcap=$18,370 | gain=+41.0% | peak=$20,082 | dd=+9%
+  comrades: mcap=$20,291 | gain=-0.3% | peak=$20,346 | dd=+0%
+  DUKE: mcap=$18,370 | gain=+41.0% | peak=$20,082 | dd=+9%
+  comrades: mcap=$20,291 | gain=-0.3% | peak=$20,346 | dd=+0%
+  DUKE: mcap=$18,370 | gain=+41.0% | peak=$20,082 | dd=+9%
+  comrades: mcap=$20,291 | gain=-0.3% | peak=$20,346 | dd=+0%
+  DUKE: mcap=$18,370 | gain=+41.0% | peak=$20,082 | dd=+9%
+  comrades: mcap=$20,896 | gain=+2.7% | peak=$20,896 | dd=+0%
+  DUKE: mcap=$18,370 | gain=+41.0% | peak=$20,082 | dd=+9%
+  comrades: mcap=$20,896 | gain=+2.7% | peak=$20,896 | dd=+0%
+  DUKE: mcap=$18,370 | gain=+41.0% | peak=$20,082 | dd=+9%
+  comrades: mcap=$20,896 | gain=+2.7% | peak=$20,896 | dd=+0%
+  DUKE: mcap=$18,370 | gain=+41.0% | peak=$20,082 | dd=+9%
+  comrades: mcap=$20,896 | gain=+2.7% | peak=$20,896 | dd=+0%
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+[13:37:18] Monitor alive | 661 checks | 2 open | next in 5s
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: mcap=$18,397 | gain=+41.2% | peak=$20,082 | dd=+8%
+  comrades: mcap=$21,288 | gain=+4.6% | peak=$21,288 | dd=+0%
+  DUKE: mcap=$18,397 | gain=+41.2% | peak=$20,082 | dd=+8%
+  comrades: mcap=$19,672 | gain=-3.3% | peak=$21,288 | dd=+0%
+  DUKE: mcap=$18,397 | gain=+41.2% | peak=$20,082 | dd=+8%
+  comrades: mcap=$19,672 | gain=-3.3% | peak=$21,288 | dd=+0%
+  DUKE: mcap=$18,397 | gain=+41.2% | peak=$20,082 | dd=+8%
+  comrades: mcap=$19,672 | gain=-3.3% | peak=$21,288 | dd=+0%
+  DUKE: mcap=$18,565 | gain=+42.5% | peak=$20,082 | dd=+8%
+  comrades: mcap=$19,672 | gain=-3.3% | peak=$21,288 | dd=+0%
+[13:38:20] Monitor alive | 673 checks | 2 open | next in 5s
+  DUKE: mcap=$18,565 | gain=+42.5% | peak=$20,082 | dd=+8%
+  comrades: mcap=$19,672 | gain=-3.3% | peak=$21,288 | dd=+0%
+  DUKE: mcap=$18,565 | gain=+42.5% | peak=$20,082 | dd=+8%
+  comrades: mcap=$19,672 | gain=-3.3% | peak=$21,288 | dd=+0%
+  DUKE: mcap=$18,565 | gain=+42.5% | peak=$20,082 | dd=+8%
+  comrades: mcap=$18,624 | gain=-8.5% | peak=$21,288 | dd=+0%
+  DUKE: mcap=$18,565 | gain=+42.5% | peak=$20,082 | dd=+8%
+  comrades: mcap=$18,624 | gain=-8.5% | peak=$21,288 | dd=+0%
+  DUKE: mcap=$18,565 | gain=+42.5% | peak=$20,082 | dd=+8%
+  comrades: mcap=$18,624 | gain=-8.5% | peak=$21,288 | dd=+0%
+  DUKE: mcap=$20,433 | gain=+56.8% | peak=$20,433 | dd=-2%
+  comrades: mcap=$18,624 | gain=-8.5% | peak=$21,288 | dd=+0%
+  DUKE: mcap=$20,433 | gain=+56.8% | peak=$20,433 | dd=-2%
+  comrades: mcap=$18,624 | gain=-8.5% | peak=$21,288 | dd=+0%
+  DUKE: mcap=$20,433 | gain=+56.8% | peak=$20,433 | dd=-2%
+  comrades: mcap=$18,624 | gain=-8.5% | peak=$21,288 | dd=+0%
+  DUKE: mcap=$20,433 | gain=+56.8% | peak=$20,433 | dd=-2%
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+[13:39:22] Monitor alive | 685 checks | 2 open | next in 5s
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: error fetching mcap
+  comrades: error fetching mcap
+  DUKE: mcap=$20,616 | gain=+58.2% | peak=$20,616 | dd=-3%
+[STOP_LOSS] Alert sent
+🔴 comrades STOP LOSS @ $13,183 (-35.2%)
+  DUKE: mcap=$20,616 | gain=+58.2% | peak=$20,616 | dd=-3%
+  DUKE: mcap=$19,841 | gain=+52.3% | peak=$20,616 | dd=+1%
+  DUKE: mcap=$19,841 | gain=+52.3% | peak=$20,616 | dd=+1%
+  LIFE: mcap=$18,681 | gain=+4.7% | peak=$18,681 | dd=+0%
+[13:40:24] Monitor alive | 697 checks | 2 open | next in 5s
+  DUKE: mcap=$19,841 | gain=+52.3% | peak=$20,616 | dd=+1%
+  LIFE: mcap=$18,681 | gain=+4.7% | peak=$18,681 | dd=+0%
+  DUKE: mcap=$19,841 | gain=+52.3% | peak=$20,616 | dd=+1%
+  LIFE: mcap=$18,681 | gain=+4.7% | peak=$18,681 | dd=+0%
+  DUKE: mcap=$19,841 | gain=+52.3% | peak=$20,616 | dd=+1%
+  LIFE: mcap=$18,681 | gain=+4.7% | peak=$18,681 | dd=+0%
+  DUKE: mcap=$19,841 | gain=+52.3% | peak=$20,616 | dd=+1%
+  LIFE: mcap=$18,681 | gain=+4.7% | peak=$18,681 | dd=+0%
+  DUKE: mcap=$19,860 | gain=+52.4% | peak=$20,616 | dd=+1%
+  LIFE: mcap=$15,849 | gain=-11.2% | peak=$18,681 | dd=+0%
+  DUKE: mcap=$19,860 | gain=+52.4% | peak=$20,616 | dd=+1%
+  LIFE: mcap=$15,849 | gain=-11.2% | peak=$18,681 | dd=+0%
+  DUKE: mcap=$19,860 | gain=+52.4% | peak=$20,616 | dd=+1%
+  LIFE: mcap=$15,849 | gain=-11.2% | peak=$18,681 | dd=+0%
+  DUKE: mcap=$19,860 | gain=+52.4% | peak=$20,616 | dd=+1%
+  LIFE: mcap=$15,849 | gain=-11.2% | peak=$18,681 | dd=+0%
+  DUKE: mcap=$19,860 | gain=+52.4% | peak=$20,616 | dd=+1%
+  LIFE: mcap=$15,849 | gain=-11.2% | peak=$18,681 | dd=+0%
+  DUKE: mcap=$19,860 | gain=+52.4% | peak=$20,616 | dd=+1%
+  LIFE: mcap=$18,112 | gain=+1.5% | peak=$18,681 | dd=+0%
