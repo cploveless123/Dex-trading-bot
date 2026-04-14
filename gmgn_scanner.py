@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GMGN Scanner v6.7 - Wilson Bot
+GMGN Scanner v6.8 - Wilson Bot
 Primary scanner using GMGN data source
 
 Decision Flow:
@@ -21,17 +21,15 @@ from trading_constants import (
     MIN_5MIN_VOLUME, MIN_HOLDERS, TOP10_HOLDER_MAX,
     BS_RATIO_NEW, BS_RATIO_OLD, BS_PUMP_FUN_OK,
     H1_MOMENTUM_MIN, H24_MOMENTUM_MIN,
-    MIN_CHG1_FOR_BUY, CHG1_NONE_M5_REJECT, CHG1_IMPROVEMENT_MIN,
+    MIN_CHG1_FOR_BUY, CHG1_NONE_M5_REJECT, CHG1_IMPROVEMENT_MIN, CHG1_MIN_VALUE,
     DIP_MIN, DIP_MAX, ATH_DIVERGENCE_MAX,
-    YOUNG_PUMP_5M_THRESHOLD, OLD_PUMP_5M_THRESHOLD,
-    YOUNG_COOLDOWN, OLD_COOLDOWN,
-    CHG1_YOUNG_TRIGGER, CHG1_OLD_TRIGGER, CHG1_RECOVERY_TRIGGER,
+    PUMP_5M_THRESHOLD, BASE_COOLDOWN,
     CHG1_RECHECK_DELAY, CHG1_VERIFY_DELAY,
-    CHG1_DROP_REJECT,
+    CHG1_DROP_REJECT, VERIFY_CONSECUTIVE_OK,
     MAX_RECHECKS, REJECTED_REVISIT_DELAY,
     PRICE_DROP_REJECT, PRICE_DROP_WAIT_1, PRICE_DROP_WAIT_2, PRICE_DROP_WAIT_3, MCAP_INCREASE_CONFIRM,
     H1_INSTABILITY_MULTIPLIER,
-    H1_PARABOLIC_REJECT, FALLING_KNIFE_CONSECUTIVE,
+    H1_PARABOLIC_REJECT,
     LIQUIDITY_MCAP_THRESHOLD, LIQUIDITY_MIN,
     TP1_PERCENT, TP1_TRAILING_PCT, TP1_SELL_PCT,
     TP2_PERCENT, TP2_TRAILING_PCT, TP2_SELL_PCT,
@@ -40,8 +38,7 @@ from trading_constants import (
     TP5_PERCENT, TP5_TRAILING_PCT, TP5_SELL_PCT,
     TRAILING_STOP_PCT, STOP_LOSS_PERCENT,
     ALLOWED_EXCHANGES, REJECTED_EXCHANGES,
-    MIN_GMGN_SCORE, GMGN_VOL_MCAP_MIN,
-    TICKER_BLACKLIST, SIM_RESET_TIMESTAMP,
+    SIM_RESET_TIMESTAMP,
     MAX_OPEN_POSITIONS, POSITION_SIZE,
     LOW_VOLUME_THRESHOLD, SCAN_INTERVAL,
     STATE_COOLDOWN, STATE_WAITING, STATE_VERIFICATION,
@@ -433,63 +430,38 @@ def scan_token(token_data, dex_data, whales):
     }, "PASS"
 
 def determine_cooldown(result):
-    """v6.7: cooldown if m5 > -5%"""
+    """v6.8: cooldown if m5 > -5%"""
     m5 = result['m5']
-    if m5 > YOUNG_PUMP_5M_THRESHOLD:
-        return YOUNG_COOLDOWN  # 45s
+    if m5 > PUMP_5M_THRESHOLD:
+        return BASE_COOLDOWN  # 45s
     return 0  # No cooldown, buy immediately
 
-def get_cooldown_path(result):
-    """v6.7: Determine YOUNG or OLD path"""
-    age_min = result['age_min']
-    m5 = result['m5']
-    if age_min < 15 and m5 > YOUNG_PUMP_5M_THRESHOLD:
-        return 'YOUNG'  # 45s, trigger +3%, recovery if chg1 < -5%
-    return 'OLD'  # 30s, trigger +1%
-
 def add_to_cooldown(addr, token_data, result, dex_data=None):
-    """Add token to cooldown watch list - v6.7 state machine"""
+    """Add token to cooldown watch list - v6.8 unified state machine"""
     cooldown_secs = determine_cooldown(result)
     if cooldown_secs == 0:
         return False  # Buy immediately
     
-    path = get_cooldown_path(result)
     now_ts = time.time()
-    
     COOLDOWN_WATCH[addr] = {
         'first_seen': now_ts,
         'cooldown_end': now_ts + cooldown_secs,
         'state': STATE_COOLDOWN,
-        'path': path,  # 'YOUNG' or 'OLD'
         'token_data': token_data,
         'result': result,
         'dex_data': dex_data,
-        'prev_chg1': None,
-        'baseline_chg1': None,  # chg1 at time of entering WAITING state
-        'consecutive_ok': 0,     # consecutive rechecks with chg1 > +2% from baseline
+        'prev_chg1': None,       # chg1 from previous recheck
+        'chg1_at_cooldown_start': result.get('chg1'),  # baseline chg1 when cooldown started
+        'consecutive_ok': 0,      # consecutive rechecks with +3% improvement
         'recheck_count': 0,
         'local_peak_mcap': result['mcap'],
         'lowest_mcap': result['mcap'],
-        'price_at_add': result['entry_price'],
-        'price_at_last_check': result['entry_price'],  # for price stability (prev check)
+        'price_at_last_check': result['entry_price'],
         'prev_h1': result['h1'],
-        '_triggered': False,    # whether we've entered verify
-        '_deteriorated': False, # whether deterioration has happened (no more buys after)
+        'price_drop_consecutive': 0,  # consecutive >3% drops
     }
-    
-    path_label = 'YOUNG' if path == 'YOUNG' else 'OLD'
-    trigger = CHG1_YOUNG_TRIGGER if path == 'YOUNG' else CHG1_OLD_TRIGGER
-    print(f"   ⏳ {result['token']}: {path_label} cooldown {cooldown_secs}s | chg1 trigger +{trigger}%")
+    print(f"   ⏳ {result['token']}: cooldown {cooldown_secs}s (m5={result['m5']:+.1f}%)")
     return True
-
-def check_deterioration(chg1, prev_chg1):
-    """Check if chg1 dropped >3% from previous check (in VERIFY only)"""
-    if prev_chg1 is None or chg1 is None:
-        return False
-    if prev_chg1 <= 0:
-        return False
-    drop = prev_chg1 - chg1
-    return drop > CHG1_DROP_REJECT
 
 def check_cooldown_watch():
     """
