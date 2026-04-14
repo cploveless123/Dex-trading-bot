@@ -15432,3 +15432,28 @@ Checking every 5s
 [20:57:09] Monitor alive | 925 checks | 0 open | next in 5s
 [20:58:09] Monitor alive | 937 checks | 0 open | next in 5s
 [20:59:09] Monitor alive | 949 checks | 0 open | next in 5s
+[21:00:09] Monitor alive | 961 checks | 0 open | next in 5s
+[21:01:09] Monitor alive | 973 checks | 0 open | next in 5s
+[21:02:09] Monitor alive | 985 checks | 0 open | next in 5s
+[21:03:09] Monitor alive | 997 checks | 0 open | next in 5s
+[21:04:09] Monitor alive | 1009 checks | 0 open | next in 5s
+[21:05:09] Monitor alive | 1021 checks | 0 open | next in 5s
+[21:06:09] Monitor alive | 1033 checks | 0 open | next in 5s
+[21:07:09] Monitor alive | 1045 checks | 0 open | next in 5s
+[21:08:09] Monitor alive | 1057 checks | 0 open | next in 5s
+[21:09:10] Monitor alive | 1069 checks | 0 open | next in 5s
+[21:10:10] Monitor alive | 1081 checks | 0 open | next in 5s
+[21:11:10] Monitor alive | 1093 checks | 0 open | next in 5s
+[21:12:10] Monitor alive | 1105 checks | 0 open | next in 5s
+[21:13:10] Monitor alive | 1117 checks | 0 open | next in 5s
+[21:14:10] Monitor alive | 1129 checks | 0 open | next in 5s
+[21:15:10] Monitor alive | 1141 checks | 0 open | next in 5s
+Traceback (most recent call last):
+  File "/root/Dex-trading-bot/position_monitor.py", line 19, in <module>
+    from trading_constants import (
+ImportError: cannot import name 'LIQUIDITY_MCAP_THRESHOLD' from 'trading_constants' (/root/Dex-trading-bot/trading_constants.py)
+Position Monitor v7.0 starting...
+Exit Plan: TP1 +50% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -25%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
