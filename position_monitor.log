@@ -9646,3 +9646,975 @@ Checking every 5s
 [15:33:39] Monitor alive | 13 checks | 0 open | next in 5s
 [15:34:39] Monitor alive | 25 checks | 0 open | next in 5s
 [15:35:39] Monitor alive | 37 checks | 0 open | next in 5s
+[15:36:39] Monitor alive | 49 checks | 0 open | next in 5s
+[15:37:39] Monitor alive | 61 checks | 0 open | next in 5s
+[15:38:39] Monitor alive | 73 checks | 0 open | next in 5s
+[15:39:39] Monitor alive | 85 checks | 0 open | next in 5s
+  Worm: mcap=$4,848 | gain=-1.4% | peak=$4,918 | dd=+0%
+  Worm: mcap=$4,848 | gain=-1.4% | peak=$4,918 | dd=+0%
+  Worm: mcap=$4,848 | gain=-1.4% | peak=$4,918 | dd=+0%
+  Worm: mcap=$4,848 | gain=-1.4% | peak=$4,918 | dd=+0%
+  Worm: mcap=$4,848 | gain=-1.4% | peak=$4,918 | dd=+0%
+  Worm: mcap=$4,986 | gain=+1.4% | peak=$4,986 | dd=+0%
+  Worm: mcap=$4,986 | gain=+1.4% | peak=$4,986 | dd=+0%
+  Worm: mcap=$4,986 | gain=+1.4% | peak=$4,986 | dd=+0%
+  Worm: mcap=$4,986 | gain=+1.4% | peak=$4,986 | dd=+0%
+  Worm: mcap=$4,986 | gain=+1.4% | peak=$4,986 | dd=+0%
+  PEPE: mcap=$37,838 | gain=-5.0% | peak=$39,831 | dd=+0%
+  Worm: mcap=$4,986 | gain=+1.4% | peak=$4,986 | dd=+0%
+  PEPE: mcap=$37,838 | gain=-5.0% | peak=$39,831 | dd=+0%
+  Worm: mcap=$5,186 | gain=+5.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$37,838 | gain=-5.0% | peak=$39,831 | dd=+0%
+[15:40:40] Monitor alive | 97 checks | 2 open | next in 5s
+  Worm: mcap=$5,186 | gain=+5.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$37,838 | gain=-5.0% | peak=$39,831 | dd=+0%
+  PEPE: mcap=$6,784 | gain=+8.0% | peak=$6,784 | dd=+0%
+  Worm: mcap=$5,186 | gain=+5.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$37,838 | gain=-5.0% | peak=$39,831 | dd=+0%
+  PEPE: mcap=$6,784 | gain=+8.0% | peak=$6,784 | dd=+0%
+  Worm: mcap=$5,186 | gain=+5.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$37,218 | gain=-6.6% | peak=$39,831 | dd=+0%
+  PEPE: mcap=$6,784 | gain=+8.0% | peak=$6,784 | dd=+0%
+  Worm: mcap=$5,186 | gain=+5.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$37,218 | gain=-6.6% | peak=$39,831 | dd=+0%
+  PEPE: mcap=$6,784 | gain=+8.0% | peak=$6,784 | dd=+0%
+  Worm: mcap=$5,186 | gain=+5.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$37,218 | gain=-6.6% | peak=$39,831 | dd=+0%
+  PEPE: mcap=$5,730 | gain=-8.7% | peak=$6,784 | dd=+0%
+  Worm: mcap=$4,966 | gain=+1.0% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$37,218 | gain=-6.6% | peak=$39,831 | dd=+0%
+  PEPE: mcap=$5,730 | gain=-8.7% | peak=$6,784 | dd=+0%
+  Worm: mcap=$4,966 | gain=+1.0% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$37,218 | gain=-6.6% | peak=$39,831 | dd=+0%
+  PEPE: mcap=$5,730 | gain=-8.7% | peak=$6,784 | dd=+0%
+  Worm: mcap=$4,966 | gain=+1.0% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$37,218 | gain=-6.6% | peak=$39,831 | dd=+0%
+  PEPE: mcap=$5,730 | gain=-8.7% | peak=$6,784 | dd=+0%
+  Worm: mcap=$4,966 | gain=+1.0% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$37,381 | gain=-6.2% | peak=$39,831 | dd=+0%
+  PEPE: mcap=$5,730 | gain=-8.7% | peak=$6,784 | dd=+0%
+  PUMPMONEY: mcap=$19,167 | gain=-0.7% | peak=$19,310 | dd=+0%
+  Worm: mcap=$4,966 | gain=+1.0% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$37,381 | gain=-6.2% | peak=$39,831 | dd=+0%
+  PEPE: mcap=$5,730 | gain=-8.7% | peak=$6,784 | dd=+0%
+  PUMPMONEY: mcap=$19,167 | gain=-0.7% | peak=$19,310 | dd=+0%
+  Worm: mcap=$4,966 | gain=+1.0% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$37,381 | gain=-6.2% | peak=$39,831 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 PEPE STOP LOSS @ $4,920 (-21.6%)
+  PUMPMONEY: mcap=$19,167 | gain=-0.7% | peak=$19,310 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$37,381 | gain=-6.2% | peak=$39,831 | dd=+0%
+  PUMPMONEY: mcap=$19,167 | gain=-0.7% | peak=$19,310 | dd=+0%
+  Narwhals: mcap=$10,485 | gain=-4.1% | peak=$10,935 | dd=+0%
+[15:41:43] Monitor alive | 109 checks | 4 open | next in 5s
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$37,381 | gain=-6.2% | peak=$39,831 | dd=+0%
+  PUMPMONEY: mcap=$18,501 | gain=-4.2% | peak=$19,310 | dd=+0%
+  Narwhals: mcap=$10,485 | gain=-4.1% | peak=$10,935 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$41,752 | gain=+4.8% | peak=$41,752 | dd=+0%
+  PUMPMONEY: mcap=$18,501 | gain=-4.2% | peak=$19,310 | dd=+0%
+  Narwhals: mcap=$10,485 | gain=-4.1% | peak=$10,935 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$41,752 | gain=+4.8% | peak=$41,752 | dd=+0%
+  PUMPMONEY: mcap=$18,501 | gain=-4.2% | peak=$19,310 | dd=+0%
+  Narwhals: mcap=$11,384 | gain=+4.1% | peak=$11,384 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$41,752 | gain=+4.8% | peak=$41,752 | dd=+0%
+  PUMPMONEY: mcap=$18,501 | gain=-4.2% | peak=$19,310 | dd=+0%
+  Narwhals: mcap=$11,384 | gain=+4.1% | peak=$11,384 | dd=+0%
+  dream: mcap=$12,934 | gain=-0.5% | peak=$12,995 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$41,752 | gain=+4.8% | peak=$41,752 | dd=+0%
+  PUMPMONEY: mcap=$18,501 | gain=-4.2% | peak=$19,310 | dd=+0%
+  Narwhals: mcap=$11,384 | gain=+4.1% | peak=$11,384 | dd=+0%
+  dream: mcap=$12,934 | gain=-0.5% | peak=$12,995 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$41,752 | gain=+4.8% | peak=$41,752 | dd=+0%
+  PUMPMONEY: mcap=$18,501 | gain=-4.2% | peak=$19,310 | dd=+0%
+  Narwhals: mcap=$11,384 | gain=+4.1% | peak=$11,384 | dd=+0%
+  dream: mcap=$13,114 | gain=+0.9% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$41,752 | gain=+4.8% | peak=$41,752 | dd=+0%
+  PUMPMONEY: mcap=$20,169 | gain=+4.5% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$11,384 | gain=+4.1% | peak=$11,384 | dd=+0%
+  dream: mcap=$13,114 | gain=+0.9% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$32,649 | gain=-18.0% | peak=$41,752 | dd=+0%
+  PUMPMONEY: mcap=$20,169 | gain=+4.5% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$11,384 | gain=+4.1% | peak=$11,384 | dd=+0%
+  dream: mcap=$13,114 | gain=+0.9% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$32,649 | gain=-18.0% | peak=$41,752 | dd=+0%
+  PUMPMONEY: mcap=$20,169 | gain=+4.5% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$11,361 | gain=+3.9% | peak=$11,384 | dd=+0%
+  dream: mcap=$13,114 | gain=+0.9% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$32,649 | gain=-18.0% | peak=$41,752 | dd=+0%
+  PUMPMONEY: mcap=$20,169 | gain=+4.5% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$11,361 | gain=+3.9% | peak=$11,384 | dd=+0%
+  dream: mcap=$13,114 | gain=+0.9% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$32,649 | gain=-18.0% | peak=$41,752 | dd=+0%
+  PUMPMONEY: mcap=$20,169 | gain=+4.5% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$11,361 | gain=+3.9% | peak=$11,384 | dd=+0%
+  dream: mcap=$13,114 | gain=+0.9% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PEPE: mcap=$32,649 | gain=-18.0% | peak=$41,752 | dd=+0%
+  PUMPMONEY: mcap=$19,463 | gain=+0.8% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$11,361 | gain=+3.9% | peak=$11,384 | dd=+0%
+  dream: mcap=$13,048 | gain=+0.4% | peak=$13,114 | dd=+0%
+[15:42:49] Monitor alive | 121 checks | 5 open | next in 5s
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 PEPE STOP LOSS @ $28,969 (-27.3%)
+  PUMPMONEY: mcap=$19,463 | gain=+0.8% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$11,361 | gain=+3.9% | peak=$11,384 | dd=+0%
+  dream: mcap=$13,048 | gain=+0.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,463 | gain=+0.8% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$14,035 | gain=+28.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$13,048 | gain=+0.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,463 | gain=+0.8% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$14,035 | gain=+28.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$13,048 | gain=+0.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,463 | gain=+0.8% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$14,035 | gain=+28.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$13,048 | gain=+0.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,062 | gain=-1.3% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$14,035 | gain=+28.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,688 | gain=-2.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,062 | gain=-1.3% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$14,035 | gain=+28.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,688 | gain=-2.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,062 | gain=-1.3% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$14,035 | gain=+28.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,688 | gain=-2.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,062 | gain=-1.3% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$14,009 | gain=+28.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,688 | gain=-2.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,062 | gain=-1.3% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$14,009 | gain=+28.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,688 | gain=-2.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,700 | gain=-4.4% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,062 | gain=-1.3% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$14,009 | gain=+28.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,688 | gain=-2.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,704 | gain=-4.3% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,729 | gain=+2.2% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$14,009 | gain=+28.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,696 | gain=-2.3% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,704 | gain=-4.3% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,729 | gain=+2.2% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$14,009 | gain=+28.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,696 | gain=-2.3% | peak=$13,114 | dd=+0%
+[15:43:53] Monitor alive | 133 checks | 4 open | next in 5s
+  Worm: mcap=$4,704 | gain=-4.3% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,729 | gain=+2.2% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$14,009 | gain=+28.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,696 | gain=-2.3% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,704 | gain=-4.3% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,729 | gain=+2.2% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$13,993 | gain=+28.0% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,696 | gain=-2.3% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,704 | gain=-4.3% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,729 | gain=+2.2% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$13,993 | gain=+28.0% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,696 | gain=-2.3% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,704 | gain=-4.3% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,729 | gain=+2.2% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$13,993 | gain=+28.0% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,677 | gain=-2.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,618 | gain=-6.1% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,806 | gain=+2.6% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$13,993 | gain=+28.0% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,677 | gain=-2.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,618 | gain=-6.1% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,806 | gain=+2.6% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$13,993 | gain=+28.0% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,677 | gain=-2.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,618 | gain=-6.1% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,806 | gain=+2.6% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$13,993 | gain=+28.0% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,677 | gain=-2.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,618 | gain=-6.1% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,806 | gain=+2.6% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$13,251 | gain=+21.2% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,677 | gain=-2.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,618 | gain=-6.1% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,806 | gain=+2.6% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$13,251 | gain=+21.2% | peak=$14,035 | dd=+0%
+  dream: mcap=$12,677 | gain=-2.4% | peak=$13,114 | dd=+0%
+  Worm: mcap=$4,618 | gain=-6.1% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$19,806 | gain=+2.6% | peak=$20,169 | dd=+0%
+  Narwhals: mcap=$13,251 | gain=+21.2% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,163 | gain=+9.0% | peak=$14,163 | dd=+0%
+  Worm: mcap=$4,610 | gain=-6.3% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$22,348 | gain=+15.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,251 | gain=+21.2% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,163 | gain=+9.0% | peak=$14,163 | dd=+0%
+  Worm: mcap=$4,610 | gain=-6.3% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$22,348 | gain=+15.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,251 | gain=+21.2% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,163 | gain=+9.0% | peak=$14,163 | dd=+0%
+[15:44:56] Monitor alive | 145 checks | 4 open | next in 5s
+  Worm: mcap=$4,610 | gain=-6.3% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$22,348 | gain=+15.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$10,774 | gain=-1.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,163 | gain=+9.0% | peak=$14,163 | dd=+0%
+  Worm: mcap=$4,610 | gain=-6.3% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$22,348 | gain=+15.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$10,774 | gain=-1.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,163 | gain=+9.0% | peak=$14,163 | dd=+0%
+  Worm: mcap=$4,610 | gain=-6.3% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$22,348 | gain=+15.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$10,774 | gain=-1.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,163 | gain=+9.0% | peak=$14,163 | dd=+0%
+  Worm: mcap=$4,610 | gain=-6.3% | peak=$5,186 | dd=+0%
+  PUMPMONEY: mcap=$20,902 | gain=+8.2% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$10,774 | gain=-1.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,561 | gain=+12.1% | peak=$14,561 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Worm STOP LOSS @ $3,520 (-28.4%)
+  PUMPMONEY: mcap=$20,902 | gain=+8.2% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$10,774 | gain=-1.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,561 | gain=+12.1% | peak=$14,561 | dd=+0%
+  PUMPMONEY: mcap=$20,902 | gain=+8.2% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$10,774 | gain=-1.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,561 | gain=+12.1% | peak=$14,561 | dd=+0%
+  PUMPMONEY: mcap=$20,902 | gain=+8.2% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,210 | gain=+11.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,561 | gain=+12.1% | peak=$14,561 | dd=+0%
+  PUMPMONEY: mcap=$20,902 | gain=+8.2% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,210 | gain=+11.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,561 | gain=+12.1% | peak=$14,561 | dd=+0%
+  PUMPMONEY: mcap=$20,902 | gain=+8.2% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,210 | gain=+11.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,273 | gain=+9.8% | peak=$14,561 | dd=+0%
+  PUMPMONEY: mcap=$21,546 | gain=+11.6% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,210 | gain=+11.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,273 | gain=+9.8% | peak=$14,561 | dd=+0%
+  PUMPMONEY: mcap=$21,546 | gain=+11.6% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,210 | gain=+11.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,273 | gain=+9.8% | peak=$14,561 | dd=+0%
+  PUMPMONEY: mcap=$21,546 | gain=+11.6% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,210 | gain=+11.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,273 | gain=+9.8% | peak=$14,561 | dd=+0%
+[15:45:59] Monitor alive | 157 checks | 3 open | next in 5s
+  PUMPMONEY: mcap=$21,546 | gain=+11.6% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,270 | gain=+12.2% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,273 | gain=+9.8% | peak=$14,561 | dd=+0%
+  PUMPMONEY: mcap=$21,546 | gain=+11.6% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,270 | gain=+12.2% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,273 | gain=+9.8% | peak=$14,561 | dd=+0%
+  PUMPMONEY: mcap=$21,546 | gain=+11.6% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,270 | gain=+12.2% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,285 | gain=+9.9% | peak=$14,561 | dd=+0%
+  PUMPMONEY: mcap=$21,129 | gain=+9.4% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,270 | gain=+12.2% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,285 | gain=+9.9% | peak=$14,561 | dd=+0%
+  PUMPMONEY: mcap=$21,129 | gain=+9.4% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,270 | gain=+12.2% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,285 | gain=+9.9% | peak=$14,561 | dd=+0%
+  PUMPMONEY: mcap=$21,129 | gain=+9.4% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,554 | gain=+14.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,285 | gain=+9.9% | peak=$14,561 | dd=+0%
+  PUMPMONEY: mcap=$21,129 | gain=+9.4% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,554 | gain=+14.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,285 | gain=+9.9% | peak=$14,561 | dd=+0%
+  PUMPMONEY: mcap=$21,129 | gain=+9.4% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,554 | gain=+14.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,285 | gain=+9.9% | peak=$14,561 | dd=+0%
+  PUMPMONEY: mcap=$20,465 | gain=+6.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,554 | gain=+14.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,880 | gain=+14.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$20,465 | gain=+6.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,554 | gain=+14.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,880 | gain=+14.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$20,465 | gain=+6.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,554 | gain=+14.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,880 | gain=+14.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$20,465 | gain=+6.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,699 | gain=+7.0% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,880 | gain=+14.5% | peak=$14,880 | dd=+0%
+[15:47:03] Monitor alive | 169 checks | 3 open | next in 5s
+  PUMPMONEY: mcap=$20,465 | gain=+6.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,699 | gain=+7.0% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,880 | gain=+14.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$20,465 | gain=+6.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,699 | gain=+7.0% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,880 | gain=+14.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$19,096 | gain=-1.1% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,699 | gain=+7.0% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,880 | gain=+14.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$19,096 | gain=-1.1% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,699 | gain=+7.0% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,880 | gain=+14.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$19,096 | gain=-1.1% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,699 | gain=+7.0% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,880 | gain=+14.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$19,096 | gain=-1.1% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,238 | gain=+2.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,880 | gain=+14.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$19,096 | gain=-1.1% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,238 | gain=+2.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,880 | gain=+14.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$19,096 | gain=-1.1% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,238 | gain=+2.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,323 | gain=+10.2% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$18,638 | gain=-3.5% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,238 | gain=+2.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,323 | gain=+10.2% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$18,638 | gain=-3.5% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,238 | gain=+2.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,323 | gain=+10.2% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$18,638 | gain=-3.5% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,137 | gain=+20.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,323 | gain=+10.2% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$18,638 | gain=-3.5% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,137 | gain=+20.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,323 | gain=+10.2% | peak=$14,880 | dd=+0%
+[15:48:06] Monitor alive | 181 checks | 3 open | next in 5s
+  PUMPMONEY: mcap=$18,638 | gain=-3.5% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,137 | gain=+20.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,323 | gain=+10.2% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,188 | gain=+9.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,137 | gain=+20.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,323 | gain=+10.2% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,188 | gain=+9.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,137 | gain=+20.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,323 | gain=+10.2% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,188 | gain=+9.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,137 | gain=+20.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,133 | gain=+8.8% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,188 | gain=+9.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,150 | gain=+20.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,133 | gain=+8.8% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,188 | gain=+9.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,150 | gain=+20.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,133 | gain=+8.8% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,188 | gain=+9.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,150 | gain=+20.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,133 | gain=+8.8% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$19,833 | gain=+2.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,150 | gain=+20.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,133 | gain=+8.8% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$19,833 | gain=+2.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,150 | gain=+20.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,133 | gain=+8.8% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$19,833 | gain=+2.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,150 | gain=+20.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,106 | gain=+8.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$19,833 | gain=+2.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,320 | gain=+12.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,106 | gain=+8.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$19,833 | gain=+2.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,320 | gain=+12.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,106 | gain=+8.5% | peak=$14,880 | dd=+0%
+[15:49:10] Monitor alive | 193 checks | 3 open | next in 5s
+  PUMPMONEY: mcap=$19,833 | gain=+2.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,320 | gain=+12.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,106 | gain=+8.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$22,201 | gain=+15.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,320 | gain=+12.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,106 | gain=+8.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$22,201 | gain=+15.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,320 | gain=+12.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,095 | gain=+8.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$22,201 | gain=+15.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,093 | gain=+19.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,095 | gain=+8.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$22,201 | gain=+15.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,093 | gain=+19.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,095 | gain=+8.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$22,201 | gain=+15.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,093 | gain=+19.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,095 | gain=+8.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,174 | gain=+9.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,093 | gain=+19.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,095 | gain=+8.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,174 | gain=+9.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,093 | gain=+19.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,095 | gain=+8.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,174 | gain=+9.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$13,093 | gain=+19.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,095 | gain=+8.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,174 | gain=+9.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,980 | gain=+18.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,095 | gain=+8.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,174 | gain=+9.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,980 | gain=+18.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,095 | gain=+8.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,174 | gain=+9.7% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,980 | gain=+18.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,095 | gain=+8.5% | peak=$14,880 | dd=+0%
+[15:50:13] Monitor alive | 205 checks | 3 open | next in 5s
+  PUMPMONEY: mcap=$20,063 | gain=+3.9% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,980 | gain=+18.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,095 | gain=+8.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$20,063 | gain=+3.9% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,980 | gain=+18.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,095 | gain=+8.5% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$20,063 | gain=+3.9% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,980 | gain=+18.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,273 | gain=+9.8% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$20,063 | gain=+3.9% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,088 | gain=+10.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,273 | gain=+9.8% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$20,063 | gain=+3.9% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,088 | gain=+10.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,273 | gain=+9.8% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$20,063 | gain=+3.9% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,088 | gain=+10.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,273 | gain=+9.8% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,294 | gain=+10.3% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,088 | gain=+10.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,273 | gain=+9.8% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,294 | gain=+10.3% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,088 | gain=+10.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,273 | gain=+9.8% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,294 | gain=+10.3% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,088 | gain=+10.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,190 | gain=+9.2% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,294 | gain=+10.3% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,259 | gain=+12.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,190 | gain=+9.2% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,294 | gain=+10.3% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,259 | gain=+12.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,190 | gain=+9.2% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,294 | gain=+10.3% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,259 | gain=+12.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,190 | gain=+9.2% | peak=$14,880 | dd=+0%
+[15:51:16] Monitor alive | 217 checks | 3 open | next in 5s
+  PUMPMONEY: mcap=$20,398 | gain=+5.6% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,259 | gain=+12.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,190 | gain=+9.2% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$20,398 | gain=+5.6% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,259 | gain=+12.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$20,398 | gain=+5.6% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,259 | gain=+12.1% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$20,398 | gain=+5.6% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,083 | gain=+10.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$20,398 | gain=+5.6% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,083 | gain=+10.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,210 | gain=+9.8% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,083 | gain=+10.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,210 | gain=+9.8% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,083 | gain=+10.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,210 | gain=+9.8% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$12,083 | gain=+10.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,210 | gain=+9.8% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,947 | gain=+9.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,210 | gain=+9.8% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,947 | gain=+9.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$21,210 | gain=+9.8% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,947 | gain=+9.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$18,927 | gain=-2.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,947 | gain=+9.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+[15:52:18] Monitor alive | 229 checks | 3 open | next in 5s
+  PUMPMONEY: mcap=$18,927 | gain=-2.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,947 | gain=+9.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$18,927 | gain=-2.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,947 | gain=+9.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  PUMPMONEY: mcap=$18,927 | gain=-2.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,894 | gain=+8.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,375 | gain=-11.8% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$18,927 | gain=-2.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,894 | gain=+8.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,375 | gain=-11.8% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$18,927 | gain=-2.0% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,894 | gain=+8.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,375 | gain=-11.8% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$19,859 | gain=+2.8% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,894 | gain=+8.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,199 | gain=+9.3% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,375 | gain=-11.8% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$19,859 | gain=+2.8% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,894 | gain=+8.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,084 | gain=+8.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,749 | gain=-5.7% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$19,859 | gain=+2.8% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,894 | gain=+8.8% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,084 | gain=+8.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,749 | gain=-5.7% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$19,859 | gain=+2.8% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,530 | gain=+5.4% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,084 | gain=+8.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,749 | gain=-5.7% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$19,859 | gain=+2.8% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,530 | gain=+5.4% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,084 | gain=+8.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,749 | gain=-5.7% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$19,859 | gain=+2.8% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,530 | gain=+5.4% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,084 | gain=+8.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,749 | gain=-5.7% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$21,294 | gain=+10.3% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,530 | gain=+5.4% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,341 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,664 | gain=-7.1% | peak=$6,095 | dd=+0%
+[15:53:22] Monitor alive | 241 checks | 4 open | next in 5s
+  PUMPMONEY: mcap=$21,294 | gain=+10.3% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,530 | gain=+5.4% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,341 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,664 | gain=-7.1% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$21,294 | gain=+10.3% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,183 | gain=+2.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,341 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,664 | gain=-7.1% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$21,294 | gain=+10.3% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,183 | gain=+2.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,341 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,664 | gain=-7.1% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$21,294 | gain=+10.3% | peak=$22,348 | dd=+0%
+  Narwhals: mcap=$11,183 | gain=+2.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,341 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,664 | gain=-7.1% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$22,671 | gain=+17.4% | peak=$22,671 | dd=+0%
+  Narwhals: mcap=$11,183 | gain=+2.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,341 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,664 | gain=-7.1% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$22,671 | gain=+17.4% | peak=$22,671 | dd=+0%
+  Narwhals: mcap=$11,183 | gain=+2.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,341 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,664 | gain=-7.1% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$22,671 | gain=+17.4% | peak=$22,671 | dd=+0%
+  Narwhals: mcap=$11,183 | gain=+2.3% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,341 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,664 | gain=-7.1% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$22,671 | gain=+17.4% | peak=$22,671 | dd=+0%
+  Narwhals: mcap=$11,217 | gain=+2.6% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,341 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,664 | gain=-7.1% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$22,671 | gain=+17.4% | peak=$22,671 | dd=+0%
+  Narwhals: mcap=$11,217 | gain=+2.6% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,341 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,664 | gain=-7.1% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$22,671 | gain=+17.4% | peak=$22,671 | dd=+0%
+  Narwhals: mcap=$11,217 | gain=+2.6% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,341 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,664 | gain=-7.1% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$24,585 | gain=+27.3% | peak=$24,585 | dd=+0%
+  Narwhals: mcap=$11,217 | gain=+2.6% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,341 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,664 | gain=-7.1% | peak=$6,095 | dd=+0%
+  PUMPMONEY: mcap=$24,585 | gain=+27.3% | peak=$24,585 | dd=+0%
+  Narwhals: mcap=$11,217 | gain=+2.6% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,343 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,317 | gain=-12.8% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,282 | gain=-6.6% | peak=$7,801 | dd=+0%
+[15:54:25] Monitor alive | 253 checks | 5 open | next in 5s
+  PUMPMONEY: mcap=$24,585 | gain=+27.3% | peak=$24,585 | dd=+0%
+  Narwhals: mcap=$11,217 | gain=+2.6% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,343 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,317 | gain=-12.8% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,867 | gain=+0.8% | peak=$7,867 | dd=+0%
+  PUMPMONEY: mcap=$24,585 | gain=+27.3% | peak=$24,585 | dd=+0%
+  Narwhals: mcap=$10,854 | gain=-0.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,343 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,317 | gain=-12.8% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,867 | gain=+0.8% | peak=$7,867 | dd=+0%
+  PUMPMONEY: mcap=$24,585 | gain=+27.3% | peak=$24,585 | dd=+0%
+  Narwhals: mcap=$10,854 | gain=-0.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,343 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,317 | gain=-12.8% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,867 | gain=+0.8% | peak=$7,867 | dd=+0%
+  PUMPMONEY: mcap=$24,585 | gain=+27.3% | peak=$24,585 | dd=+0%
+  Narwhals: mcap=$10,854 | gain=-0.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,343 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,317 | gain=-12.8% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,867 | gain=+0.8% | peak=$7,867 | dd=+0%
+  PUMPMONEY: mcap=$24,948 | gain=+29.2% | peak=$24,948 | dd=+0%
+  Narwhals: mcap=$10,854 | gain=-0.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,343 | gain=+10.4% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,317 | gain=-12.8% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,867 | gain=+0.8% | peak=$7,867 | dd=+0%
+  PUMPMONEY: mcap=$24,948 | gain=+29.2% | peak=$24,948 | dd=+0%
+  Narwhals: mcap=$10,854 | gain=-0.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,448 | gain=+11.2% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,366 | gain=-12.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,695 | gain=-1.4% | peak=$7,867 | dd=+0%
+  PUMPMONEY: mcap=$24,948 | gain=+29.2% | peak=$24,948 | dd=+0%
+  Narwhals: mcap=$10,854 | gain=-0.7% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,448 | gain=+11.2% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,366 | gain=-12.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,695 | gain=-1.4% | peak=$7,867 | dd=+0%
+  PUMPMONEY: mcap=$24,948 | gain=+29.2% | peak=$24,948 | dd=+0%
+  Narwhals: mcap=$12,855 | gain=+17.6% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,448 | gain=+11.2% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,366 | gain=-12.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,695 | gain=-1.4% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,807 | gain=+3.6% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$24,948 | gain=+29.2% | peak=$24,948 | dd=+0%
+  Narwhals: mcap=$12,855 | gain=+17.6% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,448 | gain=+11.2% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,366 | gain=-12.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,695 | gain=-1.4% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,807 | gain=+3.6% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$26,391 | gain=+36.7% | peak=$26,391 | dd=+0%
+  Narwhals: mcap=$12,855 | gain=+17.6% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,448 | gain=+11.2% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,366 | gain=-12.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,695 | gain=-1.4% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,807 | gain=+3.6% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$26,391 | gain=+36.7% | peak=$26,391 | dd=+0%
+  Narwhals: mcap=$12,855 | gain=+17.6% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,443 | gain=+11.1% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,366 | gain=-12.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,695 | gain=-1.4% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,807 | gain=+3.6% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$26,391 | gain=+36.7% | peak=$26,391 | dd=+0%
+  Narwhals: mcap=$12,855 | gain=+17.6% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,443 | gain=+11.1% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,336 | gain=-12.5% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,510 | gain=-3.7% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,687 | gain=+0.4% | peak=$3,807 | dd=+0%
+[15:55:29] Monitor alive | 265 checks | 6 open | next in 5s
+  PUMPMONEY: mcap=$26,391 | gain=+36.7% | peak=$26,391 | dd=+0%
+  Narwhals: mcap=$13,001 | gain=+18.9% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,443 | gain=+11.1% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,336 | gain=-12.5% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,510 | gain=-3.7% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,687 | gain=+0.4% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$26,391 | gain=+36.7% | peak=$26,391 | dd=+0%
+  Narwhals: mcap=$13,001 | gain=+18.9% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,443 | gain=+11.1% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,336 | gain=-12.5% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,510 | gain=-3.7% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,687 | gain=+0.4% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$26,391 | gain=+36.7% | peak=$26,391 | dd=+0%
+  Narwhals: mcap=$13,001 | gain=+18.9% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,443 | gain=+11.1% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,336 | gain=-12.5% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,510 | gain=-3.7% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,687 | gain=+0.4% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$25,295 | gain=+31.0% | peak=$26,391 | dd=+0%
+  Narwhals: mcap=$13,001 | gain=+18.9% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,443 | gain=+11.1% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,336 | gain=-12.5% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,510 | gain=-3.7% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,687 | gain=+0.4% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$25,295 | gain=+31.0% | peak=$26,391 | dd=+0%
+  Narwhals: mcap=$13,001 | gain=+18.9% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,464 | gain=+11.3% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$4,973 | gain=-18.4% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,510 | gain=-3.7% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,687 | gain=+0.4% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$25,295 | gain=+31.0% | peak=$26,391 | dd=+0%
+  Narwhals: mcap=$13,001 | gain=+18.9% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,464 | gain=+11.3% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$4,973 | gain=-18.4% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,432 | gain=-4.7% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,687 | gain=+0.4% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$25,295 | gain=+31.0% | peak=$26,391 | dd=+0%
+  Narwhals: mcap=$12,631 | gain=+15.5% | peak=$14,035 | dd=+0%
+  dream: mcap=$14,464 | gain=+11.3% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$4,973 | gain=-18.4% | peak=$6,095 | dd=+0%
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+[15:56:34] Monitor alive | 277 checks | 6 open | next in 5s
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  PUMPMONEY: mcap=$24,951 | gain=+29.2% | peak=$26,391 | dd=+0%
+  Narwhals: mcap=$14,450 | gain=+32.1% | peak=$14,450 | dd=+0%
+  dream: mcap=$14,544 | gain=+11.9% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$4,973 | gain=-18.4% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,478 | gain=-4.1% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,724 | gain=+1.4% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$24,951 | gain=+29.2% | peak=$26,391 | dd=+0%
+  Narwhals: mcap=$14,450 | gain=+32.1% | peak=$14,450 | dd=+0%
+  dream: mcap=$14,544 | gain=+11.9% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$4,973 | gain=-18.4% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,478 | gain=-4.1% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,724 | gain=+1.4% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$26,503 | gain=+37.2% | peak=$26,503 | dd=+0%
+  Narwhals: mcap=$14,450 | gain=+32.1% | peak=$14,450 | dd=+0%
+  dream: mcap=$14,544 | gain=+11.9% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$4,973 | gain=-18.4% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,478 | gain=-4.1% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,724 | gain=+1.4% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$26,503 | gain=+37.2% | peak=$26,503 | dd=+0%
+  Narwhals: mcap=$14,450 | gain=+32.1% | peak=$14,450 | dd=+0%
+  dream: mcap=$14,544 | gain=+11.9% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,052 | gain=-9.6% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,724 | gain=+1.4% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$26,503 | gain=+37.2% | peak=$26,503 | dd=+0%
+  Narwhals: mcap=$14,450 | gain=+32.1% | peak=$14,450 | dd=+0%
+  dream: mcap=$14,544 | gain=+11.9% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,052 | gain=-9.6% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,694 | gain=+0.6% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$26,503 | gain=+37.2% | peak=$26,503 | dd=+0%
+  Narwhals: mcap=$15,624 | gain=+42.9% | peak=$15,624 | dd=+0%
+  dream: mcap=$14,544 | gain=+11.9% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,052 | gain=-9.6% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,694 | gain=+0.6% | peak=$3,807 | dd=+0%
+[15:57:39] Monitor alive | 289 checks | 6 open | next in 5s
+  PUMPMONEY: mcap=$26,503 | gain=+37.2% | peak=$26,503 | dd=+0%
+  Narwhals: mcap=$15,624 | gain=+42.9% | peak=$15,624 | dd=+0%
+  dream: mcap=$14,544 | gain=+11.9% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,052 | gain=-9.6% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,694 | gain=+0.6% | peak=$3,807 | dd=+0%
+  PUMPMONEY: mcap=$26,551 | gain=+37.5% | peak=$26,551 | dd=+0%
+  Narwhals: mcap=$15,624 | gain=+42.9% | peak=$15,624 | dd=+0%
+  dream: mcap=$14,544 | gain=+11.9% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,052 | gain=-9.6% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,694 | gain=+0.6% | peak=$3,807 | dd=+0%
+  oil: mcap=$15,388 | gain=-11.3% | peak=$17,353 | dd=+0%
+  PUMPMONEY: mcap=$26,551 | gain=+37.5% | peak=$26,551 | dd=+0%
+  Narwhals: mcap=$15,624 | gain=+42.9% | peak=$15,624 | dd=+0%
+  dream: mcap=$14,544 | gain=+11.9% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,052 | gain=-9.6% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,694 | gain=+0.6% | peak=$3,807 | dd=+0%
+  oil: mcap=$15,388 | gain=-11.3% | peak=$17,353 | dd=+0%
+  PUMPMONEY: mcap=$26,551 | gain=+37.5% | peak=$26,551 | dd=+0%
+  Narwhals: mcap=$15,624 | gain=+42.9% | peak=$15,624 | dd=+0%
+  dream: mcap=$14,544 | gain=+11.9% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,052 | gain=-9.6% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,694 | gain=+0.6% | peak=$3,807 | dd=+0%
+  oil: mcap=$15,388 | gain=-11.3% | peak=$17,353 | dd=+0%
+  PUMPMONEY: mcap=$26,551 | gain=+37.5% | peak=$26,551 | dd=+0%
+  Narwhals: mcap=$14,976 | gain=+37.0% | peak=$15,624 | dd=+0%
+  dream: mcap=$14,544 | gain=+11.9% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,052 | gain=-9.6% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,694 | gain=+0.6% | peak=$3,807 | dd=+0%
+  oil: mcap=$17,409 | gain=+0.3% | peak=$17,409 | dd=+0%
+  PUMPMONEY: mcap=$26,551 | gain=+37.5% | peak=$26,551 | dd=+0%
+  Narwhals: mcap=$14,976 | gain=+37.0% | peak=$15,624 | dd=+0%
+  dream: mcap=$14,544 | gain=+11.9% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,052 | gain=-9.6% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,694 | gain=+0.6% | peak=$3,807 | dd=+0%
+  oil: mcap=$17,409 | gain=+0.3% | peak=$17,409 | dd=+0%
+  PUMPMONEY: mcap=$26,551 | gain=+37.5% | peak=$26,551 | dd=+0%
+  Narwhals: mcap=$14,976 | gain=+37.0% | peak=$15,624 | dd=+0%
+  dream: mcap=$14,534 | gain=+11.8% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,052 | gain=-9.6% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,694 | gain=+0.6% | peak=$3,807 | dd=+0%
+  oil: mcap=$17,409 | gain=+0.3% | peak=$17,409 | dd=+0%
+  PUMPMONEY: mcap=$25,708 | gain=+33.1% | peak=$26,551 | dd=+0%
+  Narwhals: mcap=$14,976 | gain=+37.0% | peak=$15,624 | dd=+0%
+  dream: mcap=$14,534 | gain=+11.8% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,052 | gain=-9.6% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,694 | gain=+0.6% | peak=$3,807 | dd=+0%
+  oil: mcap=$17,409 | gain=+0.3% | peak=$17,409 | dd=+0%
+  PUMPMONEY: mcap=$25,708 | gain=+33.1% | peak=$26,551 | dd=+0%
+  Narwhals: mcap=$14,976 | gain=+37.0% | peak=$15,624 | dd=+0%
+  dream: mcap=$14,534 | gain=+11.8% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,726 | gain=-1.0% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,694 | gain=+0.6% | peak=$3,807 | dd=+0%
+  oil: mcap=$17,409 | gain=+0.3% | peak=$17,409 | dd=+0%
+  PUMPMONEY: mcap=$25,708 | gain=+33.1% | peak=$26,551 | dd=+0%
+  Narwhals: mcap=$14,976 | gain=+37.0% | peak=$15,624 | dd=+0%
+  dream: mcap=$14,534 | gain=+11.8% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,726 | gain=-1.0% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,694 | gain=+0.6% | peak=$3,807 | dd=+0%
+  oil: mcap=$17,409 | gain=+0.3% | peak=$17,409 | dd=+0%
+  PUMPMONEY: mcap=$25,708 | gain=+33.1% | peak=$26,551 | dd=+0%
+  Narwhals: mcap=$14,808 | gain=+35.4% | peak=$15,624 | dd=+0%
+  dream: mcap=$14,534 | gain=+11.8% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,726 | gain=-1.0% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,684 | gain=+0.3% | peak=$3,807 | dd=+0%
+  oil: mcap=$17,260 | gain=-0.5% | peak=$17,409 | dd=+0%
+[15:58:39] Monitor alive | 300 checks | 7 open | next in 5s
+  PUMPMONEY: mcap=$25,708 | gain=+33.1% | peak=$26,551 | dd=+0%
+  Narwhals: mcap=$14,808 | gain=+35.4% | peak=$15,624 | dd=+0%
+  dream: mcap=$14,514 | gain=+11.7% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,726 | gain=-1.0% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,684 | gain=+0.3% | peak=$3,807 | dd=+0%
+  oil: mcap=$17,260 | gain=-0.5% | peak=$17,409 | dd=+0%
+  PUMPMONEY: mcap=$26,794 | gain=+38.8% | peak=$26,794 | dd=+0%
+  Narwhals: mcap=$14,808 | gain=+35.4% | peak=$15,624 | dd=+0%
+  dream: mcap=$14,514 | gain=+11.7% | peak=$14,880 | dd=+0%
+  VELYA: mcap=$5,121 | gain=-16.0% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,726 | gain=-1.0% | peak=$7,867 | dd=+0%
+  どっち: mcap=$3,684 | gain=+0.3% | peak=$3,807 | dd=+0%
+  oil: mcap=$17,260 | gain=-0.5% | peak=$17,409 | dd=+0%
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  oil: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  oil: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  oil: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  oil: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  oil: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  oil: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  oil: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  oil: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  oil: error fetching mcap
+[15:59:39] Monitor alive | 311 checks | 7 open | next in 5s
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  oil: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  Narwhals: error fetching mcap
+  dream: error fetching mcap
+  VELYA: error fetching mcap
+  mojo: error fetching mcap
+  どっち: error fetching mcap
+  oil: error fetching mcap
+  PUMPMONEY: mcap=$28,598 | gain=+48.1% | peak=$28,598 | dd=+0%
+  Narwhals: mcap=$14,803 | gain=+35.4% | peak=$15,624 | dd=+0%
+  dream: mcap=$14,983 | gain=+15.3% | peak=$14,983 | dd=+0%
+  VELYA: mcap=$5,126 | gain=-15.9% | peak=$6,095 | dd=+0%
+  mojo: mcap=$7,978 | gain=+2.3% | peak=$7,978 | dd=+0%
+  どっち: mcap=$3,654 | gain=-0.5% | peak=$3,807 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 oil STOP LOSS @ $13,076 (-24.6%)
+  PUMPMONEY: mcap=$28,598 | gain=+48.1% | peak=$28,598 | dd=+0%
