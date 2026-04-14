@@ -31,7 +31,7 @@ H24_MOMENTUM_MIN = 30     # OR 24h must be > +30%
 
 # === CHG1 RULES (v6.4) ===
 MIN_CHG1_FOR_BUY = 2.0    # chg1 must be > +2% to buy
-CHG1_DROP_THRESHOLD = 1    # if chg1 drops by >1% from previous → continue watching
+CHG1_DROP_THRESHOLD = 3    # if chg1 drops by >3% from previous → continue watching
 CHG1_NONE_M5_REJECT = 15  # chg1=None AND m5 > +15% → REJECT immediately
 CHG1_COOLDOWN_TRIGGER = 5 # chg1 must reach >+5% during cooldown to proceed
 

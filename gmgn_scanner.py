@@ -456,7 +456,7 @@ def check_cooldown_watch():
         # === CHG1 CHECK DURING COOLDOWN (v6.4) ===
         # Step 1: cooldown is running — chg1 must reach >+5% to proceed
         # Step 2: once chg1 >= +5%, wait 15s to verify
-        # Step 3: check improvement (+3% from prev) and deterioration (>1% drop = reject)
+        # Step 3: check improvement (+3% from prev) and deterioration (>{CHG1_DROP_THRESHOLD}% drop = reject)
         # Step 4: 2 consecutive rechecks before buy
         chg1 = fresh_result.get('chg1')
         prev_chg1 = data.get('prev_chg1')
@@ -499,7 +499,7 @@ def check_cooldown_watch():
             
             # Deterioration: chg1 dropped >1% from previous → continue watching
             if prev_chg1 > 0 and chg1 < prev_chg1 - CHG1_DROP_THRESHOLD:
-                print(f"   ⏳ {result['token']}: chg1 deteriorated {prev_chg1:+.1f}% → {chg1:+.1f}% (>1% drop) — continue watching")
+                print(f"   ⏳ {result['token']}: chg1 deteriorated {prev_chg1:+.1f}% → {chg1:+.1f}% (>{CHG1_DROP_THRESHOLD}% drop) — continue watching")
                 data['cooldown_end'] = now + RECHECK_DELAY
                 data['prev_chg1'] = chg1
                 continue
