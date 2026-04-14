@@ -8110,3 +8110,672 @@ Checking every 5s
   LIFE: mcap=$15,849 | gain=-11.2% | peak=$18,681 | dd=+0%
   DUKE: mcap=$19,860 | gain=+52.4% | peak=$20,616 | dd=+1%
   LIFE: mcap=$18,112 | gain=+1.5% | peak=$18,681 | dd=+0%
+  DUKE: mcap=$19,988 | gain=+53.4% | peak=$20,616 | dd=+0%
+  LIFE: mcap=$18,112 | gain=+1.5% | peak=$18,681 | dd=+0%
+  DUKE: mcap=$19,988 | gain=+53.4% | peak=$20,616 | dd=+0%
+  LIFE: mcap=$18,112 | gain=+1.5% | peak=$18,681 | dd=+0%
+  Avatar : mcap=$6,299 | gain=-14.7% | peak=$7,387 | dd=+0%
+[13:41:26] Monitor alive | 709 checks | 3 open | next in 5s
+  DUKE: mcap=$19,988 | gain=+53.4% | peak=$20,616 | dd=+0%
+  LIFE: mcap=$18,112 | gain=+1.5% | peak=$18,681 | dd=+0%
+  Avatar : mcap=$6,299 | gain=-14.7% | peak=$7,387 | dd=+0%
+  DUKE: mcap=$19,988 | gain=+53.4% | peak=$20,616 | dd=+0%
+  LIFE: mcap=$18,112 | gain=+1.5% | peak=$18,681 | dd=+0%
+  Avatar : mcap=$6,299 | gain=-14.7% | peak=$7,387 | dd=+0%
+  DUKE: mcap=$19,988 | gain=+53.4% | peak=$20,616 | dd=+0%
+  LIFE: mcap=$18,112 | gain=+1.5% | peak=$18,681 | dd=+0%
+  Avatar : mcap=$6,299 | gain=-14.7% | peak=$7,387 | dd=+0%
+  DUKE: mcap=$19,988 | gain=+53.4% | peak=$20,616 | dd=+0%
+  LIFE: mcap=$17,771 | gain=-0.4% | peak=$18,681 | dd=+0%
+  Avatar : mcap=$6,299 | gain=-14.7% | peak=$7,387 | dd=+0%
+  DUKE: error fetching mcap
+  LIFE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  LIFE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  LIFE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  LIFE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  LIFE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  LIFE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  LIFE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  LIFE: error fetching mcap
+  Avatar : error fetching mcap
+[13:42:29] Monitor alive | 721 checks | 3 open | next in 5s
+  DUKE: error fetching mcap
+  LIFE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  LIFE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  LIFE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  LIFE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: mcap=$19,150 | gain=+47.0% | peak=$20,616 | dd=+5%
+  LIFE: mcap=$18,596 | gain=+4.2% | peak=$18,681 | dd=+0%
+  Avatar : mcap=$6,738 | gain=-8.8% | peak=$7,387 | dd=+0%
+  DUKE: mcap=$19,150 | gain=+47.0% | peak=$20,616 | dd=+5%
+  LIFE: mcap=$18,596 | gain=+4.2% | peak=$18,681 | dd=+0%
+  Avatar : mcap=$6,738 | gain=-8.8% | peak=$7,387 | dd=+0%
+  DUKE: mcap=$19,150 | gain=+47.0% | peak=$20,616 | dd=+5%
+  LIFE: mcap=$18,596 | gain=+4.2% | peak=$18,681 | dd=+0%
+  Avatar : mcap=$6,738 | gain=-8.8% | peak=$7,387 | dd=+0%
+  DUKE: mcap=$19,150 | gain=+47.0% | peak=$20,616 | dd=+5%
+  LIFE: mcap=$18,596 | gain=+4.2% | peak=$18,681 | dd=+0%
+  Avatar : mcap=$6,738 | gain=-8.8% | peak=$7,387 | dd=+0%
+  NCM: mcap=$5,590 | gain=-6.1% | peak=$5,956 | dd=+0%
+  DUKE: mcap=$19,150 | gain=+47.0% | peak=$20,616 | dd=+5%
+  LIFE: mcap=$18,596 | gain=+4.2% | peak=$18,681 | dd=+0%
+  Avatar : mcap=$6,738 | gain=-8.8% | peak=$7,387 | dd=+0%
+  NCM: mcap=$5,968 | gain=+0.2% | peak=$5,968 | dd=+0%
+  DUKE: mcap=$19,862 | gain=+52.5% | peak=$20,616 | dd=+1%
+[STOP_LOSS] Alert sent
+🔴 LIFE STOP LOSS @ $12,401 (-30.5%)
+  Avatar : mcap=$8,835 | gain=+19.6% | peak=$8,835 | dd=+0%
+  NCM: mcap=$5,968 | gain=+0.2% | peak=$5,968 | dd=+0%
+  DUKE: mcap=$19,862 | gain=+52.5% | peak=$20,616 | dd=+1%
+  Avatar : mcap=$8,835 | gain=+19.6% | peak=$8,835 | dd=+0%
+  NCM: mcap=$5,968 | gain=+0.2% | peak=$5,968 | dd=+0%
+  DUKE: mcap=$19,862 | gain=+52.5% | peak=$20,616 | dd=+1%
+  Avatar : mcap=$8,835 | gain=+19.6% | peak=$8,835 | dd=+0%
+  NCM: mcap=$5,968 | gain=+0.2% | peak=$5,968 | dd=+0%
+[13:43:32] Monitor alive | 733 checks | 3 open | next in 5s
+  DUKE: mcap=$19,862 | gain=+52.5% | peak=$20,616 | dd=+1%
+  Avatar : mcap=$8,835 | gain=+19.6% | peak=$8,835 | dd=+0%
+  NCM: mcap=$5,968 | gain=+0.2% | peak=$5,968 | dd=+0%
+  DUKE: mcap=$19,862 | gain=+52.5% | peak=$20,616 | dd=+1%
+  Avatar : mcap=$8,835 | gain=+19.6% | peak=$8,835 | dd=+0%
+  NCM: mcap=$5,968 | gain=+0.2% | peak=$5,968 | dd=+0%
+  DUKE: mcap=$19,862 | gain=+52.5% | peak=$20,616 | dd=+1%
+  Avatar : mcap=$8,835 | gain=+19.6% | peak=$8,835 | dd=+0%
+  NCM: mcap=$6,097 | gain=+2.4% | peak=$6,097 | dd=+0%
+  DUKE: mcap=$21,926 | gain=+68.3% | peak=$21,926 | dd=-9%
+  Avatar : mcap=$10,084 | gain=+36.5% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,097 | gain=+2.4% | peak=$6,097 | dd=+0%
+  DUKE: mcap=$21,926 | gain=+68.3% | peak=$21,926 | dd=-9%
+  Avatar : mcap=$10,084 | gain=+36.5% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,097 | gain=+2.4% | peak=$6,097 | dd=+0%
+  DUKE: mcap=$21,926 | gain=+68.3% | peak=$21,926 | dd=-9%
+  Avatar : mcap=$10,084 | gain=+36.5% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,097 | gain=+2.4% | peak=$6,097 | dd=+0%
+  DUKE: mcap=$21,926 | gain=+68.3% | peak=$21,926 | dd=-9%
+  Avatar : mcap=$10,084 | gain=+36.5% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,097 | gain=+2.4% | peak=$6,097 | dd=+0%
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+[13:44:34] Monitor alive | 745 checks | 3 open | next in 5s
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  DUKE: mcap=$21,828 | gain=+67.5% | peak=$21,926 | dd=-9%
+  Avatar : mcap=$8,385 | gain=+13.5% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,404 | gain=+7.5% | peak=$6,404 | dd=+0%
+  DUKE: mcap=$21,828 | gain=+67.5% | peak=$21,926 | dd=-9%
+  Avatar : mcap=$8,385 | gain=+13.5% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,404 | gain=+7.5% | peak=$6,404 | dd=+0%
+  DUKE: mcap=$22,371 | gain=+71.7% | peak=$22,371 | dd=-11%
+  Avatar : mcap=$8,430 | gain=+14.1% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,228 | gain=+4.6% | peak=$6,404 | dd=+0%
+  DUKE: mcap=$22,371 | gain=+71.7% | peak=$22,371 | dd=-11%
+  Avatar : mcap=$8,430 | gain=+14.1% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,228 | gain=+4.6% | peak=$6,404 | dd=+0%
+  DUKE: mcap=$22,371 | gain=+71.7% | peak=$22,371 | dd=-11%
+  Avatar : mcap=$8,430 | gain=+14.1% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,228 | gain=+4.6% | peak=$6,404 | dd=+0%
+  DUKE: mcap=$22,371 | gain=+71.7% | peak=$22,371 | dd=-11%
+  Avatar : mcap=$8,430 | gain=+14.1% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,228 | gain=+4.6% | peak=$6,404 | dd=+0%
+[13:45:38] Monitor alive | 757 checks | 3 open | next in 5s
+  DUKE: mcap=$22,371 | gain=+71.7% | peak=$22,371 | dd=-11%
+  Avatar : mcap=$8,430 | gain=+14.1% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,228 | gain=+4.6% | peak=$6,404 | dd=+0%
+  DUKE: mcap=$22,371 | gain=+71.7% | peak=$22,371 | dd=-11%
+  Avatar : mcap=$8,430 | gain=+14.1% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,228 | gain=+4.6% | peak=$6,404 | dd=+0%
+  DUKE: mcap=$22,724 | gain=+74.4% | peak=$22,724 | dd=-13%
+  Avatar : mcap=$9,613 | gain=+30.1% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,491 | gain=+9.0% | peak=$6,491 | dd=+0%
+  BGC: mcap=$7,968 | gain=-1.8% | peak=$8,117 | dd=+0%
+  DUKE: mcap=$22,724 | gain=+74.4% | peak=$22,724 | dd=-13%
+  Avatar : mcap=$9,613 | gain=+30.1% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,491 | gain=+9.0% | peak=$6,491 | dd=+0%
+  BGC: mcap=$7,968 | gain=-1.8% | peak=$8,117 | dd=+0%
+  DUKE: mcap=$22,724 | gain=+74.4% | peak=$22,724 | dd=-13%
+  Avatar : mcap=$9,613 | gain=+30.1% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,491 | gain=+9.0% | peak=$6,491 | dd=+0%
+  BGC: mcap=$7,968 | gain=-1.8% | peak=$8,117 | dd=+0%
+  DUKE: mcap=$22,724 | gain=+74.4% | peak=$22,724 | dd=-13%
+  Avatar : mcap=$9,613 | gain=+30.1% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,491 | gain=+9.0% | peak=$6,491 | dd=+0%
+  BGC: mcap=$7,968 | gain=-1.8% | peak=$8,117 | dd=+0%
+  DUKE: mcap=$22,724 | gain=+74.4% | peak=$22,724 | dd=-13%
+  Avatar : mcap=$9,613 | gain=+30.1% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,491 | gain=+9.0% | peak=$6,491 | dd=+0%
+  BGC: mcap=$7,968 | gain=-1.8% | peak=$8,117 | dd=+0%
+  DUKE: mcap=$21,545 | gain=+65.4% | peak=$22,724 | dd=-7%
+  Avatar : mcap=$9,613 | gain=+30.1% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,491 | gain=+9.0% | peak=$6,491 | dd=+0%
+  BGC: mcap=$7,821 | gain=-3.6% | peak=$8,117 | dd=+0%
+  DUKE: mcap=$21,545 | gain=+65.4% | peak=$22,724 | dd=-7%
+  Avatar : mcap=$9,330 | gain=+26.3% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,493 | gain=+9.0% | peak=$6,493 | dd=+0%
+  BGC: mcap=$7,821 | gain=-3.6% | peak=$8,117 | dd=+0%
+  DUKE: mcap=$21,545 | gain=+65.4% | peak=$22,724 | dd=-7%
+  Avatar : mcap=$9,330 | gain=+26.3% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,493 | gain=+9.0% | peak=$6,493 | dd=+0%
+  BGC: mcap=$7,821 | gain=-3.6% | peak=$8,117 | dd=+0%
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+[13:46:41] Monitor alive | 769 checks | 4 open | next in 5s
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: mcap=$20,596 | gain=+58.1% | peak=$22,724 | dd=-3%
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: mcap=$20,596 | gain=+58.1% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$9,500 | gain=+28.6% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,015 | gain=+1.0% | peak=$6,493 | dd=+0%
+  BGC: mcap=$8,096 | gain=-0.3% | peak=$8,117 | dd=+0%
+  DUKE: mcap=$20,596 | gain=+58.1% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$9,500 | gain=+28.6% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,015 | gain=+1.0% | peak=$6,493 | dd=+0%
+  BGC: mcap=$8,096 | gain=-0.3% | peak=$8,117 | dd=+0%
+[13:47:44] Monitor alive | 781 checks | 4 open | next in 5s
+  DUKE: mcap=$20,592 | gain=+58.1% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$9,500 | gain=+28.6% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,015 | gain=+1.0% | peak=$6,493 | dd=+0%
+  BGC: mcap=$9,326 | gain=+14.9% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,592 | gain=+58.1% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$9,696 | gain=+31.3% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,432 | gain=+8.0% | peak=$6,493 | dd=+0%
+  BGC: mcap=$9,326 | gain=+14.9% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,592 | gain=+58.1% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$9,696 | gain=+31.3% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,432 | gain=+8.0% | peak=$6,493 | dd=+0%
+  BGC: mcap=$9,326 | gain=+14.9% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,592 | gain=+58.1% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$9,696 | gain=+31.3% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,432 | gain=+8.0% | peak=$6,493 | dd=+0%
+  BGC: mcap=$9,326 | gain=+14.9% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,592 | gain=+58.1% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$9,696 | gain=+31.3% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,432 | gain=+8.0% | peak=$6,493 | dd=+0%
+  BGC: mcap=$9,326 | gain=+14.9% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,592 | gain=+58.1% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$9,696 | gain=+31.3% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,432 | gain=+8.0% | peak=$6,493 | dd=+0%
+  BGC: mcap=$9,326 | gain=+14.9% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,152 | gain=+54.7% | peak=$22,724 | dd=-0%
+  Avatar : mcap=$9,696 | gain=+31.3% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,432 | gain=+8.0% | peak=$6,493 | dd=+0%
+  BGC: mcap=$8,479 | gain=+4.5% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,152 | gain=+54.7% | peak=$22,724 | dd=-0%
+  Avatar : mcap=$8,242 | gain=+11.6% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,451 | gain=+8.3% | peak=$6,493 | dd=+0%
+  BGC: mcap=$8,479 | gain=+4.5% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,152 | gain=+54.7% | peak=$22,724 | dd=-0%
+  Avatar : mcap=$8,242 | gain=+11.6% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,451 | gain=+8.3% | peak=$6,493 | dd=+0%
+  BGC: mcap=$8,479 | gain=+4.5% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,152 | gain=+54.7% | peak=$22,724 | dd=-0%
+  Avatar : mcap=$8,242 | gain=+11.6% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,451 | gain=+8.3% | peak=$6,493 | dd=+0%
+  BGC: mcap=$8,479 | gain=+4.5% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,152 | gain=+54.7% | peak=$22,724 | dd=-0%
+  Avatar : mcap=$8,242 | gain=+11.6% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,451 | gain=+8.3% | peak=$6,493 | dd=+0%
+  BGC: mcap=$8,479 | gain=+4.5% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,152 | gain=+54.7% | peak=$22,724 | dd=-0%
+  Avatar : mcap=$8,242 | gain=+11.6% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,451 | gain=+8.3% | peak=$6,493 | dd=+0%
+  BGC: mcap=$8,479 | gain=+4.5% | peak=$9,326 | dd=+0%
+[13:48:48] Monitor alive | 793 checks | 4 open | next in 5s
+  DUKE: mcap=$20,142 | gain=+54.6% | peak=$22,724 | dd=-0%
+  Avatar : mcap=$7,820 | gain=+5.9% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,262 | gain=+5.1% | peak=$6,493 | dd=+0%
+  BGC: mcap=$8,145 | gain=+0.3% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,142 | gain=+54.6% | peak=$22,724 | dd=-0%
+  Avatar : mcap=$7,820 | gain=+5.9% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,262 | gain=+5.1% | peak=$6,493 | dd=+0%
+  BGC: mcap=$8,145 | gain=+0.3% | peak=$9,326 | dd=+0%
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+[13:49:51] Monitor alive | 805 checks | 4 open | next in 5s
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: mcap=$8,932 | gain=+10.0% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$21,378 | gain=+64.1% | peak=$22,724 | dd=-6%
+  Avatar : mcap=$8,956 | gain=+21.2% | peak=$10,084 | dd=+0%
+  NCM: mcap=$4,919 | gain=-17.4% | peak=$6,493 | dd=+0%
+  BGC: mcap=$8,932 | gain=+10.0% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$21,378 | gain=+64.1% | peak=$22,724 | dd=-6%
+  Avatar : mcap=$8,956 | gain=+21.2% | peak=$10,084 | dd=+0%
+  NCM: mcap=$4,919 | gain=-17.4% | peak=$6,493 | dd=+0%
+  BGC: mcap=$8,932 | gain=+10.0% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$21,378 | gain=+64.1% | peak=$22,724 | dd=-6%
+  Avatar : mcap=$8,956 | gain=+21.2% | peak=$10,084 | dd=+0%
+  NCM: mcap=$4,919 | gain=-17.4% | peak=$6,493 | dd=+0%
+  BGC: mcap=$8,932 | gain=+10.0% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,679 | gain=+58.7% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$8,956 | gain=+21.2% | peak=$10,084 | dd=+0%
+  NCM: mcap=$4,919 | gain=-17.4% | peak=$6,493 | dd=+0%
+  BGC: mcap=$8,265 | gain=+1.8% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,679 | gain=+58.7% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$8,932 | gain=+20.9% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,753 | gain=+13.4% | peak=$6,753 | dd=+0%
+  BGC: mcap=$8,265 | gain=+1.8% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,679 | gain=+58.7% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$8,932 | gain=+20.9% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,753 | gain=+13.4% | peak=$6,753 | dd=+0%
+  BGC: mcap=$8,265 | gain=+1.8% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,679 | gain=+58.7% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$8,932 | gain=+20.9% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,753 | gain=+13.4% | peak=$6,753 | dd=+0%
+  BGC: mcap=$8,265 | gain=+1.8% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,679 | gain=+58.7% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$8,932 | gain=+20.9% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,753 | gain=+13.4% | peak=$6,753 | dd=+0%
+  BGC: mcap=$8,265 | gain=+1.8% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,679 | gain=+58.7% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$8,932 | gain=+20.9% | peak=$10,084 | dd=+0%
+  NCM: mcap=$6,753 | gain=+13.4% | peak=$6,753 | dd=+0%
+  BGC: mcap=$8,265 | gain=+1.8% | peak=$9,326 | dd=+0%
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+[13:50:55] Monitor alive | 817 checks | 4 open | next in 5s
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  NCM: error fetching mcap
+  BGC: error fetching mcap
+  DUKE: mcap=$20,312 | gain=+55.9% | peak=$22,724 | dd=-1%
+  Avatar : mcap=$9,599 | gain=+29.9% | peak=$10,084 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 NCM STOP LOSS @ $4,013 (-32.6%)
+  BGC: mcap=$8,129 | gain=+0.1% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,312 | gain=+55.9% | peak=$22,724 | dd=-1%
+  Avatar : mcap=$9,622 | gain=+30.3% | peak=$10,084 | dd=+0%
+  BGC: mcap=$6,750 | gain=-16.8% | peak=$9,326 | dd=+0%
+[13:51:58] Monitor alive | 829 checks | 3 open | next in 5s
+  DUKE: mcap=$20,312 | gain=+55.9% | peak=$22,724 | dd=-1%
+  Avatar : mcap=$9,622 | gain=+30.3% | peak=$10,084 | dd=+0%
+  BGC: mcap=$6,750 | gain=-16.8% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,312 | gain=+55.9% | peak=$22,724 | dd=-1%
+  Avatar : mcap=$9,622 | gain=+30.3% | peak=$10,084 | dd=+0%
+  BGC: mcap=$6,750 | gain=-16.8% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,312 | gain=+55.9% | peak=$22,724 | dd=-1%
+  Avatar : mcap=$9,622 | gain=+30.3% | peak=$10,084 | dd=+0%
+  BGC: mcap=$6,750 | gain=-16.8% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,312 | gain=+55.9% | peak=$22,724 | dd=-1%
+  Avatar : mcap=$9,622 | gain=+30.3% | peak=$10,084 | dd=+0%
+  BGC: mcap=$6,750 | gain=-16.8% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,747 | gain=+59.2% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$10,995 | gain=+48.8% | peak=$10,995 | dd=+0%
+  BGC: mcap=$6,750 | gain=-16.8% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,747 | gain=+59.2% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$10,995 | gain=+48.8% | peak=$10,995 | dd=+0%
+  BGC: mcap=$7,463 | gain=-8.1% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,747 | gain=+59.2% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$10,995 | gain=+48.8% | peak=$10,995 | dd=+0%
+  BGC: mcap=$7,463 | gain=-8.1% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,747 | gain=+59.2% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$10,995 | gain=+48.8% | peak=$10,995 | dd=+0%
+  BGC: mcap=$7,463 | gain=-8.1% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,747 | gain=+59.2% | peak=$22,724 | dd=-3%
+  Avatar : mcap=$10,995 | gain=+48.8% | peak=$10,995 | dd=+0%
+  BGC: mcap=$7,463 | gain=-8.1% | peak=$9,326 | dd=+0%
+  DUKE: mcap=$20,410 | gain=+56.7% | peak=$22,724 | dd=-2%
+  Avatar : mcap=$10,995 | gain=+48.8% | peak=$10,995 | dd=+0%
+  BGC: mcap=$7,463 | gain=-8.1% | peak=$9,326 | dd=+0%
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  BGC: error fetching mcap
+[13:53:01] Monitor alive | 841 checks | 3 open | next in 5s
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  BGC: error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  BGC: error fetching mcap
+  DUKE: mcap=$17,897 | gain=+37.4% | peak=$22,724 | dd=+11%
+[TP1_HOLD] Alert sent
+🚀 Avatar  TP1 HIT - HOLDING @ $12,254 (+65.9%)
+[STOP_LOSS] Alert sent
+🔴 BGC STOP LOSS @ $5,240 (-35.4%)
+  DUKE: mcap=$17,897 | gain=+37.4% | peak=$22,724 | dd=+11%
+  Avatar : mcap=$12,254 | gain=+65.9% | peak=$12,254 | dd=+0%
+[13:54:04] Monitor alive | 853 checks | 2 open | next in 5s
+  DUKE: mcap=$17,897 | gain=+37.4% | peak=$22,724 | dd=+11%
+  Avatar : mcap=$12,254 | gain=+65.9% | peak=$12,254 | dd=+0%
+  DUKE: mcap=$17,897 | gain=+37.4% | peak=$22,724 | dd=+11%
+  Avatar : mcap=$12,254 | gain=+65.9% | peak=$12,254 | dd=+0%
+  DUKE: mcap=$17,897 | gain=+37.4% | peak=$22,724 | dd=+11%
+  Avatar : mcap=$12,254 | gain=+65.9% | peak=$12,254 | dd=+0%
+  DUKE: mcap=$18,330 | gain=+40.7% | peak=$22,724 | dd=+9%
+  Avatar : mcap=$12,452 | gain=+68.6% | peak=$12,452 | dd=-2%
+  DUKE: mcap=$18,330 | gain=+40.7% | peak=$22,724 | dd=+9%
+  Avatar : mcap=$12,452 | gain=+68.6% | peak=$12,452 | dd=-2%
+  DUKE: mcap=$18,330 | gain=+40.7% | peak=$22,724 | dd=+9%
+  Avatar : mcap=$12,452 | gain=+68.6% | peak=$12,452 | dd=-2%
+  DUKE: mcap=$18,330 | gain=+40.7% | peak=$22,724 | dd=+9%
+  Avatar : mcap=$12,452 | gain=+68.6% | peak=$12,452 | dd=-2%
+  DUKE: mcap=$18,330 | gain=+40.7% | peak=$22,724 | dd=+9%
+  Avatar : mcap=$12,452 | gain=+68.6% | peak=$12,452 | dd=-2%
+  DUKE: mcap=$18,428 | gain=+41.4% | peak=$22,724 | dd=+8%
+  Avatar : mcap=$12,452 | gain=+68.6% | peak=$12,452 | dd=-2%
+  DUKE: mcap=$18,428 | gain=+41.4% | peak=$22,724 | dd=+8%
+  Avatar : mcap=$13,958 | gain=+88.9% | peak=$13,958 | dd=-14%
+  DUKE: mcap=$18,428 | gain=+41.4% | peak=$22,724 | dd=+8%
+  Avatar : mcap=$13,958 | gain=+88.9% | peak=$13,958 | dd=-14%
+  DUKE: mcap=$18,428 | gain=+41.4% | peak=$22,724 | dd=+8%
+  Avatar : mcap=$13,958 | gain=+88.9% | peak=$13,958 | dd=-14%
+[13:55:07] Monitor alive | 865 checks | 2 open | next in 5s
+  DUKE: mcap=$18,428 | gain=+41.4% | peak=$22,724 | dd=+8%
+  Avatar : mcap=$13,958 | gain=+88.9% | peak=$13,958 | dd=-14%
+  DUKE: mcap=$18,428 | gain=+41.4% | peak=$22,724 | dd=+8%
+  Avatar : mcap=$13,958 | gain=+88.9% | peak=$13,958 | dd=-14%
+  DUKE: mcap=$17,262 | gain=+32.5% | peak=$22,724 | dd=+14%
+  Avatar : mcap=$13,958 | gain=+88.9% | peak=$13,958 | dd=-14%
+  DUKE: mcap=$17,262 | gain=+32.5% | peak=$22,724 | dd=+14%
+  Avatar : mcap=$14,231 | gain=+92.7% | peak=$14,231 | dd=-16%
+  DUKE: mcap=$17,262 | gain=+32.5% | peak=$22,724 | dd=+14%
+  Avatar : mcap=$14,231 | gain=+92.7% | peak=$14,231 | dd=-16%
+  DUKE: mcap=$17,262 | gain=+32.5% | peak=$22,724 | dd=+14%
+  Avatar : mcap=$14,231 | gain=+92.7% | peak=$14,231 | dd=-16%
+  DUKE: mcap=$17,262 | gain=+32.5% | peak=$22,724 | dd=+14%
+  Avatar : mcap=$14,231 | gain=+92.7% | peak=$14,231 | dd=-16%
+  DUKE: mcap=$17,262 | gain=+32.5% | peak=$22,724 | dd=+14%
+  Avatar : mcap=$14,231 | gain=+92.7% | peak=$14,231 | dd=-16%
+  DUKE: mcap=$16,712 | gain=+28.3% | peak=$22,724 | dd=+17%
+  Avatar : mcap=$14,231 | gain=+92.7% | peak=$14,231 | dd=-16%
+  DUKE: mcap=$16,712 | gain=+28.3% | peak=$22,724 | dd=+17%
+  Avatar : mcap=$14,633 | gain=+98.1% | peak=$14,633 | dd=-19%
+  DUKE: mcap=$16,712 | gain=+28.3% | peak=$22,724 | dd=+17%
+  Avatar : mcap=$14,633 | gain=+98.1% | peak=$14,633 | dd=-19%
+  DUKE: mcap=$16,712 | gain=+28.3% | peak=$22,724 | dd=+17%
+  Avatar : mcap=$14,633 | gain=+98.1% | peak=$14,633 | dd=-19%
+[13:56:09] Monitor alive | 877 checks | 2 open | next in 5s
+  DUKE: mcap=$16,712 | gain=+28.3% | peak=$22,724 | dd=+17%
+  Avatar : mcap=$14,633 | gain=+98.1% | peak=$14,633 | dd=-19%
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+[13:57:11] Monitor alive | 889 checks | 2 open | next in 5s
+  DUKE: mcap=$16,622 | gain=+27.6% | peak=$22,724 | dd=+17%
+  Avatar : mcap=$13,899 | gain=+88.2% | peak=$14,633 | dd=-13%
+  DUKE: mcap=$16,343 | gain=+25.4% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$13,899 | gain=+88.2% | peak=$14,633 | dd=-13%
+  DUKE: mcap=$16,343 | gain=+25.4% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,055 | gain=+90.3% | peak=$14,633 | dd=-15%
+  DUKE: mcap=$16,343 | gain=+25.4% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,055 | gain=+90.3% | peak=$14,633 | dd=-15%
+  DUKE: mcap=$16,343 | gain=+25.4% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,055 | gain=+90.3% | peak=$14,633 | dd=-15%
+  DUKE: mcap=$16,343 | gain=+25.4% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,055 | gain=+90.3% | peak=$14,633 | dd=-15%
+  DUKE: mcap=$16,343 | gain=+25.4% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,055 | gain=+90.3% | peak=$14,633 | dd=-15%
+  DUKE: mcap=$16,352 | gain=+25.5% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,055 | gain=+90.3% | peak=$14,633 | dd=-15%
+  DUKE: mcap=$16,352 | gain=+25.5% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,634 | gain=+98.1% | peak=$14,634 | dd=-19%
+  DUKE: mcap=$16,352 | gain=+25.5% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,634 | gain=+98.1% | peak=$14,634 | dd=-19%
+  DUKE: mcap=$16,352 | gain=+25.5% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,634 | gain=+98.1% | peak=$14,634 | dd=-19%
+  DUKE: mcap=$16,352 | gain=+25.5% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,634 | gain=+98.1% | peak=$14,634 | dd=-19%
+[13:58:12] Monitor alive | 901 checks | 2 open | next in 5s
+  DUKE: mcap=$16,352 | gain=+25.5% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,634 | gain=+98.1% | peak=$14,634 | dd=-19%
+  DUKE: mcap=$16,275 | gain=+24.9% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,634 | gain=+98.1% | peak=$14,634 | dd=-19%
+  DUKE: mcap=$16,275 | gain=+24.9% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,715 | gain=+99.2% | peak=$14,715 | dd=-20%
+  DUKE: mcap=$16,275 | gain=+24.9% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,715 | gain=+99.2% | peak=$14,715 | dd=-20%
+  DUKE: mcap=$16,275 | gain=+24.9% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,715 | gain=+99.2% | peak=$14,715 | dd=-20%
+  DUKE: mcap=$16,275 | gain=+24.9% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,715 | gain=+99.2% | peak=$14,715 | dd=-20%
+  DUKE: mcap=$16,275 | gain=+24.9% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$14,715 | gain=+99.2% | peak=$14,715 | dd=-20%
+  DUKE: mcap=$16,418 | gain=+26.0% | peak=$22,724 | dd=+18%
+  Avatar : mcap=$14,715 | gain=+99.2% | peak=$14,715 | dd=-20%
+  DUKE: mcap=$16,418 | gain=+26.0% | peak=$22,724 | dd=+18%
+[TP2] Alert sent
+✅ Avatar  TP2 HIT @ $15,333 (+108%)
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+[13:59:15] Monitor alive | 913 checks | 1 open | next in 5s
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
