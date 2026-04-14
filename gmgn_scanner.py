@@ -22,6 +22,7 @@ from trading_constants import (
     BS_RATIO_NEW, BS_RATIO_OLD, BS_PUMP_FUN_OK,
     H1_MOMENTUM_MIN, H24_MOMENTUM_MIN,
     MIN_CHG1_FOR_BUY, CHG1_DROP_THRESHOLD, CHG1_NONE_M5_REJECT,
+    CHG1_COOLDOWN_TRIGGER,
     DIP_MIN, DIP_MAX, ATH_DIVERGENCE_MIN,
     YOUNG_PUMP_5M_THRESHOLD, OLD_PUMP_5M_THRESHOLD,
     YOUNG_COOLDOWN, OLD_COOLDOWN,
@@ -452,73 +453,78 @@ def check_cooldown_watch():
                 data['cooldown_end'] = now + wait_time
                 continue
         
-        # === CHG1 CHECK DURING COOLDOWN ===
+        # === CHG1 CHECK DURING COOLDOWN (v6.4) ===
+        # Step 1: cooldown is running — chg1 must reach >+5% to proceed
+        # Step 2: once chg1 >= +5%, wait 15s to verify
+        # Step 3: check improvement (+3% from prev) and deterioration (>1% drop = reject)
+        # Step 4: 2 consecutive rechecks before buy
         chg1 = fresh_result.get('chg1')
         prev_chg1 = data.get('prev_chg1')
+        cooldown_done = now >= data['cooldown_end']
+        chg1_reached_trigger = chg1 is not None and chg1 >= CHG1_COOLDOWN_TRIGGER
         
-        # If cooldown has passed, check chg1 improvement
-        if now >= data['cooldown_end']:
-            # Cooldown done - check chg1
-            if chg1 is None:
-                # No chg1 data - wait more
-                data['cooldown_end'] = now + RECHECK_DELAY
-                continue
+        if not cooldown_done:
+            # Cooldown still running — just monitor chg1, don't count as recheck
+            data['prev_chg1'] = chg1
+            remaining = data['cooldown_end'] - now
+            print(f"   ⏳ {result['token']}: cooldown {remaining:.0f}s left (chg1={chg1:+.1f}% if available)")
+            continue
+        
+        # Cooldown done — now enforce chg1 rules
+        if chg1 is None:
+            # No chg1 data — wait more
+            data['cooldown_end'] = now + RECHECK_DELAY
+            continue
+        
+        if not chg1_reached_trigger:
+            # chg1 < +5% — wait extra 15s and keep checking
+            data['cooldown_end'] = now + CHG1_COOLDOWN_EXTRA
+            print(f"   ⏳ {result['token']}: chg1 {chg1:+.1f}% (need >+{CHG1_COOLDOWN_TRIGGER}%) — waiting 15s more")
+            data['prev_chg1'] = chg1
+            continue
+        
+        # chg1 >= +5% — verify with 15s wait
+        if not data.get('_chg1_triggered'):
+            data['_chg1_triggered'] = True
+            data['cooldown_end'] = now + CHG1_COOLDOWN_VERIFY
+            data['prev_chg1'] = chg1
+            print(f"   ⏳ {result['token']}: chg1 {chg1:+.1f}% >= +{CHG1_COOLDOWN_TRIGGER}% — verifying 15s")
+            continue
+        
+        # Verified — now check improvement and deterioration
+        data['recheck_count'] += 1
+        
+        if prev_chg1 is not None:
+            improvement = chg1 - prev_chg1
             
-            if chg1 < MIN_CHG1_FOR_BUY:
-                # chg1 not strong enough - wait for it to improve
-                if prev_chg1 is not None:
-                    improvement = chg1 - prev_chg1
-                    if improvement >= 0:
-                        # Improving but not enough - continue watching
-                        data['cooldown_end'] = now + CHG1_COOLDOWN_EXTRA
-                        print(f"   ⏳ {result['token']}: chg1 {chg1:+.1f}% (need >{MIN_CHG1_FOR_BUY}%) - wait extra 15s")
-                    else:
-                        # Getting worse
-                        data['cooldown_end'] = now + CHG1_COOLDOWN_EXTRA
-                        print(f"   ❌ {result['token']}: chg1 dropping {prev_chg1:+.1f}% → {chg1:+.1f}% - skip")
-                        to_remove.append(addr)
-                        continue
-                else:
-                    data['cooldown_end'] = now + CHG1_COOLDOWN_EXTRA
+            # Deterioration: chg1 dropped >1% from previous → continue watching
+            if prev_chg1 > 0 and chg1 < prev_chg1 - CHG1_DROP_THRESHOLD:
+                print(f"   ⏳ {result['token']}: chg1 deteriorated {prev_chg1:+.1f}% → {chg1:+.1f}% (>1% drop) — continue watching")
+                data['cooldown_end'] = now + RECHECK_DELAY
                 data['prev_chg1'] = chg1
                 continue
             
-            # chg1 >= MIN_CHG1_FOR_BUY
-            # Check improvement from prev_chg1
-            if prev_chg1 is not None:
-                improvement = chg1 - prev_chg1
-                
-                # CHG1 DETERIORATION: if chg1 dropped >5% from previous
-                if prev_chg1 > 0 and chg1 < prev_chg1 * (1 - CHG1_DROP_THRESHOLD / 100):
-                    print(f"   ❌ {result['token']}: chg1 deteriorated {prev_chg1:+.1f}% → {chg1:+.1f}% - skip")
-                    to_remove.append(addr)
-                    continue
-                
-                if improvement >= 3:
-                    # Improvement confirmed
-                    data['recheck_count'] += 1
-                    if data['recheck_count'] < 2:
-                        # Need 2 consecutive
-                        data['cooldown_end'] = now + RECHECK_DELAY
-                        print(f"   ⏳ {result['token']}: recheck #{data['recheck_count']} (chg1 {chg1:+.1f}% improved {improvement:+.1f}%)")
-                        continue
-                    # 2 rechecks confirmed - BUY!
-                elif improvement >= 0:
-                    # Improving but not enough
-                    data['recheck_count'] = 0
+            # Improvement: need +3% from previous
+            if improvement >= 3:
+                if data['recheck_count'] < 2:
                     data['cooldown_end'] = now + RECHECK_DELAY
-                    data['prev_chg1'] = chg1
+                    print(f"   ⏳ {result['token']}: recheck #{data['recheck_count']} — chg1 {chg1:+.1f}% (+{improvement:+.1f}% from prev)")
                     continue
-                else:
-                    # Not improving - wait
-                    data['cooldown_end'] = now + RECHECK_DELAY
-                    data['prev_chg1'] = chg1
-                    continue
+                # 2 consecutive rechecks confirmed — BUY
+            elif improvement >= 0:
+                data['recheck_count'] = 0
+                data['cooldown_end'] = now + RECHECK_DELAY
+                data['prev_chg1'] = chg1
+                continue
             else:
-                # First chg1 check
-                data['prev_chg1'] = chg1
                 data['cooldown_end'] = now + RECHECK_DELAY
+                data['prev_chg1'] = chg1
                 continue
+        else:
+            # First valid chg1 reading after trigger
+            data['prev_chg1'] = chg1
+            data['cooldown_end'] = now + RECHECK_DELAY
+            continue
         
         # === MAX RECHECKS CHECK ===
         data['recheck_count'] += 1

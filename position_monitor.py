@@ -23,7 +23,8 @@ from trading_constants import (
     TP4_PERCENT, TP4_TRAILING_PCT, TP4_SELL_PCT,
     TP5_PERCENT, TP5_TRAILING_PCT, TP5_SELL_PCT,
     STOP_LOSS_PERCENT, TRAILING_STOP_PCT, SIM_RESET_TIMESTAMP,
-    POSITION_SIZE, MAX_OPEN_POSITIONS
+    POSITION_SIZE, MAX_OPEN_POSITIONS,
+    LIQUIDITY_MCAP_THRESHOLD, LIQUIDITY_MIN
 )
 
 TRADES_FILE = Path("/root/Dex-trading-bot/trades/sim_trades.jsonl")
@@ -156,6 +157,45 @@ def check_positions():
             send_alert(msg, "LOW_VOLUME")
             print(f"💨 {sym} LOW VOLUME EXIT @ ${mcap:,.0f} (v5=${v5:,.0f})")
             continue
+
+        # === LIQUIDITY CHECK: mcap > $70K AND liq < $1K → sell immediately (v6.4) ===
+        if mcap > LIQUIDITY_MCAP_THRESHOLD:
+            try:
+                r_liq = requests.get(f'https://api.dexscreener.com/latest/dex/tokens/{ca}', timeout=5)
+                if r_liq.status_code == 200:
+                    pairs = r_liq.json().get('pairs', [])
+                    if pairs:
+                        liq = float(pairs[0].get('liquidity', {}).get('usd', 0) or 0)
+                        if liq > 0 and liq < LIQUIDITY_MIN:
+                            pnl = POSITION_SIZE * (gains_pct / 100)
+                            t['status'] = 'closed'
+                            t['fully_exited'] = True
+                            t['exit_reason'] = 'LOW_LIQUIDITY'
+                            t['closed_at'] = datetime.utcnow().isoformat()
+                            t['exit_mcap'] = int(mcap)
+                            t['pnl_sol'] = pnl
+                            t['pnl_pct'] = gains_pct
+                            updated = True
+                            if ca_key in peak_cache:
+                                del peak_cache[ca_key]
+                            msg = f"""💨 LOW LIQUIDITY EXIT | {datetime.utcnow().strftime('%H:%M UTC')}
+━━━━━━━━━━━━━━━
+💰 {sym}
+📍 Entry MC: ${int(entry):,}
+📊 Current MC: ${int(mcap):,} ({gains_pct:+.1f}%)
+💵 Liquidity: ${liq:,.0f} (< $1,000)
+💰 Balance: {get_balance()} SOL
+💰 PnL: {pnl:.4f} SOL
+
+🔗 https://dexscreener.com/solana/{ca}
+🥧 https://pump.fun/{ca}
+
+⚠️ Liquidity gone — dump risk"""
+                            send_alert(msg, "LOW_LIQ")
+                            print(f"💨 {sym} LOW LIQUIDITY EXIT @ ${mcap:,.0f} (liq=${liq:,.0f})")
+                            continue
+            except:
+                pass
 
         if mcap > cache['peak_mcap']:
             cache['peak_mcap'] = mcap
