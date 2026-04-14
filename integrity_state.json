@@ -1,6 +1,6 @@
 {
   "sim_reset_timestamp": "2026-04-14T21:10:00.000000+00:00",
-  "trade_count": 0,
-  "last_balance": 1.0,
-  "trade_hash": "e3b0c44298fc1c14"
+  "trade_count": 10,
+  "last_balance": 0.872,
+  "trade_hash": "e7ee97dd7e922528"
 }
