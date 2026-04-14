@@ -12514,3 +12514,444 @@ Checking every 5s
   Twin: mcap=$11,681 | gain=+19.0% | peak=$14,092 | dd=+0%
   nigga: mcap=$36,741 | gain=+91.5% | peak=$36,741 | dd=-19%
   SHINCHAN: mcap=$17,539 | gain=-20.4% | peak=$22,356 | dd=+0%
+  Twin: mcap=$11,681 | gain=+19.0% | peak=$14,092 | dd=+0%
+  nigga: mcap=$36,741 | gain=+91.5% | peak=$36,741 | dd=-19%
+  SHINCHAN: mcap=$17,539 | gain=-20.4% | peak=$22,356 | dd=+0%
+  Twin: mcap=$12,809 | gain=+30.5% | peak=$14,092 | dd=+0%
+  nigga: mcap=$36,741 | gain=+91.5% | peak=$36,741 | dd=-19%
+  SHINCHAN: mcap=$17,539 | gain=-20.4% | peak=$22,356 | dd=+0%
+  Twin: mcap=$12,809 | gain=+30.5% | peak=$14,092 | dd=+0%
+  nigga: mcap=$36,741 | gain=+91.5% | peak=$36,741 | dd=-19%
+  SHINCHAN: mcap=$17,539 | gain=-20.4% | peak=$22,356 | dd=+0%
+  Twin: mcap=$12,809 | gain=+30.5% | peak=$14,092 | dd=+0%
+  nigga: mcap=$37,727 | gain=+96.6% | peak=$37,727 | dd=-22%
+  SHINCHAN: mcap=$17,539 | gain=-20.4% | peak=$22,356 | dd=+0%
+  Twin: mcap=$12,809 | gain=+30.5% | peak=$14,092 | dd=+0%
+  nigga: mcap=$37,727 | gain=+96.6% | peak=$37,727 | dd=-22%
+  SHINCHAN: mcap=$17,522 | gain=-20.5% | peak=$22,356 | dd=+0%
+  Twin: mcap=$12,809 | gain=+30.5% | peak=$14,092 | dd=+0%
+  nigga: mcap=$37,727 | gain=+96.6% | peak=$37,727 | dd=-22%
+  SHINCHAN: mcap=$17,522 | gain=-20.5% | peak=$22,356 | dd=+0%
+  Twin: mcap=$12,809 | gain=+30.5% | peak=$14,092 | dd=+0%
+  nigga: mcap=$37,727 | gain=+96.6% | peak=$37,727 | dd=-22%
+  SHINCHAN: mcap=$17,522 | gain=-20.5% | peak=$22,356 | dd=+0%
+  Twin: mcap=$12,230 | gain=+24.6% | peak=$14,092 | dd=+0%
+  nigga: mcap=$37,727 | gain=+96.6% | peak=$37,727 | dd=-22%
+  SHINCHAN: mcap=$17,522 | gain=-20.5% | peak=$22,356 | dd=+0%
+  Twin: mcap=$12,230 | gain=+24.6% | peak=$14,092 | dd=+0%
+  nigga: mcap=$37,727 | gain=+96.6% | peak=$37,727 | dd=-22%
+  SHINCHAN: mcap=$17,522 | gain=-20.5% | peak=$22,356 | dd=+0%
+  Twin: mcap=$12,230 | gain=+24.6% | peak=$14,092 | dd=+0%
+  nigga: mcap=$29,869 | gain=+55.7% | peak=$37,727 | dd=+3%
+  SHINCHAN: mcap=$17,522 | gain=-20.5% | peak=$22,356 | dd=+0%
+  Twin: mcap=$12,230 | gain=+24.6% | peak=$14,092 | dd=+0%
+  nigga: mcap=$29,869 | gain=+55.7% | peak=$37,727 | dd=+3%
+[STOP_LOSS] Alert sent
+🔴 SHINCHAN STOP LOSS @ $15,736 (-28.6%)
+[17:30:58] Monitor alive | 94 checks | 2 open | next in 5s
+  Twin: mcap=$12,230 | gain=+24.6% | peak=$14,092 | dd=+0%
+  nigga: mcap=$29,869 | gain=+55.7% | peak=$37,727 | dd=+3%
+  Twin: mcap=$12,230 | gain=+24.6% | peak=$14,092 | dd=+0%
+  nigga: mcap=$29,869 | gain=+55.7% | peak=$37,727 | dd=+3%
+  Twin: mcap=$10,943 | gain=+11.5% | peak=$14,092 | dd=+0%
+  nigga: mcap=$29,869 | gain=+55.7% | peak=$37,727 | dd=+3%
+  Twin: mcap=$10,943 | gain=+11.5% | peak=$14,092 | dd=+0%
+  nigga: mcap=$25,190 | gain=+31.3% | peak=$37,727 | dd=+18%
+  Twin: mcap=$10,943 | gain=+11.5% | peak=$14,092 | dd=+0%
+  nigga: mcap=$25,190 | gain=+31.3% | peak=$37,727 | dd=+18%
+  Twin: mcap=$10,943 | gain=+11.5% | peak=$14,092 | dd=+0%
+  nigga: mcap=$25,190 | gain=+31.3% | peak=$37,727 | dd=+18%
+  Twin: mcap=$11,077 | gain=+12.8% | peak=$14,092 | dd=+0%
+  nigga: mcap=$25,190 | gain=+31.3% | peak=$37,727 | dd=+18%
+  Twin: mcap=$11,077 | gain=+12.8% | peak=$14,092 | dd=+0%
+  nigga: mcap=$25,190 | gain=+31.3% | peak=$37,727 | dd=+18%
+  Twin: mcap=$11,077 | gain=+12.8% | peak=$14,092 | dd=+0%
+  nigga: mcap=$25,190 | gain=+31.3% | peak=$37,727 | dd=+18%
+  Twin: mcap=$11,077 | gain=+12.8% | peak=$14,092 | dd=+0%
+[TRAILING_STOP] Alert sent
+✅ nigga TRAILING STOP @ $21,127 (44% drop from peak)
+  Twin: mcap=$11,077 | gain=+12.8% | peak=$14,092 | dd=+0%
+  Twin: mcap=$11,077 | gain=+12.8% | peak=$14,092 | dd=+0%
+[17:32:01] Monitor alive | 106 checks | 1 open | next in 5s
+  Twin: mcap=$12,387 | gain=+26.2% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,387 | gain=+26.2% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,387 | gain=+26.2% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,387 | gain=+26.2% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,387 | gain=+26.2% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,060 | gain=+22.8% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,060 | gain=+22.8% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,060 | gain=+22.8% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,060 | gain=+22.8% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,060 | gain=+22.8% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,060 | gain=+22.8% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,787 | gain=+30.3% | peak=$14,092 | dd=+0%
+[17:33:02] Monitor alive | 118 checks | 1 open | next in 5s
+  Twin: mcap=$12,787 | gain=+30.3% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,787 | gain=+30.3% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,787 | gain=+30.3% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,787 | gain=+30.3% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,787 | gain=+30.3% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,227 | gain=+24.5% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,227 | gain=+24.5% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,227 | gain=+24.5% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,227 | gain=+24.5% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,227 | gain=+24.5% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,227 | gain=+24.5% | peak=$14,092 | dd=+0%
+  Twin: mcap=$11,314 | gain=+15.3% | peak=$14,092 | dd=+0%
+[17:34:03] Monitor alive | 130 checks | 1 open | next in 5s
+  Twin: mcap=$11,314 | gain=+15.3% | peak=$14,092 | dd=+0%
+  Twin: mcap=$11,314 | gain=+15.3% | peak=$14,092 | dd=+0%
+  Twin: mcap=$11,314 | gain=+15.3% | peak=$14,092 | dd=+0%
+  Twin: mcap=$11,314 | gain=+15.3% | peak=$14,092 | dd=+0%
+  Twin: mcap=$11,314 | gain=+15.3% | peak=$14,092 | dd=+0%
+  Twin: mcap=$11,725 | gain=+19.4% | peak=$14,092 | dd=+0%
+  Twin: mcap=$11,725 | gain=+19.4% | peak=$14,092 | dd=+0%
+  Twin: mcap=$11,725 | gain=+19.4% | peak=$14,092 | dd=+0%
+  Twin: mcap=$11,725 | gain=+19.4% | peak=$14,092 | dd=+0%
+  Twin: mcap=$11,725 | gain=+19.4% | peak=$14,092 | dd=+0%
+  Twin: mcap=$11,725 | gain=+19.4% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$36,545 | gain=-3.6% | peak=$37,910 | dd=+0%
+  Twin: mcap=$11,347 | gain=+15.6% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$36,545 | gain=-3.6% | peak=$37,910 | dd=+0%
+[17:35:04] Monitor alive | 142 checks | 2 open | next in 5s
+  Twin: mcap=$11,347 | gain=+15.6% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$38,939 | gain=+2.7% | peak=$38,939 | dd=+0%
+  Twin: mcap=$11,347 | gain=+15.6% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$38,939 | gain=+2.7% | peak=$38,939 | dd=+0%
+  Slangcoin: mcap=$10,332 | gain=-12.1% | peak=$11,757 | dd=+0%
+  Twin: mcap=$11,347 | gain=+15.6% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$38,939 | gain=+2.7% | peak=$38,939 | dd=+0%
+  Slangcoin: mcap=$10,332 | gain=-12.1% | peak=$11,757 | dd=+0%
+  Twin: mcap=$11,347 | gain=+15.6% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$38,939 | gain=+2.7% | peak=$38,939 | dd=+0%
+  Slangcoin: mcap=$10,332 | gain=-12.1% | peak=$11,757 | dd=+0%
+  Twin: mcap=$11,347 | gain=+15.6% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$38,939 | gain=+2.7% | peak=$38,939 | dd=+0%
+  Slangcoin: mcap=$10,332 | gain=-12.1% | peak=$11,757 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 OpenWhip STOP LOSS @ $9,840 (-34.2%)
+  Twin: mcap=$10,814 | gain=+10.2% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$37,126 | gain=-2.1% | peak=$38,939 | dd=+0%
+  Slangcoin: mcap=$10,332 | gain=-12.1% | peak=$11,757 | dd=+0%
+  Twin: mcap=$10,814 | gain=+10.2% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$37,126 | gain=-2.1% | peak=$38,939 | dd=+0%
+  Slangcoin: mcap=$12,351 | gain=+5.0% | peak=$12,351 | dd=+0%
+  Twin: mcap=$10,814 | gain=+10.2% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$37,126 | gain=-2.1% | peak=$38,939 | dd=+0%
+  Slangcoin: mcap=$12,351 | gain=+5.0% | peak=$12,351 | dd=+0%
+  Twin: mcap=$10,814 | gain=+10.2% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$37,126 | gain=-2.1% | peak=$38,939 | dd=+0%
+  Slangcoin: mcap=$12,351 | gain=+5.0% | peak=$12,351 | dd=+0%
+  Twin: mcap=$10,814 | gain=+10.2% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$37,126 | gain=-2.1% | peak=$38,939 | dd=+0%
+  Slangcoin: mcap=$12,351 | gain=+5.0% | peak=$12,351 | dd=+0%
+  Twin: mcap=$10,994 | gain=+12.0% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$37,126 | gain=-2.1% | peak=$38,939 | dd=+0%
+  Slangcoin: mcap=$12,351 | gain=+5.0% | peak=$12,351 | dd=+0%
+  MSK Fund: mcap=$7,561 | gain=+14.7% | peak=$7,561 | dd=+0%
+  Twin: mcap=$10,994 | gain=+12.0% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$39,442 | gain=+4.0% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$12,361 | gain=+5.1% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$7,561 | gain=+14.7% | peak=$7,561 | dd=+0%
+[17:36:08] Monitor alive | 154 checks | 4 open | next in 5s
+  Twin: mcap=$10,994 | gain=+12.0% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$39,442 | gain=+4.0% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$12,361 | gain=+5.1% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$7,561 | gain=+14.7% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$18,016 | gain=-8.4% | peak=$19,677 | dd=+0%
+  Twin: mcap=$10,994 | gain=+12.0% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$39,442 | gain=+4.0% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$12,361 | gain=+5.1% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$7,561 | gain=+14.7% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$18,016 | gain=-8.4% | peak=$19,677 | dd=+0%
+  Twin: mcap=$10,994 | gain=+12.0% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$39,442 | gain=+4.0% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$12,361 | gain=+5.1% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$6,573 | gain=-0.3% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$18,016 | gain=-8.4% | peak=$19,677 | dd=+0%
+  Twin: mcap=$10,994 | gain=+12.0% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$39,442 | gain=+4.0% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$12,361 | gain=+5.1% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$6,573 | gain=-0.3% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,180 | gain=+2.6% | peak=$20,180 | dd=+0%
+  Sol: mcap=$16,014 | gain=+39.5% | peak=$16,014 | dd=+0%
+  Twin: mcap=$12,172 | gain=+24.0% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$39,442 | gain=+4.0% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$12,361 | gain=+5.1% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$6,573 | gain=-0.3% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,180 | gain=+2.6% | peak=$20,180 | dd=+0%
+  Sol: mcap=$16,014 | gain=+39.5% | peak=$16,014 | dd=+0%
+  Twin: mcap=$12,172 | gain=+24.0% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$38,358 | gain=+1.2% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$11,700 | gain=-0.5% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$6,573 | gain=-0.3% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,180 | gain=+2.6% | peak=$20,180 | dd=+0%
+  Sol: mcap=$16,014 | gain=+39.5% | peak=$16,014 | dd=+0%
+  Twin: mcap=$12,172 | gain=+24.0% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$38,358 | gain=+1.2% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$11,700 | gain=-0.5% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$6,573 | gain=-0.3% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,180 | gain=+2.6% | peak=$20,180 | dd=+0%
+  Sol: mcap=$16,014 | gain=+39.5% | peak=$16,014 | dd=+0%
+  Twin: mcap=$12,172 | gain=+24.0% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$38,358 | gain=+1.2% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$11,700 | gain=-0.5% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$6,573 | gain=-0.3% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,180 | gain=+2.6% | peak=$20,180 | dd=+0%
+  Sol: mcap=$11,060 | gain=-3.7% | peak=$16,014 | dd=+0%
+  Twin: mcap=$12,172 | gain=+24.0% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$38,358 | gain=+1.2% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$11,700 | gain=-0.5% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$6,730 | gain=+2.1% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,180 | gain=+2.6% | peak=$20,180 | dd=+0%
+  Sol: mcap=$11,060 | gain=-3.7% | peak=$16,014 | dd=+0%
+  Twin: mcap=$12,172 | gain=+24.0% | peak=$14,092 | dd=+0%
+  KYRIE: mcap=$38,358 | gain=+1.2% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$11,700 | gain=-0.5% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$6,730 | gain=+2.1% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$19,292 | gain=-2.0% | peak=$20,180 | dd=+0%
+  Sol: mcap=$11,060 | gain=-3.7% | peak=$16,014 | dd=+0%
+  Young Nigga: mcap=$8,145 | gain=-8.1% | peak=$8,861 | dd=+0%
+  Twin: mcap=$14,212 | gain=+44.8% | peak=$14,212 | dd=+0%
+  KYRIE: mcap=$38,163 | gain=+0.7% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$11,700 | gain=-0.5% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$6,730 | gain=+2.1% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$19,292 | gain=-2.0% | peak=$20,180 | dd=+0%
+  Sol: mcap=$11,060 | gain=-3.7% | peak=$16,014 | dd=+0%
+  Young Nigga: mcap=$8,145 | gain=-8.1% | peak=$8,861 | dd=+0%
+  Twin: mcap=$14,212 | gain=+44.8% | peak=$14,212 | dd=+0%
+  KYRIE: mcap=$38,163 | gain=+0.7% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$12,104 | gain=+2.9% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$6,730 | gain=+2.1% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$19,292 | gain=-2.0% | peak=$20,180 | dd=+0%
+  Sol: mcap=$11,060 | gain=-3.7% | peak=$16,014 | dd=+0%
+  Young Nigga: mcap=$8,145 | gain=-8.1% | peak=$8,861 | dd=+0%
+[17:37:13] Monitor alive | 166 checks | 7 open | next in 5s
+  Twin: mcap=$14,212 | gain=+44.8% | peak=$14,212 | dd=+0%
+  KYRIE: mcap=$38,163 | gain=+0.7% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$12,104 | gain=+2.9% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$6,730 | gain=+2.1% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$19,292 | gain=-2.0% | peak=$20,180 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Sol STOP LOSS @ $8,513 (-25.9%)
+  Young Nigga: mcap=$8,945 | gain=+0.9% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$10,489 | gain=-0.3% | peak=$10,525 | dd=+0%
+  Twin: mcap=$14,212 | gain=+44.8% | peak=$14,212 | dd=+0%
+  KYRIE: mcap=$38,163 | gain=+0.7% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$12,104 | gain=+2.9% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$7,332 | gain=+11.2% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$19,292 | gain=-2.0% | peak=$20,180 | dd=+0%
+  Young Nigga: mcap=$8,945 | gain=+0.9% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$10,489 | gain=-0.3% | peak=$10,525 | dd=+0%
+  Twin: mcap=$14,212 | gain=+44.8% | peak=$14,212 | dd=+0%
+  KYRIE: mcap=$38,163 | gain=+0.7% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$12,104 | gain=+2.9% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$7,332 | gain=+11.2% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,337 | gain=+3.4% | peak=$20,337 | dd=+0%
+  Young Nigga: mcap=$8,945 | gain=+0.9% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$10,489 | gain=-0.3% | peak=$10,525 | dd=+0%
+  Twin: mcap=$13,985 | gain=+42.5% | peak=$14,212 | dd=+0%
+  KYRIE: mcap=$38,163 | gain=+0.7% | peak=$39,442 | dd=+0%
+  Slangcoin: mcap=$12,104 | gain=+2.9% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$7,332 | gain=+11.2% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,337 | gain=+3.4% | peak=$20,337 | dd=+0%
+  Young Nigga: mcap=$8,945 | gain=+0.9% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$10,489 | gain=-0.3% | peak=$10,525 | dd=+0%
+  Twin: mcap=$13,985 | gain=+42.5% | peak=$14,212 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 KYRIE STOP LOSS @ $1,841 (-95.1%)
+  Slangcoin: mcap=$10,982 | gain=-6.6% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$7,332 | gain=+11.2% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,337 | gain=+3.4% | peak=$20,337 | dd=+0%
+  Young Nigga: mcap=$8,945 | gain=+0.9% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$10,489 | gain=-0.3% | peak=$10,525 | dd=+0%
+  Twin: mcap=$13,985 | gain=+42.5% | peak=$14,212 | dd=+0%
+  Slangcoin: mcap=$10,982 | gain=-6.6% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$7,332 | gain=+11.2% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,337 | gain=+3.4% | peak=$20,337 | dd=+0%
+  Young Nigga: mcap=$8,023 | gain=-9.5% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$10,489 | gain=-0.3% | peak=$10,525 | dd=+0%
+  Twin: mcap=$13,985 | gain=+42.5% | peak=$14,212 | dd=+0%
+  Slangcoin: mcap=$10,982 | gain=-6.6% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$7,332 | gain=+11.2% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,337 | gain=+3.4% | peak=$20,337 | dd=+0%
+  Young Nigga: mcap=$8,023 | gain=-9.5% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$10,209 | gain=-3.0% | peak=$10,525 | dd=+0%
+  Twin: mcap=$13,985 | gain=+42.5% | peak=$14,212 | dd=+0%
+  Slangcoin: mcap=$10,982 | gain=-6.6% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$6,247 | gain=-5.2% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,337 | gain=+3.4% | peak=$20,337 | dd=+0%
+  Young Nigga: mcap=$8,023 | gain=-9.5% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$10,209 | gain=-3.0% | peak=$10,525 | dd=+0%
+  Twin: mcap=$13,985 | gain=+42.5% | peak=$14,212 | dd=+0%
+  Slangcoin: mcap=$10,982 | gain=-6.6% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$6,247 | gain=-5.2% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,459 | gain=+4.0% | peak=$20,459 | dd=+0%
+  Young Nigga: mcap=$8,023 | gain=-9.5% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$10,209 | gain=-3.0% | peak=$10,525 | dd=+0%
+  Twin: mcap=$14,222 | gain=+44.9% | peak=$14,222 | dd=+0%
+  Slangcoin: mcap=$10,982 | gain=-6.6% | peak=$12,361 | dd=+0%
+  MSK Fund: mcap=$6,247 | gain=-5.2% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,459 | gain=+4.0% | peak=$20,459 | dd=+0%
+  Young Nigga: mcap=$8,023 | gain=-9.5% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$10,209 | gain=-3.0% | peak=$10,525 | dd=+0%
+  Twin: mcap=$14,222 | gain=+44.9% | peak=$14,222 | dd=+0%
+  Slangcoin: mcap=$12,985 | gain=+10.4% | peak=$12,985 | dd=+0%
+  MSK Fund: mcap=$6,247 | gain=-5.2% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,459 | gain=+4.0% | peak=$20,459 | dd=+0%
+  Young Nigga: mcap=$8,023 | gain=-9.5% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$10,209 | gain=-3.0% | peak=$10,525 | dd=+0%
+[17:38:14] Monitor alive | 177 checks | 6 open | next in 5s
+  Twin: mcap=$14,222 | gain=+44.9% | peak=$14,222 | dd=+0%
+  Slangcoin: mcap=$12,985 | gain=+10.4% | peak=$12,985 | dd=+0%
+  MSK Fund: mcap=$6,247 | gain=-5.2% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,459 | gain=+4.0% | peak=$20,459 | dd=+0%
+  Young Nigga: mcap=$7,799 | gain=-12.0% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$9,997 | gain=-5.0% | peak=$10,525 | dd=+0%
+  Twin: mcap=$14,222 | gain=+44.9% | peak=$14,222 | dd=+0%
+  Slangcoin: mcap=$12,985 | gain=+10.4% | peak=$12,985 | dd=+0%
+  MSK Fund: mcap=$7,011 | gain=+6.4% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,459 | gain=+4.0% | peak=$20,459 | dd=+0%
+  Young Nigga: mcap=$7,799 | gain=-12.0% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$9,997 | gain=-5.0% | peak=$10,525 | dd=+0%
+  Twin: mcap=$14,222 | gain=+44.9% | peak=$14,222 | dd=+0%
+  Slangcoin: mcap=$12,985 | gain=+10.4% | peak=$12,985 | dd=+0%
+  MSK Fund: mcap=$7,011 | gain=+6.4% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$19,778 | gain=+0.5% | peak=$20,459 | dd=+0%
+  Young Nigga: mcap=$7,799 | gain=-12.0% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$9,997 | gain=-5.0% | peak=$10,525 | dd=+0%
+  Twin: mcap=$14,711 | gain=+49.9% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$12,985 | gain=+10.4% | peak=$12,985 | dd=+0%
+  MSK Fund: mcap=$7,011 | gain=+6.4% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$19,778 | gain=+0.5% | peak=$20,459 | dd=+0%
+  Young Nigga: mcap=$7,799 | gain=-12.0% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$9,997 | gain=-5.0% | peak=$10,525 | dd=+0%
+  Ticker: mcap=$5,188 | gain=+49.8% | peak=$5,188 | dd=+0%
+  Twin: mcap=$14,711 | gain=+49.9% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$13,915 | gain=+18.4% | peak=$13,915 | dd=+0%
+  MSK Fund: mcap=$7,011 | gain=+6.4% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$19,778 | gain=+0.5% | peak=$20,459 | dd=+0%
+  Young Nigga: mcap=$7,799 | gain=-12.0% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$9,997 | gain=-5.0% | peak=$10,525 | dd=+0%
+  Ticker: mcap=$5,188 | gain=+49.8% | peak=$5,188 | dd=+0%
+  Twin: mcap=$14,711 | gain=+49.9% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$13,915 | gain=+18.4% | peak=$13,915 | dd=+0%
+  MSK Fund: mcap=$7,011 | gain=+6.4% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$19,778 | gain=+0.5% | peak=$20,459 | dd=+0%
+  Young Nigga: mcap=$7,799 | gain=-12.0% | peak=$8,945 | dd=+0%
+  母夜叉: mcap=$9,997 | gain=-5.0% | peak=$10,525 | dd=+0%
+  Ticker: mcap=$5,188 | gain=+49.8% | peak=$5,188 | dd=+0%
+  Twin: mcap=$14,711 | gain=+49.9% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$13,915 | gain=+18.4% | peak=$13,915 | dd=+0%
+  MSK Fund: mcap=$7,011 | gain=+6.4% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$19,778 | gain=+0.5% | peak=$20,459 | dd=+0%
+  Young Nigga: mcap=$11,076 | gain=+25.0% | peak=$11,076 | dd=+0%
+  母夜叉: mcap=$9,952 | gain=-5.4% | peak=$10,525 | dd=+0%
+  Ticker: mcap=$5,188 | gain=+49.8% | peak=$5,188 | dd=+0%
+  Twin: mcap=$14,711 | gain=+49.9% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$13,915 | gain=+18.4% | peak=$13,915 | dd=+0%
+  MSK Fund: mcap=$7,186 | gain=+9.0% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$19,778 | gain=+0.5% | peak=$20,459 | dd=+0%
+  Young Nigga: mcap=$11,076 | gain=+25.0% | peak=$11,076 | dd=+0%
+  母夜叉: mcap=$9,952 | gain=-5.4% | peak=$10,525 | dd=+0%
+  Ticker: mcap=$3,399 | gain=-1.8% | peak=$5,188 | dd=+0%
+  Twin: mcap=$14,711 | gain=+49.9% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$13,915 | gain=+18.4% | peak=$13,915 | dd=+0%
+  MSK Fund: mcap=$7,186 | gain=+9.0% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,721 | gain=+5.3% | peak=$20,721 | dd=+0%
+  Young Nigga: mcap=$11,076 | gain=+25.0% | peak=$11,076 | dd=+0%
+  母夜叉: mcap=$9,952 | gain=-5.4% | peak=$10,525 | dd=+0%
+  Ticker: mcap=$3,399 | gain=-1.8% | peak=$5,188 | dd=+0%
+  Twin: mcap=$14,528 | gain=+48.0% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$13,915 | gain=+18.4% | peak=$13,915 | dd=+0%
+  MSK Fund: mcap=$7,186 | gain=+9.0% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,721 | gain=+5.3% | peak=$20,721 | dd=+0%
+  Young Nigga: mcap=$11,076 | gain=+25.0% | peak=$11,076 | dd=+0%
+  母夜叉: mcap=$9,952 | gain=-5.4% | peak=$10,525 | dd=+0%
+  Ticker: mcap=$3,399 | gain=-1.8% | peak=$5,188 | dd=+0%
+  Twin: mcap=$14,528 | gain=+48.0% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$15,548 | gain=+32.2% | peak=$15,548 | dd=+0%
+  MSK Fund: mcap=$7,186 | gain=+9.0% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,721 | gain=+5.3% | peak=$20,721 | dd=+0%
+  Young Nigga: mcap=$11,076 | gain=+25.0% | peak=$11,076 | dd=+0%
+  母夜叉: mcap=$9,952 | gain=-5.4% | peak=$10,525 | dd=+0%
+  Ticker: mcap=$3,399 | gain=-1.8% | peak=$5,188 | dd=+0%
+  Twin: mcap=$14,528 | gain=+48.0% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$15,548 | gain=+32.2% | peak=$15,548 | dd=+0%
+  MSK Fund: mcap=$7,186 | gain=+9.0% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,721 | gain=+5.3% | peak=$20,721 | dd=+0%
+  Young Nigga: mcap=$11,626 | gain=+31.2% | peak=$11,626 | dd=+0%
+  母夜叉: mcap=$10,012 | gain=-4.9% | peak=$10,525 | dd=+0%
+  Ticker: mcap=$3,399 | gain=-1.8% | peak=$5,188 | dd=+0%
+[17:39:20] Monitor alive | 189 checks | 7 open | next in 5s
+  Twin: mcap=$14,528 | gain=+48.0% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$15,548 | gain=+32.2% | peak=$15,548 | dd=+0%
+  MSK Fund: mcap=$6,639 | gain=+0.7% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$20,721 | gain=+5.3% | peak=$20,721 | dd=+0%
+  Young Nigga: mcap=$11,626 | gain=+31.2% | peak=$11,626 | dd=+0%
+  母夜叉: mcap=$10,012 | gain=-4.9% | peak=$10,525 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Ticker STOP LOSS @ $2,418 (-30.2%)
+  Twin: mcap=$14,528 | gain=+48.0% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$15,548 | gain=+32.2% | peak=$15,548 | dd=+0%
+  MSK Fund: mcap=$6,639 | gain=+0.7% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$21,760 | gain=+10.6% | peak=$21,760 | dd=+0%
+  Young Nigga: mcap=$11,626 | gain=+31.2% | peak=$11,626 | dd=+0%
+  母夜叉: mcap=$10,012 | gain=-4.9% | peak=$10,525 | dd=+0%
+  Twin: mcap=$10,503 | gain=+7.0% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$15,548 | gain=+32.2% | peak=$15,548 | dd=+0%
+  MSK Fund: mcap=$6,639 | gain=+0.7% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$21,760 | gain=+10.6% | peak=$21,760 | dd=+0%
+  Young Nigga: mcap=$11,626 | gain=+31.2% | peak=$11,626 | dd=+0%
+  母夜叉: mcap=$10,012 | gain=-4.9% | peak=$10,525 | dd=+0%
+  Twin: mcap=$10,503 | gain=+7.0% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$16,999 | gain=+44.6% | peak=$16,999 | dd=+0%
+  MSK Fund: mcap=$6,639 | gain=+0.7% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$21,760 | gain=+10.6% | peak=$21,760 | dd=+0%
+  Young Nigga: mcap=$11,626 | gain=+31.2% | peak=$11,626 | dd=+0%
+  母夜叉: mcap=$10,012 | gain=-4.9% | peak=$10,525 | dd=+0%
+  BEER: mcap=$21,840 | gain=+0.2% | peak=$21,840 | dd=+0%
+  Twin: mcap=$10,503 | gain=+7.0% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$16,999 | gain=+44.6% | peak=$16,999 | dd=+0%
+  MSK Fund: mcap=$6,639 | gain=+0.7% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$21,760 | gain=+10.6% | peak=$21,760 | dd=+0%
+  Young Nigga: mcap=$11,626 | gain=+31.2% | peak=$11,626 | dd=+0%
+  母夜叉: mcap=$10,012 | gain=-4.9% | peak=$10,525 | dd=+0%
+  BEER: mcap=$21,854 | gain=+0.2% | peak=$21,854 | dd=+0%
+  Twin: mcap=$10,503 | gain=+7.0% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$16,999 | gain=+44.6% | peak=$16,999 | dd=+0%
+  MSK Fund: mcap=$6,639 | gain=+0.7% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$21,760 | gain=+10.6% | peak=$21,760 | dd=+0%
+  Young Nigga: mcap=$10,994 | gain=+24.1% | peak=$11,626 | dd=+0%
+  母夜叉: mcap=$10,012 | gain=-4.9% | peak=$10,525 | dd=+0%
+  BEER: mcap=$21,854 | gain=+0.2% | peak=$21,854 | dd=+0%
+  Twin: mcap=$10,503 | gain=+7.0% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$16,999 | gain=+44.6% | peak=$16,999 | dd=+0%
+  MSK Fund: mcap=$6,359 | gain=-3.5% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$21,760 | gain=+10.6% | peak=$21,760 | dd=+0%
+  Young Nigga: mcap=$10,994 | gain=+24.1% | peak=$11,626 | dd=+0%
+  母夜叉: mcap=$10,012 | gain=-4.9% | peak=$10,525 | dd=+0%
+  BEER: mcap=$21,854 | gain=+0.2% | peak=$21,854 | dd=+0%
+  Twin: mcap=$10,503 | gain=+7.0% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$16,999 | gain=+44.6% | peak=$16,999 | dd=+0%
+  MSK Fund: mcap=$6,359 | gain=-3.5% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$21,508 | gain=+9.3% | peak=$21,760 | dd=+0%
+  Young Nigga: mcap=$10,994 | gain=+24.1% | peak=$11,626 | dd=+0%
+  母夜叉: mcap=$10,012 | gain=-4.9% | peak=$10,525 | dd=+0%
+  BEER: mcap=$21,854 | gain=+0.2% | peak=$21,854 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 No Token STOP LOSS @ $3,194 (-25.5%)
+  Twin: mcap=$10,974 | gain=+11.8% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$16,999 | gain=+44.6% | peak=$16,999 | dd=+0%
+  MSK Fund: mcap=$6,359 | gain=-3.5% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$21,508 | gain=+9.3% | peak=$21,760 | dd=+0%
+  Young Nigga: mcap=$10,994 | gain=+24.1% | peak=$11,626 | dd=+0%
+  母夜叉: mcap=$10,012 | gain=-4.9% | peak=$10,525 | dd=+0%
+  BEER: mcap=$21,854 | gain=+0.2% | peak=$21,854 | dd=+0%
+  Twin: mcap=$10,974 | gain=+11.8% | peak=$14,711 | dd=+0%
+  Slangcoin: mcap=$14,259 | gain=+21.3% | peak=$16,999 | dd=+0%
+  MSK Fund: mcap=$6,359 | gain=-3.5% | peak=$7,561 | dd=+0%
+  ROTJAK: mcap=$21,508 | gain=+9.3% | peak=$21,760 | dd=+0%
+  Young Nigga: mcap=$10,994 | gain=+24.1% | peak=$11,626 | dd=+0%
+  母夜叉: mcap=$10,012 | gain=-4.9% | peak=$10,525 | dd=+0%
+  BEER: mcap=$21,854 | gain=+0.2% | peak=$21,854 | dd=+0%

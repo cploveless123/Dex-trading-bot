@@ -145,7 +145,7 @@ def get_open_position_count():
     return count
 
 def get_gmgn_trending(limit=50):
-    """Get GMGN market trending tokens"""
+    """Get GMGN market trending tokens (all chains/markets)"""
     try:
         r = subprocess.run(
             ['gmgn-cli', 'market', 'trending', '--chain', 'sol', '--interval', '5m', '--limit', str(limit)],
@@ -156,6 +156,24 @@ def get_gmgn_trending(limit=50):
             data = json.loads(r.stdout)
             return data.get('data', {}).get('rank', [])
         elif r.returncode != 0 and ('rate limit' in r.stderr.lower() or '429' in r.stderr or 'throttl' in r.stderr.lower()):
+            gmgn_throttle_alert()
+    except Exception as e:
+        gmgn_throttle_alert()
+    return []
+
+def get_gmgn_pumpfun_lowcap(limit=30):
+    """Get pump.fun tokens sorted by ascending marketcap (newest/cheapest first)"""
+    try:
+        r = subprocess.run(
+            ['gmgn-cli', 'market', 'trending', '--chain', 'sol', '--interval', '5m', '--limit', str(limit),
+             '--platform', 'Pump.fun', '--order-by', 'marketcap', '--direction', 'asc'],
+            capture_output=True, text=True, timeout=15
+        )
+        if r.returncode == 0:
+            gmgn_success()
+            data = json.loads(r.stdout)
+            return data.get('data', {}).get('rank', [])
+        elif r.returncode != 0 and ('rate limit' in r.stderr.lower() or '429' in r.stderr):
             gmgn_throttle_alert()
     except Exception as e:
         gmgn_throttle_alert()
@@ -769,7 +787,8 @@ def scan_cycle():
     
     tokens = get_gmgn_trending(50)
     tokens.extend(get_gmgn_new_pairs(30))
-    print(f"[SCAN] Found {len(tokens)} tokens from GMGN")
+    tokens.extend(get_gmgn_pumpfun_lowcap(30))  # pump.fun ascending mcap — newest tokens
+    print(f"[SCAN] Found {len(tokens)} tokens from GMGN (incl. pump.fun lowcap)")
     
     # Track empty responses
     if len(tokens) == 0:
@@ -860,6 +879,7 @@ def scan_cycle():
 
 def main():
     print(f"🚀 GMGN Scanner v6.8 Started")
+    print(f"   Data sources: GMGN trending + trenches + pump.fun lowcap")
     print(f"   Filters: Mcap ${MIN_MCAP:,}-${MAX_MCAP:,} | Holders {MIN_HOLDERS}+ | Dip {DIP_MIN}-{DIP_MAX}% | ATH <55% | BS {BS_RATIO_NEW}/{BS_RATIO_OLD}")
     print(f"   Momentum: h1 or 24h > +{H1_MOMENTUM_MIN}% | chg1 > +{MIN_CHG1_FOR_BUY}%")
     print(f"   Cooldown: m5>-5% → {BASE_COOLDOWN}s | +3% improvement req | deterioration>3% = reject | 2 consec rechecks")
