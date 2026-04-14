@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Position Monitor v6.3 - Auto-execute TP/stop for open positions
+Position Monitor v6.6 - Auto-execute TP/stop for open positions
 Live peak tracking via persistent cache file
 
-EXIT STRATEGY (v6.3 Wilson):
+EXIT STRATEGY (v6.6 Wilson):
 - TP1: +50% → HOLD (no sell), 40% trailing stop activates
 - TP2: +100% → Sell 40%, trail 35%
 - TP3: +200% → Sell 30%, trail 35%
@@ -158,7 +158,7 @@ def check_positions():
             print(f"💨 {sym} LOW VOLUME EXIT @ ${mcap:,.0f} (v5=${v5:,.0f})")
             continue
 
-        # === LIQUIDITY CHECK: mcap > $70K AND liq < $1K → sell immediately (v6.4) ===
+        # === LIQUIDITY CHECK: mcap > $70K AND liq < $1K → sell immediately (v6.6) ===
         if mcap > LIQUIDITY_MCAP_THRESHOLD:
             try:
                 r_liq = requests.get(f'https://api.dexscreener.com/latest/dex/tokens/{ca}', timeout=5)

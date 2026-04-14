@@ -58,7 +58,6 @@ COOLDOWN_WATCH = {}
 
 # Tokens rejected after max rechecks — can revisit after delay
 REJECTED_TEMP = {}  # {addr: {"ts": timestamp, "reason": str}}
-REJECTED_REVISIT_DELAY = 300  # 5 minutes before circling back
 
 # Permanent blacklist (once bought, never rebuy)
 PERM_BLACKLIST = set()
@@ -440,48 +439,69 @@ def check_deterioration(chg1, prev_chg1):
     return drop > CHG1_DROP_REJECT
 
 def check_cooldown_watch():
-    """Check and process cooldown watch list"""
+    """
+    v6.6 Cooldown State Machine:
+    - COOLDOWN: Initial 30s monitoring (no deterioration check)
+    - WAITING_CHG1: chg1 < +1%, waiting for chg1 >= +1%
+    - VERIFICATION: chg1 >= +1%, 15s verify (deterioration check applies)
+    - RECOVERY: chg1 was >= +1% but dropped, waiting for chg1 >= +2%
+    
+    Deterioration (chg1 drops >3% from prev) only in VERIFY/RECOVERY.
+    Price stability check right before buy.
+    """
     to_remove = []
     now = time.time()
     
     for addr, data in COOLDOWN_WATCH.items():
         result = data['result']
-        elapsed = now - data['first_seen']
+        state = data.get('state', STATE_COOLDOWN)
         
-        # Get fresh GMGN data
+        # === GET FRESH DATA (always fresh — no stale) ===
         fresh_data = get_gmgn_token_info(addr)
         fresh_dex = get_dexscreener_data(addr)
-
-        # Merge: use original GMGN trending data (has price_change_percent1m)
-        # but update with fresh DexScreener data for chg1 and volume
-        merged_data = data['token_data'].copy() if data.get('token_data') else {}
+        
+        # Build merged data: GMGN as base, DexScreener chg1 override
+        merged_data = (data['token_data'].copy() if data.get('token_data') else {})
+        if fresh_data:
+            merged_data = fresh_data.copy()
         if fresh_dex:
-            # Update with fresh DexScreener chg1 if available
             ds_chg1 = fresh_dex.get('priceChange', {}).get('m1')
             if ds_chg1 is not None:
                 merged_data['price_change_percent1m'] = float(ds_chg1)
+            # Also get fresh price/mcap from DexScreener if available
+            ds_price = fresh_dex.get('priceUsd')
+            if ds_price:
+                merged_data['price'] = float(ds_price)
         
-        if fresh_data is None and not merged_data:
-            # GMGN failed and no stored data - remove from cooldown
-            print(f"   ❌ {result['token']}: GMGN data unavailable - removing from cooldown")
+        if not fresh_data and not merged_data:
+            print(f"   ❌ {result['token']}: no data (GMGN+DexScreener failed) - removing")
             to_remove.append(addr)
             continue
-
-        # Re-evaluate with fresh data
-        scan_data = merged_data if merged_data else fresh_data
+        
+        # === RE-EVALUATE FILTERS with fresh data ===
+        scan_data = fresh_data if fresh_data else merged_data
         fresh_result, fresh_reason = scan_token(scan_data, fresh_dex, [])
         
         if fresh_result is None:
-            # No longer passing filters
             print(f"   ❌ {result['token']}: no longer passing filters ({fresh_reason})")
             to_remove.append(addr)
             continue
         
-        # Update result with fresh data
+        # Update with fresh data
         data['result'] = fresh_result
-        data['token_data'] = fresh_data
+        data['token_data'] = fresh_data if fresh_data else merged_data
+        data['dex_data'] = fresh_dex
         
-        # === INSTABILITY CHECK: h1 changed >3x ===
+        # === UPDATE LOCAL PEAK/TRACKING during COOLDOWN ===
+        curr_mcap = fresh_result.get('mcap', 0)
+        curr_price = fresh_result.get('entry_price', 0)
+        if curr_mcap > 0:
+            if curr_mcap > data.get('local_peak_mcap', 0):
+                data['local_peak_mcap'] = curr_mcap
+            if curr_mcap < data.get('lowest_mcap', float('inf')) and curr_mcap > 0:
+                data['lowest_mcap'] = curr_mcap
+        
+        # === H1 INSTABILITY CHECK ===
         prev_h1 = data.get('prev_h1', 0)
         curr_h1 = fresh_result.get('h1', 0)
         if prev_h1 and curr_h1 and prev_h1 > 0:
@@ -492,106 +512,191 @@ def check_cooldown_watch():
                 continue
         data['prev_h1'] = curr_h1
         
-        # === PRICE STABILITY CHECK ===
-        prev_price = data.get('price_at_add', 0)
-        curr_price = fresh_result.get('entry_price', 0)
-        if prev_price > 0 and curr_price > 0:
-            price_change = ((prev_price - curr_price) / prev_price) * 100
-            if price_change > PRICE_DROP_THRESHOLD:
-                # Price dropped >5% since added to cooldown
-                data['consecutive_drops'] += 1
-                wait_time = [PRICE_DROP_WAIT_1, PRICE_DROP_WAIT_2, PRICE_DROP_WAIT_3][min(data['consecutive_drops']-1, 2)]
-                print(f"   ⏳ {result['token']}: price down {price_change:.1f}% since add - wait {wait_time}s")
-                data['cooldown_end'] = now + wait_time
-                continue
-        
-        # === CHG1 CHECK DURING COOLDOWN (v6.4) ===
-        # Step 1: cooldown is running — chg1 must reach >+5% to proceed
-        # Step 2: once chg1 >= +5%, wait 15s to verify
-        # Step 3: check improvement (+3% from prev) and deterioration (>{CHG1_DROP_THRESHOLD}% drop = reject)
-        # Step 4: 2 consecutive rechecks before buy
         chg1 = fresh_result.get('chg1')
         prev_chg1 = data.get('prev_chg1')
         cooldown_done = now >= data['cooldown_end']
-        chg1_reached_trigger = chg1 is not None and chg1 >= CHG1_COOLDOWN_TRIGGER
         
-        if not cooldown_done:
-            # Cooldown still running — just monitor chg1, don't count as recheck
-            data['prev_chg1'] = chg1
-            remaining = data['cooldown_end'] - now
-            print(f"   ⏳ {result['token']}: cooldown {remaining:.0f}s left (chg1={chg1:+.1f}% if available)")
-            continue
-        
-        # Cooldown done — now enforce chg1 rules
-        if chg1 is None:
-            # No chg1 data — wait more
-            data['cooldown_end'] = now + RECHECK_DELAY
-            continue
-        
-        if not chg1_reached_trigger:
-            # chg1 < +5% — wait extra 15s and keep checking
-            data['cooldown_end'] = now + CHG1_COOLDOWN_EXTRA
-            print(f"   ⏳ {result['token']}: chg1 {chg1:+.1f}% (need >+{CHG1_COOLDOWN_TRIGGER}%) — waiting 15s more")
-            data['prev_chg1'] = chg1
-            continue
-        
-        # chg1 >= +5% — verify with 15s wait
-        if not data.get('_chg1_triggered'):
-            data['_chg1_triggered'] = True
-            data['cooldown_end'] = now + CHG1_COOLDOWN_VERIFY
-            data['prev_chg1'] = chg1
-            print(f"   ⏳ {result['token']}: chg1 {chg1:+.1f}% >= +{CHG1_COOLDOWN_TRIGGER}% — verifying 15s")
-            continue
-        
-        # Verified — now check improvement and deterioration
-        data['recheck_count'] += 1
-        
-        if prev_chg1 is not None:
-            improvement = chg1 - prev_chg1
-            
-            # Deterioration: chg1 dropped >1% from previous → continue watching
-            if prev_chg1 > 0 and chg1 < prev_chg1 - CHG1_DROP_THRESHOLD:
-                print(f"   ⏳ {result['token']}: chg1 deteriorated {prev_chg1:+.1f}% → {chg1:+.1f}% (>{CHG1_DROP_THRESHOLD}% drop) — continue watching")
-                data['cooldown_end'] = now + RECHECK_DELAY
+        # === STATE MACHINE ===
+        if state == STATE_COOLDOWN:
+            # COOLDOWN: just monitoring, no deterioration check
+            # After 30s: check chg1
+            if not cooldown_done:
+                remaining = data['cooldown_end'] - now
+                print(f"   ⏳ {result['token']}: cooldown {remaining:.0f}s left (chg1={chg1:+.1f}%)")
                 data['prev_chg1'] = chg1
                 continue
             
-            # Improvement: need +3% from previous
-            if improvement >= 3:
-                if data['recheck_count'] < 2:
-                    data['cooldown_end'] = now + RECHECK_DELAY
-                    print(f"   ⏳ {result['token']}: recheck #{data['recheck_count']} — chg1 {chg1:+.1f}% (+{improvement:+.1f}% from prev)")
-                    continue
-                # 2 consecutive rechecks confirmed — BUY
-            elif improvement >= 0:
+            # Cooldown done — check chg1
+            if chg1 is None:
+                # No chg1 data — wait 15s and recheck
+                data['cooldown_end'] = now + CHG1_RECHECK_DELAY
+                data['state'] = STATE_WAITING_CHG1
+                data['prev_chg1'] = chg1
+                print(f"   ⏳ {result['token']}: cooldown done, chg1=None — waiting (chg1={chg1})")
+                continue
+            
+            if chg1 >= CHG1_TRIGGER_MIN:
+                # chg1 >= +1% → enter VERIFICATION for 15s
+                data['state'] = STATE_VERIFICATION
+                data['cooldown_end'] = now + CHG1_VERIFY_DELAY
+                data['price_at_state_change'] = curr_price
+                data['prev_chg1'] = chg1
+                print(f"   ⏳ {result['token']}: chg1 {chg1:+.1f}% >= +{CHG1_TRIGGER_MIN}% — verifying 15s")
+                continue
+            else:
+                # chg1 < +1% → wait 15s and recheck
+                data['state'] = STATE_WAITING_CHG1
+                data['cooldown_end'] = now + CHG1_RECHECK_DELAY
+                data['prev_chg1'] = chg1
+                print(f"   ⏳ {result['token']}: cooldown done, chg1 {chg1:+.1f}% < +{CHG1_TRIGGER_MIN}% — waiting for chg1 > +{CHG1_TRIGGER_MIN}%")
+                continue
+        
+        elif state == STATE_WAITING_CHG1:
+            # WAITING_CHG1: waiting for chg1 to reach >= +1%
+            # No deterioration check here — just waiting for chg1 to build
+            if not cooldown_done:
+                remaining = data['cooldown_end'] - now
+                print(f"   ⏳ {result['token']}: waiting chg1 {remaining:.0f}s left (chg1={chg1:+.1f}%)")
+                data['prev_chg1'] = chg1
+                continue
+            
+            # Cooldown done — recheck
+            if chg1 is None:
+                data['cooldown_end'] = now + CHG1_RECHECK_DELAY
+                data['prev_chg1'] = chg1
+                data['recheck_count'] += 1
+                print(f"   ⏳ {result['token']}: chg1=None — recheck #{data['recheck_count']}")
+                if data['recheck_count'] > MAX_RECHECKS:
+                    print(f"   ❌ {result['token']}: max rechecks — temp reject")
+                    REJECTED_TEMP[addr] = {'ts': time.time(), 'reason': 'max rechecks'}
+                    to_remove.append(addr)
+                continue
+            
+            if chg1 >= CHG1_TRIGGER_MIN:
+                # chg1 reached +1% → VERIFICATION
+                data['state'] = STATE_VERIFICATION
+                data['cooldown_end'] = now + CHG1_VERIFY_DELAY
+                data['price_at_state_change'] = curr_price
+                data['prev_chg1'] = chg1
                 data['recheck_count'] = 0
-                data['cooldown_end'] = now + RECHECK_DELAY
+                print(f"   ⏳ {result['token']}: chg1 {chg1:+.1f}% >= +{CHG1_TRIGGER_MIN}% — verifying 15s")
+                continue
+            else:
+                # Still < +1% — keep waiting
+                data['cooldown_end'] = now + CHG1_RECHECK_DELAY
+                data['prev_chg1'] = chg1
+                data['recheck_count'] += 1
+                print(f"   ⏳ {result['token']}: chg1 {chg1:+.1f}% < +{CHG1_TRIGGER_MIN}% — recheck #{data['recheck_count']}")
+                if data['recheck_count'] > MAX_RECHECKS:
+                    print(f"   ❌ {result['token']}: max rechecks — temp reject")
+                    REJECTED_TEMP[addr] = {'ts': time.time(), 'reason': 'max rechecks'}
+                    to_remove.append(addr)
+                continue
+        
+        elif state == STATE_VERIFICATION:
+            # VERIFICATION: chg1 >= +1%, verifying for 15s
+            # Deterioration check applies: if chg1 drops >3% → RECOVERY
+            
+            if not cooldown_done:
+                # Still in 15s verification window
+                # Check deterioration during verify
+                if check_deterioration(chg1, prev_chg1):
+                    print(f"   ⏳ {result['token']}: VERIFY — chg1 deteriorated {prev_chg1:+.1f}% → {chg1:+.1f}% (>3% drop) → RECOVERY")
+                    data['state'] = STATE_RECOVERY
+                    data['cooldown_end'] = now + CHG1_RECHECK_DELAY
+                    data['price_at_state_change'] = curr_price
+                    data['recheck_count'] = 0
+                    continue
+                
+                remaining = data['cooldown_end'] - now
+                print(f"   ⏳ {result['token']}: verifying {remaining:.0f}s left (chg1={chg1:+.1f}%)")
+                data['prev_chg1'] = chg1
+                continue
+            
+            # Verification window done — chg1 still >= +1% throughout = BUY
+            # First do price stability check
+            price_at_add = data.get('price_at_add', 0)
+            if price_at_add > 0 and curr_price > 0:
+                price_drop = ((price_at_add - curr_price) / price_at_add) * 100
+                lowest_mcap = data.get('lowest_mcap', 0)
+                
+                if price_drop > PRICE_DROP_REJECT:
+                    # Price dropped >3% since added — wait per price stability rules
+                    data['consecutive_drops'] = data.get('consecutive_drops', 0) + 1
+                    wait_times = [PRICE_DROP_WAIT_1, PRICE_DROP_WAIT_2, PRICE_DROP_WAIT_3]
+                    wait_time = wait_times[min(data['consecutive_drops']-1, 2)]
+                    print(f"   ⏳ {result['token']}: price down {price_drop:.1f}% since add — wait {wait_time}s ({data['consecutive_drops']} consecutive drops)")
+                    data['cooldown_end'] = now + wait_time
+                    data['prev_chg1'] = chg1
+                    continue
+                
+                # Price OK — check mcap improved >2% from lowest
+                if lowest_mcap > 0 and curr_mcap > 0:
+                    mcap_recovery = ((curr_mcap - lowest_mcap) / lowest_mcap) * 100
+                    if mcap_recovery < MCAP_INCREASE_CONFIRM and data.get('consecutive_drops', 0) > 0:
+                        print(f"   ⏳ {result['token']}: mcap up {mcap_recovery:.1f}% from low < 2% — recheck 15s")
+                        data['cooldown_end'] = now + CHG1_RECHECK_DELAY
+                        data['prev_chg1'] = chg1
+                        continue
+                
+                # Price stable and mcap recovering — BUY!
+                print(f"   🟢 BUY: {result['token']} @ mcap ${curr_mcap:,.0f} | chg1={chg1:+.1f}% | price_drop={price_drop:.1f}% | mcap_recovery={mcap_recovery:.1f}%")
+                buy_token(addr, fresh_result)
+                to_remove.append(addr)
+                continue
+            else:
+                # No price data — buy anyway
+                print(f"   🟢 BUY: {result['token']} @ mcap ${curr_mcap:,.0f} (no price data)")
+                buy_token(addr, fresh_result)
+                to_remove.append(addr)
+                continue
+        
+        elif state == STATE_RECOVERY:
+            # RECOVERY: chg1 was >= +1% but dropped — wait for chg1 >= +2% to resume
+            # Deterioration check applies: if chg1 drops >3% from prev → reject
+            
+            if not cooldown_done:
+                # Check deterioration during recovery wait
+                if check_deterioration(chg1, prev_chg1):
+                    print(f"   ❌ {result['token']}: RECOVERY — chg1 deteriorated {prev_chg1:+.1f}% → {chg1:+.1f}% (>3% drop) — REJECT")
+                    REJECTED_TEMP[addr] = {'ts': time.time(), 'reason': 'deterioration reject'}
+                    to_remove.append(addr)
+                    continue
+                
+                remaining = data['cooldown_end'] - now
+                print(f"   ⏳ {result['token']}: recovery {remaining:.0f}s left (chg1={chg1:+.1f}%, need >+{CHG1_RECOVERY_MIN}%)")
+                data['prev_chg1'] = chg1
+                continue
+            
+            # Recheck
+            if check_deterioration(chg1, prev_chg1):
+                print(f"   ❌ {result['token']}: RECOVERY chg1 deteriorated {prev_chg1:+.1f}% → {chg1:+.1f}% (>3% drop) — REJECT")
+                REJECTED_TEMP[addr] = {'ts': time.time(), 'reason': 'deterioration reject'}
+                to_remove.append(addr)
+                continue
+            
+            if chg1 is not None and chg1 >= CHG1_RECOVERY_MIN:
+                # Recovered to +2% — go back to VERIFICATION
+                data['state'] = STATE_VERIFICATION
+                data['cooldown_end'] = now + CHG1_VERIFY_DELAY
+                data['price_at_state_change'] = curr_price
+                data['recheck_count'] = 0
+                print(f"   ⏳ {result['token']}: chg1 recovered {chg1:+.1f}% >= +{CHG1_RECOVERY_MIN}% — verifying 15s")
                 data['prev_chg1'] = chg1
                 continue
             else:
-                data['cooldown_end'] = now + RECHECK_DELAY
+                # Still low — keep waiting in recovery
+                data['cooldown_end'] = now + CHG1_RECHECK_DELAY
                 data['prev_chg1'] = chg1
+                data['recheck_count'] += 1
+                print(f"   ⏳ {result['token']}: recovery chg1 {chg1:+.1f}% < +{CHG1_RECOVERY_MIN}% — recheck #{data['recheck_count']}")
+                if data['recheck_count'] > MAX_RECHECKS:
+                    print(f"   ❌ {result['token']}: max rechecks in recovery — temp reject")
+                    REJECTED_TEMP[addr] = {'ts': time.time(), 'reason': 'max rechecks recovery'}
+                    to_remove.append(addr)
                 continue
-        else:
-            # First valid chg1 reading after trigger
-            data['prev_chg1'] = chg1
-            data['cooldown_end'] = now + RECHECK_DELAY
-            continue
-        
-        # === MAX RECHECKS CHECK ===
-        data['recheck_count'] += 1
-        if data['recheck_count'] > MAX_RECHECKS:
-            print(f"   ❌ {result['token']}: max rechecks ({MAX_RECHECKS}) - will revisit in {REJECTED_REVISIT_DELAY}s")
-            REJECTED_TEMP[addr] = {'ts': time.time(), 'reason': f"max rechecks ({MAX_RECHECKS})"}
-            to_remove.append(addr)
-            continue
-        
-        # Still watching
-        wait_time = max(0, data['cooldown_end'] - now)
-        if wait_time > 0:
-            print(f"   ⏳ {result['token']}: cooldown {wait_time:.0f}s remaining (recheck #{data['recheck_count']})")
     
-    # Remove expired/invalid
+    # Remove finished entries
     for addr in to_remove:
         if addr in COOLDOWN_WATCH:
             del COOLDOWN_WATCH[addr]
@@ -627,7 +732,7 @@ def buy_token(addr, result):
         'partial_exit': False,
         'fully_exited': False,
         'peak_price': result['entry_price'],
-        'entry_reason': 'GMGN_V63',
+        'entry_reason': 'GMGN_V66',
         'h1': result['h1'],
         'm5': result['m5'],
         'chg1_at_buy': result['chg1'],
@@ -691,8 +796,6 @@ def scan_cycle():
                 print(f"   🔄 {token_data.get('symbol','?')}: circling back after {elapsed:.0f}s rejection")
         
         # Get DexScreener data for chg1
-        
-        # Get DexScreener data for chg1
         dex_data = get_dexscreener_data(addr)
         
         # Scan
@@ -706,27 +809,37 @@ def scan_cycle():
         # Check if needs cooldown
         cooldown_secs = determine_cooldown(result)
         if cooldown_secs > 0:
-            if add_to_cooldown(addr, token_data, result):
-                continue  # Added to cooldown, skip this one
-            # cooldown_secs > 0 but wasn't added (already in cooldown) → skip silently
+            if add_to_cooldown(addr, token_data, result, dex_data):
+                continue  # Added to cooldown, skip this cycle
             continue
         else:
-            # Buy immediately
+            # Buy immediately (no cooldown needed)
+            # Price stability check before buy: fresh data
+            curr_price = result.get('entry_price', 0)
+            price_at_add = curr_price
+            curr_mcap = result.get('mcap', 0)
+            lowest_mcap = curr_mcap  # No cooldown tracking for immediate buys
+            
+            if price_at_add > 0 and curr_price > 0:
+                price_drop = ((price_at_add - curr_price) / price_at_add) * 100
+                if price_drop > PRICE_DROP_REJECT:
+                    print(f"   ⏳ {result['token']}: immediate — price down {price_drop:.1f}% since scan — rechecking next cycle")
+                    continue
+            
             if buy_token(addr, result):
-                print(f"   🟢 BUY (immediate): {result['token']} @ ${result['mcap']:,.0f}")
+                print(f"   🟢 BUY (immediate): {result['token']} @ ${curr_mcap:,.0f}")
                 bought += 1
                 if bought >= 1:
                     break  # One buy per cycle
-            # No buy → continue to next token
             continue
     
     return bought
 
 def main():
-    print(f"🚀 GMGN Scanner v6.5 Started")
-    print(f"   Filters: Mcap ${MIN_MCAP:,}-${MAX_MCAP:,} | Holders {MIN_HOLDERS}+ | Dip {DIP_MIN}-{DIP_MAX}% | BS {BS_RATIO_NEW}/{BS_RATIO_OLD}")
+    print(f"🚀 GMGN Scanner v6.6 Started")
+    print(f"   Filters: Mcap ${MIN_MCAP:,}-${MAX_MCAP:,} | Holders {MIN_HOLDERS}+ | Dip {DIP_MIN}-{DIP_MAX}% | ATH <45% | BS {BS_RATIO_NEW}/{BS_RATIO_OLD}")
     print(f"   Momentum: h1 or 24h > +{H1_MOMENTUM_MIN}% | chg1 > +{MIN_CHG1_FOR_BUY}%")
-    print(f"   Cooldown: m5>-5% → {YOUNG_COOLDOWN}s | chg1>+1% req | +3% improvement needed")
+    print(f"   Cooldown: m5>-5% → {YOUNG_COOLDOWN}s | chg1>+1% trigger | 15s verify | deterioration>3% → reject")
     
     while True:
         try:
