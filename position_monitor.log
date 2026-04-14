@@ -6581,3 +6581,414 @@ Checking every 5s
   PUMPMONEY: error fetching mcap
   FATOU: error fetching mcap
   PUMPMONEY: error fetching mcap
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$8,616 | gain=+6.9% | peak=$12,735 | dd=+32%
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$8,616 | gain=+6.9% | peak=$12,735 | dd=+32%
+[12:12:04] Monitor alive | 3745 checks | 2 open | next in 5s
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$8,616 | gain=+6.9% | peak=$12,735 | dd=+32%
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$8,616 | gain=+6.9% | peak=$12,735 | dd=+32%
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,692 | gain=+20.3% | peak=$12,735 | dd=+24%
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,692 | gain=+20.3% | peak=$12,735 | dd=+24%
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,692 | gain=+20.3% | peak=$12,735 | dd=+24%
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,692 | gain=+20.3% | peak=$12,735 | dd=+24%
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,692 | gain=+20.3% | peak=$12,735 | dd=+24%
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,692 | gain=+20.3% | peak=$12,735 | dd=+24%
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,732 | gain=+20.8% | peak=$12,735 | dd=+24%
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,732 | gain=+20.8% | peak=$12,735 | dd=+24%
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+[12:13:07] Monitor alive | 3757 checks | 2 open | next in 5s
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,382 | gain=+16.4% | peak=$12,735 | dd=+26%
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,382 | gain=+16.4% | peak=$12,735 | dd=+26%
+[12:14:08] Monitor alive | 3769 checks | 2 open | next in 5s
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,382 | gain=+16.4% | peak=$12,735 | dd=+26%
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,376 | gain=+16.4% | peak=$12,735 | dd=+26%
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,376 | gain=+16.4% | peak=$12,735 | dd=+26%
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,376 | gain=+16.4% | peak=$12,735 | dd=+26%
+  FATOU: mcap=$7,246 | gain=+15.8% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,376 | gain=+16.4% | peak=$12,735 | dd=+26%
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,376 | gain=+16.4% | peak=$12,735 | dd=+26%
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,376 | gain=+16.4% | peak=$12,735 | dd=+26%
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,376 | gain=+16.4% | peak=$12,735 | dd=+26%
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,376 | gain=+16.4% | peak=$12,735 | dd=+26%
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,376 | gain=+16.4% | peak=$12,735 | dd=+26%
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+[12:15:10] Monitor alive | 3781 checks | 2 open | next in 5s
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,413 | gain=+16.8% | peak=$12,735 | dd=+26%
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,413 | gain=+16.8% | peak=$12,735 | dd=+26%
+[12:16:11] Monitor alive | 3793 checks | 2 open | next in 5s
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,413 | gain=+16.8% | peak=$12,735 | dd=+26%
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,714 | gain=+20.5% | peak=$12,735 | dd=+24%
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,714 | gain=+20.5% | peak=$12,735 | dd=+24%
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,714 | gain=+20.5% | peak=$12,735 | dd=+24%
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,714 | gain=+20.5% | peak=$12,735 | dd=+24%
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,714 | gain=+20.5% | peak=$12,735 | dd=+24%
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$9,832 | gain=+22.0% | peak=$12,735 | dd=+23%
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+[12:17:13] Monitor alive | 3805 checks | 2 open | next in 5s
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$10,166 | gain=+26.2% | peak=$12,735 | dd=+20%
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$10,166 | gain=+26.2% | peak=$12,735 | dd=+20%
+  FATOU: mcap=$7,230 | gain=+15.5% | peak=$10,861 | dd=+27%
+  PUMPMONEY: mcap=$10,166 | gain=+26.2% | peak=$12,735 | dd=+20%
+  FATOU: mcap=$7,004 | gain=+11.9% | peak=$10,861 | dd=+29%
+  PUMPMONEY: mcap=$10,166 | gain=+26.2% | peak=$12,735 | dd=+20%
+  FATOU: mcap=$7,004 | gain=+11.9% | peak=$10,861 | dd=+29%
+  PUMPMONEY: mcap=$10,180 | gain=+26.3% | peak=$12,735 | dd=+20%
+[12:18:15] Monitor alive | 3817 checks | 2 open | next in 5s
+  FATOU: mcap=$7,004 | gain=+11.9% | peak=$10,861 | dd=+29%
+  PUMPMONEY: mcap=$10,180 | gain=+26.3% | peak=$12,735 | dd=+20%
+  FATOU: mcap=$7,004 | gain=+11.9% | peak=$10,861 | dd=+29%
+  PUMPMONEY: mcap=$10,180 | gain=+26.3% | peak=$12,735 | dd=+20%
+  FATOU: mcap=$7,004 | gain=+11.9% | peak=$10,861 | dd=+29%
+  PUMPMONEY: mcap=$10,180 | gain=+26.3% | peak=$12,735 | dd=+20%
+  FATOU: mcap=$7,004 | gain=+11.9% | peak=$10,861 | dd=+29%
+  PUMPMONEY: mcap=$10,180 | gain=+26.3% | peak=$12,735 | dd=+20%
+  FATOU: mcap=$7,004 | gain=+11.9% | peak=$10,861 | dd=+29%
+  PUMPMONEY: mcap=$10,180 | gain=+26.3% | peak=$12,735 | dd=+20%
+  FATOU: mcap=$7,004 | gain=+11.9% | peak=$10,861 | dd=+29%
+  PUMPMONEY: mcap=$10,180 | gain=+26.3% | peak=$12,735 | dd=+20%
+  FATOU: mcap=$7,004 | gain=+11.9% | peak=$10,861 | dd=+29%
+  PUMPMONEY: mcap=$10,180 | gain=+26.3% | peak=$12,735 | dd=+20%
+  FATOU: mcap=$7,004 | gain=+11.9% | peak=$10,861 | dd=+29%
+  PUMPMONEY: mcap=$10,180 | gain=+26.3% | peak=$12,735 | dd=+20%
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+[12:19:16] Monitor alive | 3829 checks | 2 open | next in 5s
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,818 | gain=+21.8% | peak=$12,735 | dd=+23%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,818 | gain=+21.8% | peak=$12,735 | dd=+23%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,818 | gain=+21.8% | peak=$12,735 | dd=+23%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,818 | gain=+21.8% | peak=$12,735 | dd=+23%
+[12:20:18] Monitor alive | 3841 checks | 2 open | next in 5s
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+[12:21:19] Monitor alive | 3853 checks | 2 open | next in 5s
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$10,006 | gain=+24.2% | peak=$12,735 | dd=+21%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$10,006 | gain=+24.2% | peak=$12,735 | dd=+21%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$10,006 | gain=+24.2% | peak=$12,735 | dd=+21%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+[12:22:21] Monitor alive | 3865 checks | 2 open | next in 5s
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,962 | gain=+11.2% | peak=$10,861 | dd=+30%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,849 | gain=+9.4% | peak=$10,861 | dd=+31%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,849 | gain=+9.4% | peak=$10,861 | dd=+31%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,849 | gain=+9.4% | peak=$10,861 | dd=+31%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,849 | gain=+9.4% | peak=$10,861 | dd=+31%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,849 | gain=+9.4% | peak=$10,861 | dd=+31%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: mcap=$6,849 | gain=+9.4% | peak=$10,861 | dd=+31%
+  PUMPMONEY: mcap=$9,987 | gain=+23.9% | peak=$12,735 | dd=+22%
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+[12:23:23] Monitor alive | 3877 checks | 2 open | next in 5s
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: mcap=$6,786 | gain=+8.4% | peak=$10,861 | dd=+32%
+  PUMPMONEY: mcap=$9,185 | gain=+14.0% | peak=$12,735 | dd=+28%
+  FATOU: mcap=$6,786 | gain=+8.4% | peak=$10,861 | dd=+32%
+  PUMPMONEY: mcap=$9,185 | gain=+14.0% | peak=$12,735 | dd=+28%
+  FATOU: mcap=$6,786 | gain=+8.4% | peak=$10,861 | dd=+32%
+  PUMPMONEY: mcap=$9,234 | gain=+14.6% | peak=$12,735 | dd=+27%
+[12:24:24] Monitor alive | 3889 checks | 2 open | next in 5s
+  FATOU: mcap=$6,786 | gain=+8.4% | peak=$10,861 | dd=+32%
+  PUMPMONEY: mcap=$9,234 | gain=+14.6% | peak=$12,735 | dd=+27%
+  FATOU: mcap=$6,786 | gain=+8.4% | peak=$10,861 | dd=+32%
+  PUMPMONEY: mcap=$9,234 | gain=+14.6% | peak=$12,735 | dd=+27%
+  FATOU: mcap=$6,786 | gain=+8.4% | peak=$10,861 | dd=+32%
+  PUMPMONEY: mcap=$9,234 | gain=+14.6% | peak=$12,735 | dd=+27%
+  FATOU: mcap=$6,786 | gain=+8.4% | peak=$10,861 | dd=+32%
+  PUMPMONEY: mcap=$9,234 | gain=+14.6% | peak=$12,735 | dd=+27%
+  FATOU: mcap=$6,786 | gain=+8.4% | peak=$10,861 | dd=+32%
+  PUMPMONEY: mcap=$9,245 | gain=+14.7% | peak=$12,735 | dd=+27%
+  FATOU: mcap=$6,786 | gain=+8.4% | peak=$10,861 | dd=+32%
+  PUMPMONEY: mcap=$9,245 | gain=+14.7% | peak=$12,735 | dd=+27%
+  FATOU: mcap=$6,786 | gain=+8.4% | peak=$10,861 | dd=+32%
+  PUMPMONEY: mcap=$9,245 | gain=+14.7% | peak=$12,735 | dd=+27%
+  FATOU: mcap=$6,786 | gain=+8.4% | peak=$10,861 | dd=+32%
+  PUMPMONEY: mcap=$9,245 | gain=+14.7% | peak=$12,735 | dd=+27%
+  FATOU: mcap=$6,524 | gain=+4.2% | peak=$10,861 | dd=+34%
+  PUMPMONEY: mcap=$9,245 | gain=+14.7% | peak=$12,735 | dd=+27%
+  FATOU: mcap=$6,524 | gain=+4.2% | peak=$10,861 | dd=+34%
+  PUMPMONEY: mcap=$9,245 | gain=+14.7% | peak=$12,735 | dd=+27%
+  FATOU: mcap=$6,524 | gain=+4.2% | peak=$10,861 | dd=+34%
+  PUMPMONEY: mcap=$9,077 | gain=+12.6% | peak=$12,735 | dd=+29%
+  FATOU: mcap=$6,524 | gain=+4.2% | peak=$10,861 | dd=+34%
+  PUMPMONEY: mcap=$9,077 | gain=+12.6% | peak=$12,735 | dd=+29%
+[12:25:26] Monitor alive | 3901 checks | 2 open | next in 5s
+  FATOU: mcap=$6,524 | gain=+4.2% | peak=$10,861 | dd=+34%
+  PUMPMONEY: mcap=$9,077 | gain=+12.6% | peak=$12,735 | dd=+29%
+  FATOU: mcap=$6,524 | gain=+4.2% | peak=$10,861 | dd=+34%
+  PUMPMONEY: mcap=$9,077 | gain=+12.6% | peak=$12,735 | dd=+29%
+  FATOU: mcap=$6,524 | gain=+4.2% | peak=$10,861 | dd=+34%
+  PUMPMONEY: mcap=$9,077 | gain=+12.6% | peak=$12,735 | dd=+29%
+  FATOU: mcap=$6,524 | gain=+4.2% | peak=$10,861 | dd=+34%
+  PUMPMONEY: mcap=$9,077 | gain=+12.6% | peak=$12,735 | dd=+29%
+  FATOU: mcap=$6,524 | gain=+4.2% | peak=$10,861 | dd=+34%
+  PUMPMONEY: mcap=$8,985 | gain=+11.5% | peak=$12,735 | dd=+29%
+  FATOU: mcap=$6,524 | gain=+4.2% | peak=$10,861 | dd=+34%
+  PUMPMONEY: mcap=$8,985 | gain=+11.5% | peak=$12,735 | dd=+29%
+  FATOU: mcap=$6,524 | gain=+4.2% | peak=$10,861 | dd=+34%
+  PUMPMONEY: mcap=$8,985 | gain=+11.5% | peak=$12,735 | dd=+29%
+  FATOU: mcap=$6,524 | gain=+4.2% | peak=$10,861 | dd=+34%
+  PUMPMONEY: mcap=$8,985 | gain=+11.5% | peak=$12,735 | dd=+29%
+  FATOU: mcap=$6,524 | gain=+4.2% | peak=$10,861 | dd=+34%
+  PUMPMONEY: mcap=$8,985 | gain=+11.5% | peak=$12,735 | dd=+29%
+  FATOU: mcap=$6,524 | gain=+4.2% | peak=$10,861 | dd=+34%
+  PUMPMONEY: mcap=$8,985 | gain=+11.5% | peak=$12,735 | dd=+29%
+  FATOU: mcap=$6,524 | gain=+4.2% | peak=$10,861 | dd=+34%
+  PUMPMONEY: mcap=$8,983 | gain=+11.5% | peak=$12,735 | dd=+29%
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+[12:26:28] Monitor alive | 3913 checks | 2 open | next in 5s
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  FATOU: error fetching mcap
+  PUMPMONEY: error fetching mcap
+[TRAILING_STOP] Alert sent
+✅ FATOU TRAILING STOP @ $3,521 (68% drop from peak)
+  PUMPMONEY: mcap=$11,120 | gain=+38.0% | peak=$12,735 | dd=+13%
+  PUMPMONEY: mcap=$11,120 | gain=+38.0% | peak=$12,735 | dd=+13%
+[12:27:30] Monitor alive | 3925 checks | 1 open | next in 5s
+  PUMPMONEY: mcap=$11,120 | gain=+38.0% | peak=$12,735 | dd=+13%
+  PUMPMONEY: mcap=$11,120 | gain=+38.0% | peak=$12,735 | dd=+13%
+  PUMPMONEY: mcap=$11,120 | gain=+38.0% | peak=$12,735 | dd=+13%
+  PUMPMONEY: mcap=$11,120 | gain=+38.0% | peak=$12,735 | dd=+13%
+  PUMPMONEY: mcap=$12,365 | gain=+53.5% | peak=$12,735 | dd=+3%
+  PUMPMONEY: mcap=$12,365 | gain=+53.5% | peak=$12,735 | dd=+3%
+  PUMPMONEY: mcap=$12,365 | gain=+53.5% | peak=$12,735 | dd=+3%
+  PUMPMONEY: mcap=$12,365 | gain=+53.5% | peak=$12,735 | dd=+3%
+  PUMPMONEY: mcap=$12,365 | gain=+53.5% | peak=$12,735 | dd=+3%
+  PUMPMONEY: mcap=$12,365 | gain=+53.5% | peak=$12,735 | dd=+3%
+  PUMPMONEY: mcap=$11,417 | gain=+41.7% | peak=$12,735 | dd=+10%
+  PUMPMONEY: mcap=$11,417 | gain=+41.7% | peak=$12,735 | dd=+10%
+[12:28:31] Monitor alive | 3937 checks | 1 open | next in 5s
+  PUMPMONEY: mcap=$11,417 | gain=+41.7% | peak=$12,735 | dd=+10%
+  PUMPMONEY: mcap=$11,417 | gain=+41.7% | peak=$12,735 | dd=+10%
+  PUMPMONEY: mcap=$11,417 | gain=+41.7% | peak=$12,735 | dd=+10%
+  PUMPMONEY: mcap=$11,417 | gain=+41.7% | peak=$12,735 | dd=+10%
+  PUMPMONEY: mcap=$11,601 | gain=+44.0% | peak=$12,735 | dd=+9%
+  PUMPMONEY: mcap=$11,601 | gain=+44.0% | peak=$12,735 | dd=+9%
+  PUMPMONEY: mcap=$11,601 | gain=+44.0% | peak=$12,735 | dd=+9%
+  PUMPMONEY: mcap=$11,601 | gain=+44.0% | peak=$12,735 | dd=+9%
+  PUMPMONEY: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  PUMPMONEY: error fetching mcap
+[12:29:31] Monitor alive | 3949 checks | 1 open | next in 5s
+  PUMPMONEY: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  PUMPMONEY: error fetching mcap
