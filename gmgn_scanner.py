@@ -607,6 +607,7 @@ def scan_cycle():
     
     tokens = get_gmgn_trending(50)
     tokens.extend(get_gmgn_new_pairs(30))
+    print(f"[SCAN] Found {len(tokens)} tokens from GMGN")
     
     # Deduplicate by address
     seen = set()
@@ -648,6 +649,9 @@ def scan_cycle():
         # Scan
         result, reason = scan_token(token_data, dex_data, [])
         if result is None:
+            # Log rejections (except age - too noisy)
+            if reason and 'age' not in reason.lower()[:20]:
+                print(f"   ❌ {token_data.get('symbol','?')}: {reason}")
             continue
         
         # Check if needs cooldown

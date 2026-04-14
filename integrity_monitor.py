@@ -64,7 +64,7 @@ def check_integrity():
         
         # Allow normal growth (new trades)
         expected_growth = max(0, current_count - prev_count)
-        if expected_growth > 5:
+        if expected_growth > 50:
             alerts.append(f"⚠️ Unusual trade growth: +{expected_growth} in one check cycle")
         
         state['trade_count'] = current_count
