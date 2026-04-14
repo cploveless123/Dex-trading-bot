@@ -176,6 +176,10 @@ def check_should_buy(addr, p, sym, dex, m, v, v5, bs, buys, sells, holders, pair
     
     if holders == 0 or top10 == 0:
         return False, f"holders={holders} top10={top10}% (bot farm)"
+    
+    # === LIQUIDITY CHECK: Reject if < $1,000 (rugged or pre-rug) ===
+    if liq < 1000:
+        return False, f"liq ${liq:,.0f} < $1K (rugged/illiquid)"
     if holders > 0 and holders < 15:
         return False, f"holders {holders} < 15"
     

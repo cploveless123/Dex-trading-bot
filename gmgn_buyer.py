@@ -190,6 +190,17 @@ def check_and_buy():
             if not ca or not sym:
                 continue
             
+            # === SIGNAL AGE CHECK: Skip stale signals >5 min old ===
+            parsed_at = sig.get('parsed_at', '')
+            if parsed_at:
+                try:
+                    sig_time = datetime.fromisoformat(parsed_at.replace('Z', '+00:00'))
+                    age_seconds = (datetime.utcnow() - sig_time.replace(tzinfo=None)).total_seconds()
+                    if age_seconds > 300:
+                        continue  # Stale signal, skip silently
+                except:
+                    pass  # If parsing fails, let it through
+            
             # Skip if already owned
             if ca in owned:
                 continue
@@ -209,14 +220,25 @@ def check_and_buy():
                 mcap = market.get('fdv', 0) or 0
                 liq = market.get('liquidity', {}).get('usd', 0) or 0
                 
+                # === CONTRACT ADDRESS VALIDATION: Verify signal CA matches DexScreener ===
+                market_ca = (market.get('baseToken', {}).get('address', '') or '').lower()
+                if market_ca and market_ca != ca.lower():
+                    print(f"  ❌ {sym}: CA mismatch - signal={ca[:8]}... market={market_ca[:8]}... (stale signal)")
+                    continue
+                
+                # === LIQUIDITY CHECK: Reject if $0 or suspiciously low ===
+                if liq < 1000:
+                    print(f"  ❌ {sym}: Liquidity ${liq:,.0f} < $1,000 (rugged or illiquid)")
+                    continue
+                
                 # Get GMGN API data for rich scoring
                 gmgn_data = gmgn_api_scorer.get_gmgn_token_data(ca)
                 gmgn_sec = gmgn_api_scorer.get_gmgn_security(ca)
                 api_score_result = gmgn_api_scorer.score_with_gmgn_api(sig, gmgn_data, gmgn_sec)
                 api_score = api_score_result['score']
                 
-                if api_score < MIN_GMGN_API_SCORE:
-                    print(f"  ❌ {sym}: GMGN API score {api_score}/100 < {MIN_GMGN_API_SCORE}")
+                if api_score < MIN_GMGN_SCORE:
+                    print(f"  ❌ {sym}: GMGN API score {api_score}/100 < {MIN_GMGN_SCORE}")
                     continue
                 
                 print(f"\n✅ BUY SIGNAL: {sym}")
