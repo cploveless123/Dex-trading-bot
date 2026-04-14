@@ -8935,3 +8935,16 @@ Checking every 5s
   JOBLESS: mcap=$17,317 | gain=-2.0% | peak=$17,664 | dd=+0%
   JOBLESS: mcap=$17,317 | gain=-2.0% | peak=$17,664 | dd=+0%
   JOBLESS: mcap=$17,921 | gain=+1.5% | peak=$17,921 | dd=+0%
+  JOBLESS: mcap=$17,921 | gain=+1.5% | peak=$17,921 | dd=+0%
+  JOBLESS: mcap=$17,921 | gain=+1.5% | peak=$17,921 | dd=+0%
+  JOBLESS: mcap=$17,921 | gain=+1.5% | peak=$17,921 | dd=+0%
+  JOBLESS: mcap=$17,921 | gain=+1.5% | peak=$17,921 | dd=+0%
+[14:12:28] Monitor alive | 1069 checks | 1 open | next in 5s
+  JOBLESS: mcap=$17,921 | gain=+1.5% | peak=$17,921 | dd=+0%
+  JOBLESS: mcap=$17,452 | gain=-1.2% | peak=$17,921 | dd=+0%
+  JOBLESS: mcap=$17,452 | gain=-1.2% | peak=$17,921 | dd=+0%
+  JOBLESS: mcap=$17,452 | gain=-1.2% | peak=$17,921 | dd=+0%
+  JOBLESS: mcap=$17,452 | gain=-1.2% | peak=$17,921 | dd=+0%
+  JOBLESS: mcap=$17,452 | gain=-1.2% | peak=$17,921 | dd=+0%
+[14:13:29] Monitor alive | 1081 checks | 0 open | next in 5s
+  ISING: mcap=$11,176 | gain=-2.5% | peak=$11,460 | dd=+0%

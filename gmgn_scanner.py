@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GMGN Scanner v6.3 - Wilson Bot
+GMGN Scanner v6.5 - Wilson Bot
 Primary scanner using GMGN data source
 
 Decision Flow:
@@ -701,10 +701,10 @@ def scan_cycle():
     return bought
 
 def main():
-    print(f"🚀 GMGN Scanner v6.3 Started")
+    print(f"🚀 GMGN Scanner v6.5 Started")
     print(f"   Filters: Mcap ${MIN_MCAP:,}-${MAX_MCAP:,} | Holders {MIN_HOLDERS}+ | Dip {DIP_MIN}-{DIP_MAX}% | BS {BS_RATIO_NEW}/{BS_RATIO_OLD}")
     print(f"   Momentum: h1 or 24h > +{H1_MOMENTUM_MIN}% | chg1 > +{MIN_CHG1_FOR_BUY}%")
-    print(f"   Cooldown: Young(<15m)+m5>+25% → {YOUNG_COOLDOWN}s | Old+m5>+5% → {OLD_COOLDOWN}s")
+    print(f"   Cooldown: m5>-5% → {YOUNG_COOLDOWN}s | chg1>+1% req | +3% improvement needed")
     
     while True:
         try:

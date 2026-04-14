@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Trading Constants - Wilson v6.4 Strategy
+Trading Constants - Wilson v6.5 Strategy
 Goal: Turn 1.0 SOL → 100 SOL via compound TP5 winners on pump.fun
 """
 
@@ -9,81 +9,82 @@ POSITION_SIZE = 0.10      # Per trade
 KOL_BUY_POSITION_SIZE = 0.10
 MAX_OPEN_POSITIONS = 9     # Max concurrent positions
 
-# === ENTRY FILTERS (v6.4) ===
-MIN_MCAP = 1000            # $1K floor
-MAX_MCAP = 75000           # $75K ceiling
-MIN_AGE_SECONDS = 120      # 2 minutes minimum
+# === ENTRY FILTERS (v6.5) ===
+MIN_MCAP = 5000            # $5K floor
+MAX_MCAP = 60000           # $60K ceiling
+MIN_AGE_SECONDS = 0        # No minimum age
 MAX_AGE_SECONDS = 5400     # 90 minutes maximum
 MIN_5MIN_VOLUME = 1000     # 5min volume > $1K
 MIN_24H_VOLUME = 0         # No 24h volume minimum
 MIN_VOLUME = 10000         # GMGN filter: 24h volume > $10K
-MIN_HOLDERS = 10           # Holders ≥ 10 (v6.4)
+MIN_HOLDERS = 15           # Holders ≥ 15
 TOP10_HOLDER_MAX = 50      # Top10% < 50%
 
-# BS Ratio: >0.05 for pairs < 15 min old, >0.8 for all others (v6.4)
-BS_RATIO_NEW = 0.05         # BS ratio for pairs < 15 min old
+# BS Ratio: >0.15 for pairs < 15 min old, >0.8 for all others (v6.5)
+BS_RATIO_NEW = 0.15        # BS ratio for pairs < 15 min old
 BS_RATIO_OLD = 0.8        # BS ratio for pairs ≥ 15 min old
 MIN_BS_RATIO = 1.5        # GMGN buyer filter: BS ratio ≥ 1.5
 BS_PUMP_FUN_OK = True      # pump.fun BS=0 is OK
 
-# === MOMENTUM (v6.4) ===
-# REQUIRED: h1 > +15% OR 24h > +15%
-H1_MOMENTUM_MIN = 15      # h1 must be > +15% (winners avg 13% — catch early momentum)
-H24_MOMENTUM_MIN = 15     # OR 24h must be > +15%
+# === MOMENTUM (v6.5) ===
+# REQUIRED: h1 > +5% OR 24h > +5%
+H1_MOMENTUM_MIN = 5       # h1 must be > +5%
+H24_MOMENTUM_MIN = 5     # OR 24h must be > +5%
 
-# === CHG1 RULES (v6.4) ===
+# === CHG1 RULES (v6.5) ===
 MIN_CHG1_FOR_BUY = 2.0    # chg1 must be > +2% to buy
 CHG1_DROP_THRESHOLD = 3    # if chg1 drops by >3% from previous → continue watching
-CHG1_NONE_M5_REJECT = 15  # chg1=None AND m5 > +15% → REJECT immediately
+CHG1_NONE_M5_REJECT = 5  # chg1=None AND m5 > +5% → REJECT immediately
 CHG1_COOLDOWN_TRIGGER = 5 # chg1 must reach >+5% during cooldown to proceed
 
-# === DIP/PULLBACK (v6.4) ===
-DIP_MIN = 0               # 0% minimum dip (winners avg 1.3% — small dip is fine)
-DIP_MAX = 30              # 30% max dip (winners avg 1.3%, losers avg 8.5%)
-ATH_DIVERGENCE_MIN = 5    # Must be >5% below ATH
+# === DIP/PULLBACK (v6.5) ===
+DIP_MIN = 0               # 0% minimum dip
+DIP_MAX = 45              # 45% max dip (from local peak)
+ATH_DIVERGENCE_MIN = 0    # Must be >0% below ATH (no minimum)
 
-# === COOLDOWN RULES (v6.4) ===
-# Young (<15 min) + chg5 > +25% → 30s cooldown
-YOUNG_PUMP_5M_THRESHOLD = 25
+# === COOLDOWN RULES (v6.5) ===
+# Young (<15 min) + chg5 > -5% → 30s cooldown + chg1 > +1% required
+YOUNG_PUMP_5M_THRESHOLD = -5
 YOUNG_COOLDOWN = 30
-# Older (>15 min) + chg5 > +5% → 30s cooldown
-OLD_PUMP_5M_THRESHOLD = 5
-ATH_DIVERGENCE_REJECT = 40       # reject if >40% below ATH (parabolic)
+# Older (>15 min) + chg5 > -5% → 30s cooldown + chg1 > +1% required
+OLD_PUMP_5M_THRESHOLD = -5
+ATH_DIVERGENCE_REJECT = 50       # reject if >50% below ATH
 OLD_COOLDOWN = 30
-# chg1 must reach >+5% to proceed; if <+5%, wait extra 15s and keep checking
-CHG1_COOLDOWN_EXTRA = 15  # extra wait if chg1 < +5%
+# chg1 must reach >+1% during cooldown, then wait 15s more before buy
+CHG1_COOLDOWN_EXTRA = 15  # extra wait if chg1 < +1%
 CHG1_COOLDOWN_VERIFY = 15 # final 15s verification wait
 MAX_RECHECKS = 15               # Max 15 rechecks (3 min) before skip
 RECHECK_DELAY = 15              # 15s between rechecks
 
-# === PRICE STABILITY CHECK (v6.4) ===
-PRICE_DROP_THRESHOLD = 5    # >5% price drop since last check
-PRICE_DROP_WAIT_1 = 5       # first wait
-PRICE_DROP_WAIT_2 = 10      # second wait
-PRICE_DROP_WAIT_3 = 30      # third wait
-MCAP_INCREASE_CONFIRM = 5   # mcap must increase >5% from lowest to confirm
+# === PRICE STABILITY CHECK (v6.5) ===
+# Before buying: check price drop since last check
+PRICE_DROP_THRESHOLD = 3    # >3% price drop since last check → wait
+PRICE_DROP_WAIT_1 = 15      # wait 15s first
+PRICE_DROP_WAIT_2 = 30      # wait 30s second
+PRICE_DROP_WAIT_3 = 90      # wait 90s third
+MCAP_INCREASE_CONFIRM = 2   # mcap must increase >2% from lowest to buy
 
-# === INSTABILITY REJECTION (v6.4) ===
+# === INSTABILITY REJECTION (v6.5) ===
 # If h1 changes by >3x between rechecks → reject
 H1_INSTABILITY_MULTIPLIER = 3
 
-# === ANTI-PATTERNS (v6.4) ===
-H1_PARABOLIC_REJECT = 833  # h1 >+833% → reject (too parabolic)
+# === ANTI-PATTERNS (v6.5) ===
+H1_PARABOLIC_REJECT = 999999  # No h1 cap — let winners run
 FALLING_KNIFE_CONSECUTIVE = 3
 
-# === LIQUIDITY (v6.4) ===
+# === LIQUIDITY (v6.5) ===
 # mcap < $60K: no check (pump.fun building)
-# mcap > $70K: DO liquidity checks — if liq <$1K, sell immediately
-LIQUIDITY_MCAP_THRESHOLD = 70000  # $70K threshold for liq monitoring
+# mcap > $60K: DO liquidity checks — if liq <$1K, sell immediately
+LIQUIDITY_MCAP_THRESHOLD = 60000  # $60K threshold for liq monitoring
 LIQUIDITY_MIN = 1000
 
-# === EXIT PLAN (v6.4) ===
+# === EXIT PLAN (v6.5) ===
 # TP1: +50% → HOLD (no sell), 40% trailing stop activates
 # TP2: +100% → Sell 40%, trail 35%
 # TP3: +200% → Sell 30%, trail 35%
 # TP4: +300% → Sell 20%, trail 35%
 # TP5: +1000% → Sell remaining 10%, trail 30%
-# Stop: -20%
+# Stop: -25%
 
 TP1_PERCENT = 50
 TP1_TRAILING_PCT = 40
@@ -106,12 +107,12 @@ TP5_TRAILING_PCT = 30
 TP5_SELL_PCT = 10          # remaining 10%
 
 TRAILING_STOP_PCT = 40      # 40% from peak after TP1
-STOP_LOSS_PERCENT = -20     # -20% stop (NON-NEGOTIABLE)
+STOP_LOSS_PERCENT = -25     # -25% stop loss
 
 # Slippage & Tax Correction
 SLIPPAGE_TAX_COST = 0.025   # ~2.5% per round trip
 
-EXIT_PLAN_TEXT = f"""🎯 Exit Plan v6.4 (Wilson Strategy):
+EXIT_PLAN_TEXT = f"""🎯 Exit Plan v6.5 (Wilson Strategy):
 +{TP1_PERCENT}% → HOLD, trail {TP1_TRAILING_PCT}%
 +{TP2_PERCENT}% → Sell {TP2_SELL_PCT}%, trail {TP2_TRAILING_PCT}%
 +{TP3_PERCENT}% → Sell {TP3_SELL_PCT}%, trail {TP3_TRAILING_PCT}%
@@ -122,7 +123,7 @@ EXIT_PLAN_TEXT = f"""🎯 Exit Plan v6.4 (Wilson Strategy):
 # === LOW VOLUME EXIT ===
 LOW_VOLUME_THRESHOLD = 600   # 5min vol <$600 AND mcap >$60K → exit
 
-# === EXCHANGE VALIDATION (v6.4) ===
+# === EXCHANGE VALIDATION (v6.5) ===
 ALLOWED_EXCHANGES = {'pumpfun', 'pumpswap', 'raydium'}
 REJECTED_EXCHANGES = {'meteora', 'orinoco', 'lifinity', 'saber'}
 
@@ -134,7 +135,7 @@ GMGN_VOL_MCAP_MIN = 0.1
 TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
 
 # === SIMULATION RESET ===
-SIM_RESET_TIMESTAMP = '2026-04-14T06:22:19.000000+00:00'  # Fresh reset
+SIM_RESET_TIMESTAMP = '2026-04-14T14:14:00.000000+00:00'  # Fresh reset
 CHRIS_STARTING_BALANCE = 1.0
 
 # === SCAN INTERVALS ===
