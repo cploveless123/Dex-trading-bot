@@ -21,7 +21,7 @@ MIN_HOLDERS = 15           # Holders ≥ 15
 TOP10_HOLDER_MAX = 50      # Top10% < 50%
 
 # BS Ratio: >0.15 for pairs < 15 min old, >0.8 for all others (v6.7)
-BS_RATIO_NEW = 0.15        # BS ratio for pairs < 15 min old
+BS_RATIO_NEW = 0.05        # BS ratio for pairs < 15 min old
 BS_RATIO_OLD = 0.8         # BS ratio for pairs ≥ 15 min old
 MIN_BS_RATIO = 1.5         # GMGN buyer filter: BS ratio ≥ 1.5
 BS_PUMP_FUN_OK = True      # pump.fun BS=0 is OK
@@ -39,7 +39,7 @@ CHG1_IMPROVEMENT_MIN = 2.0  # chg1 must be > +2% from cooldown baseline to buy
 # === DIP/PULLBACK (v6.7) ===
 DIP_MIN = 0                # 0% minimum dip
 DIP_MAX = 50               # 50% max dip from local peak
-ATH_DIVERGENCE_MAX = 45    # 45% max below ATH
+ATH_DIVERGENCE_MAX = 55    # 45% max below ATH
 
 # === COOLDOWN RULES (v6.7) ===
 # YOUNG: age < 15 min AND chg5 > -5% → 45s cooldown
