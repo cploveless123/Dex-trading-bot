@@ -10,8 +10,8 @@ KOL_BUY_POSITION_SIZE = 0.10
 MAX_OPEN_POSITIONS = 9     # Max concurrent positions
 
 # === ENTRY FILTERS (v6.3) ===
-MIN_MCAP = 2000            # $2K floor
-MAX_MCAP = 60000           # $60K ceiling
+MIN_MCAP = 1000            # $1K floor
+MAX_MCAP = 75000           # $75K ceiling
 MIN_AGE_SECONDS = 120      # 2 minutes minimum
 MAX_AGE_SECONDS = 5400     # 90 minutes maximum
 MIN_5MIN_VOLUME = 1000     # 5min volume > $1K
@@ -26,7 +26,7 @@ BS_PUMP_FUN_OK = True      # pump.fun BS=0 is OK
 
 # === MOMENTUM (v6.3) ===
 # REQUIRED: h1 > +50% OR 24h > +50%
-H1_MOMENTUM_MIN = 50      # h1 must be > +50%
+H1_MOMENTUM_MIN = 30      # h1 must be > +30%
 H24_MOMENTUM_MIN = 50     # OR 24h must be > +50%
 
 # === CHG1 RULES (v6.3) ===

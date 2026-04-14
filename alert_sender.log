@@ -2,3 +2,6 @@ Traceback (most recent call last):
   File "/root/Dex-trading-bot/alert_sender.py", line 13, in <module>
     import pytz
 ModuleNotFoundError: No module named 'pytz'
+📱 Alert sender started
+📱 Alert sender started
+📱 Alert sender started

@@ -2,3 +2,98 @@ Traceback (most recent call last):
   File "/root/Dex-trading-bot/position_monitor.py", line 13, in <module>
     import requests, json
 ModuleNotFoundError: No module named 'requests'
+Position Monitor v3 starting...
+Exit Plan: TP1 +50% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -20%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
+[TP1_HOLD] Alert sent
+🚀 VA TP1 HIT - HOLDING @ $14,604 (+64.3%)
+  ROOM: mcap=$5,410 | gain=+14.5% | peak=$5,410 | dd=+0%
+  VA: mcap=$14,604 | gain=+64.3% | peak=$14,604 | dd=+0%
+  ROOM: mcap=$5,410 | gain=+14.5% | peak=$5,410 | dd=+0%
+  VA: mcap=$14,604 | gain=+64.3% | peak=$14,604 | dd=+0%
+  ROOM: mcap=$5,146 | gain=+8.9% | peak=$5,410 | dd=+0%
+  VA: mcap=$14,604 | gain=+64.3% | peak=$14,604 | dd=+0%
+  ROOM: mcap=$5,146 | gain=+8.9% | peak=$5,410 | dd=+0%
+  VA: mcap=$15,960 | gain=+79.6% | peak=$15,960 | dd=-9%
+  ROOM: mcap=$5,146 | gain=+8.9% | peak=$5,410 | dd=+0%
+  VA: mcap=$15,960 | gain=+79.6% | peak=$15,960 | dd=-9%
+  ROOM: mcap=$5,146 | gain=+8.9% | peak=$5,410 | dd=+0%
+  VA: mcap=$15,960 | gain=+79.6% | peak=$15,960 | dd=-9%
+  ROOM: mcap=$5,146 | gain=+8.9% | peak=$5,410 | dd=+0%
+  VA: mcap=$15,960 | gain=+79.6% | peak=$15,960 | dd=-9%
+  ROOM: mcap=$5,146 | gain=+8.9% | peak=$5,410 | dd=+0%
+  VA: mcap=$15,960 | gain=+79.6% | peak=$15,960 | dd=-9%
+  ROOM: mcap=$4,622 | gain=-2.2% | peak=$5,410 | dd=+0%
+  VA: mcap=$15,960 | gain=+79.6% | peak=$15,960 | dd=-9%
+  ROOM: mcap=$4,622 | gain=-2.2% | peak=$5,410 | dd=+0%
+[TP2] Alert sent
+✅ VA TP2 HIT @ $23,178 (+161%)
+  ROOM: mcap=$4,622 | gain=-2.2% | peak=$5,410 | dd=+0%
+  VA: mcap=$23,178 | gain=+160.8% | peak=$23,178 | dd=-59%
+  ROOM: mcap=$4,622 | gain=-2.2% | peak=$5,410 | dd=+0%
+  VA: mcap=$23,178 | gain=+160.8% | peak=$23,178 | dd=-59%
+  ROOM: mcap=$4,622 | gain=-2.2% | peak=$5,410 | dd=+0%
+[05:43:56] Monitor alive | 13 checks | 1 open | next in 5s
+  VA: mcap=$23,178 | gain=+160.8% | peak=$23,178 | dd=-59%
+  ROOM: mcap=$4,622 | gain=-2.2% | peak=$5,410 | dd=+0%
+  VA: mcap=$23,178 | gain=+160.8% | peak=$23,178 | dd=-59%
+  ROOM: mcap=$4,242 | gain=-10.2% | peak=$5,410 | dd=+0%
+  VA: mcap=$23,178 | gain=+160.8% | peak=$23,178 | dd=-59%
+  ROOM: mcap=$4,242 | gain=-10.2% | peak=$5,410 | dd=+0%
+  VA: mcap=$26,188 | gain=+194.7% | peak=$26,188 | dd=-79%
+  ROOM: mcap=$4,242 | gain=-10.2% | peak=$5,410 | dd=+0%
+  VA: mcap=$26,188 | gain=+194.7% | peak=$26,188 | dd=-79%
+  ROOM: mcap=$4,242 | gain=-10.2% | peak=$5,410 | dd=+0%
+  VA: mcap=$26,188 | gain=+194.7% | peak=$26,188 | dd=-79%
+  ROOM: mcap=$4,242 | gain=-10.2% | peak=$5,410 | dd=+0%
+  VA: mcap=$26,188 | gain=+194.7% | peak=$26,188 | dd=-79%
+  ROOM: mcap=$4,242 | gain=-10.2% | peak=$5,410 | dd=+0%
+  VA: mcap=$26,188 | gain=+194.7% | peak=$26,188 | dd=-79%
+  ROOM: mcap=$3,822 | gain=-19.1% | peak=$5,410 | dd=+0%
+  VA: mcap=$26,188 | gain=+194.7% | peak=$26,188 | dd=-79%
+  ROOM: mcap=$3,822 | gain=-19.1% | peak=$5,410 | dd=+0%
+  VA: mcap=$19,694 | gain=+121.6% | peak=$26,188 | dd=-35%
+  ROOM: mcap=$3,822 | gain=-19.1% | peak=$5,410 | dd=+0%
+  VA: mcap=$19,694 | gain=+121.6% | peak=$26,188 | dd=-35%
+  ROOM: mcap=$3,822 | gain=-19.1% | peak=$5,410 | dd=+0%
+  VA: mcap=$19,694 | gain=+121.6% | peak=$26,188 | dd=-35%
+  ROOM: mcap=$3,822 | gain=-19.1% | peak=$5,410 | dd=+0%
+[05:44:58] Monitor alive | 25 checks | 1 open | next in 5s
+  VA: mcap=$19,694 | gain=+121.6% | peak=$26,188 | dd=-35%
+  ROOM: mcap=$3,822 | gain=-19.1% | peak=$5,410 | dd=+0%
+  VA: mcap=$19,694 | gain=+121.6% | peak=$26,188 | dd=-35%
+  ROOM: mcap=$3,800 | gain=-19.6% | peak=$5,410 | dd=+0%
+  VA: mcap=$19,694 | gain=+121.6% | peak=$26,188 | dd=-35%
+  ROOM: mcap=$3,800 | gain=-19.6% | peak=$5,410 | dd=+0%
+  VA: mcap=$18,356 | gain=+106.5% | peak=$26,188 | dd=-26%
+  ROOM: mcap=$3,800 | gain=-19.6% | peak=$5,410 | dd=+0%
+  VA: mcap=$18,356 | gain=+106.5% | peak=$26,188 | dd=-26%
+  ROOM: mcap=$3,800 | gain=-19.6% | peak=$5,410 | dd=+0%
+  VA: mcap=$18,356 | gain=+106.5% | peak=$26,188 | dd=-26%
+  ROOM: mcap=$3,800 | gain=-19.6% | peak=$5,410 | dd=+0%
+  VA: mcap=$18,356 | gain=+106.5% | peak=$26,188 | dd=-26%
+  ROOM: mcap=$3,800 | gain=-19.6% | peak=$5,410 | dd=+0%
+  VA: mcap=$18,356 | gain=+106.5% | peak=$26,188 | dd=-26%
+[STOP_LOSS] Alert sent
+🔴 ROOM STOP LOSS @ $3,681 (-22.1%)
+  VA: mcap=$18,356 | gain=+106.5% | peak=$26,188 | dd=-26%
+[TRAILING_STOP] Alert sent
+✅ VA TRAILING STOP @ $13,003 (50% drop from peak)
+[05:46:00] Monitor alive | 37 checks | 0 open | next in 5s
+[05:47:00] Monitor alive | 49 checks | 0 open | next in 5s
+[05:48:00] Monitor alive | 61 checks | 0 open | next in 5s
+[05:49:00] Monitor alive | 73 checks | 0 open | next in 5s
+[05:50:00] Monitor alive | 85 checks | 0 open | next in 5s
+[05:51:00] Monitor alive | 97 checks | 0 open | next in 5s
+[05:52:00] Monitor alive | 109 checks | 0 open | next in 5s
+[05:53:00] Monitor alive | 121 checks | 0 open | next in 5s
+[05:54:00] Monitor alive | 133 checks | 0 open | next in 5s
+[05:55:01] Monitor alive | 145 checks | 0 open | next in 5s
+[05:56:01] Monitor alive | 157 checks | 0 open | next in 5s
+Position Monitor v3 starting...
+Exit Plan: TP1 +50% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -20%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
