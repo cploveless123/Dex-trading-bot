@@ -230,7 +230,8 @@ def scan_token(token_data, dex_data, whales):
     m5_vol = 0
     ds_holders = 0
     ds_top10 = 0
-    
+
+    # Source 1: DexScreener m1 price change
     if dex_data:
         chg1 = dex_data.get('priceChange', {}).get('m1')
         if chg1 is not None:
@@ -238,6 +239,18 @@ def scan_token(token_data, dex_data, whales):
         m5_vol = float(dex_data.get('volume', {}).get('m5', 0) or 0)
         ds_holders = int(dex_data.get('holderCount', 0) or 0)
         ds_top10 = float(dex_data.get('marketCap', 0) or 0)
+
+    # Source 2: GMGN price_change_percent1m (1-minute change) - use as fallback
+    if chg1 is None:
+        gmgn_m1 = token_data.get('price_change_percent1m')
+        if gmgn_m1 is not None:
+            chg1 = float(gmgn_m1)
+
+    # Source 3: GMGN price_change_percent (unknown interval, use as last resort)
+    if chg1 is None:
+        gmgn_generic = token_data.get('price_change_percent')
+        if gmgn_generic is not None:
+            chg1 = float(gmgn_generic)
     
     # Fallback from DexScreener
     if holders == 0 and ds_holders > 0:
@@ -414,15 +427,25 @@ def check_cooldown_watch():
         # Get fresh GMGN data
         fresh_data = get_gmgn_token_info(addr)
         fresh_dex = get_dexscreener_data(addr)
+
+        # Merge: use original GMGN trending data (has price_change_percent1m)
+        # but update with fresh DexScreener data for chg1 and volume
+        merged_data = data['token_data'].copy() if data.get('token_data') else {}
+        if fresh_dex:
+            # Update with fresh DexScreener chg1 if available
+            ds_chg1 = fresh_dex.get('priceChange', {}).get('m1')
+            if ds_chg1 is not None:
+                merged_data['price_change_percent1m'] = float(ds_chg1)
         
-        if fresh_data is None:
-            # GMGN failed - remove from cooldown (no buy without fresh data)
+        if fresh_data is None and not merged_data:
+            # GMGN failed and no stored data - remove from cooldown
             print(f"   ❌ {result['token']}: GMGN data unavailable - removing from cooldown")
             to_remove.append(addr)
             continue
-        
+
         # Re-evaluate with fresh data
-        fresh_result, fresh_reason = scan_token(fresh_data, fresh_dex, [])
+        scan_data = merged_data if merged_data else fresh_data
+        fresh_result, fresh_reason = scan_token(scan_data, fresh_dex, [])
         
         if fresh_result is None:
             # No longer passing filters

@@ -38,7 +38,7 @@ CHG1_COOLDOWN_TRIGGER = 5 # chg1 must reach >+5% during cooldown to proceed
 # === DIP/PULLBACK (v6.4) ===
 DIP_MIN = 5               # 5% minimum dip from local peak
 DIP_MAX = 45              # 45% maximum dip from local peak
-ATH_DIVERGENCE_MIN = 15   # Must be >15% below ATH
+ATH_DIVERGENCE_MIN = 5    # Must be >5% below ATH
 
 # === COOLDOWN RULES (v6.4) ===
 # Young (<15 min) + chg5 > +25% → 30s cooldown
