@@ -11979,3 +11979,305 @@ Checking every 5s
   Dogrates: mcap=$9,860 | gain=-15.7% | peak=$15,469 | dd=+0%
   Dogrates: mcap=$9,860 | gain=-15.7% | peak=$15,469 | dd=+0%
   Dogrates: mcap=$9,898 | gain=-15.4% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,898 | gain=-15.4% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,898 | gain=-15.4% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,898 | gain=-15.4% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,898 | gain=-15.4% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,898 | gain=-15.4% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,095 | gain=-5.2% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,095 | gain=-5.2% | peak=$15,469 | dd=+0%
+[17:00:32] Monitor alive | 180 checks | 1 open | next in 5s
+  Dogrates: mcap=$11,095 | gain=-5.2% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,095 | gain=-5.2% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,095 | gain=-5.2% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,095 | gain=-5.2% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,469 | gain=-2.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,469 | gain=-2.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,469 | gain=-2.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,469 | gain=-2.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,469 | gain=-2.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,469 | gain=-2.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,637 | gain=-0.5% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,637 | gain=-0.5% | peak=$15,469 | dd=+0%
+[17:01:33] Monitor alive | 192 checks | 1 open | next in 5s
+  Dogrates: mcap=$11,637 | gain=-0.5% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,637 | gain=-0.5% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,637 | gain=-0.5% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,637 | gain=-0.5% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$12,220 | gain=+4.5% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$21,149 | gain=-9.4% | peak=$23,352 | dd=+0%
+  Dogrates: mcap=$12,220 | gain=+4.5% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$21,149 | gain=-9.4% | peak=$23,352 | dd=+0%
+  Dogrates: mcap=$12,220 | gain=+4.5% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$21,149 | gain=-9.4% | peak=$23,352 | dd=+0%
+  Dogrates: mcap=$12,220 | gain=+4.5% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$21,149 | gain=-9.4% | peak=$23,352 | dd=+0%
+  Dogrates: mcap=$12,220 | gain=+4.5% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$22,803 | gain=-2.4% | peak=$23,352 | dd=+0%
+  Dogrates: mcap=$12,220 | gain=+4.5% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$22,803 | gain=-2.4% | peak=$23,352 | dd=+0%
+  Dogrates: mcap=$11,249 | gain=-3.8% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$22,803 | gain=-2.4% | peak=$23,352 | dd=+0%
+  Dogrates: mcap=$11,249 | gain=-3.8% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$22,803 | gain=-2.4% | peak=$23,352 | dd=+0%
+[17:02:35] Monitor alive | 204 checks | 2 open | next in 5s
+  Dogrates: mcap=$11,249 | gain=-3.8% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$22,803 | gain=-2.4% | peak=$23,352 | dd=+0%
+  Dogrates: mcap=$11,249 | gain=-3.8% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$22,803 | gain=-2.4% | peak=$23,352 | dd=+0%
+  Dogrates: mcap=$11,249 | gain=-3.8% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$24,414 | gain=+4.5% | peak=$24,414 | dd=+0%
+  Dogrates: mcap=$11,249 | gain=-3.8% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$24,414 | gain=+4.5% | peak=$24,414 | dd=+0%
+  Dogrates: mcap=$11,183 | gain=-4.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$24,414 | gain=+4.5% | peak=$24,414 | dd=+0%
+  Dogrates: mcap=$11,183 | gain=-4.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$24,414 | gain=+4.5% | peak=$24,414 | dd=+0%
+  Dogrates: mcap=$11,183 | gain=-4.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$24,414 | gain=+4.5% | peak=$24,414 | dd=+0%
+  Dogrates: mcap=$11,183 | gain=-4.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$24,414 | gain=+4.5% | peak=$24,414 | dd=+0%
+  Dogrates: mcap=$11,183 | gain=-4.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$29,841 | gain=+27.8% | peak=$29,841 | dd=+0%
+  Dogrates: mcap=$11,183 | gain=-4.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$29,841 | gain=+27.8% | peak=$29,841 | dd=+0%
+  Dogrates: mcap=$9,195 | gain=-21.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$29,841 | gain=+27.8% | peak=$29,841 | dd=+0%
+  Dogrates: mcap=$9,195 | gain=-21.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$29,841 | gain=+27.8% | peak=$29,841 | dd=+0%
+[17:03:36] Monitor alive | 216 checks | 2 open | next in 5s
+  Dogrates: mcap=$9,195 | gain=-21.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$29,841 | gain=+27.8% | peak=$29,841 | dd=+0%
+  Dogrates: mcap=$9,195 | gain=-21.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$29,841 | gain=+27.8% | peak=$29,841 | dd=+0%
+  Dogrates: mcap=$9,195 | gain=-21.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$33,956 | gain=+45.4% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$9,195 | gain=-21.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$33,956 | gain=+45.4% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$9,817 | gain=-16.1% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$33,956 | gain=+45.4% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$9,817 | gain=-16.1% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$33,956 | gain=+45.4% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$9,817 | gain=-16.1% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$33,956 | gain=+45.4% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$9,817 | gain=-16.1% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,074 | gain=+37.4% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$9,817 | gain=-16.1% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,458 | gain=+39.0% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$9,817 | gain=-16.1% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,458 | gain=+39.0% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$10,347 | gain=-11.5% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,458 | gain=+39.0% | peak=$33,956 | dd=+0%
+  WORM: mcap=$9,673 | gain=+1.4% | peak=$9,673 | dd=+0%
+  Dogrates: mcap=$10,347 | gain=-11.5% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,458 | gain=+39.0% | peak=$33,956 | dd=+0%
+  WORM: mcap=$9,673 | gain=+1.4% | peak=$9,673 | dd=+0%
+[17:04:38] Monitor alive | 228 checks | 3 open | next in 5s
+  Dogrates: mcap=$10,347 | gain=-11.5% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,458 | gain=+39.0% | peak=$33,956 | dd=+0%
+  WORM: mcap=$9,673 | gain=+1.4% | peak=$9,673 | dd=+0%
+  Dogrates: mcap=$10,347 | gain=-11.5% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$33,478 | gain=+43.4% | peak=$33,956 | dd=+0%
+  WORM: mcap=$9,673 | gain=+1.4% | peak=$9,673 | dd=+0%
+  Dogrates: mcap=$10,347 | gain=-11.5% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$33,478 | gain=+43.4% | peak=$33,956 | dd=+0%
+  WORM: mcap=$9,673 | gain=+1.4% | peak=$9,673 | dd=+0%
+  Dogrates: mcap=$10,153 | gain=-13.2% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$33,478 | gain=+43.4% | peak=$33,956 | dd=+0%
+  WORM: mcap=$9,512 | gain=-0.3% | peak=$9,673 | dd=+0%
+  Dogrates: mcap=$10,153 | gain=-13.2% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$33,478 | gain=+43.4% | peak=$33,956 | dd=+0%
+  WORM: mcap=$9,512 | gain=-0.3% | peak=$9,673 | dd=+0%
+  Dogrates: mcap=$10,153 | gain=-13.2% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$33,478 | gain=+43.4% | peak=$33,956 | dd=+0%
+  WORM: mcap=$9,512 | gain=-0.3% | peak=$9,673 | dd=+0%
+  Dogrates: mcap=$10,153 | gain=-13.2% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$33,478 | gain=+43.4% | peak=$33,956 | dd=+0%
+  WORM: mcap=$9,512 | gain=-0.3% | peak=$9,673 | dd=+0%
+  Dogrates: mcap=$10,153 | gain=-13.2% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,686 | gain=+40.0% | peak=$33,956 | dd=+0%
+  WORM: mcap=$9,512 | gain=-0.3% | peak=$9,673 | dd=+0%
+  Dogrates: mcap=$10,153 | gain=-13.2% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,686 | gain=+40.0% | peak=$33,956 | dd=+0%
+  WORM: mcap=$9,512 | gain=-0.3% | peak=$9,673 | dd=+0%
+  Dogrates: mcap=$10,111 | gain=-13.6% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,686 | gain=+40.0% | peak=$33,956 | dd=+0%
+  WORM: mcap=$8,821 | gain=-7.5% | peak=$9,673 | dd=+0%
+  Dogrates: mcap=$10,111 | gain=-13.6% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,686 | gain=+40.0% | peak=$33,956 | dd=+0%
+  WORM: mcap=$8,821 | gain=-7.5% | peak=$9,673 | dd=+0%
+  Dogrates: mcap=$10,111 | gain=-13.6% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,686 | gain=+40.0% | peak=$33,956 | dd=+0%
+  WORM: mcap=$8,821 | gain=-7.5% | peak=$9,673 | dd=+0%
+[17:05:41] Monitor alive | 240 checks | 3 open | next in 5s
+  Dogrates: mcap=$10,111 | gain=-13.6% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,686 | gain=+40.0% | peak=$33,956 | dd=+0%
+  WORM: mcap=$8,821 | gain=-7.5% | peak=$9,673 | dd=+0%
+  Dogrates: mcap=$10,111 | gain=-13.6% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,507 | gain=+39.2% | peak=$33,956 | dd=+0%
+  WORM: mcap=$8,821 | gain=-7.5% | peak=$9,673 | dd=+0%
+  Dogrates: mcap=$10,111 | gain=-13.6% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,507 | gain=+39.2% | peak=$33,956 | dd=+0%
+  WORM: mcap=$8,821 | gain=-7.5% | peak=$9,673 | dd=+0%
+  Dogrates: mcap=$10,111 | gain=-13.6% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,507 | gain=+39.2% | peak=$33,956 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 WORM STOP LOSS @ $5,742 (-39.8%)
+  Dogrates: mcap=$10,111 | gain=-13.6% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,507 | gain=+39.2% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$10,111 | gain=-13.6% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,507 | gain=+39.2% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$10,111 | gain=-13.6% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,507 | gain=+39.2% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$10,111 | gain=-13.6% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$31,438 | gain=+34.6% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$10,111 | gain=-13.6% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$31,438 | gain=+34.6% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$10,019 | gain=-14.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$31,438 | gain=+34.6% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$10,019 | gain=-14.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$31,438 | gain=+34.6% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$10,019 | gain=-14.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$31,438 | gain=+34.6% | peak=$33,956 | dd=+0%
+[17:06:43] Monitor alive | 252 checks | 2 open | next in 5s
+  Dogrates: mcap=$10,019 | gain=-14.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,638 | gain=+39.8% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$10,019 | gain=-14.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,638 | gain=+39.8% | peak=$33,956 | dd=+0%
+  Dogrates: mcap=$10,019 | gain=-14.4% | peak=$15,469 | dd=+0%
+  FAKER: mcap=$32,638 | gain=+39.8% | peak=$33,956 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Dogrates STOP LOSS @ $8,688 (-25.7%)
+  FAKER: mcap=$32,638 | gain=+39.8% | peak=$33,956 | dd=+0%
+  FAKER: mcap=$32,638 | gain=+39.8% | peak=$33,956 | dd=+0%
+  FAKER: mcap=$32,638 | gain=+39.8% | peak=$33,956 | dd=+0%
+  FAKER: mcap=$34,438 | gain=+47.5% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$34,438 | gain=+47.5% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$34,438 | gain=+47.5% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$34,438 | gain=+47.5% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$34,438 | gain=+47.5% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$34,438 | gain=+47.5% | peak=$34,438 | dd=+0%
+[17:07:45] Monitor alive | 264 checks | 1 open | next in 5s
+  FAKER: mcap=$33,677 | gain=+44.2% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$33,677 | gain=+44.2% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$33,677 | gain=+44.2% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$33,677 | gain=+44.2% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$33,677 | gain=+44.2% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$33,677 | gain=+44.2% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$29,260 | gain=+25.3% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$29,260 | gain=+25.3% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$29,260 | gain=+25.3% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$29,260 | gain=+25.3% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$29,260 | gain=+25.3% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$29,260 | gain=+25.3% | peak=$34,438 | dd=+0%
+[17:08:46] Monitor alive | 276 checks | 1 open | next in 5s
+  FAKER: mcap=$29,924 | gain=+28.1% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$29,924 | gain=+28.1% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$29,924 | gain=+28.1% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$29,924 | gain=+28.1% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$29,924 | gain=+28.1% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$29,924 | gain=+28.1% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$20,645 | gain=-11.6% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$20,645 | gain=-11.6% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$20,645 | gain=-11.6% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$20,645 | gain=-11.6% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$20,645 | gain=-11.6% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$20,645 | gain=-11.6% | peak=$34,438 | dd=+0%
+[17:09:47] Monitor alive | 288 checks | 1 open | next in 5s
+  FAKER: mcap=$18,612 | gain=-20.3% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$18,612 | gain=-20.3% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$18,612 | gain=-20.3% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$18,612 | gain=-20.3% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$18,612 | gain=-20.3% | peak=$34,438 | dd=+0%
+  FAKER: mcap=$18,612 | gain=-20.3% | peak=$34,438 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 FAKER STOP LOSS @ $16,756 (-28.2%)
+  DIT: mcap=$11,047 | gain=-16.9% | peak=$13,288 | dd=+0%
+  DIT: mcap=$11,047 | gain=-16.9% | peak=$13,288 | dd=+0%
+[17:10:48] Monitor alive | 300 checks | 1 open | next in 5s
+  DIT: mcap=$11,047 | gain=-16.9% | peak=$13,288 | dd=+0%
+  DIT: mcap=$11,047 | gain=-16.9% | peak=$13,288 | dd=+0%
+  DIT: mcap=$11,047 | gain=-16.9% | peak=$13,288 | dd=+0%
+  DIT: mcap=$13,103 | gain=-1.4% | peak=$13,288 | dd=+0%
+  DIT: mcap=$13,103 | gain=-1.4% | peak=$13,288 | dd=+0%
+  DIT: mcap=$13,103 | gain=-1.4% | peak=$13,288 | dd=+0%
+  DIT: mcap=$13,103 | gain=-1.4% | peak=$13,288 | dd=+0%
+  DIT: mcap=$13,103 | gain=-1.4% | peak=$13,288 | dd=+0%
+  DIT: mcap=$13,103 | gain=-1.4% | peak=$13,288 | dd=+0%
+  DIT: mcap=$14,962 | gain=+12.6% | peak=$14,962 | dd=+0%
+  DIT: mcap=$14,962 | gain=+12.6% | peak=$14,962 | dd=+0%
+  DIT: mcap=$14,962 | gain=+12.6% | peak=$14,962 | dd=+0%
+[17:11:49] Monitor alive | 312 checks | 1 open | next in 5s
+  DIT: mcap=$14,962 | gain=+12.6% | peak=$14,962 | dd=+0%
+  DIT: mcap=$14,962 | gain=+12.6% | peak=$14,962 | dd=+0%
+  DIT: mcap=$14,962 | gain=+12.6% | peak=$14,962 | dd=+0%
+  DIT: mcap=$15,204 | gain=+14.4% | peak=$15,204 | dd=+0%
+  DIT: mcap=$15,204 | gain=+14.4% | peak=$15,204 | dd=+0%
+  DIT: mcap=$15,204 | gain=+14.4% | peak=$15,204 | dd=+0%
+  DIT: mcap=$15,204 | gain=+14.4% | peak=$15,204 | dd=+0%
+  DIT: mcap=$15,204 | gain=+14.4% | peak=$15,204 | dd=+0%
+  DIT: mcap=$15,204 | gain=+14.4% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,682 | gain=-4.6% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,682 | gain=-4.6% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,682 | gain=-4.6% | peak=$15,204 | dd=+0%
+[17:12:50] Monitor alive | 324 checks | 1 open | next in 5s
+  DIT: mcap=$12,682 | gain=-4.6% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,682 | gain=-4.6% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,682 | gain=-4.6% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,068 | gain=-9.2% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,068 | gain=-9.2% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,068 | gain=-9.2% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,068 | gain=-9.2% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,068 | gain=-9.2% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,068 | gain=-9.2% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,570 | gain=-5.4% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,570 | gain=-5.4% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,570 | gain=-5.4% | peak=$15,204 | dd=+0%
+[17:13:51] Monitor alive | 336 checks | 1 open | next in 5s
+  DIT: mcap=$12,570 | gain=-5.4% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,570 | gain=-5.4% | peak=$15,204 | dd=+0%
+  DIT: mcap=$12,570 | gain=-5.4% | peak=$15,204 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 DIT STOP LOSS @ $6,859 (-48.4%)
+[17:14:52] Monitor alive | 348 checks | 0 open | next in 5s
+[17:15:52] Monitor alive | 360 checks | 0 open | next in 5s
+[17:16:52] Monitor alive | 372 checks | 0 open | next in 5s
+[17:17:52] Monitor alive | 384 checks | 0 open | next in 5s
+[17:18:52] Monitor alive | 396 checks | 0 open | next in 5s
+  Twin: mcap=$9,482 | gain=-3.4% | peak=$9,817 | dd=+0%
+  Twin: mcap=$9,482 | gain=-3.4% | peak=$9,817 | dd=+0%
+  Twin: mcap=$10,727 | gain=+9.3% | peak=$10,727 | dd=+0%
+  Twin: mcap=$10,727 | gain=+9.3% | peak=$10,727 | dd=+0%
+[17:19:52] Monitor alive | 408 checks | 1 open | next in 5s
+  Twin: mcap=$10,727 | gain=+9.3% | peak=$10,727 | dd=+0%
+  Twin: mcap=$10,727 | gain=+9.3% | peak=$10,727 | dd=+0%
+  Twin: mcap=$10,727 | gain=+9.3% | peak=$10,727 | dd=+0%
+  Twin: mcap=$10,727 | gain=+9.3% | peak=$10,727 | dd=+0%
+  Twin: mcap=$10,833 | gain=+10.4% | peak=$10,833 | dd=+0%
+  Twin: mcap=$10,833 | gain=+10.4% | peak=$10,833 | dd=+0%
+  Twin: mcap=$10,833 | gain=+10.4% | peak=$10,833 | dd=+0%
+  Twin: mcap=$10,833 | gain=+10.4% | peak=$10,833 | dd=+0%
+  Twin: mcap=$10,833 | gain=+10.4% | peak=$10,833 | dd=+0%
+  Twin: mcap=$10,833 | gain=+10.4% | peak=$10,833 | dd=+0%
+  Twin: mcap=$11,121 | gain=+13.3% | peak=$11,121 | dd=+0%
+  Twin: mcap=$11,121 | gain=+13.3% | peak=$11,121 | dd=+0%
+[17:20:53] Monitor alive | 420 checks | 1 open | next in 5s
+  Twin: mcap=$11,121 | gain=+13.3% | peak=$11,121 | dd=+0%
+  Twin: mcap=$11,121 | gain=+13.3% | peak=$11,121 | dd=+0%
+  Twin: mcap=$11,121 | gain=+13.3% | peak=$11,121 | dd=+0%
+  Twin: mcap=$11,121 | gain=+13.3% | peak=$11,121 | dd=+0%
+  Twin: mcap=$14,092 | gain=+43.5% | peak=$14,092 | dd=+0%
+  Twin: mcap=$14,092 | gain=+43.5% | peak=$14,092 | dd=+0%
+  Twin: mcap=$14,092 | gain=+43.5% | peak=$14,092 | dd=+0%
+  Twin: mcap=$14,092 | gain=+43.5% | peak=$14,092 | dd=+0%
+  Twin: mcap=$14,092 | gain=+43.5% | peak=$14,092 | dd=+0%
+  Twin: mcap=$14,092 | gain=+43.5% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,269 | gain=+25.0% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,269 | gain=+25.0% | peak=$14,092 | dd=+0%
+[17:21:56] Monitor alive | 432 checks | 1 open | next in 5s
+  Twin: mcap=$12,269 | gain=+25.0% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,269 | gain=+25.0% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,269 | gain=+25.0% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,984 | gain=+32.3% | peak=$14,092 | dd=+0%
+  Twin: mcap=$12,984 | gain=+32.3% | peak=$14,092 | dd=+0%
+  nigga: mcap=$18,216 | gain=-5.1% | peak=$19,185 | dd=+0%

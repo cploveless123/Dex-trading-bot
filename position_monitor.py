@@ -510,11 +510,11 @@ def check_positions():
     return updated
 
 def main():
-    print(f"Position Monitor v3 starting...")
+    print(f"Position Monitor v6.8 starting...")
     print(f"Exit Plan: TP1 +{TP1_PERCENT}% (sell {TP1_SELL_PCT}%) | TP2 +{TP2_PERCENT}% | TP3 +{TP3_PERCENT}% | Trailing {TRAILING_STOP_PCT}% | Stop {STOP_LOSS_PERCENT}%")
     print(f"Peak cache: {PEAK_CACHE_FILE}")
     print(f"Checking every {CHECK_INTERVAL}s")
-    send_alert(f"Position Monitor v3 online | TP1 +{TP1_PERCENT}% | Stop {STOP_LOSS_PERCENT}%", "STARTUP")
+    send_alert(f"Position Monitor v6.8 online | TP1 +{TP1_PERCENT}% | Stop {STOP_LOSS_PERCENT}%", "STARTUP")
 
     check_count = 0
     last_status_time = time.time()
