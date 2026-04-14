@@ -957,3 +957,168 @@ Checking every 5s
 [08:57:46] Monitor alive | 1489 checks | 0 open | next in 5s
 [08:58:46] Monitor alive | 1501 checks | 0 open | next in 5s
 [08:59:46] Monitor alive | 1513 checks | 0 open | next in 5s
+[09:00:46] Monitor alive | 1525 checks | 0 open | next in 5s
+[09:01:46] Monitor alive | 1537 checks | 0 open | next in 5s
+[09:02:46] Monitor alive | 1549 checks | 0 open | next in 5s
+  ME: mcap=$14,309 | gain=-0.0% | peak=$14,310 | dd=+0%
+[09:03:46] Monitor alive | 1561 checks | 1 open | next in 5s
+  ME: mcap=$14,309 | gain=-0.0% | peak=$14,310 | dd=+0%
+  ME: mcap=$14,309 | gain=-0.0% | peak=$14,310 | dd=+0%
+  ME: mcap=$14,309 | gain=-0.0% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,461 | gain=-5.9% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,461 | gain=-5.9% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,461 | gain=-5.9% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,461 | gain=-5.9% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,461 | gain=-5.9% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,461 | gain=-5.9% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,294 | gain=-7.1% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,294 | gain=-7.1% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,294 | gain=-7.1% | peak=$14,310 | dd=+0%
+[09:04:47] Monitor alive | 1573 checks | 1 open | next in 5s
+  ME: mcap=$13,294 | gain=-7.1% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,294 | gain=-7.1% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,294 | gain=-7.1% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,868 | gain=-3.1% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,868 | gain=-3.1% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,868 | gain=-3.1% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,868 | gain=-3.1% | peak=$14,310 | dd=+0%
+  ME: mcap=$13,868 | gain=-3.1% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,259 | gain=-0.0% | peak=$6,260 | dd=+0%
+  ME: mcap=$13,868 | gain=-3.1% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,259 | gain=-0.0% | peak=$6,260 | dd=+0%
+  ME: mcap=$13,898 | gain=-2.9% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,259 | gain=-0.0% | peak=$6,260 | dd=+0%
+  ME: mcap=$13,898 | gain=-2.9% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,259 | gain=-0.0% | peak=$6,260 | dd=+0%
+  ME: mcap=$13,898 | gain=-2.9% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,259 | gain=-0.0% | peak=$6,260 | dd=+0%
+[09:05:48] Monitor alive | 1585 checks | 2 open | next in 5s
+  ME: mcap=$13,898 | gain=-2.9% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,259 | gain=-0.0% | peak=$6,260 | dd=+0%
+  ME: mcap=$13,898 | gain=-2.9% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,200 | gain=-1.0% | peak=$6,260 | dd=+0%
+  ME: mcap=$13,898 | gain=-2.9% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,200 | gain=-1.0% | peak=$6,260 | dd=+0%
+  ME: mcap=$12,837 | gain=-10.3% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,200 | gain=-1.0% | peak=$6,260 | dd=+0%
+  ME: mcap=$12,837 | gain=-10.3% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,200 | gain=-1.0% | peak=$6,260 | dd=+0%
+  ME: mcap=$12,837 | gain=-10.3% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,200 | gain=-1.0% | peak=$6,260 | dd=+0%
+  ME: mcap=$12,837 | gain=-10.3% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,200 | gain=-1.0% | peak=$6,260 | dd=+0%
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+[09:06:50] Monitor alive | 1597 checks | 2 open | next in 5s
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: mcap=$11,598 | gain=-19.0% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,134 | gain=-2.0% | peak=$6,260 | dd=+0%
+  ME: mcap=$11,722 | gain=-18.1% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,134 | gain=-2.0% | peak=$6,260 | dd=+0%
+  ME: mcap=$11,722 | gain=-18.1% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,134 | gain=-2.0% | peak=$6,260 | dd=+0%
+  ME: mcap=$11,722 | gain=-18.1% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,134 | gain=-2.0% | peak=$6,260 | dd=+0%
+  ME: mcap=$11,722 | gain=-18.1% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,134 | gain=-2.0% | peak=$6,260 | dd=+0%
+[09:07:51] Monitor alive | 1609 checks | 2 open | next in 5s
+  ME: mcap=$11,722 | gain=-18.1% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,288 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,722 | gain=-18.1% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,288 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,780 | gain=-17.7% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,288 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,780 | gain=-17.7% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,288 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,780 | gain=-17.7% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,288 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,780 | gain=-17.7% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,288 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,780 | gain=-17.7% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,282 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,780 | gain=-17.7% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,282 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,907 | gain=-16.8% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,282 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,907 | gain=-16.8% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,282 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,907 | gain=-16.8% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,282 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,907 | gain=-16.8% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,282 | gain=+0.4% | peak=$6,288 | dd=+0%
+[09:08:53] Monitor alive | 1621 checks | 2 open | next in 5s
+  ME: mcap=$11,907 | gain=-16.8% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,282 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,907 | gain=-16.8% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,282 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,904 | gain=-16.8% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,282 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,904 | gain=-16.8% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,282 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,904 | gain=-16.8% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,282 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,904 | gain=-16.8% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,282 | gain=+0.4% | peak=$6,288 | dd=+0%
+  ME: mcap=$11,904 | gain=-16.8% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,651 | gain=+6.2% | peak=$6,651 | dd=+0%
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+[09:09:55] Monitor alive | 1633 checks | 2 open | next in 5s
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: error fetching mcap
+  FATOU: error fetching mcap
+  ME: mcap=$11,817 | gain=-17.4% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,651 | gain=+6.2% | peak=$6,651 | dd=+0%
+  ME: mcap=$11,817 | gain=-17.4% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,651 | gain=+6.2% | peak=$6,651 | dd=+0%
+  ME: mcap=$11,817 | gain=-17.4% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,651 | gain=+6.2% | peak=$6,651 | dd=+0%
+  ME: mcap=$11,817 | gain=-17.4% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,651 | gain=+6.2% | peak=$6,651 | dd=+0%
+  ME: mcap=$11,817 | gain=-17.4% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,651 | gain=+6.2% | peak=$6,651 | dd=+0%
+[09:10:56] Monitor alive | 1645 checks | 2 open | next in 5s
+  ME: mcap=$11,817 | gain=-17.4% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,540 | gain=+4.5% | peak=$6,651 | dd=+0%
+  ME: mcap=$11,793 | gain=-17.6% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,540 | gain=+4.5% | peak=$6,651 | dd=+0%
