@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-GMGN Scanner v7 - Wilson Bot
-Full implementation of Chris's v7 strategy
+GMGN Scanner v7.1 - Wilson Bot
+Added: GMGN throttle management with exponential backoff + per-endpoint tracking
 """
 
 import json, time, subprocess
@@ -44,29 +44,74 @@ PERM_BLACKLIST = set()
 _gmgn_throttle_count = 0
 _gmgn_last_throttle_alert = 0
 
+# === GMGN THROTTLE MANAGEMENT ===
+_BACKOFF_BASE = 30
+_BACKOFF_MAX = 300
+_gmgn_throttle_state = {
+    'trending': {'count': 0, 'backoff_until': 0, 'last_alert': 0},
+    'trenches': {'count': 0, 'backoff_until': 0, 'last_alert': 0},
+    'pumpfun': {'count': 0, 'backoff_until': 0, 'last_alert': 0},
+    'token_info': {'count': 0, 'backoff_until': 0, 'last_alert': 0},
+}
+
+def is_throttled(endpoint):
+    return time.time() < _gmgn_throttle_state[endpoint]['backoff_until']
+
+def record_throttle(endpoint):
+    state = _gmgn_throttle_state[endpoint]
+    state['count'] += 1
+    wait_time = min(_BACKOFF_BASE * (2 ** state['count']), _BACKOFF_MAX)
+    state['backoff_until'] = time.time() + wait_time
+    now = time.time()
+    if state['count'] >= 2 and (now - state['last_alert']) > 120:
+        msg = f"GMGN {endpoint.upper()} THROTTLED: {state['count']} failures. Backoff {wait_time:.0f}s"
+        print(f"! {msg}")
+        alert_sender_webhook(msg)
+        state['last_alert'] = now
+
+def clear_throttle(endpoint):
+    _gmgn_throttle_state[endpoint]['count'] = 0
+    _gmgn_throttle_state[endpoint]['backoff_until'] = 0
+
+def alert_sender_webhook(msg):
+    try:
+        import urllib.request, urllib.parse
+        BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
+        CHAT_ID = "6402511249"
+        url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+        data = {"chat_id": CHAT_ID, "text": msg, "parse_mode": "HTML"}
+        req = urllib.request.Request(url, data=urllib.parse.urlencode(data).encode())
+        urllib.request.urlopen(req, timeout=10)
+    except: pass
+
 # === GMGN DATA ===
-def gmgn_query(cmd, timeout=15):
-    global _gmgn_throttle_count, _gmgn_last_throttle_alert
+def gmgn_query(cmd, timeout=15, endpoint='unknown'):
+    # Check throttle
+    if is_throttled(endpoint):
+        return None
+    
     try:
         r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
         if r.returncode == 0:
-            _gmgn_throttle_count = 0
+            clear_throttle(endpoint)
             return json.loads(r.stdout)
+        elif 'rate limit' in r.stderr.lower() or '429' in r.stderr or '400' in r.stderr:
+            record_throttle(endpoint)
     except:
-        pass
-    _gmgn_throttle_count += 1
-    now = time.time()
-    if _gmgn_throttle_count >= 3 and (now - _gmgn_last_throttle_alert) > 300:
-        alert(f"GMGN THROTTLED: {_gmgn_throttle_count}")
-        _gmgn_last_throttle_alert = now
+        record_throttle(endpoint)
+    
     return None
 
 def get_gmgn_trending(limit=50):
-    d = gmgn_query(['gmgn-cli', 'market', 'trending', '--chain', 'sol', '--interval', '5m', '--limit', str(limit)])
+    if is_throttled('trending'):
+        return []
+    d = gmgn_query(['gmgn-cli', 'market', 'trending', '--chain', 'sol', '--interval', '5m', '--limit', str(limit)], endpoint='trending')
     return d.get('data', {}).get('rank', []) if d else []
 
 def get_gmgn_new_pairs(limit=30):
-    d = gmgn_query(['gmgn-cli', 'market', 'trenches', '--chain', 'sol', '--limit', str(limit)])
+    if is_throttled('trenches'):
+        return []
+    d = gmgn_query(['gmgn-cli', 'market', 'trenches', '--chain', 'sol', '--limit', str(limit)], endpoint='trenches')
     if not d: return []
     pairs = []
     for k in ('creating', 'created', 'completed'):
@@ -74,12 +119,16 @@ def get_gmgn_new_pairs(limit=30):
     return pairs
 
 def get_gmgn_pumpfun_lowcap(limit=30):
+    if is_throttled('pumpfun'):
+        return []
     d = gmgn_query(['gmgn-cli', 'market', 'trending', '--chain', 'sol', '--interval', '5m', '--limit', str(limit),
-                    '--platform', 'Pump.fun', '--order-by', 'marketcap', '--direction', 'asc'])
+                    '--platform', 'Pump.fun', '--order-by', 'marketcap', '--direction', 'asc'], endpoint='pumpfun')
     return d.get('data', {}).get('rank', []) if d else []
 
 def get_gmgn_token_info(addr):
-    return gmgn_query(['gmgn-cli', 'token', 'info', '--chain', 'sol', '--address', addr])
+    if is_throttled('token_info'):
+        return None
+    return gmgn_query(['gmgn-cli', 'token', 'info', '--chain', 'sol', '--address', addr], endpoint='token_info')
 
 def get_dexscreener_data(addr):
     try:
@@ -117,33 +166,31 @@ def load_blacklist():
             except: pass
 
 # === FRESH DATA MERGE ===
-def merge_token_data(gmgn_data, dex_data):
-    merged = (gmgn_data or {}).copy()
-    if dex_data:
-        # Only use DexScreener to fill fields that are missing/zero in GMGN
-        for k, v in dex_data.items():
+def merge_token_data(stored_data, fresh_gmgn, fresh_dex):
+    """Use stored data as base, fill in with fresh"""
+    merged = (stored_data or {}).copy()
+    if fresh_gmgn:
+        for k, v in fresh_gmgn.items():
+            if v and v != 0:
+                merged[k] = v
+    if fresh_dex:
+        for k, v in fresh_dex.items():
             if v and v != 0 and not merged.get(k):
                 merged[k] = v
-        # Explicitly handle chg1 from DexScreener
-        ds_chg1 = dex_data.get('priceChange', {}).get('m1') if dex_data.get('priceChange') else None
+        ds_chg1 = fresh_dex.get('priceChange', {}).get('m1') if fresh_dex.get('priceChange') else None
         if ds_chg1 is not None and not merged.get('price_change_percent1m'):
             merged['price_change_percent1m'] = float(ds_chg1)
-        # Price: only if GMGN price is missing
-        ds_price = dex_data.get('priceUsd') or dex_data.get('price')
-        if ds_price and not merged.get('price'):
-            merged['price'] = float(ds_price)
     return merged
 
 # === TOKEN SCAN ===
 def scan_token(gmgn_data, dex_data):
-    merged = merge_token_data(gmgn_data, dex_data)
+    merged = merge_token_data({}, gmgn_data, dex_data)
     
     symbol = merged.get('symbol', '?')
     addr = merged.get('address', '')
     mcap = float(merged.get('market_cap', 0) or 0)
     price = float(merged.get('price', 0) or 0)
     
-    # Age
     age_str = str(merged.get('age', '0s'))
     age_sec = 0
     if 'h' in age_str:
@@ -165,7 +212,7 @@ def scan_token(gmgn_data, dex_data):
     h1 = float(merged.get('price_change_percent1h', 0) or 0)
     h24 = float(merged.get('price_change_percent24h', 0) or 0)
     m5 = float(merged.get('price_change_percent5m', 0) or 0)
-    chg5 = m5  # m5 is our chg5
+    chg5 = m5
     chg1_raw = merged.get('price_change_percent1m')
     chg1 = float(chg1_raw) if chg1_raw is not None else None
     ath_mcap = float(merged.get('history_highest_market_cap', 0) or 0) or mcap
@@ -175,58 +222,31 @@ def scan_token(gmgn_data, dex_data):
         vol5m = volume / 12
     bs_ratio = float(merged.get('buy_sell_ratio', 0) or 0)
     launchpad = str(merged.get('launchpad', '') or '').lower()
-    # Mcap check
+    
     if mcap < MIN_MCAP: return None, f"mcap ${mcap:,.0f} < ${MIN_MCAP:,}"
     if mcap > MAX_MCAP: return None, f"mcap ${mcap:,.0f} > ${MAX_MCAP:,}"
-    
-    # Age check
     if age_sec < MIN_AGE_SECONDS: return None, f"age {age_min:.1f}min < {MIN_AGE_SECONDS/60:.0f}min"
     if age_sec > MAX_AGE_SECONDS: return None, f"age {age_min:.0f}min > {MAX_AGE_SECONDS/60:.0f}min"
-    
-    # Holders
     if holders < MIN_HOLDERS: return None, f"holders {holders} < {MIN_HOLDERS}"
-    
-    # Top10%
     if top10 > TOP10_HOLDER_MAX: return None, f"top10 {top10:.1f}% > {TOP10_HOLDER_MAX}%"
-    
-    # Momentum
     if h1 < H1_MOMENTUM_MIN and h24 < H24_MOMENTUM_MIN: return None, f"no momentum (h1={h1:+.1f}% 24h={h24:+.1f}%)"
-    
-    # Exchange validation
-    # Exchange: accept pump.fun ('pump'), raydium, pumpswap
-    if launchpad not in ALLOWED_EXCHANGES and launchpad != 'pump':
-        return None, f"exchange {launchpad} not allowed"
-    # For pump.fun/pumpswap: pool address ends in 'pump' (checked via token info, skip here)
-    
-    # BS ratio for pump.fun: OK if 0 (BS data often missing)
-    if bs_ratio < BS_RATIO_OLD and not (BS_PUMP_FUN_OK and launchpad == 'pump'):
-        return None, f"bs {bs_ratio:.2f} < {BS_RATIO_OLD}"
-    
-    # Volume
+    if launchpad not in ALLOWED_EXCHANGES and launchpad != 'pump': return None, f"exchange {launchpad} not allowed"
+    if bs_ratio < BS_RATIO_OLD and not (BS_PUMP_FUN_OK and launchpad == 'pump'): return None, f"bs {bs_ratio:.2f} < {BS_RATIO_OLD}"
     if vol5m < MIN_5MIN_VOLUME: return None, f"vol5m ${vol5m:,.0f} < ${MIN_5MIN_VOLUME:,}"
     if volume < MIN_VOLUME: return None, f"volume ${volume:,.0f} < ${MIN_VOLUME:,}"
-    
-    # Vol/Mcap ratio
     if mcap > 0 and vol5m > 0:
         vol_mcap_ratio = (vol5m / mcap) * 100
         if vol_mcap_ratio < VOL_MCAP_RATIO_MIN: return None, f"vol/mcap {vol_mcap_ratio:.1f}x < {VOL_MCAP_RATIO_MIN}x"
     
-    # Dip check
     dip = 0
     if ath_mcap > 0:
         dip = ((ath_mcap - mcap) / ath_mcap) * 100
     if dip < DIP_MIN: return None, f"dip {dip:.1f}% < {DIP_MIN}%"
     if dip > DIP_MAX: return None, f"dip {dip:.1f}% > {DIP_MAX}%"
-    
-    # ATH divergence
     if ath_mcap > 0:
         ath_dist = ((ath_mcap - mcap) / ath_mcap) * 100
         if ath_dist > ATH_DIVERGENCE_MAX: return None, f"ATH dist {ath_dist:.1f}% > {ATH_DIVERGENCE_MAX}%"
-    
-    # Blacklist
     if addr in PERM_BLACKLIST: return None, "blacklisted"
-    
-    # Max positions
     try:
         with open(TRADES_FILE) as f:
             open_count = sum(1 for l in f if json.loads(l).get('action')=='BUY' and json.loads(l).get('status')=='open')
@@ -244,15 +264,13 @@ def scan_token(gmgn_data, dex_data):
 
 # === COOLDOWN ===
 def add_to_cooldown(addr, token_data, result, dex_data=None):
+    if addr in COOLDOWN_WATCH:
+        return False
     now_ts = time.time()
     age_min = result['age_min']
-    if addr in COOLDOWN_WATCH:
-        return False  # Already monitoring this token
-    
     chg5 = result['chg5']
     h1 = result['h1']
     
-    # Determine base cooldown
     if age_min < 15 and chg5 > -5 and h1 > 5:
         base_cd = YOUNG_COOLDOWN
         reason = "young"
@@ -272,7 +290,6 @@ def add_to_cooldown(addr, token_data, result, dex_data=None):
         'token_data': token_data,
         'result': result,
         'dex_data': dex_data,
-        # Tracking
         'lowest_mcap': result['mcap'],
         'lowest_chg5': chg5,
         'last_chg5': chg5,
@@ -282,7 +299,6 @@ def add_to_cooldown(addr, token_data, result, dex_data=None):
         'recheck_count': 0,
         'consecutive_ok': 0,
         '_pump_rule_triggered': result.get('chg1') is not None and result.get('chg1') > PUMP_CHG1_THRESHOLD,
-        '_pump_checked_chg5_at_trigger': None,
         '_last_improvement_check': None,
     }
     print(f"   [{reason.upper()}] {result['token']}: base cooldown {base_cd}s | chg5={chg5:+.1f}% h1={h1:+.1f}%")
@@ -296,11 +312,8 @@ def check_cooldown_watch():
         result = data['result']
         state = data.get('state', STATE_BASE_WAIT)
         
-        # === ALWAYS FRESH DATA ===
-        # Use stored token_data from scan as PRIMARY (always has mcap from trending)
-        # Then try to supplement with fresh token info + DexScreener
+        # === FRESH DATA - use stored as primary, supplement with fresh ===
         stored_data = data.get('token_data', {})
-        
         fresh_gmgn = get_gmgn_token_info(addr)
         fresh_dex = get_dexscreener_data(addr)
         
@@ -309,25 +322,8 @@ def check_cooldown_watch():
             to_remove.append(addr)
             continue
         
-        # Start with stored data as base (has mcap from trending)
-        merged = (stored_data or {}).copy()
+        merged = merge_token_data(stored_data, fresh_gmgn, fresh_dex)
         
-        # Fill in with fresh gmgn data where available (prefer fresh over stored)
-        if fresh_gmgn:
-            for k, v in fresh_gmgn.items():
-                if v and v != 0:
-                    merged[k] = v
-        
-        # Supplement with DexScreener for missing fields
-        if fresh_dex:
-            for k, v in fresh_dex.items():
-                if v and v != 0 and not merged.get(k):
-                    merged[k] = v
-            ds_chg1 = fresh_dex.get('priceChange', {}).get('m1') if fresh_dex.get('priceChange') else None
-            if ds_chg1 is not None and not merged.get('price_change_percent1m'):
-                merged['price_change_percent1m'] = float(ds_chg1)
-        
-        # Re-evaluate filters with fresh data
         fresh_result, fresh_reason = scan_token(merged, fresh_dex)
         if fresh_result is None:
             print(f"   [FAIL] {result['token']}: filter fail ({fresh_reason})")
@@ -345,13 +341,11 @@ def check_cooldown_watch():
         curr_price = fresh_result.get('price', 0)
         curr_h1 = fresh_result.get('h1', 0)
         
-        # Track lowest mcap and chg5
         if curr_mcap > 0 and curr_mcap < data.get('lowest_mcap', float('inf')):
             data['lowest_mcap'] = curr_mcap
         if chg5 < data.get('lowest_chg5', 0):
             data['lowest_chg5'] = chg5
         
-        # === H1 INSTABILITY CHECK ===
         prev_h1 = data.get('last_h1', 0)
         if prev_h1 > 0 and curr_h1 > 0:
             ratio = max(prev_h1, curr_h1) / min(prev_h1, curr_h1)
@@ -362,7 +356,6 @@ def check_cooldown_watch():
                 continue
         data['last_h1'] = curr_h1
         
-        # === DETERIORATION CHECK ===
         prev_chg5 = data.get('last_chg5', chg5)
         if prev_chg5 > 0 and chg5 < prev_chg5 - CHG5_REJECT_DROP:
             print(f"   [WATCH] {result['token']}: chg5 dropped {prev_chg5:+.1f}% -> {chg5:+.1f}% (>5% drop) | continue")
@@ -381,28 +374,23 @@ def check_cooldown_watch():
             remaining = data['cooldown_end'] - now
             if remaining > 0:
                 continue
-            
-            # Check chg5 still > 20%
             if chg1 is not None and chg1 > PUMP_CHG1_THRESHOLD:
-                data['_pump_checked_chg5_at_trigger'] = chg5
                 data['state'] = STATE_PUMP_WAIT_2
                 data['cooldown_end'] = now + PUMP_WAIT_2
                 data['recheck_count'] = 0
                 print(f"   [PUMP] {result['token']}: chg1={chg1:+.1f}% still >+5% | wait {PUMP_WAIT_2}s")
             else:
-                # Pump failed — fall through to normal path
                 data['_pump_rule_triggered'] = False
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + CHG1_RECOVERY_WAIT
                 data['recheck_count'] = 0
-                print(f"   [PUMP_FAIL] {result['token']}: chg1={chg1:+.1f}% < +5% | recovery path")
+                print(f"   [PUMP_FAIL] {result['token']}: chg1={chg1}% < +5% | recovery path")
             continue
         
         elif state == STATE_PUMP_WAIT_2:
             remaining = data['cooldown_end'] - now
             if remaining > 0:
                 continue
-            # Verify chg5 still > 20%
             if chg1 is not None and chg1 > PUMP_CHG1_THRESHOLD:
                 data['state'] = STATE_PUMP_VERIFY
                 data['cooldown_end'] = now + PUMP_VERIFY_DELAY
@@ -418,7 +406,6 @@ def check_cooldown_watch():
             remaining = data['cooldown_end'] - now
             if remaining > 0:
                 continue
-            # BUY!
             print(f"   [BUY_PUMP] {result['token']}: pump confirmed | BUY!")
             buy_token(addr, fresh_result)
             to_remove.append(addr)
@@ -429,8 +416,6 @@ def check_cooldown_watch():
             remaining = data['cooldown_end'] - now
             if remaining > 0:
                 continue
-            
-            # Base cooldown done — check conditions
             if chg5 < -5:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + CHG1_RECOVERY_WAIT
@@ -447,7 +432,6 @@ def check_cooldown_watch():
             remaining = data['cooldown_end'] - now
             if remaining > 0:
                 continue
-            
             data['state'] = STATE_RECOVERY_RECHECK
             data['cooldown_end'] = now + CHG1_RECHECK_DELAY
             data['recheck_count'] = (data.get('recheck_count', 0)) + 1
@@ -458,23 +442,16 @@ def check_cooldown_watch():
             remaining = data['cooldown_end'] - now
             if remaining > 0:
                 continue
-            
             data['recheck_count'] += 1
-            
-            # Max rechecks
             if data['recheck_count'] > MAX_RECHECKS:
                 print(f"   [MAX_RECHECKS] {result['token']}: max {MAX_RECHECKS} | switch to m5 backup")
                 data['state'] = STATE_M5_BACKUP
                 data['cooldown_end'] = now + CHG1_RECHECK_DELAY
                 data['_backup_lowest_mcap'] = data.get('lowest_mcap', curr_mcap)
                 continue
-            
-            # Check m5 recovery: mcap +3% from lowest
             lowest_mcap = data.get('lowest_mcap', curr_mcap)
             mcap_recovery_pct = ((curr_mcap - lowest_mcap) / lowest_mcap) * 100 if lowest_mcap > 0 else 0
-            
             if mcap_recovery_pct >= CHG5_RECOVERY_THRESHOLD:
-                # Enough recovery — final verify
                 data['state'] = STATE_VERIFY
                 data['cooldown_end'] = now + CHG1_VERIFY_DELAY
                 data['consecutive_ok'] = 0
@@ -489,11 +466,8 @@ def check_cooldown_watch():
             remaining = data['cooldown_end'] - now
             if remaining > 0:
                 continue
-            
-            # Verify chg5 improved +3% from last check
             last = data.get('_last_improvement_check', data.get('last_chg5', chg5))
             improvement = chg5 - last if last else 0
-            
             if improvement >= MIN_CHG5_FOR_BUY or chg5 > 20:
                 data['state'] = STATE_VERIFY
                 data['cooldown_end'] = now + CHG1_VERIFY_DELAY
@@ -509,16 +483,12 @@ def check_cooldown_watch():
             remaining = data['cooldown_end'] - now
             if remaining > 0:
                 continue
-            
-            # 2 consecutive rechecks with +3% improvement
             last = data.get('_last_improvement_check', data.get('last_chg5', chg5))
             improvement = chg5 - last if last else 0
-            
-            if improvement >= MIN_CHG5_FOR_BUY:
+            if improvement >= MIN_CHG5_FOR_BUY or chg5 > 20:
                 data['consecutive_ok'] += 1
                 data['_last_improvement_check'] = chg5
                 print(f"   [VERIFY #{data['consecutive_ok']}] {result['token']}: chg5={chg5:+.1f}% (+{improvement:+.1f}%) | {data['consecutive_ok']}/{CONSECUTIVE_RECHECKS_REQUIRED}")
-                
                 if data['consecutive_ok'] >= CONSECUTIVE_RECHECKS_REQUIRED:
                     print(f"   [BUY] {result['token']}: verified | BUY!")
                     buy_token(addr, fresh_result)
@@ -536,12 +506,10 @@ def check_cooldown_watch():
             remaining = data['cooldown_end'] - now
             if remaining > 0:
                 continue
-            
             lowest = data.get('_backup_lowest_mcap', curr_mcap)
             mcap_recovery_pct = ((curr_mcap - lowest) / lowest) * 100 if lowest > 0 else 0
             last_chg5 = data.get('last_chg5', chg5)
             chg5_change = chg5 - last_chg5 if last_chg5 else 0
-            
             if mcap_recovery_pct >= CHG5_RECOVERY_THRESHOLD or chg5_change >= MIN_CHG5_FOR_BUY:
                 print(f"   [M5_BACKUP_OK] {result['token']}: mcap +{mcap_recovery_pct:.1f}% | chg5={chg5:+.1f}% | BUY!")
                 buy_token(addr, fresh_result)
@@ -560,7 +528,6 @@ def check_cooldown_watch():
 def buy_token(addr, result):
     global PERM_BLACKLIST
     now = datetime.now(timezone.utc).isoformat()
-    
     trade = {
         'action': 'BUY',
         'token_address': addr,
@@ -575,7 +542,7 @@ def buy_token(addr, result):
         'tp1_sold': False, 'tp2_sold': False, 'tp3_sold': False, 'tp4_sold': False, 'tp5_sold': False,
         'partial_exit': False, 'fully_exited': False,
         'peak_price': result.get('price', 0),
-        'entry_reason': 'GMGN_V70',
+        'entry_reason': 'GMGN_V71',
         'h1': result.get('h1', 0),
         'm5': result.get('m5', 0),
         'chg5_at_buy': result.get('chg5', 0),
@@ -585,7 +552,6 @@ def buy_token(addr, result):
         'top10': result.get('top10', 0),
         'dex': result.get('launchpad', 'unknown'),
     }
-    
     try:
         with open(TRADES_FILE, 'a') as f:
             f.write(json.dumps(trade) + '\n')
@@ -594,14 +560,7 @@ def buy_token(addr, result):
             json.dump(list(PERM_BLACKLIST), f)
         try:
             from alert_sender import send_telegram
-            msg = f"""BUY EXECUTED | {datetime.now(timezone.utc).strftime('%H:%M')}
-━━━━━━━━━━━━━━━
-{result.get('token')}
-Entry MC: ${int(result.get('mcap', 0)):,}
-Amount: {POSITION_SIZE} SOL
-
-https://dexscreener.com/solana/{addr}
-https://pump.fun/{addr}"""
+            msg = f"BUY EXECUTED | {datetime.now(timezone.utc).strftime('%H:%M')}\n━━━━━━━━━━━━━━━\n{result.get('token')}\nEntry MC: ${int(result.get('mcap', 0)):,}\nAmount: {POSITION_SIZE} SOL\n\nhttps://dexscreener.com/solana/{addr}\nhttps://pump.fun/{addr}"
             send_telegram(msg)
         except Exception as e:
             print(f"Alert error: {e}")
@@ -614,12 +573,10 @@ https://pump.fun/{addr}"""
 def scan_cycle():
     tokens = []
     tokens.extend(get_gmgn_trending(50))
-    tokens.extend(get_gmgn_new_pairs(30))
-    tokens.extend(get_gmgn_pumpfun_lowcap(30))
-    
+    tokens.extend(get_gmgn_new_pairs(20))
+    tokens.extend(get_gmgn_pumpfun_lowcap(20))
     if not tokens:
         return False
-    
     seen = set()
     unique = []
     for t in tokens:
@@ -627,18 +584,14 @@ def scan_cycle():
         if addr and addr not in seen:
             seen.add(addr)
             unique.append(t)
-    
     for token_data in unique:
         addr = token_data.get('address', '')
         if not addr: continue
         if addr in PERM_BLACKLIST or addr in COOLDOWN_WATCH: continue
-        
         dex_data = get_dexscreener_data(addr)
         result, reason = scan_token(token_data, dex_data)
         if result is None: continue
-        
         add_to_cooldown(addr, token_data, result, dex_data)
-    
     return True
 
 def cleanup_rejected():
@@ -647,32 +600,13 @@ def cleanup_rejected():
         if now - REJECTED_TEMP[addr]['ts'] > REJECTED_REVISIT_DELAY:
             del REJECTED_TEMP[addr]
 
-# === ALERT ===
-def alert(msg):
-    try:
-        from alert_sender import send_telegram
-        send_telegram(msg)
-    except: pass
-
-def send_telegram(text):
-    try:
-        import urllib.request, urllib.parse
-        BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
-        CHAT_ID = "6402511249"
-        url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-        data = {"chat_id": CHAT_ID, "text": text, "parse_mode": "HTML"}
-        req = urllib.request.Request(url, data=urllib.parse.urlencode(data).encode())
-        urllib.request.urlopen(req, timeout=10)
-    except: pass
-
 # === MAIN ===
 def main():
-    print("GMGN Scanner v7 Started")
+    print("GMGN Scanner v7.1 Started")
+    print("  Throttle management: exponential backoff + per-endpoint tracking")
     print("  Mcap $6K-$60K | Dip 2-45% | chg5 > +2% to buy | 2 consecutive verify | Pump rule chg1>5%")
-    print("  Stop: -25% | TP: +50%/+100%/+200%/+300%/+1000%")
     
     load_blacklist()
-    
     while True:
         try:
             check_cooldown_watch()
