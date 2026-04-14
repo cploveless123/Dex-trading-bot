@@ -14274,3 +14274,11 @@ Checking every 5s
 [18:58:38] Monitor alive | 469 checks | 0 open | next in 5s
 [18:59:23] Monitor alive | 469 checks | 0 open | next in 5s
 [18:59:38] Monitor alive | 481 checks | 0 open | next in 5s
+[19:00:23] Monitor alive | 481 checks | 0 open | next in 5s
+[19:00:38] Monitor alive | 493 checks | 0 open | next in 5s
+Position Monitor v6.9 starting...
+Exit Plan: TP1 +50% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -20%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
+[19:02:20] Monitor alive | 13 checks | 0 open | next in 5s

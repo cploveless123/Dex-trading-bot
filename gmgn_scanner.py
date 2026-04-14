@@ -195,7 +195,7 @@ def scan_token(gmgn_data, dex_data, whale_wallets):
     addr = gmgn_data.get('address', '')
     mcap = float(gmgn_data.get('market_cap', 0) or 0)
     price = float(gmgn_data.get('price', 0) or 0)
-    age_sec = int(gmgn_data.get('age', '0s').replace('s','').split('h')[0] if 'h' in str(gmgn_data.get('age','0s')) else int(gmgn_data.get('age', 0) or 0)
+    age_sec = int(gmgn_data.get('age', '0s').replace('s','').split('h')[0] if 'h' in str(gmgn_data.get('age','0s')) else int(gmgn_data.get('age', 0) or 0))
     if age_sec == 0:
         age_sec = int(time.time() - int(gmgn_data.get('creation_timestamp', time.time())))
     age_min = age_sec / 60
@@ -682,18 +682,12 @@ def buy_token(addr, result):
         try:
             from alert_sender import send_telegram_alert
             msg = f"""🟢 BUY | {datetime.now(timezone.utc).strftime('%H:%M UTC')}
-
-            msg = f"""🟢 BUY | {datetime.now(timezone.utc).strftime('%H:%M UTC')}
-
-        try:
-            from alert_sender import send_telegram_alert
-            msg = f"""🟢 BUY | {datetime.now(timezone.utc).strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
-💰 {result.get('token')}
-📍 MC: ${int(result.get('mcap', 0)):,} | Entry: ${int(result.get('entry_price', 0))}
+[BUY] {result.get('token')}
+[MKT] MC: ${int(result.get('mcap', 0)):,} | Entry: ${int(result.get('entry_price', 0))}
 📊 h1: {result.get('h1', 0):+.1f}% | m5: {result.get('m5', 0):+.1f}% | chg1: {result.get('chg1', 0):+.1f}%
 👥 Holders: {result.get('holders', 0)} | Top10: {result.get('top10', 0):.0f}%
-📉 Dip: {result.get('dip', 0):.1f}%
+[DIP] Dip: {result.get('dip', 0):.1f}%
 
 🔗 https://dexscreener.com/solana/{addr}
 🥧 https://pump.fun/{addr}"""
