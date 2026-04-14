@@ -70,3 +70,77 @@ Checking every 5s
 [07:57:40] Monitor alive | 781 checks | 0 open | next in 5s
 [07:58:40] Monitor alive | 793 checks | 0 open | next in 5s
 [07:59:40] Monitor alive | 805 checks | 0 open | next in 5s
+[08:00:40] Monitor alive | 817 checks | 0 open | next in 5s
+[08:01:40] Monitor alive | 829 checks | 0 open | next in 5s
+[08:02:40] Monitor alive | 841 checks | 0 open | next in 5s
+[08:03:40] Monitor alive | 853 checks | 0 open | next in 5s
+[08:04:40] Monitor alive | 865 checks | 0 open | next in 5s
+[08:05:40] Monitor alive | 877 checks | 0 open | next in 5s
+[08:06:40] Monitor alive | 889 checks | 0 open | next in 5s
+[08:07:40] Monitor alive | 901 checks | 0 open | next in 5s
+  alon: mcap=$7,877 | gain=-5.3% | peak=$8,315 | dd=+0%
+  alon: mcap=$7,877 | gain=-5.3% | peak=$8,315 | dd=+0%
+  alon: mcap=$7,877 | gain=-5.3% | peak=$8,315 | dd=+0%
+[08:08:41] Monitor alive | 913 checks | 1 open | next in 5s
+  alon: mcap=$7,156 | gain=-13.9% | peak=$8,315 | dd=+0%
+  FATCAT: mcap=$16,316 | gain=-15.3% | peak=$19,260 | dd=+0%
+  alon: mcap=$7,156 | gain=-13.9% | peak=$8,315 | dd=+0%
+  FATCAT: mcap=$16,316 | gain=-15.3% | peak=$19,260 | dd=+0%
+  alon: mcap=$7,156 | gain=-13.9% | peak=$8,315 | dd=+0%
+  FATCAT: mcap=$16,316 | gain=-15.3% | peak=$19,260 | dd=+0%
+  alon: mcap=$7,156 | gain=-13.9% | peak=$8,315 | dd=+0%
+  FATCAT: mcap=$16,316 | gain=-15.3% | peak=$19,260 | dd=+0%
+  alon: mcap=$7,156 | gain=-13.9% | peak=$8,315 | dd=+0%
+  FATCAT: mcap=$16,316 | gain=-15.3% | peak=$19,260 | dd=+0%
+  alon: mcap=$7,156 | gain=-13.9% | peak=$8,315 | dd=+0%
+  FATCAT: mcap=$20,462 | gain=+6.2% | peak=$20,462 | dd=+0%
+  alon: mcap=$9,273 | gain=+11.5% | peak=$9,273 | dd=+0%
+  FATCAT: mcap=$20,462 | gain=+6.2% | peak=$20,462 | dd=+0%
+  alon: mcap=$9,273 | gain=+11.5% | peak=$9,273 | dd=+0%
+  FATCAT: mcap=$20,462 | gain=+6.2% | peak=$20,462 | dd=+0%
+  alon: mcap=$9,273 | gain=+11.5% | peak=$9,273 | dd=+0%
+  FATCAT: mcap=$20,462 | gain=+6.2% | peak=$20,462 | dd=+0%
+  alon: mcap=$9,273 | gain=+11.5% | peak=$9,273 | dd=+0%
+  FATCAT: mcap=$20,462 | gain=+6.2% | peak=$20,462 | dd=+0%
+  alon: mcap=$9,273 | gain=+11.5% | peak=$9,273 | dd=+0%
+  FATCAT: mcap=$20,462 | gain=+6.2% | peak=$20,462 | dd=+0%
+  alon: mcap=$9,273 | gain=+11.5% | peak=$9,273 | dd=+0%
+  FATCAT: mcap=$21,042 | gain=+9.3% | peak=$21,042 | dd=+0%
+[08:09:42] Monitor alive | 925 checks | 2 open | next in 5s
+  alon: mcap=$8,803 | gain=+5.9% | peak=$9,273 | dd=+0%
+  FATCAT: mcap=$21,042 | gain=+9.3% | peak=$21,042 | dd=+0%
+  alon: error fetching mcap
+  FATCAT: error fetching mcap
+  alon: error fetching mcap
+  FATCAT: error fetching mcap
+  alon: error fetching mcap
+  FATCAT: error fetching mcap
+  alon: error fetching mcap
+  FATCAT: error fetching mcap
+  alon: error fetching mcap
+  FATCAT: error fetching mcap
+  alon: error fetching mcap
+  FATCAT: error fetching mcap
+  alon: error fetching mcap
+  FATCAT: error fetching mcap
+  alon: error fetching mcap
+  FATCAT: error fetching mcap
+  alon: error fetching mcap
+  FATCAT: error fetching mcap
+  alon: error fetching mcap
+  FATCAT: error fetching mcap
+  alon: error fetching mcap
+  FATCAT: error fetching mcap
+[08:10:44] Monitor alive | 937 checks | 2 open | next in 5s
+  alon: error fetching mcap
+  FATCAT: error fetching mcap
+  alon: mcap=$11,495 | gain=+38.2% | peak=$11,495 | dd=+0%
+  FATCAT: mcap=$20,959 | gain=+8.8% | peak=$21,042 | dd=+0%
+  alon: mcap=$11,495 | gain=+38.2% | peak=$11,495 | dd=+0%
+  FATCAT: mcap=$20,959 | gain=+8.8% | peak=$21,042 | dd=+0%
+  alon: mcap=$11,495 | gain=+38.2% | peak=$11,495 | dd=+0%
+  FATCAT: mcap=$20,959 | gain=+8.8% | peak=$21,042 | dd=+0%
+  alon: mcap=$11,495 | gain=+38.2% | peak=$11,495 | dd=+0%
+  FATCAT: mcap=$19,641 | gain=+2.0% | peak=$21,042 | dd=+0%
+  alon: mcap=$11,495 | gain=+38.2% | peak=$11,495 | dd=+0%
+  FATCAT: mcap=$19,641 | gain=+2.0% | peak=$21,042 | dd=+0%

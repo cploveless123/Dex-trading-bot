@@ -341,7 +341,11 @@ def scan_token(token_data, dex_data, whales):
         return None, f"liq ${liq:,.0f} < ${LIQUIDITY_MIN:,} (mcap ${mcap:,.0f} > $60K)"
     
     # === EXCHANGE VALIDATION ===
-    valid, dex_reason = check_exchange_valid(dex_id, addr)
+    # Fallback: if GMGN dex_id is empty, use DexScreener's dexId
+    exchange_to_check = dex_id
+    if not exchange_to_check and dex_data:
+        exchange_to_check = dex_data.get('dexId', '')
+    valid, dex_reason = check_exchange_valid(exchange_to_check, addr)
     if not valid:
         return None, f"exchange {dex_reason} not allowed"
     
