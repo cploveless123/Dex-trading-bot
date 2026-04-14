@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Position Monitor v6.7 - Auto-execute TP/stop for open positions
+Position Monitor v6.7b - Auto-execute TP/stop for open positions
 Live peak tracking via persistent cache file
 
 EXIT STRATEGY (v6.6 Wilson):
