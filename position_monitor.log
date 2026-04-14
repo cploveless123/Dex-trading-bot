@@ -9606,3 +9606,35 @@ Checking every 5s
 [15:10:59] Monitor alive | 421 checks | 1 open | next in 5s
   dream: mcap=$15,438 | gain=+20.7% | peak=$15,438 | dd=+0%
   dream: mcap=$15,438 | gain=+20.7% | peak=$15,438 | dd=+0%
+  dream: mcap=$15,438 | gain=+20.7% | peak=$15,438 | dd=+0%
+  dream: mcap=$15,438 | gain=+20.7% | peak=$15,438 | dd=+0%
+  dream: mcap=$15,438 | gain=+20.7% | peak=$15,438 | dd=+0%
+  dream: mcap=$15,673 | gain=+22.5% | peak=$15,673 | dd=+0%
+  dream: mcap=$15,673 | gain=+22.5% | peak=$15,673 | dd=+0%
+  dream: mcap=$15,673 | gain=+22.5% | peak=$15,673 | dd=+0%
+  dream: mcap=$15,673 | gain=+22.5% | peak=$15,673 | dd=+0%
+  dream: mcap=$15,673 | gain=+22.5% | peak=$15,673 | dd=+0%
+  dream: mcap=$15,673 | gain=+22.5% | peak=$15,673 | dd=+0%
+  dream: mcap=$15,530 | gain=+21.4% | peak=$15,673 | dd=+0%
+[15:12:01] Monitor alive | 433 checks | 1 open | next in 5s
+  dream: mcap=$15,530 | gain=+21.4% | peak=$15,673 | dd=+0%
+  dream: mcap=$15,530 | gain=+21.4% | peak=$15,673 | dd=+0%
+  dream: mcap=$15,530 | gain=+21.4% | peak=$15,673 | dd=+0%
+  dream: mcap=$15,530 | gain=+21.4% | peak=$15,673 | dd=+0%
+  dream: mcap=$15,530 | gain=+21.4% | peak=$15,673 | dd=+0%
+[TP1_HOLD] Alert sent
+🚀 dream TP1 HIT - HOLDING @ $19,627 (+53.4%)
+  dream: mcap=$19,627 | gain=+53.4% | peak=$19,627 | dd=+0%
+  dream: mcap=$19,627 | gain=+53.4% | peak=$19,627 | dd=+0%
+  dream: mcap=$19,627 | gain=+53.4% | peak=$19,627 | dd=+0%
+  dream: mcap=$19,627 | gain=+53.4% | peak=$19,627 | dd=+0%
+  dream: mcap=$18,571 | gain=+45.2% | peak=$19,627 | dd=+5%
+  dream: mcap=$18,571 | gain=+45.2% | peak=$19,627 | dd=+5%
+[15:13:02] Monitor alive | 445 checks | 1 open | next in 5s
+  dream: mcap=$18,571 | gain=+45.2% | peak=$19,627 | dd=+5%
+  dream: mcap=$18,571 | gain=+45.2% | peak=$19,627 | dd=+5%
+  dream: mcap=$18,571 | gain=+45.2% | peak=$19,627 | dd=+5%
+  dream: mcap=$18,571 | gain=+45.2% | peak=$19,627 | dd=+5%
+  dream: mcap=$17,464 | gain=+36.5% | peak=$19,627 | dd=+11%
+  dream: mcap=$17,464 | gain=+36.5% | peak=$19,627 | dd=+11%
+  dream: mcap=$17,464 | gain=+36.5% | peak=$19,627 | dd=+11%
