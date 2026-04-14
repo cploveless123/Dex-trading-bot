@@ -7283,3 +7283,40 @@ Checking every 5s
 [12:42:19] Monitor alive | 13 checks | 2 open | next in 5s
   PUMPMONEY: mcap=$9,516 | gain=+18.1% | peak=$12,735 | dd=+25%
   Roshi: mcap=$7,328 | gain=-4.8% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,606 | gain=+19.2% | peak=$12,735 | dd=+25%
+  Roshi: mcap=$7,328 | gain=-4.8% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,606 | gain=+19.2% | peak=$12,735 | dd=+25%
+  Roshi: mcap=$7,328 | gain=-4.8% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,606 | gain=+19.2% | peak=$12,735 | dd=+25%
+  Roshi: mcap=$7,344 | gain=-4.6% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,606 | gain=+19.2% | peak=$12,735 | dd=+25%
+  Roshi: mcap=$7,344 | gain=-4.6% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,606 | gain=+19.2% | peak=$12,735 | dd=+25%
+  Roshi: mcap=$7,344 | gain=-4.6% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,436 | gain=+17.1% | peak=$12,735 | dd=+26%
+  Roshi: mcap=$7,344 | gain=-4.6% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,436 | gain=+17.1% | peak=$12,735 | dd=+26%
+  Roshi: mcap=$7,344 | gain=-4.6% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,436 | gain=+17.1% | peak=$12,735 | dd=+26%
+  Roshi: mcap=$7,344 | gain=-4.6% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,436 | gain=+17.1% | peak=$12,735 | dd=+26%
+  Roshi: mcap=$6,964 | gain=-9.5% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,436 | gain=+17.1% | peak=$12,735 | dd=+26%
+  Roshi: mcap=$6,964 | gain=-9.5% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,436 | gain=+17.1% | peak=$12,735 | dd=+26%
+  Roshi: mcap=$6,964 | gain=-9.5% | peak=$7,707 | dd=+0%
+[12:43:21] Monitor alive | 25 checks | 2 open | next in 5s
+  PUMPMONEY: mcap=$9,014 | gain=+11.9% | peak=$12,735 | dd=+29%
+  Roshi: mcap=$6,964 | gain=-9.5% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,014 | gain=+11.9% | peak=$12,735 | dd=+29%
+  Roshi: mcap=$6,964 | gain=-9.5% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,014 | gain=+11.9% | peak=$12,735 | dd=+29%
+  Roshi: mcap=$6,964 | gain=-9.5% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,014 | gain=+11.9% | peak=$12,735 | dd=+29%
+  Roshi: mcap=$6,859 | gain=-10.9% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,014 | gain=+11.9% | peak=$12,735 | dd=+29%
+  Roshi: mcap=$6,859 | gain=-10.9% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$9,014 | gain=+11.9% | peak=$12,735 | dd=+29%
+  Roshi: mcap=$6,859 | gain=-10.9% | peak=$7,707 | dd=+0%
+  PUMPMONEY: mcap=$8,895 | gain=+10.4% | peak=$12,735 | dd=+30%
+  Roshi: mcap=$6,859 | gain=-10.9% | peak=$7,707 | dd=+0%
