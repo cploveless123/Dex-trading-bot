@@ -41,9 +41,15 @@ def get_balance():
         with open(TRADES_FILE) as f:
             lines = f.readlines()
         rt = [json.loads(l) for l in lines if json.loads(l).get('opened_at','') > RESET]
-        has_pnl = [t for t in rt if t.get('pnl_sol') is not None]
-        total_pnl = sum(t.get('pnl_sol',0) for t in has_pnl)
-        return round(BAL + total_pnl, 4)
+        
+        # Closed positions: count PnL
+        closed = [t for t in rt if t.get('status') == 'closed']
+        closed_pnl = sum(t.get('pnl_sol', 0) for t in closed)
+        
+        # Open positions: subtract cost basis
+        open_cost = sum(t.get('entry_sol', 0) for t in rt if t.get('status') == 'open')
+        
+        return round(BAL + closed_pnl - open_cost, 4)
     except:
         return 0.0
 
@@ -545,8 +551,14 @@ def get_balance():
         with open(TRADES_FILE) as f:
             lines = f.readlines()
         rt = [json.loads(l) for l in lines if json.loads(l).get('opened_at','') > RESET]
-        has_pnl = [t for t in rt if t.get('pnl_sol') is not None]
-        total_pnl = sum(t.get('pnl_sol',0) for t in has_pnl)
-        return round(BAL + total_pnl, 4)
+        
+        # Closed positions: count PnL
+        closed = [t for t in rt if t.get('status') == 'closed']
+        closed_pnl = sum(t.get('pnl_sol', 0) for t in closed)
+        
+        # Open positions: subtract cost basis
+        open_cost = sum(t.get('entry_sol', 0) for t in rt if t.get('status') == 'open')
+        
+        return round(BAL + closed_pnl - open_cost, 4)
     except:
         return 0.0

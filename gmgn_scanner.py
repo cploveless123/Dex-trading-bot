@@ -484,20 +484,17 @@ def check_cooldown_watch():
         fresh_data = get_gmgn_token_info(addr)
         fresh_dex = get_dexscreener_data(addr)
         
-        # Build merged data: prev → fresh GMGN → fresh DexScreener (priority)
-        merged_data = (data.get('token_data', {}) or {}).copy()
+        # Build merged data: fresh GMGN (always overrides) → DexScreener fills gaps
+        merged_data = {}
         if fresh_data:
-            for k, v in fresh_data.items():
-                if k not in merged_data or merged_data.get(k) in (None, 0, ''):
-                    merged_data[k] = v
-                elif merged_data.get(k) == 0 and v != 0:
-                    merged_data[k] = v
+            merged_data = fresh_data.copy()
         if fresh_dex:
+            # DexScreener fills only where GMGN gave 0/None
             ds_chg1 = fresh_dex.get('priceChange', {}).get('m1')
             if ds_chg1 is not None:
                 merged_data['price_change_percent1m'] = float(ds_chg1)
             ds_price = fresh_dex.get('priceUsd')
-            if ds_price:
+            if ds_price and merged_data.get('price') in (None, 0, ''):
                 merged_data['price'] = float(ds_price)
             ds_mcap = fresh_dex.get('marketCap')
             if ds_mcap and float(ds_mcap) > 0 and merged_data.get('market_cap', 0) == 0:
@@ -505,6 +502,9 @@ def check_cooldown_watch():
             ds_m5 = fresh_dex.get('volume', {}).get('m5')
             if ds_m5 and float(ds_m5) > 0 and merged_data.get('volume5m', 0) == 0:
                 merged_data['volume5m'] = float(ds_m5)
+            ds_holders = fresh_dex.get('holderCount')
+            if ds_holders and merged_data.get('holder_count', 0) == 0:
+                merged_data['holder_count'] = int(ds_holders)
         
         if not fresh_data and not merged_data:
             print(f"   ❌ {result['token']}: no data (GMGN+DexScreener failed) - removing")
