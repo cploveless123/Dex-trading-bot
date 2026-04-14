@@ -8932,3 +8932,6 @@ Checking every 5s
   JOBLESS: mcap=$18,231 | gain=-1.5% | peak=$18,796 | dd=+0%
   JOBLESS: mcap=$17,385 | gain=-6.1% | peak=$18,796 | dd=+0%
 [14:11:28] Monitor alive | 1057 checks | 0 open | next in 5s
+  JOBLESS: mcap=$17,317 | gain=-2.0% | peak=$17,664 | dd=+0%
+  JOBLESS: mcap=$17,317 | gain=-2.0% | peak=$17,664 | dd=+0%
+  JOBLESS: mcap=$17,921 | gain=+1.5% | peak=$17,921 | dd=+0%
