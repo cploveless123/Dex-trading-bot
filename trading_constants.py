@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Trading Constants - Wilson v6.8 Strategy
+Trading Constants - Wilson v6.9 Strategy
 Goal: Turn 1.0 SOL → 100 SOL via compound TP5 winners on pump.fun
 """
 
@@ -9,8 +9,8 @@ POSITION_SIZE = 0.10      # Per trade
 KOL_BUY_POSITION_SIZE = 0.10
 MAX_OPEN_POSITIONS = 9     # Max concurrent positions
 
-# === ENTRY FILTERS (v6.8) ===
-MIN_MCAP = 8500            # $3.5K floor
+# === ENTRY FILTERS (v6.9) ===
+MIN_MCAP = 3000            # $3K floor
 MAX_MCAP = 60000           # $60K ceiling
 MIN_AGE_SECONDS = 120      # 2 minutes minimum
 MAX_AGE_SECONDS = 5400     # 90 minutes maximum
@@ -18,66 +18,67 @@ MIN_5MIN_VOLUME = 1000     # 5min volume > $1K
 MIN_HOLDERS = 15           # Holders ≥ 15
 TOP10_HOLDER_MAX = 50      # Top10% < 50%
 
-# BS Ratio: >0.05 for pairs < 15 min old, >0.8 for all others (v6.8)
-BS_RATIO_NEW = 0.05       # BS ratio for pairs < 15 min old
-BS_RATIO_OLD = 0.8        # BS ratio for pairs ≥ 15 min old
+# BS Ratio: >0.05 for pairs < 15 min old, >0.8 for all others (v6.9)
+BS_RATIO_NEW = 0.05
+BS_RATIO_OLD = 0.8
 BS_PUMP_FUN_OK = True      # pump.fun BS=0 is OK if no data
 
-# === MOMENTUM (v6.8) ===
+# === MOMENTUM (v6.9) ===
 H1_MOMENTUM_MIN = 5        # h1 must be > +5%
 H24_MOMENTUM_MIN = 5       # OR 24h must be > +5%
 
-# === CHG1 RULES (v6.8) ===
+# === CHG1 RULES (v6.9) ===
 MIN_CHG1_FOR_BUY = 2.0     # chg1 must be > +2% to buy
 CHG1_NONE_M5_REJECT = 5    # chg1=None AND m5 > +5% → REJECT immediately
-CHG1_IMPROVEMENT_MIN = 3.0 # chg1 must be > +3% from last check to trigger verify
+CHG1_IMPROVEMENT_MIN = 3.0 # chg1 must be > +3% from last check to exit recovery
 CHG1_MIN_VALUE = -5.0      # chg1 must be > -5% (no falling knife)
 
-# === DIP/PULLBACK (v6.8) ===
+# === DIP/PULLBACK (v6.9) ===
 DIP_MIN = 0                # 0% minimum dip
 DIP_MAX = 50               # 50% max dip from local peak
 ATH_DIVERGENCE_MAX = 55    # 55% max below ATH
 
-# === COOLDOWN RULES (v6.8) ===
-# Unified: m5 > -5% → 45s cooldown for ALL tokens (YOUNG and OLD)
+# === COOLDOWN RULES (v6.9) ===
+# Unified: m5 > -5% → 45s cooldown for ALL tokens
 PUMP_5M_THRESHOLD = -5     # m5 > -5% triggers cooldown
 BASE_COOLDOWN = 45          # 45s base cooldown
 
 # After cooldown:
-# - chg1 < -5%: continue watching, need chg1 to reach +3% improvement to enter verify
-# - chg1 >= -5%: no deterioration check, enter verify if improving +3%
+# chg1 < -5%: wait 15s extra, keep checking until chg1 improves +3% from last check
+# chg1 >= -5%: wait 30s, verify chg1 +3% from last check = BUY
 
-CHG1_RECHECK_DELAY = 15     # 15s between rechecks
-CHG1_VERIFY_DELAY = 15      # 15s verification after trigger
-
-# Deterioration: chg1 drops >3% from last check in verify → reject
-CHG1_DROP_REJECT = 3.0
+CHG1_RECHECK_DELAY = 15    # 15s between rechecks
+CHG1_VERIFY_DELAY = 15     # 15s verification after improvement
+CHG1_RECOVERY_WAIT = 15   # extra 15s wait when chg1 < -5%
 
 # Consecutive rechecks in verify before buy
-VERIFY_CONSECUTIVE_OK = 2  # 2 consecutive rechecks with +3% improvement = BUY
+VERIFY_CONSECUTIVE_OK = 2  # 2 consecutive with +3% improvement = BUY
 
-# Max rechecks before temp reject
+# Deterioration: chg5 drops >5% from prev check = reject
+CHG5_DROP_REJECT = 5.0
+
+# Circle-back
 MAX_RECHECKS = 15          # 15 × 15s = ~3.75 min max
-REJECTED_REVISIT_DELAY = 120  # 2 minutes before circling back
+REJECTED_REVISIT_DELAY = 120  # 2 minutes
 
-# === PRICE STABILITY CHECK (v6.8 - BEFORE BUY) ===
+# === PRICE STABILITY CHECK (v6.9) ===
 PRICE_DROP_REJECT = 3      # >3% price drop since last check → reject after 3 consecutive
-PRICE_DROP_WAIT_1 = 30     # first wait 30s
-PRICE_DROP_WAIT_2 = 30     # second wait 30s
-PRICE_DROP_WAIT_3 = 90     # third wait 90s
+PRICE_DROP_WAIT_1 = 30
+PRICE_DROP_WAIT_2 = 30
+PRICE_DROP_WAIT_3 = 90
 MCAP_INCREASE_CONFIRM = 2  # mcap must increase >2% from lowest to confirm
 
-# === INSTABILITY REJECTION (v6.8) ===
+# === INSTABILITY REJECTION (v6.9) ===
 H1_INSTABILITY_MULTIPLIER = 3
 
-# === ANTI-PATTERNS (v6.8) ===
+# === ANTI-PATTERNS (v6.9) ===
 H1_PARABOLIC_REJECT = 999999  # No h1 cap — let winners run
 
-# === LIQUIDITY (v6.8) ===
+# === LIQUIDITY (v6.9) ===
 LIQUIDITY_MCAP_THRESHOLD = 60000  # $60K threshold for liq monitoring
 LIQUIDITY_MIN = 1000
 
-# === EXIT PLAN (v6.8) ===
+# === EXIT PLAN (v6.9) ===
 TP1_PERCENT = 50
 TP1_TRAILING_PCT = 40
 TP1_SELL_PCT = 0           # HOLD at TP1
@@ -99,9 +100,9 @@ TP5_TRAILING_PCT = 30
 TP5_SELL_PCT = 10
 
 TRAILING_STOP_PCT = 40
-STOP_LOSS_PERCENT = -25     # -25% stop loss
+STOP_LOSS_PERCENT = -20     # -20% stop loss
 
-EXIT_PLAN_TEXT = f"""🎯 Exit Plan v6.8:
+EXIT_PLAN_TEXT = f"""🎯 Exit Plan v6.9:
 +{TP1_PERCENT}% → HOLD, trail {TP1_TRAILING_PCT}%
 +{TP2_PERCENT}% → Sell {TP2_SELL_PCT}%, trail {TP2_TRAILING_PCT}%
 +{TP3_PERCENT}% → Sell {TP3_SELL_PCT}%, trail {TP3_TRAILING_PCT}%
@@ -112,12 +113,12 @@ EXIT_PLAN_TEXT = f"""🎯 Exit Plan v6.8:
 # === LOW VOLUME EXIT ===
 LOW_VOLUME_THRESHOLD = 600
 
-# === EXCHANGE VALIDATION (v6.8) ===
+# === EXCHANGE VALIDATION (v6.9) ===
 ALLOWED_EXCHANGES = {'pumpfun', 'pumpswap', 'raydium'}
 REJECTED_EXCHANGES = {'meteora', 'orinoco', 'lifinity', 'saber'}
 
 # === SIMULATION RESET ===
-SIM_RESET_TIMESTAMP = '2026-04-14T18:13:00.000000+00:00'
+SIM_RESET_TIMESTAMP = '2026-04-14T18:20:00.000000+00:00'
 CHRIS_STARTING_BALANCE = 1.0
 
 # === SCAN INTERVALS ===
@@ -130,15 +131,7 @@ MAX_RETRIES = 3
 CIRCUIT_BREAKER_THRESHOLD = 5
 CIRCUIT_BREAKER_WAIT = 300
 
-# === PUMP RULE (v6.8e) ===
-PUMP_CHG1_THRESHOLD = 5.0  # chg1 > +5% = confirmed pump
-PUMP_COOLDOWN_1 = 45        # First wait after pump signal
-PUMP_WAIT_2 = 30            # Second wait to confirm
-PUMP_VERIFY_DELAY = 15       # Final 15s verify
-
-# === COOLDOWN STATES (v6.8) ===
+# === COOLDOWN STATES (v6.9) ===
 STATE_COOLDOWN = 'COOLDOWN'
-STATE_PUMP_WAIT = 'PUMP_WAIT'   # After 45s, waiting for 2nd check
-STATE_PUMP_VERIFY = 'PUMP_VERIFY' # Final 15s verify
-STATE_WAITING = 'WAITING'
+STATE_RECOVERY = 'RECOVERY'  # chg1 < -5%, waiting to recover
 STATE_VERIFICATION = 'VERIFICATION'

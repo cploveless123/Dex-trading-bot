@@ -14185,3 +14185,8 @@ Checking every 5s
   Young Nigga: mcap=$26,224 | gain=+195.9% | peak=$29,146 | dd=-65%
   母夜叉: mcap=$15,397 | gain=+46.3% | peak=$18,455 | dd=+17%
   auntie: mcap=$2,383 | gain=-11.4% | peak=$2,909 | dd=+0%
+Position Monitor v6.9 starting...
+Exit Plan: TP1 +50% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -20%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
