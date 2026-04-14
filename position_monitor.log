@@ -6992,3 +6992,21 @@ Checking every 5s
   PUMPMONEY: error fetching mcap
   PUMPMONEY: error fetching mcap
   PUMPMONEY: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  PUMPMONEY: error fetching mcap
+  PUMPMONEY: mcap=$12,256 | gain=+52.1% | peak=$12,735 | dd=+4%
+  PUMPMONEY: mcap=$11,494 | gain=+42.6% | peak=$12,735 | dd=+10%
+  PUMPMONEY: mcap=$11,494 | gain=+42.6% | peak=$12,735 | dd=+10%
+  PUMPMONEY: mcap=$11,494 | gain=+42.6% | peak=$12,735 | dd=+10%
+[12:30:32] Monitor alive | 3961 checks | 1 open | next in 5s
+  PUMPMONEY: mcap=$11,494 | gain=+42.6% | peak=$12,735 | dd=+10%
+  PUMPMONEY: mcap=$11,494 | gain=+42.6% | peak=$12,735 | dd=+10%
+  PUMPMONEY: mcap=$11,494 | gain=+42.6% | peak=$12,735 | dd=+10%
+  PUMPMONEY: mcap=$11,711 | gain=+45.3% | peak=$12,735 | dd=+8%
+  PUMPMONEY: mcap=$11,711 | gain=+45.3% | peak=$12,735 | dd=+8%
+  PUMPMONEY: mcap=$11,711 | gain=+45.3% | peak=$12,735 | dd=+8%
+  PUMPMONEY: mcap=$11,711 | gain=+45.3% | peak=$12,735 | dd=+8%
+  PUMPMONEY: mcap=$11,711 | gain=+45.3% | peak=$12,735 | dd=+8%
+  PUMPMONEY: mcap=$11,711 | gain=+45.3% | peak=$12,735 | dd=+8%
+  PUMPMONEY: mcap=$11,765 | gain=+46.0% | peak=$12,735 | dd=+8%
