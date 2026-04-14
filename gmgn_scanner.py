@@ -654,7 +654,9 @@ def scan_cycle():
         cooldown_secs = determine_cooldown(result)
         if cooldown_secs > 0:
             if add_to_cooldown(addr, token_data, result):
-                continue
+                continue  # Added to cooldown, skip this one
+            # cooldown_secs > 0 but wasn't added (already in cooldown) → skip silently
+            continue
         else:
             # Buy immediately
             if buy_token(addr, result):
@@ -662,7 +664,8 @@ def scan_cycle():
                 bought += 1
                 if bought >= 1:
                     break  # One buy per cycle
-        break  # Only process top token per cycle
+            # No buy → continue to next token
+            continue
     
     return bought
 
