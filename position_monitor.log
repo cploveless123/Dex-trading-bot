@@ -11811,3 +11811,171 @@ Checking every 5s
   something: mcap=$9,299 | gain=+2.7% | peak=$9,440 | dd=+0%
   Dogrates: mcap=$13,156 | gain=+12.5% | peak=$13,814 | dd=+0%
 [16:50:16] Monitor alive | 61 checks | 2 open | next in 5s
+  something: mcap=$9,299 | gain=+2.7% | peak=$9,440 | dd=+0%
+  Dogrates: mcap=$13,156 | gain=+12.5% | peak=$13,814 | dd=+0%
+  something: mcap=$9,544 | gain=+5.5% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$15,356 | gain=+31.3% | peak=$15,356 | dd=+0%
+  something: mcap=$9,544 | gain=+5.5% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$15,356 | gain=+31.3% | peak=$15,356 | dd=+0%
+  something: mcap=$9,544 | gain=+5.5% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$15,356 | gain=+31.3% | peak=$15,356 | dd=+0%
+  something: mcap=$9,544 | gain=+5.5% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$15,356 | gain=+31.3% | peak=$15,356 | dd=+0%
+  something: mcap=$9,544 | gain=+5.5% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$15,356 | gain=+31.3% | peak=$15,356 | dd=+0%
+  something: mcap=$9,544 | gain=+5.5% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$15,356 | gain=+31.3% | peak=$15,356 | dd=+0%
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$15,469 | gain=+32.2% | peak=$15,469 | dd=+0%
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$15,469 | gain=+32.2% | peak=$15,469 | dd=+0%
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$15,469 | gain=+32.2% | peak=$15,469 | dd=+0%
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$15,469 | gain=+32.2% | peak=$15,469 | dd=+0%
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$15,469 | gain=+32.2% | peak=$15,469 | dd=+0%
+[16:51:18] Monitor alive | 73 checks | 2 open | next in 5s
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$13,844 | gain=+18.3% | peak=$15,469 | dd=+0%
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$13,844 | gain=+18.3% | peak=$15,469 | dd=+0%
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$13,844 | gain=+18.3% | peak=$15,469 | dd=+0%
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$13,844 | gain=+18.3% | peak=$15,469 | dd=+0%
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$13,844 | gain=+18.3% | peak=$15,469 | dd=+0%
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$13,844 | gain=+18.3% | peak=$15,469 | dd=+0%
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$13,376 | gain=+14.3% | peak=$15,469 | dd=+0%
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$13,376 | gain=+14.3% | peak=$15,469 | dd=+0%
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$13,376 | gain=+14.3% | peak=$15,469 | dd=+0%
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$13,376 | gain=+14.3% | peak=$15,469 | dd=+0%
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$13,376 | gain=+14.3% | peak=$15,469 | dd=+0%
+[16:52:19] Monitor alive | 84 checks | 2 open | next in 5s
+  something: mcap=$9,521 | gain=+5.2% | peak=$9,544 | dd=+0%
+  Dogrates: mcap=$14,257 | gain=+21.9% | peak=$15,469 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 something STOP LOSS @ $2,718 (-70.0%)
+  Dogrates: mcap=$14,257 | gain=+21.9% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$14,257 | gain=+21.9% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$14,257 | gain=+21.9% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$14,257 | gain=+21.9% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$14,257 | gain=+21.9% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$14,866 | gain=+27.1% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$14,866 | gain=+27.1% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$14,866 | gain=+27.1% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$14,866 | gain=+27.1% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$14,866 | gain=+27.1% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$14,866 | gain=+27.1% | peak=$15,469 | dd=+0%
+[16:53:20] Monitor alive | 96 checks | 1 open | next in 5s
+  Dogrates: mcap=$14,338 | gain=+22.6% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$14,338 | gain=+22.6% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$14,338 | gain=+22.6% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$14,338 | gain=+22.6% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$14,338 | gain=+22.6% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$14,338 | gain=+22.6% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$12,513 | gain=+7.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$12,513 | gain=+7.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$12,513 | gain=+7.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$12,513 | gain=+7.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$12,513 | gain=+7.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$12,513 | gain=+7.0% | peak=$15,469 | dd=+0%
+[16:54:21] Monitor alive | 108 checks | 1 open | next in 5s
+  Dogrates: mcap=$13,060 | gain=+11.6% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$13,060 | gain=+11.6% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$13,060 | gain=+11.6% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$13,060 | gain=+11.6% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$13,060 | gain=+11.6% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$13,060 | gain=+11.6% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,507 | gain=-1.6% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,507 | gain=-1.6% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,507 | gain=-1.6% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$11,507 | gain=-1.6% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$9,912 | gain=-12.4% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$11,507 | gain=-1.6% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$9,912 | gain=-12.4% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$11,507 | gain=-1.6% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$11,224 | gain=-0.8% | peak=$11,309 | dd=+0%
+[16:55:24] Monitor alive | 120 checks | 2 open | next in 5s
+  Dogrates: mcap=$11,694 | gain=-0.0% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$11,224 | gain=-0.8% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$11,694 | gain=-0.0% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$11,224 | gain=-0.8% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$11,694 | gain=-0.0% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$11,224 | gain=-0.8% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$11,694 | gain=-0.0% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$11,224 | gain=-0.8% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$11,694 | gain=-0.0% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$11,224 | gain=-0.8% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$11,694 | gain=-0.0% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$9,669 | gain=-14.5% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$10,503 | gain=-10.2% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$9,669 | gain=-14.5% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$10,503 | gain=-10.2% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$9,669 | gain=-14.5% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$10,503 | gain=-10.2% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$9,669 | gain=-14.5% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$10,503 | gain=-10.2% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$9,669 | gain=-14.5% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$10,503 | gain=-10.2% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$9,543 | gain=-15.6% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$10,488 | gain=-10.3% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$9,543 | gain=-15.6% | peak=$11,309 | dd=+0%
+[16:56:27] Monitor alive | 132 checks | 2 open | next in 5s
+  Dogrates: mcap=$10,488 | gain=-10.3% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$9,543 | gain=-15.6% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$10,488 | gain=-10.3% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$9,543 | gain=-15.6% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$10,488 | gain=-10.3% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$9,543 | gain=-15.6% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$10,488 | gain=-10.3% | peak=$15,469 | dd=+0%
+  Bobo: mcap=$9,543 | gain=-15.6% | peak=$11,309 | dd=+0%
+  Dogrates: mcap=$10,488 | gain=-10.3% | peak=$15,469 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Bobo STOP LOSS @ $6,718 (-40.6%)
+  Dogrates: mcap=$9,710 | gain=-17.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,710 | gain=-17.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,710 | gain=-17.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,710 | gain=-17.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,710 | gain=-17.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,710 | gain=-17.0% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,731 | gain=-16.8% | peak=$15,469 | dd=+0%
+[16:57:30] Monitor alive | 144 checks | 1 open | next in 5s
+  Dogrates: mcap=$9,731 | gain=-16.8% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,731 | gain=-16.8% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,731 | gain=-16.8% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,731 | gain=-16.8% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,731 | gain=-16.8% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,218 | gain=-12.7% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,218 | gain=-12.7% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,218 | gain=-12.7% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,218 | gain=-12.7% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,218 | gain=-12.7% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,218 | gain=-12.7% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,474 | gain=-10.5% | peak=$15,469 | dd=+0%
+[16:58:30] Monitor alive | 156 checks | 1 open | next in 5s
+  Dogrates: mcap=$10,474 | gain=-10.5% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,474 | gain=-10.5% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,474 | gain=-10.5% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,474 | gain=-10.5% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,474 | gain=-10.5% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,500 | gain=-10.2% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,500 | gain=-10.2% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,500 | gain=-10.2% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,500 | gain=-10.2% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,500 | gain=-10.2% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$10,500 | gain=-10.2% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,860 | gain=-15.7% | peak=$15,469 | dd=+0%
+[16:59:31] Monitor alive | 168 checks | 1 open | next in 5s
+  Dogrates: mcap=$9,860 | gain=-15.7% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,860 | gain=-15.7% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,860 | gain=-15.7% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,860 | gain=-15.7% | peak=$15,469 | dd=+0%
+  Dogrates: mcap=$9,898 | gain=-15.4% | peak=$15,469 | dd=+0%
