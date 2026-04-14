@@ -13,6 +13,7 @@ from datetime import datetime
 from pathlib import Path
 
 # === IMPORT FROM TRADING CONSTANTS ===
+from alert_sender import send_telegram
 from trading_constants import (
     MIN_CHG1_FOR_BUY,
     CHG1_DROP_THRESHOLD,
