@@ -15530,3 +15530,25 @@ Checking every 5s
 [22:27:29] Monitor alive | 853 checks | 0 open | next in 5s
 [22:28:29] Monitor alive | 865 checks | 0 open | next in 5s
 [22:29:29] Monitor alive | 877 checks | 0 open | next in 5s
+[22:30:29] Monitor alive | 889 checks | 0 open | next in 5s
+[22:31:29] Monitor alive | 901 checks | 0 open | next in 5s
+[22:32:29] Monitor alive | 913 checks | 0 open | next in 5s
+[22:33:30] Monitor alive | 925 checks | 0 open | next in 5s
+[22:34:30] Monitor alive | 937 checks | 0 open | next in 5s
+[22:35:30] Monitor alive | 949 checks | 0 open | next in 5s
+[22:36:30] Monitor alive | 961 checks | 0 open | next in 5s
+[22:37:30] Monitor alive | 973 checks | 0 open | next in 5s
+[22:38:30] Monitor alive | 985 checks | 0 open | next in 5s
+[22:39:30] Monitor alive | 997 checks | 0 open | next in 5s
+[22:40:30] Monitor alive | 1009 checks | 0 open | next in 5s
+[22:41:30] Monitor alive | 1021 checks | 0 open | next in 5s
+  BabyT: mcap=$10,455 | gain=-19.7% | peak=$13,016 | dd=+0%
+  BabyT: mcap=$10,455 | gain=-19.7% | peak=$13,016 | dd=+0%
+  BabyT: mcap=$10,455 | gain=-19.7% | peak=$13,016 | dd=+0%
+  BabyT: mcap=$10,455 | gain=-19.7% | peak=$13,016 | dd=+0%
+  BabyT: mcap=$10,455 | gain=-19.7% | peak=$13,016 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 BabyT STOP LOSS @ $8,923 (-31.4%)
+[22:42:31] Monitor alive | 1033 checks | 0 open | next in 5s
+[22:43:31] Monitor alive | 1045 checks | 0 open | next in 5s
+[22:44:31] Monitor alive | 1057 checks | 0 open | next in 5s

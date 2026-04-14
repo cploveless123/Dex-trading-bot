@@ -120,12 +120,15 @@ def load_blacklist():
 def merge_token_data(gmgn_data, dex_data):
     merged = (gmgn_data or {}).copy()
     if dex_data:
+        # Only use DexScreener to fill fields that are missing/zero in GMGN
         for k, v in dex_data.items():
-            if v and (not merged.get(k) or merged.get(k) == 0):
+            if v and v != 0 and not merged.get(k):
                 merged[k] = v
+        # Explicitly handle chg1 from DexScreener
         ds_chg1 = dex_data.get('priceChange', {}).get('m1') if dex_data.get('priceChange') else None
-        if ds_chg1 is not None:
+        if ds_chg1 is not None and not merged.get('price_change_percent1m'):
             merged['price_change_percent1m'] = float(ds_chg1)
+        # Price: only if GMGN price is missing
         ds_price = dex_data.get('priceUsd') or dex_data.get('price')
         if ds_price and not merged.get('price'):
             merged['price'] = float(ds_price)
@@ -243,6 +246,9 @@ def scan_token(gmgn_data, dex_data):
 def add_to_cooldown(addr, token_data, result, dex_data=None):
     now_ts = time.time()
     age_min = result['age_min']
+    if addr in COOLDOWN_WATCH:
+        return False  # Already monitoring this token
+    
     chg5 = result['chg5']
     h1 = result['h1']
     
@@ -291,15 +297,35 @@ def check_cooldown_watch():
         state = data.get('state', STATE_BASE_WAIT)
         
         # === ALWAYS FRESH DATA ===
+        # Use stored token_data from scan as PRIMARY (always has mcap from trending)
+        # Then try to supplement with fresh token info + DexScreener
+        stored_data = data.get('token_data', {})
+        
         fresh_gmgn = get_gmgn_token_info(addr)
         fresh_dex = get_dexscreener_data(addr)
         
-        if not fresh_gmgn and not fresh_dex:
+        if not fresh_gmgn and not fresh_dex and not stored_data:
             print(f"   [SKIP] {result['token']}: no data")
             to_remove.append(addr)
             continue
         
-        merged = merge_token_data(fresh_gmgn, fresh_dex)
+        # Start with stored data as base (has mcap from trending)
+        merged = (stored_data or {}).copy()
+        
+        # Fill in with fresh gmgn data where available (prefer fresh over stored)
+        if fresh_gmgn:
+            for k, v in fresh_gmgn.items():
+                if v and v != 0:
+                    merged[k] = v
+        
+        # Supplement with DexScreener for missing fields
+        if fresh_dex:
+            for k, v in fresh_dex.items():
+                if v and v != 0 and not merged.get(k):
+                    merged[k] = v
+            ds_chg1 = fresh_dex.get('priceChange', {}).get('m1') if fresh_dex.get('priceChange') else None
+            if ds_chg1 is not None and not merged.get('price_change_percent1m'):
+                merged['price_change_percent1m'] = float(ds_chg1)
         
         # Re-evaluate filters with fresh data
         fresh_result, fresh_reason = scan_token(merged, fresh_dex)
@@ -468,7 +494,7 @@ def check_cooldown_watch():
             last = data.get('_last_improvement_check', data.get('last_chg5', chg5))
             improvement = chg5 - last if last else 0
             
-            if improvement >= MIN_CHG5_FOR_BUY:
+            if improvement >= MIN_CHG5_FOR_BUY or chg5 > 20:
                 data['state'] = STATE_VERIFY
                 data['cooldown_end'] = now + CHG1_VERIFY_DELAY
                 data['consecutive_ok'] = 0
