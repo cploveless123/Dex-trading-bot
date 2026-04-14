@@ -522,25 +522,45 @@ def check_cooldown_watch():
         fresh_data = get_gmgn_token_info(addr)
         fresh_dex = get_dexscreener_data(addr)
         
-        # Build merged data
-        merged_data = (data['token_data'].copy() if data.get('token_data') else {})
+        # Build merged data: previous data → fresh GMGN → fresh DexScreener (priority)
+        merged_data = (data.get('token_data', {}) or {}).copy()
         if fresh_data:
-            merged_data = fresh_data.copy()
+            for k, v in fresh_data.items():
+                # Fresh GMGN overrides previous, but not if DexScreener already filled it
+                if k not in merged_data or merged_data.get(k) in (None, 0, ''):
+                    merged_data[k] = v
+                elif k in merged_data and merged_data.get(k) == 0 and v != 0:
+                    merged_data[k] = v
         if fresh_dex:
+            # DexScreener chg1 overrides GMGN (most important)
             ds_chg1 = fresh_dex.get('priceChange', {}).get('m1')
             if ds_chg1 is not None:
                 merged_data['price_change_percent1m'] = float(ds_chg1)
+            # DexScreener price overrides GMGN
             ds_price = fresh_dex.get('priceUsd')
             if ds_price:
                 merged_data['price'] = float(ds_price)
+            # DexScreener mcap if GMGN mcap is 0 or stale
+            ds_mcap = fresh_dex.get('marketCap')
+            if ds_mcap and float(ds_mcap) > 0:
+                gm = merged_data.get('market_cap', 0)
+                if gm == 0 or float(gm) == 0:
+                    merged_data['market_cap'] = float(ds_mcap)
+            # DexScreener 5min volume if GMGN vol is 0
+            ds_m5 = fresh_dex.get('volume', {}).get('m5')
+            if ds_m5 and float(ds_m5) > 0:
+                gm_vol = merged_data.get('volume5m', 0)
+                if gm_vol == 0:
+                    merged_data['volume5m'] = float(ds_m5)
         
         if not fresh_data and not merged_data:
             print(f"   ❌ {result['token']}: no data (GMGN+DexScreener failed) - removing")
             to_remove.append(addr)
             continue
         
-        # === RE-EVALUATE FILTERS with fresh data ===
-        scan_data = fresh_data if fresh_data else merged_data
+        # === RE-EVALUATE FILTERS with FRESH data ===
+        # Always use merged_data: GMGN base + DexScreener chg1/price override
+        scan_data = merged_data if merged_data else fresh_data
         fresh_result, fresh_reason = scan_token(scan_data, fresh_dex, [])
         
         if fresh_result is None:
@@ -550,7 +570,7 @@ def check_cooldown_watch():
         
         # Update with fresh data
         data['result'] = fresh_result
-        data['token_data'] = fresh_data if fresh_data else merged_data
+        data['token_data'] = merged_data  # Always use merged so DexScreener chg1 persists
         data['dex_data'] = fresh_dex
         
         # === UPDATE PEAK/TRACKING ===
