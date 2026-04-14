@@ -15759,3 +15759,168 @@ Checking every 5s
 [22:59:09] Monitor alive | 1215 checks | 1 open | next in 5s
 [STOP_LOSS] Alert sent
 🔴 Dogrates STOP LOSS @ $3,068 (-67.4%)
+[23:00:10] Monitor alive | 1227 checks | 0 open | next in 5s
+[23:01:10] Monitor alive | 1239 checks | 0 open | next in 5s
+[TP1_HOLD] Alert sent
+🚀 LOLUNC TP1 HIT - HOLDING @ $18,142 (+57.0%)
+  LOLUNC: mcap=$18,142 | gain=+57.0% | peak=$18,142 | dd=+0%
+  LOLUNC: mcap=$17,943 | gain=+55.3% | peak=$18,142 | dd=+1%
+[23:02:11] Monitor alive | 1251 checks | 1 open | next in 5s
+  LOLUNC: mcap=$17,943 | gain=+55.3% | peak=$18,142 | dd=+1%
+  LOLUNC: mcap=$17,943 | gain=+55.3% | peak=$18,142 | dd=+1%
+  LOLUNC: mcap=$17,943 | gain=+55.3% | peak=$18,142 | dd=+1%
+  LOLUNC: mcap=$17,943 | gain=+55.3% | peak=$18,142 | dd=+1%
+  LOLUNC: mcap=$17,943 | gain=+55.3% | peak=$18,142 | dd=+1%
+  LOLUNC: mcap=$19,283 | gain=+66.8% | peak=$19,283 | dd=-6%
+  LOLUNC: mcap=$19,283 | gain=+66.8% | peak=$19,283 | dd=-6%
+  LOLUNC: mcap=$19,283 | gain=+66.8% | peak=$19,283 | dd=-6%
+  LOLUNC: mcap=$19,283 | gain=+66.8% | peak=$19,283 | dd=-6%
+  LOLUNC: mcap=$19,283 | gain=+66.8% | peak=$19,283 | dd=-6%
+[STOP_LOSS] Alert sent
+🔴 AIロイド STOP LOSS @ $9,314 (-29.2%)
+  LOLUNC: mcap=$19,283 | gain=+66.8% | peak=$19,283 | dd=-6%
+  LOLUNC: mcap=$18,769 | gain=+62.4% | peak=$19,283 | dd=-3%
+[23:03:12] Monitor alive | 1263 checks | 1 open | next in 5s
+  LOLUNC: mcap=$18,769 | gain=+62.4% | peak=$19,283 | dd=-3%
+  LOLUNC: mcap=$18,769 | gain=+62.4% | peak=$19,283 | dd=-3%
+  LOLUNC: mcap=$18,769 | gain=+62.4% | peak=$19,283 | dd=-3%
+  LOLUNC: mcap=$18,769 | gain=+62.4% | peak=$19,283 | dd=-3%
+  LOLUNC: mcap=$18,769 | gain=+62.4% | peak=$19,283 | dd=-3%
+  LOLUNC: mcap=$19,766 | gain=+71.0% | peak=$19,766 | dd=-9%
+  LOLUNC: mcap=$19,766 | gain=+71.0% | peak=$19,766 | dd=-9%
+  LOLUNC: mcap=$19,766 | gain=+71.0% | peak=$19,766 | dd=-9%
+  LOLUNC: mcap=$19,766 | gain=+71.0% | peak=$19,766 | dd=-9%
+  LOLUNC: mcap=$19,766 | gain=+71.0% | peak=$19,766 | dd=-9%
+  LOLUNC: mcap=$19,766 | gain=+71.0% | peak=$19,766 | dd=-9%
+[TP2] Alert sent
+✅ LOLUNC TP2 HIT @ $24,508 (+112%)
+[23:04:14] Monitor alive | 1275 checks | 0 open | next in 5s
+  LOLUNC: mcap=$24,508 | gain=+112.1% | peak=$24,508 | dd=-35%
+  LOLUNC: mcap=$24,508 | gain=+112.1% | peak=$24,508 | dd=-35%
+  LOLUNC: mcap=$24,508 | gain=+112.1% | peak=$24,508 | dd=-35%
+  LOLUNC: mcap=$24,508 | gain=+112.1% | peak=$24,508 | dd=-35%
+  LOLUNC: mcap=$24,508 | gain=+112.1% | peak=$24,508 | dd=-35%
+  LOLUNC: mcap=$23,464 | gain=+103.0% | peak=$24,508 | dd=-29%
+  LOLUNC: mcap=$23,464 | gain=+103.0% | peak=$24,508 | dd=-29%
+  LOLUNC: mcap=$23,464 | gain=+103.0% | peak=$24,508 | dd=-29%
+  LOLUNC: mcap=$23,464 | gain=+103.0% | peak=$24,508 | dd=-29%
+  LOLUNC: mcap=$23,464 | gain=+103.0% | peak=$24,508 | dd=-29%
+  LOLUNC: mcap=$23,464 | gain=+103.0% | peak=$24,508 | dd=-29%
+  LOLUNC: mcap=$25,204 | gain=+118.1% | peak=$25,204 | dd=-39%
+[23:05:15] Monitor alive | 1287 checks | 0 open | next in 5s
+  LOLUNC: mcap=$25,204 | gain=+118.1% | peak=$25,204 | dd=-39%
+  LOLUNC: mcap=$25,204 | gain=+118.1% | peak=$25,204 | dd=-39%
+  LOLUNC: mcap=$25,204 | gain=+118.1% | peak=$25,204 | dd=-39%
+  LOLUNC: mcap=$25,204 | gain=+118.1% | peak=$25,204 | dd=-39%
+  LOLUNC: mcap=$25,204 | gain=+118.1% | peak=$25,204 | dd=-39%
+  LOLUNC: mcap=$23,142 | gain=+100.2% | peak=$25,204 | dd=-28%
+  LOLUNC: mcap=$23,142 | gain=+100.2% | peak=$25,204 | dd=-28%
+  LOLUNC: mcap=$23,142 | gain=+100.2% | peak=$25,204 | dd=-28%
+  LOLUNC: mcap=$23,142 | gain=+100.2% | peak=$25,204 | dd=-28%
+  LOLUNC: mcap=$23,142 | gain=+100.2% | peak=$25,204 | dd=-28%
+  LOLUNC: mcap=$23,142 | gain=+100.2% | peak=$25,204 | dd=-28%
+  LOLUNC: mcap=$25,914 | gain=+124.2% | peak=$25,914 | dd=-43%
+[23:06:16] Monitor alive | 1299 checks | 0 open | next in 5s
+  LOLUNC: mcap=$25,914 | gain=+124.2% | peak=$25,914 | dd=-43%
+  LOLUNC: mcap=$25,914 | gain=+124.2% | peak=$25,914 | dd=-43%
+  LOLUNC: mcap=$25,914 | gain=+124.2% | peak=$25,914 | dd=-43%
+  LOLUNC: mcap=$25,914 | gain=+124.2% | peak=$25,914 | dd=-43%
+  X: mcap=$65,572 | gain=+39.9% | peak=$65,572 | dd=+0%
+  LOLUNC: mcap=$25,914 | gain=+124.2% | peak=$25,914 | dd=-43%
+  X: mcap=$65,572 | gain=+39.9% | peak=$65,572 | dd=+0%
+  LOLUNC: mcap=$27,412 | gain=+137.2% | peak=$27,412 | dd=-51%
+  X: mcap=$65,572 | gain=+39.9% | peak=$65,572 | dd=+0%
+  LOLUNC: mcap=$27,412 | gain=+137.2% | peak=$27,412 | dd=-51%
+  X: mcap=$51,235 | gain=+9.3% | peak=$65,572 | dd=+0%
+  LOLUNC: mcap=$27,412 | gain=+137.2% | peak=$27,412 | dd=-51%
+  X: mcap=$51,235 | gain=+9.3% | peak=$65,572 | dd=+0%
+  LOLUNC: mcap=$27,412 | gain=+137.2% | peak=$27,412 | dd=-51%
+  X: mcap=$51,235 | gain=+9.3% | peak=$65,572 | dd=+0%
+  LOLUNC: mcap=$27,412 | gain=+137.2% | peak=$27,412 | dd=-51%
+  X: mcap=$51,235 | gain=+9.3% | peak=$65,572 | dd=+0%
+  LOLUNC: mcap=$27,412 | gain=+137.2% | peak=$27,412 | dd=-51%
+  X: mcap=$51,235 | gain=+9.3% | peak=$65,572 | dd=+0%
+  LOLUNC: mcap=$29,080 | gain=+151.6% | peak=$29,080 | dd=-60%
+  X: mcap=$51,235 | gain=+9.3% | peak=$65,572 | dd=+0%
+[23:07:17] Monitor alive | 1311 checks | 1 open | next in 5s
+  LOLUNC: mcap=$29,080 | gain=+151.6% | peak=$29,080 | dd=-60%
+[STOP_LOSS] Alert sent
+🔴 X STOP LOSS @ $28,827 (-38.5%)
+  LOLUNC: mcap=$29,080 | gain=+151.6% | peak=$29,080 | dd=-60%
+  LOLUNC: mcap=$29,080 | gain=+151.6% | peak=$29,080 | dd=-60%
+  LOLUNC: mcap=$29,080 | gain=+151.6% | peak=$29,080 | dd=-60%
+  LOLUNC: mcap=$29,080 | gain=+151.6% | peak=$29,080 | dd=-60%
+  LOLUNC: mcap=$26,641 | gain=+130.5% | peak=$29,080 | dd=-47%
+  LOLUNC: mcap=$26,641 | gain=+130.5% | peak=$29,080 | dd=-47%
+[TP1_HOLD] Alert sent
+🚀 KALE TP1 HIT - HOLDING @ $10,575 (+53.1%)
+  LOLUNC: mcap=$26,641 | gain=+130.5% | peak=$29,080 | dd=-47%
+  KALE: mcap=$10,575 | gain=+53.1% | peak=$10,575 | dd=+0%
+  LOLUNC: mcap=$26,641 | gain=+130.5% | peak=$29,080 | dd=-47%
+[TP2] Alert sent
+✅ KALE TP2 HIT @ $15,716 (+128%)
+  LOLUNC: mcap=$26,641 | gain=+130.5% | peak=$29,080 | dd=-47%
+  KALE: mcap=$15,716 | gain=+127.5% | peak=$15,716 | dd=-49%
+  LOLUNC: mcap=$28,644 | gain=+147.8% | peak=$29,080 | dd=-58%
+  KALE: mcap=$15,716 | gain=+127.5% | peak=$15,716 | dd=-49%
+  LOLUNC: mcap=$28,644 | gain=+147.8% | peak=$29,080 | dd=-58%
+  KALE: mcap=$15,716 | gain=+127.5% | peak=$15,716 | dd=-49%
+[23:08:20] Monitor alive | 1323 checks | 0 open | next in 5s
+  LOLUNC: mcap=$28,644 | gain=+147.8% | peak=$29,080 | dd=-58%
+  KALE: mcap=$15,716 | gain=+127.5% | peak=$15,716 | dd=-49%
+  LOLUNC: mcap=$28,644 | gain=+147.8% | peak=$29,080 | dd=-58%
+  KALE: mcap=$15,716 | gain=+127.5% | peak=$15,716 | dd=-49%
+  LOLUNC: mcap=$28,644 | gain=+147.8% | peak=$29,080 | dd=-58%
+  KALE: mcap=$14,350 | gain=+107.7% | peak=$15,716 | dd=-36%
+  LOLUNC: mcap=$28,644 | gain=+147.8% | peak=$29,080 | dd=-58%
+  KALE: mcap=$14,350 | gain=+107.7% | peak=$15,716 | dd=-36%
+  LOLUNC: mcap=$28,241 | gain=+144.4% | peak=$29,080 | dd=-56%
+  KALE: mcap=$14,350 | gain=+107.7% | peak=$15,716 | dd=-36%
+  LOLUNC: mcap=$28,241 | gain=+144.4% | peak=$29,080 | dd=-56%
+  KALE: mcap=$14,350 | gain=+107.7% | peak=$15,716 | dd=-36%
+  LOLUNC: mcap=$28,241 | gain=+144.4% | peak=$29,080 | dd=-56%
+  KALE: mcap=$14,350 | gain=+107.7% | peak=$15,716 | dd=-36%
+  LOLUNC: mcap=$28,241 | gain=+144.4% | peak=$29,080 | dd=-56%
+  KALE: mcap=$14,350 | gain=+107.7% | peak=$15,716 | dd=-36%
+  LOLUNC: mcap=$28,241 | gain=+144.4% | peak=$29,080 | dd=-56%
+  KALE: mcap=$17,618 | gain=+155.0% | peak=$17,618 | dd=-67%
+  LOLUNC: mcap=$28,241 | gain=+144.4% | peak=$29,080 | dd=-56%
+  KALE: mcap=$17,618 | gain=+155.0% | peak=$17,618 | dd=-67%
+  LOLUNC: mcap=$29,388 | gain=+154.3% | peak=$29,388 | dd=-62%
+  KALE: mcap=$17,618 | gain=+155.0% | peak=$17,618 | dd=-67%
+  LOLUNC: mcap=$29,388 | gain=+154.3% | peak=$29,388 | dd=-62%
+  KALE: mcap=$17,618 | gain=+155.0% | peak=$17,618 | dd=-67%
+[23:09:23] Monitor alive | 1335 checks | 0 open | next in 5s
+  LOLUNC: mcap=$29,388 | gain=+154.3% | peak=$29,388 | dd=-62%
+  KALE: mcap=$17,618 | gain=+155.0% | peak=$17,618 | dd=-67%
+  LOLUNC: mcap=$29,388 | gain=+154.3% | peak=$29,388 | dd=-62%
+  KALE: mcap=$17,618 | gain=+155.0% | peak=$17,618 | dd=-67%
+  LOLUNC: mcap=$29,388 | gain=+154.3% | peak=$29,388 | dd=-62%
+  KALE: mcap=$12,137 | gain=+75.7% | peak=$17,618 | dd=-15%
+  LOLUNC: mcap=$29,388 | gain=+154.3% | peak=$29,388 | dd=-62%
+  KALE: mcap=$12,137 | gain=+75.7% | peak=$17,618 | dd=-15%
+[TP3] Alert sent
+✅ LOLUNC TP3 HIT @ $47,855 (+314%)
+  KALE: mcap=$12,137 | gain=+75.7% | peak=$17,618 | dd=-15%
+[TP4] Alert sent
+✅ LOLUNC TP4 HIT @ $47,855 (+314%)
+  KALE: mcap=$12,137 | gain=+75.7% | peak=$17,618 | dd=-15%
+  LOLUNC: mcap=$47,855 | gain=+314.1% | peak=$47,855 | dd=-164%
+  KALE: mcap=$12,137 | gain=+75.7% | peak=$17,618 | dd=-15%
+  LOLUNC: mcap=$47,855 | gain=+314.1% | peak=$47,855 | dd=-164%
+[TRAILING_STOP] Alert sent
+✅ KALE TRAILING STOP @ $10,787 (39% drop from peak)
+  LOLUNC: mcap=$47,855 | gain=+314.1% | peak=$47,855 | dd=-164%
+  LOLUNC: mcap=$48,070 | gain=+315.9% | peak=$48,070 | dd=-165%
+  LOLUNC: mcap=$48,070 | gain=+315.9% | peak=$48,070 | dd=-165%
+  LOLUNC: mcap=$48,070 | gain=+315.9% | peak=$48,070 | dd=-165%
+[23:10:27] Monitor alive | 1347 checks | 0 open | next in 5s
+  LOLUNC: mcap=$48,070 | gain=+315.9% | peak=$48,070 | dd=-165%
+  LOLUNC: mcap=$48,070 | gain=+315.9% | peak=$48,070 | dd=-165%
+  LOLUNC: mcap=$48,070 | gain=+315.9% | peak=$48,070 | dd=-165%
+  LOLUNC: mcap=$48,599 | gain=+320.5% | peak=$48,599 | dd=-168%
+  LOLUNC: mcap=$48,599 | gain=+320.5% | peak=$48,599 | dd=-168%
+  LOLUNC: mcap=$48,599 | gain=+320.5% | peak=$48,599 | dd=-168%
+  LOLUNC: mcap=$48,599 | gain=+320.5% | peak=$48,599 | dd=-168%
+  LOLUNC: mcap=$48,599 | gain=+320.5% | peak=$48,599 | dd=-168%
+  LOLUNC: mcap=$48,599 | gain=+320.5% | peak=$48,599 | dd=-168%
