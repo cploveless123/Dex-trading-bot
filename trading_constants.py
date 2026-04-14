@@ -10,7 +10,7 @@ KOL_BUY_POSITION_SIZE = 0.10
 MAX_OPEN_POSITIONS = 9     # Max concurrent positions
 
 # === ENTRY FILTERS (v6.8) ===
-MIN_MCAP = 3500            # $3.5K floor
+MIN_MCAP = 8500            # $3.5K floor
 MAX_MCAP = 60000           # $60K ceiling
 MIN_AGE_SECONDS = 120      # 2 minutes minimum
 MAX_AGE_SECONDS = 5400     # 90 minutes maximum
