@@ -1861,3 +1861,475 @@ Checking every 5s
   TANK: mcap=$20,403 | gain=+73.2% | peak=$20,403 | dd=-13%
   Busted: mcap=$7,503 | gain=+34.2% | peak=$7,503 | dd=+0%
   AI: mcap=$13,104 | gain=-17.9% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,300 | gain=+16.6% | peak=$7,413 | dd=+0%
+  TANK: mcap=$20,966 | gain=+78.0% | peak=$20,966 | dd=-16%
+  Busted: mcap=$7,702 | gain=+37.8% | peak=$7,702 | dd=+0%
+  AI: mcap=$13,104 | gain=-17.9% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,300 | gain=+16.6% | peak=$7,413 | dd=+0%
+  TANK: mcap=$20,966 | gain=+78.0% | peak=$20,966 | dd=-16%
+  Busted: mcap=$7,702 | gain=+37.8% | peak=$7,702 | dd=+0%
+  AI: mcap=$13,104 | gain=-17.9% | peak=$23,000 | dd=+0%
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+[09:30:48] Monitor alive | 1873 checks | 4 open | next in 5s
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: mcap=$7,300 | gain=+16.6% | peak=$7,413 | dd=+0%
+  TANK: mcap=$21,354 | gain=+81.3% | peak=$21,354 | dd=-18%
+  Busted: mcap=$7,812 | gain=+39.7% | peak=$7,812 | dd=+0%
+  AI: mcap=$12,901 | gain=-19.2% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,300 | gain=+16.6% | peak=$7,413 | dd=+0%
+  TANK: mcap=$21,354 | gain=+81.3% | peak=$21,354 | dd=-18%
+  Busted: mcap=$7,812 | gain=+39.7% | peak=$7,812 | dd=+0%
+  AI: mcap=$12,901 | gain=-19.2% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,300 | gain=+16.6% | peak=$7,413 | dd=+0%
+  TANK: mcap=$21,354 | gain=+81.3% | peak=$21,354 | dd=-18%
+  Busted: mcap=$7,812 | gain=+39.7% | peak=$7,812 | dd=+0%
+  AI: mcap=$12,901 | gain=-19.2% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,300 | gain=+16.6% | peak=$7,413 | dd=+0%
+  TANK: mcap=$21,354 | gain=+81.3% | peak=$21,354 | dd=-18%
+  Busted: mcap=$7,812 | gain=+39.7% | peak=$7,812 | dd=+0%
+  AI: mcap=$13,069 | gain=-18.1% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,294 | gain=+16.5% | peak=$7,413 | dd=+0%
+  TANK: mcap=$21,354 | gain=+81.3% | peak=$21,354 | dd=-18%
+  Busted: mcap=$7,812 | gain=+39.7% | peak=$7,812 | dd=+0%
+  AI: mcap=$13,069 | gain=-18.1% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,294 | gain=+16.5% | peak=$7,413 | dd=+0%
+  TANK: mcap=$22,129 | gain=+87.9% | peak=$22,129 | dd=-23%
+[TP1_HOLD] Alert sent
+🚀 Busted TP1 HIT - HOLDING @ $8,471 (+51.5%)
+  AI: mcap=$13,069 | gain=-18.1% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,294 | gain=+16.5% | peak=$7,413 | dd=+0%
+  TANK: mcap=$22,129 | gain=+87.9% | peak=$22,129 | dd=-23%
+  Busted: mcap=$8,471 | gain=+51.5% | peak=$8,471 | dd=+0%
+  AI: mcap=$13,069 | gain=-18.1% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,294 | gain=+16.5% | peak=$7,413 | dd=+0%
+  TANK: mcap=$22,129 | gain=+87.9% | peak=$22,129 | dd=-23%
+  Busted: mcap=$8,471 | gain=+51.5% | peak=$8,471 | dd=+0%
+  AI: mcap=$13,069 | gain=-18.1% | peak=$23,000 | dd=+0%
+[09:31:52] Monitor alive | 1885 checks | 4 open | next in 5s
+  FATOU: mcap=$7,294 | gain=+16.5% | peak=$7,413 | dd=+0%
+  TANK: mcap=$22,129 | gain=+87.9% | peak=$22,129 | dd=-23%
+  Busted: mcap=$8,471 | gain=+51.5% | peak=$8,471 | dd=+0%
+  AI: mcap=$13,069 | gain=-18.1% | peak=$23,000 | dd=+0%
+  RWUNNER: mcap=$10,844 | gain=+2.3% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,294 | gain=+16.5% | peak=$7,413 | dd=+0%
+  TANK: mcap=$22,129 | gain=+87.9% | peak=$22,129 | dd=-23%
+  Busted: mcap=$8,471 | gain=+51.5% | peak=$8,471 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 AI STOP LOSS @ $12,068 (-24.4%)
+  RWUNNER: mcap=$10,844 | gain=+2.3% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,391 | gain=+18.1% | peak=$7,413 | dd=+0%
+  TANK: mcap=$22,228 | gain=+88.7% | peak=$22,228 | dd=-23%
+  Busted: mcap=$8,471 | gain=+51.5% | peak=$8,471 | dd=+0%
+  RWUNNER: mcap=$10,844 | gain=+2.3% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,391 | gain=+18.1% | peak=$7,413 | dd=+0%
+  TANK: mcap=$22,228 | gain=+88.7% | peak=$22,228 | dd=-23%
+  Busted: mcap=$8,471 | gain=+51.5% | peak=$8,471 | dd=+0%
+  RWUNNER: mcap=$10,603 | gain=-0.0% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,391 | gain=+18.1% | peak=$7,413 | dd=+0%
+  TANK: mcap=$22,228 | gain=+88.7% | peak=$22,228 | dd=-23%
+  Busted: mcap=$8,471 | gain=+51.5% | peak=$8,471 | dd=+0%
+  RWUNNER: mcap=$10,603 | gain=-0.0% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,391 | gain=+18.1% | peak=$7,413 | dd=+0%
+  TANK: mcap=$22,228 | gain=+88.7% | peak=$22,228 | dd=-23%
+  Busted: mcap=$8,471 | gain=+51.5% | peak=$8,471 | dd=+0%
+  RWUNNER: mcap=$10,603 | gain=-0.0% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,391 | gain=+18.1% | peak=$7,413 | dd=+0%
+  TANK: mcap=$22,228 | gain=+88.7% | peak=$22,228 | dd=-23%
+  Busted: mcap=$8,471 | gain=+51.5% | peak=$8,471 | dd=+0%
+  RWUNNER: mcap=$10,603 | gain=-0.0% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,391 | gain=+18.1% | peak=$7,413 | dd=+0%
+  TANK: mcap=$22,228 | gain=+88.7% | peak=$22,228 | dd=-23%
+  Busted: mcap=$8,471 | gain=+51.5% | peak=$8,471 | dd=+0%
+  RWUNNER: mcap=$10,603 | gain=-0.0% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,918 | gain=+26.5% | peak=$7,918 | dd=+0%
+  TANK: mcap=$22,242 | gain=+88.8% | peak=$22,242 | dd=-23%
+  Busted: mcap=$7,785 | gain=+39.2% | peak=$8,471 | dd=+8%
+  RWUNNER: mcap=$10,603 | gain=-0.0% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,918 | gain=+26.5% | peak=$7,918 | dd=+0%
+  TANK: mcap=$22,242 | gain=+88.8% | peak=$22,242 | dd=-23%
+  Busted: mcap=$7,785 | gain=+39.2% | peak=$8,471 | dd=+8%
+  RWUNNER: mcap=$9,491 | gain=-10.5% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,918 | gain=+26.5% | peak=$7,918 | dd=+0%
+  TANK: mcap=$22,242 | gain=+88.8% | peak=$22,242 | dd=-23%
+  Busted: mcap=$7,785 | gain=+39.2% | peak=$8,471 | dd=+8%
+  RWUNNER: mcap=$9,491 | gain=-10.5% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,918 | gain=+26.5% | peak=$7,918 | dd=+0%
+  TANK: mcap=$22,242 | gain=+88.8% | peak=$22,242 | dd=-23%
+  Busted: mcap=$7,785 | gain=+39.2% | peak=$8,471 | dd=+8%
+  RWUNNER: mcap=$9,491 | gain=-10.5% | peak=$10,844 | dd=+0%
+[09:32:56] Monitor alive | 1897 checks | 4 open | next in 5s
+  FATOU: mcap=$7,918 | gain=+26.5% | peak=$7,918 | dd=+0%
+  TANK: mcap=$22,242 | gain=+88.8% | peak=$22,242 | dd=-23%
+  Busted: mcap=$7,785 | gain=+39.2% | peak=$8,471 | dd=+8%
+  RWUNNER: mcap=$9,491 | gain=-10.5% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,851 | gain=+25.4% | peak=$7,918 | dd=+0%
+  TANK: mcap=$22,242 | gain=+88.8% | peak=$22,242 | dd=-23%
+  Busted: mcap=$7,785 | gain=+39.2% | peak=$8,471 | dd=+8%
+  RWUNNER: mcap=$9,491 | gain=-10.5% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,851 | gain=+25.4% | peak=$7,918 | dd=+0%
+  TANK: mcap=$22,701 | gain=+92.7% | peak=$22,701 | dd=-26%
+  Busted: mcap=$7,785 | gain=+39.2% | peak=$8,471 | dd=+8%
+  RWUNNER: mcap=$9,756 | gain=-8.0% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,851 | gain=+25.4% | peak=$7,918 | dd=+0%
+  TANK: mcap=$22,701 | gain=+92.7% | peak=$22,701 | dd=-26%
+  Busted: mcap=$7,785 | gain=+39.2% | peak=$8,471 | dd=+8%
+  RWUNNER: mcap=$9,756 | gain=-8.0% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,851 | gain=+25.4% | peak=$7,918 | dd=+0%
+  TANK: mcap=$22,701 | gain=+92.7% | peak=$22,701 | dd=-26%
+  Busted: mcap=$7,785 | gain=+39.2% | peak=$8,471 | dd=+8%
+  RWUNNER: mcap=$9,756 | gain=-8.0% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,851 | gain=+25.4% | peak=$7,918 | dd=+0%
+  TANK: mcap=$22,701 | gain=+92.7% | peak=$22,701 | dd=-26%
+  Busted: mcap=$7,785 | gain=+39.2% | peak=$8,471 | dd=+8%
+  RWUNNER: mcap=$9,756 | gain=-8.0% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,851 | gain=+25.4% | peak=$7,918 | dd=+0%
+  TANK: mcap=$22,701 | gain=+92.7% | peak=$22,701 | dd=-26%
+  Busted: mcap=$7,785 | gain=+39.2% | peak=$8,471 | dd=+8%
+  RWUNNER: mcap=$9,756 | gain=-8.0% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,968 | gain=+27.3% | peak=$7,968 | dd=+0%
+  TANK: mcap=$22,701 | gain=+92.7% | peak=$22,701 | dd=-26%
+  Busted: mcap=$9,795 | gain=+75.2% | peak=$9,795 | dd=-16%
+  RWUNNER: mcap=$9,756 | gain=-8.0% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,968 | gain=+27.3% | peak=$7,968 | dd=+0%
+  TANK: mcap=$22,838 | gain=+93.9% | peak=$22,838 | dd=-27%
+  Busted: mcap=$9,795 | gain=+75.2% | peak=$9,795 | dd=-16%
+  RWUNNER: mcap=$9,220 | gain=-13.1% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,968 | gain=+27.3% | peak=$7,968 | dd=+0%
+  TANK: mcap=$22,838 | gain=+93.9% | peak=$22,838 | dd=-27%
+  Busted: mcap=$9,795 | gain=+75.2% | peak=$9,795 | dd=-16%
+  RWUNNER: mcap=$9,220 | gain=-13.1% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,968 | gain=+27.3% | peak=$7,968 | dd=+0%
+  TANK: mcap=$22,838 | gain=+93.9% | peak=$22,838 | dd=-27%
+  Busted: mcap=$9,795 | gain=+75.2% | peak=$9,795 | dd=-16%
+  RWUNNER: mcap=$9,220 | gain=-13.1% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,968 | gain=+27.3% | peak=$7,968 | dd=+0%
+  TANK: mcap=$22,838 | gain=+93.9% | peak=$22,838 | dd=-27%
+  Busted: mcap=$9,795 | gain=+75.2% | peak=$9,795 | dd=-16%
+  RWUNNER: mcap=$9,220 | gain=-13.1% | peak=$10,844 | dd=+0%
+[09:33:59] Monitor alive | 1909 checks | 4 open | next in 5s
+  FATOU: mcap=$7,968 | gain=+27.3% | peak=$7,968 | dd=+0%
+  TANK: mcap=$22,838 | gain=+93.9% | peak=$22,838 | dd=-27%
+  Busted: mcap=$9,795 | gain=+75.2% | peak=$9,795 | dd=-16%
+  RWUNNER: mcap=$9,220 | gain=-13.1% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,968 | gain=+27.3% | peak=$7,968 | dd=+0%
+  TANK: mcap=$22,838 | gain=+93.9% | peak=$22,838 | dd=-27%
+  Busted: mcap=$9,516 | gain=+70.2% | peak=$9,795 | dd=-12%
+  RWUNNER: mcap=$9,220 | gain=-13.1% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,968 | gain=+27.3% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,040 | gain=+95.6% | peak=$23,040 | dd=-28%
+  Busted: mcap=$9,516 | gain=+70.2% | peak=$9,795 | dd=-12%
+  RWUNNER: mcap=$9,816 | gain=-7.4% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,968 | gain=+27.3% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,040 | gain=+95.6% | peak=$23,040 | dd=-28%
+  Busted: mcap=$9,516 | gain=+70.2% | peak=$9,795 | dd=-12%
+  RWUNNER: mcap=$9,816 | gain=-7.4% | peak=$10,844 | dd=+0%
+  481: mcap=$7,770 | gain=-1.6% | peak=$7,894 | dd=+0%
+  FATOU: mcap=$7,968 | gain=+27.3% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,040 | gain=+95.6% | peak=$23,040 | dd=-28%
+  Busted: mcap=$9,516 | gain=+70.2% | peak=$9,795 | dd=-12%
+  RWUNNER: mcap=$9,816 | gain=-7.4% | peak=$10,844 | dd=+0%
+  481: mcap=$7,770 | gain=-1.6% | peak=$7,894 | dd=+0%
+  FATOU: mcap=$7,968 | gain=+27.3% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,040 | gain=+95.6% | peak=$23,040 | dd=-28%
+  Busted: mcap=$9,516 | gain=+70.2% | peak=$9,795 | dd=-12%
+  RWUNNER: mcap=$9,816 | gain=-7.4% | peak=$10,844 | dd=+0%
+  481: mcap=$7,770 | gain=-1.6% | peak=$7,894 | dd=+0%
+  FATOU: mcap=$7,968 | gain=+27.3% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,040 | gain=+95.6% | peak=$23,040 | dd=-28%
+  Busted: mcap=$9,516 | gain=+70.2% | peak=$9,795 | dd=-12%
+  RWUNNER: mcap=$9,816 | gain=-7.4% | peak=$10,844 | dd=+0%
+  481: mcap=$6,949 | gain=-12.0% | peak=$7,894 | dd=+0%
+  FATOU: mcap=$7,955 | gain=+27.1% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,108 | gain=+96.2% | peak=$23,108 | dd=-28%
+  Busted: mcap=$9,118 | gain=+63.1% | peak=$9,795 | dd=-8%
+  RWUNNER: mcap=$9,816 | gain=-7.4% | peak=$10,844 | dd=+0%
+  481: mcap=$6,949 | gain=-12.0% | peak=$7,894 | dd=+0%
+  FATOU: mcap=$7,955 | gain=+27.1% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,108 | gain=+96.2% | peak=$23,108 | dd=-28%
+  Busted: mcap=$9,118 | gain=+63.1% | peak=$9,795 | dd=-8%
+  RWUNNER: mcap=$9,617 | gain=-9.3% | peak=$10,844 | dd=+0%
+  481: mcap=$6,949 | gain=-12.0% | peak=$7,894 | dd=+0%
+  FATOU: mcap=$7,955 | gain=+27.1% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,108 | gain=+96.2% | peak=$23,108 | dd=-28%
+  Busted: mcap=$9,118 | gain=+63.1% | peak=$9,795 | dd=-8%
+  RWUNNER: mcap=$9,617 | gain=-9.3% | peak=$10,844 | dd=+0%
+  481: mcap=$6,949 | gain=-12.0% | peak=$7,894 | dd=+0%
+  FATOU: mcap=$7,955 | gain=+27.1% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,108 | gain=+96.2% | peak=$23,108 | dd=-28%
+  Busted: mcap=$9,118 | gain=+63.1% | peak=$9,795 | dd=-8%
+  RWUNNER: mcap=$9,617 | gain=-9.3% | peak=$10,844 | dd=+0%
+  481: mcap=$6,949 | gain=-12.0% | peak=$7,894 | dd=+0%
+  FATOU: mcap=$7,955 | gain=+27.1% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,108 | gain=+96.2% | peak=$23,108 | dd=-28%
+  Busted: mcap=$9,118 | gain=+63.1% | peak=$9,795 | dd=-8%
+  RWUNNER: mcap=$9,617 | gain=-9.3% | peak=$10,844 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 481 STOP LOSS @ $3,604 (-54.4%)
+[09:35:03] Monitor alive | 1921 checks | 4 open | next in 5s
+  FATOU: mcap=$7,955 | gain=+27.1% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,108 | gain=+96.2% | peak=$23,108 | dd=-28%
+  Busted: mcap=$8,917 | gain=+59.5% | peak=$9,795 | dd=-5%
+  RWUNNER: mcap=$9,617 | gain=-9.3% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,955 | gain=+27.1% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,168 | gain=+96.7% | peak=$23,168 | dd=-28%
+  Busted: mcap=$8,917 | gain=+59.5% | peak=$9,795 | dd=-5%
+  RWUNNER: mcap=$8,933 | gain=-15.8% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,955 | gain=+27.1% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,168 | gain=+96.7% | peak=$23,168 | dd=-28%
+  Busted: mcap=$8,917 | gain=+59.5% | peak=$9,795 | dd=-5%
+  RWUNNER: mcap=$8,933 | gain=-15.8% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,955 | gain=+27.1% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,168 | gain=+96.7% | peak=$23,168 | dd=-28%
+  Busted: mcap=$8,917 | gain=+59.5% | peak=$9,795 | dd=-5%
+  RWUNNER: mcap=$8,933 | gain=-15.8% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,955 | gain=+27.1% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,168 | gain=+96.7% | peak=$23,168 | dd=-28%
+  Busted: mcap=$8,917 | gain=+59.5% | peak=$9,795 | dd=-5%
+  RWUNNER: mcap=$8,933 | gain=-15.8% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$7,955 | gain=+27.1% | peak=$7,968 | dd=+0%
+  TANK: mcap=$23,168 | gain=+96.7% | peak=$23,168 | dd=-28%
+  Busted: mcap=$8,917 | gain=+59.5% | peak=$9,795 | dd=-5%
+  RWUNNER: mcap=$8,933 | gain=-15.8% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$8,028 | gain=+28.2% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,168 | gain=+96.7% | peak=$23,168 | dd=-28%
+  Busted: mcap=$8,995 | gain=+60.9% | peak=$9,795 | dd=-6%
+  RWUNNER: mcap=$8,933 | gain=-15.8% | peak=$10,844 | dd=+0%
+  FATOU: mcap=$8,028 | gain=+28.2% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,296 | gain=+97.8% | peak=$23,296 | dd=-29%
+  Busted: mcap=$8,995 | gain=+60.9% | peak=$9,795 | dd=-6%
+[STOP_LOSS] Alert sent
+🔴 RWUNNER STOP LOSS @ $6,142 (-42.1%)
+  FATOU: mcap=$8,028 | gain=+28.2% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,296 | gain=+97.8% | peak=$23,296 | dd=-29%
+  Busted: mcap=$8,995 | gain=+60.9% | peak=$9,795 | dd=-6%
+  FATOU: mcap=$8,028 | gain=+28.2% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,296 | gain=+97.8% | peak=$23,296 | dd=-29%
+  Busted: mcap=$8,995 | gain=+60.9% | peak=$9,795 | dd=-6%
+  FATOU: mcap=$8,028 | gain=+28.2% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,296 | gain=+97.8% | peak=$23,296 | dd=-29%
+  Busted: mcap=$8,995 | gain=+60.9% | peak=$9,795 | dd=-6%
+  FATOU: mcap=$8,028 | gain=+28.2% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,296 | gain=+97.8% | peak=$23,296 | dd=-29%
+  Busted: mcap=$8,995 | gain=+60.9% | peak=$9,795 | dd=-6%
+[09:36:06] Monitor alive | 1933 checks | 3 open | next in 5s
+  FATOU: mcap=$8,028 | gain=+28.2% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,363 | gain=+98.3% | peak=$23,363 | dd=-30%
+  Busted: mcap=$9,053 | gain=+61.9% | peak=$9,795 | dd=-7%
+  FATOU: mcap=$8,028 | gain=+28.2% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,363 | gain=+98.3% | peak=$23,363 | dd=-30%
+  Busted: mcap=$9,053 | gain=+61.9% | peak=$9,795 | dd=-7%
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+[09:37:09] Monitor alive | 1945 checks | 3 open | next in 5s
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: mcap=$7,951 | gain=+27.0% | peak=$8,028 | dd=+0%
+[TP2] Alert sent
+✅ TANK TP2 HIT @ $23,664 (+101%)
+  Busted: mcap=$8,228 | gain=+47.2% | peak=$9,795 | dd=+3%
+  FATOU: mcap=$7,951 | gain=+27.0% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,664 | gain=+100.9% | peak=$23,664 | dd=-31%
+  Busted: mcap=$8,228 | gain=+47.2% | peak=$9,795 | dd=+3%
+  FATOU: mcap=$7,951 | gain=+27.0% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,664 | gain=+100.9% | peak=$23,664 | dd=-31%
+  Busted: mcap=$8,228 | gain=+47.2% | peak=$9,795 | dd=+3%
+  FATOU: mcap=$7,951 | gain=+27.0% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,664 | gain=+100.9% | peak=$23,664 | dd=-31%
+  Busted: mcap=$8,228 | gain=+47.2% | peak=$9,795 | dd=+3%
+  FATOU: mcap=$7,951 | gain=+27.0% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,664 | gain=+100.9% | peak=$23,664 | dd=-31%
+  Busted: mcap=$8,336 | gain=+49.1% | peak=$9,795 | dd=+2%
+  FATOU: mcap=$7,951 | gain=+27.0% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,896 | gain=+102.8% | peak=$23,896 | dd=-33%
+  Busted: mcap=$8,336 | gain=+49.1% | peak=$9,795 | dd=+2%
+  FATOU: mcap=$7,951 | gain=+27.0% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,896 | gain=+102.8% | peak=$23,896 | dd=-33%
+  Busted: mcap=$8,336 | gain=+49.1% | peak=$9,795 | dd=+2%
+  FATOU: mcap=$7,951 | gain=+27.0% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,896 | gain=+102.8% | peak=$23,896 | dd=-33%
+  Busted: mcap=$8,336 | gain=+49.1% | peak=$9,795 | dd=+2%
+  FATOU: mcap=$7,951 | gain=+27.0% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,896 | gain=+102.8% | peak=$23,896 | dd=-33%
+  Busted: mcap=$8,336 | gain=+49.1% | peak=$9,795 | dd=+2%
+  FATOU: mcap=$7,951 | gain=+27.0% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,896 | gain=+102.8% | peak=$23,896 | dd=-33%
+  Busted: mcap=$8,336 | gain=+49.1% | peak=$9,795 | dd=+2%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$23,896 | gain=+102.8% | peak=$23,896 | dd=-33%
+  Busted: mcap=$8,486 | gain=+51.8% | peak=$9,795 | dd=-0%
+[09:38:12] Monitor alive | 1957 checks | 2 open | next in 5s
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,207 | gain=+105.5% | peak=$24,207 | dd=-34%
+  Busted: mcap=$8,486 | gain=+51.8% | peak=$9,795 | dd=-0%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,207 | gain=+105.5% | peak=$24,207 | dd=-34%
+  Busted: mcap=$8,486 | gain=+51.8% | peak=$9,795 | dd=-0%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,207 | gain=+105.5% | peak=$24,207 | dd=-34%
+  Busted: mcap=$8,486 | gain=+51.8% | peak=$9,795 | dd=-0%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,207 | gain=+105.5% | peak=$24,207 | dd=-34%
+  Busted: mcap=$8,486 | gain=+51.8% | peak=$9,795 | dd=-0%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,207 | gain=+105.5% | peak=$24,207 | dd=-34%
+  Busted: mcap=$8,486 | gain=+51.8% | peak=$9,795 | dd=-0%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,579 | gain=+108.6% | peak=$24,579 | dd=-36%
+  Busted: mcap=$8,523 | gain=+52.4% | peak=$9,795 | dd=-1%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,579 | gain=+108.6% | peak=$24,579 | dd=-36%
+  Busted: mcap=$8,523 | gain=+52.4% | peak=$9,795 | dd=-1%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,579 | gain=+108.6% | peak=$24,579 | dd=-36%
+  Busted: mcap=$8,523 | gain=+52.4% | peak=$9,795 | dd=-1%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,579 | gain=+108.6% | peak=$24,579 | dd=-36%
+  Busted: mcap=$8,523 | gain=+52.4% | peak=$9,795 | dd=-1%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,579 | gain=+108.6% | peak=$24,579 | dd=-36%
+  Busted: mcap=$8,523 | gain=+52.4% | peak=$9,795 | dd=-1%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,579 | gain=+108.6% | peak=$24,579 | dd=-36%
+  Busted: mcap=$8,523 | gain=+52.4% | peak=$9,795 | dd=-1%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,645 | gain=+109.2% | peak=$24,645 | dd=-37%
+  Busted: mcap=$8,471 | gain=+51.5% | peak=$9,795 | dd=-0%
+[09:39:14] Monitor alive | 1969 checks | 2 open | next in 5s
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,645 | gain=+109.2% | peak=$24,645 | dd=-37%
+  Busted: mcap=$8,471 | gain=+51.5% | peak=$9,795 | dd=-0%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,645 | gain=+109.2% | peak=$24,645 | dd=-37%
+  Busted: mcap=$8,471 | gain=+51.5% | peak=$9,795 | dd=-0%
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+[09:40:17] Monitor alive | 1981 checks | 2 open | next in 5s
+  FATOU: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,859 | gain=+111.0% | peak=$24,859 | dd=-38%
+  Busted: mcap=$8,695 | gain=+55.5% | peak=$9,795 | dd=-3%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,859 | gain=+111.0% | peak=$24,859 | dd=-38%
+  Busted: mcap=$8,695 | gain=+55.5% | peak=$9,795 | dd=-3%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,859 | gain=+111.0% | peak=$24,859 | dd=-38%
+  Busted: mcap=$8,695 | gain=+55.5% | peak=$9,795 | dd=-3%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,859 | gain=+111.0% | peak=$24,859 | dd=-38%
+  Busted: mcap=$8,672 | gain=+55.1% | peak=$9,795 | dd=-2%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,988 | gain=+112.1% | peak=$24,988 | dd=-39%
+  Busted: mcap=$8,672 | gain=+55.1% | peak=$9,795 | dd=-2%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,988 | gain=+112.1% | peak=$24,988 | dd=-39%
+  Busted: mcap=$8,672 | gain=+55.1% | peak=$9,795 | dd=-2%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,988 | gain=+112.1% | peak=$24,988 | dd=-39%
+  Busted: mcap=$8,672 | gain=+55.1% | peak=$9,795 | dd=-2%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,988 | gain=+112.1% | peak=$24,988 | dd=-39%
+  Busted: mcap=$8,672 | gain=+55.1% | peak=$9,795 | dd=-2%
+  FATOU: mcap=$7,983 | gain=+27.5% | peak=$8,028 | dd=+0%
+  TANK: mcap=$24,988 | gain=+112.1% | peak=$24,988 | dd=-39%
+  Busted: mcap=$8,672 | gain=+55.1% | peak=$9,795 | dd=-2%
