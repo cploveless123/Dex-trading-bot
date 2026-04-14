@@ -281,12 +281,12 @@ def scan_gmgn_token(token_data, whales):
     if dip > DIP_MAX:
         return None, f"Dip {dip:.1f}% > {DIP_MAX}%"
     
-    # 8b. ATH distance check - must be > 30% below ATH
+    # 8b. ATH distance check - must be > 15% below ATH
     ath_mc = float(token_data.get('history_highest_market_cap', 0) or 0)
     if ath_mc > 0 and mcap < ath_mc:
         ath_distance = ((ath_mc - mcap) / ath_mc) * 100
         if ath_distance < 30:
-            return None, f"ATH distance {ath_distance:.1f}% (need >30% below ATH)"
+            return None, f"ATH distance {ath_distance:.1f}% (need >15% below ATH)"
     
     # 9. Volume filter (for older tokens)
     if age >= 20 and volume < MIN_VOLUME_5M:
