@@ -2,3 +2,7 @@ Traceback (most recent call last):
   File "/root/Dex-trading-bot/auto_scanner.py", line 26, in <module>
     import requests, json, subprocess
 ModuleNotFoundError: No module named 'requests'
+Traceback (most recent call last):
+  File "/root/Dex-trading-bot/auto_scanner.py", line 30, in <module>
+    from trading_constants import (
+ImportError: cannot import name 'MIN_VOLUME' from 'trading_constants' (/root/Dex-trading-bot/trading_constants.py)
