@@ -1122,3 +1122,742 @@ Checking every 5s
   FATOU: mcap=$6,540 | gain=+4.5% | peak=$6,651 | dd=+0%
   ME: mcap=$11,793 | gain=-17.6% | peak=$14,310 | dd=+0%
   FATOU: mcap=$6,540 | gain=+4.5% | peak=$6,651 | dd=+0%
+  ME: mcap=$11,793 | gain=-17.6% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,540 | gain=+4.5% | peak=$6,651 | dd=+0%
+  ME: mcap=$11,793 | gain=-17.6% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,540 | gain=+4.5% | peak=$6,651 | dd=+0%
+  ME: mcap=$11,793 | gain=-17.6% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,540 | gain=+4.5% | peak=$6,651 | dd=+0%
+  ME: mcap=$11,793 | gain=-17.6% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,540 | gain=+4.5% | peak=$6,651 | dd=+0%
+  ME: mcap=$11,793 | gain=-17.6% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,508 | gain=+4.0% | peak=$6,651 | dd=+0%
+  ME: mcap=$12,322 | gain=-13.9% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,508 | gain=+4.0% | peak=$6,651 | dd=+0%
+  ME: mcap=$12,322 | gain=-13.9% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,508 | gain=+4.0% | peak=$6,651 | dd=+0%
+  ME: mcap=$12,322 | gain=-13.9% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,508 | gain=+4.0% | peak=$6,651 | dd=+0%
+  ME: mcap=$12,322 | gain=-13.9% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$6,508 | gain=+4.0% | peak=$6,651 | dd=+0%
+  ME: mcap=$12,322 | gain=-13.9% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$7,413 | gain=+18.4% | peak=$7,413 | dd=+0%
+[09:11:58] Monitor alive | 1657 checks | 2 open | next in 5s
+  ME: mcap=$12,322 | gain=-13.9% | peak=$14,310 | dd=+0%
+  FATOU: mcap=$7,413 | gain=+18.4% | peak=$7,413 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 ME STOP LOSS @ $11,206 (-21.7%)
+  FATOU: mcap=$7,413 | gain=+18.4% | peak=$7,413 | dd=+0%
+  FATOU: mcap=$7,413 | gain=+18.4% | peak=$7,413 | dd=+0%
+  FATOU: mcap=$7,413 | gain=+18.4% | peak=$7,413 | dd=+0%
+  FATOU: mcap=$7,413 | gain=+18.4% | peak=$7,413 | dd=+0%
+  FATOU: mcap=$7,397 | gain=+18.2% | peak=$7,413 | dd=+0%
+  FATOU: mcap=$7,397 | gain=+18.2% | peak=$7,413 | dd=+0%
+  FATOU: mcap=$7,397 | gain=+18.2% | peak=$7,413 | dd=+0%
+  FATOU: mcap=$7,397 | gain=+18.2% | peak=$7,413 | dd=+0%
+  AI: mcap=$5,233 | gain=-16.0% | peak=$6,228 | dd=+0%
+  FATOU: mcap=$7,397 | gain=+18.2% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,242 | gain=+0.2% | peak=$6,242 | dd=+0%
+  FATOU: mcap=$7,397 | gain=+18.2% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,242 | gain=+0.2% | peak=$6,242 | dd=+0%
+  FATOU: mcap=$7,068 | gain=+12.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,242 | gain=+0.2% | peak=$6,242 | dd=+0%
+[09:13:00] Monitor alive | 1669 checks | 2 open | next in 5s
+  FATOU: mcap=$7,068 | gain=+12.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,242 | gain=+0.2% | peak=$6,242 | dd=+0%
+  FATOU: mcap=$7,068 | gain=+12.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,242 | gain=+0.2% | peak=$6,242 | dd=+0%
+  FATOU: mcap=$7,068 | gain=+12.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,242 | gain=+0.2% | peak=$6,242 | dd=+0%
+  FATOU: mcap=$7,068 | gain=+12.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,375 | gain=+2.4% | peak=$6,375 | dd=+0%
+  FATOU: mcap=$7,068 | gain=+12.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,375 | gain=+2.4% | peak=$6,375 | dd=+0%
+  FATOU: mcap=$6,518 | gain=+4.1% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,375 | gain=+2.4% | peak=$6,375 | dd=+0%
+  FATOU: mcap=$6,518 | gain=+4.1% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,375 | gain=+2.4% | peak=$6,375 | dd=+0%
+  FATOU: mcap=$6,518 | gain=+4.1% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,375 | gain=+2.4% | peak=$6,375 | dd=+0%
+  FATOU: mcap=$6,518 | gain=+4.1% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,375 | gain=+2.4% | peak=$6,375 | dd=+0%
+  FATOU: mcap=$6,518 | gain=+4.1% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,885 | gain=+10.5% | peak=$6,885 | dd=+0%
+  FATOU: mcap=$6,518 | gain=+4.1% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,885 | gain=+10.5% | peak=$6,885 | dd=+0%
+  FATOU: mcap=$6,669 | gain=+6.5% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,885 | gain=+10.5% | peak=$6,885 | dd=+0%
+[09:14:01] Monitor alive | 1681 checks | 2 open | next in 5s
+  FATOU: mcap=$6,669 | gain=+6.5% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,885 | gain=+10.5% | peak=$6,885 | dd=+0%
+  FATOU: mcap=$6,669 | gain=+6.5% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,885 | gain=+10.5% | peak=$6,885 | dd=+0%
+  FATOU: mcap=$6,669 | gain=+6.5% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,885 | gain=+10.5% | peak=$6,885 | dd=+0%
+  FATOU: mcap=$6,669 | gain=+6.5% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,326 | gain=+33.7% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,669 | gain=+6.5% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,326 | gain=+33.7% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$7,207 | gain=+15.1% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,326 | gain=+33.7% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$7,207 | gain=+15.1% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,326 | gain=+33.7% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$7,207 | gain=+15.1% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,326 | gain=+33.7% | peak=$8,326 | dd=+0%
+  FATOU: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  AI: error fetching mcap
+[09:15:03] Monitor alive | 1693 checks | 2 open | next in 5s
+  FATOU: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  AI: error fetching mcap
+  FATOU: mcap=$7,158 | gain=+14.3% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,951 | gain=+27.7% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$7,158 | gain=+14.3% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,951 | gain=+27.7% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,878 | gain=+9.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,951 | gain=+27.7% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,878 | gain=+9.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,951 | gain=+27.7% | peak=$8,326 | dd=+0%
+[09:16:04] Monitor alive | 1705 checks | 2 open | next in 5s
+  FATOU: mcap=$6,878 | gain=+9.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,951 | gain=+27.7% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,878 | gain=+9.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,951 | gain=+27.7% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,878 | gain=+9.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,238 | gain=+32.3% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,878 | gain=+9.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,238 | gain=+32.3% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,878 | gain=+9.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,238 | gain=+32.3% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,878 | gain=+9.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,238 | gain=+32.3% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,878 | gain=+9.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,238 | gain=+32.3% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,878 | gain=+9.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,238 | gain=+32.3% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,878 | gain=+9.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,940 | gain=+27.5% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,878 | gain=+9.9% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,940 | gain=+27.5% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,932 | gain=+10.7% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,940 | gain=+27.5% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,932 | gain=+10.7% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,940 | gain=+27.5% | peak=$8,326 | dd=+0%
+[09:17:06] Monitor alive | 1717 checks | 2 open | next in 5s
+  FATOU: mcap=$6,932 | gain=+10.7% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,940 | gain=+27.5% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,932 | gain=+10.7% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,940 | gain=+27.5% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,932 | gain=+10.7% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,730 | gain=+24.1% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,932 | gain=+10.7% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,730 | gain=+24.1% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,906 | gain=+10.3% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,730 | gain=+24.1% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,906 | gain=+10.3% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,730 | gain=+24.1% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,906 | gain=+10.3% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,730 | gain=+24.1% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,906 | gain=+10.3% | peak=$7,413 | dd=+0%
+  AI: mcap=$7,730 | gain=+24.1% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,906 | gain=+10.3% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,242 | gain=+32.3% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,906 | gain=+10.3% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,242 | gain=+32.3% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,906 | gain=+10.3% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,242 | gain=+32.3% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,906 | gain=+10.3% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,242 | gain=+32.3% | peak=$8,326 | dd=+0%
+[09:18:08] Monitor alive | 1729 checks | 2 open | next in 5s
+  FATOU: mcap=$6,906 | gain=+10.3% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,242 | gain=+32.3% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,906 | gain=+10.3% | peak=$7,413 | dd=+0%
+  AI: mcap=$8,242 | gain=+32.3% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,906 | gain=+10.3% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,815 | gain=+9.4% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,906 | gain=+10.3% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,815 | gain=+9.4% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,660 | gain=+6.4% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,815 | gain=+9.4% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,660 | gain=+6.4% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,815 | gain=+9.4% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,660 | gain=+6.4% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,815 | gain=+9.4% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,660 | gain=+6.4% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,815 | gain=+9.4% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,660 | gain=+6.4% | peak=$7,413 | dd=+0%
+  AI: mcap=$5,926 | gain=-4.9% | peak=$8,326 | dd=+0%
+  FATOU: mcap=$6,660 | gain=+6.4% | peak=$7,413 | dd=+0%
+  AI: mcap=$5,926 | gain=-4.9% | peak=$8,326 | dd=+0%
+  Vibeshift: mcap=$9,040 | gain=-19.7% | peak=$11,262 | dd=+0%
+  FATOU: mcap=$6,888 | gain=+10.0% | peak=$7,413 | dd=+0%
+  AI: mcap=$5,926 | gain=-4.9% | peak=$8,326 | dd=+0%
+  Vibeshift: mcap=$9,040 | gain=-19.7% | peak=$11,262 | dd=+0%
+  FATOU: mcap=$6,888 | gain=+10.0% | peak=$7,413 | dd=+0%
+  AI: mcap=$5,926 | gain=-4.9% | peak=$8,326 | dd=+0%
+  Vibeshift: mcap=$11,182 | gain=-0.7% | peak=$11,262 | dd=+0%
+[09:19:09] Monitor alive | 1741 checks | 3 open | next in 5s
+  FATOU: mcap=$6,888 | gain=+10.0% | peak=$7,413 | dd=+0%
+  AI: mcap=$5,926 | gain=-4.9% | peak=$8,326 | dd=+0%
+  Vibeshift: mcap=$11,182 | gain=-0.7% | peak=$11,262 | dd=+0%
+  TANK: mcap=$11,629 | gain=-1.3% | peak=$11,780 | dd=+0%
+  FATOU: mcap=$6,888 | gain=+10.0% | peak=$7,413 | dd=+0%
+  AI: mcap=$5,926 | gain=-4.9% | peak=$8,326 | dd=+0%
+  Vibeshift: mcap=$11,182 | gain=-0.7% | peak=$11,262 | dd=+0%
+  TANK: mcap=$11,629 | gain=-1.3% | peak=$11,780 | dd=+0%
+  FATOU: mcap=$6,888 | gain=+10.0% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,435 | gain=+3.3% | peak=$8,326 | dd=+0%
+  Vibeshift: mcap=$11,182 | gain=-0.7% | peak=$11,262 | dd=+0%
+  TANK: mcap=$11,629 | gain=-1.3% | peak=$11,780 | dd=+0%
+  FATOU: mcap=$6,888 | gain=+10.0% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,435 | gain=+3.3% | peak=$8,326 | dd=+0%
+  Vibeshift: mcap=$11,182 | gain=-0.7% | peak=$11,262 | dd=+0%
+  TANK: mcap=$11,781 | gain=+0.0% | peak=$11,781 | dd=+0%
+  FATOU: mcap=$6,888 | gain=+10.0% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,435 | gain=+3.3% | peak=$8,326 | dd=+0%
+  Vibeshift: mcap=$11,182 | gain=-0.7% | peak=$11,262 | dd=+0%
+  TANK: mcap=$11,781 | gain=+0.0% | peak=$11,781 | dd=+0%
+  FATOU: mcap=$6,888 | gain=+10.0% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,435 | gain=+3.3% | peak=$8,326 | dd=+0%
+  Vibeshift: mcap=$10,409 | gain=-7.6% | peak=$11,262 | dd=+0%
+  TANK: mcap=$11,781 | gain=+0.0% | peak=$11,781 | dd=+0%
+  FATOU: mcap=$6,888 | gain=+10.0% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,435 | gain=+3.3% | peak=$8,326 | dd=+0%
+  Vibeshift: mcap=$10,409 | gain=-7.6% | peak=$11,262 | dd=+0%
+  TANK: mcap=$11,781 | gain=+0.0% | peak=$11,781 | dd=+0%
+  FATOU: mcap=$6,888 | gain=+10.0% | peak=$7,413 | dd=+0%
+  AI: mcap=$6,435 | gain=+3.3% | peak=$8,326 | dd=+0%
+  Vibeshift: mcap=$10,409 | gain=-7.6% | peak=$11,262 | dd=+0%
+  TANK: mcap=$11,781 | gain=+0.0% | peak=$11,781 | dd=+0%
+  FATOU: mcap=$6,888 | gain=+10.0% | peak=$7,413 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 AI STOP LOSS @ $4,752 (-23.7%)
+  Vibeshift: mcap=$10,409 | gain=-7.6% | peak=$11,262 | dd=+0%
+  TANK: mcap=$12,593 | gain=+6.9% | peak=$12,593 | dd=+0%
+  FATOU: mcap=$6,815 | gain=+8.9% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$10,409 | gain=-7.6% | peak=$11,262 | dd=+0%
+  TANK: mcap=$12,593 | gain=+6.9% | peak=$12,593 | dd=+0%
+  FATOU: mcap=$6,815 | gain=+8.9% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$9,998 | gain=-11.2% | peak=$11,262 | dd=+0%
+  TANK: mcap=$12,593 | gain=+6.9% | peak=$12,593 | dd=+0%
+  FATOU: mcap=$6,815 | gain=+8.9% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$9,998 | gain=-11.2% | peak=$11,262 | dd=+0%
+  TANK: mcap=$12,593 | gain=+6.9% | peak=$12,593 | dd=+0%
+[09:20:13] Monitor alive | 1753 checks | 3 open | next in 5s
+  FATOU: mcap=$6,815 | gain=+8.9% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$9,998 | gain=-11.2% | peak=$11,262 | dd=+0%
+  TANK: mcap=$12,593 | gain=+6.9% | peak=$12,593 | dd=+0%
+  FATOU: mcap=$6,815 | gain=+8.9% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$9,998 | gain=-11.2% | peak=$11,262 | dd=+0%
+  TANK: mcap=$12,593 | gain=+6.9% | peak=$12,593 | dd=+0%
+  FATOU: mcap=$6,815 | gain=+8.9% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$9,998 | gain=-11.2% | peak=$11,262 | dd=+0%
+  TANK: mcap=$13,545 | gain=+15.0% | peak=$13,545 | dd=+0%
+  FATOU: mcap=$6,825 | gain=+9.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$9,998 | gain=-11.2% | peak=$11,262 | dd=+0%
+  TANK: mcap=$13,545 | gain=+15.0% | peak=$13,545 | dd=+0%
+  FATOU: mcap=$6,825 | gain=+9.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,368 | gain=+0.9% | peak=$11,368 | dd=+0%
+  TANK: mcap=$13,545 | gain=+15.0% | peak=$13,545 | dd=+0%
+  FATOU: mcap=$6,825 | gain=+9.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,368 | gain=+0.9% | peak=$11,368 | dd=+0%
+  TANK: mcap=$13,545 | gain=+15.0% | peak=$13,545 | dd=+0%
+  FATOU: mcap=$6,825 | gain=+9.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,368 | gain=+0.9% | peak=$11,368 | dd=+0%
+  TANK: mcap=$13,545 | gain=+15.0% | peak=$13,545 | dd=+0%
+  FATOU: mcap=$6,825 | gain=+9.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,368 | gain=+0.9% | peak=$11,368 | dd=+0%
+  TANK: mcap=$13,545 | gain=+15.0% | peak=$13,545 | dd=+0%
+  FATOU: mcap=$6,825 | gain=+9.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,368 | gain=+0.9% | peak=$11,368 | dd=+0%
+  TANK: mcap=$13,698 | gain=+16.3% | peak=$13,698 | dd=+0%
+  FATOU: mcap=$6,779 | gain=+8.3% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,368 | gain=+0.9% | peak=$11,368 | dd=+0%
+  TANK: mcap=$13,698 | gain=+16.3% | peak=$13,698 | dd=+0%
+  FATOU: mcap=$6,779 | gain=+8.3% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,133 | gain=-1.1% | peak=$11,368 | dd=+0%
+  TANK: mcap=$13,698 | gain=+16.3% | peak=$13,698 | dd=+0%
+  FATOU: mcap=$6,779 | gain=+8.3% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,133 | gain=-1.1% | peak=$11,368 | dd=+0%
+  TANK: mcap=$13,698 | gain=+16.3% | peak=$13,698 | dd=+0%
+[09:21:15] Monitor alive | 1765 checks | 3 open | next in 5s
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  FATOU: mcap=$7,010 | gain=+12.0% | peak=$7,413 | dd=+0%
+  Vibeshift: error fetching mcap
+  TANK: mcap=$15,094 | gain=+28.1% | peak=$15,094 | dd=+0%
+  Busted: mcap=$5,582 | gain=-0.2% | peak=$5,591 | dd=+0%
+[09:22:18] Monitor alive | 1777 checks | 4 open | next in 5s
+  FATOU: mcap=$7,010 | gain=+12.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,706 | gain=+3.9% | peak=$11,706 | dd=+0%
+  TANK: mcap=$15,094 | gain=+28.1% | peak=$15,094 | dd=+0%
+  Busted: mcap=$5,582 | gain=-0.2% | peak=$5,591 | dd=+0%
+  FATOU: mcap=$7,010 | gain=+12.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,706 | gain=+3.9% | peak=$11,706 | dd=+0%
+  TANK: mcap=$15,094 | gain=+28.1% | peak=$15,094 | dd=+0%
+  Busted: mcap=$5,582 | gain=-0.2% | peak=$5,591 | dd=+0%
+  FATOU: mcap=$7,010 | gain=+12.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,706 | gain=+3.9% | peak=$11,706 | dd=+0%
+  TANK: mcap=$15,240 | gain=+29.4% | peak=$15,240 | dd=+0%
+  Busted: mcap=$5,522 | gain=-1.2% | peak=$5,591 | dd=+0%
+  FATOU: mcap=$7,010 | gain=+12.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,703 | gain=+3.9% | peak=$11,706 | dd=+0%
+  TANK: mcap=$15,240 | gain=+29.4% | peak=$15,240 | dd=+0%
+  Busted: mcap=$5,522 | gain=-1.2% | peak=$5,591 | dd=+0%
+  FATOU: mcap=$7,010 | gain=+12.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,703 | gain=+3.9% | peak=$11,706 | dd=+0%
+  TANK: mcap=$15,240 | gain=+29.4% | peak=$15,240 | dd=+0%
+  Busted: mcap=$5,522 | gain=-1.2% | peak=$5,591 | dd=+0%
+  FATOU: mcap=$7,010 | gain=+12.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,703 | gain=+3.9% | peak=$11,706 | dd=+0%
+  TANK: mcap=$15,240 | gain=+29.4% | peak=$15,240 | dd=+0%
+  Busted: mcap=$5,522 | gain=-1.2% | peak=$5,591 | dd=+0%
+  FATOU: mcap=$7,010 | gain=+12.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,703 | gain=+3.9% | peak=$11,706 | dd=+0%
+  TANK: mcap=$15,240 | gain=+29.4% | peak=$15,240 | dd=+0%
+  Busted: mcap=$5,522 | gain=-1.2% | peak=$5,591 | dd=+0%
+  FATOU: mcap=$7,010 | gain=+12.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,703 | gain=+3.9% | peak=$11,706 | dd=+0%
+  TANK: mcap=$15,383 | gain=+30.6% | peak=$15,383 | dd=+0%
+  Busted: mcap=$5,522 | gain=-1.2% | peak=$5,591 | dd=+0%
+  FATOU: mcap=$7,075 | gain=+13.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$11,703 | gain=+3.9% | peak=$11,706 | dd=+0%
+  TANK: mcap=$15,383 | gain=+30.6% | peak=$15,383 | dd=+0%
+  Busted: mcap=$6,852 | gain=+22.6% | peak=$6,852 | dd=+0%
+  FATOU: mcap=$7,075 | gain=+13.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$13,847 | gain=+23.0% | peak=$13,847 | dd=+0%
+  TANK: mcap=$15,383 | gain=+30.6% | peak=$15,383 | dd=+0%
+  Busted: mcap=$6,852 | gain=+22.6% | peak=$6,852 | dd=+0%
+  FATOU: mcap=$7,075 | gain=+13.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$13,847 | gain=+23.0% | peak=$13,847 | dd=+0%
+  TANK: mcap=$15,383 | gain=+30.6% | peak=$15,383 | dd=+0%
+  Busted: mcap=$6,852 | gain=+22.6% | peak=$6,852 | dd=+0%
+  FATOU: mcap=$7,075 | gain=+13.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$13,847 | gain=+23.0% | peak=$13,847 | dd=+0%
+  TANK: mcap=$15,383 | gain=+30.6% | peak=$15,383 | dd=+0%
+  Busted: mcap=$6,852 | gain=+22.6% | peak=$6,852 | dd=+0%
+  AI: mcap=$14,693 | gain=-8.0% | peak=$15,965 | dd=+0%
+[09:23:21] Monitor alive | 1789 checks | 5 open | next in 5s
+  FATOU: mcap=$7,075 | gain=+13.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$13,847 | gain=+23.0% | peak=$13,847 | dd=+0%
+  TANK: mcap=$15,383 | gain=+30.6% | peak=$15,383 | dd=+0%
+  Busted: mcap=$6,852 | gain=+22.6% | peak=$6,852 | dd=+0%
+  AI: mcap=$14,693 | gain=-8.0% | peak=$15,965 | dd=+0%
+  FATOU: mcap=$7,075 | gain=+13.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$13,847 | gain=+23.0% | peak=$13,847 | dd=+0%
+  TANK: mcap=$16,073 | gain=+36.4% | peak=$16,073 | dd=+0%
+  Busted: mcap=$6,852 | gain=+22.6% | peak=$6,852 | dd=+0%
+  AI: mcap=$14,395 | gain=-9.8% | peak=$15,965 | dd=+0%
+  FATOU: mcap=$7,107 | gain=+13.5% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$13,847 | gain=+23.0% | peak=$13,847 | dd=+0%
+  TANK: mcap=$16,073 | gain=+36.4% | peak=$16,073 | dd=+0%
+  Busted: mcap=$6,865 | gain=+22.8% | peak=$6,865 | dd=+0%
+  AI: mcap=$14,395 | gain=-9.8% | peak=$15,965 | dd=+0%
+  FATOU: mcap=$7,107 | gain=+13.5% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$14,062 | gain=+24.9% | peak=$14,062 | dd=+0%
+  TANK: mcap=$16,073 | gain=+36.4% | peak=$16,073 | dd=+0%
+  Busted: mcap=$6,865 | gain=+22.8% | peak=$6,865 | dd=+0%
+  AI: mcap=$14,395 | gain=-9.8% | peak=$15,965 | dd=+0%
+  FATOU: mcap=$7,107 | gain=+13.5% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$14,062 | gain=+24.9% | peak=$14,062 | dd=+0%
+  TANK: mcap=$16,073 | gain=+36.4% | peak=$16,073 | dd=+0%
+  Busted: mcap=$6,865 | gain=+22.8% | peak=$6,865 | dd=+0%
+  AI: mcap=$14,395 | gain=-9.8% | peak=$15,965 | dd=+0%
+  FATOU: mcap=$7,107 | gain=+13.5% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$14,062 | gain=+24.9% | peak=$14,062 | dd=+0%
+  TANK: mcap=$16,073 | gain=+36.4% | peak=$16,073 | dd=+0%
+  Busted: mcap=$6,865 | gain=+22.8% | peak=$6,865 | dd=+0%
+  AI: mcap=$14,395 | gain=-9.8% | peak=$15,965 | dd=+0%
+  FATOU: mcap=$7,107 | gain=+13.5% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$14,062 | gain=+24.9% | peak=$14,062 | dd=+0%
+  TANK: mcap=$16,073 | gain=+36.4% | peak=$16,073 | dd=+0%
+  Busted: mcap=$6,865 | gain=+22.8% | peak=$6,865 | dd=+0%
+  AI: mcap=$17,499 | gain=+9.6% | peak=$17,499 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$14,062 | gain=+24.9% | peak=$14,062 | dd=+0%
+  TANK: mcap=$16,291 | gain=+38.3% | peak=$16,291 | dd=+0%
+  Busted: mcap=$6,865 | gain=+22.8% | peak=$6,865 | dd=+0%
+  AI: mcap=$17,499 | gain=+9.6% | peak=$17,499 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$14,062 | gain=+24.9% | peak=$14,062 | dd=+0%
+  TANK: mcap=$16,291 | gain=+38.3% | peak=$16,291 | dd=+0%
+  Busted: mcap=$6,834 | gain=+22.2% | peak=$6,865 | dd=+0%
+  AI: mcap=$17,499 | gain=+9.6% | peak=$17,499 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$14,427 | gain=+28.1% | peak=$14,427 | dd=+0%
+  TANK: mcap=$16,291 | gain=+38.3% | peak=$16,291 | dd=+0%
+  Busted: mcap=$6,834 | gain=+22.2% | peak=$6,865 | dd=+0%
+  AI: mcap=$17,499 | gain=+9.6% | peak=$17,499 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$14,427 | gain=+28.1% | peak=$14,427 | dd=+0%
+  TANK: mcap=$16,291 | gain=+38.3% | peak=$16,291 | dd=+0%
+  Busted: mcap=$6,834 | gain=+22.2% | peak=$6,865 | dd=+0%
+  AI: mcap=$17,499 | gain=+9.6% | peak=$17,499 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$14,427 | gain=+28.1% | peak=$14,427 | dd=+0%
+  TANK: mcap=$16,291 | gain=+38.3% | peak=$16,291 | dd=+0%
+  Busted: mcap=$6,834 | gain=+22.2% | peak=$6,865 | dd=+0%
+  AI: mcap=$17,499 | gain=+9.6% | peak=$17,499 | dd=+0%
+[09:24:25] Monitor alive | 1801 checks | 5 open | next in 5s
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$14,427 | gain=+28.1% | peak=$14,427 | dd=+0%
+  TANK: mcap=$16,291 | gain=+38.3% | peak=$16,291 | dd=+0%
+  Busted: mcap=$6,834 | gain=+22.2% | peak=$6,865 | dd=+0%
+  AI: mcap=$17,692 | gain=+10.8% | peak=$17,692 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$14,427 | gain=+28.1% | peak=$14,427 | dd=+0%
+  TANK: mcap=$17,342 | gain=+47.2% | peak=$17,342 | dd=+0%
+  Busted: mcap=$6,834 | gain=+22.2% | peak=$6,865 | dd=+0%
+  AI: mcap=$17,692 | gain=+10.8% | peak=$17,692 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$15,223 | gain=+35.2% | peak=$15,223 | dd=+0%
+  TANK: mcap=$17,342 | gain=+47.2% | peak=$17,342 | dd=+0%
+  Busted: mcap=$6,834 | gain=+22.2% | peak=$6,865 | dd=+0%
+  AI: mcap=$17,692 | gain=+10.8% | peak=$17,692 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$15,223 | gain=+35.2% | peak=$15,223 | dd=+0%
+  TANK: mcap=$17,342 | gain=+47.2% | peak=$17,342 | dd=+0%
+  Busted: mcap=$6,834 | gain=+22.2% | peak=$6,865 | dd=+0%
+  AI: mcap=$17,692 | gain=+10.8% | peak=$17,692 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$15,223 | gain=+35.2% | peak=$15,223 | dd=+0%
+  TANK: mcap=$17,342 | gain=+47.2% | peak=$17,342 | dd=+0%
+  Busted: mcap=$6,834 | gain=+22.2% | peak=$6,865 | dd=+0%
+  AI: mcap=$17,692 | gain=+10.8% | peak=$17,692 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$15,223 | gain=+35.2% | peak=$15,223 | dd=+0%
+  TANK: mcap=$17,342 | gain=+47.2% | peak=$17,342 | dd=+0%
+  Busted: mcap=$6,834 | gain=+22.2% | peak=$6,865 | dd=+0%
+  AI: mcap=$17,692 | gain=+10.8% | peak=$17,692 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$15,223 | gain=+35.2% | peak=$15,223 | dd=+0%
+  TANK: mcap=$17,523 | gain=+48.7% | peak=$17,523 | dd=+0%
+  Busted: mcap=$6,834 | gain=+22.2% | peak=$6,865 | dd=+0%
+  AI: mcap=$18,976 | gain=+18.9% | peak=$18,976 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$15,223 | gain=+35.2% | peak=$15,223 | dd=+0%
+  TANK: mcap=$17,523 | gain=+48.7% | peak=$17,523 | dd=+0%
+  Busted: mcap=$6,396 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$18,976 | gain=+18.9% | peak=$18,976 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$16,033 | gain=+42.4% | peak=$16,033 | dd=+0%
+  TANK: mcap=$17,523 | gain=+48.7% | peak=$17,523 | dd=+0%
+  Busted: mcap=$6,396 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$18,976 | gain=+18.9% | peak=$18,976 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$16,033 | gain=+42.4% | peak=$16,033 | dd=+0%
+  TANK: mcap=$17,523 | gain=+48.7% | peak=$17,523 | dd=+0%
+  Busted: mcap=$6,396 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$18,976 | gain=+18.9% | peak=$18,976 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$16,033 | gain=+42.4% | peak=$16,033 | dd=+0%
+  TANK: mcap=$17,523 | gain=+48.7% | peak=$17,523 | dd=+0%
+  Busted: mcap=$6,396 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$18,976 | gain=+18.9% | peak=$18,976 | dd=+0%
+  FATOU: mcap=$7,188 | gain=+14.8% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$16,033 | gain=+42.4% | peak=$16,033 | dd=+0%
+  TANK: mcap=$17,523 | gain=+48.7% | peak=$17,523 | dd=+0%
+  Busted: mcap=$6,396 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$18,121 | gain=+13.5% | peak=$18,976 | dd=+0%
+[09:25:29] Monitor alive | 1813 checks | 5 open | next in 5s
+  FATOU: mcap=$6,701 | gain=+7.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$16,033 | gain=+42.4% | peak=$16,033 | dd=+0%
+  TANK: mcap=$17,643 | gain=+49.8% | peak=$17,643 | dd=+0%
+  Busted: mcap=$6,396 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$18,121 | gain=+13.5% | peak=$18,976 | dd=+0%
+  FATOU: mcap=$6,701 | gain=+7.0% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$16,033 | gain=+42.4% | peak=$16,033 | dd=+0%
+  TANK: mcap=$17,643 | gain=+49.8% | peak=$17,643 | dd=+0%
+  Busted: mcap=$6,396 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$18,121 | gain=+13.5% | peak=$18,976 | dd=+0%
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+[09:26:32] Monitor alive | 1825 checks | 5 open | next in 5s
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: mcap=$6,753 | gain=+7.9% | peak=$7,413 | dd=+0%
+[TP1_HOLD] Alert sent
+🚀 Vibeshift TP1 HIT - HOLDING @ $23,843 (+111.7%)
+[TP1_HOLD] Alert sent
+🚀 TANK TP1 HIT - HOLDING @ $18,030 (+53.1%)
+  Busted: mcap=$6,396 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$21,272 | gain=+33.2% | peak=$21,272 | dd=+0%
+  FATOU: mcap=$6,753 | gain=+7.9% | peak=$7,413 | dd=+0%
+[TP2] Alert sent
+✅ Vibeshift TP2 HIT @ $23,843 (+112%)
+  TANK: mcap=$18,030 | gain=+53.1% | peak=$18,030 | dd=+0%
+  Busted: mcap=$6,396 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$21,272 | gain=+33.2% | peak=$21,272 | dd=+0%
+  FATOU: mcap=$6,753 | gain=+7.9% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$23,843 | gain=+111.7% | peak=$23,843 | dd=+0%
+  TANK: mcap=$18,030 | gain=+53.1% | peak=$18,030 | dd=+0%
+  Busted: mcap=$6,396 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$21,272 | gain=+33.2% | peak=$21,272 | dd=+0%
+  FATOU: mcap=$6,753 | gain=+7.9% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$23,843 | gain=+111.7% | peak=$23,843 | dd=+0%
+  TANK: mcap=$18,030 | gain=+53.1% | peak=$18,030 | dd=+0%
+  Busted: mcap=$6,396 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$22,287 | gain=+39.6% | peak=$22,287 | dd=+0%
+  FATOU: mcap=$7,034 | gain=+12.4% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$23,843 | gain=+111.7% | peak=$23,843 | dd=+0%
+  TANK: mcap=$18,717 | gain=+58.9% | peak=$18,717 | dd=-4%
+  Busted: mcap=$6,398 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$22,287 | gain=+39.6% | peak=$22,287 | dd=+0%
+  FATOU: mcap=$7,034 | gain=+12.4% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$22,400 | gain=+98.9% | peak=$23,843 | dd=+6%
+  TANK: mcap=$18,717 | gain=+58.9% | peak=$18,717 | dd=-4%
+  Busted: mcap=$6,398 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$22,287 | gain=+39.6% | peak=$22,287 | dd=+0%
+  FATOU: mcap=$7,034 | gain=+12.4% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$22,400 | gain=+98.9% | peak=$23,843 | dd=+6%
+  TANK: mcap=$18,717 | gain=+58.9% | peak=$18,717 | dd=-4%
+  Busted: mcap=$6,398 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$22,287 | gain=+39.6% | peak=$22,287 | dd=+0%
+  FATOU: mcap=$7,034 | gain=+12.4% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$22,400 | gain=+98.9% | peak=$23,843 | dd=+6%
+  TANK: mcap=$18,717 | gain=+58.9% | peak=$18,717 | dd=-4%
+  Busted: mcap=$6,398 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$22,287 | gain=+39.6% | peak=$22,287 | dd=+0%
+  FATOU: mcap=$7,034 | gain=+12.4% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$22,400 | gain=+98.9% | peak=$23,843 | dd=+6%
+  TANK: mcap=$18,717 | gain=+58.9% | peak=$18,717 | dd=-4%
+  Busted: mcap=$6,398 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$22,287 | gain=+39.6% | peak=$22,287 | dd=+0%
+  FATOU: mcap=$7,034 | gain=+12.4% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$22,400 | gain=+98.9% | peak=$23,843 | dd=+6%
+  TANK: mcap=$18,717 | gain=+58.9% | peak=$18,717 | dd=-4%
+  Busted: mcap=$6,398 | gain=+14.4% | peak=$6,865 | dd=+0%
+  AI: mcap=$23,000 | gain=+44.1% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,149 | gain=+14.2% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$22,400 | gain=+98.9% | peak=$23,843 | dd=+6%
+  TANK: mcap=$19,711 | gain=+67.3% | peak=$19,711 | dd=-9%
+  Busted: mcap=$6,092 | gain=+9.0% | peak=$6,865 | dd=+0%
+  AI: mcap=$23,000 | gain=+44.1% | peak=$23,000 | dd=+0%
+[09:27:37] Monitor alive | 1837 checks | 4 open | next in 5s
+  FATOU: mcap=$7,149 | gain=+14.2% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$21,796 | gain=+93.5% | peak=$23,843 | dd=+9%
+  TANK: mcap=$19,711 | gain=+67.3% | peak=$19,711 | dd=-9%
+  Busted: mcap=$6,092 | gain=+9.0% | peak=$6,865 | dd=+0%
+  AI: mcap=$23,000 | gain=+44.1% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,149 | gain=+14.2% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$21,796 | gain=+93.5% | peak=$23,843 | dd=+9%
+  TANK: mcap=$19,711 | gain=+67.3% | peak=$19,711 | dd=-9%
+  Busted: mcap=$6,092 | gain=+9.0% | peak=$6,865 | dd=+0%
+  AI: mcap=$23,000 | gain=+44.1% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,149 | gain=+14.2% | peak=$7,413 | dd=+0%
+  Vibeshift: mcap=$21,796 | gain=+93.5% | peak=$23,843 | dd=+9%
+  TANK: mcap=$19,711 | gain=+67.3% | peak=$19,711 | dd=-9%
+  Busted: mcap=$6,092 | gain=+9.0% | peak=$6,865 | dd=+0%
+  AI: mcap=$23,000 | gain=+44.1% | peak=$23,000 | dd=+0%
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+[09:28:42] Monitor alive | 1849 checks | 4 open | next in 5s
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: error fetching mcap
+  Vibeshift: error fetching mcap
+  TANK: error fetching mcap
+  Busted: error fetching mcap
+  AI: error fetching mcap
+  FATOU: mcap=$7,350 | gain=+17.4% | peak=$7,413 | dd=+0%
+[TRAILING_STOP] Alert sent
+✅ Vibeshift TRAILING STOP @ $15,112 (37% drop from peak)
+  TANK: mcap=$20,073 | gain=+70.4% | peak=$20,073 | dd=-11%
+  Busted: mcap=$7,500 | gain=+34.1% | peak=$7,500 | dd=+0%
+  AI: mcap=$18,556 | gain=+16.2% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,350 | gain=+17.4% | peak=$7,413 | dd=+0%
+  TANK: mcap=$20,073 | gain=+70.4% | peak=$20,073 | dd=-11%
+  Busted: mcap=$7,500 | gain=+34.1% | peak=$7,500 | dd=+0%
+  AI: mcap=$15,668 | gain=-1.9% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,350 | gain=+17.4% | peak=$7,413 | dd=+0%
+  TANK: mcap=$20,226 | gain=+71.7% | peak=$20,226 | dd=-12%
+  Busted: mcap=$7,503 | gain=+34.2% | peak=$7,503 | dd=+0%
+  AI: mcap=$15,668 | gain=-1.9% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,350 | gain=+17.4% | peak=$7,413 | dd=+0%
+  TANK: mcap=$20,226 | gain=+71.7% | peak=$20,226 | dd=-12%
+  Busted: mcap=$7,503 | gain=+34.2% | peak=$7,503 | dd=+0%
+  AI: mcap=$15,668 | gain=-1.9% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,350 | gain=+17.4% | peak=$7,413 | dd=+0%
+  TANK: mcap=$20,226 | gain=+71.7% | peak=$20,226 | dd=-12%
+  Busted: mcap=$7,503 | gain=+34.2% | peak=$7,503 | dd=+0%
+  AI: mcap=$15,668 | gain=-1.9% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,350 | gain=+17.4% | peak=$7,413 | dd=+0%
+  TANK: mcap=$20,226 | gain=+71.7% | peak=$20,226 | dd=-12%
+  Busted: mcap=$7,503 | gain=+34.2% | peak=$7,503 | dd=+0%
+  AI: mcap=$15,668 | gain=-1.9% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,350 | gain=+17.4% | peak=$7,413 | dd=+0%
+  TANK: mcap=$20,226 | gain=+71.7% | peak=$20,226 | dd=-12%
+  Busted: mcap=$7,503 | gain=+34.2% | peak=$7,503 | dd=+0%
+  AI: mcap=$14,903 | gain=-6.7% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,231 | gain=+15.5% | peak=$7,413 | dd=+0%
+  TANK: mcap=$20,226 | gain=+71.7% | peak=$20,226 | dd=-12%
+  Busted: mcap=$7,503 | gain=+34.2% | peak=$7,503 | dd=+0%
+  AI: mcap=$14,903 | gain=-6.7% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,231 | gain=+15.5% | peak=$7,413 | dd=+0%
+  TANK: mcap=$20,403 | gain=+73.2% | peak=$20,403 | dd=-13%
+  Busted: mcap=$7,503 | gain=+34.2% | peak=$7,503 | dd=+0%
+  AI: mcap=$14,903 | gain=-6.7% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,231 | gain=+15.5% | peak=$7,413 | dd=+0%
+  TANK: mcap=$20,403 | gain=+73.2% | peak=$20,403 | dd=-13%
+  Busted: mcap=$7,503 | gain=+34.2% | peak=$7,503 | dd=+0%
+  AI: mcap=$14,903 | gain=-6.7% | peak=$23,000 | dd=+0%
+[09:29:45] Monitor alive | 1861 checks | 4 open | next in 5s
+  FATOU: mcap=$7,231 | gain=+15.5% | peak=$7,413 | dd=+0%
+  TANK: mcap=$20,403 | gain=+73.2% | peak=$20,403 | dd=-13%
+  Busted: mcap=$7,503 | gain=+34.2% | peak=$7,503 | dd=+0%
+  AI: mcap=$14,903 | gain=-6.7% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,231 | gain=+15.5% | peak=$7,413 | dd=+0%
+  TANK: mcap=$20,403 | gain=+73.2% | peak=$20,403 | dd=-13%
+  Busted: mcap=$7,503 | gain=+34.2% | peak=$7,503 | dd=+0%
+  AI: mcap=$14,903 | gain=-6.7% | peak=$23,000 | dd=+0%
+  FATOU: mcap=$7,231 | gain=+15.5% | peak=$7,413 | dd=+0%
+  TANK: mcap=$20,403 | gain=+73.2% | peak=$20,403 | dd=-13%
+  Busted: mcap=$7,503 | gain=+34.2% | peak=$7,503 | dd=+0%
+  AI: mcap=$13,104 | gain=-17.9% | peak=$23,000 | dd=+0%
