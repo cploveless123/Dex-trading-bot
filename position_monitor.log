@@ -8779,3 +8779,156 @@ Checking every 5s
   Avatar : error fetching mcap
   DUKE: error fetching mcap
   Avatar : error fetching mcap
+  DUKE: mcap=$17,017 | gain=+30.6% | peak=$22,724 | dd=+15%
+  Avatar : mcap=$14,429 | gain=+95.3% | peak=$15,333 | dd=-18%
+  DUKE: mcap=$17,017 | gain=+30.6% | peak=$22,724 | dd=+15%
+  Avatar : mcap=$14,429 | gain=+95.3% | peak=$15,333 | dd=-18%
+  DUKE: mcap=$17,017 | gain=+30.6% | peak=$22,724 | dd=+15%
+  Avatar : mcap=$14,429 | gain=+95.3% | peak=$15,333 | dd=-18%
+[14:00:16] Monitor alive | 925 checks | 1 open | next in 5s
+  DUKE: mcap=$17,017 | gain=+30.6% | peak=$22,724 | dd=+15%
+  Avatar : mcap=$14,429 | gain=+95.3% | peak=$15,333 | dd=-18%
+  DUKE: mcap=$17,304 | gain=+32.8% | peak=$22,724 | dd=+14%
+  Avatar : mcap=$12,196 | gain=+65.1% | peak=$15,333 | dd=+0%
+  DUKE: mcap=$17,304 | gain=+32.8% | peak=$22,724 | dd=+14%
+  Avatar : mcap=$12,196 | gain=+65.1% | peak=$15,333 | dd=+0%
+  DUKE: mcap=$17,304 | gain=+32.8% | peak=$22,724 | dd=+14%
+  Avatar : mcap=$12,196 | gain=+65.1% | peak=$15,333 | dd=+0%
+  DUKE: mcap=$17,304 | gain=+32.8% | peak=$22,724 | dd=+14%
+  Avatar : mcap=$12,196 | gain=+65.1% | peak=$15,333 | dd=+0%
+  DUKE: mcap=$17,304 | gain=+32.8% | peak=$22,724 | dd=+14%
+  Avatar : mcap=$12,196 | gain=+65.1% | peak=$15,333 | dd=+0%
+  DUKE: mcap=$16,891 | gain=+29.7% | peak=$22,724 | dd=+16%
+  Avatar : mcap=$12,196 | gain=+65.1% | peak=$15,333 | dd=+0%
+  DUKE: mcap=$16,891 | gain=+29.7% | peak=$22,724 | dd=+16%
+  Avatar : mcap=$12,364 | gain=+67.4% | peak=$15,333 | dd=-1%
+  DUKE: mcap=$16,891 | gain=+29.7% | peak=$22,724 | dd=+16%
+  Avatar : mcap=$12,364 | gain=+67.4% | peak=$15,333 | dd=-1%
+  DUKE: mcap=$16,891 | gain=+29.7% | peak=$22,724 | dd=+16%
+  Avatar : mcap=$12,364 | gain=+67.4% | peak=$15,333 | dd=-1%
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+[14:01:18] Monitor alive | 937 checks | 1 open | next in 5s
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: error fetching mcap
+  Avatar : error fetching mcap
+  DUKE: mcap=$16,231 | gain=+24.6% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$13,289 | gain=+79.9% | peak=$15,333 | dd=-8%
+  DUKE: mcap=$16,231 | gain=+24.6% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$13,289 | gain=+79.9% | peak=$15,333 | dd=-8%
+[14:02:20] Monitor alive | 949 checks | 1 open | next in 5s
+  DUKE: mcap=$16,231 | gain=+24.6% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$13,289 | gain=+79.9% | peak=$15,333 | dd=-8%
+  DUKE: mcap=$16,231 | gain=+24.6% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$12,706 | gain=+72.0% | peak=$15,333 | dd=-4%
+  DUKE: mcap=$16,231 | gain=+24.6% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$12,706 | gain=+72.0% | peak=$15,333 | dd=-4%
+  DUKE: mcap=$16,231 | gain=+24.6% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$12,706 | gain=+72.0% | peak=$15,333 | dd=-4%
+  DUKE: mcap=$16,231 | gain=+24.6% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$12,706 | gain=+72.0% | peak=$15,333 | dd=-4%
+  DUKE: mcap=$16,231 | gain=+24.6% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$12,706 | gain=+72.0% | peak=$15,333 | dd=-4%
+  DUKE: mcap=$16,352 | gain=+25.5% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$12,706 | gain=+72.0% | peak=$15,333 | dd=-4%
+  DUKE: mcap=$16,352 | gain=+25.5% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$12,822 | gain=+73.6% | peak=$15,333 | dd=-5%
+  DUKE: mcap=$16,352 | gain=+25.5% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$12,822 | gain=+73.6% | peak=$15,333 | dd=-5%
+  DUKE: mcap=$16,352 | gain=+25.5% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$12,822 | gain=+73.6% | peak=$15,333 | dd=-5%
+  DUKE: mcap=$16,352 | gain=+25.5% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$12,822 | gain=+73.6% | peak=$15,333 | dd=-5%
+  DUKE: mcap=$16,352 | gain=+25.5% | peak=$22,724 | dd=+19%
+  Avatar : mcap=$12,822 | gain=+73.6% | peak=$15,333 | dd=-5%
+[14:03:22] Monitor alive | 961 checks | 1 open | next in 5s
+[TRAILING_STOP] Alert sent
+✅ DUKE TRAILING STOP @ $12,504 (45% drop from peak)
+  Avatar : mcap=$12,822 | gain=+73.6% | peak=$15,333 | dd=-5%
+  Avatar : mcap=$12,822 | gain=+73.6% | peak=$15,333 | dd=-5%
+  Avatar : mcap=$12,822 | gain=+73.6% | peak=$15,333 | dd=-5%
+  Avatar : mcap=$12,822 | gain=+73.6% | peak=$15,333 | dd=-5%
+  Avatar : mcap=$12,822 | gain=+73.6% | peak=$15,333 | dd=-5%
+  Avatar : mcap=$12,822 | gain=+73.6% | peak=$15,333 | dd=-5%
+  Avatar : mcap=$12,822 | gain=+73.6% | peak=$15,333 | dd=-5%
+  Avatar : mcap=$12,603 | gain=+70.6% | peak=$15,333 | dd=-3%
+  Avatar : mcap=$12,603 | gain=+70.6% | peak=$15,333 | dd=-3%
+  Avatar : mcap=$12,603 | gain=+70.6% | peak=$15,333 | dd=-3%
+  Avatar : mcap=$12,603 | gain=+70.6% | peak=$15,333 | dd=-3%
+  Avatar : mcap=$12,603 | gain=+70.6% | peak=$15,333 | dd=-3%
+[14:04:23] Monitor alive | 973 checks | 0 open | next in 5s
+  Avatar : mcap=$12,603 | gain=+70.6% | peak=$15,333 | dd=-3%
+  Avatar : error fetching mcap
+  Avatar : error fetching mcap
+  Avatar : error fetching mcap
+  Avatar : error fetching mcap
+  Avatar : error fetching mcap
+  Avatar : error fetching mcap
+  Avatar : error fetching mcap
+  Avatar : error fetching mcap
+  Avatar : error fetching mcap
+  Avatar : error fetching mcap
+  Avatar : error fetching mcap
+[14:05:24] Monitor alive | 985 checks | 0 open | next in 5s
+  Avatar : error fetching mcap
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+[14:06:25] Monitor alive | 997 checks | 0 open | next in 5s
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+  Avatar : mcap=$11,256 | gain=+52.4% | peak=$15,333 | dd=+8%
+[TRAILING_STOP] Alert sent
+✅ Avatar  TRAILING STOP @ $9,583 (38% drop from peak)
+[14:07:26] Monitor alive | 1009 checks | 0 open | next in 5s
+[14:08:26] Monitor alive | 1021 checks | 0 open | next in 5s
+[14:09:26] Monitor alive | 1033 checks | 0 open | next in 5s
+  JOBLESS: mcap=$18,504 | gain=-0.1% | peak=$18,516 | dd=+0%
+  JOBLESS: mcap=$18,504 | gain=-0.1% | peak=$18,516 | dd=+0%
+  JOBLESS: mcap=$18,504 | gain=-0.1% | peak=$18,516 | dd=+0%
+  JOBLESS: mcap=$18,504 | gain=-0.1% | peak=$18,516 | dd=+0%
+  JOBLESS: mcap=$18,796 | gain=+1.5% | peak=$18,796 | dd=+0%
+  JOBLESS: mcap=$18,796 | gain=+1.5% | peak=$18,796 | dd=+0%
+  JOBLESS: mcap=$18,796 | gain=+1.5% | peak=$18,796 | dd=+0%
+  JOBLESS: mcap=$18,796 | gain=+1.5% | peak=$18,796 | dd=+0%
+  JOBLESS: mcap=$18,796 | gain=+1.5% | peak=$18,796 | dd=+0%
+[14:10:27] Monitor alive | 1045 checks | 1 open | next in 5s
+  JOBLESS: mcap=$18,796 | gain=+1.5% | peak=$18,796 | dd=+0%
+  JOBLESS: mcap=$18,231 | gain=-1.5% | peak=$18,796 | dd=+0%
+  JOBLESS: mcap=$18,231 | gain=-1.5% | peak=$18,796 | dd=+0%
+  JOBLESS: mcap=$18,231 | gain=-1.5% | peak=$18,796 | dd=+0%
+  JOBLESS: mcap=$18,231 | gain=-1.5% | peak=$18,796 | dd=+0%
+  JOBLESS: mcap=$18,231 | gain=-1.5% | peak=$18,796 | dd=+0%
+  JOBLESS: mcap=$18,231 | gain=-1.5% | peak=$18,796 | dd=+0%
+  JOBLESS: mcap=$17,385 | gain=-6.1% | peak=$18,796 | dd=+0%
+[14:11:28] Monitor alive | 1057 checks | 0 open | next in 5s
