@@ -62,7 +62,7 @@ def gmgn_query(cmd, timeout=15):
     return None
 
 def get_gmgn_trending(limit=50):
-    d = gmgn_query(['gmgn-cli', 'market', 'trending', '--chain', 'sol', '--interval', '2m', '--limit', str(limit)])
+    d = gmgn_query(['gmgn-cli', 'market', 'trending', '--chain', 'sol', '--interval', '5m', '--limit', str(limit)])
     return d.get('data', {}).get('rank', []) if d else []
 
 def get_gmgn_new_pairs(limit=30):
@@ -74,7 +74,7 @@ def get_gmgn_new_pairs(limit=30):
     return pairs
 
 def get_gmgn_pumpfun_lowcap(limit=30):
-    d = gmgn_query(['gmgn-cli', 'market', 'trending', '--chain', 'sol', '--interval', '2m', '--limit', str(limit),
+    d = gmgn_query(['gmgn-cli', 'market', 'trending', '--chain', 'sol', '--interval', '5m', '--limit', str(limit),
                     '--platform', 'Pump.fun', '--order-by', 'marketcap', '--direction', 'asc'])
     return d.get('data', {}).get('rank', []) if d else []
 
@@ -172,8 +172,6 @@ def scan_token(gmgn_data, dex_data):
         vol5m = volume / 12
     bs_ratio = float(merged.get('buy_sell_ratio', 0) or 0)
     launchpad = str(merged.get('launchpad', '') or '').lower()
-    pair_address = str(merged.get('pair_address', '') or '').lower()
-    
     # Mcap check
     if mcap < MIN_MCAP: return None, f"mcap ${mcap:,.0f} < ${MIN_MCAP:,}"
     if mcap > MAX_MCAP: return None, f"mcap ${mcap:,.0f} > ${MAX_MCAP:,}"
@@ -192,16 +190,14 @@ def scan_token(gmgn_data, dex_data):
     if h1 < H1_MOMENTUM_MIN and h24 < H24_MOMENTUM_MIN: return None, f"no momentum (h1={h1:+.1f}% 24h={h24:+.1f}%)"
     
     # Exchange validation
-    if launchpad not in ALLOWED_EXCHANGES: return None, f"exchange {launchpad} not allowed"
-    if launchpad in PUMP_REQUIREMENTS and not pair_address.endswith('pump'):
-        return None, f"pair_address doesn't end with pump"
+    # Exchange: accept pump.fun ('pump'), raydium, pumpswap
+    if launchpad not in ALLOWED_EXCHANGES and launchpad != 'pump':
+        return None, f"exchange {launchpad} not allowed"
+    # For pump.fun/pumpswap: pool address ends in 'pump' (checked via token info, skip here)
     
-    # BS ratio
-    if age_min < 15:
-        if bs_ratio < BS_RATIO_NEW and not (BS_PUMP_FUN_OK and launchpad == 'pump'):
-            return None, f"bs {bs_ratio:.2f} < {BS_RATIO_NEW} (young)"
-    else:
-        if bs_ratio < BS_RATIO_OLD: return None, f"bs {bs_ratio:.2f} < {BS_RATIO_OLD} (old)"
+    # BS ratio for pump.fun: OK if 0 (BS data often missing)
+    if bs_ratio < BS_RATIO_OLD and not (BS_PUMP_FUN_OK and launchpad == 'pump'):
+        return None, f"bs {bs_ratio:.2f} < {BS_RATIO_OLD}"
     
     # Volume
     if vol5m < MIN_5MIN_VOLUME: return None, f"vol5m ${vol5m:,.0f} < ${MIN_5MIN_VOLUME:,}"
@@ -240,7 +236,7 @@ def scan_token(gmgn_data, dex_data):
         'dip': dip, 'ath_mcap': ath_mcap, 'holders': holders,
         'top10': top10, 'liquidity': liquidity, 'vol5m': vol5m,
         'bs_ratio': bs_ratio, 'age_min': age_min, 'age_sec': age_sec,
-        'entry_price': price, 'launchpad': launchpad, 'pair_address': pair_address,
+        'entry_price': price, 'launchpad': launchpad,
     }, "PASS"
 
 # === COOLDOWN ===
@@ -279,7 +275,7 @@ def add_to_cooldown(addr, token_data, result, dex_data=None):
         'last_price': result['price'],
         'recheck_count': 0,
         'consecutive_ok': 0,
-        '_pump_rule_triggered': chg1 is not None and chg1 > PUMP_CHG1_THRESHOLD,
+        '_pump_rule_triggered': result.get('chg1') is not None and result.get('chg1') > PUMP_CHG1_THRESHOLD,
         '_pump_checked_chg5_at_trigger': None,
         '_last_improvement_check': None,
     }
@@ -318,6 +314,7 @@ def check_cooldown_watch():
         data['dex_data'] = fresh_dex
         
         chg5 = fresh_result.get('m5', 0)
+        chg1 = fresh_result.get('chg1')
         curr_mcap = fresh_result.get('mcap', 0)
         curr_price = fresh_result.get('price', 0)
         curr_h1 = fresh_result.get('h1', 0)
@@ -645,7 +642,7 @@ def send_telegram(text):
 # === MAIN ===
 def main():
     print("GMGN Scanner v7 Started")
-    print("  Mcap $6K-$60K | Dip 5-45% | chg5 > +2% to buy | 2 consecutive verify | Pump rule chg5>20%")
+    print("  Mcap $6K-$60K | Dip 2-45% | chg5 > +2% to buy | 2 consecutive verify | Pump rule chg1>5%")
     print("  Stop: -25% | TP: +50%/+100%/+200%/+300%/+1000%")
     
     load_blacklist()
