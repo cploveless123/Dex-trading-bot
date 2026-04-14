@@ -16,12 +16,14 @@ MIN_AGE_SECONDS = 120      # 2 minutes minimum
 MAX_AGE_SECONDS = 5400     # 90 minutes maximum
 MIN_5MIN_VOLUME = 1000     # 5min volume > $1K
 MIN_24H_VOLUME = 0         # No 24h volume minimum
+MIN_VOLUME = 10000         # GMGN filter: 24h volume > $10K
 MIN_HOLDERS = 10           # Holders ≥ 10 (v6.4)
 TOP10_HOLDER_MAX = 50      # Top10% < 50%
 
 # BS Ratio: >0.05 for pairs < 15 min old, >0.8 for all others (v6.4)
 BS_RATIO_NEW = 0.05         # BS ratio for pairs < 15 min old
 BS_RATIO_OLD = 0.8        # BS ratio for pairs ≥ 15 min old
+MIN_BS_RATIO = 1.5        # GMGN buyer filter: BS ratio ≥ 1.5
 BS_PUMP_FUN_OK = True      # pump.fun BS=0 is OK
 
 # === MOMENTUM (v6.4) ===
