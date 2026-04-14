@@ -8960,3 +8960,120 @@ Exit Plan: TP1 +50% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -25%
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
+[14:35:54] Monitor alive | 13 checks | 0 open | next in 5s
+  Bryn: mcap=$15,582 | gain=-7.2% | peak=$16,794 | dd=+0%
+  Bryn: mcap=$16,561 | gain=-1.4% | peak=$16,794 | dd=+0%
+  Bryn: mcap=$16,561 | gain=-1.4% | peak=$16,794 | dd=+0%
+[14:36:55] Monitor alive | 25 checks | 1 open | next in 5s
+  Bryn: mcap=$16,561 | gain=-1.4% | peak=$16,794 | dd=+0%
+  Bryn: mcap=$16,561 | gain=-1.4% | peak=$16,794 | dd=+0%
+  symphony: mcap=$5,921 | gain=+3.6% | peak=$5,921 | dd=+0%
+  Bryn: mcap=$16,561 | gain=-1.4% | peak=$16,794 | dd=+0%
+  symphony: mcap=$5,921 | gain=+3.6% | peak=$5,921 | dd=+0%
+  Bryn: mcap=$16,561 | gain=-1.4% | peak=$16,794 | dd=+0%
+  symphony: mcap=$5,921 | gain=+3.6% | peak=$5,921 | dd=+0%
+  Bryn: mcap=$17,253 | gain=+2.7% | peak=$17,253 | dd=+0%
+  symphony: mcap=$5,921 | gain=+3.6% | peak=$5,921 | dd=+0%
+  Bryn: mcap=$17,253 | gain=+2.7% | peak=$17,253 | dd=+0%
+  symphony: mcap=$5,921 | gain=+3.6% | peak=$5,921 | dd=+0%
+  Bryn: mcap=$17,253 | gain=+2.7% | peak=$17,253 | dd=+0%
+  symphony: mcap=$5,921 | gain=+3.6% | peak=$5,921 | dd=+0%
+  Bryn: mcap=$17,253 | gain=+2.7% | peak=$17,253 | dd=+0%
+  symphony: mcap=$6,645 | gain=+16.3% | peak=$6,645 | dd=+0%
+  Bryn: mcap=$17,253 | gain=+2.7% | peak=$17,253 | dd=+0%
+  symphony: mcap=$6,645 | gain=+16.3% | peak=$6,645 | dd=+0%
+  Bryn: mcap=$17,253 | gain=+2.7% | peak=$17,253 | dd=+0%
+  symphony: mcap=$6,645 | gain=+16.3% | peak=$6,645 | dd=+0%
+  Bryn: mcap=$18,738 | gain=+11.6% | peak=$18,738 | dd=+0%
+  symphony: mcap=$6,645 | gain=+16.3% | peak=$6,645 | dd=+0%
+  Bryn: mcap=$18,738 | gain=+11.6% | peak=$18,738 | dd=+0%
+  symphony: mcap=$6,645 | gain=+16.3% | peak=$6,645 | dd=+0%
+[14:37:56] Monitor alive | 37 checks | 2 open | next in 5s
+  Bryn: mcap=$18,738 | gain=+11.6% | peak=$18,738 | dd=+0%
+  symphony: mcap=$6,574 | gain=+15.1% | peak=$6,645 | dd=+0%
+  Bryn: mcap=$18,738 | gain=+11.6% | peak=$18,738 | dd=+0%
+  symphony: mcap=$6,574 | gain=+15.1% | peak=$6,645 | dd=+0%
+  Bryn: mcap=$18,738 | gain=+11.6% | peak=$18,738 | dd=+0%
+  symphony: mcap=$6,574 | gain=+15.1% | peak=$6,645 | dd=+0%
+  Bryn: mcap=$18,738 | gain=+11.6% | peak=$18,738 | dd=+0%
+  symphony: mcap=$6,574 | gain=+15.1% | peak=$6,645 | dd=+0%
+  Bryn: mcap=$19,281 | gain=+14.8% | peak=$19,281 | dd=+0%
+  symphony: mcap=$6,574 | gain=+15.1% | peak=$6,645 | dd=+0%
+  Bryn: mcap=$19,281 | gain=+14.8% | peak=$19,281 | dd=+0%
+  symphony: mcap=$6,574 | gain=+15.1% | peak=$6,645 | dd=+0%
+  Bryn: mcap=$19,281 | gain=+14.8% | peak=$19,281 | dd=+0%
+  symphony: mcap=$7,920 | gain=+38.6% | peak=$7,920 | dd=+0%
+  Bryn: mcap=$19,281 | gain=+14.8% | peak=$19,281 | dd=+0%
+  symphony: mcap=$7,920 | gain=+38.6% | peak=$7,920 | dd=+0%
+  Bryn: mcap=$19,281 | gain=+14.8% | peak=$19,281 | dd=+0%
+  symphony: mcap=$7,920 | gain=+38.6% | peak=$7,920 | dd=+0%
+  Bryn: mcap=$19,281 | gain=+14.8% | peak=$19,281 | dd=+0%
+  symphony: mcap=$7,920 | gain=+38.6% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$35,365 | gain=+5.6% | peak=$35,365 | dd=+0%
+  Bryn: mcap=$19,601 | gain=+16.7% | peak=$19,601 | dd=+0%
+  symphony: mcap=$7,920 | gain=+38.6% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$35,365 | gain=+5.6% | peak=$35,365 | dd=+0%
+  Bryn: mcap=$19,601 | gain=+16.7% | peak=$19,601 | dd=+0%
+  symphony: mcap=$7,920 | gain=+38.6% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$35,365 | gain=+5.6% | peak=$35,365 | dd=+0%
+[14:38:58] Monitor alive | 49 checks | 3 open | next in 5s
+  Bryn: mcap=$19,601 | gain=+16.7% | peak=$19,601 | dd=+0%
+  symphony: mcap=$6,453 | gain=+12.9% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$35,365 | gain=+5.6% | peak=$35,365 | dd=+0%
+  Bryn: mcap=$19,601 | gain=+16.7% | peak=$19,601 | dd=+0%
+  symphony: mcap=$6,453 | gain=+12.9% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$35,365 | gain=+5.6% | peak=$35,365 | dd=+0%
+  Bryn: mcap=$19,601 | gain=+16.7% | peak=$19,601 | dd=+0%
+  symphony: mcap=$6,453 | gain=+12.9% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$33,936 | gain=+1.4% | peak=$35,365 | dd=+0%
+  Bryn: mcap=$19,601 | gain=+16.7% | peak=$19,601 | dd=+0%
+  symphony: mcap=$6,453 | gain=+12.9% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$33,936 | gain=+1.4% | peak=$35,365 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Bryn STOP LOSS @ $2,442 (-85.5%)
+  symphony: mcap=$6,453 | gain=+12.9% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$33,936 | gain=+1.4% | peak=$35,365 | dd=+0%
+  symphony: mcap=$6,453 | gain=+12.9% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$33,936 | gain=+1.4% | peak=$35,365 | dd=+0%
+  symphony: mcap=$5,522 | gain=-3.4% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$33,936 | gain=+1.4% | peak=$35,365 | dd=+0%
+  symphony: mcap=$5,522 | gain=-3.4% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$33,936 | gain=+1.4% | peak=$35,365 | dd=+0%
+  symphony: mcap=$5,522 | gain=-3.4% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$32,884 | gain=-1.8% | peak=$35,365 | dd=+0%
+  symphony: mcap=$5,522 | gain=-3.4% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$32,884 | gain=-1.8% | peak=$35,365 | dd=+0%
+  symphony: mcap=$5,522 | gain=-3.4% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$32,884 | gain=-1.8% | peak=$35,365 | dd=+0%
+  symphony: mcap=$5,522 | gain=-3.4% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$32,884 | gain=-1.8% | peak=$35,365 | dd=+0%
+[14:40:01] Monitor alive | 61 checks | 2 open | next in 5s
+  symphony: mcap=$5,841 | gain=+2.2% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$32,884 | gain=-1.8% | peak=$35,365 | dd=+0%
+  symphony: mcap=$5,841 | gain=+2.2% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$32,884 | gain=-1.8% | peak=$35,365 | dd=+0%
+  symphony: mcap=$5,841 | gain=+2.2% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$32,797 | gain=-2.0% | peak=$35,365 | dd=+0%
+  symphony: mcap=$5,841 | gain=+2.2% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$32,797 | gain=-2.0% | peak=$35,365 | dd=+0%
+  symphony: mcap=$5,841 | gain=+2.2% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$32,797 | gain=-2.0% | peak=$35,365 | dd=+0%
+  symphony: mcap=$5,841 | gain=+2.2% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$32,797 | gain=-2.0% | peak=$35,365 | dd=+0%
+  symphony: mcap=$6,093 | gain=+6.6% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$32,797 | gain=-2.0% | peak=$35,365 | dd=+0%
+  symphony: mcap=$6,093 | gain=+6.6% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$32,797 | gain=-2.0% | peak=$35,365 | dd=+0%
+  symphony: mcap=$6,093 | gain=+6.6% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$30,371 | gain=-9.3% | peak=$35,365 | dd=+0%
+  symphony: mcap=$6,093 | gain=+6.6% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$30,371 | gain=-9.3% | peak=$35,365 | dd=+0%
+  symphony: mcap=$6,093 | gain=+6.6% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$30,371 | gain=-9.3% | peak=$35,365 | dd=+0%
+  symphony: mcap=$6,093 | gain=+6.6% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$30,371 | gain=-9.3% | peak=$35,365 | dd=+0%
+[14:41:02] Monitor alive | 73 checks | 2 open | next in 5s
+  symphony: mcap=$5,524 | gain=-3.3% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$30,371 | gain=-9.3% | peak=$35,365 | dd=+0%
+  symphony: mcap=$5,524 | gain=-3.3% | peak=$7,920 | dd=+0%
+  JOBLESS: mcap=$30,371 | gain=-9.3% | peak=$35,365 | dd=+0%
