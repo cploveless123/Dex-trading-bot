@@ -38,7 +38,7 @@ TP5_PERCENT = 1000         # +1000% → Sell 8%, trail 15%
 TP5_TRAILING_PCT = 30
 TP5_SELL_PCT = 10
 TRAILING_STOP_PCT = 40      # 40% from peak on remaining after TP1
-STOP_LOSS_PERCENT = -25     # -25% stop (NON-NEGOTIABLE)
+STOP_LOSS_PERCENT = -20     # -25% stop (NON-NEGOTIABLE)
 
 # Slippage & Tax Correction
 SLIPPAGE_TAX_COST = 0.025   # ~2.5% per round trip
@@ -78,7 +78,7 @@ ANTI_MOMENTUM_CHG1_THRESHOLD = -3  # AND chg1 <-3%
 
 # Chg1 momentum check
 MIN_CHG1_FOR_BUY = 3.0  # chg1 must be > +5% to confirm momentum
-CHG1_DROP_THRESHOLD = 50  # if chg1 drops by >50% from previous, reject (deterioration)
+CHG1_DROP_THRESHOLD = 5  # if chg1 drops by >50% from previous, reject (deterioration)
 
 # Parabolic rejection
 H1_PARABOLIC_REJECT = 833  # h1 >+833% → reject (too parabolic)

@@ -532,8 +532,9 @@ def check_cooldown(whales):
             if prev_chg1 is not None and chg1 is not None:
                 # OPTION 2: Chg1 deterioration check - if chg1 dropped >50% from previous, reject
                 if prev_chg1 > 0 and chg1 < prev_chg1 * 0.5:
-                    print(f"   ❌ {result['token']}: chg1 dropped {prev_chg1:.1f}% → {chg1:.1f}% (>{CHG1_DROP_THRESHOLD}% drop) - rejecting")
-                    to_remove.append(addr)
+                    print(f"   ⏳ {result['token']}: chg1 dropped {prev_chg1:.1f}% → {chg1:.1f}% (>{CHG1_DROP_THRESHOLD}% drop) - continuing to watch")
+                    data['cooldown_secs'] += 15
+                    data['first_seen'] = time.time()
                     continue
                 
                 improvement = chg1 - prev_chg1
