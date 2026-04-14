@@ -312,7 +312,7 @@ def check_cooldown_watch():
         result = data['result']
         state = data.get('state', STATE_BASE_WAIT)
         
-        # === FRESH DATA - use stored as primary, supplement with fresh ===
+        # === FRESH DATA - always refresh ALL critical fields for accurate analysis ===
         stored_data = data.get('token_data', {})
         fresh_gmgn = get_gmgn_token_info(addr)
         fresh_dex = get_dexscreener_data(addr)
@@ -322,7 +322,28 @@ def check_cooldown_watch():
             to_remove.append(addr)
             continue
         
-        merged = merge_token_data(stored_data, fresh_gmgn, fresh_dex)
+        # Build merged data: start with stored, then overwrite with fresh
+        merged = (stored_data or {}).copy()
+        
+        # Fresh GMGN: update all fields (has full token data)
+        if fresh_gmgn:
+            for k, v in fresh_gmgn.items():
+                if v is not None and v != '':
+                    merged[k] = v
+        
+        # DexScreener: fill in any remaining gaps
+        if fresh_dex:
+            for k, v in fresh_dex.items():
+                if v is not None and v != 0 and not merged.get(k):
+                    merged[k] = v
+            # DexScreener chg1 (m1)
+            ds_chg1 = fresh_dex.get('priceChange', {}).get('m1') if fresh_dex.get('priceChange') else None
+            if ds_chg1 is not None and not merged.get('price_change_percent1m'):
+                merged['price_change_percent1m'] = float(ds_chg1)
+            # If DexScreener has mcap but GMGN doesn't, use it
+            ds_mcap = fresh_dex.get('marketCap')
+            if ds_mcap and not merged.get('market_cap'):
+                merged['market_cap'] = float(ds_mcap)
         
         fresh_result, fresh_reason = scan_token(merged, fresh_dex)
         if fresh_result is None:

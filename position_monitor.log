@@ -15701,3 +15701,61 @@ Checking every 5s
   Mod: mcap=$9,185 | gain=+7.7% | peak=$11,175 | dd=+0%
   GRADIENTBANG: mcap=$10,048 | gain=-3.4% | peak=$13,585 | dd=+0%
   Mod: mcap=$8,512 | gain=-0.2% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$10,048 | gain=-3.4% | peak=$13,585 | dd=+0%
+  Mod: mcap=$8,512 | gain=-0.2% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,238 | gain=-20.8% | peak=$13,585 | dd=+0%
+  Mod: mcap=$8,512 | gain=-0.2% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,238 | gain=-20.8% | peak=$13,585 | dd=+0%
+  Mod: mcap=$8,512 | gain=-0.2% | peak=$11,175 | dd=+0%
+[22:55:02] Monitor alive | 1167 checks | 2 open | next in 5s
+  GRADIENTBANG: mcap=$8,238 | gain=-20.8% | peak=$13,585 | dd=+0%
+  Mod: mcap=$8,512 | gain=-0.2% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,238 | gain=-20.8% | peak=$13,585 | dd=+0%
+  Mod: mcap=$9,395 | gain=+10.1% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,238 | gain=-20.8% | peak=$13,585 | dd=+0%
+  Mod: mcap=$9,395 | gain=+10.1% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,238 | gain=-20.8% | peak=$13,585 | dd=+0%
+  Mod: mcap=$9,395 | gain=+10.1% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,417 | gain=-19.1% | peak=$13,585 | dd=+0%
+  Mod: mcap=$9,395 | gain=+10.1% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,417 | gain=-19.1% | peak=$13,585 | dd=+0%
+  Mod: mcap=$9,395 | gain=+10.1% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,417 | gain=-19.1% | peak=$13,585 | dd=+0%
+  Mod: mcap=$9,395 | gain=+10.1% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,417 | gain=-19.1% | peak=$13,585 | dd=+0%
+  Mod: mcap=$8,529 | gain=-0.0% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,417 | gain=-19.1% | peak=$13,585 | dd=+0%
+  Mod: mcap=$8,529 | gain=-0.0% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,417 | gain=-19.1% | peak=$13,585 | dd=+0%
+  Mod: mcap=$8,529 | gain=-0.0% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,675 | gain=-16.6% | peak=$13,585 | dd=+0%
+  Mod: mcap=$8,529 | gain=-0.0% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,675 | gain=-16.6% | peak=$13,585 | dd=+0%
+  Mod: mcap=$8,529 | gain=-0.0% | peak=$11,175 | dd=+0%
+[22:56:04] Monitor alive | 1179 checks | 2 open | next in 5s
+  GRADIENTBANG: mcap=$8,675 | gain=-16.6% | peak=$13,585 | dd=+0%
+  Mod: mcap=$8,529 | gain=-0.0% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,675 | gain=-16.6% | peak=$13,585 | dd=+0%
+  Mod: mcap=$7,891 | gain=-7.5% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,675 | gain=-16.6% | peak=$13,585 | dd=+0%
+  Mod: mcap=$7,891 | gain=-7.5% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$8,675 | gain=-16.6% | peak=$13,585 | dd=+0%
+  Mod: mcap=$7,891 | gain=-7.5% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$9,102 | gain=-12.5% | peak=$13,585 | dd=+0%
+  Mod: mcap=$7,891 | gain=-7.5% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$9,102 | gain=-12.5% | peak=$13,585 | dd=+0%
+  Mod: mcap=$7,891 | gain=-7.5% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$9,102 | gain=-12.5% | peak=$13,585 | dd=+0%
+  Mod: mcap=$7,891 | gain=-7.5% | peak=$11,175 | dd=+0%
+  GRADIENTBANG: mcap=$9,102 | gain=-12.5% | peak=$13,585 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Mod STOP LOSS @ $5,851 (-31.4%)
+  GRADIENTBANG: mcap=$9,102 | gain=-12.5% | peak=$13,585 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 GRADIENTBANG STOP LOSS @ $7,610 (-26.8%)
+[22:57:08] Monitor alive | 1191 checks | 0 open | next in 5s
+[22:58:08] Monitor alive | 1203 checks | 0 open | next in 5s
+  Dogrates: mcap=$9,050 | gain=-3.8% | peak=$9,406 | dd=+0%
+[22:59:09] Monitor alive | 1215 checks | 1 open | next in 5s
+[STOP_LOSS] Alert sent
+🔴 Dogrates STOP LOSS @ $3,068 (-67.4%)
