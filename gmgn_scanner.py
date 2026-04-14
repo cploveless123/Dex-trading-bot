@@ -42,6 +42,8 @@ from trading_constants import (
     MAX_OPEN_POSITIONS, POSITION_SIZE,
     LOW_VOLUME_THRESHOLD, SCAN_INTERVAL,
     STATE_COOLDOWN, STATE_WAITING, STATE_VERIFICATION,
+    STATE_PUMP_WAIT, STATE_PUMP_VERIFY,
+    PUMP_CHG1_THRESHOLD, PUMP_COOLDOWN_1, PUMP_WAIT_2, PUMP_VERIFY_DELAY,
 )
 
 # Files
@@ -452,30 +454,43 @@ def determine_cooldown(result):
     return 0  # No cooldown, buy immediately
 
 def add_to_cooldown(addr, token_data, result, dex_data=None):
-    """Add token to cooldown watch list - v6.8 unified state machine"""
+    """Add token to cooldown watch list - v6.8e pump-aware state machine"""
     cooldown_secs = determine_cooldown(result)
     if cooldown_secs == 0:
         return False  # Buy immediately
     
     now_ts = time.time()
+    chg1 = result.get('chg1', 0)
+    
+    # === PUMP PATH: chg1 > +5% = confirmed pump ===
+    # Enter PUMP_WAIT state directly (skip COOLDOWN, go straight to 45s monitoring)
+    if chg1 is not None and chg1 > PUMP_CHG1_THRESHOLD:
+        pump_state = STATE_PUMP_WAIT
+        pump_end = now_ts + PUMP_COOLDOWN_1
+        print(f"   🚀 {result['token']}: PUMP CONFIRMED (chg1={chg1:+.1f}%) — 45s monitor")
+    else:
+        pump_state = STATE_COOLDOWN
+        pump_end = now_ts + cooldown_secs
+        print(f"   ⏳ {result['token']}: cooldown {cooldown_secs}s (m5={result['m5']:+.1f}%)")
+    
     COOLDOWN_WATCH[addr] = {
         'first_seen': now_ts,
-        'cooldown_end': now_ts + cooldown_secs,
-        'state': STATE_COOLDOWN,
+        'cooldown_end': pump_end,
+        'state': pump_state,
         'token_data': token_data,
         'result': result,
         'dex_data': dex_data,
-        'prev_chg1': None,       # chg1 from previous recheck
-        'chg1_at_cooldown_start': result.get('chg1'),  # baseline chg1 when cooldown started
-        'consecutive_ok': 0,      # consecutive rechecks with +3% improvement
+        'prev_chg1': None,
+        'chg1_at_cooldown_start': chg1,
+        'consecutive_ok': 0,
         'recheck_count': 0,
         'local_peak_mcap': result['mcap'],
         'lowest_mcap': result['mcap'],
         'price_at_last_check': result['entry_price'],
         'prev_h1': result['h1'],
-        'price_drop_consecutive': 0,  # consecutive >3% drops
+        'price_drop_consecutive': 0,
+        '_pump_confirmed': chg1 is not None and chg1 > PUMP_CHG1_THRESHOLD,
     }
-    print(f"   ⏳ {result['token']}: cooldown {cooldown_secs}s (m5={result['m5']:+.1f}%)")
     return True
 
 def check_cooldown_watch():
@@ -582,17 +597,78 @@ def check_cooldown_watch():
                 data['prev_chg1'] = chg1
                 continue
             
-            # Cooldown done — enter WAITING state
-            # Set baseline chg1 if chg1 exists
-            if chg1 is not None:
-                data['chg1_at_cooldown_start'] = chg1
-            data['state'] = STATE_WAITING
-            data['cooldown_end'] = now + CHG1_RECHECK_DELAY
+            # Cooldown done
+            # Check if pump path
+            if data.get('_pump_confirmed'):
+                # Enter PUMP_WAIT — 30s to recheck
+                data['state'] = STATE_PUMP_WAIT
+                data['cooldown_end'] = now + PUMP_WAIT_2
+                data['prev_chg1'] = chg1
+                data['recheck_count'] = 0
+                print(f"   ⏳ {result['token']}: cooldown done | chg1={chg1:+.1f}% | PUMP path — wait {PUMP_WAIT_2}s then recheck")
+                continue
+            else:
+                # Enter WAITING (normal path)
+                if chg1 is not None:
+                    data['chg1_at_cooldown_start'] = chg1
+                data['state'] = STATE_WAITING
+                data['cooldown_end'] = now + CHG1_RECHECK_DELAY
+                data['prev_chg1'] = chg1
+                data['recheck_count'] = 0
+                data['consecutive_ok'] = 0
+                print(f"   ⏳ {result['token']}: cooldown done | baseline chg1={baseline:+.1f}% | need +3% improvement to enter verify")
+                continue
+        
+        elif state == STATE_PUMP_WAIT:
+            # PUMP_WAIT: 30s after first cooldown — check if chg1 still > +5%
+            if not cooldown_done:
+                remaining = data['cooldown_end'] - now
+                print(f"   ⏳ {result['token']}: pump wait {remaining:.0f}s left (chg1={chg1:+.1f}%)")
+                data['prev_chg1'] = chg1
+                continue
+            
+            # Check if chg1 still > +5% with fresh data
+            if chg1 is None or chg1 <= PUMP_CHG1_THRESHOLD:
+                # chg1 dropped — exit pump path, go to normal WAITING
+                data['state'] = STATE_WAITING
+                data['cooldown_end'] = now + CHG1_RECHECK_DELAY
+                data['prev_chg1'] = chg1
+                data['recheck_count'] = 0
+                data['consecutive_ok'] = 0
+                print(f"   ❌ {result['token']}: chg1 {chg1:+.1f}% <= +{PUMP_CHG1_THRESHOLD}% — pump faded, switch to normal path")
+                continue
+            
+            # chg1 still > +5% — enter PUMP_VERIFY for final 15s
+            data['state'] = STATE_PUMP_VERIFY
+            data['cooldown_end'] = now + PUMP_VERIFY_DELAY
             data['prev_chg1'] = chg1
-            data['recheck_count'] = 0
-            data['consecutive_ok'] = 0
-            print(f"   ⏳ {result['token']}: cooldown done | baseline chg1={baseline:+.1f}% | need +3% improvement to enter verify")
+            print(f"   ⏳ {result['token']}: chg1 {chg1:+.1f}% still > +{PUMP_CHG1_THRESHOLD}% — PUMP VERIFY {PUMP_VERIFY_DELAY}s")
             continue
+        
+        elif state == STATE_PUMP_VERIFY:
+            # PUMP_VERIFY: 15s final verify — if chg1 > +5% throughout = BUY
+            if not cooldown_done:
+                remaining = data['cooldown_end'] - now
+                print(f"   ⏳ {result['token']}: pump verify {remaining:.0f}s left (chg1={chg1:+.1f}%)")
+                data['prev_chg1'] = chg1
+                continue
+            
+            # Final check — chg1 must be > +5%
+            if chg1 is not None and chg1 > PUMP_CHG1_THRESHOLD:
+                # BUY!
+                print(f"   🟢 BUY (PUMP): {result['token']} @ mcap ${curr_mcap:,.0f} | chg1={chg1:+.1f}% (sustained pump)")
+                buy_token(addr, fresh_result)
+                to_remove.append(addr)
+                continue
+            else:
+                # Pump faded — exit to normal WAITING
+                data['state'] = STATE_WAITING
+                data['cooldown_end'] = now + CHG1_RECHECK_DELAY
+                data['prev_chg1'] = chg1
+                data['recheck_count'] = 0
+                data['consecutive_ok'] = 0
+                print(f"   ❌ {result['token']}: pump verify chg1 {chg1:+.1f}% <= +{PUMP_CHG1_THRESHOLD}% — switch to normal path")
+                continue
         
         elif state == STATE_WAITING:
             # WAITING: monitoring chg1, need +3% improvement from last check to enter verify
@@ -878,11 +954,12 @@ def scan_cycle():
     return bought
 
 def main():
-    print(f"🚀 GMGN Scanner v6.8 Started")
+    print(f"🚀 GMGN Scanner v6.8e Started")
     print(f"   Data sources: GMGN trending + trenches + pump.fun lowcap")
     print(f"   Filters: Mcap ${MIN_MCAP:,}-${MAX_MCAP:,} | Holders {MIN_HOLDERS}+ | Dip {DIP_MIN}-{DIP_MAX}% | ATH <55% | BS {BS_RATIO_NEW}/{BS_RATIO_OLD}")
     print(f"   Momentum: h1 or 24h > +{H1_MOMENTUM_MIN}% | chg1 > +{MIN_CHG1_FOR_BUY}%")
     print(f"   Cooldown: m5>-5% → {BASE_COOLDOWN}s | +3% improvement req | deterioration>3% = reject | 2 consec rechecks")
+    print(f"   🚀 PUMP RULE: chg1>+5% → 45s wait → chg1>+5%? → 30s → verify → BUY if sustained")
     
     while True:
         try:
