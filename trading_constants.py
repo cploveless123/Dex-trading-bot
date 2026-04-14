@@ -39,6 +39,7 @@ CHG1_IMPROVEMENT_MIN = 2.0  # chg1 must be > +2% from cooldown baseline to buy
 # === DIP/PULLBACK (v6.7) ===
 DIP_MIN = 0                # 0% minimum dip
 DIP_MAX = 50               # 50% max dip from local peak
+ATH_DIVERGENCE_MAX = 45    # 45% max below ATH
 
 # === COOLDOWN RULES (v6.7) ===
 # YOUNG: age < 15 min AND chg5 > -5% → 45s cooldown

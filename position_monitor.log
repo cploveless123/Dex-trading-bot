@@ -9638,3 +9638,8 @@ Checking every 5s
   dream: mcap=$17,464 | gain=+36.5% | peak=$19,627 | dd=+11%
   dream: mcap=$17,464 | gain=+36.5% | peak=$19,627 | dd=+11%
   dream: mcap=$17,464 | gain=+36.5% | peak=$19,627 | dd=+11%
+Position Monitor v3 starting...
+Exit Plan: TP1 +50% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -20%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
