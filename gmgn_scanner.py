@@ -52,6 +52,10 @@ PEAK_CACHE = Path("/root/Dex-trading-bot/position_peak_cache.json")
 # Cooldown watch: {addr: {"first_seen": ts, "token_data": {}, "result": {}, "cooldown_end": ts, "recheck_count": int, "prev_chg1": float, "peak_mcap": float, "entry_price": float}}
 COOLDOWN_WATCH = {}
 
+# Tokens rejected after max rechecks — can revisit after delay
+REJECTED_TEMP = {}  # {addr: {"ts": timestamp, "reason": str}}
+REJECTED_REVISIT_DELAY = 300  # 5 minutes before circling back
+
 # Permanent blacklist (once bought, never rebuy)
 PERM_BLACKLIST = set()
 
@@ -519,7 +523,8 @@ def check_cooldown_watch():
         # === MAX RECHECKS CHECK ===
         data['recheck_count'] += 1
         if data['recheck_count'] > MAX_RECHECKS:
-            print(f"   ❌ {result['token']}: max rechecks ({MAX_RECHECKS}) - skip")
+            print(f"   ❌ {result['token']}: max rechecks ({MAX_RECHECKS}) - will revisit in {REJECTED_REVISIT_DELAY}s")
+            REJECTED_TEMP[addr] = {'ts': time.time(), 'reason': f"max rechecks ({MAX_RECHECKS})"}
             to_remove.append(addr)
             continue
         
@@ -612,6 +617,19 @@ def scan_cycle():
         
         if addr in PERM_BLACKLIST:
             continue  # Already bought
+        
+        # === CIRCLING BACK: Check if rejected recently ===
+        if addr in REJECTED_TEMP:
+            rejected_data = REJECTED_TEMP[addr]
+            elapsed = time.time() - rejected_data['ts']
+            if elapsed < REJECTED_REVISIT_DELAY:
+                continue  # Still in quiet period
+            else:
+                # Time to revisit - remove from rejected, log it
+                del REJECTED_TEMP[addr]
+                print(f"   🔄 {token_data.get('symbol','?')}: circling back after {elapsed:.0f}s rejection")
+        
+        # Get DexScreener data for chg1
         
         # Get DexScreener data for chg1
         dex_data = get_dexscreener_data(addr)
