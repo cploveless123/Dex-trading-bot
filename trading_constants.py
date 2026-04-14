@@ -107,7 +107,7 @@ REJECTED_EXCHANGES = {'meteora', 'orinoco', 'lifinity', 'saber'}
 TICKER_BLACKLIST = {'NODES', 'nodes', 'Nodes'}
 
 # Simulation - RESET TO 1.0 SOL
-SIM_RESET_TIMESTAMP = '2026-04-14T03:31:06.299431+00:00'  # Fresh start v6.0
+SIM_RESET_TIMESTAMP = '2026-04-14T05:31:26.000000+00:00'  # Fresh reset
 CHRIS_STARTING_BALANCE = 1.0
 
 # Scan intervals
