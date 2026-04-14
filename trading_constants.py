@@ -63,7 +63,7 @@ CHG1_DROP_REJECT = 3.0
 
 # Max rechecks before temp reject
 MAX_RECHECKS = 15          # 15 × 15s = 3.75 min max (close to 3min circle-back)
-REJECTED_REVISIT_DELAY = 180  # 3 minutes before circling back
+REJECTED_REVISIT_DELAY = 300  # 5 minutes before circling back
 
 # === PRICE STABILITY CHECK (v6.7 - BEFORE BUY) ===
 # Based on: price dropped >3% since PREVIOUS CHECK (not add price)
@@ -93,7 +93,7 @@ LIQUIDITY_MIN = 1000
 # TP3: +200% → Sell 30%, trail 35%
 # TP4: +300% → Sell 20%, trail 35%
 # TP5: +1000% → Sell remaining 10%, trail 30%
-# Stop: -25%
+# Stop: -20%
 
 TP1_PERCENT = 50
 TP1_TRAILING_PCT = 40
@@ -116,7 +116,7 @@ TP5_TRAILING_PCT = 30
 TP5_SELL_PCT = 10          # remaining 10%
 
 TRAILING_STOP_PCT = 40      # 40% from peak after TP1
-STOP_LOSS_PERCENT = -25     # -25% stop loss
+STOP_LOSS_PERCENT = -20     # -20% stop loss
 
 # Slippage & Tax Correction
 SLIPPAGE_TAX_COST = 0.025   # ~2.5% per round trip
@@ -127,7 +127,7 @@ EXIT_PLAN_TEXT = f"""🎯 Exit Plan v6.7 (Wilson Strategy):
 +{TP3_PERCENT}% → Sell {TP3_SELL_PCT}%, trail {TP3_TRAILING_PCT}%
 +{TP4_PERCENT}% → Sell {TP4_SELL_PCT}%, trail {TP4_TRAILING_PCT}%
 +{TP5_PERCENT}% → Sell remaining {TP5_SELL_PCT}%, trail {TP5_TRAILING_PCT}%
-⚠️ Stop: {STOP_LOSS_PERCENT}%"""
+⚠️ Stop: -20%"""
 
 # === LOW VOLUME EXIT ===
 LOW_VOLUME_THRESHOLD = 600   # 5min vol <$600 AND mcap >$60K → exit
