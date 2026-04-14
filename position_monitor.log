@@ -14190,3 +14190,27 @@ Exit Plan: TP1 +50% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -20%
 Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
+Position Monitor v6.9 starting...
+Exit Plan: TP1 +50% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -20%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
+[18:20:36] Monitor alive | 13 checks | 0 open | next in 5s
+[18:21:21] Monitor alive | 13 checks | 0 open | next in 5s
+[18:21:36] Monitor alive | 25 checks | 0 open | next in 5s
+[18:22:21] Monitor alive | 25 checks | 0 open | next in 5s
+[18:22:36] Monitor alive | 37 checks | 0 open | next in 5s
+[18:23:21] Monitor alive | 37 checks | 0 open | next in 5s
+[18:23:36] Monitor alive | 49 checks | 0 open | next in 5s
+[18:24:21] Monitor alive | 49 checks | 0 open | next in 5s
+[18:24:36] Monitor alive | 61 checks | 0 open | next in 5s
+[18:25:21] Monitor alive | 61 checks | 0 open | next in 5s
+[18:25:36] Monitor alive | 73 checks | 0 open | next in 5s
+[18:26:21] Monitor alive | 73 checks | 0 open | next in 5s
+[18:26:36] Monitor alive | 85 checks | 0 open | next in 5s
+[18:27:21] Monitor alive | 85 checks | 0 open | next in 5s
+[18:27:36] Monitor alive | 97 checks | 0 open | next in 5s
+[18:28:21] Monitor alive | 97 checks | 0 open | next in 5s
+[18:28:36] Monitor alive | 109 checks | 0 open | next in 5s
+[18:29:22] Monitor alive | 109 checks | 0 open | next in 5s
+[18:29:36] Monitor alive | 121 checks | 0 open | next in 5s
