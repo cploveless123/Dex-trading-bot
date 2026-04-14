@@ -14282,3 +14282,245 @@ Peak cache: /root/Dex-trading-bot/position_peak_cache.json
 Checking every 5s
 [STARTUP] Alert sent
 [19:02:20] Monitor alive | 13 checks | 0 open | next in 5s
+Position Monitor v6.9 starting...
+Exit Plan: TP1 +50% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -20%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
+[19:04:43] Monitor alive | 13 checks | 0 open | next in 5s
+[19:05:43] Monitor alive | 25 checks | 0 open | next in 5s
+[19:06:43] Monitor alive | 37 checks | 0 open | next in 5s
+[19:07:43] Monitor alive | 49 checks | 0 open | next in 5s
+[19:08:43] Monitor alive | 61 checks | 0 open | next in 5s
+[19:09:43] Monitor alive | 73 checks | 0 open | next in 5s
+[19:10:43] Monitor alive | 85 checks | 0 open | next in 5s
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+[19:11:54] Monitor alive | 94 checks | 1 open | next in 5s
+  TEST: error fetching mcap
+Position Monitor v6.9 starting...
+Exit Plan: TP1 +50% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -20%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+[19:13:37] Monitor alive | 9 checks | 2 open | next in 5s
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+[19:14:43] Monitor alive | 14 checks | 2 open | next in 5s
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+[19:15:44] Monitor alive | 26 checks | 2 open | next in 5s
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+[19:16:45] Monitor alive | 38 checks | 2 open | next in 5s
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+[19:17:46] Monitor alive | 50 checks | 2 open | next in 5s
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+[19:18:46] Monitor alive | 62 checks | 2 open | next in 5s
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  TEST: error fetching mcap
+  HOE: error fetching mcap
+  TEST: error fetching mcap
+  HOE: mcap=$3,971 | gain=-0.1% | peak=$3,974 | dd=+0%
+  TEST: error fetching mcap
+  HOE: mcap=$3,971 | gain=-0.1% | peak=$3,974 | dd=+0%
+  TEST: error fetching mcap
+  HOE: mcap=$3,971 | gain=-0.1% | peak=$3,974 | dd=+0%
+[19:19:48] Monitor alive | 74 checks | 3 open | next in 5s
+  TEST: error fetching mcap
+  HOE: mcap=$3,971 | gain=-0.1% | peak=$3,974 | dd=+0%
+  TEST: error fetching mcap
+  HOE: mcap=$3,971 | gain=-0.1% | peak=$3,974 | dd=+0%
+  TEST: error fetching mcap
+  HOE: mcap=$3,645 | gain=-8.3% | peak=$3,974 | dd=+0%
+  TEST: error fetching mcap
+  HOE: mcap=$3,645 | gain=-8.3% | peak=$3,974 | dd=+0%
+  TEST: error fetching mcap
+  HOE: mcap=$3,645 | gain=-8.3% | peak=$3,974 | dd=+0%
+  TEST: error fetching mcap
+  HOE: mcap=$3,645 | gain=-8.3% | peak=$3,974 | dd=+0%
+Position Monitor v6.9 starting...
+Exit Plan: TP1 +50% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -20%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
+[STOP_LOSS] Alert sent
+🔴 HOE STOP LOSS @ $3,147 (-20.8%)
+[19:22:22] Monitor alive | 13 checks | 0 open | next in 5s
+[19:23:22] Monitor alive | 25 checks | 0 open | next in 5s
+[19:24:22] Monitor alive | 37 checks | 0 open | next in 5s
+  Ears: mcap=$11,284 | gain=+18.2% | peak=$11,284 | dd=+0%
+  Ears: mcap=$11,284 | gain=+18.2% | peak=$11,284 | dd=+0%
+  Ears: mcap=$11,284 | gain=+18.2% | peak=$11,284 | dd=+0%
+  Ears: mcap=$11,284 | gain=+18.2% | peak=$11,284 | dd=+0%
+[19:25:23] Monitor alive | 49 checks | 1 open | next in 5s
+  Ears: mcap=$9,841 | gain=+3.1% | peak=$11,284 | dd=+0%
+  Ears: mcap=$9,841 | gain=+3.1% | peak=$11,284 | dd=+0%
+  Ears: mcap=$9,841 | gain=+3.1% | peak=$11,284 | dd=+0%
+  Ears: mcap=$9,841 | gain=+3.1% | peak=$11,284 | dd=+0%
+  Ears: mcap=$9,841 | gain=+3.1% | peak=$11,284 | dd=+0%
+  Ears: mcap=$9,841 | gain=+3.1% | peak=$11,284 | dd=+0%
+  Pepstein: mcap=$28,501 | gain=-4.0% | peak=$29,683 | dd=+0%
+  Ears: mcap=$11,665 | gain=+22.2% | peak=$11,665 | dd=+0%
+  Pepstein: mcap=$28,501 | gain=-4.0% | peak=$29,683 | dd=+0%
+  Ears: mcap=$11,665 | gain=+22.2% | peak=$11,665 | dd=+0%
+  Pepstein: mcap=$30,447 | gain=+2.6% | peak=$30,447 | dd=+0%
+  Ears: mcap=$11,665 | gain=+22.2% | peak=$11,665 | dd=+0%
+  Pepstein: mcap=$30,447 | gain=+2.6% | peak=$30,447 | dd=+0%
+  Ears: mcap=$11,665 | gain=+22.2% | peak=$11,665 | dd=+0%
+  Pepstein: mcap=$30,447 | gain=+2.6% | peak=$30,447 | dd=+0%
+  Ears: mcap=$11,665 | gain=+22.2% | peak=$11,665 | dd=+0%
+  Pepstein: mcap=$30,447 | gain=+2.6% | peak=$30,447 | dd=+0%
+  Ears: mcap=$11,665 | gain=+22.2% | peak=$11,665 | dd=+0%
+  Pepstein: mcap=$30,447 | gain=+2.6% | peak=$30,447 | dd=+0%
+[19:26:24] Monitor alive | 61 checks | 2 open | next in 5s
+  Ears: mcap=$13,303 | gain=+39.4% | peak=$13,303 | dd=+0%
+  Pepstein: mcap=$30,447 | gain=+2.6% | peak=$30,447 | dd=+0%
+  Ears: mcap=$13,303 | gain=+39.4% | peak=$13,303 | dd=+0%
+  Pepstein: mcap=$27,272 | gain=-8.1% | peak=$30,447 | dd=+0%
+  Ears: mcap=$13,303 | gain=+39.4% | peak=$13,303 | dd=+0%
+  Pepstein: mcap=$27,272 | gain=-8.1% | peak=$30,447 | dd=+0%
+  Ears: mcap=$13,303 | gain=+39.4% | peak=$13,303 | dd=+0%
+  Pepstein: mcap=$27,272 | gain=-8.1% | peak=$30,447 | dd=+0%
+  Ears: mcap=$13,303 | gain=+39.4% | peak=$13,303 | dd=+0%
+  Pepstein: mcap=$27,272 | gain=-8.1% | peak=$30,447 | dd=+0%
+  Ears: mcap=$13,303 | gain=+39.4% | peak=$13,303 | dd=+0%
+  Pepstein: mcap=$27,272 | gain=-8.1% | peak=$30,447 | dd=+0%
+  Ears: error fetching mcap
+  Pepstein: error fetching mcap
+  Ears: error fetching mcap
+  Pepstein: error fetching mcap
+  Ears: error fetching mcap
+  Pepstein: error fetching mcap
+  Ears: error fetching mcap
+  Pepstein: error fetching mcap
+  Ears: error fetching mcap
+  Pepstein: error fetching mcap
+  Ears: error fetching mcap
+  Pepstein: error fetching mcap
+[19:27:26] Monitor alive | 73 checks | 2 open | next in 5s
+  Ears: error fetching mcap
+  Pepstein: error fetching mcap
+  Ears: error fetching mcap
+  Pepstein: error fetching mcap
+  Ears: error fetching mcap
+  Pepstein: error fetching mcap
+  Ears: error fetching mcap
+  Pepstein: error fetching mcap
+  Ears: error fetching mcap
+  Pepstein: error fetching mcap
+  Ears: error fetching mcap
+  Pepstein: error fetching mcap
+[TP1_HOLD] Alert sent
+🚀 Ears TP1 HIT - HOLDING @ $14,666 (+53.7%)
+  Pepstein: mcap=$27,157 | gain=-8.5% | peak=$30,447 | dd=+0%
+  Ears: mcap=$14,666 | gain=+53.7% | peak=$14,666 | dd=+0%
+  Pepstein: mcap=$27,157 | gain=-8.5% | peak=$30,447 | dd=+0%
+  Ears: mcap=$14,666 | gain=+53.7% | peak=$14,666 | dd=+0%
+  Pepstein: mcap=$27,157 | gain=-8.5% | peak=$30,447 | dd=+0%
+  Ears: mcap=$14,666 | gain=+53.7% | peak=$14,666 | dd=+0%
+  Pepstein: mcap=$27,157 | gain=-8.5% | peak=$30,447 | dd=+0%
+  Ears: mcap=$14,666 | gain=+53.7% | peak=$14,666 | dd=+0%
+  Pepstein: mcap=$27,157 | gain=-8.5% | peak=$30,447 | dd=+0%
+  Ears: mcap=$15,308 | gain=+60.4% | peak=$15,308 | dd=-4%
+  Pepstein: mcap=$27,157 | gain=-8.5% | peak=$30,447 | dd=+0%
+[19:28:31] Monitor alive | 85 checks | 2 open | next in 5s
+  Ears: mcap=$15,308 | gain=+60.4% | peak=$15,308 | dd=-4%
+  Pepstein: mcap=$28,305 | gain=-4.6% | peak=$30,447 | dd=+0%
+  Ears: mcap=$15,308 | gain=+60.4% | peak=$15,308 | dd=-4%
+  Pepstein: mcap=$28,305 | gain=-4.6% | peak=$30,447 | dd=+0%
+  Ears: mcap=$15,308 | gain=+60.4% | peak=$15,308 | dd=-4%
+  Pepstein: mcap=$28,305 | gain=-4.6% | peak=$30,447 | dd=+0%
+  Ears: mcap=$15,308 | gain=+60.4% | peak=$15,308 | dd=-4%
+  Pepstein: mcap=$28,305 | gain=-4.6% | peak=$30,447 | dd=+0%
+  Ears: mcap=$16,635 | gain=+74.3% | peak=$16,635 | dd=-13%
+  Pepstein: mcap=$28,305 | gain=-4.6% | peak=$30,447 | dd=+0%
+  Ears: mcap=$16,635 | gain=+74.3% | peak=$16,635 | dd=-13%
+  Pepstein: mcap=$28,305 | gain=-4.6% | peak=$30,447 | dd=+0%
+  Ears: mcap=$16,635 | gain=+74.3% | peak=$16,635 | dd=-13%
+  Pepstein: mcap=$24,890 | gain=-16.1% | peak=$30,447 | dd=+0%
+  Ears: mcap=$16,635 | gain=+74.3% | peak=$16,635 | dd=-13%
+  Pepstein: mcap=$24,890 | gain=-16.1% | peak=$30,447 | dd=+0%
+  Ears: mcap=$16,635 | gain=+74.3% | peak=$16,635 | dd=-13%
+  Pepstein: mcap=$24,890 | gain=-16.1% | peak=$30,447 | dd=+0%
+  Ears: mcap=$16,635 | gain=+74.3% | peak=$16,635 | dd=-13%
+  Pepstein: mcap=$24,890 | gain=-16.1% | peak=$30,447 | dd=+0%
+  Ears: mcap=$15,954 | gain=+67.2% | peak=$16,635 | dd=-9%
+  Pepstein: mcap=$24,890 | gain=-16.1% | peak=$30,447 | dd=+0%
+  Ears: mcap=$15,954 | gain=+67.2% | peak=$16,635 | dd=-9%
+  Pepstein: mcap=$25,999 | gain=-12.4% | peak=$30,447 | dd=+0%
+[19:29:34] Monitor alive | 97 checks | 2 open | next in 5s
+  Ears: mcap=$15,954 | gain=+67.2% | peak=$16,635 | dd=-9%
+  Pepstein: mcap=$25,999 | gain=-12.4% | peak=$30,447 | dd=+0%
+  Ears: mcap=$15,954 | gain=+67.2% | peak=$16,635 | dd=-9%
+  Pepstein: mcap=$25,999 | gain=-12.4% | peak=$30,447 | dd=+0%
+  Ears: mcap=$15,954 | gain=+67.2% | peak=$16,635 | dd=-9%
+  Pepstein: mcap=$25,999 | gain=-12.4% | peak=$30,447 | dd=+0%
+  Ears: mcap=$15,954 | gain=+67.2% | peak=$16,635 | dd=-9%
+  Pepstein: mcap=$25,999 | gain=-12.4% | peak=$30,447 | dd=+0%
+  Ears: mcap=$17,127 | gain=+79.5% | peak=$17,127 | dd=-17%
+  Pepstein: mcap=$25,999 | gain=-12.4% | peak=$30,447 | dd=+0%

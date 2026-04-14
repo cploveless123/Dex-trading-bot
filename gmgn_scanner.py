@@ -62,8 +62,8 @@ def gmgn_throttle_alert():
     if _gmgn_throttle_count >= 3 and (now - _gmgn_last_throttle_alert) > 300:
         print(f"🚨 GMGN API THROTTLED: {_gmgn_throttle_count} failures")
         try:
-            from alert_sender import send_telegram_alert
-            send_telegram_alert(f"🚨 GMGN THROTTLED: {_gmgn_throttle_count} failures. Check scanner.", "SYSTEM_ALERT")
+            from alert_sender import send_telegram
+            send_telegram(f"🚨 GMGN THROTTLED: {_gmgn_throttle_count} failures. Check scanner.")
         except:
             pass
         _gmgn_last_throttle_alert = now
@@ -210,6 +210,8 @@ def scan_token(gmgn_data, dex_data, whale_wallets):
         chg1 = float(chg1)
     ath_mcap = float(gmgn_data.get('ath_market_cap', 0) or 0) or mcap
     vol5m = float(gmgn_data.get('volume5m', 0) or 0)
+    if vol5m == 0 and gmgn_data.get('volume'):
+        vol5m = float(gmgn_data.get('volume', 0) or 0) / 12  # Estimate 5min from 24h volume
     bs_ratio = float(gmgn_data.get('buy_sell_ratio', 0) or 0)
     launchpad = str(gmgn_data.get('launchpad', '')).lower()
     pair_address = gmgn_data.get('pair_address', '')
@@ -270,9 +272,8 @@ def scan_token(gmgn_data, dex_data, whale_wallets):
     
     # === EXCHANGE VALIDATION ===
     if launchpad == 'pump':
-        if not (pair_address.endswith('pump') or 'pump' in pair_address.lower()):
-            pass  # Accept pump.fun regardless
-    elif launchpad not in ALLOWED_EXCHANGES:
+        pass  # Accept pump.fun regardless
+    elif launchpad and launchpad not in ALLOWED_EXCHANGES:
         return None, f"exchange {launchpad} not allowed"
     
     # === BS RATIO ===
@@ -380,7 +381,7 @@ def add_to_cooldown(addr, token_data, result, dex_data=None):
         '_pump_triggered': pump_triggered,
     }
     
-    pump_msg = " 🚀 PUMP" if pump_triggered else ""
+    pump_msg = " [GO] PUMP" if pump_triggered else ""
     print(f"   ⏳ {result['token']}: cooldown {cooldown_secs}s (m5={result['m5']:+.1f}%){pump_msg}")
     return True
 
@@ -488,13 +489,13 @@ def check_cooldown_watch():
             
             # Cooldown done — check next state
             if chg1 is not None and chg1 > 5.0:
-                # 🚀 PUMP PATH: chg1 > +5% — skip recovery, go straight to verify
+                # [GO] PUMP PATH: chg1 > +5% — skip recovery, go straight to verify
                 data['state'] = STATE_VERIFICATION
                 data['cooldown_end'] = now + CHG1_VERIFY_DELAY
                 data['prev_chg1'] = chg1
                 data['consecutive_ok'] = 0
                 data['recheck_count'] = 0
-                print(f"   🚀 {result['token']}: PUMP confirmed (chg1={chg1:+.1f}%) — verify 15s")
+                print(f"   [GO] {result['token']}: PUMP confirmed (chg1={chg1:+.1f}%) — verify 15s")
                 continue
             
             elif chg1 is not None and chg1 < CHG1_MIN_VALUE:
@@ -550,7 +551,7 @@ def check_cooldown_watch():
                     data['prev_chg1'] = chg1
                     data['consecutive_ok'] = 0
                     data['recheck_count'] = 0
-                    print(f"   ✅ {result['token']}: chg1 recovered {chg1:+.1f}% (improved +{improvement:+.1f}%) — verify 15s")
+                    print(f"   [CHECK] {result['token']}: chg1 recovered {chg1:+.1f}% (improved +{improvement:+.1f}%) — verify 15s")
                     continue
                 else:
                     # Improvement not met — keep recovering
@@ -680,7 +681,7 @@ def buy_token(addr, result):
             json.dump(list(PERM_BLACKLIST), f)
         
         try:
-            from alert_sender import send_telegram_alert
+            from alert_sender import send_telegram
             msg = f"""🟢 BUY | {datetime.now(timezone.utc).strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
 [BUY] {result.get('token')}
@@ -690,13 +691,14 @@ def buy_token(addr, result):
 [DIP] Dip: {result.get('dip', 0):.1f}%
 
 🔗 https://dexscreener.com/solana/{addr}
-🥧 https://pump.fun/{addr}"""
-            send_telegram_alert(msg, "BUY")
-        except:
-            pass
+[PUMP] https://pump.fun/{addr}"""
+            send_telegram(msg)
+        except Exception as alert_err:
+            print(f"   ❌ Alert failed: {alert_err}")
         return True
     except Exception as e:
         print(f"   ❌ Buy error: {e}")
+        import traceback; traceback.print_exc()
         return False
 
 # === SCAN CYCLE ===
@@ -714,8 +716,8 @@ def scan_cycle():
         if _gmgn_empty_cycle_count >= 5 and (now - _gmgn_last_alert_empty) > 300:
             print(f"🚨 GMGN returning empty for {_gmgn_empty_cycle_count} cycles")
             try:
-                from alert_sender import send_telegram_alert
-                send_telegram_alert(f"🚨 GMGN empty data for {_gmgn_empty_cycle_count} cycles", "SYSTEM_ALERT")
+                from alert_sender import send_telegram
+                send_telegram(f"🚨 GMGN empty data for {_gmgn_empty_cycle_count} cycles")
             except:
                 pass
             _gmgn_last_alert_empty = now
@@ -772,7 +774,7 @@ def cleanup_rejected():
 
 # === MAIN ===
 def main():
-    print(f"🚀 GMGN Scanner v6.9 Started")
+    print(f"[GO] GMGN Scanner v6.9 Started")
     print(f"   Sources: GMGN trending + trenches + pump.fun lowcap")
     print(f"   Mcap: ${MIN_MCAP:,}-${MAX_MCAP:,} | Holders: {MIN_HOLDERS}+ | Dip: {DIP_MIN}-{DIP_MAX}% | ATH: <{ATH_DIVERGENCE_MAX}%")
     print(f"   Momentum: h1/24h > +{H1_MOMENTUM_MIN}% | chg1 > +{MIN_CHG1_FOR_BUY}%")
