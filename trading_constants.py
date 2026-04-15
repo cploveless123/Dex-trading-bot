@@ -85,29 +85,29 @@ LIQUIDITY_MCAP_THRESHOLD = 70000  # $70K — mcap above this triggers liq check
 LIQUIDITY_MIN = 1000             # $1K — mcap > $70K + liq < $1K = sell
 LIQUIDITY_EMERGENCY_THRESHOLD = 1000  # $1K — mcap > $70K + liq < $1K = sell
 
-# === EXIT PLAN ===
-TP1_PERCENT = 50
+# === EXIT PLAN (v7.2 Chris Update 2026-04-15) ===
+TP1_PERCENT = 30
 TP1_TRAILING_PCT = 40
-TP1_SELL_PCT = 0           # HOLD
+TP1_SELL_PCT = 0           # HOLD - watch only, let ride
 
 TP2_PERCENT = 100
-TP2_TRAILING_PCT = 35
-TP2_SELL_PCT = 40
+TP2_TRAILING_PCT = 40
+TP2_SELL_PCT = 40          # Sell 40% at TP2
 
 TP3_PERCENT = 200
-TP3_TRAILING_PCT = 35
-TP3_SELL_PCT = 30
+TP3_TRAILING_PCT = 40
+TP3_SELL_PCT = 30          # Sell 30% at TP3
 
 TP4_PERCENT = 300
-TP4_TRAILING_PCT = 35
-TP4_SELL_PCT = 20
+TP4_TRAILING_PCT = 40
+TP4_SELL_PCT = 20          # Sell 20% at TP4
 
 TP5_PERCENT = 1000
-TP5_TRAILING_PCT = 30
-TP5_SELL_PCT = 10
+TP5_TRAILING_PCT = 35
+TP5_SELL_PCT = 10           # Sell remaining 10% at TP5
 
-TRAILING_STOP_PCT = 40
-STOP_LOSS_PERCENT = -25     # -25% stop loss (raised from -20%)
+TRAILING_STOP_PCT = 40     # 40% trailing stop from peak
+STOP_LOSS_PERCENT = -30     # -30% stop loss
 
 # Low volume exit
 LOW_VOLUME_THRESHOLD = 600  # 5min vol < $600 + mcap > $60K = exit

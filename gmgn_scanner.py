@@ -2,6 +2,7 @@
 """
 GMGN Scanner v7.2 - Wilson Bot
 v7.2: MAX_H1 250%, MIN_DIP 20%, Fallen Giant h1>400+mcap<20K, symbol blacklist, throttle alerts
+Exit: TP1+30%H, TP2+100%sell40%, TP3+200%sell30%, TP4+300%sell20%, TP5+1000%sell10%, Stop-30%
 """
 
 import json, time, subprocess
