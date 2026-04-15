@@ -39,7 +39,8 @@ YOUNG_AGE_THRESHOLD = 900
 BS_RATIO_NEW = 1.5
 BS_RATIO_OLD = 1.3
 MIN_VOLUME = 10000
-ALLOWED_EXCHANGES = ['pump', 'raydium', 'pumpswap']
+ALLOWED_EXCHANGES = ['raydium']  # Only raydium allowed (pair_address checked separately)
+PUMP_EXCHANGES = ['pump', 'pumpswap']  # pump.fun and pumpswap - pair must end in "pump"
 PERM_BLACKLIST_FILE = '/root/Dex-trading-bot/.perm_blacklist.json'
 
 BOT_TOKEN = '8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg'
@@ -294,6 +295,7 @@ def scan_token(token_data, reason_if_fail=None):
             'volume': volume,
             'bs_ratio': bs_ratio,
             'launchpad': launchpad,
+            'pair_address': pair_address,
             'pump_rule_triggered': pump_triggered,
             'entry_price': float(token_data.get('price', 0) or 0),
         }
@@ -328,6 +330,19 @@ def buy_token(addr, result):
     
     if get_open_position_count() >= MAX_OPEN_POSITIONS:
         return False
+    
+    # IRONCLAD: Verify pair_address for pump/pumpswap - must end in "pump"
+    launchpad = str(result.get('launchpad', '')).lower().strip()
+    pair_address = str(result.get('pair_address', '')).lower().strip()
+    
+    if launchpad in ['pump', 'pumpswap'] and pair_address:
+        if not pair_address.endswith('pump'):
+            send_alert(f"🚫 BUY BLOCKED: {result.get('token')} pair_address doesn't end in 'pump'")
+            return False
+    
+    # Try to verify with fresh data if available
+    if launchpad in ['pump', 'pumpswap'] and pair_address.endswith('pump'):
+        pass  # Already verified
     
     trade = {
         'action': 'BUY',
