@@ -330,11 +330,16 @@ def get_open_position_count():
 
 def get_scanner_status():
     """Return scanner status dict for heartbeat reporting"""
+    gmgn_throttled = any(time.time() < s['backoff_until'] for s in _gmgn_throttle_state.values())
     return {
         'cooldown_count': len(COOLDOWN_WATCH),
         'blacklist_count': len(PERM_BLACKLIST),
         'rejected_temp_count': len(REJECTED_TEMP),
         'dexscraper_fail_count': DEXSCREENER_FAIL_COUNT,
+        'gmgn_throttled': gmgn_throttled,
+        'gmgn_trending_fails': _gmgn_throttle_state['trending']['count'],
+        'gmgn_trenches_fails': _gmgn_throttle_state['trenches']['count'],
+        'gmgn_token_info_fails': _gmgn_throttle_state['token_info']['count'],
         'buys_stopped': _BUYS_STOPPED,
     }
 
