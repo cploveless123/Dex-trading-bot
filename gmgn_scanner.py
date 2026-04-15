@@ -23,7 +23,7 @@ from datetime import datetime, timezone
 # CONSTANTS
 # =====================================================================
 POSITION_SIZE = 0.1
-MAX_OPEN_POSITIONS = 5
+MAX_OPEN_POSITIONS = 9
 MIN_MCAP = 6000
 MAX_MCAP = 55000
 MIN_HOLDERS = 15
@@ -197,6 +197,21 @@ def get_gmgn_trenches(limit=20):
         completed = d.get('completed', [])
         new = d.get('new', [])
         return completed + new
+    except:
+        return []
+
+def get_gmgn_pump(limit=20):
+    """Get pump.fun tokens from GMGN dedicated pump endpoint"""
+    if is_throttled('pump_endpoint'):
+        return []
+    r = subprocess.run(['gmgn-cli', 'market', 'pump', '--chain', 'sol', '--limit', str(limit)],
+                      capture_output=True, text=True, timeout=15)
+    if r.returncode != 0:
+        record_throttle('pump_endpoint')
+        return []
+    try:
+        d = json.loads(r.stdout)
+        return d.get('data', {}).get('tokens', [])
     except:
         return []
 
@@ -854,6 +869,25 @@ def scan_cycle():
         if addr in COOLDOWN_WATCH:
             continue
         if addr in REJECTED_TEMP:
+            continue
+        if get_open_position_count() >= MAX_OPEN_POSITIONS:
+            continue
+        
+        result, fail_reason = scan_token(token_data)
+        if result is None:
+            continue
+        
+        add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
+    
+    # === SCAN GMGN PUMP ENDPOINT ===
+    pump_tokens = get_gmgn_pump(20)
+    for token_data in pump_tokens:
+        addr = token_data.get('address', '')
+        if not addr or addr in seen:
+            continue
+        seen.add(addr)
+        
+        if addr in PERM_BLACKLIST or addr in COOLDOWN_WATCH or addr in REJECTED_TEMP:
             continue
         if get_open_position_count() >= MAX_OPEN_POSITIONS:
             continue
