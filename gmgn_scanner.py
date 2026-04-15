@@ -429,6 +429,13 @@ def scan_cycle():
         
         # === PUMP PATH ===
         if state == STATE_PUMP_WAIT_1:
+            # Check Fallen Giant BEFORE wasting time in pump cooldown
+            if h1 > 350 and mcap < 25000:
+                print(f"   [REJECT_FALLEN_PUMP] {result['token']}: h1={h1:.0f}% + mcap=${mcap:,.0f} < $25K | Fallen Giant")
+                REJECTED_TEMP[addr] = {'ts': now, 'reason': f'Fallen Giant h1={h1:.0f}%'}
+                to_remove.append(addr)
+                continue
+            
             remaining = data['cooldown_end'] - now
             if remaining > 0:
                 continue
@@ -448,6 +455,13 @@ def scan_cycle():
             continue
         
         elif state == STATE_PUMP_WAIT_2:
+            # Re-check Fallen Giant (h1 might have grown)
+            if h1 > 350 and mcap < 25000:
+                print(f"   [REJECT_FALLEN_PUMP2] {result['token']}: h1={h1:.0f}% + mcap=${mcap:,.0f} < $25K | Fallen Giant")
+                REJECTED_TEMP[addr] = {'ts': now, 'reason': f'Fallen Giant h1={h1:.0f}%'}
+                to_remove.append(addr)
+                continue
+            
             remaining = data['cooldown_end'] - now
             if remaining > 0:
                 continue
@@ -497,14 +511,10 @@ def scan_cycle():
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             data['recheck_count'] += 1
+            # Transition to recovery state
+            data['state'] = STATE_RECOVERY_WAIT
             data['cooldown_end'] = now + STATE_RECOVERY_WAIT
-            print(f"   [DETERIORATING] {result['token']}: chg5 {chg5_prev:+.1f}% → {chg5:+.1f}% (dropped {chg5_drop:.1f}%) | watching for recovery")
-            # Check if recovered: chg5 > +5% from lowest AND must be > +2%
-            recovery_target = lowest_chg5 + CHG5_RECOVERY_CHECK
-            if chg5 >= max(recovery_target, MIN_CHG5_FOR_BUY):
-                data['state'] = STATE_POST_COOLDOWN
-                data['cooldown_end'] = now + STATE_POST_COOLDOWN
-                print(f"   [RECOVERED] {result['token']}: chg5={chg5:+.1f}% >= {recovery_target:+.1f}% | verify {STATE_POST_COOLDOWN}s")
+            print(f"   [DETERIORATING] {result['token']}: chg5 {chg5_prev:+.1f}% → {chg5:+.1f}% (drop {chg5_drop:.1f}%) | recovery mode")
             continue
         
         # === YOUNG COOLDOWN PATH (<15min + h1>5% + chg5>-5%) ===
@@ -586,6 +596,32 @@ def scan_cycle():
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
+        
+        # === RECOVERY WAIT: Deterioration happened, waiting for chg5 to recover ===
+        if state == STATE_RECOVERY_WAIT:
+            remaining = data['cooldown_end'] - now
+            if remaining > 0:
+                data['chg5_prev'] = chg5
+                data['h1_prev'] = h1
+                continue
+            # Check if recovered
+            recovery_target = data['lowest_chg5'] + CHG5_RECOVERY_CHECK
+            if chg5 >= max(recovery_target, MIN_CHG5_FOR_BUY):
+                # Recovered! Go back to cooldown
+                data['state'] = STATE_POST_COOLDOWN
+                data['cooldown_end'] = now + STATE_POST_COOLDOWN
+                print(f"   [RECOVERED] {result['token']}: chg5={chg5:+.1f}% >= {recovery_target:+.1f}% | verify {STATE_POST_COOLDOWN}s")
+                data['chg5_prev'] = chg5
+                data['h1_prev'] = h1
+                continue
+            else:
+                # Still low - keep waiting in recovery
+                data['lowest_chg5'] = min(data['lowest_chg5'], chg5)
+                data['cooldown_end'] = now + STATE_RECOVERY_WAIT
+                data['chg5_prev'] = chg5
+                data['h1_prev'] = h1
+                print(f"   [STILL_RECOVERING] {result['token']}: chg5={chg5:+.1f}% < {recovery_target:+.1f}% | wait {STATE_RECOVERY_WAIT}s")
+                continue
         
         # === BASE WAIT: Standard rechecks ===
         if state == STATE_BASE_WAIT:
