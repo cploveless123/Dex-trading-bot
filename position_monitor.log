@@ -22718,3 +22718,2962 @@ Checking every 5s
   MEMEMAN: error fetching mcap
   Bro: error fetching mcap
   MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+[TP1_HOLD] Alert sent
+🚀 Bro TP1 HIT - HOLDING @ $14,387 (+87.1%)
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,387 | gain=+87.1% | peak=$14,387 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,387 | gain=+87.1% | peak=$14,387 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,387 | gain=+87.1% | peak=$14,387 | dd=+0%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+[03:30:27] Monitor alive | 297 checks | 1 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$12,998 | gain=+69.0% | peak=$14,387 | dd=+10%
+  Bro: mcap=$12,998 | gain=+43.4% | peak=$14,387 | dd=+10%
+  Bro: mcap=$12,998 | gain=+43.4% | peak=$14,387 | dd=+10%
+  Bro: mcap=$12,998 | gain=+43.4% | peak=$14,387 | dd=+10%
+[03:31:28] Monitor alive | 308 checks | 4 open | next in 5s
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$12,998 | gain=+69.0% | peak=$14,387 | dd=+10%
+  Bro: mcap=$12,998 | gain=+43.4% | peak=$14,387 | dd=+10%
+  Bro: mcap=$12,998 | gain=+43.4% | peak=$14,387 | dd=+10%
+  Bro: mcap=$12,998 | gain=+43.4% | peak=$14,387 | dd=+10%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$13,708 | gain=+78.3% | peak=$14,387 | dd=+5%
+[TP1_HOLD] Alert sent
+🚀 Bro TP1 HIT - HOLDING @ $13,708 (+51.2%)
+[TP1_HOLD] Alert sent
+🚀 Bro TP1 HIT - HOLDING @ $13,708 (+51.2%)
+[TP1_HOLD] Alert sent
+🚀 Bro TP1 HIT - HOLDING @ $13,708 (+51.2%)
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$13,708 | gain=+78.3% | peak=$13,708 | dd=+0%
+  Bro: mcap=$13,708 | gain=+51.2% | peak=$13,708 | dd=+0%
+  Bro: mcap=$13,708 | gain=+51.2% | peak=$13,708 | dd=+0%
+  Bro: mcap=$13,708 | gain=+51.2% | peak=$13,708 | dd=+0%
+  CLASSICUO: mcap=$10,681 | gain=-4.1% | peak=$11,136 | dd=+0%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+[03:32:33] Monitor alive | 319 checks | 8 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,479 | gain=+88.3% | peak=$14,479 | dd=-6%
+  Bro: mcap=$14,479 | gain=+59.7% | peak=$14,479 | dd=-6%
+  Bro: mcap=$14,479 | gain=+59.7% | peak=$14,479 | dd=-6%
+  Bro: mcap=$14,479 | gain=+59.7% | peak=$14,479 | dd=-6%
+  CLASSICUO: mcap=$12,508 | gain=+12.3% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$12,508 | gain=+1.8% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$12,508 | gain=+6.1% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$12,508 | gain=-7.6% | peak=$12,508 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,479 | gain=+88.3% | peak=$14,479 | dd=-6%
+  Bro: mcap=$14,479 | gain=+59.7% | peak=$14,479 | dd=-6%
+  Bro: mcap=$14,479 | gain=+59.7% | peak=$14,479 | dd=-6%
+  Bro: mcap=$14,479 | gain=+59.7% | peak=$14,479 | dd=-6%
+  CLASSICUO: mcap=$12,508 | gain=+12.3% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$12,508 | gain=+1.8% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$12,508 | gain=+6.1% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$12,508 | gain=-7.6% | peak=$12,508 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,479 | gain=+88.3% | peak=$14,479 | dd=-6%
+  Bro: mcap=$14,479 | gain=+59.7% | peak=$14,479 | dd=-6%
+  Bro: mcap=$14,479 | gain=+59.7% | peak=$14,479 | dd=-6%
+  Bro: mcap=$14,479 | gain=+59.7% | peak=$14,479 | dd=-6%
+  CLASSICUO: mcap=$12,508 | gain=+12.3% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$12,508 | gain=+1.8% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$12,508 | gain=+6.1% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$12,508 | gain=-7.6% | peak=$12,508 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,753 | gain=+91.8% | peak=$14,753 | dd=-8%
+  Bro: mcap=$14,753 | gain=+62.7% | peak=$14,753 | dd=-8%
+  Bro: mcap=$14,753 | gain=+62.7% | peak=$14,753 | dd=-8%
+  Bro: mcap=$14,753 | gain=+62.7% | peak=$14,753 | dd=-8%
+  CLASSICUO: mcap=$12,508 | gain=+12.3% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$12,508 | gain=+1.8% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$12,508 | gain=+6.1% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$12,508 | gain=-7.6% | peak=$12,508 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,753 | gain=+91.8% | peak=$14,753 | dd=-8%
+  Bro: mcap=$14,753 | gain=+62.7% | peak=$14,753 | dd=-8%
+  Bro: mcap=$14,753 | gain=+62.7% | peak=$14,753 | dd=-8%
+  Bro: mcap=$14,753 | gain=+62.7% | peak=$14,753 | dd=-8%
+  CLASSICUO: mcap=$11,860 | gain=+6.5% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$11,860 | gain=-3.5% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$11,860 | gain=+0.6% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$11,860 | gain=-12.4% | peak=$12,508 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,753 | gain=+91.8% | peak=$14,753 | dd=-8%
+  Bro: mcap=$14,753 | gain=+62.7% | peak=$14,753 | dd=-8%
+  Bro: mcap=$14,753 | gain=+62.7% | peak=$14,753 | dd=-8%
+  Bro: mcap=$14,753 | gain=+62.7% | peak=$14,753 | dd=-8%
+  CLASSICUO: mcap=$11,860 | gain=+6.5% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$11,860 | gain=-3.5% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$11,860 | gain=+0.6% | peak=$12,508 | dd=+0%
+  CLASSICUO: mcap=$11,860 | gain=-12.4% | peak=$12,508 | dd=+0%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+[03:33:38] Monitor alive | 330 checks | 8 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,293 | gain=+85.9% | peak=$14,753 | dd=-4%
+  Bro: mcap=$14,293 | gain=+57.6% | peak=$14,753 | dd=-4%
+  Bro: mcap=$14,293 | gain=+57.6% | peak=$14,753 | dd=-4%
+  Bro: mcap=$14,293 | gain=+57.6% | peak=$14,753 | dd=-4%
+[TP1_HOLD] Alert sent
+🚀 CLASSICUO TP1 HIT - HOLDING @ $17,058 (+53.2%)
+  CLASSICUO: mcap=$17,058 | gain=+38.9% | peak=$17,058 | dd=+0%
+  CLASSICUO: mcap=$17,058 | gain=+44.7% | peak=$17,058 | dd=+0%
+  CLASSICUO: mcap=$17,058 | gain=+26.0% | peak=$17,058 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,293 | gain=+85.9% | peak=$14,753 | dd=-4%
+  Bro: mcap=$14,293 | gain=+57.6% | peak=$14,753 | dd=-4%
+  Bro: mcap=$14,293 | gain=+57.6% | peak=$14,753 | dd=-4%
+  Bro: mcap=$14,293 | gain=+57.6% | peak=$14,753 | dd=-4%
+  CLASSICUO: mcap=$17,058 | gain=+53.2% | peak=$17,058 | dd=+0%
+  CLASSICUO: mcap=$17,058 | gain=+38.9% | peak=$17,058 | dd=+0%
+  CLASSICUO: mcap=$17,058 | gain=+44.7% | peak=$17,058 | dd=+0%
+  CLASSICUO: mcap=$17,058 | gain=+26.0% | peak=$17,058 | dd=+0%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+[03:34:40] Monitor alive | 340 checks | 8 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,854 | gain=+93.2% | peak=$14,854 | dd=-8%
+  Bro: mcap=$14,854 | gain=+63.8% | peak=$14,854 | dd=-8%
+  Bro: mcap=$14,854 | gain=+63.8% | peak=$14,854 | dd=-8%
+  Bro: mcap=$14,854 | gain=+63.8% | peak=$14,854 | dd=-8%
+  CLASSICUO: mcap=$18,722 | gain=+68.1% | peak=$18,722 | dd=-10%
+[TP1_HOLD] Alert sent
+🚀 CLASSICUO TP1 HIT - HOLDING @ $18,722 (+52.4%)
+[TP1_HOLD] Alert sent
+🚀 CLASSICUO TP1 HIT - HOLDING @ $18,722 (+58.8%)
+  CLASSICUO: mcap=$18,722 | gain=+38.3% | peak=$18,722 | dd=+0%
+[03:35:45] Monitor alive | 351 checks | 8 open | next in 5s
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,854 | gain=+93.2% | peak=$14,854 | dd=-8%
+  Bro: mcap=$14,854 | gain=+63.8% | peak=$14,854 | dd=-8%
+  Bro: mcap=$14,854 | gain=+63.8% | peak=$14,854 | dd=-8%
+  Bro: mcap=$14,854 | gain=+63.8% | peak=$14,854 | dd=-8%
+  CLASSICUO: mcap=$18,722 | gain=+68.1% | peak=$18,722 | dd=+0%
+  CLASSICUO: mcap=$18,722 | gain=+52.4% | peak=$18,722 | dd=+0%
+  CLASSICUO: mcap=$18,722 | gain=+58.8% | peak=$18,722 | dd=+0%
+  CLASSICUO: mcap=$18,722 | gain=+38.3% | peak=$18,722 | dd=+0%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+[03:36:49] Monitor alive | 362 checks | 8 open | next in 5s
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$11,347 | gain=+47.6% | peak=$14,854 | dd=+17%
+  Bro: mcap=$11,347 | gain=+25.1% | peak=$14,854 | dd=+17%
+  Bro: mcap=$11,347 | gain=+25.1% | peak=$14,854 | dd=+17%
+  Bro: mcap=$11,347 | gain=+25.1% | peak=$14,854 | dd=+17%
+  CLASSICUO: mcap=$15,267 | gain=+37.1% | peak=$18,722 | dd=+18%
+  CLASSICUO: mcap=$15,267 | gain=+24.3% | peak=$18,722 | dd=+18%
+  CLASSICUO: mcap=$15,267 | gain=+29.5% | peak=$18,722 | dd=+18%
+  CLASSICUO: mcap=$15,267 | gain=+12.8% | peak=$18,722 | dd=+18%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$11,347 | gain=+47.6% | peak=$14,854 | dd=+17%
+  Bro: mcap=$11,347 | gain=+25.1% | peak=$14,854 | dd=+17%
+  Bro: mcap=$11,347 | gain=+25.1% | peak=$14,854 | dd=+17%
+  Bro: mcap=$11,347 | gain=+25.1% | peak=$14,854 | dd=+17%
+  CLASSICUO: mcap=$15,267 | gain=+37.1% | peak=$18,722 | dd=+18%
+  CLASSICUO: mcap=$15,267 | gain=+24.3% | peak=$18,722 | dd=+18%
+  CLASSICUO: mcap=$15,267 | gain=+29.5% | peak=$18,722 | dd=+18%
+  CLASSICUO: mcap=$15,267 | gain=+12.8% | peak=$18,722 | dd=+18%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$11,347 | gain=+47.6% | peak=$14,854 | dd=+17%
+  Bro: mcap=$11,347 | gain=+25.1% | peak=$14,854 | dd=+17%
+  Bro: mcap=$11,347 | gain=+25.1% | peak=$14,854 | dd=+17%
+  Bro: mcap=$11,347 | gain=+25.1% | peak=$14,854 | dd=+17%
+  CLASSICUO: mcap=$15,267 | gain=+37.1% | peak=$18,722 | dd=+18%
+  CLASSICUO: mcap=$15,267 | gain=+24.3% | peak=$18,722 | dd=+18%
+  CLASSICUO: mcap=$15,267 | gain=+29.5% | peak=$18,722 | dd=+18%
+  CLASSICUO: mcap=$15,267 | gain=+12.8% | peak=$18,722 | dd=+18%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$9,981 | gain=+29.8% | peak=$14,854 | dd=+27%
+  Bro: mcap=$9,981 | gain=+10.1% | peak=$14,854 | dd=+27%
+  Bro: mcap=$9,981 | gain=+10.1% | peak=$14,854 | dd=+27%
+  Bro: mcap=$9,981 | gain=+10.1% | peak=$14,854 | dd=+27%
+  CLASSICUO: mcap=$15,267 | gain=+37.1% | peak=$18,722 | dd=+18%
+  CLASSICUO: mcap=$15,267 | gain=+24.3% | peak=$18,722 | dd=+18%
+  CLASSICUO: mcap=$15,267 | gain=+29.5% | peak=$18,722 | dd=+18%
+  CLASSICUO: mcap=$15,267 | gain=+12.8% | peak=$18,722 | dd=+18%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$9,981 | gain=+29.8% | peak=$14,854 | dd=+27%
+  Bro: mcap=$9,981 | gain=+10.1% | peak=$14,854 | dd=+27%
+  Bro: mcap=$9,981 | gain=+10.1% | peak=$14,854 | dd=+27%
+  Bro: mcap=$9,981 | gain=+10.1% | peak=$14,854 | dd=+27%
+  CLASSICUO: mcap=$13,741 | gain=+23.4% | peak=$18,722 | dd=+27%
+  CLASSICUO: mcap=$13,741 | gain=+11.8% | peak=$18,722 | dd=+27%
+  CLASSICUO: mcap=$13,741 | gain=+16.6% | peak=$18,722 | dd=+27%
+  CLASSICUO: mcap=$13,741 | gain=+1.5% | peak=$18,722 | dd=+27%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+[03:37:54] Monitor alive | 373 checks | 8 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$11,978 | gain=+55.8% | peak=$14,854 | dd=+13%
+  Bro: mcap=$11,978 | gain=+32.1% | peak=$14,854 | dd=+13%
+  Bro: mcap=$11,978 | gain=+32.1% | peak=$14,854 | dd=+13%
+  Bro: mcap=$11,978 | gain=+32.1% | peak=$14,854 | dd=+13%
+[TRAILING_STOP] Alert sent
+✅ CLASSICUO TRAILING STOP @ $9,215 (51% drop from peak)
+  CLASSICUO: mcap=$9,215 | gain=-25.0% | peak=$12,285 | dd=+0%
+  CLASSICUO: mcap=$9,215 | gain=-21.8% | peak=$12,285 | dd=+25%
+[STOP_LOSS] Alert sent
+🔴 CLASSICUO STOP LOSS @ $9,215 (-31.9%)
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$11,978 | gain=+55.8% | peak=$14,854 | dd=+13%
+  Bro: mcap=$11,978 | gain=+32.1% | peak=$14,854 | dd=+13%
+  Bro: mcap=$11,978 | gain=+32.1% | peak=$14,854 | dd=+13%
+  Bro: mcap=$11,978 | gain=+32.1% | peak=$14,854 | dd=+13%
+  CLASSICUO: mcap=$9,215 | gain=-25.0% | peak=$12,285 | dd=+0%
+  CLASSICUO: mcap=$9,215 | gain=-21.8% | peak=$12,285 | dd=+25%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$11,978 | gain=+55.8% | peak=$14,854 | dd=+13%
+  Bro: mcap=$11,978 | gain=+32.1% | peak=$14,854 | dd=+13%
+  Bro: mcap=$11,978 | gain=+32.1% | peak=$14,854 | dd=+13%
+  Bro: mcap=$11,978 | gain=+32.1% | peak=$14,854 | dd=+13%
+  CLASSICUO: mcap=$9,215 | gain=-25.0% | peak=$12,285 | dd=+0%
+  CLASSICUO: mcap=$9,215 | gain=-21.8% | peak=$12,285 | dd=+25%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+[03:38:57] Monitor alive | 384 checks | 6 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$13,128 | gain=+70.7% | peak=$14,854 | dd=+4%
+  Bro: mcap=$13,128 | gain=+44.8% | peak=$14,854 | dd=+4%
+  Bro: mcap=$13,128 | gain=+44.8% | peak=$14,854 | dd=+4%
+  Bro: mcap=$13,128 | gain=+44.8% | peak=$14,854 | dd=+4%
+  CLASSICUO: mcap=$7,990 | gain=-35.0% | peak=$12,285 | dd=+0%
+  CLASSICUO: mcap=$7,990 | gain=-32.2% | peak=$12,285 | dd=+35%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$13,128 | gain=+70.7% | peak=$14,854 | dd=+4%
+  Bro: mcap=$13,128 | gain=+44.8% | peak=$14,854 | dd=+4%
+  Bro: mcap=$13,128 | gain=+44.8% | peak=$14,854 | dd=+4%
+  Bro: mcap=$13,128 | gain=+44.8% | peak=$14,854 | dd=+4%
+  CLASSICUO: mcap=$7,154 | gain=-41.8% | peak=$12,285 | dd=+0%
+[TRAILING_STOP] Alert sent
+✅ CLASSICUO TRAILING STOP @ $7,154 (42% drop from peak)
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+[03:39:58] Monitor alive | 395 checks | 5 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: mcap=$11,096 | gain=-9.7% | peak=$12,285 | dd=+0%
+  PVP: error fetching mcap
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$12,227 | gain=+59.0% | peak=$14,854 | dd=+11%
+  Bro: mcap=$12,227 | gain=+34.9% | peak=$14,854 | dd=+11%
+  Bro: mcap=$12,227 | gain=+34.9% | peak=$14,854 | dd=+11%
+  Bro: mcap=$12,227 | gain=+34.9% | peak=$14,854 | dd=+11%
+  CLASSICUO: mcap=$11,096 | gain=-9.7% | peak=$12,285 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$12,227 | gain=+59.0% | peak=$14,854 | dd=+11%
+  Bro: mcap=$12,227 | gain=+34.9% | peak=$14,854 | dd=+11%
+  Bro: mcap=$12,227 | gain=+34.9% | peak=$14,854 | dd=+11%
+  Bro: mcap=$12,227 | gain=+34.9% | peak=$14,854 | dd=+11%
+  CLASSICUO: mcap=$11,096 | gain=-9.7% | peak=$12,285 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+[03:41:01] Monitor alive | 406 checks | 9 open | next in 5s
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$12,227 | gain=+59.0% | peak=$14,854 | dd=+11%
+  Bro: mcap=$12,227 | gain=+34.9% | peak=$14,854 | dd=+11%
+  Bro: mcap=$12,227 | gain=+34.9% | peak=$14,854 | dd=+11%
+  Bro: mcap=$12,227 | gain=+34.9% | peak=$14,854 | dd=+11%
+  CLASSICUO: mcap=$11,096 | gain=-9.7% | peak=$12,285 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$13,875 | gain=+80.4% | peak=$14,854 | dd=-1%
+  Bro: mcap=$13,875 | gain=+53.0% | peak=$14,854 | dd=-1%
+  Bro: mcap=$13,875 | gain=+53.0% | peak=$14,854 | dd=-1%
+  Bro: mcap=$13,875 | gain=+53.0% | peak=$14,854 | dd=-1%
+  CLASSICUO: mcap=$11,096 | gain=-9.7% | peak=$12,285 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  PVP: mcap=$7,675 | gain=+19.1% | peak=$7,675 | dd=+0%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+[03:42:04] Monitor alive | 417 checks | 9 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$12,880 | gain=+67.5% | peak=$14,854 | dd=+6%
+  Bro: mcap=$12,880 | gain=+42.0% | peak=$14,854 | dd=+6%
+  Bro: mcap=$12,880 | gain=+42.0% | peak=$14,854 | dd=+6%
+  Bro: mcap=$12,880 | gain=+42.0% | peak=$14,854 | dd=+6%
+  CLASSICUO: mcap=$13,975 | gain=+13.8% | peak=$13,975 | dd=+0%
+  PVP: mcap=$6,428 | gain=-0.2% | peak=$7,675 | dd=+0%
+  PVP: mcap=$6,428 | gain=-0.2% | peak=$7,675 | dd=+0%
+  PVP: mcap=$6,428 | gain=-0.2% | peak=$7,675 | dd=+0%
+  PVP: mcap=$6,428 | gain=-0.2% | peak=$7,675 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$12,880 | gain=+67.5% | peak=$14,854 | dd=+6%
+  Bro: mcap=$12,880 | gain=+42.0% | peak=$14,854 | dd=+6%
+  Bro: mcap=$12,880 | gain=+42.0% | peak=$14,854 | dd=+6%
+  Bro: mcap=$12,880 | gain=+42.0% | peak=$14,854 | dd=+6%
+  CLASSICUO: mcap=$13,549 | gain=+10.3% | peak=$13,975 | dd=+0%
+  PVP: mcap=$6,428 | gain=-0.2% | peak=$7,675 | dd=+0%
+  PVP: mcap=$6,428 | gain=-0.2% | peak=$7,675 | dd=+0%
+  PVP: mcap=$6,428 | gain=-0.2% | peak=$7,675 | dd=+0%
+  PVP: mcap=$6,428 | gain=-0.2% | peak=$7,675 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$12,880 | gain=+67.5% | peak=$14,854 | dd=+6%
+  Bro: mcap=$12,880 | gain=+42.0% | peak=$14,854 | dd=+6%
+  Bro: mcap=$12,880 | gain=+42.0% | peak=$14,854 | dd=+6%
+  Bro: mcap=$12,880 | gain=+42.0% | peak=$14,854 | dd=+6%
+  CLASSICUO: mcap=$13,549 | gain=+10.3% | peak=$13,975 | dd=+0%
+  PVP: mcap=$6,428 | gain=-0.2% | peak=$7,675 | dd=+0%
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+[03:43:08] Monitor alive | 428 checks | 9 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$13,539 | gain=+76.1% | peak=$14,854 | dd=+1%
+  Bro: mcap=$13,539 | gain=+49.3% | peak=$14,854 | dd=+1%
+  Bro: mcap=$13,539 | gain=+49.3% | peak=$14,854 | dd=+1%
+  Bro: mcap=$13,539 | gain=+49.3% | peak=$14,854 | dd=+1%
+  CLASSICUO: mcap=$9,654 | gain=-21.4% | peak=$13,975 | dd=+0%
+  PVP: mcap=$6,185 | gain=-4.0% | peak=$7,675 | dd=+0%
+  PVP: mcap=$6,185 | gain=-4.0% | peak=$7,675 | dd=+0%
+  PVP: mcap=$6,185 | gain=-4.0% | peak=$7,675 | dd=+0%
+  PVP: mcap=$6,185 | gain=-4.0% | peak=$7,675 | dd=+0%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+[03:44:12] Monitor alive | 439 checks | 9 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  CLASSICUO: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  PVP: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: error fetching mcap
+  Bro: mcap=$14,685 | gain=+62.0% | peak=$14,854 | dd=-7%
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+[TRAILING_STOP] Alert sent
+✅ CLASSICUO TRAILING STOP @ $7,382 (47% drop from peak)
+[STOP_LOSS] Alert sent
+🔴 PVP STOP LOSS @ $3,549 (-44.9%)
+[STOP_LOSS] Alert sent
+🔴 PVP STOP LOSS @ $3,549 (-44.9%)
+[STOP_LOSS] Alert sent
+🔴 PVP STOP LOSS @ $3,549 (-44.9%)
+[STOP_LOSS] Alert sent
+🔴 PVP STOP LOSS @ $3,549 (-44.9%)
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,685 | gain=+91.0% | peak=$14,854 | dd=-7%
+  Bro: mcap=$14,685 | gain=+62.0% | peak=$14,854 | dd=-7%
+  Bro: mcap=$14,685 | gain=+62.0% | peak=$14,854 | dd=-7%
+  Bro: mcap=$14,685 | gain=+62.0% | peak=$14,854 | dd=-7%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+[03:45:16] Monitor alive | 450 checks | 4 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,938 | gain=+94.3% | peak=$14,938 | dd=-9%
+  Bro: mcap=$14,938 | gain=+64.8% | peak=$14,938 | dd=-9%
+  Bro: mcap=$14,938 | gain=+64.8% | peak=$14,938 | dd=-9%
+  Bro: mcap=$14,938 | gain=+64.8% | peak=$14,938 | dd=-9%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,938 | gain=+94.3% | peak=$14,938 | dd=-9%
+  Bro: mcap=$14,938 | gain=+64.8% | peak=$14,938 | dd=-9%
+  Bro: mcap=$14,938 | gain=+64.8% | peak=$14,938 | dd=-9%
+  Bro: mcap=$14,938 | gain=+64.8% | peak=$14,938 | dd=-9%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,938 | gain=+94.3% | peak=$14,938 | dd=-9%
+  Bro: mcap=$14,938 | gain=+64.8% | peak=$14,938 | dd=-9%
+  Bro: mcap=$14,938 | gain=+64.8% | peak=$14,938 | dd=-9%
+  Bro: mcap=$14,938 | gain=+64.8% | peak=$14,938 | dd=-9%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,938 | gain=+94.3% | peak=$14,938 | dd=-9%
+  Bro: mcap=$14,938 | gain=+64.8% | peak=$14,938 | dd=-9%
+  Bro: mcap=$14,938 | gain=+64.8% | peak=$14,938 | dd=-9%
+  Bro: mcap=$14,938 | gain=+64.8% | peak=$14,938 | dd=-9%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$14,938 | gain=+94.3% | peak=$14,938 | dd=-9%
+  Bro: mcap=$14,938 | gain=+64.8% | peak=$14,938 | dd=-9%
+  Bro: mcap=$14,938 | gain=+64.8% | peak=$14,938 | dd=-9%
+  Bro: mcap=$14,938 | gain=+64.8% | peak=$14,938 | dd=-9%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+[TP2] Alert sent
+✅ Bro TP2 HIT @ $18,014 (+134%)
+  Bro: mcap=$18,014 | gain=+98.7% | peak=$18,014 | dd=-31%
+  Bro: mcap=$18,014 | gain=+98.7% | peak=$18,014 | dd=-31%
+  Bro: mcap=$18,014 | gain=+98.7% | peak=$18,014 | dd=-31%
+[03:46:17] Monitor alive | 461 checks | 3 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  opencollar: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  opencollar: error fetching mcap
+[03:47:18] Monitor alive | 472 checks | 4 open | next in 5s
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$20,235 | gain=+163.1% | peak=$20,235 | dd=-48%
+[TP2] Alert sent
+✅ Bro TP2 HIT @ $20,235 (+123%)
+[TP2] Alert sent
+✅ Bro TP2 HIT @ $20,235 (+123%)
+[TP2] Alert sent
+✅ Bro TP2 HIT @ $20,235 (+123%)
+  opencollar: mcap=$12,379 | gain=-8.5% | peak=$13,527 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$20,235 | gain=+163.1% | peak=$20,235 | dd=-48%
+  Bro: mcap=$20,235 | gain=+123.2% | peak=$20,235 | dd=-48%
+  Bro: mcap=$20,235 | gain=+123.2% | peak=$20,235 | dd=-48%
+  Bro: mcap=$20,235 | gain=+123.2% | peak=$20,235 | dd=-48%
+  opencollar: mcap=$12,379 | gain=-8.5% | peak=$13,527 | dd=+0%
+  opencollar: mcap=$12,379 | gain=-3.1% | peak=$13,527 | dd=+8%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$20,235 | gain=+163.1% | peak=$20,235 | dd=-48%
+  Bro: mcap=$20,235 | gain=+123.2% | peak=$20,235 | dd=-48%
+  Bro: mcap=$20,235 | gain=+123.2% | peak=$20,235 | dd=-48%
+  Bro: mcap=$20,235 | gain=+123.2% | peak=$20,235 | dd=-48%
+  opencollar: mcap=$12,379 | gain=-8.5% | peak=$13,527 | dd=+0%
+  opencollar: mcap=$12,379 | gain=-3.1% | peak=$13,527 | dd=+8%
+  opencollar: mcap=$12,379 | gain=-7.8% | peak=$13,527 | dd=+8%
+  opencollar: mcap=$12,379 | gain=-8.5% | peak=$13,527 | dd=+0%
+  ZOOMBER: mcap=$8,353 | gain=-3.1% | peak=$8,621 | dd=+0%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  ZOOMBER: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  ZOOMBER: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  ZOOMBER: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+[03:48:21] Monitor alive | 482 checks | 8 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: mcap=$21,435 | gain=+136.4% | peak=$21,435 | dd=-56%
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  opencollar: error fetching mcap
+  opencollar: mcap=$9,976 | gain=-21.9% | peak=$13,527 | dd=+26%
+  opencollar: error fetching mcap
+  opencollar: error fetching mcap
+  ZOOMBER: mcap=$7,621 | gain=-11.6% | peak=$8,621 | dd=+0%
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$21,435 | gain=+178.7% | peak=$21,435 | dd=-56%
+  Bro: mcap=$21,435 | gain=+136.4% | peak=$21,435 | dd=-56%
+  Bro: mcap=$21,435 | gain=+136.4% | peak=$21,435 | dd=-56%
+  Bro: mcap=$21,435 | gain=+136.4% | peak=$21,435 | dd=-56%
+[STOP_LOSS] Alert sent
+🔴 opencollar STOP LOSS @ $9,976 (-26.3%)
+  opencollar: mcap=$9,976 | gain=-21.9% | peak=$12,769 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 opencollar STOP LOSS @ $9,976 (-25.7%)
+[STOP_LOSS] Alert sent
+🔴 opencollar STOP LOSS @ $9,976 (-26.3%)
+  ZOOMBER: mcap=$8,197 | gain=-4.9% | peak=$8,621 | dd=+0%
+  ZOOMBER: mcap=$8,197 | gain=-23.7% | peak=$8,621 | dd=+0%
+  ZOOMBER: mcap=$8,197 | gain=-23.7% | peak=$8,621 | dd=+0%
+  ZOOMBER: mcap=$8,197 | gain=-23.7% | peak=$8,621 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$21,956 | gain=+185.5% | peak=$21,956 | dd=-60%
+  Bro: mcap=$21,956 | gain=+142.2% | peak=$21,956 | dd=-60%
+  Bro: mcap=$21,956 | gain=+142.2% | peak=$21,956 | dd=-60%
+  Bro: mcap=$21,956 | gain=+142.2% | peak=$21,956 | dd=-60%
+[STOP_LOSS] Alert sent
+🔴 opencollar STOP LOSS @ $7,752 (-39.3%)
+  ZOOMBER: mcap=$8,197 | gain=-4.9% | peak=$8,621 | dd=+0%
+  ZOOMBER: mcap=$8,197 | gain=-23.7% | peak=$8,621 | dd=+0%
+  ZOOMBER: mcap=$8,197 | gain=-23.7% | peak=$8,621 | dd=+0%
+  ZOOMBER: mcap=$8,197 | gain=-23.7% | peak=$8,621 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$21,956 | gain=+185.5% | peak=$21,956 | dd=-60%
+  Bro: mcap=$21,956 | gain=+142.2% | peak=$21,956 | dd=-60%
+  Bro: mcap=$21,956 | gain=+142.2% | peak=$21,956 | dd=-60%
+  Bro: mcap=$21,956 | gain=+142.2% | peak=$21,956 | dd=-60%
+  ZOOMBER: mcap=$8,197 | gain=-4.9% | peak=$8,621 | dd=+0%
+  ZOOMBER: mcap=$8,197 | gain=-23.7% | peak=$8,621 | dd=+0%
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+[03:49:24] Monitor alive | 492 checks | 4 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  ZOOMBER: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$23,060 | gain=+199.9% | peak=$23,060 | dd=-68%
+  Bro: mcap=$23,060 | gain=+154.3% | peak=$23,060 | dd=-68%
+  Bro: mcap=$23,060 | gain=+154.3% | peak=$23,060 | dd=-68%
+  Bro: mcap=$23,060 | gain=+154.3% | peak=$23,060 | dd=-68%
+[STOP_LOSS] Alert sent
+🔴 ZOOMBER STOP LOSS @ $4,475 (-48.1%)
+[STOP_LOSS] Alert sent
+🔴 ZOOMBER STOP LOSS @ $4,475 (-58.3%)
+[STOP_LOSS] Alert sent
+🔴 ZOOMBER STOP LOSS @ $4,475 (-58.3%)
+[STOP_LOSS] Alert sent
+🔴 ZOOMBER STOP LOSS @ $4,475 (-58.3%)
+  QII6900: mcap=$11,742 | gain=+12.7% | peak=$11,742 | dd=+0%
+  QII6900: mcap=$11,742 | gain=+11.2% | peak=$11,742 | dd=+0%
+  QII6900: mcap=$11,742 | gain=+12.7% | peak=$11,742 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$23,060 | gain=+199.9% | peak=$23,060 | dd=-68%
+  Bro: mcap=$23,060 | gain=+154.3% | peak=$23,060 | dd=-68%
+  Bro: mcap=$23,060 | gain=+154.3% | peak=$23,060 | dd=-68%
+  Bro: mcap=$23,060 | gain=+154.3% | peak=$23,060 | dd=-68%
+  QII6900: mcap=$11,742 | gain=+12.7% | peak=$11,742 | dd=+0%
+  QII6900: mcap=$11,742 | gain=+11.2% | peak=$11,742 | dd=+0%
+  QII6900: mcap=$11,742 | gain=+12.7% | peak=$11,742 | dd=+0%
+  QII6900: mcap=$11,742 | gain=+12.7% | peak=$11,742 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$19,301 | gain=+151.0% | peak=$23,060 | dd=-41%
+  Bro: mcap=$19,301 | gain=+112.9% | peak=$23,060 | dd=-41%
+  Bro: mcap=$19,301 | gain=+112.9% | peak=$23,060 | dd=-41%
+  Bro: mcap=$19,301 | gain=+112.9% | peak=$23,060 | dd=-41%
+  QII6900: mcap=$11,742 | gain=+12.7% | peak=$11,742 | dd=+0%
+  QII6900: mcap=$11,742 | gain=+11.2% | peak=$11,742 | dd=+0%
+  QII6900: mcap=$11,742 | gain=+12.7% | peak=$11,742 | dd=+0%
+  QII6900: mcap=$11,742 | gain=+12.7% | peak=$11,742 | dd=+0%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+[03:50:25] Monitor alive | 502 checks | 4 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  UNCCOIN: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  UNCCOIN: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  UNCCOIN: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$18,204 | gain=+136.7% | peak=$23,060 | dd=-33%
+  Bro: mcap=$18,204 | gain=+100.8% | peak=$23,060 | dd=-33%
+  Bro: mcap=$18,204 | gain=+100.8% | peak=$23,060 | dd=-33%
+  Bro: mcap=$18,204 | gain=+100.8% | peak=$23,060 | dd=-33%
+  QII6900: mcap=$12,813 | gain=+23.0% | peak=$12,813 | dd=+0%
+  QII6900: mcap=$12,813 | gain=+21.3% | peak=$12,813 | dd=+0%
+  QII6900: mcap=$12,813 | gain=+23.0% | peak=$12,813 | dd=+0%
+  QII6900: mcap=$12,813 | gain=+23.0% | peak=$12,813 | dd=+0%
+  般人: mcap=$6,074 | gain=-9.7% | peak=$6,728 | dd=+0%
+  Bang: mcap=$14,770 | gain=-15.2% | peak=$17,426 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 UNCCOIN STOP LOSS @ $2,400 (-81.1%)
+  般人: mcap=$8,262 | gain=+22.8% | peak=$8,262 | dd=+0%
+  般人: mcap=$8,262 | gain=+22.8% | peak=$8,262 | dd=+0%
+[03:51:25] Monitor alive | 512 checks | 8 open | next in 5s
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  Bro: mcap=$18,204 | gain=+136.7% | peak=$23,060 | dd=-33%
+  Bro: mcap=$18,204 | gain=+100.8% | peak=$23,060 | dd=-33%
+  Bro: mcap=$18,204 | gain=+100.8% | peak=$23,060 | dd=-33%
+  Bro: mcap=$18,204 | gain=+100.8% | peak=$23,060 | dd=-33%
+  QII6900: mcap=$13,742 | gain=+31.9% | peak=$13,742 | dd=+0%
+  QII6900: mcap=$13,742 | gain=+30.1% | peak=$13,742 | dd=+0%
+  QII6900: mcap=$13,742 | gain=+31.9% | peak=$13,742 | dd=+0%
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  UNCCOIN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  UNCCOIN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  UNCCOIN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  UNCCOIN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  UNCCOIN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  UNCCOIN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  UNCCOIN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  UNCCOIN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  UNCCOIN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: mcap=$7,530 | gain=+11.9% | peak=$8,262 | dd=+0%
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  UNCCOIN: error fetching mcap
+[03:52:30] Monitor alive | 522 checks | 9 open | next in 5s
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$17,898 | gain=+132.7% | peak=$23,060 | dd=-31%
+  Bro: mcap=$17,898 | gain=+97.4% | peak=$23,060 | dd=-31%
+  Bro: mcap=$17,898 | gain=+97.4% | peak=$23,060 | dd=-31%
+  Bro: mcap=$17,898 | gain=+97.4% | peak=$23,060 | dd=-31%
+[TP1_HOLD] Alert sent
+🚀 QII6900 TP1 HIT - HOLDING @ $16,138 (+54.9%)
+[TP1_HOLD] Alert sent
+🚀 QII6900 TP1 HIT - HOLDING @ $16,138 (+52.8%)
+[TP1_HOLD] Alert sent
+🚀 QII6900 TP1 HIT - HOLDING @ $16,138 (+54.9%)
+[TP1_HOLD] Alert sent
+🚀 QII6900 TP1 HIT - HOLDING @ $16,138 (+54.9%)
+  般人: mcap=$7,530 | gain=+11.9% | peak=$8,262 | dd=+0%
+  Bang: mcap=$15,445 | gain=-11.4% | peak=$17,426 | dd=+0%
+  般人: mcap=$7,530 | gain=+11.9% | peak=$8,262 | dd=+0%
+  般人: mcap=$7,530 | gain=+11.9% | peak=$8,262 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 UNCCOIN STOP LOSS @ $2,390 (-81.2%)
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$17,898 | gain=+132.7% | peak=$23,060 | dd=-31%
+  Bro: mcap=$17,898 | gain=+97.4% | peak=$23,060 | dd=-31%
+  Bro: mcap=$17,898 | gain=+97.4% | peak=$23,060 | dd=-31%
+  Bro: mcap=$17,898 | gain=+97.4% | peak=$23,060 | dd=-31%
+  QII6900: mcap=$16,138 | gain=+54.9% | peak=$16,138 | dd=+0%
+  QII6900: mcap=$16,138 | gain=+52.8% | peak=$16,138 | dd=+0%
+  QII6900: mcap=$16,138 | gain=+54.9% | peak=$16,138 | dd=+0%
+  QII6900: mcap=$16,138 | gain=+54.9% | peak=$16,138 | dd=+0%
+  般人: mcap=$7,530 | gain=+11.9% | peak=$8,262 | dd=+0%
+  Bang: mcap=$14,491 | gain=-16.8% | peak=$17,426 | dd=+0%
+  般人: mcap=$7,530 | gain=+11.9% | peak=$8,262 | dd=+0%
+  般人: mcap=$7,530 | gain=+11.9% | peak=$8,262 | dd=+0%
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$17,898 | gain=+132.7% | peak=$23,060 | dd=-31%
+  Bro: mcap=$17,898 | gain=+97.4% | peak=$23,060 | dd=-31%
+  Bro: mcap=$16,482 | gain=+81.8% | peak=$23,060 | dd=-20%
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+[03:53:33] Monitor alive | 532 checks | 8 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$17,031 | gain=+121.5% | peak=$23,060 | dd=-24%
+  Bro: mcap=$17,031 | gain=+87.8% | peak=$23,060 | dd=-24%
+  Bro: mcap=$17,031 | gain=+87.8% | peak=$23,060 | dd=-24%
+  Bro: mcap=$17,031 | gain=+87.8% | peak=$23,060 | dd=-24%
+  QII6900: mcap=$14,107 | gain=+35.4% | peak=$16,138 | dd=+13%
+  QII6900: mcap=$14,107 | gain=+33.6% | peak=$16,138 | dd=+13%
+  QII6900: mcap=$14,107 | gain=+35.4% | peak=$16,138 | dd=+13%
+  QII6900: mcap=$14,107 | gain=+35.4% | peak=$16,138 | dd=+13%
+[TP1_HOLD] Alert sent
+🚀 般人 TP1 HIT - HOLDING @ $10,336 (+53.6%)
+  Bang: mcap=$14,255 | gain=-18.2% | peak=$17,426 | dd=+0%
+[TP1_HOLD] Alert sent
+🚀 般人 TP1 HIT - HOLDING @ $10,336 (+53.6%)
+[TP1_HOLD] Alert sent
+🚀 般人 TP1 HIT - HOLDING @ $10,336 (+53.6%)
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$17,031 | gain=+121.5% | peak=$23,060 | dd=-24%
+  Bro: mcap=$17,031 | gain=+87.8% | peak=$23,060 | dd=-24%
+  Bro: mcap=$17,031 | gain=+87.8% | peak=$23,060 | dd=-24%
+  Bro: mcap=$17,031 | gain=+87.8% | peak=$23,060 | dd=-24%
+  QII6900: mcap=$14,107 | gain=+35.4% | peak=$16,138 | dd=+13%
+  QII6900: mcap=$14,107 | gain=+33.6% | peak=$16,138 | dd=+13%
+  QII6900: mcap=$14,107 | gain=+35.4% | peak=$16,138 | dd=+13%
+  QII6900: mcap=$14,107 | gain=+35.4% | peak=$16,138 | dd=+13%
+  般人: mcap=$9,447 | gain=+40.4% | peak=$10,336 | dd=+9%
+  Bang: mcap=$14,255 | gain=-18.2% | peak=$17,426 | dd=+0%
+  般人: mcap=$9,447 | gain=+40.4% | peak=$10,336 | dd=+9%
+  般人: mcap=$9,447 | gain=+40.4% | peak=$10,336 | dd=+9%
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$17,031 | gain=+121.5% | peak=$23,060 | dd=-24%
+  Bro: mcap=$17,031 | gain=+87.8% | peak=$23,060 | dd=-24%
+  Bro: mcap=$17,031 | gain=+87.8% | peak=$23,060 | dd=-24%
+  Bro: mcap=$17,031 | gain=+87.8% | peak=$23,060 | dd=-24%
+  QII6900: mcap=$16,578 | gain=+59.1% | peak=$16,578 | dd=-3%
+  QII6900: mcap=$16,578 | gain=+57.0% | peak=$16,578 | dd=-3%
+  QII6900: mcap=$16,578 | gain=+59.1% | peak=$16,578 | dd=-3%
+  QII6900: mcap=$16,578 | gain=+59.1% | peak=$16,578 | dd=-3%
+  般人: mcap=$9,447 | gain=+40.4% | peak=$10,336 | dd=+9%
+  Bang: mcap=$14,255 | gain=-18.2% | peak=$17,426 | dd=+0%
+  般人: mcap=$9,447 | gain=+40.4% | peak=$10,336 | dd=+9%
+  般人: mcap=$9,447 | gain=+40.4% | peak=$10,336 | dd=+9%
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$17,031 | gain=+121.5% | peak=$23,060 | dd=-24%
+  Bro: mcap=$17,031 | gain=+87.8% | peak=$23,060 | dd=-24%
+  Bro: mcap=$17,031 | gain=+87.8% | peak=$23,060 | dd=-24%
+  Bro: mcap=$17,031 | gain=+87.8% | peak=$23,060 | dd=-24%
+  QII6900: mcap=$16,578 | gain=+59.1% | peak=$16,578 | dd=-3%
+  QII6900: mcap=$16,578 | gain=+57.0% | peak=$16,578 | dd=-3%
+  QII6900: mcap=$16,578 | gain=+59.1% | peak=$16,578 | dd=-3%
+  QII6900: mcap=$16,578 | gain=+59.1% | peak=$16,578 | dd=-3%
+  般人: mcap=$9,447 | gain=+40.4% | peak=$10,336 | dd=+9%
+  Bang: mcap=$14,255 | gain=-18.2% | peak=$17,426 | dd=+0%
+  般人: mcap=$9,447 | gain=+40.4% | peak=$10,336 | dd=+9%
+  般人: mcap=$9,447 | gain=+40.4% | peak=$10,336 | dd=+9%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+[03:54:37] Monitor alive | 542 checks | 8 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  0x58bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  0x58bro: error fetching mcap
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$19,808 | gain=+157.6% | peak=$23,060 | dd=-44%
+  Bro: mcap=$19,808 | gain=+118.5% | peak=$23,060 | dd=-44%
+  Bro: mcap=$19,808 | gain=+118.5% | peak=$23,060 | dd=-44%
+  Bro: mcap=$19,808 | gain=+118.5% | peak=$23,060 | dd=-44%
+  QII6900: mcap=$20,770 | gain=+99.3% | peak=$20,770 | dd=-29%
+  QII6900: mcap=$20,770 | gain=+96.7% | peak=$20,770 | dd=-29%
+  QII6900: mcap=$20,770 | gain=+99.3% | peak=$20,770 | dd=-29%
+  QII6900: mcap=$20,770 | gain=+99.3% | peak=$20,770 | dd=-29%
+  般人: mcap=$9,252 | gain=+37.5% | peak=$10,336 | dd=+10%
+  Bang: mcap=$15,200 | gain=-12.8% | peak=$17,426 | dd=+0%
+  般人: mcap=$9,252 | gain=+37.5% | peak=$10,336 | dd=+10%
+  般人: mcap=$9,252 | gain=+37.5% | peak=$10,336 | dd=+10%
+[TP1_HOLD] Alert sent
+🚀 0x58bro TP1 HIT - HOLDING @ $13,662 (+55.6%)
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$19,808 | gain=+157.6% | peak=$23,060 | dd=-44%
+  Bro: mcap=$19,808 | gain=+118.5% | peak=$23,060 | dd=-44%
+  Bro: mcap=$19,137 | gain=+111.1% | peak=$23,060 | dd=-40%
+  Bro: mcap=$19,137 | gain=+111.1% | peak=$23,060 | dd=-40%
+  QII6900: mcap=$20,770 | gain=+99.3% | peak=$20,770 | dd=-29%
+  QII6900: mcap=$20,770 | gain=+96.7% | peak=$20,770 | dd=-29%
+  QII6900: mcap=$20,770 | gain=+99.3% | peak=$20,770 | dd=-29%
+  QII6900: mcap=$20,770 | gain=+99.3% | peak=$20,770 | dd=-29%
+  般人: mcap=$9,252 | gain=+37.5% | peak=$10,336 | dd=+10%
+  Bang: mcap=$15,200 | gain=-12.8% | peak=$17,426 | dd=+0%
+  般人: mcap=$9,252 | gain=+37.5% | peak=$10,336 | dd=+10%
+  般人: mcap=$9,252 | gain=+37.5% | peak=$10,336 | dd=+10%
+  0x58bro: mcap=$13,662 | gain=+55.6% | peak=$13,662 | dd=+0%
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$19,137 | gain=+148.9% | peak=$23,060 | dd=-40%
+  Bro: mcap=$19,137 | gain=+111.1% | peak=$23,060 | dd=-40%
+  Bro: mcap=$19,137 | gain=+111.1% | peak=$23,060 | dd=-40%
+  Bro: mcap=$19,137 | gain=+111.1% | peak=$23,060 | dd=-40%
+[TP2] Alert sent
+✅ QII6900 TP2 HIT @ $23,090 (+122%)
+[TP2] Alert sent
+✅ QII6900 TP2 HIT @ $23,090 (+119%)
+[TP2] Alert sent
+✅ QII6900 TP2 HIT @ $23,090 (+122%)
+[TP2] Alert sent
+✅ QII6900 TP2 HIT @ $23,090 (+122%)
+  般人: mcap=$8,990 | gain=+33.6% | peak=$10,336 | dd=+13%
+  Bang: mcap=$15,200 | gain=-12.8% | peak=$17,426 | dd=+0%
+  般人: mcap=$8,990 | gain=+33.6% | peak=$10,336 | dd=+13%
+  般人: mcap=$8,990 | gain=+33.6% | peak=$10,336 | dd=+13%
+  0x58bro: mcap=$13,138 | gain=+49.7% | peak=$13,662 | dd=+4%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  0x58bro: error fetching mcap
+[03:55:42] Monitor alive | 551 checks | 5 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  0x58bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  0x58bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  0x58bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  0x58bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  0x58bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  0x58bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  0x58bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: mcap=$23,040 | gain=+118.2% | peak=$23,090 | dd=-43%
+  QII6900: mcap=$23,040 | gain=+121.1% | peak=$23,090 | dd=-43%
+  QII6900: error fetching mcap
+[TRAILING_STOP] Alert sent
+✅ 般人 TRAILING STOP @ $2,839 (73% drop from peak)
+  Bang: mcap=$15,357 | gain=-11.9% | peak=$17,426 | dd=+0%
+  般人: mcap=$2,839 | gain=-57.8% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,839 | gain=-57.8% | peak=$6,728 | dd=+0%
+[TRAILING_STOP] Alert sent
+✅ 0x58bro TRAILING STOP @ $2,398 (82% drop from peak)
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$22,055 | gain=+186.8% | peak=$23,060 | dd=-61%
+  Bro: mcap=$22,055 | gain=+143.2% | peak=$23,060 | dd=-61%
+  Bro: mcap=$22,055 | gain=+143.2% | peak=$23,060 | dd=-61%
+  Bro: mcap=$22,055 | gain=+143.2% | peak=$23,060 | dd=-61%
+  QII6900: mcap=$23,040 | gain=+121.1% | peak=$23,090 | dd=-43%
+  QII6900: mcap=$23,040 | gain=+118.2% | peak=$23,090 | dd=-43%
+  QII6900: mcap=$23,040 | gain=+121.1% | peak=$23,090 | dd=-43%
+  QII6900: mcap=$23,040 | gain=+121.1% | peak=$23,090 | dd=-43%
+  Bang: mcap=$15,357 | gain=-11.9% | peak=$17,426 | dd=+0%
+  般人: mcap=$2,839 | gain=-57.8% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,839 | gain=-57.8% | peak=$6,728 | dd=+0%
+[03:56:43] Monitor alive | 560 checks | 3 open | next in 5s
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$22,055 | gain=+186.8% | peak=$23,060 | dd=-61%
+  Bro: mcap=$22,055 | gain=+143.2% | peak=$23,060 | dd=-61%
+  Bro: mcap=$22,055 | gain=+143.2% | peak=$23,060 | dd=-61%
+  Bro: mcap=$22,055 | gain=+143.2% | peak=$23,060 | dd=-61%
+  QII6900: mcap=$23,040 | gain=+121.1% | peak=$23,090 | dd=-43%
+  QII6900: mcap=$23,040 | gain=+118.2% | peak=$23,090 | dd=-43%
+  QII6900: mcap=$23,040 | gain=+121.1% | peak=$23,090 | dd=-43%
+  QII6900: mcap=$23,040 | gain=+121.1% | peak=$23,090 | dd=-43%
+  Bang: mcap=$14,911 | gain=-14.4% | peak=$17,426 | dd=+0%
+  般人: mcap=$2,839 | gain=-57.8% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,839 | gain=-57.8% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$22,833 | gain=+196.9% | peak=$23,060 | dd=-67%
+  Bro: mcap=$22,833 | gain=+151.8% | peak=$23,060 | dd=-67%
+  Bro: mcap=$22,833 | gain=+151.8% | peak=$23,060 | dd=-67%
+  Bro: mcap=$22,833 | gain=+151.8% | peak=$23,060 | dd=-67%
+  QII6900: mcap=$23,040 | gain=+121.1% | peak=$23,090 | dd=-43%
+  QII6900: mcap=$23,040 | gain=+118.2% | peak=$23,090 | dd=-43%
+  QII6900: mcap=$23,040 | gain=+121.1% | peak=$23,090 | dd=-43%
+  QII6900: mcap=$23,040 | gain=+121.1% | peak=$23,090 | dd=-43%
+  Bang: mcap=$14,911 | gain=-14.4% | peak=$17,426 | dd=+0%
+  般人: mcap=$2,839 | gain=-57.8% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,839 | gain=-57.8% | peak=$6,728 | dd=+0%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+[03:57:47] Monitor alive | 570 checks | 3 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$22,339 | gain=+190.5% | peak=$23,060 | dd=-63%
+  Bro: mcap=$22,339 | gain=+146.4% | peak=$23,060 | dd=-63%
+  Bro: mcap=$22,339 | gain=+146.4% | peak=$23,060 | dd=-63%
+  Bro: mcap=$22,339 | gain=+146.4% | peak=$23,060 | dd=-63%
+  QII6900: mcap=$21,362 | gain=+105.0% | peak=$23,090 | dd=-32%
+  QII6900: mcap=$21,362 | gain=+102.3% | peak=$23,090 | dd=-32%
+  QII6900: mcap=$21,362 | gain=+105.0% | peak=$23,090 | dd=-32%
+  QII6900: mcap=$21,362 | gain=+105.0% | peak=$23,090 | dd=-32%
+  Bang: mcap=$14,321 | gain=-17.8% | peak=$17,426 | dd=+0%
+  般人: mcap=$3,242 | gain=-51.8% | peak=$6,728 | dd=+0%
+  般人: mcap=$3,242 | gain=-51.8% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$22,339 | gain=+190.5% | peak=$23,060 | dd=-63%
+  Bro: mcap=$22,339 | gain=+146.4% | peak=$23,060 | dd=-63%
+  Bro: mcap=$22,339 | gain=+146.4% | peak=$23,060 | dd=-63%
+  Bro: mcap=$22,339 | gain=+146.4% | peak=$23,060 | dd=-63%
+  QII6900: mcap=$21,362 | gain=+105.0% | peak=$23,090 | dd=-32%
+  QII6900: mcap=$21,362 | gain=+102.3% | peak=$23,090 | dd=-32%
+  QII6900: mcap=$21,362 | gain=+105.0% | peak=$23,090 | dd=-32%
+  QII6900: mcap=$21,362 | gain=+105.0% | peak=$23,090 | dd=-32%
+  Bang: mcap=$14,321 | gain=-17.8% | peak=$17,426 | dd=+0%
+  般人: mcap=$3,242 | gain=-51.8% | peak=$6,728 | dd=+0%
+  般人: mcap=$3,242 | gain=-51.8% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$22,339 | gain=+190.5% | peak=$23,060 | dd=-63%
+  Bro: mcap=$22,339 | gain=+146.4% | peak=$23,060 | dd=-63%
+  Bro: mcap=$22,339 | gain=+146.4% | peak=$23,060 | dd=-63%
+  Bro: mcap=$22,339 | gain=+146.4% | peak=$23,060 | dd=-63%
+  QII6900: mcap=$21,362 | gain=+105.0% | peak=$23,090 | dd=-32%
+  QII6900: mcap=$21,362 | gain=+102.3% | peak=$23,090 | dd=-32%
+  QII6900: mcap=$21,362 | gain=+105.0% | peak=$23,090 | dd=-32%
+  QII6900: mcap=$21,362 | gain=+105.0% | peak=$23,090 | dd=-32%
+  Bang: mcap=$16,588 | gain=-4.8% | peak=$17,426 | dd=+0%
+  般人: mcap=$3,242 | gain=-51.8% | peak=$6,728 | dd=+0%
+  般人: mcap=$3,242 | gain=-51.8% | peak=$6,728 | dd=+0%
+  POMPOM: mcap=$14,136 | gain=-13.5% | peak=$16,337 | dd=+0%
+  POMPOM: mcap=$14,136 | gain=-13.5% | peak=$16,337 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 0x58bro STOP LOSS @ $2,386 (-81.1%)
+[STOP_LOSS] Alert sent
+🔴 0x58bro STOP LOSS @ $2,386 (-81.1%)
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+[03:58:49] Monitor alive | 580 checks | 7 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: mcap=$20,931 | gain=+172.2% | peak=$23,060 | dd=-53%
+  Bro: error fetching mcap
+  Bro: mcap=$20,931 | gain=+130.8% | peak=$23,060 | dd=-53%
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: mcap=$2,934 | gain=-56.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,934 | gain=-56.4% | peak=$6,728 | dd=+0%
+  POMPOM: mcap=$15,446 | gain=-5.5% | peak=$16,337 | dd=+0%
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: mcap=$15,446 | gain=-8.1% | peak=$16,337 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 般人 STOP LOSS @ $2,934 (-66.8%)
+  MEMEMAN: mcap=$2,436 | gain=-71.3% | peak=$8,478 | dd=+0%
+  Bro: mcap=$20,723 | gain=+169.5% | peak=$23,060 | dd=-51%
+  Bro: mcap=$20,723 | gain=+128.6% | peak=$23,060 | dd=-51%
+  Bro: mcap=$20,723 | gain=+128.6% | peak=$23,060 | dd=-51%
+  Bro: mcap=$20,723 | gain=+128.6% | peak=$23,060 | dd=-51%
+[TRAILING_STOP] Alert sent
+✅ QII6900 TRAILING STOP @ $14,687 (36% drop from peak)
+  QII6900: mcap=$14,687 | gain=+39.1% | peak=$14,687 | dd=+0%
+  QII6900: mcap=$14,687 | gain=+41.0% | peak=$14,687 | dd=-39%
+  QII6900: mcap=$14,687 | gain=+41.0% | peak=$14,687 | dd=-39%
+  Bang: mcap=$14,757 | gain=-15.3% | peak=$17,426 | dd=+0%
+  般人: mcap=$2,934 | gain=-56.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,934 | gain=-56.4% | peak=$6,728 | dd=+0%
+  POMPOM: mcap=$15,446 | gain=-5.5% | peak=$16,337 | dd=+0%
+  POMPOM: mcap=$15,446 | gain=-5.5% | peak=$16,337 | dd=+0%
+  POMPOM: mcap=$15,446 | gain=+1.9% | peak=$16,337 | dd=+5%
+  POMPOM: mcap=$15,446 | gain=-8.1% | peak=$16,337 | dd=+0%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+[03:59:51] Monitor alive | 590 checks | 7 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  Bang: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap
+  POMPOM: error fetching mcap

@@ -246,6 +246,32 @@ def scan_token(gmgn_data, dex_data):
     if ath_mcap > 0:
         ath_dist = ((ath_mcap - mcap) / ath_mcap) * 100
         if ath_dist > ATH_DIVERGENCE_MAX: return None, f"ATH dist {ath_dist:.1f}% > {ATH_DIVERGENCE_MAX}%"
+    # Symbol blacklist: don't re-buy same symbol (pump.fun allows duplicate names)
+    symbol_blacklist = set()
+    try:
+        with open(TRADES_FILE) as f:
+            for line in f:
+                t = json.loads(line)
+                if t.get('action') == 'BUY' and t.get('token_name'):
+                    symbol_blacklist.add(t['token_name'].lower())
+        if symbol.lower() in symbol_blacklist:
+            return None, f"symbol {symbol} already traded"
+    except: pass
+    
+    # Symbol blacklist: block re-buy of same symbol
+    symbol_blacklist = {}
+    # Symbol blacklist: block re-buy of same symbol
+    symbol_blacklist = set()
+    try:
+        with open(TRADES_FILE) as sf:
+            for sline in sf:
+                t = json.loads(sline)
+                if t.get('action') == 'BUY' and t.get('token_name'):
+                    symbol_blacklist.add(t['token_name'].lower())
+        if symbol.lower() in symbol_blacklist:
+            return None, f"symbol {symbol} already traded"
+    except: pass
+    
     if addr in PERM_BLACKLIST: return None, "blacklisted"
     try:
         with open(TRADES_FILE) as f:
