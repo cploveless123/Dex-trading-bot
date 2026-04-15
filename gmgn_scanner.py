@@ -308,6 +308,7 @@ def scan_token(token_data, reason_if_fail=None):
             'pair_address': pair_address,
             'pump_rule_triggered': pump_triggered,
             'entry_price': float(token_data.get('price', 0) or 0),
+            'age_sec': int(time.time() - token_data.get('creation_timestamp', 0)) if token_data.get('creation_timestamp') else 0,
         }
         
         return result, None
@@ -441,6 +442,7 @@ def add_to_cooldown(addr, token_data, result, entry_chg5):
         'recheck_count': 0,
         'pump_rule_triggered': pump,
         'chg5_prev': chg5,
+        'chg1_prev': chg1,  # Track chg1 for buy confirmation
         'h1_prev': h1,
         'lowest_mcap': result.get('mcap', 0),
         'lowest_chg5': chg5,
@@ -632,7 +634,7 @@ def scan_cycle():
                 continue
             # 45s done - verify chg1 > chg1_prev + 3%
             chg1_threshold = chg1_prev + 3
-            if chg1 >= chg1_threshold:
+            if chg1 > chg1_threshold:
                 print(f"   [BUY_YOUNG] {result['token']}: chg1={chg1:+.1f}% > {chg1_threshold:+.1f}% from last | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
@@ -659,7 +661,7 @@ def scan_cycle():
                 continue
             # 45s done - verify chg1 >= +2%
             if chg1 > 2:
-                print(f"   [BUY_OLDER] {result['token']}: chg1={chg1:+.1f}% >= +2% | BUY!")
+                print(f"   [BUY_OLDER] {result['token']}: chg1={chg1:+.1f}% > +2% | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
                 send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Older cooldown path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
@@ -680,7 +682,7 @@ def scan_cycle():
                 continue
             # Timer done - verify chg1 > chg1_prev + 3%
             chg1_threshold = chg1_prev + 3
-            if chg1 >= chg1_threshold:
+            if chg1 > chg1_threshold:
                 print(f"   [BUY_BASE] {result['token']}: chg1={chg1:+.1f}% >= {chg1_threshold:+.1f}% from last | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
