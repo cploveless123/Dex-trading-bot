@@ -39,7 +39,7 @@ YOUNG_AGE_THRESHOLD = 900
 BS_RATIO_NEW = 1.5
 BS_RATIO_OLD = 1.3
 MIN_VOLUME = 10000
-ALLOWED_EXCHANGES = ['raydium']  # Only raydium allowed (pair_address checked separately)
+ALLOWED_EXCHANGES = ['raydium', 'pump', 'pumpswap']  # pump/pumpswap need pair_address ending in 'pump'
 PUMP_EXCHANGES = ['pump', 'pumpswap']  # pump.fun and pumpswap - pair must end in "pump"
 PERM_BLACKLIST_FILE = '/root/Dex-trading-bot/.perm_blacklist.json'
 
@@ -249,6 +249,7 @@ def scan_token(token_data, reason_if_fail=None):
         volume = float(token_data.get('volume', 0) or 0)
         bs_ratio = float(token_data.get('bs_change24hpercent', 0) or 0)
         launchpad = str(token_data.get('launchpad', '')).lower().strip()
+        pair_address = token_data.get('pair_address', '') or ''
         addr = token_data.get('address', '')
         
         if not addr:
