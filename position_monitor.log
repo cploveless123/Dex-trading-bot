@@ -783,3 +783,32 @@ Checking every 5s
 [12:01:55] Monitor alive | 3913 checks | 0 open | next in 5s
 [12:02:55] Monitor alive | 3925 checks | 0 open | next in 5s
 [12:03:55] Monitor alive | 3937 checks | 0 open | next in 5s
+Position Monitor v7.0 starting...
+Exit Plan: TP1 +30% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -30%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
+[12:16:26] Monitor alive | 13 checks | 0 open | next in 5s
+  ANI: mcap=$8,210 | gain=+6.8% | peak=$8,210 | dd=+0%
+  ANI: mcap=$8,210 | gain=+6.8% | peak=$8,210 | dd=+0%
+  ANI: mcap=$8,210 | gain=+6.8% | peak=$8,210 | dd=+0%
+  ANI: mcap=$8,210 | gain=+6.8% | peak=$8,210 | dd=+0%
+  ANI: mcap=$8,210 | gain=+6.8% | peak=$8,210 | dd=+0%
+  ANI: mcap=$8,210 | gain=+6.8% | peak=$8,210 | dd=+0%
+  ANI: mcap=$8,556 | gain=+11.3% | peak=$8,556 | dd=+0%
+  ANI: mcap=$8,556 | gain=+11.3% | peak=$8,556 | dd=+0%
+[12:17:26] Monitor alive | 25 checks | 1 open | next in 5s
+  ANI: mcap=$8,556 | gain=+11.3% | peak=$8,556 | dd=+0%
+  ANI: mcap=$8,556 | gain=+11.3% | peak=$8,556 | dd=+0%
+  ANI: mcap=$8,556 | gain=+11.3% | peak=$8,556 | dd=+0%
+  ANI: mcap=$8,556 | gain=+11.3% | peak=$8,556 | dd=+0%
+  ANI: mcap=$8,599 | gain=+11.9% | peak=$8,599 | dd=+0%
+  ANI: mcap=$8,599 | gain=+11.9% | peak=$8,599 | dd=+0%
+  ANI: mcap=$8,599 | gain=+11.9% | peak=$8,599 | dd=+0%
+  ANI: mcap=$8,599 | gain=+11.9% | peak=$8,599 | dd=+0%
+  ANI: mcap=$8,599 | gain=+11.9% | peak=$8,599 | dd=+0%
+  ANI: mcap=$8,599 | gain=+11.9% | peak=$8,599 | dd=+0%
+  ANI: mcap=$9,955 | gain=+29.5% | peak=$9,955 | dd=+0%
+  ANI: mcap=$9,955 | gain=+29.5% | peak=$9,955 | dd=+0%
+[12:18:27] Monitor alive | 37 checks | 1 open | next in 5s
+  ANI: mcap=$9,955 | gain=+29.5% | peak=$9,955 | dd=+0%
