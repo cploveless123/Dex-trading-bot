@@ -1,102 +1,125 @@
-## === ENTRY FILTERS ===
-MIN_MCAP = 6000
-MAX_MCAP = 55000
-MIN_AGE_SECONDS = 180      # 3 min
-MAX_AGE_SECONDS = 5400     # 90 min
-MIN_HOLDERS = 15
-TOP10_HOLDER_MAX = 50
-VOL_MCAP_RATIO_MIN = 1.0
+"""
+Trading Constants - TP5 COMPOUND STRATEGY
 
-# Momentum
-H1_MOMENTUM_MIN = 5.0     # h1 must be > +5% OR h24 must be > +5%
-H24_MOMENTUM_MIN = 5.0
-CHG1_MIN = -5.0            # No falling knife - chg1 must be > -5%
+PRIMARY OBJECTIVE: Turn 1 SOL into 100 SOL via compound TP5 winners
 
-# Pump rule - chg5 > +20% triggers pump path
-PUMP_CHG5_THRESHOLD = 20.0  # chg5 must be > +20% to trigger pump rule
-PUMP_WAIT_1 = 45           # Wait 45s then recheck
-PUMP_WAIT_2 = 30           # Wait 30s more
-PUMP_VERIFY_DELAY = 15     # Final 15s verification
+Key insight: Small positions (< 0.2 SOL) need to aim for TP5 (+1000%) to make meaningful gains
+Larger positions can use tighter TPs since they already have cushion
 
-# Dip / Pullback
-DIP_MIN = 5                # 5% minimum dip from local peak
-DIP_MAX = 45               # 45% maximum dip
-ATH_DIVERGENCE_MAX = 65    # Max 65% from ATH
+TP5 Strategy:
+- When a position reaches TP5 (+1000%), the remaining 10% position becomes "compound mode"
+- In compound mode, position is monitored with aggressive trailing stop to ride further pumps
+- Target: identify winners early and let them run
 
-# chg5 rules
-MIN_CHG5_FOR_BUY = 2.0     # chg5 must be > +2% to buy from local bottom
-CHG5_DROP_THRESHOLD = 5.0  # If chg5 drops by >5% from previous → deterioration
-CHG5_RECOVERY_CHECK = 5.0  # Watch for chg5 > +5% recovery
-CHG5_RECHECK_DELAY = 15     # 15s intervals during deterioration
+Exit Strategy (per position, 0.1 SOL each):
+- TP1: +50% → Sell 10% (0.01 SOL) | Stop: -25%
+- TP2: +100% → Sell 15% (0.015 SOL) | Stop: -25%  
+- TP3: +200% → Sell 20% (0.02 SOL) | Stop: -20%
+- TP4: +400% → Sell 25% (0.025 SOL) | Stop: -15%
+- TP5: +1000% → Sell 30% (0.03 SOL) | REMAINING 10% (0.01 SOL) enters COMPOUND MODE
 
-# Cooldowns
-YOUNG_COOLDOWN = 45         # Young (<15min) + momentum + chg5 > -5%
-YOUNG_AGE_THRESHOLD = 900  # 15 min in seconds
-OLDER_COOLDOWN = 45        # Older (>15min) + momentum + chg5 > -5%
-NORMAL_COOLDOWN = 30       # Otherwise baseline wait
+Compound Mode (for positions hitting TP5):
+- Use 20% trailing stop from peak
+- Monitor for continued upside
+- If price drops 20% from peak → exit remaining 10%
+- Target: let winners run 2-5x additional after TP5
 
-# State machine wait times
-STATE_PUMP_WAIT_1 = 45     # Pump path: 45s wait
-STATE_PUMP_WAIT_2 = 30    # Pump path: 30s wait
-STATE_PUMP_VERIFY = 15     # Pump path: 15s final verify
-STATE_RECOVERY_WAIT = 15   # Deterioration: 15s rechecks
-STATE_POST_COOLDOWN = 15    # Post-cooldown: 15s verify
-STATE_BASE_WAIT = 30       # Normal: 30s rechecks
+Risk Management:
+- Max open: 5 positions
+- Position size: 0.1 SOL each
+- Stop loss: -25% default, -15% for large winners
+- Max daily loss: 0.3 SOL (stop if hit)
+"""
+
+# Position sizing
+POSITION_SIZE = 0.1          # SOL per trade
+MAX_OPEN_POSITIONS = 5       # Max concurrent positions
+MAX_DAILY_LOSS = 0.3         # Stop trading if daily loss exceeds this
+
+# Entry filters
+MIN_MCAP = 6000              # Minimum market cap in USD
+MAX_MCAP = 55000            # Maximum market cap in USD
+MIN_HOLDERS = 15             # Minimum holder count
+MIN_CHG5_FOR_BUY = 2.0      # Minimum 5m change % for buy signal
+PUMP_CHG5_THRESHOLD = 20.0  # "Pump" signal threshold (chg5 > this = pump path)
+H1_MOMENTUM_MIN = 5.0       # Minimum 1h change % (momentum requirement)
+
+# Cooldown timing
+YOUNG_AGE_THRESHOLD = 900   # Age in seconds (< 15 min = young)
+YOUNG_COOLDOWN = 45          # Cooldown for young tokens
+OLDER_COOLDOWN = 45          # Cooldown for older tokens
+BASE_WAIT = 30               # Base cooldown for normal entries
+CHG1_RECHECK_INTERVAL = 15  # Recheck interval when chg1 < -5%
+CHG1_VERIFY_DELAY = 15       # Verification delay after chg1 recovery
+
+# Pump path timing
+PUMP_WAIT_1 = 45             # First confirmation wait
+PUMP_WAIT_2 = 30            # Second confirmation wait  
+PUMP_VERIFY_DELAY = 15       # Final verification wait
+
+# Recovery settings
+RECOVERY_WAIT = 15           # Recovery recheck interval
+CHG5_RECOVERY_CHECK = 5.0   # chg5 must recover this % from lowest
+
+# Exit strategy
+TP1_PCT = 50                 # Take profit 1: +50%
+TP1_SELL = 0.10              # Sell 10% of position at TP1
+
+TP2_PCT = 100                # Take profit 2: +100%
+TP2_SELL = 0.15              # Sell 15% of position at TP2
+
+TP3_PCT = 200                # Take profit 3: +200%
+TP3_SELL = 0.20              # Sell 20% of position at TP3
+
+TP4_PCT = 400                # Take profit 4: +400%
+TP4_SELL = 0.25              # Sell 25% of position at TP4
+
+TP5_PCT = 1000               # Take profit 5: +1000% (TP5 target!)
+TP5_SELL = 0.30              # Sell 30% of position at TP5
+TP5_COMPOUND = 0.10         # Remaining 10% enters compound mode
+
+# Compound mode (for positions hitting TP5)
+COMPOUND_TRAIL_PCT = 20     # Trailing stop % for compound positions
+COMPOUND_MIN_HOLD = 3600    # Minimum hold time (1 hour) before compound
+
+# Stop loss
+STOP_LOSS_PCT = 25           # Default stop loss -25%
+STOP_LOSS_TP4_PCT = 15      # Tighter stop for TP4+ positions (-15%)
+STOP_LOSS_COMPOUND_PCT = 25 # Compound position stop (-25% from peak)
+
+# Exchange whitelist
+ALLOWED_EXCHANGES = ['raydium']  # Raydium only (no pump.fun/pumpswap for now)
+PUMP_EXCHANGES = ['pump', 'pumpswap']  # Pump exchanges need pair_address check
+
+# Fallen Giant filter
+FALLEN_GIANT_H1 = 350         # If h1 > this AND mcap < threshold, reject
+FALLEN_GIANT_MCAP = 25000    # Mcap threshold for fallen giant
+
+# Buy/Sell ratio
+BS_RATIO_NEW = 1.5          # BS ratio required for tokens < 15 min
+BS_RATIO_OLD = 1.3          # BS ratio required for tokens >= 15 min
+BS_PUMP_FUN_OK = True       # Skip BS check for pump.fun tokens
+
+# Volume requirements
+MIN_VOLUME = 10000           # Minimum 24h volume in USD
+MIN_5MIN_VOLUME = 500        # Minimum 5min volume in USD
 
 # H1 instability
-H1_INSTABILITY_MULTIPLIER = 3.0  # If h1 changes by >3x between rechecks → reject
+H1_INSTABILITY_MULTIPLIER = 3  # If h1 changes by >3x, reject
 
-# Liquidity emergency
-LIQUIDITY_EMERGENCY_THRESHOLD = 1000  # If mcap > $70K and liq < $1K → emergency sell
-LIQUIDITY_MCAP_THRESHOLD = 70000
+# Dip filter
+MIN_DIP_PCT = 5              # Minimum dip % from ATH
+MAX_DIP_PCT = 45             # Maximum dip % from ATH (don't buy dumps)
 
-# === EXIT PLAN ===
-TP1_PERCENT = 50
-TP1_TRAILING_PCT = 40
-TP1_SELL_PCT = 0           # HOLD - watch only, let ride
+# Scanner timing
+SCAN_INTERVAL = 15          # Seconds between scan cycles
+TOKEN_RECHECK_INTERVAL = 15   # Only fetch fresh data when timer within this of expiring
 
-TP2_PERCENT = 100
-TP2_TRAILING_PCT = 30
-TP2_SELL_PCT = 35
+# Throttle settings
+THROTTLE_BACKOFF_BASE = 30   # Base backoff seconds
+THROTTLE_BACKOFF_MAX = 300  # Max backoff seconds
+DEXSCREENER_MAX_FAILS = 5   # Stop DexScreener calls after this many failures
 
-TP3_PERCENT = 200
-TP3_TRAILING_PCT = 30
-TP3_SELL_PCT = 35
-
-TP4_PERCENT = 300
-TP4_TRAILING_PCT = 30
-TP4_SELL_PCT = 20
-
-TP5_PERCENT = 1000
-TP5_TRAILING_PCT = 20
-TP5_SELL_PCT = 10
-
-TRAILING_STOP_PCT = 40     # 40% trailing stop from peak
-STOP_LOSS_PERCENT = -30    # -30% stop loss
-
-# Volume
-MIN_5MIN_VOLUME = 1000
-MIN_VOLUME = 6000
-
-# Buy/Sell Ratio
-BS_RATIO_NEW = 0.1         # <15 min old
-BS_RATIO_OLD = 0.8         # >15 min old
-BS_PUMP_FUN_OK = True      # pump.fun BS=0 is OK
-
-# Exchange
-ALLOWED_EXCHANGES = ['pump', 'raydium', 'pumpswap']
-PUMP_REQUIREMENTS = {'pump': 'pump', 'pumpswap': 'pump', 'raydium': None}
-
-# Re-entry lockout
-REENTRY_LOCKOUT = 1800     # 30 min in seconds
-
-# System
-SIM_RESET_TIMESTAMP = "2026-04-15T13:01:59.845959+00:00"
-CHRIS_STARTING_BALANCE = 1.0
-POSITION_SIZE = 0.1
-MAX_OPEN_POSITIONS = 5
-TRADES_FILE = "trades/sim_trades.jsonl"
-PERM_BLACKLIST_FILE = "permanent_blacklist.json"
-LOW_VOLUME_THRESHOLD = 600  # 5min vol < $600 + mcap > $60K → exit
-LIQUIDITY_MIN = 1000             # $1K — mcap > $70K + liq < $1K = sell
-EXIT_PLAN_TEXT = f"""TP1 +50%: HOLD (trail 40%)"""
+# Alert settings
+ALERT_DEDUP_SECONDS = 300    # Same alert only once per 5 minutes
+THROTTLE_ALERT_ONCE = True   # One throttle alert per event
