@@ -124,3 +124,14 @@ THROTTLE_ALERT_ONCE = True   # One throttle alert per event
 BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
 CHAT_ID = "6402511249"
 TRADES_FILE = "/root/Dex-trading-bot/trades/sim_trades.jsonl"
+
+# === Alert Sender / Exit Plan ===
+EXIT_PLAN_TEXT = """📋 TP5 EXIT PLAN:
+• TP1: +50% → HOLD (40% trail)
+• TP2: +100% → sell 40% (30% trail)
+• TP3: +200% → sell 30% (30% trail)
+• TP4: +300% → sell 20% (30% trail)
+• TP5: +1000% → sell ALL
+• STOP: -30%"""
+
+SIM_WALLET_FILE = '/root/Dex-trading-bot/sim_wallet.json'
