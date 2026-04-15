@@ -21961,3 +21961,100 @@ Checking every 5s
   MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
   MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
   MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+[03:05:31] Monitor alive | 13 checks | 0 open | next in 5s
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+[03:06:33] Monitor alive | 25 checks | 0 open | next in 5s
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+[03:07:35] Monitor alive | 37 checks | 0 open | next in 5s
+  MEMEMAN: error fetching mcap
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+[03:08:36] Monitor alive | 49 checks | 0 open | next in 5s
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Marmot: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Marmot: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Marmot: error fetching mcap
+  Marmot: error fetching mcap
+  Marmot: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Marmot: error fetching mcap
+  Marmot: error fetching mcap
+  Marmot: error fetching mcap
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Marmot STOP LOSS @ $3,784 (-44.6%)
+[STOP_LOSS] Alert sent
+🔴 Marmot STOP LOSS @ $3,784 (-44.6%)
+[STOP_LOSS] Alert sent
+🔴 Marmot STOP LOSS @ $3,784 (-44.6%)
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+[03:09:38] Monitor alive | 60 checks | 0 open | next in 5s
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+[03:10:39] Monitor alive | 72 checks | 0 open | next in 5s
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
