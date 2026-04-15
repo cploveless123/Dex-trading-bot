@@ -1,137 +1,102 @@
-"""
-Trading Constants - Wilson v7 Strategy
-Goal: Turn 1.0 SOL → 100 SOL via compound TP5 winners
-"""
-
-# Position sizing
-POSITION_SIZE = 0.10
-MAX_OPEN_POSITIONS = 5
-
-# === ENTRY FILTERS ===
-MIN_MCAP = 6000      # $6K floor (raised from $3K)
-MAX_MCAP = 25000     # $25K ceiling (data shows >$25K = 0% WR)
-MIN_AGE_SECONDS = 120  # 2 minutes minimum
-MAX_AGE_SECONDS = 5400  # 90 minutes maximum
-MIN_5MIN_VOLUME = 1000  # 5min vol > $1K
-MIN_VOLUME = 6000    # Min volume $6K
-MIN_HOLDERS = 20
-TOP10_HOLDER_MAX = 50  # Top10% < 50%
-
-# Vol/Mcap ratio > 1.0x
+## === ENTRY FILTERS ===
+MIN_MCAP = 6000
+MAX_MCAP = 55000
+MIN_AGE_SECONDS = 180      # 3 min
+MAX_AGE_SECONDS = 5400     # 90 min
+MIN_HOLDERS = 15
+TOP10_HOLDER_MAX = 50
 VOL_MCAP_RATIO_MIN = 1.0
 
-# BS Ratio
-BS_RATIO_NEW = 0.1   # >0.1 for <15min old
-BS_RATIO_OLD = 0.8   # >0.8 for older
-BS_PUMP_FUN_OK = True  # pump.fun BS=0 is OK if no data
+# Momentum
+H1_MOMENTUM_MIN = 5.0     # h1 must be > +5% OR h24 must be > +5%
+H24_MOMENTUM_MIN = 5.0
+CHG1_MIN = -5.0            # No falling knife - chg1 must be > -5%
 
-# === MOMENTUM ===
-H1_MOMENTUM_MIN = 5   # h1 must be > +5%
-H24_MOMENTUM_MIN = 5  # OR 24h must be > +5%
+# Pump rule - chg5 > +20% triggers pump path
+PUMP_CHG5_THRESHOLD = 20.0  # chg5 must be > +20% to trigger pump rule
+PUMP_WAIT_1 = 45           # Wait 45s then recheck
+PUMP_WAIT_2 = 30           # Wait 30s more
+PUMP_VERIFY_DELAY = 15     # Final 15s verification
 
-# === PUMP RULE (chg1) ===
-PUMP_CHG1_THRESHOLD = 5.0   # chg1 > +5% triggers pump rule
-PUMP_WAIT_1 = 45            # First wait after trigger
-PUMP_WAIT_2 = 30            # Second wait
-PUMP_VERIFY_DELAY = 15      # Final verify
+# Dip / Pullback
+DIP_MIN = 5                # 5% minimum dip from local peak
+DIP_MAX = 45               # 45% maximum dip
+ATH_DIVERGENCE_MAX = 55    # Max 55% from ATH
 
-# === DIP/PULLBACK ===
-DIP_MIN = 20         # 20% minimum pullback (winners avg 23.6% dip)
-MAX_H1 = 250         # Max 250% 1h change (avoid late entries)
-FALLEN_GIANT_H1 = 400  # h1 above this + small mcap = already pumped
-FALLEN_GIANT_MCAP = 20000  # mcap below this + high h1 = fallen giant
-DIP_MAX = 45         # 45% max pullback from local peak
-ATH_DIVERGENCE_MAX = 55  # Max 55% below ATH
+# chg5 rules
+MIN_CHG5_FOR_BUY = 2.0     # chg5 must be > +2% to buy from local bottom
+CHG5_DROP_THRESHOLD = 5.0  # If chg5 drops by >5% from previous → deterioration
+CHG5_RECOVERY_CHECK = 5.0  # Watch for chg5 > +5% recovery
+CHG5_RECHECK_DELAY = 15     # 15s intervals during deterioration
 
-# === CHG5 RULES ===
-MIN_CHG5_FOR_BUY = 2.0   # chg5 must be > +2% to buy from local bottom
-CHG5_REJECT_DROP = 5.0   # chg5 drops >5% from prev = continue watching
-CHG5_RECOVERY_THRESHOLD = 5.0  # chg5 must recover > +5% from lowest mcap
+# Cooldowns
+YOUNG_COOLDOWN = 45         # Young (<15min) + momentum + chg5 > -5%
+YOUNG_AGE_THRESHOLD = 900  # 15 min in seconds
+OLDER_COOLDOWN = 45        # Older (>15min) + momentum + chg5 > -5%
+NORMAL_COOLDOWN = 30       # Otherwise baseline wait
 
-# === COOLDOWN RULES ===
-BASE_COOLDOWN = 45        # Default base cooldown
-YOUNG_COOLDOWN = 45       # Young (<15min) + chg5 > -5% + h1 > +5%
-OLDER_COOLDOWN = 45       # Older (>15min) + chg5 > -5% + h1 > +5%
-NORMAL_COOLDOWN = 30      # Otherwise
+# State machine wait times
+STATE_PUMP_WAIT_1 = 45     # Pump path: 45s wait
+STATE_PUMP_WAIT_2 = 30    # Pump path: 30s wait
+STATE_PUMP_VERIFY = 15     # Pump path: 15s final verify
+STATE_RECOVERY_WAIT = 15   # Deterioration: 15s rechecks
+STATE_POST_COOLDOWN = 15    # Post-cooldown: 15s verify
+STATE_BASE_WAIT = 30       # Normal: 30s rechecks
 
-# Cooldown states
-STATE_BASE_WAIT = 'BASE_WAIT'
-STATE_RECOVERY_WAIT = 'RECOVERY_WAIT'
-STATE_RECOVERY_RECHECK = 'RECOVERY_RECHECK'
-STATE_POST_COOLDOWN = 'POST_COOLDOWN'
-STATE_VERIFY = 'VERIFY'
-STATE_PUMP_WAIT_1 = 'PUMP_WAIT_1'
-STATE_PUMP_WAIT_2 = 'PUMP_WAIT_2'
-STATE_PUMP_VERIFY = 'PUMP_VERIFY'
-STATE_M5_BACKUP = 'M5_BACKUP'
+# H1 instability
+H1_INSTABILITY_MULTIPLIER = 3.0  # If h1 changes by >3x between rechecks → reject
 
-# Timing
-CHG1_RECHECK_DELAY = 15    # 15s between rechecks
-CHG1_VERIFY_DELAY = 15     # 15s verify
-CHG1_RECOVERY_WAIT = 15    # Extra 15s when chg5 < -5%
+# Liquidity emergency
+LIQUIDITY_EMERGENCY_THRESHOLD = 1000  # If mcap > $70K and liq < $1K → emergency sell
+LIQUIDITY_MCAP_THRESHOLD = 70000
 
-# Consecutive rechecks before buy
-CONSECUTIVE_RECHECKS_REQUIRED = 2
-
-# Max rechecks
-MAX_RECHECKS = 15          # 15 × 15s = ~3.75 min max
-REJECTED_REVISIT_DELAY = 120  # 2 minutes
-
-# === INSTABILITY ===
-H1_INSTABILITY_MULTIPLIER = 3  # h1 changes by >3x = reject
-
-# === LIQUIDITY ===
-LIQUIDITY_MCAP_THRESHOLD = 70000  # $70K — mcap above this triggers liq check
-LIQUIDITY_MIN = 1000             # $1K — mcap > $70K + liq < $1K = sell
-LIQUIDITY_EMERGENCY_THRESHOLD = 1000  # $1K — mcap > $70K + liq < $1K = sell
-
-# === EXIT PLAN (v7.2 Chris Update 2026-04-15) ===
+# === EXIT PLAN ===
 TP1_PERCENT = 50
 TP1_TRAILING_PCT = 40
 TP1_SELL_PCT = 0           # HOLD - watch only, let ride
 
 TP2_PERCENT = 100
 TP2_TRAILING_PCT = 30
-TP2_SELL_PCT = 35          # Sell 35% at TP2
+TP2_SELL_PCT = 35
 
 TP3_PERCENT = 200
 TP3_TRAILING_PCT = 30
-TP3_SELL_PCT = 30          # Sell 30% at TP3
+TP3_SELL_PCT = 35
 
 TP4_PERCENT = 300
 TP4_TRAILING_PCT = 30
-TP4_SELL_PCT = 20          # Sell 20% at TP4
+TP4_SELL_PCT = 20
 
 TP5_PERCENT = 1000
 TP5_TRAILING_PCT = 20
-TP5_SELL_PCT = 15           # Sell remaining 15% at TP5
+TP5_SELL_PCT = 10
 
 TRAILING_STOP_PCT = 40     # 40% trailing stop from peak
-STOP_LOSS_PERCENT = -30     # -30% stop loss
+STOP_LOSS_PERCENT = -30    # -30% stop loss
 
-# Low volume exit
-LOW_VOLUME_THRESHOLD = 600  # 5min vol < $600 + mcap > $60K = exit
+# Volume
+MIN_5MIN_VOLUME = 1000
+MIN_VOLUME = 6000
 
-# === EXCHANGE VALIDATION ===
-ALLOWED_EXCHANGES = {'pumpfun', 'pumpswap', 'raydium'}
-REJECTED_EXCHANGES = {'meteora', 'orinoco', 'lifinity', 'saber'}
-PUMP_REQUIREMENTS = {'pumpfun', 'pumpswap'}  # Must end in "pump"
+# Buy/Sell Ratio
+BS_RATIO_NEW = 0.1         # <15 min old
+BS_RATIO_OLD = 0.8         # >15 min old
+BS_PUMP_FUN_OK = True      # pump.fun BS=0 is OK
 
-# === SCAN INTERVALS ===
-SCAN_INTERVAL = 15
-MONITOR_INTERVAL = 5
-ALERT_INTERVAL = 30
+# Exchange
+ALLOWED_EXCHANGES = ['pump', 'raydium', 'pumpswap']
+PUMP_REQUIREMENTS = {'pump': 'pump', 'pumpswap': 'pump', 'raydium': None}
 
-# === API ===
-MAX_RETRIES = 3
+# Re-entry lockout
+REENTRY_LOCKOUT = 1800     # 30 min in seconds
 
-# === SIMULATION RESET ===
-SIM_RESET_TIMESTAMP = "2026-04-15T12:48:24.657687+00:00"
+# System
+SIM_RESET_TIMESTAMP = "2026-04-15T13:01:59.845959+00:00"
 CHRIS_STARTING_BALANCE = 1.0
-
-EXIT_PLAN_TEXT = f"""TP1 +50%: HOLD (trail 40%)
-TP2 +100%: Sell 40% (trail 35%)
-TP3 +200%: Sell 30% (trail 35%)
-TP4 +300%: Sell 20% (trail 35%)
-TP5 +1000%: Sell 10% (trail 30%)
-Stop: -25% (trail 40%)"""
+POSITION_SIZE = 0.1
+MAX_OPEN_POSITIONS = 5
+TRADES_FILE = "trades/sim_trades.jsonl"
+PERM_BLACKLIST_FILE = "permanent_blacklist.json"
+LOW_VOLUME_THRESHOLD = 600  # 5min vol < $600 + mcap > $60K → exit
+LIQUIDITY_MIN = 1000             # $1K — mcap > $70K + liq < $1K = sell
+EXIT_PLAN_TEXT = f"""TP1 +50%: HOLD (trail 40%)"""

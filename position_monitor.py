@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Position Monitor v7.2 - LIVE TRADING Auto-execute TP/stop
+Position Monitor v7.3 - LIVE TRADING Auto-execute TP/stop
 MAX_OPEN: 5 | SIZE: 0.1 SOL | pump.fun/raydium/pumpswap ONLY
 Live peak tracking via persistent cache file
 
