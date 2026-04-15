@@ -282,6 +282,7 @@ def check_positions():
                 continue  # Only fire ONE TP level per cycle
             else:
                 # v5.5: TP1 reached but HOLDING - no sell, just track peak
+                t['status'] = 'open_partial'
                 msg = f"""🚀 TP1 (+{TP1_PERCENT}% HIT - HOLDING) | {datetime.utcnow().strftime('%H:%M UTC')}
 ━━━━━━━━━━━━━━━
 💰 {sym}

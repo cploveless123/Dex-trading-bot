@@ -1099,3 +1099,23 @@ Checking every 5s
   DUMB: mcap=$7,519 | gain=+3.4% | peak=$10,083 | dd=+25%
   DUMB: mcap=$7,519 | gain=+3.4% | peak=$10,083 | dd=+25%
   DUMB: mcap=$7,519 | gain=+3.4% | peak=$10,083 | dd=+25%
+  DUMB: mcap=$7,519 | gain=+3.4% | peak=$10,083 | dd=+25%
+  DUMB: mcap=$7,519 | gain=+3.4% | peak=$10,083 | dd=+25%
+  DUMB: mcap=$7,519 | gain=+3.4% | peak=$10,083 | dd=+25%
+  DUMB: mcap=$7,381 | gain=+1.5% | peak=$10,083 | dd=+26%
+  DUMB: mcap=$7,381 | gain=+1.5% | peak=$10,083 | dd=+26%
+  DUMB: mcap=$7,381 | gain=+1.5% | peak=$10,083 | dd=+26%
+[12:39:59] Monitor alive | 13 checks | 1 open | next in 5s
+  DUMB: mcap=$7,381 | gain=+1.5% | peak=$10,083 | dd=+26%
+  DUMB: mcap=$7,381 | gain=+1.5% | peak=$10,083 | dd=+26%
+  DUMB: mcap=$7,381 | gain=+1.5% | peak=$10,083 | dd=+26%
+  DUMB: mcap=$6,508 | gain=-10.5% | peak=$10,083 | dd=+35%
+  DUMB: mcap=$6,508 | gain=-10.5% | peak=$10,083 | dd=+35%
+  DUMB: mcap=$6,508 | gain=-10.5% | peak=$10,083 | dd=+35%
+Position Monitor v7.0 starting...
+Exit Plan: TP1 +30% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -30%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
+  DUMB: mcap=$6,508 | gain=-10.5% | peak=$10,083 | dd=+35%
+  DUMB: mcap=$6,508 | gain=-10.5% | peak=$10,083 | dd=+35%
