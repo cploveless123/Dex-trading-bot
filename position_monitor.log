@@ -21719,3 +21719,245 @@ Checking every 5s
   BOAR: error fetching mcap
   BOAR: error fetching mcap
 [03:00:00] Monitor alive | 3985 checks | 4 open | next in 5s
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+[03:00:13] Monitor alive | 61 checks | 4 open | next in 5s
+  Cluviculur: mcap=$9,350 | gain=-2.7% | peak=$14,233 | dd=+0%
+  MEMEMAN: mcap=$2,484 | gain=-70.7% | peak=$8,478 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 BOAR STOP LOSS @ $16,161 (-32.6%)
+  Cluviculur: mcap=$9,350 | gain=-2.7% | peak=$14,233 | dd=+0%
+  MEMEMAN: mcap=$2,484 | gain=-70.7% | peak=$8,478 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+  Cluviculur: mcap=$9,350 | gain=-2.7% | peak=$14,233 | dd=+0%
+  MEMEMAN: mcap=$2,484 | gain=-70.7% | peak=$8,478 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+  Cluviculur: mcap=$9,350 | gain=-2.7% | peak=$14,233 | dd=+0%
+  MEMEMAN: mcap=$2,484 | gain=-70.7% | peak=$8,478 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+  Cluviculur: mcap=$9,350 | gain=-2.7% | peak=$14,233 | dd=+0%
+  MEMEMAN: mcap=$2,484 | gain=-70.7% | peak=$8,478 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+  Cluviculur: mcap=$9,350 | gain=-2.7% | peak=$14,233 | dd=+0%
+  MEMEMAN: mcap=$2,484 | gain=-70.7% | peak=$8,478 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+  Cluviculur: mcap=$9,350 | gain=-2.7% | peak=$14,233 | dd=+0%
+  MEMEMAN: mcap=$2,484 | gain=-70.7% | peak=$8,478 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+  Cluviculur: mcap=$9,350 | gain=-2.7% | peak=$14,233 | dd=+0%
+  MEMEMAN: mcap=$2,484 | gain=-70.7% | peak=$8,478 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+  BOAR: mcap=$16,161 | gain=-15.6% | peak=$19,155 | dd=+0%
+  Cluviculur: mcap=$9,350 | gain=-2.7% | peak=$14,233 | dd=+0%
+  MEMEMAN: mcap=$2,484 | gain=-70.7% | peak=$8,478 | dd=+0%
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+[03:01:04] Monitor alive | 3997 checks | 3 open | next in 5s
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+[03:01:16] Monitor alive | 73 checks | 3 open | next in 5s
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+  Cluviculur: error fetching mcap
+  MEMEMAN: error fetching mcap
+  BOAR: error fetching mcap
+  BOAR: error fetching mcap
+[STOP_LOSS] Alert sent
+🔴 Cluviculur STOP LOSS @ $2,848 (-70.4%)
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 BOAR STOP LOSS @ $11,989 (-37.4%)
+[STOP_LOSS] Alert sent
+🔴 BOAR STOP LOSS @ $11,989 (-37.4%)
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: error fetching mcap
+[03:02:06] Monitor alive | 4009 checks | 0 open | next in 5s
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+[03:02:19] Monitor alive | 85 checks | 0 open | next in 5s
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+[03:03:07] Monitor alive | 4021 checks | 0 open | next in 5s
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+[03:03:20] Monitor alive | 97 checks | 0 open | next in 5s
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+[03:04:08] Monitor alive | 4033 checks | 0 open | next in 5s
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+[03:04:21] Monitor alive | 109 checks | 0 open | next in 5s
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+Position Monitor v7.0 starting...
+Exit Plan: TP1 +50% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -25%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,478 | gain=-70.8% | peak=$8,478 | dd=+0%
