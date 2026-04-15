@@ -120,3 +120,7 @@ DEXSCREENER_MAX_FAILS = 5   # Stop DexScreener calls after this many failures
 # Alert settings
 ALERT_DEDUP_SECONDS = 300    # Same alert only once per 5 minutes
 THROTTLE_ALERT_ONCE = True   # One throttle alert per event
+# === ALERT SENDER / POSITION MONITOR CONSTANTS ===
+BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
+CHAT_ID = "6402511249"
+TRADES_FILE = "/root/Dex-trading-bot/trades/sim_trades.jsonl"
