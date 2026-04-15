@@ -22058,3 +22058,663 @@ Checking every 5s
   MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
   MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
   MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+[03:11:40] Monitor alive | 84 checks | 1 open | next in 5s
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$10,486 | gain=+7.3% | peak=$10,486 | dd=+0%
+  GABON : mcap=$10,486 | gain=-4.0% | peak=$10,486 | dd=+0%
+  GABON : mcap=$10,486 | gain=+14.4% | peak=$10,486 | dd=-7%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$10,486 | gain=+7.3% | peak=$10,486 | dd=+0%
+  GABON : mcap=$10,486 | gain=-4.0% | peak=$10,486 | dd=+0%
+  GABON : mcap=$10,486 | gain=+14.4% | peak=$10,486 | dd=-7%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$10,486 | gain=+7.3% | peak=$10,486 | dd=+0%
+  GABON : mcap=$10,486 | gain=-4.0% | peak=$10,486 | dd=+0%
+  GABON : mcap=$10,486 | gain=+14.4% | peak=$10,486 | dd=-7%
+[03:12:44] Monitor alive | 96 checks | 3 open | next in 5s
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$10,486 | gain=+7.3% | peak=$10,486 | dd=+0%
+  GABON : mcap=$10,486 | gain=-4.0% | peak=$10,486 | dd=+0%
+  GABON : mcap=$10,486 | gain=+14.4% | peak=$10,486 | dd=-7%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$10,486 | gain=+7.3% | peak=$10,486 | dd=+0%
+  GABON : mcap=$10,486 | gain=-4.0% | peak=$10,486 | dd=+0%
+  GABON : mcap=$10,486 | gain=+14.4% | peak=$10,486 | dd=-7%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$9,694 | gain=-0.8% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,694 | gain=-11.3% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,694 | gain=+5.8% | peak=$10,486 | dd=+1%
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+[03:13:50] Monitor alive | 108 checks | 3 open | next in 5s
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$9,515 | gain=-2.6% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,515 | gain=-12.9% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,515 | gain=+3.8% | peak=$10,486 | dd=+3%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$9,515 | gain=-2.6% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,515 | gain=-12.9% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,515 | gain=+3.8% | peak=$10,486 | dd=+3%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$9,515 | gain=-2.6% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,515 | gain=-12.9% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,515 | gain=+3.8% | peak=$10,486 | dd=+3%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$9,515 | gain=-2.6% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,515 | gain=-12.9% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,515 | gain=+3.8% | peak=$10,486 | dd=+3%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$9,515 | gain=-2.6% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,515 | gain=-12.9% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,515 | gain=+3.8% | peak=$10,486 | dd=+3%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$9,215 | gain=-5.7% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,215 | gain=-15.6% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,215 | gain=+0.5% | peak=$10,486 | dd=+6%
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+[03:14:53] Monitor alive | 120 checks | 3 open | next in 5s
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  NOW: error fetching mcap
+  NOW: error fetching mcap
+  NOW: error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  NOW: error fetching mcap
+  NOW: error fetching mcap
+  NOW: error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  NOW: error fetching mcap
+  NOW: error fetching mcap
+  NOW: error fetching mcap
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$9,017 | gain=-7.7% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,017 | gain=-17.5% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,017 | gain=-1.6% | peak=$10,486 | dd=+8%
+[STOP_LOSS] Alert sent
+🔴 NOW STOP LOSS @ $12,105 (-26.2%)
+[STOP_LOSS] Alert sent
+🔴 NOW STOP LOSS @ $12,105 (-26.2%)
+[STOP_LOSS] Alert sent
+🔴 NOW STOP LOSS @ $12,105 (-26.2%)
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$9,017 | gain=-7.7% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,017 | gain=-17.5% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,017 | gain=-1.6% | peak=$10,486 | dd=+8%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$9,017 | gain=-7.7% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,017 | gain=-17.5% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,017 | gain=-1.6% | peak=$10,486 | dd=+8%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$9,017 | gain=-7.7% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,017 | gain=-17.5% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,017 | gain=-1.6% | peak=$10,486 | dd=+8%
+[03:15:53] Monitor alive | 131 checks | 3 open | next in 5s
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$9,017 | gain=-7.7% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,017 | gain=-17.5% | peak=$10,486 | dd=+0%
+  GABON : mcap=$9,017 | gain=-1.6% | peak=$10,486 | dd=+8%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+[03:16:57] Monitor alive | 143 checks | 3 open | next in 5s
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$8,164 | gain=-16.5% | peak=$10,486 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 GABON  STOP LOSS @ $8,164 (-25.3%)
+  GABON : mcap=$8,164 | gain=-10.9% | peak=$9,165 | dd=+0%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$8,164 | gain=-16.5% | peak=$9,165 | dd=+0%
+  GABON : mcap=$8,164 | gain=-10.9% | peak=$9,165 | dd=+0%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$8,164 | gain=-16.5% | peak=$9,165 | dd=+0%
+  GABON : mcap=$8,164 | gain=-10.9% | peak=$9,165 | dd=+0%
+  MEMEMAN: mcap=$2,476 | gain=-70.8% | peak=$8,478 | dd=+0%
+  GABON : mcap=$8,164 | gain=-16.5% | peak=$9,165 | dd=+0%
+  GABON : mcap=$8,164 | gain=-10.9% | peak=$9,165 | dd=+0%
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+[03:18:00] Monitor alive | 155 checks | 2 open | next in 5s
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: mcap=$2,458 | gain=-71.0% | peak=$8,478 | dd=+0%
+  GABON : mcap=$8,937 | gain=-8.5% | peak=$9,165 | dd=+0%
+  GABON : mcap=$8,937 | gain=-2.5% | peak=$9,165 | dd=+0%
+  MEMEMAN: mcap=$2,458 | gain=-71.0% | peak=$8,478 | dd=+0%
+  GABON : mcap=$8,926 | gain=-8.7% | peak=$9,165 | dd=+0%
+  GABON : mcap=$8,926 | gain=-2.6% | peak=$9,165 | dd=+0%
+  MEMEMAN: mcap=$2,458 | gain=-71.0% | peak=$8,478 | dd=+0%
+  GABON : mcap=$8,926 | gain=-8.7% | peak=$9,165 | dd=+0%
+  GABON : mcap=$8,926 | gain=-2.6% | peak=$9,165 | dd=+0%
+  MEMEMAN: mcap=$2,458 | gain=-71.0% | peak=$8,478 | dd=+0%
+  GABON : mcap=$8,926 | gain=-8.7% | peak=$9,165 | dd=+0%
+  GABON : mcap=$8,926 | gain=-2.6% | peak=$9,165 | dd=+0%
+  MEMEMAN: mcap=$2,458 | gain=-71.0% | peak=$8,478 | dd=+0%
+  GABON : mcap=$8,926 | gain=-8.7% | peak=$9,165 | dd=+0%
+  GABON : mcap=$8,926 | gain=-2.6% | peak=$9,165 | dd=+0%
+  MEMEMAN: mcap=$2,458 | gain=-71.0% | peak=$8,478 | dd=+0%
+  GABON : mcap=$8,926 | gain=-8.7% | peak=$9,165 | dd=+0%
+  GABON : mcap=$8,926 | gain=-2.6% | peak=$9,165 | dd=+0%
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+[03:19:03] Monitor alive | 167 checks | 2 open | next in 5s
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  twin: error fetching mcap
+  twin: error fetching mcap
+  twin: error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  twin: error fetching mcap
+  twin: error fetching mcap
+  twin: error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  twin: error fetching mcap
+  twin: error fetching mcap
+  twin: error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  twin: error fetching mcap
+  twin: error fetching mcap
+  twin: error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  twin: error fetching mcap
+  twin: error fetching mcap
+  twin: error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  twin: error fetching mcap
+  twin: error fetching mcap
+  twin: error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  GABON : error fetching mcap
+  twin: error fetching mcap
+  twin: error fetching mcap
+  twin: error fetching mcap
+  MEMEMAN: mcap=$2,458 | gain=-71.0% | peak=$8,478 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 GABON  STOP LOSS @ $6,736 (-31.1%)
+  GABON : mcap=$7,097 | gain=-22.6% | peak=$9,165 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 twin STOP LOSS @ $10,531 (-38.4%)
+[STOP_LOSS] Alert sent
+🔴 twin STOP LOSS @ $10,531 (-38.4%)
+[STOP_LOSS] Alert sent
+🔴 twin STOP LOSS @ $12,378 (-27.6%)
+[03:20:05] Monitor alive | 178 checks | 1 open | next in 5s
+  MEMEMAN: mcap=$2,458 | gain=-71.0% | peak=$8,478 | dd=+0%
+  GABON : mcap=$7,097 | gain=-22.6% | peak=$9,165 | dd=+0%
+  MEMEMAN: mcap=$2,458 | gain=-71.0% | peak=$8,478 | dd=+0%
+  GABON : mcap=$7,097 | gain=-22.6% | peak=$9,165 | dd=+0%
+  MEMEMAN: mcap=$2,458 | gain=-71.0% | peak=$8,478 | dd=+0%
+  GABON : mcap=$7,097 | gain=-22.6% | peak=$9,165 | dd=+0%
+  MEMEMAN: mcap=$2,458 | gain=-71.0% | peak=$8,478 | dd=+0%
+  GABON : mcap=$7,097 | gain=-22.6% | peak=$9,165 | dd=+0%
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+[03:21:07] Monitor alive | 190 checks | 1 open | next in 5s
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: error fetching mcap
+  GABON : error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 GABON  STOP LOSS @ $6,088 (-33.6%)
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+[03:22:09] Monitor alive | 202 checks | 0 open | next in 5s
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: error fetching mcap
+[03:23:10] Monitor alive | 214 checks | 0 open | next in 5s
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+[03:24:11] Monitor alive | 226 checks | 0 open | next in 5s
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+[03:25:13] Monitor alive | 238 checks | 4 open | next in 5s
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  FatCat: mcap=$19,102 | gain=+16.0% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$19,102 | gain=+16.0% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$19,102 | gain=+16.0% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$19,102 | gain=+16.0% | peak=$19,102 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  FatCat: mcap=$19,102 | gain=+16.0% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$19,102 | gain=+16.0% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$19,102 | gain=+16.0% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$19,102 | gain=+16.0% | peak=$19,102 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+  FatCat: mcap=$14,188 | gain=-13.8% | peak=$19,102 | dd=+0%
+[03:26:19] Monitor alive | 250 checks | 4 open | next in 5s
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  MEMEMAN: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+  FatCat: error fetching mcap
+[03:27:20] Monitor alive | 261 checks | 4 open | next in 5s
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 FatCat STOP LOSS @ $4,667 (-71.7%)
+[STOP_LOSS] Alert sent
+🔴 FatCat STOP LOSS @ $4,667 (-71.7%)
+[STOP_LOSS] Alert sent
+🔴 FatCat STOP LOSS @ $4,667 (-71.7%)
+[STOP_LOSS] Alert sent
+🔴 FatCat STOP LOSS @ $4,250 (-74.2%)
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+[03:28:23] Monitor alive | 273 checks | 0 open | next in 5s
+  MEMEMAN: error fetching mcap
+  MEMEMAN: error fetching mcap
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: mcap=$2,456 | gain=-71.0% | peak=$8,478 | dd=+0%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+[03:29:24] Monitor alive | 285 checks | 1 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  MEMEMAN: error fetching mcap
