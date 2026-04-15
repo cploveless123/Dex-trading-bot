@@ -25,7 +25,7 @@ from datetime import datetime, timezone
 POSITION_SIZE = 0.1
 MAX_OPEN_POSITIONS = 9
 MIN_MCAP = 6000
-MAX_MCAP = 55000
+MAX_MCAP = 35000
 MIN_HOLDERS = 15
 MIN_CHG5_FOR_BUY = 2.0
 PUMP_CHG1_THRESHOLD = 5.001
@@ -348,6 +348,11 @@ def scan_token(token_data, reason_if_fail=None):
             return None, f"mcap ${mc:,.0f} < ${MIN_MCAP:,}"
         if mc > MAX_MCAP:
             return None, f"mcap ${mc:,.0f} > ${MAX_MCAP:,}"
+        
+        # Age check - reject if too old
+        MAX_AGE = 3600  # 60 minutes max
+        if age_sec > MAX_AGE:
+            return None, f"age {age_sec}s > {MAX_AGE}s (too old)"
         
         # Holders check
         if holders < MIN_HOLDERS:

@@ -38,7 +38,7 @@ MAX_DAILY_LOSS = 0.3         # Stop trading if daily loss exceeds this
 
 # Entry filters
 MIN_MCAP = 5000              # Minimum market cap in USD
-MAX_MCAP = 55000             # Maximum market cap in USD
+MAX_MCAP = 35000             # Maximum market cap in USD
 MAX_MCAP = 55000            # Maximum market cap in USD
 MIN_HOLDERS = 15             # Minimum holder count
 MIN_CHG5_FOR_BUY = 2.0      # Minimum 5m change % for buy signal
