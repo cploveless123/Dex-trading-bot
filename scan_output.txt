@@ -1,0 +1,9 @@
+GMGN Scanner v7.4 CLEAN Started - LIVE TRADING
+  Sources: GMGN trending (DexScreener backup)
+  Mcap $6,000-$55,000 | Holders ≥15
+  Dip 5-45% | chg1>+5% pump rule | chg5>+2% normal entry
+  Pump: 45s→15s→6s→BUY
+  Young: 45s | Older: 45s | Base: 15s
+  CHG1 recovery: 6s rechecks until mcap>+5% from low → 6s verify
+  Max: 5 open | Size: 0.1 SOL
+  IronClad: Fresh data only, DexScreener backup, alert dedup
