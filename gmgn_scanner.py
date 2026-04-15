@@ -407,9 +407,10 @@ def check_cooldown_watch():
         # === FRESH DATA - always refresh ALL critical fields for accurate analysis ===
         stored_data = data.get('token_data', {})
         fresh_gmgn = get_gmgn_token_info(addr)
-        fresh_dex = get_dexscreener_data(addr)
+        # DexScreener SKIPPED - GMGN has all data, DexScreener causes rate limits
+        fresh_dex = None
         
-        if not fresh_gmgn and not fresh_dex and not stored_data:
+        if not fresh_gmgn and not stored_data:
             print(f"   [SKIP] {result['token']}: no data")
             to_remove.append(addr)
             continue
@@ -488,8 +489,9 @@ def check_cooldown_watch():
             if remaining > 0:
                 continue
             # Fetch fresh data before pump path confirmation
+            # GMGN primary - only use DexScreener as fallback if GMGN fails
             fresh_gmgn_p = get_gmgn_token_info(addr)
-            fresh_dex_p = get_dexscreener_data(addr)
+            fresh_dex_p = None  # Skip DexScreener in pump path - too many calls
             if fresh_gmgn_p or fresh_dex_p:
                 merged_p = merge_token_data(data.get('token_data', {}), fresh_gmgn_p, fresh_dex_p)
                 chg1_p = merged_p.get('price_change_percent1m')
@@ -719,7 +721,9 @@ def scan_cycle():
         addr = token_data.get('address', '')
         if not addr: continue
         if addr in PERM_BLACKLIST or addr in COOLDOWN_WATCH: continue
-        dex_data = get_dexscreener_data(addr)
+        # GMGN data is primary - skip DexScreener in main scan to avoid rate limits
+        # DexScreener only used as fallback in token_info when GMGN returns nothing
+        dex_data = None
         result, reason = scan_token(token_data, dex_data)
         if result is None: continue
         add_to_cooldown(addr, token_data, result, dex_data)
