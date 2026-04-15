@@ -671,23 +671,24 @@ def scan_cycle():
             data['h1_prev'] = h1
             continue
         
-        # === BASE WAIT PATH (30s → verify chg1 > chg5_prev + 3%) ===
+        # === BASE WAIT PATH (30s → verify chg1 > chg1_prev + 3%) ===
         elif state == STATE_BASE_WAIT:
             remaining = data['cooldown_end'] - now
             if remaining > 0:
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # Timer done - verify chg1 > chg5_prev + 3%
-            chg1_threshold = chg5_prev + 3
+            # Timer done - verify chg1 > chg1_prev + 3%
+            chg1_threshold = chg1_prev + 3
             if chg1 >= chg1_threshold:
                 print(f"   [BUY_BASE] {result['token']}: chg1={chg1:+.1f}% >= {chg1_threshold:+.1f}% from last | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
                 send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Base wait path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
             else:
-                data['cooldown_end'] = now + 30
-                print(f"   [BASE_RECHECK] {result['token']}: chg1={chg1:.1f}% < {chg1_threshold:+.1f}% from last | recheck 30s")
+                # BASE didn't trigger - token passes (no further cooldown needed)
+                to_remove.append(addr)
+                print(f"   [BASE_PASS] {result['token']}: chg1={chg1:.1f}% < {chg1_threshold:+.1f}% | token passed")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
