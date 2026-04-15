@@ -15,6 +15,7 @@ from trading_constants import (
     H1_MOMENTUM_MIN, H24_MOMENTUM_MIN,
     PUMP_CHG1_THRESHOLD, PUMP_WAIT_1, PUMP_WAIT_2, PUMP_VERIFY_DELAY,
     DIP_MIN, DIP_MAX, ATH_DIVERGENCE_MAX,
+    MAX_H1, FALLEN_GIANT_H1, FALLEN_GIANT_MCAP,
     MIN_CHG5_FOR_BUY, CHG5_REJECT_DROP, CHG5_RECOVERY_THRESHOLD,
     BASE_COOLDOWN, YOUNG_COOLDOWN, OLDER_COOLDOWN, NORMAL_COOLDOWN,
     STATE_BASE_WAIT, STATE_RECOVERY_WAIT, STATE_RECOVERY_RECHECK,
@@ -57,17 +58,48 @@ _gmgn_throttle_state = {
 def is_throttled(endpoint):
     return time.time() < _gmgn_throttle_state[endpoint]['backoff_until']
 
-def record_throttle(endpoint):
+_dex_throttle_count = 0
+_last_dex_throttle_alert = 0
+_last_dex_critical_alert = 0
+
+def record_throttle(endpoint, critical=False):
     state = _gmgn_throttle_state[endpoint]
     state['count'] += 1
     wait_time = min(_BACKOFF_BASE * (2 ** state['count']), _BACKOFF_MAX)
     state['backoff_until'] = time.time() + wait_time
     now = time.time()
-    if state['count'] >= 2 and (now - state['last_alert']) > 120:
-        msg = f"GMGN {endpoint.upper()} THROTTLED: {state['count']} failures. Backoff {wait_time:.0f}s"
+    # Alert immediately on critical throttle (every time)
+    if critical or state['count'] >= 1:
+        msg = f"⚠️ GMGN {endpoint.upper()} THROTTLED: {state['count']} failures. Backoff {wait_time:.0f}s"
         print(f"! {msg}")
         alert_sender_webhook(msg)
-        state['last_alert'] = now
+
+def record_dex_throttle():
+    """Alert when DexScreener is failing"""
+    global _dex_throttle_count, _last_dex_throttle_alert
+    now = time.time()
+    _dex_throttle_count += 1
+    wait_time = min(30 * (2 ** _dex_throttle_count), 300)
+    if now - _last_dex_throttle_alert > 120:
+        msg = f"⚠️ DEXSCREENER THROTTLED: {_dex_throttle_count} failures. Backoff {wait_time:.0f}s"
+        print(f"! {msg}")
+        alert_sender_webhook(msg)
+        _last_dex_throttle_alert = now
+
+def record_dex_critical():
+    """Alert when DexScreener is completely down"""
+    global _dex_throttle_count, _last_dex_critical_alert
+    now = time.time()
+    _dex_throttle_count += 1
+    if now - _last_dex_critical_alert > 60:
+        msg = f"🚨 DEXSCREENER DOWN: Critical failure. Check immediately."
+        print(f"! {msg}")
+        alert_sender_webhook(msg)
+        _last_dex_critical_alert = now
+
+def clear_dex_throttle():
+    global _dex_throttle_count
+    _dex_throttle_count = 0
 
 def clear_throttle(endpoint):
     _gmgn_throttle_state[endpoint]['count'] = 0
@@ -96,7 +128,7 @@ def gmgn_query(cmd, timeout=15, endpoint='unknown'):
             clear_throttle(endpoint)
             return json.loads(r.stdout)
         elif 'rate limit' in r.stderr.lower() or '429' in r.stderr or '400' in r.stderr:
-            record_throttle(endpoint)
+            record_throttle(endpoint, critical=True)
     except:
         record_throttle(endpoint)
     
@@ -135,6 +167,7 @@ def get_dexscreener_data(addr):
         import requests
         r = requests.get(f'https://api.dexscreener.com/v1/tokens/{addr}', timeout=8)
         if r.status_code == 200:
+            clear_dex_throttle()
             pairs = r.json().get('pairs', [])
             if pairs:
                 p = pairs[0]
@@ -147,8 +180,12 @@ def get_dexscreener_data(addr):
                     'liquidity': p.get('liquidity'),
                     'price': float(p.get('priceUsd', 0) or 0),
                 }
-    except:
-        pass
+        elif r.status_code in (429, 403):
+            record_dex_throttle()
+        else:
+            record_dex_critical()
+    except Exception as e:
+        record_dex_critical()
     return None
 
 # === BLACKLIST ===
@@ -230,6 +267,7 @@ def scan_token(gmgn_data, dex_data):
     if holders < MIN_HOLDERS: return None, f"holders {holders} < {MIN_HOLDERS}"
     if top10 > TOP10_HOLDER_MAX: return None, f"top10 {top10:.1f}% > {TOP10_HOLDER_MAX}%"
     if h1 < H1_MOMENTUM_MIN and h24 < H24_MOMENTUM_MIN: return None, f"no momentum (h1={h1:+.1f}% 24h={h24:+.1f}%)"
+    if h1 > MAX_H1: return None, f"h1 {h1:.0f}% > {MAX_H1}% (too late - already pumped)"
     if launchpad not in ALLOWED_EXCHANGES and launchpad != 'pump': return None, f"exchange {launchpad} not allowed"
     if bs_ratio < BS_RATIO_OLD and not (BS_PUMP_FUN_OK and launchpad == 'pump'): return None, f"bs {bs_ratio:.2f} < {BS_RATIO_OLD}"
     if vol5m < MIN_5MIN_VOLUME: return None, f"vol5m ${vol5m:,.0f} < ${MIN_5MIN_VOLUME:,}"
@@ -249,20 +287,6 @@ def scan_token(gmgn_data, dex_data):
     # Symbol blacklist: don't re-buy same symbol (pump.fun allows duplicate names)
     symbol_blacklist = set()
     try:
-        with open(TRADES_FILE) as f:
-            for line in f:
-                t = json.loads(line)
-                if t.get('action') == 'BUY' and t.get('token_name'):
-                    symbol_blacklist.add(t['token_name'].lower())
-        if symbol.lower() in symbol_blacklist:
-            return None, f"symbol {symbol} already traded"
-    except: pass
-    
-    # Symbol blacklist: block re-buy of same symbol
-    symbol_blacklist = {}
-    # Symbol blacklist: block re-buy of same symbol
-    symbol_blacklist = set()
-    try:
         with open(TRADES_FILE) as sf:
             for sline in sf:
                 t = json.loads(sline)
@@ -271,6 +295,14 @@ def scan_token(gmgn_data, dex_data):
         if symbol.lower() in symbol_blacklist:
             return None, f"symbol {symbol} already traded"
     except: pass
+    
+    # No ATH fallback: tokens >$20K mcap with no ATH = reject (risk of fallen giant)
+    if ath_mcap <= 0 and mcap > 20000:
+        return None, f"No ATH data for mcap ${mcap:,.0f} > $20K (risk of fallen giant)"
+    
+    # Fallen Giant Detection: massive h1 + small mcap = already pumped and crashed
+    if h1 > FALLEN_GIANT_H1 and mcap < FALLEN_GIANT_MCAP:
+        return None, f"Fallen giant: h1={h1:.0f}% + mcap=${mcap:,.0f} < ${FALLEN_GIANT_MCAP:,}"
     
     if addr in PERM_BLACKLIST: return None, "blacklisted"
     try:

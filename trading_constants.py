@@ -14,7 +14,7 @@ MIN_AGE_SECONDS = 120  # 2 minutes minimum
 MAX_AGE_SECONDS = 5400  # 90 minutes maximum
 MIN_5MIN_VOLUME = 1000  # 5min vol > $1K
 MIN_VOLUME = 6000    # Min volume $6K
-MIN_HOLDERS = 15
+MIN_HOLDERS = 20
 TOP10_HOLDER_MAX = 50  # Top10% < 50%
 
 # Vol/Mcap ratio > 1.0x
@@ -36,7 +36,10 @@ PUMP_WAIT_2 = 30            # Second wait
 PUMP_VERIFY_DELAY = 15      # Final verify
 
 # === DIP/PULLBACK ===
-DIP_MIN = 2          # 2% minimum pullback from local peak
+DIP_MIN = 20         # 20% minimum pullback (winners avg 23.6% dip)
+MAX_H1 = 250         # Max 250% 1h change (avoid late entries)
+FALLEN_GIANT_H1 = 400  # h1 above this + small mcap = already pumped
+FALLEN_GIANT_MCAP = 20000  # mcap below this + high h1 = fallen giant
 DIP_MAX = 45         # 45% max pullback from local peak
 ATH_DIVERGENCE_MAX = 55  # Max 55% below ATH
 
