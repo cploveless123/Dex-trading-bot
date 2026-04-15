@@ -28,7 +28,7 @@ MIN_MCAP = 6000
 MAX_MCAP = 55000
 MIN_HOLDERS = 15
 MIN_CHG5_FOR_BUY = 2.0
-PUMP_CHG5_THRESHOLD = 20.0
+PUMP_CHG1_THRESHOLD = 20.0
 H1_MOMENTUM_MIN = 5.0
 FALLEN_GIANT_H1 = 350
 FALLEN_GIANT_MCAP = 25000
@@ -495,17 +495,17 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # Timer done - verify chg5 still above pump threshold
-            if chg5 >= PUMP_CHG5_THRESHOLD:
+            # Timer done - verify chg1 still above pump threshold
+            if chg1 >= PUMP_CHG1_THRESHOLD:
                 data['state'] = STATE_PUMP_WAIT_2
                 data['cooldown_end'] = now + PUMP_WAIT_2
                 data['recheck_count'] = 0
-                print(f"   [PUMP_CONFIRMED] {result['token']}: chg5={chg5:+.1f}% still >+{PUMP_CHG5_THRESHOLD}% | wait {PUMP_WAIT_2}s")
+                print(f"   [PUMP_CONFIRMED] {result['token']}: chg1={chg1:+.1f}% still >+{PUMP_CHG1_THRESHOLD}% | wait {PUMP_WAIT_2}s")
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
                 data['lowest_chg5'] = min(lowest_chg5, chg5)
-                print(f"   [PUMP_FADED] {result['token']}: chg5={chg5:.1f}% < +{PUMP_CHG5_THRESHOLD}% | recovery")
+                print(f"   [PUMP_FADED] {result['token']}: chg1={chg1:.1f}% < +{PUMP_CHG1_THRESHOLD}% | recovery")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -516,15 +516,15 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            if chg5 >= PUMP_CHG5_THRESHOLD:
+            if chg1 >= PUMP_CHG1_THRESHOLD:
                 data['state'] = STATE_PUMP_VERIFY
                 data['cooldown_end'] = now + PUMP_VERIFY_DELAY
                 data['recheck_count'] = 0
-                print(f"   [PUMP_STILL_OK] {result['token']}: chg5={chg5:+.1f}% | verify {PUMP_VERIFY_DELAY}s")
+                print(f"   [PUMP_STILL_OK] {result['token']}: chg1={chg1:+.1f}% | verify {PUMP_VERIFY_DELAY}s")
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
-                print(f"   [PUMP_FADED_W2] {result['token']}: chg5={chg5:.1f}% | recovery")
+                print(f"   [PUMP_FADED_W2] {result['token']}: chg1={chg1:.1f}% | recovery")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -535,14 +535,14 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            if chg5 >= PUMP_CHG5_THRESHOLD:
-                print(f"   [BUY_PUMP] {result['token']}: chg5={chg5:+.1f}% | BUY!")
+            if chg1 >= PUMP_CHG1_THRESHOLD:
+                print(f"   [BUY_PUMP] {result['token']}: chg1={chg1:+.1f}% | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
-                print(f"   [PUMP_FADED_V] {result['token']}: chg5={chg5:.1f}% | recovery")
+                print(f"   [PUMP_FADED_V] {result['token']}: chg1={chg1:.1f}% | recovery")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -720,7 +720,7 @@ def main():
     print(f"GMGN Scanner {GMGN_SCANNER_VERSION} Started - LIVE TRADING")
     print(f"  Sources: GMGN trending (DexScreener backup)")
     print(f"  Mcap ${MIN_MCAP:,}-${MAX_MCAP:,} | Holders ≥{MIN_HOLDERS}")
-    print(f"  Dip 5-45% | chg5>+20% pump rule | chg5>+2% normal entry")
+    print(f"  Dip 5-45% | chg1>+20% pump rule | chg5>+2% normal entry")
     print(f"  Pump: {PUMP_WAIT_1}s→{PUMP_WAIT_2}s→{PUMP_VERIFY_DELAY}s→BUY")
     print(f"  Young: {YOUNG_COOLDOWN}s | Older: {OLDER_COOLDOWN}s | Base: 30s")
     print(f"  CHG1 recovery: 15s rechecks until mcap>+5% from low → 15s verify")
