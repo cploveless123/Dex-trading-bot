@@ -61,31 +61,28 @@ PUMP_VERIFY_DELAY = 15       # Final verification wait
 RECOVERY_WAIT = 15           # Recovery recheck interval
 CHG5_RECOVERY_CHECK = 5.0   # chg5 must recover this % from lowest
 
-# Exit strategy
+# EXIT STRATEGY (TP5 Progressive Selling)
 TP1_PCT = 50                 # Take profit 1: +50%
-TP1_SELL = 0.10              # Sell 10% of position at TP1
+TP1_TRAIL = 40               # 40% trailing stop from peak
+TP1_HOLD = True              # HOLD at TP1 - no sell
 
 TP2_PCT = 100                # Take profit 2: +100%
-TP2_SELL = 0.15              # Sell 15% of position at TP2
+TP2_SELL_PCT = 0.40         # Sell 40% of position at TP2
+TP2_TRAIL = 30              # 30% trailing stop
 
-TP3_PCT = 200                # Take profit 3: +200%
-TP3_SELL = 0.20              # Sell 20% of position at TP3
+TP3_PCT = 200               # Take profit 3: +200%
+TP3_SELL_PCT = 0.30         # Sell 30% of position at TP3
+TP3_TRAIL = 30              # 30% trailing stop
 
-TP4_PCT = 400                # Take profit 4: +400%
-TP4_SELL = 0.25              # Sell 25% of position at TP4
+TP4_PCT = 300               # Take profit 4: +300%
+TP4_SELL_PCT = 0.20         # Sell 20% of position at TP4
+TP4_TRAIL = 30              # 30% trailing stop
 
-TP5_PCT = 1000               # Take profit 5: +1000% (TP5 target!)
-TP5_SELL = 0.30              # Sell 30% of position at TP5
-TP5_COMPOUND = 0.10         # Remaining 10% enters compound mode
+TP5_PCT = 1000              # Take profit 5: +1000% (TP5 target!)
+TP5_SELL_PCT = 1.00         # Sell remaining at TP5 (exit all)
+TP5_TRAIL = 20              # 20% trailing stop
 
-# Compound mode (for positions hitting TP5)
-COMPOUND_TRAIL_PCT = 20     # Trailing stop % for compound positions
-COMPOUND_MIN_HOLD = 3600    # Minimum hold time (1 hour) before compound
-
-# Stop loss
-STOP_LOSS_PCT = 25           # Default stop loss -25%
-STOP_LOSS_TP4_PCT = 15      # Tighter stop for TP4+ positions (-15%)
-STOP_LOSS_COMPOUND_PCT = 25 # Compound position stop (-25% from peak)
+STOP_LOSS_PCT = 30          # Exit all at -30%
 
 # Exchange whitelist
 ALLOWED_EXCHANGES = ['raydium']  # Raydium only (no pump.fun/pumpswap for now)
