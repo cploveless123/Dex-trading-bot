@@ -328,6 +328,16 @@ def get_open_position_count():
     except:
         return 0
 
+def get_scanner_status():
+    """Return scanner status dict for heartbeat reporting"""
+    return {
+        'cooldown_count': len(COOLDOWN_WATCH),
+        'blacklist_count': len(PERM_BLACKLIST),
+        'rejected_temp_count': len(REJECTED_TEMP),
+        'dexscraper_fail_count': DEXSCREENER_FAIL_COUNT,
+        'buys_stopped': _BUYS_STOPPED,
+    }
+
 def save_trade(trade):
     with open(TRADES_FILE, 'a') as f:
         f.write(json.dumps(trade) + '\n')
