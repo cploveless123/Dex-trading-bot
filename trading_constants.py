@@ -53,9 +53,9 @@ CHG1_RECHECK_INTERVAL = 6    # Recheck interval when chg1 < -5%
 CHG1_VERIFY_DELAY = 6         # Verification delay after chg1 recovery
 
 # Pump path timing
-PUMP_WAIT_1 = 45             # First confirmation wait
-PUMP_WAIT_2 = 15            # Second confirmation wait
-PUMP_VERIFY_DELAY = 6         # Final verification wait
+PUMP_WAIT_1 = 45             # First confirmation wait (45s cooldown before checking)
+PUMP_WAIT_2 = 10            # Second confirmation wait
+PUMP_VERIFY_DELAY = 10         # Final verification wait
 
 # Recovery settings
 RECOVERY_WAIT = 6            # Recovery recheck interval
