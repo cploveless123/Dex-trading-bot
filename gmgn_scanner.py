@@ -464,14 +464,14 @@ def scan_cycle():
     to_remove = []
     cooldown_start = now
     
-    # Process ONLY tokens whose timers are about to expire (within 20s)
+    # Process ONLY tokens whose timers are about to expire (within 5s)
     # This prevents old/stale tokens from blocking new token evaluation
     urgent_tokens = [(addr, data) for addr, data in COOLDOWN_WATCH.items() 
-                     if data['cooldown_end'] - now <= 20]
+                     if data['cooldown_end'] - now <= 5]
     
     for addr, data in urgent_tokens:
-        # Timeout: if processing for more than 8s, stop to allow new scans
-        if time.time() - cooldown_start > 8:
+        # Timeout: if processing for more than 10s, stop to allow new scans
+        if time.time() - cooldown_start > 10:
             print(f"[DEBUG] Cooldown timeout - processed {len(urgent_tokens)} urgent tokens")
             break
         
