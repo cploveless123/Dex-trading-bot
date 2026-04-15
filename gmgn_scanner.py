@@ -54,12 +54,15 @@ def is_throttled(endpoint):
 
 def record_throttle(endpoint):
     state = _gmgn_throttle_state[endpoint]
+    was_ok = state['backoff_until'] == 0 or time.time() >= state['backoff_until']
     state['count'] += 1
     wait_time = min(_BACKOFF_BASE * (2 ** state['count']), _BACKOFF_MAX)
     state['backoff_until'] = time.time() + wait_time
-    msg = f"⚠️ GMGN {endpoint.upper()} THROTTLED: {state['count']} failures. Backoff {wait_time:.0f}s"
-    print(f"! {msg}")
-    alert_sender_webhook(msg)
+    # Only alert when first throttled (was_ok → now throttled)
+    if was_ok:
+        msg = f"⚠️ GMGN {endpoint.upper()} THROTTLED: backoff {wait_time:.0f}s"
+        print(f"! {msg}")
+        alert_sender_webhook(msg)
 
 def clear_throttle(endpoint):
     _gmgn_throttle_state[endpoint] = {'count': 0, 'backoff_until': 0, 'last_alert': 0}
@@ -371,10 +374,8 @@ def add_to_cooldown(addr, token_data, result, entry_chg5):
     }
 
 def scan_cycle():
-    tokens = []
-    tokens.extend(get_gmgn_trending(50))
-    tokens.extend(get_gmgn_trenches(20))
-    tokens.extend(get_gmgn_pumpfun_lowcap(20))
+    # GMGN rate-limited - using only trending to reduce API calls
+    tokens = get_gmgn_trending(50)
     if not tokens:
         return False
     
@@ -630,9 +631,27 @@ def scan_cycle():
         if result is None:
             continue
         
+        # Fetch token_info to get creation_timestamp for age (only for tokens that passed other filters)
+        info = get_gmgn_token_info(addr)
+        if info:
+            ct = info.get('creation_timestamp', 0)
+            if ct and ct > 0:
+                age_sec = time.time() - ct
+                age_str = f"{age_sec:.0f}s"
+                result['age_sec'] = age_sec
+                # Re-verify age
+                if age_sec < MIN_AGE_SECONDS:
+                    print(f"   [REJECT_AGE] {result['token']}: age {age_sec:.0f}s < {MIN_AGE_SECONDS}s")
+                    REJECTED_TEMP[addr] = {'ts': time.time(), 'reason': f'age {age_sec:.0f}s < {MIN_AGE_SECONDS}s'}
+                    continue
+                if age_sec > MAX_AGE_SECONDS:
+                    print(f"   [REJECT_AGE] {result['token']}: age {age_sec:.0f}s > {MAX_AGE_SECONDS}s")
+                    REJECTED_TEMP[addr] = {'ts': time.time(), 'reason': f'age {age_sec:.0f}s > {MAX_AGE_SECONDS}s'}
+                    continue
+        
         entry_chg5 = result.get('chg5', 0)
         add_to_cooldown(addr, token_data, result, entry_chg5)
-        print(f"   [FOUND] {result['token']}: mc=${result['mcap']:,.0f} h1={result['h1']:+.1f}% chg5={entry_chg5:+.1f}% dip={result.get('dip', 0):.1f}% | cooldown started")
+        print(f"   [FOUND] {result['token']}: mc=${result['mcap']:,.0f} h1={result['h1']:+.1f}% chg5={entry_chg5:+.1f}% dip={result.get('dip', 0):.1f}% | cooldown started", flush=True)
     
     return True
 
@@ -648,7 +667,7 @@ def main():
         try:
             scan_cycle()
         except Exception as e:
-            print(f"Scan error: {e}")
+            print(f"Scan error: {e}", flush=True)
         time.sleep(1)  # 1 second between cycles
 
 if __name__ == '__main__':

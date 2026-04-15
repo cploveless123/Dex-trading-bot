@@ -21,7 +21,7 @@ PUMP_VERIFY_DELAY = 15     # Final 15s verification
 # Dip / Pullback
 DIP_MIN = 5                # 5% minimum dip from local peak
 DIP_MAX = 45               # 45% maximum dip
-ATH_DIVERGENCE_MAX = 55    # Max 55% from ATH
+ATH_DIVERGENCE_MAX = 65    # Max 65% from ATH
 
 # chg5 rules
 MIN_CHG5_FOR_BUY = 2.0     # chg5 must be > +2% to buy from local bottom
