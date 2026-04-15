@@ -61,8 +61,8 @@ STATE_RECOVERY_WAIT = 'RECOVERY_WAIT'    # 6s for chg1 recovery for chg5 recover
 
 # Timing constants (sync with trading_constants.py)
 PUMP_WAIT_1 = 45            # First pump confirmation
-PUMP_WAIT_2 = 15            # Second pump confirmation (was 30)
-PUMP_VERIFY_DELAY = 6       # Final pump verification (was 15)
+PUMP_WAIT_2 = 10            # Second pump confirmation (Chris: 10s path)
+PUMP_VERIFY_DELAY = 10     # Final pump verification (Chris: 10s path)
 YOUNG_COOLDOWN = 45         # Young path cooldown
 OLDER_COOLDOWN = 45         # Older path cooldown
 BASE_WAIT = 15              # Base path wait (was 30)
@@ -879,7 +879,7 @@ def main():
             scan_cycle()
         except Exception as e:
             print(f"Scan error: {e}")
-        time.sleep(15)  # Reduced from 5s to reduce GMGN throttle
+        time.sleep(10)  # 10s scan interval
 
 if __name__ == '__main__':
     main()
