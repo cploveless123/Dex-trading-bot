@@ -374,8 +374,10 @@ def add_to_cooldown(addr, token_data, result, entry_chg5):
     }
 
 def scan_cycle():
-    # GMGN rate-limited - using only trending to reduce API calls
-    tokens = get_gmgn_trending(50)
+    # Use trending + trenches only (skip pumpfun to reduce throttling)
+    tokens = []
+    tokens.extend(get_gmgn_trending(50))
+    tokens.extend(get_gmgn_trenches(20))
     if not tokens:
         return False
     
@@ -657,6 +659,7 @@ def scan_cycle():
 
 def main():
     print("GMGN Scanner v7.3 Started - LIVE TRADING")
+    print(f"  Sources: trending + trenches (no pumpfun to reduce throttling)")
     print(f"  Mcap $6K-$55K | Age 3-90min | Holders ≥15")
     print(f"  Dip 5-45% | chg5>+20% pump rule | chg5>+2% normal entry")
     print(f"  Cooldown: 45s young/older+momentum | 30s base | 15s deterioration rechecks")
