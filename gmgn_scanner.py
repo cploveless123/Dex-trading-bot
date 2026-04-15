@@ -581,16 +581,9 @@ def scan_cycle():
         # This reduces GMGN calls from N per 15s to 1 per 15s when timer is close
         cooldown_remaining = data['cooldown_end'] - now
         
-        if cooldown_remaining > 15:
-            # Timer not close - skip fresh fetch, use cached data
-            chg5 = result.get('chg5', 0)
-            h1 = result.get('h1', 0)
-            chg1 = result.get('chg1', 0)
-            mcap = result.get('mcap', 0)
-            fresh_data = None
-            source = None
-        else:
-            # Timer about to expire - get fresh data
+        # ALWAYS fetch fresh data when timer is expired or about to expire
+        # This ensures we have current chg1/mcap for buy decisions
+        if cooldown_remaining <= 15:
             fresh_data, source = get_fresh_token_data(addr)
             if fresh_data is None:
                 # Failed to get fresh data - use cached from result, don't skip state transition
@@ -617,6 +610,14 @@ def scan_cycle():
                 result['h1'] = h1
                 result['chg1'] = chg1
                 result['mcap'] = mcap
+        else:
+            # Timer not close - skip fresh fetch, use cached data
+            chg5 = result.get('chg5', 0)
+            h1 = result.get('h1', 0)
+            chg1 = result.get('chg1', 0)
+            mcap = result.get('mcap', 0)
+            fresh_data = None
+            source = None
         
         chg5_prev = data.get('chg5_prev', chg5)
         h1_prev = data.get('h1_prev', h1)
