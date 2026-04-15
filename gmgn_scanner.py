@@ -28,7 +28,7 @@ MIN_MCAP = 6000
 MAX_MCAP = 55000
 MIN_HOLDERS = 15
 MIN_CHG5_FOR_BUY = 2.0
-PUMP_CHG1_THRESHOLD = 5.0
+PUMP_CHG1_THRESHOLD = 5.001
 H1_MOMENTUM_MIN = 5.0
 FALLEN_GIANT_H1 = 350
 FALLEN_GIANT_MCAP = 25000
@@ -292,7 +292,7 @@ def scan_token(token_data, reason_if_fail=None):
             return None, f"BS {bs_ratio:.2f} too low"
         
         # Build result
-        pump_triggered = chg1 >= PUMP_CHG1_THRESHOLD
+        pump_triggered = chg1 > PUMP_CHG1_THRESHOLD
         
         result = {
             'token': token_data.get('symbol', '?'),
@@ -527,7 +527,7 @@ def scan_cycle():
                 data['h1_prev'] = h1
                 continue
             # Timer done - verify chg1 still above pump threshold
-            if chg1 >= PUMP_CHG1_THRESHOLD:
+            if chg1 > PUMP_CHG1_THRESHOLD:
                 data['state'] = STATE_PUMP_WAIT_2
                 data['cooldown_end'] = now + PUMP_WAIT_2
                 data['recheck_count'] = 0
@@ -536,7 +536,7 @@ def scan_cycle():
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
                 data['lowest_chg5'] = min(lowest_chg5, chg5)
-                print(f"   [PUMP_FADED] {result['token']}: chg1={chg1:.1f}% < +{PUMP_CHG1_THRESHOLD}% | recovery")
+                print(f"   [PUMP_FADED] {result['token']}: chg1={chg1:.1f}% < +{PUMP_CHG1_THRESHOLD}% | recovery (chg1 below +5%)")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -547,7 +547,7 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            if chg1 >= PUMP_CHG1_THRESHOLD:
+            if chg1 > PUMP_CHG1_THRESHOLD:
                 data['state'] = STATE_PUMP_VERIFY
                 data['cooldown_end'] = now + PUMP_VERIFY_DELAY
                 data['recheck_count'] = 0
@@ -566,7 +566,7 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            if chg1 >= PUMP_CHG1_THRESHOLD:
+            if chg1 > PUMP_CHG1_THRESHOLD:
                 print(f"   [BUY_PUMP] {result['token']}: chg1={chg1:+.1f}% | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
@@ -658,7 +658,7 @@ def scan_cycle():
                 data['h1_prev'] = h1
                 continue
             # 45s done - verify chg1 >= +2%
-            if chg1 >= 2:
+            if chg1 > 2:
                 print(f"   [BUY_OLDER] {result['token']}: chg1={chg1:+.1f}% >= +2% | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
