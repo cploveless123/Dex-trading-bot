@@ -233,10 +233,8 @@ def scan_token(token_data, reason_if_fail=None):
     if h1 > 350 and mcap < 25000:
         return None, f"Fallen giant: h1={h1:.0f}% + mcap=${mcap:,.0f} < $25K"
 
-    # chg1 check (no falling knife)
+    # chg1 check: removed rejection - tokens with chg1 < -5% go to CHG1_RECHECK cooldown
     chg1 = float(token_data.get('price_change_percent1m', 0) or 0)
-    if chg1 < CHG1_MIN:
-        return None, f"chg1 {chg1:.1f}% < {CHG1_MIN}% (falling knife)"
 
     # Pump rule trigger: chg5 > +20%
     pump_triggered = chg5 > PUMP_CHG5_THRESHOLD
@@ -370,12 +368,9 @@ def add_to_cooldown(addr, token_data, result, entry_chg5):
     
     chg1 = result.get('chg1', 0)
     
-    # Check chg1 immediately - if < -5% go to CHG1_RECHECK
-    if chg1 < -5:
-        state = STATE_CHG1_RECHECK
-        cooldown_end = time.time() + 15  # 15s recheck
-        result['lowest_mcap'] = result.get('mcap', 0)
-    elif pump_triggered:
+    # Determine initial state per Chris's spec
+    # chg5 = entry signal, chg1 = verification checked during cooldown
+    if pump_triggered:
         state = STATE_PUMP_WAIT_1
         cooldown_end = time.time() + PUMP_WAIT_1
     elif age_sec < YOUNG_AGE_THRESHOLD and h1 > H1_MOMENTUM_MIN and chg5 > -5:
@@ -387,7 +382,7 @@ def add_to_cooldown(addr, token_data, result, entry_chg5):
         state = STATE_OLDER_COOLDOWN
         cooldown_end = time.time() + 45
     else:
-        # Otherwise → 30s base recheck (verify chg1 > +3% from last)
+        # Otherwise → 30s base recheck (verify chg1 > chg1_prev + 3%)
         state = STATE_BASE_WAIT
         cooldown_end = time.time() + 30
     
@@ -609,36 +604,68 @@ def scan_cycle():
             print(f"   [DETERIORATING] {result['token']}: chg5 {chg5_prev:+.1f}% → {chg5:+.1f}% (drop {chg5_drop:.1f}%) | recovery mode")
             continue
         
-        # === YOUNG COOLDOWN PATH (<15min + h1>5% + chg5>-5%) ===
-        if state == STATE_BASE_WAIT and age_sec < YOUNG_AGE_THRESHOLD and h1 > H1_MOMENTUM_MIN and chg5 > -5:
-            if chg5 < MIN_CHG5_FOR_BUY:
-                # Not ready - wait in base
-                data['cooldown_end'] = now + STATE_BASE_WAIT
+        # === YOUNG COOLDOWN PATH: 45s wait → check chg1 and chg5 → BUY ===
+        if state == STATE_YOUNG_COOLDOWN:
+            remaining = data['cooldown_end'] - now
+            if remaining > 0:
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
-                print(f"   [YOUNG_WAIT] {result['token']}: chg5={chg5:+.1f}% < +{MIN_CHG5_FOR_BUY}% | wait {STATE_BASE_WAIT}s")
+                # Check chg1 during cooldown - if < -5% go to recovery
+                if chg1 < -5:
+                    data['state'] = STATE_CHG1_RECHECK
+                    data['cooldown_end'] = now + 15
+                    data['lowest_mcap'] = mcap
+                    print(f"   [CHG1_FALL] {result['token']}: chg1={chg1:.1f}% < -5% | recovery 15s")
+                continue
+            # 45s done - verify chg1 >= -5% AND chg5 >= +2%
+            if chg1 >= -5 and chg5 >= MIN_CHG5_FOR_BUY:
+                final_result, fail_reason = scan_token(data['token_data'])
+                if final_result:
+                    print(f"   [BUY_YOUNG] {result['token']}: chg1={chg1:+.1f}% >= -5% + chg5={chg5:+.1f}% >= +2% | BUY!")
+                    buy_token(addr, final_result)
+                    to_remove.append(addr)
+                    continue
+                else:
+                    REJECTED_TEMP[addr] = {'ts': now, 'reason': fail_reason}
+                    to_remove.append(addr)
+                    continue
             else:
-                # Ready - start young cooldown
-                data['state'] = STATE_POST_COOLDOWN
-                data['cooldown_end'] = now + YOUNG_COOLDOWN
-                data['lowest_chg5'] = chg5
-                print(f"   [YOUNG_COOLDOWN] {result['token']}: chg5={chg5:+.1f}% | wait {YOUNG_COOLDOWN}s")
+                # Not ready - go to base rechecks
+                data['state'] = STATE_BASE_WAIT
+                data['cooldown_end'] = now + 30
+                print(f"   [YOUNG_NOT_READY] {result['token']}: chg1={chg1:.1f}% chg5={chg5:.1f}% | base recheck")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
         
-        # === OLDER COOLDOWN PATH (>15min + h1>5% + chg5>-5%) ===
-        if state == STATE_BASE_WAIT and age_sec >= YOUNG_AGE_THRESHOLD and h1 > H1_MOMENTUM_MIN and chg5 > -5:
-            if chg5 < MIN_CHG5_FOR_BUY:
-                data['cooldown_end'] = now + STATE_BASE_WAIT
+        # === OLDER COOLDOWN PATH: 45s wait → check chg1 and chg5 → BUY ===
+        if state == STATE_OLDER_COOLDOWN:
+            remaining = data['cooldown_end'] - now
+            if remaining > 0:
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
-                print(f"   [OLDER_WAIT] {result['token']}: chg5={chg5:+.1f}% < +{MIN_CHG5_FOR_BUY}% | wait {STATE_BASE_WAIT}s")
+                if chg1 < -5:
+                    data['state'] = STATE_CHG1_RECHECK
+                    data['cooldown_end'] = now + 15
+                    data['lowest_mcap'] = mcap
+                    print(f"   [CHG1_FALL] {result['token']}: chg1={chg1:.1f}% < -5% | recovery 15s")
+                continue
+            # 45s done
+            if chg1 >= -5 and chg5 >= MIN_CHG5_FOR_BUY:
+                final_result, fail_reason = scan_token(data['token_data'])
+                if final_result:
+                    print(f"   [BUY_OLDER] {result['token']}: chg1={chg1:+.1f}% >= -5% + chg5={chg5:+.1f}% >= +2% | BUY!")
+                    buy_token(addr, final_result)
+                    to_remove.append(addr)
+                    continue
+                else:
+                    REJECTED_TEMP[addr] = {'ts': now, 'reason': fail_reason}
+                    to_remove.append(addr)
+                    continue
             else:
-                data['state'] = STATE_POST_COOLDOWN
-                data['cooldown_end'] = now + OLDER_COOLDOWN
-                data['lowest_chg5'] = chg5
-                print(f"   [OLDER_COOLDOWN] {result['token']}: chg5={chg5:+.1f}% | wait {OLDER_COOLDOWN}s")
+                data['state'] = STATE_BASE_WAIT
+                data['cooldown_end'] = now + 30
+                print(f"   [OLDER_NOT_READY] {result['token']}: chg1={chg1:.1f}% chg5={chg5:.1f}% | base recheck")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -719,27 +746,28 @@ def scan_cycle():
         if state == STATE_BASE_WAIT:
             remaining = data['cooldown_end'] - now
             if remaining > 0:
+                data['chg5_prev'] = chg5
+                data['h1_prev'] = h1
                 continue
-            # Check chg5
-            if chg5 >= MIN_CHG5_FOR_BUY:
-                # Ready - verify and buy
+            # 30s done - verify chg1 > chg5_prev + 3% (Chris spec)
+            chg1_threshold = data.get('chg5_prev', 0) + 3
+            if chg1 >= chg1_threshold:
                 final_result, fail_reason = scan_token(data['token_data'])
                 if final_result:
-                    print(f"   [BUY_NORMAL] {result['token']}: chg5={chg5:+.1f}% | BUY!")
+                    print(f"   [BUY_BASE] {result['token']}: chg1={chg1:+.1f}% >= {chg1_threshold:+.1f}% from last | BUY!")
                     buy_token(addr, final_result)
                     to_remove.append(addr)
                     continue
                 else:
-                    print(f"   [REJECT_V73] {result['token']}: {fail_reason}")
                     REJECTED_TEMP[addr] = {'ts': now, 'reason': fail_reason}
                     to_remove.append(addr)
                     continue
             else:
-                data['cooldown_end'] = now + STATE_BASE_WAIT
-                print(f"   [BASE_RECHECK] {result['token']}: chg5={chg5:+.1f}% < +{MIN_CHG5_FOR_BUY}% | wait {STATE_BASE_WAIT}s")
-            data['chg5_prev'] = chg5
-            data['h1_prev'] = h1
-            continue
+                data['cooldown_end'] = now + 30
+                data['chg5_prev'] = chg5
+                data['h1_prev'] = h1
+                print(f"   [BASE_RECHECK] {result['token']}: chg1={chg1:+.1f}% < {chg1_threshold:+.1f}% from last | recheck 30s")
+                continue
     
     # Remove finished tokens
     for addr in to_remove:
