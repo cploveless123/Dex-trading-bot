@@ -108,3 +108,44 @@ Checking every 5s
   WOON: mcap=$6,076 | gain=-16.3% | peak=$8,496 | dd=+0%
   WOON: mcap=$5,287 | gain=-27.2% | peak=$8,496 | dd=+0%
   WOON: mcap=$5,287 | gain=-27.2% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,287 | gain=-27.2% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,287 | gain=-27.2% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,287 | gain=-27.2% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,287 | gain=-27.2% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,438 | gain=-25.1% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,438 | gain=-25.1% | peak=$8,496 | dd=+0%
+[06:37:01] Monitor alive | 25 checks | 1 open | next in 5s
+  WOON: mcap=$5,438 | gain=-25.1% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,438 | gain=-25.1% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,438 | gain=-25.1% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,438 | gain=-25.1% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,963 | gain=-17.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,963 | gain=-17.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,963 | gain=-17.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,963 | gain=-17.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,963 | gain=-17.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,963 | gain=-17.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,955 | gain=-18.0% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,955 | gain=-18.0% | peak=$8,496 | dd=+0%
+[06:38:02] Monitor alive | 37 checks | 1 open | next in 5s
+  WOON: mcap=$5,955 | gain=-18.0% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,955 | gain=-18.0% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,955 | gain=-18.0% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,955 | gain=-18.0% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,400 | gain=-25.6% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,400 | gain=-25.6% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,400 | gain=-25.6% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,400 | gain=-25.6% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,400 | gain=-25.6% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,400 | gain=-25.6% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,210 | gain=-28.2% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,210 | gain=-28.2% | peak=$8,496 | dd=+0%
+[06:39:03] Monitor alive | 49 checks | 1 open | next in 5s
+  WOON: mcap=$5,210 | gain=-28.2% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,210 | gain=-28.2% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,210 | gain=-28.2% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,210 | gain=-28.2% | peak=$8,496 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 WOON STOP LOSS @ $5,014 (-30.9%)
+[06:40:04] Monitor alive | 61 checks | 0 open | next in 5s
+[06:41:04] Monitor alive | 73 checks | 0 open | next in 5s
