@@ -103,16 +103,21 @@ except:
 # =====================================================================
 
 def is_throttled(endpoint):
-    return time.time() < _gmgn_throttle_state[endpoint]['backoff_until']
+    state = _gmgn_throttle_state[endpoint]
+    # Reset _alerted when backoff expires
+    if time.time() >= state['backoff_until']:
+        state['_alerted'] = False
+    return time.time() < state['backoff_until']
 
 def record_throttle(endpoint):
     state = _gmgn_throttle_state[endpoint]
-    was_ok = state['backoff_until'] == 0 or time.time() >= state['backoff_until']
     state['count'] += 1
     wait_time = min(_BACKOFF_BASE * (2 ** state['count']), _BACKOFF_MAX)
     state['backoff_until'] = time.time() + wait_time
-    if was_ok:
-        send_alert(f"⚠️ GMGN {endpoint.upper()} THROTTLED: backoff {wait_time:.0f}s")
+    # Alert only once per throttle event (not per increment)
+    if not state.get('_alerted', False):
+        state['_alerted'] = True
+        send_alert(f"⚠️ GMGN {endpoint.upper()} THROTTLED: {state['count']} failures, backoff {wait_time:.0f}s")
 
 def check_stop_buys():
     """Stop buys if both GMGN AND DexScreener are failing"""
