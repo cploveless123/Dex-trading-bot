@@ -155,7 +155,11 @@ def monitor_cycle():
             msg = (f"🎯 TP1 HIT | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
                    f"+{pnl_pct:.1f}% | HOLDING\n"
-                   f"Trailing stop: 40%")
+                   f"Entry mcap: ${entry_mcap:,}\n"
+                   f"Current: ${mcap:,.0f}\n"
+                   f"Trailing: 40% from peak\n"
+                   f"🔗 https://dexscreener.com/solana/{addr}\n"
+                   f"🥧 https://pump.fun/{addr}")
             alert_sender_webhook(msg)
         
         # TP1 trailing stop (40% from peak)
@@ -163,7 +167,11 @@ def monitor_cycle():
             if current_price < peak_price * (1 - TP1_TRAIL/100):
                 msg = (f"🛑 TP1 TRAIL STOP | {token_name}\n"
                        f"━━━━━━━━━━━━━━━\n"
-                       f"Dropped {TP1_TRAIL}% from peak")
+                       f"Entry: ${entry_mcap:,}\n"
+                       f"Peak: ${peak_price * entry_mcap / entry_price:,.0f}\n"
+                       f"Exit: ${mcap:,.0f}\n"
+                       f"Final: {pnl_pct:.1f}%\n"
+                       f"🔗 https://dexscreener.com/solana/{addr}")
                 alert_sender_webhook(msg)
                 close_position(addr, "TP1_TRAIL_STOP")
                 to_remove = True
@@ -176,7 +184,11 @@ def monitor_cycle():
             msg = (f"💰 TP2 HIT | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
                    f"+{pnl_pct:.1f}% | Sold 40%\n"
-                   f"Remaining: 60% | Trail 30%")
+                   f"Entry mcap: ${entry_mcap:,}\n"
+                   f"Current mcap: ${mcap:,.0f}\n"
+                   f"Remaining: 60% | Trail 30%\n"
+                   f"🔗 https://dexscreener.com/solana/{addr}\n"
+                   f"🥧 https://pump.fun/{addr}")
             alert_sender_webhook(msg)
         
         # TP2 trailing stop (30% from peak)
@@ -186,7 +198,11 @@ def monitor_cycle():
                 sell_token(addr, token_name, position_size * remaining_pct, current_price, "TP2_TRAIL_STOP")
                 msg = (f"🛑 TP2 TRAIL STOP | {token_name}\n"
                        f"━━━━━━━━━━━━━━━\n"
-                       f"Dropped {TP2_TRAIL}% from peak")
+                       f"Entry: ${entry_mcap:,}\n"
+                       f"Peak: ${peak_price * entry_mcap / entry_price:,.0f}\n"
+                       f"Exit: ${mcap:,.0f}\n"
+                       f"Final: {pnl_pct:.1f}%\n"
+                       f"🔗 https://dexscreener.com/solana/{addr}")
                 alert_sender_webhook(msg)
                 close_position(addr, "TP2_TRAIL_STOP")
                 to_remove = True
@@ -199,7 +215,11 @@ def monitor_cycle():
             msg = (f"💰 TP3 HIT | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
                    f"+{pnl_pct:.1f}% | Sold 30%\n"
-                   f"Remaining: 70% | Trail 30%")
+                   f"Entry mcap: ${entry_mcap:,}\n"
+                   f"Current mcap: ${mcap:,.0f}\n"
+                   f"Remaining: 70% | Trail 30%\n"
+                   f"🔗 https://dexscreener.com/solana/{addr}\n"
+                   f"🥧 https://pump.fun/{addr}")
             alert_sender_webhook(msg)
         
         # TP3 trailing stop (30% from peak)
@@ -210,7 +230,11 @@ def monitor_cycle():
                 sell_token(addr, token_name, position_size * remaining_pct, current_price, "TP3_TRAIL_STOP")
                 msg = (f"🛑 TP3 TRAIL STOP | {token_name}\n"
                        f"━━━━━━━━━━━━━━━\n"
-                       f"Dropped {TP3_TRAIL}% from peak")
+                       f"Entry: ${entry_mcap:,}\n"
+                       f"Peak: ${peak_price * entry_mcap / entry_price:,.0f}\n"
+                       f"Exit: ${mcap:,.0f}\n"
+                       f"Final: {pnl_pct:.1f}%\n"
+                       f"🔗 https://dexscreener.com/solana/{addr}")
                 alert_sender_webhook(msg)
                 close_position(addr, "TP3_TRAIL_STOP")
                 to_remove = True
@@ -223,7 +247,11 @@ def monitor_cycle():
             msg = (f"💰 TP4 HIT | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
                    f"+{pnl_pct:.1f}% | Sold 20%\n"
-                   f"Remaining: 80% | Trail 30%")
+                   f"Entry mcap: ${entry_mcap:,}\n"
+                   f"Current mcap: ${mcap:,.0f}\n"
+                   f"Remaining: 80% | Trail 30%\n"
+                   f"🔗 https://dexscreener.com/solana/{addr}\n"
+                   f"🥧 https://pump.fun/{addr}")
             alert_sender_webhook(msg)
         
         # TP4 trailing stop (30% from peak)
@@ -234,7 +262,11 @@ def monitor_cycle():
                 sell_token(addr, token_name, position_size * remaining_pct, current_price, "TP4_TRAIL_STOP")
                 msg = (f"🛑 TP4 TRAIL STOP | {token_name}\n"
                        f"━━━━━━━━━━━━━━━\n"
-                       f"Dropped {TP4_TRAIL}% from peak")
+                       f"Entry: ${entry_mcap:,}\n"
+                       f"Peak: ${peak_price * entry_mcap / entry_price:,.0f}\n"
+                       f"Exit: ${mcap:,.0f}\n"
+                       f"Final: {pnl_pct:.1f}%\n"
+                       f"🔗 https://dexscreener.com/solana/{addr}")
                 alert_sender_webhook(msg)
                 close_position(addr, "TP4_TRAIL_STOP")
                 to_remove = True
@@ -248,7 +280,10 @@ def monitor_cycle():
             msg = (f"🚀🚀🚀 TP5 HIT | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
                    f"+{pnl_pct:.1f}% | SOLD ALL\n"
-                   f"TARGET REACHED!")
+                   f"Entry: ${entry_mcap:,}\n"
+                   f"Exit: ${mcap:,.0f}\n"
+                   f"TARGET REACHED!\n"
+                   f"🔗 https://dexscreener.com/solana/{addr}")
             alert_sender_webhook(msg)
             close_position(addr, "TP5_COMPLETE")
             to_remove = True
@@ -261,7 +296,10 @@ def monitor_cycle():
                 sell_token(addr, token_name, position_size * remaining_pct, current_price, "STOP_LOSS")
             msg = (f"🛑 STOP LOSS | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
-                   f"{pnl_pct:.1f}% | Exited all")
+                   f"{pnl_pct:.1f}% | Exited all\n"
+                   f"Entry: ${entry_mcap:,}\n"
+                   f"Exit: ${mcap:,.0f}\n"
+                   f"🔗 https://dexscreener.com/solana/{addr}")
             alert_sender_webhook(msg)
             close_position(addr, "STOP_LOSS")
             to_remove = True
