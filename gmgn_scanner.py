@@ -395,17 +395,30 @@ def check_cooldown_watch():
             remaining = data['cooldown_end'] - now
             if remaining > 0:
                 continue
-            if chg1 is not None and chg1 > PUMP_CHG1_THRESHOLD:
-                data['state'] = STATE_PUMP_WAIT_2
-                data['cooldown_end'] = now + PUMP_WAIT_2
-                data['recheck_count'] = 0
-                print(f"   [PUMP] {result['token']}: chg1={chg1:+.1f}% still >+5% | wait {PUMP_WAIT_2}s")
+            # Fetch fresh data before pump path confirmation
+            fresh_gmgn_p = get_gmgn_token_info(addr)
+            fresh_dex_p = get_dexscreener_data(addr)
+            if fresh_gmgn_p or fresh_dex_p:
+                merged_p = merge_token_data(data.get('token_data', {}), fresh_gmgn_p, fresh_dex_p)
+                chg1_p = merged_p.get('price_change_percent1m')
+                chg1_p = float(chg1_p) if chg1_p is not None else None
+                curr_mcap_p = float(merged_p.get('market_cap', 0) or 0)
+                print(f"   [PUMP_CHECK] {result['token']}: chg1={chg1_p}% (fresh) mcap=${curr_mcap_p:,.0f}")
+                if chg1_p is not None and chg1_p > PUMP_CHG1_THRESHOLD:
+                    data['state'] = STATE_PUMP_WAIT_2
+                    data['cooldown_end'] = now + PUMP_WAIT_2
+                    data['recheck_count'] = 0
+                    data['_pump_chg1_trigger'] = chg1_p
+                    print(f"   [PUMP] {result['token']}: chg1={chg1_p:+.1f}% >+5% | wait {PUMP_WAIT_2}s")
+                else:
+                    data['_pump_rule_triggered'] = False
+                    data['state'] = STATE_RECOVERY_WAIT
+                    data['cooldown_end'] = now + CHG1_RECOVERY_WAIT
+                    data['recheck_count'] = 0
+                    print(f"   [PUMP_FAIL] {result['token']}: chg1={chg1_p}% <+5% | recovery path")
             else:
-                data['_pump_rule_triggered'] = False
-                data['state'] = STATE_RECOVERY_WAIT
-                data['cooldown_end'] = now + CHG1_RECOVERY_WAIT
-                data['recheck_count'] = 0
-                print(f"   [PUMP_FAIL] {result['token']}: chg1={chg1}% < +5% | recovery path")
+                data['cooldown_end'] = now + CHG1_RECHECK_DELAY
+                print(f"   [PUMP_WAIT] {result['token']}: no fresh data | wait 15s")
             continue
         
         elif state == STATE_PUMP_WAIT_2:
