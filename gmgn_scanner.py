@@ -90,6 +90,7 @@ DEXSCREENER_FAIL_RESET = time.time()
 _BUYS_STOPPED = False
 _LAST_ALERT_TIMES = {}   # alert_key -> timestamp (5 min dedup)
 _ALERTS_THIS_CYCLE = set()
+_LAST_DEXSCR_ALERT = 0   # timestamp of last DexScreener failure alert
 
 # Load PERM_BLACKLIST
 try:
@@ -214,8 +215,11 @@ def get_dexscreener_token(addr):
             return data
     except:
         DEXSCREENER_FAIL_COUNT += 1
+        # Track failure internally - don't spam Telegram
         if DEXSCREENER_FAIL_COUNT >= 5:
-            send_alert(f"⚠️ DexScreener FAILED {DEXSCREENER_FAIL_COUNT}x - stopping calls for 1 hour")
+            # Only alert once when circuit breaker trips
+            if DEXSCREENER_FAIL_COUNT == 5:
+                _LAST_DEXSCR_ALERT = time.time()
         return None
 
 def get_fresh_token_data(addr):
