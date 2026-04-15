@@ -38,7 +38,7 @@ CHG5_RECOVERY_CHECK = 5
 YOUNG_AGE_THRESHOLD = 900
 BS_RATIO_NEW = 1.5
 BS_RATIO_OLD = 1.3
-MIN_VOLUME = 10000
+MIN_VOLUME = 5000             # Minimum 24h volume in USD
 ALLOWED_EXCHANGES = ['raydium', 'pump', 'pumpswap']  # pump/pumpswap need pair_address ending in 'pump'
 PUMP_EXCHANGES = ['pump', 'pumpswap']  # pump.fun and pumpswap - pair must end in "pump"
 PERM_BLACKLIST_FILE = '/root/Dex-trading-bot/.perm_blacklist.json'
@@ -50,22 +50,25 @@ CHAT_ID = '6402511249'
 # STATE MACHINE STATES
 # =====================================================================
 STATE_PUMP_WAIT_1 = 'PUMP_WAIT_1'       # 45s wait for pump confirmation
-STATE_PUMP_WAIT_2 = 'PUMP_WAIT_2'       # 30s second confirmation
+STATE_PUMP_WAIT_2 = 'PUMP_WAIT_2'       # 15s second confirmation
 STATE_PUMP_VERIFY = 'PUMP_VERIFY'        # 15s final verify
 STATE_YOUNG_COOLDOWN = 'YOUNG_COOLDOWN'  # 45s for young + momentum
 STATE_OLDER_COOLDOWN = 'OLDER_COOLDOWN'  # 45s for older + momentum
-STATE_CHG1_RECHECK = 'CHG1_RECHECK'      # 15s rechecks until mcap>+5% from low
+STATE_CHG1_RECHECK = 'CHG1_RECHECK'      # 6s rechecks until mcap>+5% from low
 STATE_CHG1_VERIFY = 'CHG1_VERIFY'        # 15s verify before buy
-STATE_BASE_WAIT = 'BASE_WAIT'            # 30s → verify chg1 > chg5_prev + 3%
-STATE_RECOVERY_WAIT = 'RECOVERY_WAIT'    # 15s for chg5 recovery
+STATE_BASE_WAIT = 'BASE_WAIT'            # 15s → verify chg1 > chg1_prev + 3% → verify chg1 > chg5_prev + 3%
+STATE_RECOVERY_WAIT = 'RECOVERY_WAIT'    # 6s for chg1 recovery for chg5 recovery
 
-# Timing constants
-PUMP_WAIT_1 = 45
-PUMP_WAIT_2 = 30
-PUMP_VERIFY_DELAY = 15
-YOUNG_COOLDOWN = 45
-OLDER_COOLDOWN = 45
-RECOVERY_WAIT = 15
+# Timing constants (sync with trading_constants.py)
+PUMP_WAIT_1 = 45            # First pump confirmation
+PUMP_WAIT_2 = 15            # Second pump confirmation (was 30)
+PUMP_VERIFY_DELAY = 6       # Final pump verification (was 15)
+YOUNG_COOLDOWN = 45         # Young path cooldown
+OLDER_COOLDOWN = 45         # Older path cooldown
+BASE_WAIT = 15              # Base path wait (was 30)
+CHG1_RECHECK_INTERVAL = 6   # Recovery recheck (was 15)
+CHG1_VERIFY_DELAY = 6       # Recovery verify (was 15)
+RECOVERY_WAIT = 6            # Recovery wait (was 15)
 
 # =====================================================================
 # GLOBAL STATE
@@ -593,13 +596,13 @@ def scan_cycle():
             if mcap >= recovery_target:
                 data['state'] = STATE_CHG1_VERIFY
                 data['cooldown_end'] = now + 15
-                print(f"   [CHG1_OK] {result['token']}: mcap={mcap:,.0f} >= {recovery_target:,.0f} (+5% from low) | verify 15s")
+                print(f"   [CHG1_OK] {result['token']}: mcap={mcap:,.0f} >= {recovery_target:,.0f} (+5% from low) | verify 6s")
             else:
                 # Still low - update lowest and recheck
                 data['lowest_mcap'] = min(lowest_mcap, mcap)
                 data['cooldown_end'] = now + 15
                 data['recheck_count'] = data.get('recheck_count', 0) + 1
-                print(f"   [CHG1_RECHECK] {result['token']}: mcap={mcap:,.0f} < {recovery_target:,.0f} | recheck 15s")
+                print(f"   [CHG1_RECHECK] {result['token']}: mcap={mcap:,.0f} < {recovery_target:,.0f} | recheck 6s")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -763,8 +766,8 @@ def main():
     print(f"  Mcap ${MIN_MCAP:,}-${MAX_MCAP:,} | Holders ≥{MIN_HOLDERS}")
     print(f"  Dip 5-45% | chg1>+5% pump rule | chg5>+2% normal entry")
     print(f"  Pump: {PUMP_WAIT_1}s→{PUMP_WAIT_2}s→{PUMP_VERIFY_DELAY}s→BUY")
-    print(f"  Young: {YOUNG_COOLDOWN}s | Older: {OLDER_COOLDOWN}s | Base: 30s")
-    print(f"  CHG1 recovery: 15s rechecks until mcap>+5% from low → 15s verify")
+    print(f"  Young: {YOUNG_COOLDOWN}s | Older: {OLDER_COOLDOWN}s | Base: {BASE_WAIT}s")
+    print(f"  CHG1 recovery: {RECOVERY_WAIT}s rechecks until mcap>+5% from low → {CHG1_VERIFY_DELAY}s verify")
     print(f"  Max: {MAX_OPEN_POSITIONS} open | Size: {POSITION_SIZE} SOL")
     print(f"  IronClad: Fresh data only, DexScreener backup, alert dedup")
     

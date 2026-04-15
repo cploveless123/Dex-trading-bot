@@ -48,17 +48,17 @@ H1_MOMENTUM_MIN = 5.0       # Minimum 1h change % (momentum requirement)
 YOUNG_AGE_THRESHOLD = 900   # Age in seconds (< 15 min = young)
 YOUNG_COOLDOWN = 45          # Cooldown for young tokens
 OLDER_COOLDOWN = 45          # Cooldown for older tokens
-BASE_WAIT = 30               # Base cooldown for normal entries
-CHG1_RECHECK_INTERVAL = 15  # Recheck interval when chg1 < -5%
-CHG1_VERIFY_DELAY = 15       # Verification delay after chg1 recovery
+BASE_WAIT = 15               # Base cooldown for normal entries
+CHG1_RECHECK_INTERVAL = 6    # Recheck interval when chg1 < -5%
+CHG1_VERIFY_DELAY = 6         # Verification delay after chg1 recovery
 
 # Pump path timing
 PUMP_WAIT_1 = 45             # First confirmation wait
-PUMP_WAIT_2 = 30            # Second confirmation wait  
-PUMP_VERIFY_DELAY = 15       # Final verification wait
+PUMP_WAIT_2 = 15            # Second confirmation wait
+PUMP_VERIFY_DELAY = 6         # Final verification wait
 
 # Recovery settings
-RECOVERY_WAIT = 15           # Recovery recheck interval
+RECOVERY_WAIT = 6            # Recovery recheck interval
 CHG5_RECOVERY_CHECK = 5.0   # chg5 must recover this % from lowest
 
 # EXIT STRATEGY (TP5 Progressive Selling)
@@ -98,7 +98,7 @@ BS_RATIO_OLD = 1.3          # BS ratio required for tokens >= 15 min
 BS_PUMP_FUN_OK = True       # Skip BS check for pump.fun tokens
 
 # Volume requirements
-MIN_VOLUME = 10000           # Minimum 24h volume in USD
+MIN_VOLUME = 5000             # Minimum 24h volume in USD
 MIN_5MIN_VOLUME = 500        # Minimum 5min volume in USD
 
 # H1 instability
