@@ -19203,3 +19203,47 @@ Checking every 5s
   COIN: mcap=$7,563 | gain=-11.0% | peak=$9,029 | dd=+0%
   Brrr: mcap=$20,135 | gain=+113.3% | peak=$21,625 | dd=-38%
   COIN: mcap=$7,563 | gain=-11.0% | peak=$9,029 | dd=+0%
+  Brrr: mcap=$20,135 | gain=+113.3% | peak=$21,625 | dd=-38%
+  COIN: mcap=$7,563 | gain=-11.0% | peak=$9,029 | dd=+0%
+  Brrr: mcap=$20,135 | gain=+113.3% | peak=$21,625 | dd=-38%
+[STOP_LOSS] Alert sent
+🔴 COIN STOP LOSS @ $5,818 (-31.5%)
+  Brrr: mcap=$20,135 | gain=+113.3% | peak=$21,625 | dd=-38%
+  Brrr: mcap=$19,145 | gain=+102.8% | peak=$21,625 | dd=-31%
+  Brrr: mcap=$19,145 | gain=+102.8% | peak=$21,625 | dd=-31%
+  Brrr: mcap=$19,145 | gain=+102.8% | peak=$21,625 | dd=-31%
+  Brrr: mcap=$19,145 | gain=+102.8% | peak=$21,625 | dd=-31%
+  Brrr: mcap=$19,145 | gain=+102.8% | peak=$21,625 | dd=-31%
+[01:30:39] Monitor alive | 2955 checks | 0 open | next in 5s
+  Brrr: mcap=$19,145 | gain=+102.8% | peak=$21,625 | dd=-31%
+  Brrr: mcap=$19,082 | gain=+102.1% | peak=$21,625 | dd=-31%
+  Brrr: mcap=$19,082 | gain=+102.1% | peak=$21,625 | dd=-31%
+  Brrr: mcap=$19,082 | gain=+102.1% | peak=$21,625 | dd=-31%
+  Brrr: mcap=$19,082 | gain=+102.1% | peak=$21,625 | dd=-31%
+  Brrr: mcap=$19,082 | gain=+102.1% | peak=$21,625 | dd=-31%
+  Brrr: mcap=$19,082 | gain=+102.1% | peak=$21,625 | dd=-31%
+  Brrr: mcap=$19,006 | gain=+101.3% | peak=$21,625 | dd=-30%
+  Brrr: mcap=$19,006 | gain=+101.3% | peak=$21,625 | dd=-30%
+  Brrr: mcap=$19,006 | gain=+101.3% | peak=$21,625 | dd=-30%
+  Brrr: mcap=$19,006 | gain=+101.3% | peak=$21,625 | dd=-30%
+  Brrr: mcap=$19,006 | gain=+101.3% | peak=$21,625 | dd=-30%
+[01:31:40] Monitor alive | 2967 checks | 0 open | next in 5s
+  Brrr: mcap=$19,006 | gain=+101.3% | peak=$21,625 | dd=-30%
+  Brrr: mcap=$19,006 | gain=+101.3% | peak=$21,625 | dd=-30%
+  Brrr: mcap=$19,006 | gain=+101.3% | peak=$21,625 | dd=-30%
+  Brrr: mcap=$19,006 | gain=+101.3% | peak=$21,625 | dd=-30%
+  Brrr: mcap=$19,006 | gain=+101.3% | peak=$21,625 | dd=-30%
+  Brrr: mcap=$19,006 | gain=+101.3% | peak=$21,625 | dd=-30%
+  Brrr: mcap=$19,006 | gain=+101.3% | peak=$21,625 | dd=-30%
+  Brrr: mcap=$18,153 | gain=+92.3% | peak=$21,625 | dd=-25%
+  Brrr: mcap=$18,153 | gain=+92.3% | peak=$21,625 | dd=-25%
+  Brrr: mcap=$18,153 | gain=+92.3% | peak=$21,625 | dd=-25%
+  Brrr: mcap=$18,153 | gain=+92.3% | peak=$21,625 | dd=-25%
+  Brrr: mcap=$18,153 | gain=+92.3% | peak=$21,625 | dd=-25%
+[01:32:41] Monitor alive | 2979 checks | 0 open | next in 5s
+  Brrr: mcap=$18,153 | gain=+92.3% | peak=$21,625 | dd=-25%
+  Brrr: mcap=$19,349 | gain=+105.0% | peak=$21,625 | dd=-33%
+  Brrr: mcap=$19,349 | gain=+105.0% | peak=$21,625 | dd=-33%
+  Brrr: mcap=$19,349 | gain=+105.0% | peak=$21,625 | dd=-33%
+  Brrr: mcap=$19,349 | gain=+105.0% | peak=$21,625 | dd=-33%
+  Brrr: mcap=$19,349 | gain=+105.0% | peak=$21,625 | dd=-33%
