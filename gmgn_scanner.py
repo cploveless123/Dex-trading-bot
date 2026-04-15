@@ -181,6 +181,67 @@ def get_gmgn_trending(limit=50):
     except:
         return []
 
+def get_gmgn_trenches(limit=20):
+    """Get tokens from GMGN trenches (newly created/completed pump.fun tokens)"""
+    if is_throttled('trenches'):
+        return []
+    r = subprocess.run(['gmgn-cli', 'market', 'trenches', '--chain', 'sol', '--limit', str(limit)],
+                      capture_output=True, text=True, timeout=15)
+    if r.returncode != 0:
+        record_throttle('trenches')
+        return []
+    try:
+        d = json.loads(r.stdout)
+        # Trenches has 'completed' and 'new' arrays
+        completed = d.get('completed', [])
+        new = d.get('new', [])
+        return completed + new
+    except:
+        return []
+
+def get_dexscreener_pump_tokens(limit=20):
+    """Actively scan DexScreener for new pump.fun tokens as a discovery fallback"""
+    global DEXSCREENER_FAIL_COUNT
+    try:
+        url = "https://api.dexscreener.com/latest/dex/search?q=pumpfun&chain=solana&limit=20"
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read())
+            DEXSCREENER_FAIL_COUNT = 0
+            pairs = data.get('pairs', [])
+            
+            # Normalize DexScreener format to match GMGN format
+            normalized = []
+            for p in pairs:
+                base = p.get('baseToken', {})
+                addr = base.get('address', '')
+                if not addr:
+                    continue
+                
+                pc = p.get('priceChange', {})
+                normalized_token = {
+                    'address': addr,
+                    'symbol': base.get('symbol', base.get('name', '?')),
+                    'name': base.get('name', ''),
+                    'price': p.get('priceUsd', 0),
+                    'market_cap': p.get('marketCap', 0),
+                    'volume': p.get('volume24h', 0),
+                    'price_change_percent1m': pc.get('m1', 0),
+                    'price_change_percent5m': pc.get('m5', 0),
+                    'price_change_percent1h': pc.get('h1', 0),
+                    'price_change_percent24h': pc.get('h24', 0),
+                    'holder_count': p.get('holders', 0),
+                    'liquidity': p.get('liquidity', {}).get('usd', 0) if isinstance(p.get('liquidity'), dict) else p.get('liquidity', 0),
+                    'launchpad': 'pump',
+                    'pair_address': addr,
+                    'dex_id': p.get('dexId', ''),
+                }
+                normalized.append(normalized_token)
+            return normalized[:limit]
+    except Exception as e:
+        DEXSCREENER_FAIL_COUNT += 1
+        return []
+
 def get_gmgn_token_info(addr):
     if is_throttled('token_info'):
         send_alert(f"⚠️ GMGN token_info THROTTLED")
@@ -731,10 +792,58 @@ def scan_cycle():
         if now - REJECTED_TEMP[addr]['ts'] > 300:
             del REJECTED_TEMP[addr]
     
-    # === NEW TOKEN SCAN ===
+    # === NEW TOKEN SCAN FROM TRENDING ===
     tokens = get_gmgn_trending(50)
     seen = set()
     for token_data in tokens:
+        addr = token_data.get('address', '')
+        if not addr or addr in seen:
+            continue
+        seen.add(addr)
+        
+        # IRONCLAD checks
+        if addr in PERM_BLACKLIST:
+            continue
+        if addr in COOLDOWN_WATCH:
+            continue
+        if addr in REJECTED_TEMP:
+            continue
+        if get_open_position_count() >= MAX_OPEN_POSITIONS:
+            continue
+        
+        result, fail_reason = scan_token(token_data)
+        if result is None:
+            continue
+        
+        add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
+    
+    # === SCAN TRENCHES (newly created pump.fun tokens) ===
+    trenches_tokens = get_gmgn_trenches(20)
+    for token_data in trenches_tokens:
+        addr = token_data.get('address', '')
+        if not addr or addr in seen:
+            continue
+        seen.add(addr)
+        
+        # IRONCLAD checks
+        if addr in PERM_BLACKLIST:
+            continue
+        if addr in COOLDOWN_WATCH:
+            continue
+        if addr in REJECTED_TEMP:
+            continue
+        if get_open_position_count() >= MAX_OPEN_POSITIONS:
+            continue
+        
+        result, fail_reason = scan_token(token_data)
+        if result is None:
+            continue
+        
+        add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
+    
+    # === SCAN DEXSCREENER PUMP.FUN NEW LISTINGS (active discovery) ===
+    pump_tokens = get_dexscreener_pump_tokens(20)
+    for token_data in pump_tokens:
         addr = token_data.get('address', '')
         if not addr or addr in seen:
             continue
@@ -762,7 +871,7 @@ def scan_cycle():
 
 def main():
     print(f"GMGN Scanner {GMGN_SCANNER_VERSION} Started - LIVE TRADING")
-    print(f"  Sources: GMGN trending (DexScreener backup)")
+    print(f"  Sources: GMGN trending + GMGN trenches + DexScreener pump.fun")
     print(f"  Mcap ${MIN_MCAP:,}-${MAX_MCAP:,} | Holders ≥{MIN_HOLDERS}")
     print(f"  Dip 5-45% | chg1>+5% pump rule | chg5>+2% normal entry")
     print(f"  Pump: {PUMP_WAIT_1}s→{PUMP_WAIT_2}s→{PUMP_VERIFY_DELAY}s→BUY")
