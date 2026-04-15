@@ -279,6 +279,7 @@ def check_positions():
 📊 Trailing: {TP1_TRAILING_PCT}% from peak"""
                 send_alert(msg, "TP1")
                 print(f"✅ {sym} TP1 HIT @ ${mcap:,.0f} (+{sell_pct:.1f}%)")
+                continue  # Only fire ONE TP level per cycle
             else:
                 # v5.5: TP1 reached but HOLDING - no sell, just track peak
                 msg = f"""🚀 TP1 (+{TP1_PERCENT}% HIT - HOLDING) | {datetime.utcnow().strftime('%H:%M UTC')}

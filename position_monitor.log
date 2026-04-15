@@ -1005,3 +1005,97 @@ Checking every 5s
   DUMB: mcap=$6,361 | gain=-12.5% | peak=$8,566 | dd=+0%
   you: mcap=$9,076 | gain=+5.0% | peak=$13,756 | dd=+21%
   DUMB: mcap=$6,361 | gain=-12.5% | peak=$8,566 | dd=+0%
+  you: mcap=$9,076 | gain=+5.0% | peak=$13,756 | dd=+21%
+  DUMB: mcap=$6,361 | gain=-12.5% | peak=$8,566 | dd=+0%
+  you: mcap=$9,076 | gain=+5.0% | peak=$13,756 | dd=+21%
+  DUMB: mcap=$6,361 | gain=-12.5% | peak=$8,566 | dd=+0%
+  you: mcap=$9,076 | gain=+5.0% | peak=$13,756 | dd=+21%
+  DUMB: mcap=$6,337 | gain=-12.9% | peak=$8,566 | dd=+0%
+  you: mcap=$9,076 | gain=+5.0% | peak=$13,756 | dd=+21%
+  DUMB: mcap=$6,337 | gain=-12.9% | peak=$8,566 | dd=+0%
+[12:33:21] Monitor alive | 145 checks | 2 open | next in 5s
+[TRAILING_STOP] Alert sent
+✅ you TRAILING STOP @ $3,827 (72% drop from peak)
+  DUMB: mcap=$6,337 | gain=-12.9% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$6,337 | gain=-12.9% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$6,337 | gain=-12.9% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$6,337 | gain=-12.9% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,115 | gain=-2.2% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,115 | gain=-2.2% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,115 | gain=-2.2% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,115 | gain=-2.2% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,115 | gain=-2.2% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,488 | gain=+3.0% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,488 | gain=+3.0% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,488 | gain=+3.0% | peak=$8,566 | dd=+0%
+[12:34:23] Monitor alive | 157 checks | 1 open | next in 5s
+  DUMB: mcap=$7,488 | gain=+3.0% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,488 | gain=+3.0% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,488 | gain=+3.0% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,425 | gain=+2.1% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,425 | gain=+2.1% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,425 | gain=+2.1% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,425 | gain=+2.1% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,425 | gain=+2.1% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,425 | gain=+2.1% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,714 | gain=+6.1% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,714 | gain=+6.1% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,714 | gain=+6.1% | peak=$8,566 | dd=+0%
+[12:35:24] Monitor alive | 169 checks | 1 open | next in 5s
+  DUMB: mcap=$7,714 | gain=+6.1% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,714 | gain=+6.1% | peak=$8,566 | dd=+0%
+  DUMB: mcap=$7,714 | gain=+6.1% | peak=$8,566 | dd=+0%
+[TP1_HOLD] Alert sent
+🚀 DUMB TP1 HIT - HOLDING @ $10,030 (+37.9%)
+  DUMB: mcap=$10,030 | gain=+37.9% | peak=$10,030 | dd=+0%
+  DUMB: mcap=$10,030 | gain=+37.9% | peak=$10,030 | dd=+0%
+  DUMB: mcap=$10,030 | gain=+37.9% | peak=$10,030 | dd=+0%
+  DUMB: mcap=$10,030 | gain=+37.9% | peak=$10,030 | dd=+0%
+  DUMB: mcap=$10,030 | gain=+37.9% | peak=$10,030 | dd=+0%
+  DUMB: mcap=$9,862 | gain=+35.6% | peak=$10,030 | dd=+2%
+  DUMB: mcap=$9,862 | gain=+35.6% | peak=$10,030 | dd=+2%
+  DUMB: mcap=$9,862 | gain=+35.6% | peak=$10,030 | dd=+2%
+[12:36:25] Monitor alive | 181 checks | 1 open | next in 5s
+  DUMB: mcap=$9,862 | gain=+35.6% | peak=$10,030 | dd=+2%
+  DUMB: mcap=$9,862 | gain=+35.6% | peak=$10,030 | dd=+2%
+  DUMB: mcap=$9,862 | gain=+35.6% | peak=$10,030 | dd=+2%
+  DUMB: mcap=$10,083 | gain=+38.6% | peak=$10,083 | dd=-1%
+  DUMB: mcap=$10,083 | gain=+38.6% | peak=$10,083 | dd=-1%
+  DUMB: mcap=$10,083 | gain=+38.6% | peak=$10,083 | dd=-1%
+  DUMB: mcap=$10,083 | gain=+38.6% | peak=$10,083 | dd=-1%
+  DUMB: mcap=$10,083 | gain=+38.6% | peak=$10,083 | dd=-1%
+  DUMB: mcap=$10,083 | gain=+38.6% | peak=$10,083 | dd=-1%
+  DUMB: mcap=$9,328 | gain=+28.3% | peak=$10,083 | dd=+7%
+  DUMB: mcap=$9,328 | gain=+28.3% | peak=$10,083 | dd=+7%
+  DUMB: mcap=$9,328 | gain=+28.3% | peak=$10,083 | dd=+7%
+[12:37:26] Monitor alive | 193 checks | 1 open | next in 5s
+  DUMB: mcap=$9,328 | gain=+28.3% | peak=$10,083 | dd=+7%
+  DUMB: mcap=$9,328 | gain=+28.3% | peak=$10,083 | dd=+7%
+  DUMB: mcap=$9,328 | gain=+28.3% | peak=$10,083 | dd=+7%
+  DUMB: mcap=$8,597 | gain=+18.2% | peak=$10,083 | dd=+14%
+  DUMB: mcap=$8,597 | gain=+18.2% | peak=$10,083 | dd=+14%
+  DUMB: mcap=$8,597 | gain=+18.2% | peak=$10,083 | dd=+14%
+  DUMB: mcap=$8,597 | gain=+18.2% | peak=$10,083 | dd=+14%
+  DUMB: mcap=$8,597 | gain=+18.2% | peak=$10,083 | dd=+14%
+  DUMB: mcap=$8,597 | gain=+18.2% | peak=$10,083 | dd=+14%
+  DUMB: mcap=$8,698 | gain=+19.6% | peak=$10,083 | dd=+13%
+  DUMB: mcap=$8,698 | gain=+19.6% | peak=$10,083 | dd=+13%
+  DUMB: mcap=$8,698 | gain=+19.6% | peak=$10,083 | dd=+13%
+[12:38:27] Monitor alive | 205 checks | 1 open | next in 5s
+  DUMB: mcap=$8,698 | gain=+19.6% | peak=$10,083 | dd=+13%
+  DUMB: mcap=$8,698 | gain=+19.6% | peak=$10,083 | dd=+13%
+  DUMB: mcap=$8,698 | gain=+19.6% | peak=$10,083 | dd=+13%
+  DUMB: mcap=$8,881 | gain=+22.1% | peak=$10,083 | dd=+11%
+  DUMB: mcap=$8,881 | gain=+22.1% | peak=$10,083 | dd=+11%
+Position Monitor v7.0 starting...
+Exit Plan: TP1 +30% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -30%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
+  DUMB: mcap=$8,881 | gain=+22.1% | peak=$10,083 | dd=+11%
+  DUMB: mcap=$8,881 | gain=+22.1% | peak=$10,083 | dd=+11%
+  DUMB: mcap=$8,881 | gain=+22.1% | peak=$10,083 | dd=+11%
+  DUMB: mcap=$8,881 | gain=+22.1% | peak=$10,083 | dd=+11%
+  DUMB: mcap=$7,519 | gain=+3.4% | peak=$10,083 | dd=+25%
+  DUMB: mcap=$7,519 | gain=+3.4% | peak=$10,083 | dd=+25%
+  DUMB: mcap=$7,519 | gain=+3.4% | peak=$10,083 | dd=+25%
