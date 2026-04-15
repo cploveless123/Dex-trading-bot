@@ -28,7 +28,7 @@ MIN_MCAP = 6000
 MAX_MCAP = 55000
 MIN_HOLDERS = 15
 MIN_CHG5_FOR_BUY = 2.0
-PUMP_CHG1_THRESHOLD = 20.0
+PUMP_CHG1_THRESHOLD = 5.0
 H1_MOMENTUM_MIN = 5.0
 FALLEN_GIANT_H1 = 350
 FALLEN_GIANT_MCAP = 25000
@@ -759,7 +759,7 @@ def main():
     print(f"GMGN Scanner {GMGN_SCANNER_VERSION} Started - LIVE TRADING")
     print(f"  Sources: GMGN trending (DexScreener backup)")
     print(f"  Mcap ${MIN_MCAP:,}-${MAX_MCAP:,} | Holders ≥{MIN_HOLDERS}")
-    print(f"  Dip 5-45% | chg1>+20% pump rule | chg5>+2% normal entry")
+    print(f"  Dip 5-45% | chg1>+5% pump rule | chg5>+2% normal entry")
     print(f"  Pump: {PUMP_WAIT_1}s→{PUMP_WAIT_2}s→{PUMP_VERIFY_DELAY}s→BUY")
     print(f"  Young: {YOUNG_COOLDOWN}s | Older: {OLDER_COOLDOWN}s | Base: 30s")
     print(f"  CHG1 recovery: 15s rechecks until mcap>+5% from low → 15s verify")
