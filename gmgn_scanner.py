@@ -29,8 +29,9 @@ MAX_MCAP = 55000
 MIN_HOLDERS = 15
 MIN_CHG5_FOR_BUY = 2.0
 PUMP_CHG1_THRESHOLD = 5.001
-H1_MOMENTUM_MIN = 5.0
-FALLEN_GIANT_H1 = 350
+H1_MOMENTUM_MIN = 25.0
+H1_MOMENTUM_MAX = 700.0
+FALLEN_GIANT_H1 = 700
 FALLEN_GIANT_MCAP = 25000
 H1_INSTABILITY_MULTIPLIER = 3
 CHG5_DROP_THRESHOLD = 10
@@ -323,9 +324,9 @@ def scan_token(token_data, reason_if_fail=None):
         if not addr:
             return None, "no address"
         
-        # Exchange check
-        if launchpad not in ALLOWED_EXCHANGES and launchpad != '':
-            return None, f"exchange {launchpad} not allowed"
+        # Exchange check - empty launchpad means unknown, reject it
+        if launchpad == '' or launchpad not in ALLOWED_EXCHANGES:
+            return None, f"exchange {launchpad or 'unknown'} not allowed"
         
         # Mcap check
         if mc < MIN_MCAP:
@@ -348,6 +349,10 @@ def scan_token(token_data, reason_if_fail=None):
         # H1 momentum check
         if h1 < H1_MOMENTUM_MIN:
             return None, f"h1 {h1:.1f}% < {H1_MOMENTUM_MIN}%"
+        
+        # H1 max check (reject insane pumps)
+        if h1 > H1_MOMENTUM_MAX:
+            return None, f"h1 {h1:.1f}% > {H1_MOMENTUM_MAX}% (insane pump)"
         
         # BS ratio check
         if launchpad == 'pump':
@@ -552,27 +557,30 @@ def scan_cycle():
             # Timer about to expire - get fresh data
             fresh_data, source = get_fresh_token_data(addr)
             if fresh_data is None:
-                # Failed to get fresh data - skip this cycle, don't remove
-                continue
-            
-            # Extract data from fresh source
-            if source == 'gmgn':
-                chg5 = float(fresh_data.get('price_change_percent5m', 0) or 0)
-                h1 = float(fresh_data.get('price_change_percent1h', 0) or 0)
-                chg1 = float(fresh_data.get('price_change_percent1m', 0) or 0)
-                mcap = float(fresh_data.get('market_cap', 0) or 0)
-            else:  # dexscanner
-                pc = fresh_data.get('priceChange', {})
-                chg5 = float(pc.get('m5', 0) or 0)
-                h1 = float(pc.get('h1', 0) or 0)
-                chg1 = float(pc.get('m1', 0) or 0)
-                mcap = float(fresh_data.get('marketCap', 0) or 0)
-            
-            # Update result with fresh data
-            result['chg5'] = chg5
-            result['h1'] = h1
-            result['chg1'] = chg1
-            result['mcap'] = mcap
+                # Failed to get fresh data - use cached from result, don't skip state transition
+                chg5 = result.get('chg5', 0)
+                h1 = result.get('h1', 0)
+                chg1 = result.get('chg1', 0)
+                mcap = result.get('mcap', 0)
+            else:
+                # Extract data from fresh source
+                if source == 'gmgn':
+                    chg5 = float(fresh_data.get('price_change_percent5m', 0) or 0)
+                    h1 = float(fresh_data.get('price_change_percent1h', 0) or 0)
+                    chg1 = float(fresh_data.get('price_change_percent1m', 0) or 0)
+                    mcap = float(fresh_data.get('market_cap', 0) or 0)
+                else:  # dexscraper
+                    pc = fresh_data.get('priceChange', {})
+                    chg5 = float(pc.get('m5', 0) or 0)
+                    h1 = float(pc.get('h1', 0) or 0)
+                    chg1 = float(pc.get('m1', 0) or 0)
+                    mcap = float(fresh_data.get('marketCap', 0) or 0)
+                
+                # Update result with fresh data
+                result['chg5'] = chg5
+                result['h1'] = h1
+                result['chg1'] = chg1
+                result['mcap'] = mcap
         
         chg5_prev = data.get('chg5_prev', chg5)
         h1_prev = data.get('h1_prev', h1)

@@ -42,7 +42,8 @@ MAX_MCAP = 55000            # Maximum market cap in USD
 MIN_HOLDERS = 15             # Minimum holder count
 MIN_CHG5_FOR_BUY = 2.0      # Minimum 5m change % for buy signal
 PUMP_CHG1_THRESHOLD = 5.001  # 1-min change % to trigger pump path (was 20) (NOT chg5)
-H1_MOMENTUM_MIN = 5.0       # Minimum 1h change % (momentum requirement)
+H1_MOMENTUM_MIN = 25.0      # Minimum 1h change % (momentum requirement)
+H1_MOMENTUM_MAX = 700.0     # Maximum 1h change % (reject meme coins with insane pump)
 
 # Cooldown timing
 YOUNG_AGE_THRESHOLD = 900   # Age in seconds (< 15 min = young)
