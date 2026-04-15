@@ -1,8 +1,6 @@
 """
 Trading Constants - TP5 COMPOUND STRATEGY
 
-PRIMARY OBJECTIVE: Turn 1 SOL into 100 SOL via compound TP5 winners
-
 Key insight: Small positions (< 0.2 SOL) need to aim for TP5 (+1000%) to make meaningful gains
 Larger positions can use tighter TPs since they already have cushion
 
@@ -30,6 +28,8 @@ Risk Management:
 - Stop loss: -25% default, -15% for large winners
 - Max daily loss: 0.3 SOL (stop if hit)
 """
+CHRIS_STARTING_BALANCE = 1.0   # Chris's starting balance in SOL
+
 
 # Position sizing
 POSITION_SIZE = 0.1          # SOL per trade
@@ -65,6 +65,7 @@ CHG5_RECOVERY_CHECK = 5.0   # chg5 must recover this % from lowest
 TP1_PCT = 50                 # Take profit 1: +50%
 TP1_TRAIL = 40               # 40% trailing stop from peak
 TP1_HOLD = True              # HOLD at TP1 - no sell
+TP1_SELL_PCT = 0             # 0% sell at TP1 (HOLD mode)
 
 TP2_PCT = 100                # Take profit 2: +100%
 TP2_SELL_PCT = 0.40         # Sell 40% of position at TP2
@@ -89,7 +90,7 @@ ALLOWED_EXCHANGES = ['raydium']  # Raydium only (no pump.fun/pumpswap for now)
 PUMP_EXCHANGES = ['pump', 'pumpswap']  # Pump exchanges need pair_address check
 
 # Fallen Giant filter
-FALLEN_GIANT_H1 = 350         # If h1 > this AND mcap < threshold, reject
+FALLEN_GIANT_H1 = 700         # If h1 > this AND mcap < threshold, reject
 FALLEN_GIANT_MCAP = 25000    # Mcap threshold for fallen giant
 
 # Buy/Sell ratio
@@ -135,3 +136,4 @@ EXIT_PLAN_TEXT = """📋 TP5 EXIT PLAN:
 • STOP: -30%"""
 
 SIM_WALLET_FILE = '/root/Dex-trading-bot/sim_wallet.json'
+SIM_RESET_TIMESTAMP = 0  # No reset timestamp

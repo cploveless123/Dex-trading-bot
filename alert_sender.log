@@ -1,4 +1,2 @@
-Traceback (most recent call last):
-  File "/root/Dex-trading-bot/alert_sender.py", line 1, in <module>
-    from trading_constants import EXIT_PLAN_TEXT, TP1_SELL_PCT, POSITION_SIZE, SIM_RESET_TIMESTAMP, CHRIS_STARTING_BALANCE
-ImportError: cannot import name 'EXIT_PLAN_TEXT' from 'trading_constants' (/root/Dex-trading-bot/trading_constants.py)
+📱 Alert sender started
+Error: Expecting value: line 2 column 1 (char 1)
