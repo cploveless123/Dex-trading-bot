@@ -741,7 +741,7 @@ def main():
     print("  MAX_H1 250% | DIP 20-45% | Holders ≥20 | Fallen Giant filter | Symbol blacklist")
     print("  Exit: TP1+30%H TP2+100%sell40% TP3+200%sell30% TP4+300%sell20% TP5+1000%sell10% Stop-30%")
     print("  MAX_OPEN: 5 | SIZE: 0.1 SOL | pump.fun/raydium/pumpswap ONLY")
-    print("  API SAFETY: If GMGN + DexScreener both fail → ALL BUYS STOP")
+    print("  API SAFETY: If GMGN fails - DexScreener disabled (GMGN only) → ALL BUYS STOP")
     
     load_blacklist()
     while True:
