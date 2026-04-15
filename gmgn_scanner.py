@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-GMGN Scanner v7.2 - Wilson Bot
-v7.2: MAX_H1 250%, MIN_DIP 20%, Fallen Giant h1>400+mcap<20K, symbol blacklist, throttle alerts
+GMGN Scanner v7.2 - Wilson Bot (LIVE TRADING)
+MAX_H1 250%, MIN_DIP 20%, Holders ≥20 | Fallen Giant h1>400+mcap<20K | Symbol blacklist
 Exit: TP1+30%H, TP2+100%sell40%, TP3+200%sell30%, TP4+300%sell20%, TP5+1000%sell10%, Stop-30%
+MAX_OPEN: 5 | POSITION: 0.1 SOL | Exchanges: pump.fun/raydium/pumpswap ONLY
 """
 
 import json, time, subprocess
@@ -55,6 +56,35 @@ _gmgn_throttle_state = {
     'pumpfun': {'count': 0, 'backoff_until': 0, 'last_alert': 0},
     'token_info': {'count': 0, 'backoff_until': 0, 'last_alert': 0},
 }
+
+# === CRITICAL SAFETY: Stop buys if both GMGN + DexScreener are failing ===
+MAX_DEX_FAILURES = 5  # Stop DexScreener calls after 5 consecutive failures
+_buys_stopped = False
+_last_buys_stopped_alert = 0
+
+def check_stop_buys():
+    """If GMGN throttled + DexScreener failing = stop all buys"""
+    global _buys_stopped, _last_buys_stopped_alert
+    now = time.time()
+    
+    gmgn_throttled = any(time.time() < s['backoff_until'] for s in _gmgn_throttle_state.values())
+    dex_failed = _dex_throttle_count >= MAX_DEX_FAILURES
+    
+    if gmgn_throttled and dex_failed:
+        if not _buys_stopped:
+            _buys_stopped = True
+            msg = f"🚨🚨 STOPPING ALL BUYS: GMGN throttled + DexScreener failing ({_dex_throttle_count}/{MAX_DEX_FAILURES}). Manual restart required."
+            print(f"! {msg}")
+            alert_sender_webhook(msg)
+            _last_buys_stopped_alert = now
+    else:
+        if _buys_stopped:
+            _buys_stopped = False
+            msg = f"✅ RESUMING BUYS: APIs recovered"
+            print(f"! {msg}")
+            alert_sender_webhook(msg)
+    
+    return _buys_stopped
 
 def is_throttled(endpoint):
     return time.time() < _gmgn_throttle_state[endpoint]['backoff_until']
@@ -623,6 +653,11 @@ def check_cooldown_watch():
 # === BUY ===
 def buy_token(addr, result):
     global PERM_BLACKLIST
+    # CRITICAL: Check if buys should be stopped
+    if check_stop_buys():
+        print(f"   [BLOCKED] {result.get('token', '?')}: buys STOPPED - API safety active")
+        return False
+    
     now = datetime.now(timezone.utc).isoformat()
     trade = {
         'action': 'BUY',
@@ -698,9 +733,11 @@ def cleanup_rejected():
 
 # === MAIN ===
 def main():
-    print("GMGN Scanner v7.2 Started")
-    print("  Throttle management: exponential backoff + per-endpoint tracking")
-    print("  Mcap $6K-$60K | Dip 20-45% | h1 ≤250% | Holders ≥20 | Symbol blacklist | GMGN/Dex throttle alerts")
+    print("GMGN Scanner v7.2 Started - LIVE TRADING")
+    print("  MAX_H1 250% | DIP 20-45% | Holders ≥20 | Fallen Giant filter | Symbol blacklist")
+    print("  Exit: TP1+30%H TP2+100%sell40% TP3+200%sell30% TP4+300%sell20% TP5+1000%sell10% Stop-30%")
+    print("  MAX_OPEN: 5 | SIZE: 0.1 SOL | pump.fun/raydium/pumpswap ONLY")
+    print("  API SAFETY: If GMGN + DexScreener both fail → ALL BUYS STOP")
     
     load_blacklist()
     while True:

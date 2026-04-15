@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Position Monitor v7.2 - Auto-execute TP/stop for open positions
-Exit: TP1+30%H, TP2+100%sell40%trail40%, TP3+200%sell30%trail40%, TP4+300%sell20%trail40%, TP5+1000%sell10%trail35%, Stop-30%
+Position Monitor v7.2 - LIVE TRADING Auto-execute TP/stop
+MAX_OPEN: 5 | SIZE: 0.1 SOL | pump.fun/raydium/pumpswap ONLY
 Live peak tracking via persistent cache file
 
 EXIT STRATEGY (v6.6 Wilson):

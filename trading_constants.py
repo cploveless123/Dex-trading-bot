@@ -5,7 +5,7 @@ Goal: Turn 1.0 SOL → 100 SOL via compound TP5 winners
 
 # Position sizing
 POSITION_SIZE = 0.10
-MAX_OPEN_POSITIONS = 9
+MAX_OPEN_POSITIONS = 5
 
 # === ENTRY FILTERS ===
 MIN_MCAP = 6000      # $6K floor (raised from $3K)

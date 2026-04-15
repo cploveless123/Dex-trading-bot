@@ -43,3 +43,68 @@ Checking every 5s
   TEST: error fetching mcap
   TEST: error fetching mcap
   TEST: error fetching mcap
+[06:30:06] Monitor alive | 73 checks | 0 open | next in 5s
+[06:31:06] Monitor alive | 85 checks | 0 open | next in 5s
+  WOON: mcap=$8,496 | gain=+17.0% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,496 | gain=+17.0% | peak=$8,496 | dd=+0%
+[06:32:08] Monitor alive | 97 checks | 1 open | next in 5s
+  WOON: mcap=$8,496 | gain=+17.0% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,496 | gain=+17.0% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,025 | gain=+10.5% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,025 | gain=+10.5% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,025 | gain=+10.5% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,025 | gain=+10.5% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,025 | gain=+10.5% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,025 | gain=+10.5% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,415 | gain=+15.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,415 | gain=+15.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,415 | gain=+15.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,415 | gain=+15.9% | peak=$8,496 | dd=+0%
+[06:33:08] Monitor alive | 109 checks | 1 open | next in 5s
+  WOON: mcap=$8,415 | gain=+15.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,415 | gain=+15.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,053 | gain=+10.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,053 | gain=+10.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,053 | gain=+10.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,053 | gain=+10.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,053 | gain=+10.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$8,053 | gain=+10.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$7,748 | gain=+6.7% | peak=$8,496 | dd=+0%
+  WOON: mcap=$7,748 | gain=+6.7% | peak=$8,496 | dd=+0%
+  WOON: mcap=$7,748 | gain=+6.7% | peak=$8,496 | dd=+0%
+  WOON: mcap=$7,748 | gain=+6.7% | peak=$8,496 | dd=+0%
+[06:34:09] Monitor alive | 121 checks | 1 open | next in 5s
+  WOON: mcap=$7,748 | gain=+6.7% | peak=$8,496 | dd=+0%
+  WOON: mcap=$7,748 | gain=+6.7% | peak=$8,496 | dd=+0%
+  WOON: mcap=$7,852 | gain=+8.2% | peak=$8,496 | dd=+0%
+  WOON: mcap=$7,852 | gain=+8.2% | peak=$8,496 | dd=+0%
+  WOON: mcap=$7,852 | gain=+8.2% | peak=$8,496 | dd=+0%
+  WOON: mcap=$7,852 | gain=+8.2% | peak=$8,496 | dd=+0%
+  WOON: mcap=$7,852 | gain=+8.2% | peak=$8,496 | dd=+0%
+  WOON: mcap=$6,540 | gain=-9.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$6,540 | gain=-9.9% | peak=$8,496 | dd=+0%
+Position Monitor v7.0 starting...
+Exit Plan: TP1 +30% (sell 0%) | TP2 +100% | TP3 +200% | Trailing 40% | Stop -30%
+Peak cache: /root/Dex-trading-bot/position_peak_cache.json
+Checking every 5s
+[STARTUP] Alert sent
+  WOON: mcap=$6,540 | gain=-9.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$6,540 | gain=-9.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$6,540 | gain=-9.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$6,540 | gain=-9.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$6,540 | gain=-9.9% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,822 | gain=-19.8% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,822 | gain=-19.8% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,822 | gain=-19.8% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,822 | gain=-19.8% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,822 | gain=-19.8% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,822 | gain=-19.8% | peak=$8,496 | dd=+0%
+  WOON: mcap=$6,076 | gain=-16.3% | peak=$8,496 | dd=+0%
+  WOON: mcap=$6,076 | gain=-16.3% | peak=$8,496 | dd=+0%
+[06:36:00] Monitor alive | 13 checks | 1 open | next in 5s
+  WOON: mcap=$6,076 | gain=-16.3% | peak=$8,496 | dd=+0%
+  WOON: mcap=$6,076 | gain=-16.3% | peak=$8,496 | dd=+0%
+  WOON: mcap=$6,076 | gain=-16.3% | peak=$8,496 | dd=+0%
+  WOON: mcap=$6,076 | gain=-16.3% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,287 | gain=-27.2% | peak=$8,496 | dd=+0%
+  WOON: mcap=$5,287 | gain=-27.2% | peak=$8,496 | dd=+0%
