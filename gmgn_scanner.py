@@ -446,10 +446,21 @@ def scan_cycle():
         result = data['result']
         state = data['state']
         
-        # Get fresh data (GMGN or DexScreener)
-        fresh_data, source = get_fresh_token_data(addr)
+        # Only fetch fresh data if cooldown timer is about to expire (within 15s)
+        # This reduces GMGN calls from N per 15s to 1 per 15s when timer is close
+        cooldown_remaining = data['cooldown_end'] - now
         
-        if not fresh_data:
+        if cooldown_remaining > 15:
+            # Timer not close - skip fresh fetch, use cached data
+            chg5 = result.get('chg5', 0)
+            h1 = result.get('h1', 0)
+            chg1 = result.get('chg1', 0)
+            mcap = result.get('mcap', 0)
+            fresh_data = None
+            source = None
+        else:
+            # Timer about to expire - get fresh data
+            fresh_data, source = get_fresh_token_data(addr)
             to_remove.append(addr)
             continue
         
@@ -721,7 +732,7 @@ def main():
             scan_cycle()
         except Exception as e:
             print(f"Scan error: {e}")
-        time.sleep(5)
+        time.sleep(15)  # Reduced from 5s to reduce GMGN throttle
 
 if __name__ == '__main__':
     main()
