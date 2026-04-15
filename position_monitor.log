@@ -19249,3 +19249,136 @@ Checking every 5s
   Brrr: mcap=$19,349 | gain=+105.0% | peak=$21,625 | dd=-33%
   Brrr: mcap=$19,349 | gain=+105.0% | peak=$21,625 | dd=-33%
   Brrr: mcap=$19,703 | gain=+108.7% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,703 | gain=+108.7% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,703 | gain=+108.7% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,703 | gain=+108.7% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,703 | gain=+108.7% | peak=$21,625 | dd=-35%
+[01:33:42] Monitor alive | 2991 checks | 0 open | next in 5s
+  Brrr: mcap=$19,703 | gain=+108.7% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,743 | gain=+109.1% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,743 | gain=+109.1% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,743 | gain=+109.1% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,743 | gain=+109.1% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,743 | gain=+109.1% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,743 | gain=+109.1% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,751 | gain=+109.2% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,751 | gain=+109.2% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,751 | gain=+109.2% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,751 | gain=+109.2% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,751 | gain=+109.2% | peak=$21,625 | dd=-35%
+[01:34:43] Monitor alive | 3003 checks | 0 open | next in 5s
+  Brrr: mcap=$19,751 | gain=+109.2% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,982 | gain=+111.7% | peak=$21,625 | dd=-37%
+  Brrr: mcap=$19,982 | gain=+111.7% | peak=$21,625 | dd=-37%
+  Brrr: mcap=$19,982 | gain=+111.7% | peak=$21,625 | dd=-37%
+  Brrr: mcap=$19,982 | gain=+111.7% | peak=$21,625 | dd=-37%
+  Brrr: mcap=$19,982 | gain=+111.7% | peak=$21,625 | dd=-37%
+  Brrr: mcap=$19,982 | gain=+111.7% | peak=$21,625 | dd=-37%
+  Brrr: mcap=$19,651 | gain=+108.2% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,651 | gain=+108.2% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,651 | gain=+108.2% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,651 | gain=+108.2% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,651 | gain=+108.2% | peak=$21,625 | dd=-35%
+[01:35:44] Monitor alive | 3015 checks | 0 open | next in 5s
+  Brrr: mcap=$19,651 | gain=+108.2% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,710 | gain=+108.8% | peak=$21,625 | dd=-35%
+  Brrr: mcap=$19,710 | gain=+108.8% | peak=$21,625 | dd=-35%
+[TP1_HOLD] Alert sent
+🚀 ELON TP1 HIT - HOLDING @ $258,067 (+413.0%)
+  Brrr: mcap=$19,710 | gain=+108.8% | peak=$21,625 | dd=-35%
+[TP2] Alert sent
+✅ ELON TP2 HIT @ $258,067 (+413%)
+  Brrr: mcap=$19,710 | gain=+108.8% | peak=$21,625 | dd=-35%
+[TP3] Alert sent
+✅ ELON TP3 HIT @ $258,067 (+413%)
+  Brrr: mcap=$19,710 | gain=+108.8% | peak=$21,625 | dd=-35%
+[TP4] Alert sent
+✅ ELON TP4 HIT @ $258,067 (+413%)
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$277,023 | gain=+450.6% | peak=$277,023 | dd=-7%
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$277,023 | gain=+450.6% | peak=$277,023 | dd=-7%
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$277,023 | gain=+450.6% | peak=$277,023 | dd=-7%
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$277,023 | gain=+450.6% | peak=$277,023 | dd=-7%
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$277,023 | gain=+450.6% | peak=$277,023 | dd=-7%
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$277,023 | gain=+450.6% | peak=$277,023 | dd=-7%
+[01:36:48] Monitor alive | 3027 checks | 0 open | next in 5s
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$268,394 | gain=+433.5% | peak=$277,023 | dd=-4%
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$268,394 | gain=+433.5% | peak=$277,023 | dd=-4%
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$268,394 | gain=+433.5% | peak=$277,023 | dd=-4%
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$268,394 | gain=+433.5% | peak=$277,023 | dd=-4%
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$268,394 | gain=+433.5% | peak=$277,023 | dd=-4%
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$268,394 | gain=+433.5% | peak=$277,023 | dd=-4%
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$267,554 | gain=+431.8% | peak=$277,023 | dd=-4%
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$267,554 | gain=+431.8% | peak=$277,023 | dd=-4%
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$267,554 | gain=+431.8% | peak=$277,023 | dd=-4%
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$267,554 | gain=+431.8% | peak=$277,023 | dd=-4%
+  Brrr: mcap=$19,260 | gain=+104.0% | peak=$21,625 | dd=-32%
+  ELON: mcap=$267,554 | gain=+431.8% | peak=$277,023 | dd=-4%
+  Brrr: mcap=$18,183 | gain=+92.6% | peak=$21,625 | dd=-25%
+  ELON: mcap=$189,794 | gain=+277.2% | peak=$277,023 | dd=+26%
+[01:37:50] Monitor alive | 3039 checks | 0 open | next in 5s
+  Brrr: mcap=$18,183 | gain=+92.6% | peak=$21,625 | dd=-25%
+  ELON: mcap=$189,794 | gain=+277.2% | peak=$277,023 | dd=+26%
+  Brrr: mcap=$18,183 | gain=+92.6% | peak=$21,625 | dd=-25%
+  ELON: mcap=$189,794 | gain=+277.2% | peak=$277,023 | dd=+26%
+  Brrr: mcap=$18,183 | gain=+92.6% | peak=$21,625 | dd=-25%
+  ELON: mcap=$189,794 | gain=+277.2% | peak=$277,023 | dd=+26%
+  Brrr: mcap=$18,183 | gain=+92.6% | peak=$21,625 | dd=-25%
+  ELON: mcap=$189,794 | gain=+277.2% | peak=$277,023 | dd=+26%
+  Brrr: mcap=$18,183 | gain=+92.6% | peak=$21,625 | dd=-25%
+  ELON: mcap=$189,794 | gain=+277.2% | peak=$277,023 | dd=+26%
+  Brrr: mcap=$18,069 | gain=+91.4% | peak=$21,625 | dd=-24%
+[TRAILING_STOP] Alert sent
+✅ ELON TRAILING STOP @ $103,569 (63% drop from peak)
+  Brrr: mcap=$18,069 | gain=+91.4% | peak=$21,625 | dd=-24%
+  Brrr: mcap=$18,069 | gain=+91.4% | peak=$21,625 | dd=-24%
+  Brrr: mcap=$18,069 | gain=+91.4% | peak=$21,625 | dd=-24%
+  Brrr: mcap=$18,069 | gain=+91.4% | peak=$21,625 | dd=-24%
+  Brrr: mcap=$18,069 | gain=+91.4% | peak=$21,625 | dd=-24%
+  Brrr: mcap=$17,954 | gain=+90.2% | peak=$21,625 | dd=-23%
+[01:38:52] Monitor alive | 3051 checks | 0 open | next in 5s
+  Brrr: mcap=$17,954 | gain=+90.2% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,954 | gain=+90.2% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,954 | gain=+90.2% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,954 | gain=+90.2% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,954 | gain=+90.2% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,975 | gain=+90.4% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,975 | gain=+90.4% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,975 | gain=+90.4% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,975 | gain=+90.4% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,975 | gain=+90.4% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,975 | gain=+90.4% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,975 | gain=+90.4% | peak=$21,625 | dd=-23%
+[01:39:53] Monitor alive | 3063 checks | 0 open | next in 5s
+  Brrr: mcap=$17,975 | gain=+90.4% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,975 | gain=+90.4% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,975 | gain=+90.4% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,975 | gain=+90.4% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,975 | gain=+90.4% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,946 | gain=+90.1% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,946 | gain=+90.1% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,946 | gain=+90.1% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,946 | gain=+90.1% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,946 | gain=+90.1% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,946 | gain=+90.1% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,946 | gain=+90.1% | peak=$21,625 | dd=-23%
+[01:40:54] Monitor alive | 3075 checks | 0 open | next in 5s
+  Brrr: mcap=$17,946 | gain=+90.1% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,946 | gain=+90.1% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,946 | gain=+90.1% | peak=$21,625 | dd=-23%
+  Brrr: mcap=$17,946 | gain=+90.1% | peak=$21,625 | dd=-23%
