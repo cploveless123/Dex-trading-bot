@@ -31655,3 +31655,307 @@ Checking every 5s
   般人: error fetching mcap
   般人: error fetching mcap
 [05:15:39] Monitor alive | 1407 checks | 2 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,750 | gain=-58.6% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,750 | gain=-58.6% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,750 | gain=-58.6% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,750 | gain=-58.6% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,750 | gain=-58.6% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,750 | gain=-58.6% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+[05:16:44] Monitor alive | 1419 checks | 2 open | next in 5s
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,750 | gain=-58.6% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,750 | gain=-58.6% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,750 | gain=-58.6% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,738 | gain=-58.8% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,738 | gain=-58.8% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+[05:17:44] Monitor alive | 1430 checks | 2 open | next in 5s
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,738 | gain=-58.8% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,738 | gain=-58.8% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,738 | gain=-58.8% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,738 | gain=-58.8% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,636 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,636 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,636 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+[05:18:49] Monitor alive | 1442 checks | 2 open | next in 5s
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,636 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,636 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,636 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,636 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,636 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,636 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,636 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,636 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,634 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,634 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,634 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,634 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+[05:19:59] Monitor alive | 1454 checks | 2 open | next in 5s
+  MEMEMAN: mcap=$2,424 | gain=-71.4% | peak=$8,478 | dd=+0%
+  Bro: mcap=$3,634 | gain=-59.9% | peak=$9,067 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  QII6900: mcap=$2,675 | gain=-74.3% | peak=$10,420 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  般人: mcap=$2,533 | gain=-62.4% | peak=$6,728 | dd=+0%
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
+  MEMEMAN: error fetching mcap
+  Bro: error fetching mcap
+  QII6900: error fetching mcap
+  QII6900: error fetching mcap
+  般人: error fetching mcap
+  般人: error fetching mcap
