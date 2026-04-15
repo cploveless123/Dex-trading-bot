@@ -190,7 +190,7 @@ def get_gmgn_token_info(addr):
     try:
         data = json.loads(r.stdout)
         if data and data.get('price_change_percent1h') is None:
-            send_alert(f"⚠️ GMGN data STALE for {addr[:20]}...")
+            # GMGN data stale - just return None, no alert
             return None
         return data
     except:
