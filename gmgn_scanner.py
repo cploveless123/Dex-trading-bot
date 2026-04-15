@@ -163,6 +163,9 @@ def get_gmgn_token_info(addr):
     return gmgn_query(['gmgn-cli', 'token', 'info', '--chain', 'sol', '--address', addr], endpoint='token_info')
 
 def get_dexscreener_data(addr):
+    # Global circuit breaker - if heavily throttled, skip DexScreener entirely
+    if _dex_throttle_count >= 5:
+        return None
     try:
         import requests
         r = requests.get(f'https://api.dexscreener.com/v1/tokens/{addr}', timeout=8)

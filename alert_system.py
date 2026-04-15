@@ -10,7 +10,7 @@ import os
 
 # Config - these would be set by the main system
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
+TELEGRAM_CHAT_ID = "6402511249"
 from trading_constants import EXIT_PLAN_TEXT, TP1_PERCENT, TP1_SELL_PCT, TP2_PERCENT, TP2_SELL_PCT, STOP_LOSS_PERCENT
 
 SIGNALS_DIR = Path("/root/.openclaw/workspace/trading-bot/signals")
