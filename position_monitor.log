@@ -363,3 +363,160 @@ Checking every 5s
   wif: mcap=$8,317 | gain=+35.2% | peak=$9,437 | dd=+2%
   wif: mcap=$8,317 | gain=+35.2% | peak=$9,437 | dd=+2%
   wif: mcap=$8,317 | gain=+35.2% | peak=$9,437 | dd=+2%
+  wif: mcap=$8,317 | gain=+35.2% | peak=$9,437 | dd=+2%
+[07:11:22] Monitor alive | 433 checks | 1 open | next in 5s
+  wif: mcap=$8,317 | gain=+35.2% | peak=$9,437 | dd=+2%
+  wif: mcap=$8,317 | gain=+35.2% | peak=$9,437 | dd=+2%
+  wif: mcap=$9,474 | gain=+54.0% | peak=$9,474 | dd=-12%
+  wif: mcap=$9,474 | gain=+54.0% | peak=$9,474 | dd=-12%
+  wif: mcap=$9,474 | gain=+54.0% | peak=$9,474 | dd=-12%
+  wif: mcap=$9,474 | gain=+54.0% | peak=$9,474 | dd=-12%
+  wif: mcap=$9,474 | gain=+54.0% | peak=$9,474 | dd=-12%
+  wif: mcap=$9,474 | gain=+54.0% | peak=$9,474 | dd=-12%
+  wif: mcap=$9,730 | gain=+58.2% | peak=$9,730 | dd=-15%
+  wif: mcap=$9,730 | gain=+58.2% | peak=$9,730 | dd=-15%
+  wif: mcap=$9,730 | gain=+58.2% | peak=$9,730 | dd=-15%
+  wif: mcap=$9,730 | gain=+58.2% | peak=$9,730 | dd=-15%
+[07:12:23] Monitor alive | 445 checks | 1 open | next in 5s
+  wif: mcap=$9,730 | gain=+58.2% | peak=$9,730 | dd=-15%
+  wif: mcap=$9,730 | gain=+58.2% | peak=$9,730 | dd=-15%
+  wif: mcap=$10,756 | gain=+74.9% | peak=$10,756 | dd=-27%
+  wif: mcap=$10,756 | gain=+74.9% | peak=$10,756 | dd=-27%
+  wif: mcap=$10,756 | gain=+74.9% | peak=$10,756 | dd=-27%
+  wif: mcap=$10,756 | gain=+74.9% | peak=$10,756 | dd=-27%
+  wif: mcap=$10,756 | gain=+74.9% | peak=$10,756 | dd=-27%
+  wif: mcap=$10,756 | gain=+74.9% | peak=$10,756 | dd=-27%
+  wif: mcap=$10,778 | gain=+75.2% | peak=$10,778 | dd=-27%
+  wif: mcap=$10,778 | gain=+75.2% | peak=$10,778 | dd=-27%
+  wif: mcap=$10,778 | gain=+75.2% | peak=$10,778 | dd=-27%
+  wif: mcap=$10,778 | gain=+75.2% | peak=$10,778 | dd=-27%
+[07:13:24] Monitor alive | 457 checks | 1 open | next in 5s
+  wif: mcap=$10,778 | gain=+75.2% | peak=$10,778 | dd=-27%
+  wif: mcap=$10,778 | gain=+75.2% | peak=$10,778 | dd=-27%
+  wif: mcap=$11,878 | gain=+93.1% | peak=$11,878 | dd=-40%
+  wif: mcap=$11,878 | gain=+93.1% | peak=$11,878 | dd=-40%
+  wif: mcap=$11,878 | gain=+93.1% | peak=$11,878 | dd=-40%
+  wif: mcap=$11,878 | gain=+93.1% | peak=$11,878 | dd=-40%
+  wif: mcap=$11,878 | gain=+93.1% | peak=$11,878 | dd=-40%
+  wif: mcap=$11,878 | gain=+93.1% | peak=$11,878 | dd=-40%
+  wif: mcap=$11,849 | gain=+92.6% | peak=$11,878 | dd=-40%
+  wif: mcap=$11,849 | gain=+92.6% | peak=$11,878 | dd=-40%
+  wif: mcap=$11,849 | gain=+92.6% | peak=$11,878 | dd=-40%
+  wif: mcap=$11,849 | gain=+92.6% | peak=$11,878 | dd=-40%
+[07:14:25] Monitor alive | 469 checks | 1 open | next in 5s
+  wif: mcap=$11,849 | gain=+92.6% | peak=$11,878 | dd=-40%
+  wif: mcap=$11,849 | gain=+92.6% | peak=$11,878 | dd=-40%
+  wif: mcap=$7,528 | gain=+22.4% | peak=$11,878 | dd=+11%
+  wif: mcap=$7,528 | gain=+22.4% | peak=$11,878 | dd=+11%
+  wif: mcap=$7,528 | gain=+22.4% | peak=$11,878 | dd=+11%
+  wif: mcap=$7,528 | gain=+22.4% | peak=$11,878 | dd=+11%
+  wif: mcap=$7,528 | gain=+22.4% | peak=$11,878 | dd=+11%
+  wif: mcap=$8,197 | gain=+33.3% | peak=$11,878 | dd=+3%
+  wif: mcap=$8,197 | gain=+33.3% | peak=$11,878 | dd=+3%
+  wif: mcap=$8,197 | gain=+33.3% | peak=$11,878 | dd=+3%
+  wif: mcap=$8,197 | gain=+33.3% | peak=$11,878 | dd=+3%
+  wif: mcap=$8,197 | gain=+33.3% | peak=$11,878 | dd=+3%
+[07:15:27] Monitor alive | 481 checks | 1 open | next in 5s
+  wif: mcap=$8,197 | gain=+33.3% | peak=$11,878 | dd=+3%
+  wif: mcap=$7,907 | gain=+28.5% | peak=$11,878 | dd=+7%
+  wif: mcap=$7,907 | gain=+28.5% | peak=$11,878 | dd=+7%
+  wif: mcap=$7,907 | gain=+28.5% | peak=$11,878 | dd=+7%
+  wif: mcap=$7,907 | gain=+28.5% | peak=$11,878 | dd=+7%
+  YN: mcap=$6,256 | gain=-1.0% | peak=$6,322 | dd=+0%
+  wif: mcap=$7,907 | gain=+28.5% | peak=$11,878 | dd=+7%
+  YN: mcap=$6,256 | gain=-1.0% | peak=$6,322 | dd=+0%
+  wif: mcap=$7,907 | gain=+28.5% | peak=$11,878 | dd=+7%
+  YN: mcap=$6,256 | gain=-1.0% | peak=$6,322 | dd=+0%
+  wif: mcap=$8,579 | gain=+39.5% | peak=$11,878 | dd=-1%
+  YN: mcap=$6,905 | gain=+9.2% | peak=$6,905 | dd=+0%
+  wif: mcap=$8,579 | gain=+39.5% | peak=$11,878 | dd=-1%
+  YN: mcap=$6,905 | gain=+9.2% | peak=$6,905 | dd=+0%
+  wif: mcap=$8,579 | gain=+39.5% | peak=$11,878 | dd=-1%
+  YN: mcap=$6,905 | gain=+9.2% | peak=$6,905 | dd=+0%
+  wif: mcap=$8,579 | gain=+39.5% | peak=$11,878 | dd=-1%
+  YN: mcap=$6,905 | gain=+9.2% | peak=$6,905 | dd=+0%
+  wif: mcap=$8,579 | gain=+39.5% | peak=$11,878 | dd=-1%
+  YN: mcap=$6,905 | gain=+9.2% | peak=$6,905 | dd=+0%
+[07:16:28] Monitor alive | 493 checks | 2 open | next in 5s
+  wif: mcap=$8,579 | gain=+39.5% | peak=$11,878 | dd=-1%
+  YN: mcap=$6,905 | gain=+9.2% | peak=$6,905 | dd=+0%
+  wif: mcap=$9,338 | gain=+51.8% | peak=$11,878 | dd=-10%
+  YN: mcap=$6,689 | gain=+5.8% | peak=$6,905 | dd=+0%
+  wif: mcap=$9,338 | gain=+51.8% | peak=$11,878 | dd=-10%
+  YN: mcap=$6,689 | gain=+5.8% | peak=$6,905 | dd=+0%
+  wif: mcap=$9,338 | gain=+51.8% | peak=$11,878 | dd=-10%
+  YN: mcap=$6,689 | gain=+5.8% | peak=$6,905 | dd=+0%
+  wif: mcap=$9,338 | gain=+51.8% | peak=$11,878 | dd=-10%
+  YN: mcap=$6,689 | gain=+5.8% | peak=$6,905 | dd=+0%
+  wif: mcap=$9,338 | gain=+51.8% | peak=$11,878 | dd=-10%
+  YN: mcap=$6,689 | gain=+5.8% | peak=$6,905 | dd=+0%
+  wif: mcap=$9,338 | gain=+51.8% | peak=$11,878 | dd=-10%
+  YN: mcap=$6,689 | gain=+5.8% | peak=$6,905 | dd=+0%
+  wif: mcap=$8,967 | gain=+45.8% | peak=$11,878 | dd=-6%
+  YN: mcap=$6,997 | gain=+10.7% | peak=$6,997 | dd=+0%
+  wif: mcap=$8,967 | gain=+45.8% | peak=$11,878 | dd=-6%
+  YN: mcap=$6,997 | gain=+10.7% | peak=$6,997 | dd=+0%
+  wif: mcap=$8,967 | gain=+45.8% | peak=$11,878 | dd=-6%
+  YN: mcap=$6,997 | gain=+10.7% | peak=$6,997 | dd=+0%
+  wif: mcap=$8,967 | gain=+45.8% | peak=$11,878 | dd=-6%
+  YN: mcap=$6,997 | gain=+10.7% | peak=$6,997 | dd=+0%
+  wif: mcap=$8,967 | gain=+45.8% | peak=$11,878 | dd=-6%
+  YN: mcap=$6,997 | gain=+10.7% | peak=$6,997 | dd=+0%
+[07:17:31] Monitor alive | 505 checks | 2 open | next in 5s
+  wif: mcap=$8,967 | gain=+45.8% | peak=$11,878 | dd=-6%
+  YN: mcap=$6,997 | gain=+10.7% | peak=$6,997 | dd=+0%
+  wif: mcap=$9,439 | gain=+53.5% | peak=$11,878 | dd=-11%
+  YN: mcap=$7,282 | gain=+15.2% | peak=$7,282 | dd=+0%
+  wif: mcap=$9,439 | gain=+53.5% | peak=$11,878 | dd=-11%
+  YN: mcap=$7,282 | gain=+15.2% | peak=$7,282 | dd=+0%
+  wif: mcap=$9,439 | gain=+53.5% | peak=$11,878 | dd=-11%
+  YN: mcap=$7,282 | gain=+15.2% | peak=$7,282 | dd=+0%
+  wif: mcap=$9,439 | gain=+53.5% | peak=$11,878 | dd=-11%
+  YN: mcap=$7,282 | gain=+15.2% | peak=$7,282 | dd=+0%
+  wif: mcap=$9,439 | gain=+53.5% | peak=$11,878 | dd=-11%
+  YN: mcap=$7,282 | gain=+15.2% | peak=$7,282 | dd=+0%
+  wif: mcap=$9,014 | gain=+46.5% | peak=$11,878 | dd=-6%
+  YN: mcap=$7,282 | gain=+15.2% | peak=$7,282 | dd=+0%
+  wif: mcap=$9,014 | gain=+46.5% | peak=$11,878 | dd=-6%
+  YN: mcap=$4,947 | gain=-21.7% | peak=$7,282 | dd=+0%
+  wif: mcap=$9,014 | gain=+46.5% | peak=$11,878 | dd=-6%
+  YN: mcap=$4,947 | gain=-21.7% | peak=$7,282 | dd=+0%
+  wif: mcap=$9,014 | gain=+46.5% | peak=$11,878 | dd=-6%
+  YN: mcap=$4,947 | gain=-21.7% | peak=$7,282 | dd=+0%
+  wif: mcap=$9,014 | gain=+46.5% | peak=$11,878 | dd=-6%
+  YN: mcap=$4,947 | gain=-21.7% | peak=$7,282 | dd=+0%
+  wif: mcap=$9,014 | gain=+46.5% | peak=$11,878 | dd=-6%
+  YN: mcap=$4,947 | gain=-21.7% | peak=$7,282 | dd=+0%
+[07:18:33] Monitor alive | 517 checks | 2 open | next in 5s
+  wif: mcap=$7,687 | gain=+25.0% | peak=$11,878 | dd=+9%
+[STOP_LOSS] Alert sent
+🔴 YN STOP LOSS @ $2,955 (-53.3%)
+  wif: mcap=$7,687 | gain=+25.0% | peak=$11,878 | dd=+9%
+  wif: mcap=$7,687 | gain=+25.0% | peak=$11,878 | dd=+9%
+  wif: mcap=$7,687 | gain=+25.0% | peak=$11,878 | dd=+9%
+  wif: mcap=$7,687 | gain=+25.0% | peak=$11,878 | dd=+9%
+  wif: mcap=$7,687 | gain=+25.0% | peak=$11,878 | dd=+9%
+[TRAILING_STOP] Alert sent
+✅ wif TRAILING STOP @ $4,144 (65% drop from peak)
+[07:19:36] Monitor alive | 529 checks | 0 open | next in 5s
+[07:20:36] Monitor alive | 541 checks | 0 open | next in 5s
+[07:21:36] Monitor alive | 553 checks | 0 open | next in 5s
+[07:22:36] Monitor alive | 565 checks | 0 open | next in 5s
+[07:23:36] Monitor alive | 577 checks | 0 open | next in 5s
+[07:24:36] Monitor alive | 589 checks | 0 open | next in 5s
+[07:25:36] Monitor alive | 601 checks | 0 open | next in 5s
+[07:26:36] Monitor alive | 613 checks | 0 open | next in 5s
+[07:27:36] Monitor alive | 625 checks | 0 open | next in 5s
+[07:28:36] Monitor alive | 637 checks | 0 open | next in 5s
+[07:29:36] Monitor alive | 649 checks | 0 open | next in 5s
+[07:30:37] Monitor alive | 661 checks | 0 open | next in 5s
+[07:31:37] Monitor alive | 673 checks | 0 open | next in 5s
+[07:32:37] Monitor alive | 685 checks | 0 open | next in 5s
+[07:33:37] Monitor alive | 697 checks | 0 open | next in 5s
+[07:34:37] Monitor alive | 709 checks | 0 open | next in 5s
+[07:35:37] Monitor alive | 721 checks | 0 open | next in 5s
+[07:36:37] Monitor alive | 733 checks | 0 open | next in 5s
+[07:37:37] Monitor alive | 745 checks | 0 open | next in 5s
+[07:38:37] Monitor alive | 757 checks | 0 open | next in 5s
+[07:39:37] Monitor alive | 769 checks | 0 open | next in 5s
+[07:40:37] Monitor alive | 781 checks | 0 open | next in 5s
