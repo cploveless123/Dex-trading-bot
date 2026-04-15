@@ -368,14 +368,7 @@ def add_to_cooldown(addr, token_data, result, entry_chg5):
     chg5 = result.get('chg5', 0)
     pump_triggered = result.get('pump_rule_triggered', False)
     
-    chg1 = result.get('chg1', 0)
-    
-    # Check chg1 immediately - if < -5% go to CHG1_RECHECK
-    if chg1 < -5:
-        state = STATE_CHG1_RECHECK
-        cooldown_end = time.time() + 15  # 15s recheck
-        result['lowest_mcap'] = result.get('mcap', 0)
-    elif pump_triggered:
+    if pump_triggered:
         state = STATE_PUMP_WAIT_1
         cooldown_end = time.time() + PUMP_WAIT_1
     elif age_sec < YOUNG_AGE_THRESHOLD and h1 > H1_MOMENTUM_MIN and chg5 > -5:
@@ -387,7 +380,7 @@ def add_to_cooldown(addr, token_data, result, entry_chg5):
         state = STATE_OLDER_COOLDOWN
         cooldown_end = time.time() + 45
     else:
-        # Otherwise → 30s base recheck (verify chg1 > +3% from last)
+        # Otherwise → 30s base recheck
         state = STATE_BASE_WAIT
         cooldown_end = time.time() + 30
     
@@ -404,7 +397,6 @@ def add_to_cooldown(addr, token_data, result, entry_chg5):
         'entry_chg5': entry_chg5,
         'lowest_chg5': float(chg5),  # Track lowest chg5 for recovery
         'lowest_mcap': result.get('mcap', 0),  # Track lowest mcap for chg1 recovery
-        'chg1_prev': result.get('chg1', 0),  # Track chg1 for base path verify
     }
 
 def scan_cycle():
@@ -461,9 +453,6 @@ def scan_cycle():
             result['h1'] = h1
             result['chg1'] = chg1
             result['mcap'] = mcap
-            # Update lowest_mcap if in CHG1_RECHECK state
-            if state == STATE_CHG1_RECHECK:
-                data['lowest_mcap'] = min(data.get('lowest_mcap', mcap), mcap)
         else:
             # token_info doesn't have price data - use cached values from cooldown entry
             chg5 = result.get('chg5', 0)
@@ -472,52 +461,6 @@ def scan_cycle():
             mcap = result.get('mcap', 0)
         
         print(f"   [{state[:6]}] {result['token']}: chg5={chg5:+.1f}% h1={h1:+.1f}%")
-        
-        # === CHG1 < -5% PATH: 15s rechecks until mcap > +5% from lowest ===
-        if state == STATE_CHG1_RECHECK:
-            remaining = data['cooldown_end'] - now
-            if remaining > 0:
-                data['chg5_prev'] = chg5
-                data['h1_prev'] = h1
-                continue
-            # Timer expired - check if mcap recovered > +5% from lowest
-            recovery_target = data['lowest_mcap'] * 1.05
-            if mcap >= recovery_target:
-                # Recovered! Go to verify
-                data['state'] = STATE_CHG1_VERIFY
-                data['cooldown_end'] = now + 15
-                print(f"   [CHG1_OK] {result['token']}: mcap={mcap:,.0f} >= {recovery_target:,.0f} (+5% from low) | verify 15s")
-                data['chg5_prev'] = chg5
-                data['h1_prev'] = h1
-                continue
-            else:
-                # Still low - update lowest and recheck
-                data['lowest_mcap'] = min(data.get('lowest_mcap', mcap), mcap)
-                data['cooldown_end'] = now + 15
-                data['recheck_count'] = data.get('recheck_count', 0) + 1
-                print(f"   [CHG1_RECHECK] {result['token']}: mcap={mcap:,.0f} < {recovery_target:,.0f} | recheck 15s")
-                data['chg5_prev'] = chg5
-                data['h1_prev'] = h1
-                continue
-        
-        # === CHG1_VERIFY: 15s verify then BUY ===
-        if state == STATE_CHG1_VERIFY:
-            remaining = data['cooldown_end'] - now
-            if remaining > 0:
-                data['chg5_prev'] = chg5
-                data['h1_prev'] = h1
-                continue
-            # Verify complete - BUY!
-            final_result, fail_reason = scan_token(data['token_data'])
-            if final_result:
-                print(f"   [BUY_CHG1] {result['token']}: chg1 recovered | BUY!")
-                buy_token(addr, final_result)
-                to_remove.append(addr)
-                continue
-            else:
-                REJECTED_TEMP[addr] = {'ts': now, 'reason': fail_reason}
-                to_remove.append(addr)
-                continue
         
         # === PUMP PATH ===
         if state == STATE_PUMP_WAIT_1:

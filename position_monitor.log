@@ -92,3 +92,2622 @@ Checking every 5s
 [14:38:45] Monitor alive | 1045 checks | 0 open | next in 5s
 [14:39:45] Monitor alive | 1057 checks | 0 open | next in 5s
 [14:40:45] Monitor alive | 1069 checks | 0 open | next in 5s
+[14:41:45] Monitor alive | 1081 checks | 0 open | next in 5s
+[14:42:45] Monitor alive | 1093 checks | 0 open | next in 5s
+[14:43:46] Monitor alive | 1105 checks | 0 open | next in 5s
+[14:44:46] Monitor alive | 1117 checks | 0 open | next in 5s
+[14:45:46] Monitor alive | 1129 checks | 0 open | next in 5s
+[14:46:46] Monitor alive | 1141 checks | 0 open | next in 5s
+[14:47:46] Monitor alive | 1153 checks | 0 open | next in 5s
+[14:48:46] Monitor alive | 1165 checks | 0 open | next in 5s
+[14:49:46] Monitor alive | 1177 checks | 0 open | next in 5s
+[14:50:46] Monitor alive | 1189 checks | 0 open | next in 5s
+[14:51:46] Monitor alive | 1201 checks | 0 open | next in 5s
+[14:52:46] Monitor alive | 1213 checks | 0 open | next in 5s
+  MYCOIN: mcap=$15,552 | gain=-1.7% | peak=$15,828 | dd=+0%
+  BTC-Jr: mcap=$21,403 | gain=-2.0% | peak=$21,830 | dd=+0%
+  Oto: mcap=$21,407 | gain=+5.0% | peak=$21,407 | dd=+0%
+  MYCOIN: mcap=$15,552 | gain=-1.7% | peak=$15,828 | dd=+0%
+  BTC-Jr: mcap=$21,403 | gain=-2.0% | peak=$21,830 | dd=+0%
+  Oto: mcap=$21,407 | gain=+5.0% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,909 | gain=+3.2% | peak=$54,909 | dd=+0%
+  Oto: mcap=$38,991 | gain=+16.4% | peak=$38,991 | dd=+0%
+  MYCOIN: mcap=$15,552 | gain=-1.7% | peak=$15,828 | dd=+0%
+  MYCOIN: mcap=$15,552 | gain=-1.7% | peak=$15,828 | dd=+0%
+  BTC-Jr: mcap=$21,403 | gain=-2.0% | peak=$21,830 | dd=+0%
+  Oto: mcap=$21,407 | gain=+5.0% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$38,991 | gain=+16.4% | peak=$38,991 | dd=+0%
+  MYCOIN: mcap=$15,552 | gain=-1.7% | peak=$15,828 | dd=+0%
+  BTC-Jr: mcap=$21,403 | gain=-2.0% | peak=$21,830 | dd=+0%
+  Oto: mcap=$21,407 | gain=+5.0% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$38,991 | gain=+16.4% | peak=$38,991 | dd=+0%
+  MYCOIN: mcap=$15,552 | gain=-1.7% | peak=$15,828 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$21,407 | gain=+5.0% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$38,991 | gain=+16.4% | peak=$38,991 | dd=+0%
+  MYCOIN: mcap=$15,552 | gain=-1.7% | peak=$15,828 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$21,407 | gain=+5.0% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$38,991 | gain=+16.4% | peak=$38,991 | dd=+0%
+  MYCOIN: mcap=$15,552 | gain=-1.7% | peak=$15,828 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$21,407 | gain=+5.0% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$38,991 | gain=+16.4% | peak=$38,991 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$21,407 | gain=+5.0% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$38,991 | gain=+16.4% | peak=$38,991 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$21,407 | gain=+5.0% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$38,991 | gain=+16.4% | peak=$38,991 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$21,407 | gain=+5.0% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$38,991 | gain=+16.4% | peak=$38,991 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$21,407 | gain=+5.0% | peak=$21,407 | dd=+0%
+[14:53:50] Monitor alive | 1225 checks | 20 open | next in 5s
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$53,012 | gain=-0.4% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$23,966 | gain=+9.8% | peak=$23,966 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$19,199 | gain=+21.3% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$43,412 | gain=+29.6% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,834 | gain=+2.2% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$25,718 | gain=+17.8% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$54,007 | gain=+1.5% | peak=$54,909 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,678 | gain=-13.6% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$39,266 | gain=+17.2% | peak=$43,412 | dd=+0%
+[14:54:50] Monitor alive | 1233 checks | 45 open | next in 5s
+  MYCOIN: mcap=$12,843 | gain=-18.9% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,686 | gain=+1.4% | peak=$21,407 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,527 | gain=+12.0% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$12,843 | gain=-18.9% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$22,373 | gain=+9.7% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,527 | gain=+12.0% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$12,843 | gain=-18.9% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$22,373 | gain=+9.7% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,527 | gain=+12.0% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$12,843 | gain=-18.9% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$22,373 | gain=+9.7% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,527 | gain=+12.0% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$12,843 | gain=-18.9% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$22,373 | gain=+9.7% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,527 | gain=+12.0% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$12,843 | gain=-18.9% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$20,806 | gain=-4.7% | peak=$25,718 | dd=+0%
+  Oto: mcap=$22,373 | gain=+9.7% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$55,416 | gain=+4.2% | peak=$55,416 | dd=+0%
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+  MYCOIN: error fetching mcap
+  BTC-Jr: error fetching mcap
+  Oto: error fetching mcap
+  VDOR: error fetching mcap
+  Oto: error fetching mcap
+[14:55:53] Monitor alive | 1241 checks | 45 open | next in 5s
+  MYCOIN: mcap=$14,372 | gain=-9.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,825 | gain=+2.1% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$14,372 | gain=-9.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,825 | gain=+2.1% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$14,372 | gain=-9.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,825 | gain=+2.1% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$14,372 | gain=-9.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+  Oto: mcap=$37,611 | gain=+12.2% | peak=$43,412 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Oto STOP LOSS @ $16,371 (-51.1%)
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Oto STOP LOSS @ $16,371 (-51.1%)
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Oto STOP LOSS @ $16,371 (-51.1%)
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$18,034 | gain=-17.4% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,706 | gain=+2.8% | peak=$55,416 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Oto STOP LOSS @ $16,371 (-51.1%)
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Oto STOP LOSS @ $16,371 (-51.1%)
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Oto STOP LOSS @ $16,371 (-51.1%)
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Oto STOP LOSS @ $16,371 (-51.1%)
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Oto STOP LOSS @ $16,371 (-51.1%)
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 Oto STOP LOSS @ $16,371 (-51.1%)
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,769 | gain=-13.0% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,235 | gain=-0.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$17,272 | gain=-20.9% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,153 | gain=+5.5% | peak=$56,153 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$16,054 | gain=-26.5% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,351 | gain=+5.9% | peak=$56,351 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$16,054 | gain=-26.5% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,351 | gain=+5.9% | peak=$56,351 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$16,054 | gain=-26.5% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,351 | gain=+5.9% | peak=$56,351 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$16,054 | gain=-26.5% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,351 | gain=+5.9% | peak=$56,351 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$16,054 | gain=-26.5% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,351 | gain=+5.9% | peak=$56,351 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$16,054 | gain=-26.5% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,351 | gain=+5.9% | peak=$56,351 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$16,054 | gain=-26.5% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,351 | gain=+5.9% | peak=$56,351 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$16,054 | gain=-26.5% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,351 | gain=+5.9% | peak=$56,351 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$16,054 | gain=-26.5% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,351 | gain=+5.9% | peak=$56,351 | dd=+0%
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$16,054 | gain=-26.5% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,351 | gain=+5.9% | peak=$56,351 | dd=+0%
+[14:56:58] Monitor alive | 1249 checks | 4 open | next in 5s
+  MYCOIN: mcap=$13,257 | gain=-16.2% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$16,054 | gain=-26.5% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,351 | gain=+5.9% | peak=$56,351 | dd=+0%
+  MYCOIN: mcap=$14,759 | gain=-6.8% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$16,054 | gain=-26.5% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,351 | gain=+5.9% | peak=$56,351 | dd=+0%
+  MYCOIN: mcap=$14,759 | gain=-6.8% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$16,054 | gain=-26.5% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,351 | gain=+5.9% | peak=$56,351 | dd=+0%
+  MYCOIN: mcap=$14,759 | gain=-6.8% | peak=$19,199 | dd=+0%
+  BTC-Jr: mcap=$16,054 | gain=-26.5% | peak=$25,718 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,351 | gain=+5.9% | peak=$56,351 | dd=+0%
+  MYCOIN: mcap=$14,759 | gain=-6.8% | peak=$19,199 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 BTC-Jr STOP LOSS @ $15,044 (-31.1%)
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,510 | gain=+6.2% | peak=$56,510 | dd=+0%
+  MYCOIN: mcap=$14,759 | gain=-6.8% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,510 | gain=+6.2% | peak=$56,510 | dd=+0%
+  MYCOIN: mcap=$14,759 | gain=-6.8% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,510 | gain=+6.2% | peak=$56,510 | dd=+0%
+  MYCOIN: mcap=$12,915 | gain=-18.4% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,510 | gain=+6.2% | peak=$56,510 | dd=+0%
+  MYCOIN: mcap=$12,915 | gain=-18.4% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,510 | gain=+6.2% | peak=$56,510 | dd=+0%
+  MYCOIN: mcap=$12,915 | gain=-18.4% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$56,510 | gain=+6.2% | peak=$56,510 | dd=+0%
+  MYCOIN: mcap=$12,915 | gain=-18.4% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,238 | gain=+1.9% | peak=$56,510 | dd=+0%
+  MYCOIN: mcap=$12,915 | gain=-18.4% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,238 | gain=+1.9% | peak=$56,510 | dd=+0%
+[14:58:01] Monitor alive | 1261 checks | 3 open | next in 5s
+  MYCOIN: mcap=$12,915 | gain=-18.4% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,238 | gain=+1.9% | peak=$56,510 | dd=+0%
+  MYCOIN: mcap=$12,627 | gain=-20.2% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,238 | gain=+1.9% | peak=$56,510 | dd=+0%
+  MYCOIN: mcap=$12,627 | gain=-20.2% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,238 | gain=+1.9% | peak=$56,510 | dd=+0%
+  MYCOIN: mcap=$12,627 | gain=-20.2% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$54,238 | gain=+1.9% | peak=$56,510 | dd=+0%
+  MYCOIN: mcap=$12,627 | gain=-20.2% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,230 | gain=-5.6% | peak=$56,510 | dd=+0%
+  MYCOIN: mcap=$12,627 | gain=-20.2% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,230 | gain=-5.6% | peak=$56,510 | dd=+0%
+  MYCOIN: mcap=$12,627 | gain=-20.2% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,230 | gain=-5.6% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,791 | gain=+2.7% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  MYCOIN: mcap=$15,946 | gain=+0.7% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,230 | gain=-5.6% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,791 | gain=+2.7% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,031 | gain=-3.2% | peak=$12,430 | dd=+0%
+  BIRD: mcap=$37,136 | gain=+5.5% | peak=$37,136 | dd=+0%
+  MYCOIN: mcap=$15,946 | gain=+0.7% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,230 | gain=-5.6% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,791 | gain=+2.7% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,031 | gain=-3.2% | peak=$12,430 | dd=+0%
+  BIRD: mcap=$37,136 | gain=+5.5% | peak=$37,136 | dd=+0%
+  MYCOIN: mcap=$15,946 | gain=+0.7% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,230 | gain=-5.6% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$45,640 | gain=+0.1% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,031 | gain=-3.2% | peak=$12,430 | dd=+0%
+  BIRD: mcap=$37,136 | gain=+5.5% | peak=$37,136 | dd=+0%
+  MYCOIN: mcap=$15,946 | gain=+0.7% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,622 | gain=-12.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$45,640 | gain=+0.1% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,031 | gain=-3.2% | peak=$12,430 | dd=+0%
+  BIRD: mcap=$37,136 | gain=+5.5% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$19,399 | gain=-9.7% | peak=$21,478 | dd=+0%
+  MYCOIN: mcap=$15,946 | gain=+0.7% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,622 | gain=-12.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$45,640 | gain=+0.1% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,192 | gain=+6.1% | peak=$13,192 | dd=+0%
+  BIRD: mcap=$36,117 | gain=+2.6% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$21,825 | gain=+1.6% | peak=$21,825 | dd=+0%
+[14:59:06] Monitor alive | 1273 checks | 8 open | next in 5s
+  MYCOIN: mcap=$15,946 | gain=+0.7% | peak=$19,199 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,622 | gain=-12.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$45,640 | gain=+0.1% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,192 | gain=+6.1% | peak=$13,192 | dd=+0%
+  BIRD: mcap=$36,117 | gain=+2.6% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$21,825 | gain=+1.6% | peak=$21,825 | dd=+0%
+[TP1_HOLD] Alert sent
+🚀 MYCOIN TP1 HIT - HOLDING @ $23,746 (+50.0%)
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,622 | gain=-12.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$45,640 | gain=+0.1% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,192 | gain=+6.1% | peak=$13,192 | dd=+0%
+  BIRD: mcap=$36,117 | gain=+2.6% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$21,825 | gain=+1.6% | peak=$21,825 | dd=+0%
+  MYCOIN: mcap=$23,746 | gain=+50.0% | peak=$23,746 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,622 | gain=-12.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$45,640 | gain=+0.1% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,192 | gain=+6.1% | peak=$13,192 | dd=+0%
+  BIRD: mcap=$36,117 | gain=+2.6% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$21,825 | gain=+1.6% | peak=$21,825 | dd=+0%
+  MYCOIN: mcap=$23,746 | gain=+50.0% | peak=$23,746 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,622 | gain=-12.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$44,322 | gain=-2.8% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,192 | gain=+6.1% | peak=$13,192 | dd=+0%
+  BIRD: mcap=$36,117 | gain=+2.6% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$21,825 | gain=+1.6% | peak=$21,825 | dd=+0%
+  MYCOIN: mcap=$23,746 | gain=+50.0% | peak=$23,746 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,387 | gain=-14.7% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$44,322 | gain=-2.8% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,192 | gain=+6.1% | peak=$13,192 | dd=+0%
+  BIRD: mcap=$36,117 | gain=+2.6% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$21,825 | gain=+1.6% | peak=$21,825 | dd=+0%
+  MYCOIN: mcap=$23,746 | gain=+50.0% | peak=$23,746 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,387 | gain=-14.7% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$44,322 | gain=-2.8% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,860 | gain=+19.5% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,641 | gain=+4.1% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  MYCOIN: mcap=$23,746 | gain=+50.0% | peak=$23,746 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,387 | gain=-14.7% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$44,322 | gain=-2.8% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,860 | gain=+19.5% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,641 | gain=+4.1% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  MYCOIN: mcap=$21,398 | gain=+35.2% | peak=$23,746 | dd=+10%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,387 | gain=-14.7% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$44,322 | gain=-2.8% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,860 | gain=+19.5% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,641 | gain=+4.1% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  MYCOIN: mcap=$21,398 | gain=+35.2% | peak=$23,746 | dd=+10%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,387 | gain=-14.7% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$45,952 | gain=+0.8% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,860 | gain=+19.5% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,641 | gain=+4.1% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,389 | gain=+10.6% | peak=$30,389 | dd=+0%
+  MYCOIN: mcap=$21,398 | gain=+35.2% | peak=$23,746 | dd=+10%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,387 | gain=-14.7% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$45,952 | gain=+0.8% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,860 | gain=+19.5% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,641 | gain=+4.1% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,180 | gain=+17.1% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$21,398 | gain=+35.2% | peak=$23,746 | dd=+10%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,955 | gain=-9.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$45,952 | gain=+0.8% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,860 | gain=+19.5% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,122 | gain=+5.4% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,180 | gain=+17.1% | peak=$32,180 | dd=+0%
+[15:00:08] Monitor alive | 1284 checks | 9 open | next in 5s
+  MYCOIN: mcap=$21,398 | gain=+35.2% | peak=$23,746 | dd=+10%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,955 | gain=-9.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$45,952 | gain=+0.8% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,671 | gain=+10.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,122 | gain=+5.4% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,180 | gain=+17.1% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$21,398 | gain=+35.2% | peak=$23,746 | dd=+10%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,955 | gain=-9.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$45,952 | gain=+0.8% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,671 | gain=+10.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,122 | gain=+5.4% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,180 | gain=+17.1% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$28,281 | gain=+78.7% | peak=$28,281 | dd=-19%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,955 | gain=-9.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$45,952 | gain=+0.8% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,671 | gain=+10.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,122 | gain=+5.4% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,180 | gain=+17.1% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$28,281 | gain=+78.7% | peak=$28,281 | dd=-19%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,955 | gain=-9.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,011 | gain=+0.9% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,671 | gain=+10.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,122 | gain=+5.4% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,180 | gain=+17.1% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$28,281 | gain=+78.7% | peak=$28,281 | dd=-19%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,955 | gain=-9.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,011 | gain=+0.9% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,671 | gain=+10.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,122 | gain=+5.4% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,112 | gain=+9.6% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$28,281 | gain=+78.7% | peak=$28,281 | dd=-19%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,620 | gain=-10.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,011 | gain=+0.9% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,671 | gain=+10.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$35,375 | gain=+0.5% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,112 | gain=+9.6% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$28,281 | gain=+78.7% | peak=$28,281 | dd=-19%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,620 | gain=-10.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,011 | gain=+0.9% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,597 | gain=+9.4% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$35,375 | gain=+0.5% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,112 | gain=+9.6% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$28,281 | gain=+78.7% | peak=$28,281 | dd=-19%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,620 | gain=-10.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,011 | gain=+0.9% | peak=$46,791 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,597 | gain=+9.4% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$35,375 | gain=+0.5% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,112 | gain=+9.6% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$28,362 | gain=+79.2% | peak=$28,362 | dd=-19%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,620 | gain=-10.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$47,344 | gain=+3.9% | peak=$47,344 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,597 | gain=+9.4% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$35,375 | gain=+0.5% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,112 | gain=+9.6% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$28,362 | gain=+79.2% | peak=$28,362 | dd=-19%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,620 | gain=-10.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$47,344 | gain=+3.9% | peak=$47,344 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,597 | gain=+9.4% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$35,375 | gain=+0.5% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,549 | gain=+3.9% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$28,362 | gain=+79.2% | peak=$28,362 | dd=-19%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,620 | gain=-10.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$47,344 | gain=+3.9% | peak=$47,344 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,597 | gain=+9.4% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$35,375 | gain=+0.5% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,549 | gain=+3.9% | peak=$32,180 | dd=+0%
+[15:01:10] Monitor alive | 1295 checks | 9 open | next in 5s
+  MYCOIN: mcap=$28,362 | gain=+79.2% | peak=$28,362 | dd=-19%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,435 | gain=-10.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$47,344 | gain=+3.9% | peak=$47,344 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,597 | gain=+9.4% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,705 | gain=+4.2% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,549 | gain=+3.9% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$28,362 | gain=+79.2% | peak=$28,362 | dd=-19%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,435 | gain=-10.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$47,344 | gain=+3.9% | peak=$47,344 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,848 | gain=+3.4% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,705 | gain=+4.2% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,549 | gain=+3.9% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$28,362 | gain=+79.2% | peak=$28,362 | dd=-19%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,435 | gain=-10.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$47,344 | gain=+3.9% | peak=$47,344 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,848 | gain=+3.4% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,705 | gain=+4.2% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,549 | gain=+3.9% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$20,187 | gain=+27.5% | peak=$28,362 | dd=+15%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,435 | gain=-10.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$48,200 | gain=+5.7% | peak=$48,200 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,848 | gain=+3.4% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,705 | gain=+4.2% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,549 | gain=+3.9% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$20,187 | gain=+27.5% | peak=$28,362 | dd=+15%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,435 | gain=-10.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$48,200 | gain=+5.7% | peak=$48,200 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,848 | gain=+3.4% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,705 | gain=+4.2% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,468 | gain=+3.6% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$20,187 | gain=+27.5% | peak=$28,362 | dd=+15%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,435 | gain=-10.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$48,200 | gain=+5.7% | peak=$48,200 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,848 | gain=+3.4% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,705 | gain=+4.2% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,468 | gain=+3.6% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$20,187 | gain=+27.5% | peak=$28,362 | dd=+15%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,017 | gain=-15.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$48,200 | gain=+5.7% | peak=$48,200 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,848 | gain=+3.4% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$34,954 | gain=-0.7% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,468 | gain=+3.6% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$20,187 | gain=+27.5% | peak=$28,362 | dd=+15%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,017 | gain=-15.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$48,200 | gain=+5.7% | peak=$48,200 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,398 | gain=-0.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$34,954 | gain=-0.7% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,468 | gain=+3.6% | peak=$32,180 | dd=+0%
+  MYCOIN: mcap=$20,187 | gain=+27.5% | peak=$28,362 | dd=+15%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,017 | gain=-15.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,151 | gain=+10.0% | peak=$50,151 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,398 | gain=-0.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$34,954 | gain=-0.7% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,468 | gain=+3.6% | peak=$32,180 | dd=+0%
+[TRAILING_STOP] Alert sent
+✅ MYCOIN TRAILING STOP @ $12,255 (57% drop from peak)
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,017 | gain=-15.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,151 | gain=+10.0% | peak=$50,151 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,398 | gain=-0.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$34,954 | gain=-0.7% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,601 | gain=+7.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,017 | gain=-15.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,151 | gain=+10.0% | peak=$50,151 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,398 | gain=-0.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$34,954 | gain=-0.7% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,601 | gain=+7.7% | peak=$32,180 | dd=+0%
+[15:02:13] Monitor alive | 1306 checks | 8 open | next in 5s
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,483 | gain=-16.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,151 | gain=+10.0% | peak=$50,151 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,398 | gain=-0.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$34,954 | gain=-0.7% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,601 | gain=+7.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,483 | gain=-16.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,151 | gain=+10.0% | peak=$50,151 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$12,398 | gain=-0.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$35,802 | gain=+1.7% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,601 | gain=+7.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,483 | gain=-16.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,151 | gain=+10.0% | peak=$50,151 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,666 | gain=+9.9% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$35,802 | gain=+1.7% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,601 | gain=+7.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,483 | gain=-16.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,096 | gain=+12.1% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,666 | gain=+9.9% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$35,802 | gain=+1.7% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,601 | gain=+7.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,483 | gain=-16.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,096 | gain=+12.1% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,666 | gain=+9.9% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$35,802 | gain=+1.7% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,030 | gain=+5.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,483 | gain=-16.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,096 | gain=+12.1% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,666 | gain=+9.9% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$35,802 | gain=+1.7% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,030 | gain=+5.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,090 | gain=-11.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,096 | gain=+12.1% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,666 | gain=+9.9% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,668 | gain=+4.1% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,030 | gain=+5.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,090 | gain=-11.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,096 | gain=+12.1% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,666 | gain=+9.9% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,668 | gain=+4.1% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,030 | gain=+5.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,090 | gain=-11.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,691 | gain=+11.2% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,233 | gain=+6.5% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,668 | gain=+4.1% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,030 | gain=+5.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,090 | gain=-11.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,691 | gain=+11.2% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,233 | gain=+6.5% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,668 | gain=+4.1% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,030 | gain=+5.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,090 | gain=-11.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,691 | gain=+11.2% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,233 | gain=+6.5% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,668 | gain=+4.1% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,063 | gain=+5.8% | peak=$32,180 | dd=+0%
+[15:03:15] Monitor alive | 1317 checks | 8 open | next in 5s
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,090 | gain=-11.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,691 | gain=+11.2% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,233 | gain=+6.5% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,668 | gain=+4.1% | peak=$37,136 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,063 | gain=+5.8% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,347 | gain=-11.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,691 | gain=+11.2% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,233 | gain=+6.5% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,158 | gain=+5.5% | peak=$37,158 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,063 | gain=+5.8% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,347 | gain=-11.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,691 | gain=+11.2% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,233 | gain=+6.5% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,158 | gain=+5.5% | peak=$37,158 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,063 | gain=+5.8% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,347 | gain=-11.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,121 | gain=+10.0% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,771 | gain=+10.8% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,158 | gain=+5.5% | peak=$37,158 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,063 | gain=+5.8% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,347 | gain=-11.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,121 | gain=+10.0% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,771 | gain=+10.8% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,158 | gain=+5.5% | peak=$37,158 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,442 | gain=+7.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,347 | gain=-11.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,121 | gain=+10.0% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,771 | gain=+10.8% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,158 | gain=+5.5% | peak=$37,158 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,442 | gain=+7.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,347 | gain=-11.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,121 | gain=+10.0% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,771 | gain=+10.8% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,158 | gain=+5.5% | peak=$37,158 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,442 | gain=+7.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,997 | gain=-9.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,121 | gain=+10.0% | peak=$51,096 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,771 | gain=+10.8% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,699 | gain=+4.2% | peak=$37,158 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,442 | gain=+7.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,997 | gain=-9.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,889 | gain=+13.8% | peak=$51,889 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,771 | gain=+10.8% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,699 | gain=+4.2% | peak=$37,158 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,442 | gain=+7.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,997 | gain=-9.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,889 | gain=+13.8% | peak=$51,889 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,210 | gain=+14.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,699 | gain=+4.2% | peak=$37,158 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,442 | gain=+7.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,997 | gain=-9.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,889 | gain=+13.8% | peak=$51,889 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,210 | gain=+14.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,699 | gain=+4.2% | peak=$37,158 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,502 | gain=+3.7% | peak=$32,180 | dd=+0%
+[15:04:16] Monitor alive | 1328 checks | 8 open | next in 5s
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,997 | gain=-9.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,889 | gain=+13.8% | peak=$51,889 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,210 | gain=+14.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,699 | gain=+4.2% | peak=$37,158 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,502 | gain=+3.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,544 | gain=-16.3% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,889 | gain=+13.8% | peak=$51,889 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,210 | gain=+14.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,427 | gain=+6.3% | peak=$37,427 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,502 | gain=+3.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,544 | gain=-16.3% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,889 | gain=+13.8% | peak=$51,889 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,210 | gain=+14.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,427 | gain=+6.3% | peak=$37,427 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,502 | gain=+3.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,544 | gain=-16.3% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,962 | gain=+11.8% | peak=$51,889 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,210 | gain=+14.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,427 | gain=+6.3% | peak=$37,427 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,502 | gain=+3.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,544 | gain=-16.3% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,962 | gain=+11.8% | peak=$51,889 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,590 | gain=+9.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,427 | gain=+6.3% | peak=$37,427 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,502 | gain=+3.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,544 | gain=-16.3% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,962 | gain=+11.8% | peak=$51,889 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,590 | gain=+9.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,427 | gain=+6.3% | peak=$37,427 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,624 | gain=+7.8% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,544 | gain=-16.3% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,962 | gain=+11.8% | peak=$51,889 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,590 | gain=+9.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,427 | gain=+6.3% | peak=$37,427 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,624 | gain=+7.8% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,154 | gain=-15.1% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$50,962 | gain=+11.8% | peak=$51,889 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,590 | gain=+9.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$38,242 | gain=+8.6% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,624 | gain=+7.8% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,154 | gain=-15.1% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$52,558 | gain=+15.3% | peak=$52,558 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,590 | gain=+9.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$38,242 | gain=+8.6% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,624 | gain=+7.8% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,154 | gain=-15.1% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$52,558 | gain=+15.3% | peak=$52,558 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,181 | gain=+6.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$38,242 | gain=+8.6% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,624 | gain=+7.8% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,154 | gain=-15.1% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$52,558 | gain=+15.3% | peak=$52,558 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,181 | gain=+6.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$38,242 | gain=+8.6% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,624 | gain=+7.8% | peak=$32,180 | dd=+0%
+[15:05:18] Monitor alive | 1339 checks | 8 open | next in 5s
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$45,154 | gain=-15.1% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$52,558 | gain=+15.3% | peak=$52,558 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,181 | gain=+6.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$38,242 | gain=+8.6% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,971 | gain=+12.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,043 | gain=-13.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$52,558 | gain=+15.3% | peak=$52,558 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,181 | gain=+6.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,493 | gain=+6.5% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,971 | gain=+12.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,043 | gain=-13.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$52,558 | gain=+15.3% | peak=$52,558 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,181 | gain=+6.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,493 | gain=+6.5% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,971 | gain=+12.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,043 | gain=-13.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,846 | gain=+20.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,181 | gain=+6.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,493 | gain=+6.5% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,971 | gain=+12.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,043 | gain=-13.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,846 | gain=+20.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,173 | gain=+6.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,493 | gain=+6.5% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,971 | gain=+12.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,043 | gain=-13.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,846 | gain=+20.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,173 | gain=+6.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,493 | gain=+6.5% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,971 | gain=+12.7% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,043 | gain=-13.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,846 | gain=+20.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,173 | gain=+6.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,493 | gain=+6.5% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,033 | gain=+9.3% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,800 | gain=-12.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,846 | gain=+20.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,173 | gain=+6.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,348 | gain=+3.2% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,033 | gain=+9.3% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,800 | gain=-12.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,846 | gain=+20.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,173 | gain=+6.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,348 | gain=+3.2% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,033 | gain=+9.3% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,800 | gain=-12.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,557 | gain=+2.1% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,173 | gain=+6.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,348 | gain=+3.2% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,033 | gain=+9.3% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,800 | gain=-12.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,557 | gain=+2.1% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,586 | gain=+9.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,348 | gain=+3.2% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,033 | gain=+9.3% | peak=$32,180 | dd=+0%
+[15:06:19] Monitor alive | 1350 checks | 8 open | next in 5s
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,800 | gain=-12.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,557 | gain=+2.1% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,586 | gain=+9.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,348 | gain=+3.2% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,033 | gain=+9.3% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$46,800 | gain=-12.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,557 | gain=+2.1% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,586 | gain=+9.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$36,348 | gain=+3.2% | peak=$38,242 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,888 | gain=+12.4% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,362 | gain=-11.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,557 | gain=+2.1% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,586 | gain=+9.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$38,952 | gain=+10.6% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,888 | gain=+12.4% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,362 | gain=-11.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,463 | gain=+1.9% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,586 | gain=+9.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$38,952 | gain=+10.6% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,888 | gain=+12.4% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,362 | gain=-11.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,463 | gain=+1.9% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$13,586 | gain=+9.3% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$38,952 | gain=+10.6% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,888 | gain=+12.4% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,362 | gain=-11.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,463 | gain=+1.9% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,292 | gain=+15.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$38,952 | gain=+10.6% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,888 | gain=+12.4% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,362 | gain=-11.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,463 | gain=+1.9% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,292 | gain=+15.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$38,952 | gain=+10.6% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,888 | gain=+12.4% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,695 | gain=-16.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,463 | gain=+1.9% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,292 | gain=+15.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$38,952 | gain=+10.6% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,378 | gain=+14.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,695 | gain=-16.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$46,463 | gain=+1.9% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,292 | gain=+15.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,099 | gain=+5.4% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,378 | gain=+14.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,695 | gain=-16.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$48,904 | gain=+7.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,292 | gain=+15.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,099 | gain=+5.4% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,378 | gain=+14.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,695 | gain=-16.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$48,904 | gain=+7.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,292 | gain=+15.0% | peak=$14,860 | dd=+0%
+  BIRD: mcap=$37,099 | gain=+5.4% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,378 | gain=+14.2% | peak=$32,180 | dd=+0%
+[15:07:20] Monitor alive | 1361 checks | 8 open | next in 5s
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,695 | gain=-16.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$48,904 | gain=+7.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,199 | gain=+30.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$37,099 | gain=+5.4% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,378 | gain=+14.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$44,695 | gain=-16.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$48,904 | gain=+7.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,199 | gain=+30.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$37,099 | gain=+5.4% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,378 | gain=+14.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$49,751 | gain=-6.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$48,904 | gain=+7.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,199 | gain=+30.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$37,099 | gain=+5.4% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,731 | gain=+11.8% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$49,751 | gain=-6.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$48,904 | gain=+7.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,199 | gain=+30.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$38,755 | gain=+10.1% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,731 | gain=+11.8% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$49,751 | gain=-6.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,206 | gain=+12.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,199 | gain=+30.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$38,755 | gain=+10.1% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,731 | gain=+11.8% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$49,751 | gain=-6.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,206 | gain=+12.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,199 | gain=+30.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$38,755 | gain=+10.1% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,731 | gain=+11.8% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$49,751 | gain=-6.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,206 | gain=+12.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,117 | gain=+21.6% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$38,755 | gain=+10.1% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,731 | gain=+11.8% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$49,751 | gain=-6.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,206 | gain=+12.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,117 | gain=+21.6% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$38,755 | gain=+10.1% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,731 | gain=+11.8% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,797 | gain=-8.3% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,206 | gain=+12.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,117 | gain=+21.6% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$38,755 | gain=+10.1% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,300 | gain=+3.0% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,797 | gain=-8.3% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$51,206 | gain=+12.3% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,117 | gain=+21.6% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$36,555 | gain=+3.8% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,300 | gain=+3.0% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,797 | gain=-8.3% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,109 | gain=+16.5% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,117 | gain=+21.6% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$36,555 | gain=+3.8% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,300 | gain=+3.0% | peak=$32,180 | dd=+0%
+[15:08:22] Monitor alive | 1372 checks | 8 open | next in 5s
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,797 | gain=-8.3% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,109 | gain=+16.5% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,117 | gain=+21.6% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$36,555 | gain=+3.8% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,300 | gain=+3.0% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,797 | gain=-8.3% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,109 | gain=+16.5% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,953 | gain=+20.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$36,555 | gain=+3.8% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$28,300 | gain=+3.0% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,797 | gain=-8.3% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,109 | gain=+16.5% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,953 | gain=+20.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$36,555 | gain=+3.8% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,428 | gain=+7.1% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,771 | gain=-10.2% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,109 | gain=+16.5% | peak=$54,846 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,953 | gain=+20.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$36,555 | gain=+3.8% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,428 | gain=+7.1% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,771 | gain=-10.2% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,075 | gain=+20.8% | peak=$55,075 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,953 | gain=+20.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$38,681 | gain=+9.9% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,428 | gain=+7.1% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,771 | gain=-10.2% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,075 | gain=+20.8% | peak=$55,075 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,953 | gain=+20.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$38,681 | gain=+9.9% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,428 | gain=+7.1% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,771 | gain=-10.2% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,075 | gain=+20.8% | peak=$55,075 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$14,953 | gain=+20.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$38,681 | gain=+9.9% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,428 | gain=+7.1% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,771 | gain=-10.2% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,075 | gain=+20.8% | peak=$55,075 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,114 | gain=+21.6% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$38,681 | gain=+9.9% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,428 | gain=+7.1% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,771 | gain=-10.2% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,075 | gain=+20.8% | peak=$55,075 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,114 | gain=+21.6% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$38,681 | gain=+9.9% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,844 | gain=+8.6% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,175 | gain=-5.7% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,075 | gain=+20.8% | peak=$55,075 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,114 | gain=+21.6% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$38,681 | gain=+9.9% | peak=$38,952 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,844 | gain=+8.6% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,175 | gain=-5.7% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,432 | gain=+19.4% | peak=$55,075 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,114 | gain=+21.6% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$40,100 | gain=+13.9% | peak=$40,100 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,844 | gain=+8.6% | peak=$32,180 | dd=+0%
+[15:09:24] Monitor alive | 1383 checks | 8 open | next in 5s
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,175 | gain=-5.7% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,432 | gain=+19.4% | peak=$55,075 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,114 | gain=+21.6% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$40,100 | gain=+13.9% | peak=$40,100 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,844 | gain=+8.6% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,175 | gain=-5.7% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,432 | gain=+19.4% | peak=$55,075 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,114 | gain=+21.6% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$40,100 | gain=+13.9% | peak=$40,100 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,844 | gain=+8.6% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,175 | gain=-5.7% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,432 | gain=+19.4% | peak=$55,075 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,026 | gain=+28.9% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$40,100 | gain=+13.9% | peak=$40,100 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$29,844 | gain=+8.6% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,008 | gain=-6.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,432 | gain=+19.4% | peak=$55,075 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,026 | gain=+28.9% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$40,100 | gain=+13.9% | peak=$40,100 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,859 | gain=+12.3% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,008 | gain=-6.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,432 | gain=+19.4% | peak=$55,075 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,026 | gain=+28.9% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$40,100 | gain=+13.9% | peak=$40,100 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,859 | gain=+12.3% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,008 | gain=-6.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,677 | gain=+22.1% | peak=$55,677 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,026 | gain=+28.9% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$40,432 | gain=+14.8% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,859 | gain=+12.3% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,008 | gain=-6.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,677 | gain=+22.1% | peak=$55,677 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,026 | gain=+28.9% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$40,432 | gain=+14.8% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,859 | gain=+12.3% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,008 | gain=-6.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,677 | gain=+22.1% | peak=$55,677 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,026 | gain=+28.9% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$40,432 | gain=+14.8% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,859 | gain=+12.3% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,008 | gain=-6.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,677 | gain=+22.1% | peak=$55,677 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,204 | gain=+22.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$40,432 | gain=+14.8% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,289 | gain=+10.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,897 | gain=-10.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,677 | gain=+22.1% | peak=$55,677 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,204 | gain=+22.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$40,432 | gain=+14.8% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,289 | gain=+10.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,897 | gain=-10.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,710 | gain=+22.2% | peak=$55,710 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,204 | gain=+22.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$40,432 | gain=+14.8% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,289 | gain=+10.2% | peak=$32,180 | dd=+0%
+[15:10:25] Monitor alive | 1394 checks | 8 open | next in 5s
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,897 | gain=-10.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,710 | gain=+22.2% | peak=$55,710 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,204 | gain=+22.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$38,772 | gain=+10.1% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,289 | gain=+10.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,897 | gain=-10.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,710 | gain=+22.2% | peak=$55,710 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,204 | gain=+22.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$38,772 | gain=+10.1% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,289 | gain=+10.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,897 | gain=-10.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,710 | gain=+22.2% | peak=$55,710 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,204 | gain=+22.3% | peak=$16,199 | dd=+0%
+  BIRD: mcap=$38,772 | gain=+10.1% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,289 | gain=+10.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$47,897 | gain=-10.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,710 | gain=+22.2% | peak=$55,710 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$17,404 | gain=+40.0% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$38,772 | gain=+10.1% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,551 | gain=+11.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,672 | gain=-8.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$55,710 | gain=+22.2% | peak=$55,710 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$17,404 | gain=+40.0% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$38,772 | gain=+10.1% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,551 | gain=+11.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,672 | gain=-8.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$56,163 | gain=+23.2% | peak=$56,163 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$17,404 | gain=+40.0% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$38,772 | gain=+10.1% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,551 | gain=+11.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,672 | gain=-8.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$56,163 | gain=+23.2% | peak=$56,163 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$17,404 | gain=+40.0% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$40,251 | gain=+14.3% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,551 | gain=+11.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,672 | gain=-8.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$56,163 | gain=+23.2% | peak=$56,163 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$17,404 | gain=+40.0% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$40,251 | gain=+14.3% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,551 | gain=+11.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,672 | gain=-8.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$56,163 | gain=+23.2% | peak=$56,163 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$17,404 | gain=+40.0% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$40,251 | gain=+14.3% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,551 | gain=+11.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,672 | gain=-8.5% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$56,163 | gain=+23.2% | peak=$56,163 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,653 | gain=+34.0% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$40,251 | gain=+14.3% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,796 | gain=+12.1% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,945 | gain=-8.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$56,163 | gain=+23.2% | peak=$56,163 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,653 | gain=+34.0% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$40,251 | gain=+14.3% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,796 | gain=+12.1% | peak=$32,180 | dd=+0%
+[15:11:26] Monitor alive | 1405 checks | 8 open | next in 5s
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,945 | gain=-8.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$57,330 | gain=+25.8% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,653 | gain=+34.0% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$40,251 | gain=+14.3% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,796 | gain=+12.1% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,945 | gain=-8.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$57,330 | gain=+25.8% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,653 | gain=+34.0% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$38,216 | gain=+8.5% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,796 | gain=+12.1% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,945 | gain=-8.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$57,330 | gain=+25.8% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,653 | gain=+34.0% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$38,216 | gain=+8.5% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,796 | gain=+12.1% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,945 | gain=-8.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$57,330 | gain=+25.8% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,653 | gain=+34.0% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$38,216 | gain=+8.5% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$30,796 | gain=+12.1% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,945 | gain=-8.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$57,330 | gain=+25.8% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,523 | gain=+32.9% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$38,216 | gain=+8.5% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,049 | gain=+13.0% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,845 | gain=-2.6% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$57,330 | gain=+25.8% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,523 | gain=+32.9% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$38,216 | gain=+8.5% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,049 | gain=+13.0% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,845 | gain=-2.6% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$56,840 | gain=+24.7% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,523 | gain=+32.9% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$39,873 | gain=+13.2% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,049 | gain=+13.0% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,845 | gain=-2.6% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$56,840 | gain=+24.7% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,523 | gain=+32.9% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$39,873 | gain=+13.2% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,049 | gain=+13.0% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,845 | gain=-2.6% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$56,840 | gain=+24.7% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,523 | gain=+32.9% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$39,873 | gain=+13.2% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,049 | gain=+13.0% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,845 | gain=-2.6% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$56,840 | gain=+24.7% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,523 | gain=+32.9% | peak=$17,404 | dd=+0%
+  BIRD: mcap=$39,873 | gain=+13.2% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,049 | gain=+13.0% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,845 | gain=-2.6% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$56,840 | gain=+24.7% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$17,431 | gain=+40.2% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$39,873 | gain=+13.2% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,324 | gain=+14.0% | peak=$32,180 | dd=+0%
+[15:12:28] Monitor alive | 1416 checks | 8 open | next in 5s
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$52,688 | gain=-1.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$56,840 | gain=+24.7% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$17,431 | gain=+40.2% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$39,873 | gain=+13.2% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,324 | gain=+14.0% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$52,688 | gain=-1.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,209 | gain=+16.7% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$17,431 | gain=+40.2% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$38,979 | gain=+10.7% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,324 | gain=+14.0% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$52,688 | gain=-1.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,209 | gain=+16.7% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$17,431 | gain=+40.2% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$38,979 | gain=+10.7% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,324 | gain=+14.0% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$52,688 | gain=-1.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,209 | gain=+16.7% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$17,431 | gain=+40.2% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$38,979 | gain=+10.7% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,324 | gain=+14.0% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$52,688 | gain=-1.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,209 | gain=+16.7% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$17,431 | gain=+40.2% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$38,979 | gain=+10.7% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,324 | gain=+14.0% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,549 | gain=-8.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,209 | gain=+16.7% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,560 | gain=+33.2% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$38,979 | gain=+10.7% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,923 | gain=+16.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,549 | gain=-8.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,209 | gain=+16.7% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,560 | gain=+33.2% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$38,979 | gain=+10.7% | peak=$40,432 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,923 | gain=+16.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,549 | gain=-8.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,382 | gain=+17.1% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,560 | gain=+33.2% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,341 | gain=+20.3% | peak=$42,341 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,923 | gain=+16.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,549 | gain=-8.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,382 | gain=+17.1% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,560 | gain=+33.2% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,341 | gain=+20.3% | peak=$42,341 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,923 | gain=+16.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,549 | gain=-8.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,382 | gain=+17.1% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,560 | gain=+33.2% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,341 | gain=+20.3% | peak=$42,341 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,923 | gain=+16.2% | peak=$32,180 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$48,549 | gain=-8.8% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,382 | gain=+17.1% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$16,560 | gain=+33.2% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,341 | gain=+20.3% | peak=$42,341 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$31,923 | gain=+16.2% | peak=$32,180 | dd=+0%
+[15:13:29] Monitor alive | 1427 checks | 8 open | next in 5s
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,100 | gain=-4.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,382 | gain=+17.1% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,746 | gain=+26.7% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,341 | gain=+20.3% | peak=$42,341 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$33,641 | gain=+22.4% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,100 | gain=-4.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,382 | gain=+17.1% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,746 | gain=+26.7% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,341 | gain=+20.3% | peak=$42,341 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$33,641 | gain=+22.4% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,100 | gain=-4.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,222 | gain=+19.0% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,746 | gain=+26.7% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,647 | gain=+21.1% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$33,641 | gain=+22.4% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,100 | gain=-4.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,222 | gain=+19.0% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,746 | gain=+26.7% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,647 | gain=+21.1% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$33,641 | gain=+22.4% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,100 | gain=-4.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,222 | gain=+19.0% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,746 | gain=+26.7% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,647 | gain=+21.1% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$33,641 | gain=+22.4% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,100 | gain=-4.0% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,222 | gain=+19.0% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,746 | gain=+26.7% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,647 | gain=+21.1% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,356 | gain=+17.8% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,883 | gain=-4.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,222 | gain=+19.0% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,738 | gain=+26.6% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,647 | gain=+21.1% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,356 | gain=+17.8% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,883 | gain=-4.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,222 | gain=+19.0% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,738 | gain=+26.6% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,647 | gain=+21.1% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,356 | gain=+17.8% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,883 | gain=-4.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,939 | gain=+18.3% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,738 | gain=+26.6% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,590 | gain=+21.0% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,356 | gain=+17.8% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,883 | gain=-4.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,939 | gain=+18.3% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,738 | gain=+26.6% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,590 | gain=+21.0% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,356 | gain=+17.8% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,883 | gain=-4.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,939 | gain=+18.3% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,738 | gain=+26.6% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,590 | gain=+21.0% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,356 | gain=+17.8% | peak=$33,641 | dd=+0%
+[15:14:30] Monitor alive | 1438 checks | 8 open | next in 5s
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,883 | gain=-4.4% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,939 | gain=+18.3% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,738 | gain=+26.6% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,590 | gain=+21.0% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,435 | gain=+18.0% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$52,185 | gain=-1.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,939 | gain=+18.3% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,459 | gain=+24.4% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$42,590 | gain=+21.0% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,435 | gain=+18.0% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$52,185 | gain=-1.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$53,939 | gain=+18.3% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,459 | gain=+24.4% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$41,836 | gain=+18.8% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,435 | gain=+18.0% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$52,185 | gain=-1.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,408 | gain=+19.4% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,459 | gain=+24.4% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$41,836 | gain=+18.8% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,435 | gain=+18.0% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$52,185 | gain=-1.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,408 | gain=+19.4% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,459 | gain=+24.4% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$41,836 | gain=+18.8% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,435 | gain=+18.0% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$52,185 | gain=-1.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,408 | gain=+19.4% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,459 | gain=+24.4% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$41,836 | gain=+18.8% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,435 | gain=+18.0% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$52,185 | gain=-1.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,408 | gain=+19.4% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,459 | gain=+24.4% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$41,836 | gain=+18.8% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,565 | gain=+18.5% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,804 | gain=-2.6% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,408 | gain=+19.4% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,215 | gain=+22.4% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$41,836 | gain=+18.8% | peak=$42,647 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,565 | gain=+18.5% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,804 | gain=-2.6% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,408 | gain=+19.4% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,215 | gain=+22.4% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$43,409 | gain=+23.3% | peak=$43,409 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,565 | gain=+18.5% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,804 | gain=-2.6% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,763 | gain=+20.1% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,215 | gain=+22.4% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$43,409 | gain=+23.3% | peak=$43,409 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,565 | gain=+18.5% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,804 | gain=-2.6% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,763 | gain=+20.1% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,215 | gain=+22.4% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$43,409 | gain=+23.3% | peak=$43,409 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,565 | gain=+18.5% | peak=$33,641 | dd=+0%
+[15:15:32] Monitor alive | 1449 checks | 8 open | next in 5s
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$51,804 | gain=-2.6% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,763 | gain=+20.1% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,215 | gain=+22.4% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$43,409 | gain=+23.3% | peak=$43,409 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,565 | gain=+18.5% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,092 | gain=-5.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,763 | gain=+20.1% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,215 | gain=+22.4% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$43,409 | gain=+23.3% | peak=$43,409 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,568 | gain=+18.5% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,092 | gain=-5.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$54,763 | gain=+20.1% | peak=$57,330 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,350 | gain=+23.5% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$43,409 | gain=+23.3% | peak=$43,409 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,568 | gain=+18.5% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,092 | gain=-5.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$58,356 | gain=+28.0% | peak=$58,356 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,350 | gain=+23.5% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$43,184 | gain=+22.7% | peak=$43,409 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,568 | gain=+18.5% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,092 | gain=-5.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$58,356 | gain=+28.0% | peak=$58,356 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,350 | gain=+23.5% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$43,184 | gain=+22.7% | peak=$43,409 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,568 | gain=+18.5% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,092 | gain=-5.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$58,356 | gain=+28.0% | peak=$58,356 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,350 | gain=+23.5% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$43,184 | gain=+22.7% | peak=$43,409 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,568 | gain=+18.5% | peak=$33,641 | dd=+0%
+  Oto: mcap=$20,963 | gain=+2.8% | peak=$22,373 | dd=+0%
+  VDOR: mcap=$50,092 | gain=-5.9% | peak=$56,510 | dd=+0%
+  BIRD: mcap=$58,356 | gain=+28.0% | peak=$58,356 | dd=+0%
+  BTC-Jr: mcap=$13,344 | gain=+0.0% | peak=$13,344 | dd=+0%
+  BFH: mcap=$15,350 | gain=+23.5% | peak=$17,431 | dd=+0%
+  BIRD: mcap=$43,184 | gain=+22.7% | peak=$43,409 | dd=+0%
+  Supercoin: mcap=$22,460 | gain=+4.6% | peak=$22,460 | dd=+0%
+  IMOR: mcap=$32,568 | gain=+18.5% | peak=$33,641 | dd=+0%
