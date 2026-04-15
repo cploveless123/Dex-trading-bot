@@ -218,6 +218,10 @@ def scan_token(token_data, reason_if_fail=None):
     if h1 < H1_MOMENTUM_MIN and h24 < H24_MOMENTUM_MIN:
         return None, f"no momentum h1={h1:+.1f}% 24h={h24:+.1f}%"
 
+    # Fallen Giant: h1 > 350% AND mcap < $25K = already pumped and crashed
+    if h1 > 350 and mcap < 25000:
+        return None, f"Fallen giant: h1={h1:.0f}% + mcap=${mcap:,.0f} < $25K"
+
     # chg1 check (no falling knife)
     chg1 = float(token_data.get('price_change_percent1m', 0) or 0)
     if chg1 < CHG1_MIN:
@@ -663,6 +667,7 @@ def main():
     print(f"  Mcap $6K-$55K | Age 3-90min | Holders ≥15")
     print(f"  Dip 5-45% | chg5>+20% pump rule | chg5>+2% normal entry")
     print(f"  Cooldown: 45s young/older+momentum | 30s base | 15s deterioration rechecks")
+    print(f"  Fallen Giant: h1 >350% + mcap <$25K → REJECT")
     print(f"  Exit: TP1+50%H TP2+100%sell35% TP3+200%sell30% TP4+300%sell20% TP5+1000%sell15% Stop-30%")
     print(f"  MAX_OPEN: {MAX_OPEN_POSITIONS} | SIZE: {POSITION_SIZE} SOL | pump.fun/raydium/pumpswap ONLY")
     
