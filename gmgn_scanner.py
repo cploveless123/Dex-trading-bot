@@ -612,6 +612,7 @@ def scan_cycle():
             print(f"   [BUY_CHG1] {result['token']}: chg1 recovered | BUY!")
             buy_token(addr, result)
             to_remove.append(addr)
+            send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 CHG1 recovery path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -629,16 +630,17 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # 45s done - verify chg1 >= -5% AND chg5 >= +2%
-            if chg1 >= -5 and chg5 >= MIN_CHG5_FOR_BUY:
-                print(f"   [BUY_YOUNG] {result['token']}: chg1={chg1:+.1f}% >= -5% + chg5={chg5:+.1f}% >= +2% | BUY!")
+            # 45s done - verify chg1 > chg1_prev + 3%
+            chg1_threshold = chg1_prev + 3
+            if chg1 >= chg1_threshold:
+                print(f"   [BUY_YOUNG] {result['token']}: chg1={chg1:+.1f}% > {chg1_threshold:+.1f}% from last | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
                 send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Young cooldown path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
             else:
                 data['state'] = STATE_BASE_WAIT
                 data['cooldown_end'] = now + 30
-                print(f"   [YOUNG_NOT_READY] {result['token']}: chg1={chg1:.1f}% chg5={chg5:.1f}% | base recheck")
+                print(f"   [YOUNG_NOT_READY] {result['token']}: chg1={chg1:.1f}% < {chg1_threshold:+.1f}% | base recheck")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -655,15 +657,16 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            if chg1 >= -5 and chg5 >= MIN_CHG5_FOR_BUY:
-                print(f"   [BUY_OLDER] {result['token']}: chg1={chg1:+.1f}% >= -5% + chg5={chg5:+.1f}% >= +2% | BUY!")
+            # 45s done - verify chg1 >= +2%
+            if chg1 >= 2:
+                print(f"   [BUY_OLDER] {result['token']}: chg1={chg1:+.1f}% >= +2% | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
                 send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Older cooldown path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
             else:
                 data['state'] = STATE_BASE_WAIT
                 data['cooldown_end'] = now + 30
-                print(f"   [OLDER_NOT_READY] {result['token']}: chg1={chg1:.1f}% chg5={chg5:.1f}% | base recheck")
+                print(f"   [OLDER_NOT_READY] {result['token']}: chg1={chg1:.1f}% < +2% | base recheck")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
