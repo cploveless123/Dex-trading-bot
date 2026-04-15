@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-GMGN Scanner v7.1 - Wilson Bot
-Added: GMGN throttle management with exponential backoff + per-endpoint tracking
+GMGN Scanner v7.2 - Wilson Bot
+v7.2: MAX_H1 250%, MIN_DIP 20%, Fallen Giant h1>400+mcap<20K, symbol blacklist, throttle alerts
 """
 
 import json, time, subprocess
@@ -694,9 +694,9 @@ def cleanup_rejected():
 
 # === MAIN ===
 def main():
-    print("GMGN Scanner v7.1 Started")
+    print("GMGN Scanner v7.2 Started")
     print("  Throttle management: exponential backoff + per-endpoint tracking")
-    print("  Mcap $6K-$60K | Dip 2-45% | chg5 > +2% to buy | 2 consecutive verify | Pump rule chg1>5%")
+    print("  Mcap $6K-$60K | Dip 20-45% | h1 ≤250% | Holders ≥20 | Symbol blacklist | GMGN/Dex throttle alerts")
     
     load_blacklist()
     while True:
