@@ -20314,3 +20314,72 @@ Checking every 5s
   Brrr: mcap=$15,646 | gain=+65.7% | peak=$21,625 | dd=-7%
   CLAVICULAR: mcap=$10,003 | gain=+7.0% | peak=$13,501 | dd=+0%
   DRAW: mcap=$11,716 | gain=-2.3% | peak=$14,266 | dd=+0%
+  Brrr: mcap=$15,646 | gain=+65.7% | peak=$21,625 | dd=-7%
+  CLAVICULAR: mcap=$10,003 | gain=+7.0% | peak=$13,501 | dd=+0%
+  DRAW: mcap=$11,716 | gain=-2.3% | peak=$14,266 | dd=+0%
+  Brrr: mcap=$15,646 | gain=+65.7% | peak=$21,625 | dd=-7%
+  CLAVICULAR: mcap=$10,003 | gain=+7.0% | peak=$13,501 | dd=+0%
+  DRAW: mcap=$11,716 | gain=-2.3% | peak=$14,266 | dd=+0%
+  Brrr: mcap=$14,310 | gain=+51.6% | peak=$21,625 | dd=+2%
+  CLAVICULAR: mcap=$9,874 | gain=+5.6% | peak=$13,501 | dd=+0%
+  DRAW: mcap=$11,716 | gain=-2.3% | peak=$14,266 | dd=+0%
+  Brrr: mcap=$14,310 | gain=+51.6% | peak=$21,625 | dd=+2%
+  CLAVICULAR: mcap=$9,874 | gain=+5.6% | peak=$13,501 | dd=+0%
+  DRAW: mcap=$11,716 | gain=-2.3% | peak=$14,266 | dd=+0%
+[02:08:06] Monitor alive | 3385 checks | 2 open | next in 5s
+  Brrr: mcap=$14,310 | gain=+51.6% | peak=$21,625 | dd=+2%
+  CLAVICULAR: mcap=$9,874 | gain=+5.6% | peak=$13,501 | dd=+0%
+  DRAW: mcap=$11,716 | gain=-2.3% | peak=$14,266 | dd=+0%
+  Brrr: mcap=$14,310 | gain=+51.6% | peak=$21,625 | dd=+2%
+  CLAVICULAR: mcap=$9,874 | gain=+5.6% | peak=$13,501 | dd=+0%
+[STOP_LOSS] Alert sent
+🔴 DRAW STOP LOSS @ $2,509 (-79.1%)
+  Brrr: mcap=$14,310 | gain=+51.6% | peak=$21,625 | dd=+2%
+  CLAVICULAR: mcap=$9,874 | gain=+5.6% | peak=$13,501 | dd=+0%
+  Brrr: mcap=$14,310 | gain=+51.6% | peak=$21,625 | dd=+2%
+[TP1_HOLD] Alert sent
+🚀 CLAVICULAR TP1 HIT - HOLDING @ $15,338 (+64.1%)
+  Brrr: mcap=$14,360 | gain=+52.1% | peak=$21,625 | dd=+1%
+  CLAVICULAR: mcap=$15,338 | gain=+64.1% | peak=$15,338 | dd=+0%
+  Brrr: mcap=$14,360 | gain=+52.1% | peak=$21,625 | dd=+1%
+  CLAVICULAR: mcap=$15,338 | gain=+64.1% | peak=$15,338 | dd=+0%
+  Brrr: mcap=$14,360 | gain=+52.1% | peak=$21,625 | dd=+1%
+  CLAVICULAR: mcap=$15,338 | gain=+64.1% | peak=$15,338 | dd=+0%
+  Brrr: mcap=$14,360 | gain=+52.1% | peak=$21,625 | dd=+1%
+  CLAVICULAR: mcap=$15,338 | gain=+64.1% | peak=$15,338 | dd=+0%
+  Brrr: mcap=$14,360 | gain=+52.1% | peak=$21,625 | dd=+1%
+  CLAVICULAR: mcap=$15,338 | gain=+64.1% | peak=$15,338 | dd=+0%
+[TRAILING_STOP] Alert sent
+✅ Brrr TRAILING STOP @ $11,366 (47% drop from peak)
+  CLAVICULAR: mcap=$13,065 | gain=+39.7% | peak=$15,338 | dd=+15%
+  CLAVICULAR: mcap=$13,065 | gain=+39.7% | peak=$15,338 | dd=+15%
+  CLAVICULAR: mcap=$13,065 | gain=+39.7% | peak=$15,338 | dd=+15%
+[02:09:09] Monitor alive | 3397 checks | 1 open | next in 5s
+  CLAVICULAR: mcap=$13,065 | gain=+39.7% | peak=$15,338 | dd=+15%
+  CLAVICULAR: mcap=$13,065 | gain=+39.7% | peak=$15,338 | dd=+15%
+  CLAVICULAR: mcap=$13,065 | gain=+39.7% | peak=$15,338 | dd=+15%
+  CLAVICULAR: mcap=$13,882 | gain=+48.5% | peak=$15,338 | dd=+9%
+  CLAVICULAR: mcap=$13,882 | gain=+48.5% | peak=$15,338 | dd=+9%
+  CLAVICULAR: mcap=$13,882 | gain=+48.5% | peak=$15,338 | dd=+9%
+  CLAVICULAR: mcap=$13,882 | gain=+48.5% | peak=$15,338 | dd=+9%
+  CLAVICULAR: mcap=$13,882 | gain=+48.5% | peak=$15,338 | dd=+9%
+  CLAVICULAR: mcap=$13,882 | gain=+48.5% | peak=$15,338 | dd=+9%
+  CLAVICULAR: mcap=$16,014 | gain=+71.3% | peak=$16,014 | dd=-4%
+  CLAVICULAR: mcap=$16,014 | gain=+71.3% | peak=$16,014 | dd=-4%
+  CLAVICULAR: mcap=$16,014 | gain=+71.3% | peak=$16,014 | dd=-4%
+[02:10:10] Monitor alive | 3409 checks | 1 open | next in 5s
+  CLAVICULAR: mcap=$16,014 | gain=+71.3% | peak=$16,014 | dd=-4%
+  CLAVICULAR: mcap=$16,014 | gain=+71.3% | peak=$16,014 | dd=-4%
+  CLAVICULAR: mcap=$16,014 | gain=+71.3% | peak=$16,014 | dd=-4%
+  CLAVICULAR: mcap=$17,910 | gain=+91.6% | peak=$17,910 | dd=-17%
+  CLAVICULAR: mcap=$17,910 | gain=+91.6% | peak=$17,910 | dd=-17%
+  CLAVICULAR: mcap=$17,910 | gain=+91.6% | peak=$17,910 | dd=-17%
+  CLAVICULAR: mcap=$17,910 | gain=+91.6% | peak=$17,910 | dd=-17%
+  CLAVICULAR: mcap=$17,910 | gain=+91.6% | peak=$17,910 | dd=-17%
+  CLAVICULAR: mcap=$17,910 | gain=+91.6% | peak=$17,910 | dd=-17%
+[TP2] Alert sent
+✅ CLAVICULAR TP2 HIT @ $19,222 (+106%)
+  CLAVICULAR: mcap=$19,222 | gain=+105.6% | peak=$19,222 | dd=-25%
+  CLAVICULAR: mcap=$19,222 | gain=+105.6% | peak=$19,222 | dd=-25%
+[02:11:11] Monitor alive | 3421 checks | 0 open | next in 5s
+  CLAVICULAR: mcap=$19,222 | gain=+105.6% | peak=$19,222 | dd=-25%
