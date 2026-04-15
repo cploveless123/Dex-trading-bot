@@ -287,7 +287,7 @@ def scan_token(token_data, reason_if_fail=None):
             return None, f"BS {bs_ratio:.2f} too low"
         
         # Build result
-        pump_triggered = chg5 >= PUMP_CHG5_THRESHOLD
+        pump_triggered = chg1 >= PUMP_CHG1_THRESHOLD
         
         result = {
             'token': token_data.get('symbol', '?'),
