@@ -360,6 +360,23 @@ def scan_token(token_data, reason_if_fail=None):
         elif bs_ratio > 0 and bs_ratio < (BS_RATIO_NEW if mc < 30000 else BS_RATIO_OLD):
             return None, f"BS {bs_ratio:.2f} too low"
         
+        # Pair address check for pump/pumpswap - must not be "none"
+        if launchpad in ['pump', 'pumpswap']:
+            if pair_address in ['none', '', 'None', None]:
+                return None, f"pair_address {pair_address} not valid for pump token"
+            if not pair_address.endswith('pump'):
+                return None, f"pair_address doesn't end in 'pump'"
+        
+        # ATH protection - reject tokens > $25K mcap with no ATH data
+        ath_mcap = float(token_data.get('history_highest_market_cap', 0) or 0)
+        if mc > 25000 and ath_mcap <= 0:
+            return None, f"no ATH data for mcap ${mc:,.0f}"
+        
+        # ATH distance check - reject if current mcap is more than 55% below ATH
+        # i.e., current mcap must be >= 45% of ATH
+        if ath_mcap > 0 and mc < ath_mcap * 0.45:
+            return None, f"mcap ${mc:,.0f} >55% below ATH ${ath_mcap:,.0f}"
+        
         # Build result
         pump_triggered = chg1 > PUMP_CHG1_THRESHOLD
         
@@ -375,6 +392,7 @@ def scan_token(token_data, reason_if_fail=None):
             'bs_ratio': bs_ratio,
             'launchpad': launchpad,
             'pair_address': pair_address,
+            'ath_mcap': ath_mcap,  # Store ATH for reference
             'pump_rule_triggered': pump_triggered,
             'entry_price': float(token_data.get('price', 0) or 0),
             'age_sec': int(time.time() - token_data.get('creation_timestamp', 0)) if token_data.get('creation_timestamp') else 0,
@@ -426,11 +444,14 @@ def buy_token(addr, result):
     if get_open_position_count() >= MAX_OPEN_POSITIONS:
         return False
     
-    # IRONCLAD: Verify pair_address for pump/pumpswap - must end in "pump"
+    # IRONCLAD: Verify pair_address for pump/pumpswap - must end in "pump" and not be "none"
     launchpad = str(result.get('launchpad', '')).lower().strip()
     pair_address = str(result.get('pair_address', '')).lower().strip()
     
-    if launchpad in ['pump', 'pumpswap'] and pair_address:
+    if launchpad in ['pump', 'pumpswap']:
+        if pair_address in ['none', '']:
+            send_alert(f"🚫 BUY BLOCKED: {result.get('token')} pair_address is '{pair_address}'")
+            return False
         if not pair_address.endswith('pump'):
             send_alert(f"🚫 BUY BLOCKED: {result.get('token')} pair_address doesn't end in 'pump'")
             return False

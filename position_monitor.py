@@ -66,7 +66,31 @@ def get_positions():
     return positions
 
 def sell_token(addr, token_name, quantity, price, reason):
-    """Record a sell"""
+    """Record a sell - prevents duplicate sells"""
+    # Check if we already sold this token recently (within last 60s)
+    recent_sells = []
+    try:
+        with open(TRADES_FILE) as f:
+            for line in f:
+                if not line.strip():
+                    continue
+                t = json.loads(line)
+                if t.get('token_address') == addr and t.get('action') == 'SELL':
+                    recent_sells.append(t)
+    except:
+        pass
+    
+    # If we have a recent sell for this token, skip
+    now = datetime.now(timezone.utc)
+    for t in recent_sells:
+        try:
+            sold_at = datetime.fromisoformat(t.get('sold_at', '2000-01-01').replace('+00:00', '+00:00'))
+            if (now - sold_at).total_seconds() < 60:
+                log(f"SKIP SELL: {token_name} already sold {t.get('sold_at')}")
+                return
+        except:
+            pass
+    
     trade = {
         'action': 'SELL',
         'token_address': addr,
@@ -97,17 +121,19 @@ def update_position_sold(addr, sell_quantity, reason):
             f.write(json.dumps(t) + '\n')
 
 def close_position(addr, reason):
-    """Close an open position"""
+    """Close an open position - only call ONCE per exit"""
     trades = []
+    found = False
     with open(TRADES_FILE) as f:
         for line in f:
             if not line.strip():
                 continue
             trade = json.loads(line)
-            if trade.get('token_address') == addr and trade.get('action') == 'BUY' and trade.get('status') == 'open':
+            if trade.get('token_address') == addr and trade.get('action') == 'BUY' and trade.get('status') == 'open' and not found:
                 trade['status'] = 'closed'
                 trade['closed_at'] = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00')
                 trade['exit_reason'] = reason
+                found = True  # Only close once
             trades.append(trade)
     with open(TRADES_FILE, 'w') as f:
         for t in trades:
@@ -134,6 +160,21 @@ def monitor_cycle():
         
         pnl_pct = ((current_price - entry_price) / entry_price) * 100
         pnl_sol = (current_price - entry_price) * position_size / entry_price
+        mcap = int(current_price / entry_price * entry_mcap) if entry_price > 0 else 0
+        
+        # Calculate current balance
+        total_pnl = 0.0
+        with open(TRADES_FILE) as f:
+            for tline in f:
+                if not tline.strip():
+                    continue
+                t = json.loads(tline)
+                if t.get('action') == 'SELL' and t.get('pnl_sol') is not None:
+                    try:
+                        total_pnl += float(t['pnl_sol'])
+                    except (ValueError, TypeError):
+                        pass
+        current_balance = CHRIS_STARTING_BALANCE + total_pnl
         
         tp_status = trade.get('tp_status', {'tp1_hit': False, 'tp2_hit': False, 'tp3_hit': False, 'tp4_hit': False, 'tp5_hit': False})
         
@@ -152,25 +193,29 @@ def monitor_cycle():
         # TP1 (+50%): HOLD - watch only, 40% trailing stop
         if not tp_status['tp1_hit'] and pnl_pct >= TP1_PCT:
             tp_status['tp1_hit'] = True
-            msg = (f"🎯 TP1 HIT | {token_name}\n"
+            msg = (f"💰 TP1 HIT | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
-                   f"+{pnl_pct:.1f}% | HOLDING\n"
+                   f"+{pnl_pct:.1f}% (+{pnl_sol:.4f} SOL) | HOLDING\n"
+                   f"Balance: ${current_balance:.4f} SOL\n"
                    f"Entry mcap: ${entry_mcap:,}\n"
                    f"Current: ${mcap:,.0f}\n"
                    f"Trailing: 40% from peak\n"
                    f"🔗 https://dexscreener.com/solana/{addr}\n"
                    f"🥧 https://pump.fun/{addr}")
             alert_sender_webhook(msg)
+            # Reduce remaining position size (already sold TP1%)
+            update_position_size(addr, position_size * (1 - TP1_SELL_PCT))
         
         # TP1 trailing stop (40% from peak)
         if tp_status['tp1_hit'] and not tp_status.get('tp1_trail_hit'):
             if current_price < peak_price * (1 - TP1_TRAIL/100):
                 msg = (f"🛑 TP1 TRAIL STOP | {token_name}\n"
                        f"━━━━━━━━━━━━━━━\n"
+                       f"{pnl_pct:.1f}% ({pnl_sol:.4f} SOL) | Exited\n"
+                       f"Balance: ${current_balance:.4f} SOL\n"
                        f"Entry: ${entry_mcap:,}\n"
                        f"Peak: ${peak_price * entry_mcap / entry_price:,.0f}\n"
                        f"Exit: ${mcap:,.0f}\n"
-                       f"Final: {pnl_pct:.1f}%\n"
                        f"🔗 https://dexscreener.com/solana/{addr}")
                 alert_sender_webhook(msg)
                 close_position(addr, "TP1_TRAIL_STOP")
@@ -183,7 +228,8 @@ def monitor_cycle():
             sell_token(addr, token_name, position_size * TP2_SELL_PCT, current_price, "TP2")
             msg = (f"💰 TP2 HIT | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
-                   f"+{pnl_pct:.1f}% | Sold 40%\n"
+                   f"+{pnl_pct:.1f}% (+{pnl_sol:.4f} SOL) | Sold 40%\n"
+                   f"Balance: ${current_balance:.4f} SOL\n"
                    f"Entry mcap: ${entry_mcap:,}\n"
                    f"Current mcap: ${mcap:,.0f}\n"
                    f"Remaining: 60% | Trail 30%\n"
@@ -198,10 +244,11 @@ def monitor_cycle():
                 sell_token(addr, token_name, position_size * remaining_pct, current_price, "TP2_TRAIL_STOP")
                 msg = (f"🛑 TP2 TRAIL STOP | {token_name}\n"
                        f"━━━━━━━━━━━━━━━\n"
+                       f"{pnl_pct:.1f}% ({pnl_sol:.4f} SOL) | Exited\n"
+                       f"Balance: ${current_balance:.4f} SOL\n"
                        f"Entry: ${entry_mcap:,}\n"
                        f"Peak: ${peak_price * entry_mcap / entry_price:,.0f}\n"
                        f"Exit: ${mcap:,.0f}\n"
-                       f"Final: {pnl_pct:.1f}%\n"
                        f"🔗 https://dexscreener.com/solana/{addr}")
                 alert_sender_webhook(msg)
                 close_position(addr, "TP2_TRAIL_STOP")
@@ -214,7 +261,8 @@ def monitor_cycle():
             sell_token(addr, token_name, position_size * TP3_SELL_PCT, current_price, "TP3")
             msg = (f"💰 TP3 HIT | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
-                   f"+{pnl_pct:.1f}% | Sold 30%\n"
+                   f"+{pnl_pct:.1f}% (+{pnl_sol:.4f} SOL) | Sold 30%\n"
+                   f"Balance: ${current_balance:.4f} SOL\n"
                    f"Entry mcap: ${entry_mcap:,}\n"
                    f"Current mcap: ${mcap:,.0f}\n"
                    f"Remaining: 70% | Trail 30%\n"
@@ -230,10 +278,11 @@ def monitor_cycle():
                 sell_token(addr, token_name, position_size * remaining_pct, current_price, "TP3_TRAIL_STOP")
                 msg = (f"🛑 TP3 TRAIL STOP | {token_name}\n"
                        f"━━━━━━━━━━━━━━━\n"
+                       f"{pnl_pct:.1f}% ({pnl_sol:.4f} SOL) | Exited\n"
+                       f"Balance: ${current_balance:.4f} SOL\n"
                        f"Entry: ${entry_mcap:,}\n"
                        f"Peak: ${peak_price * entry_mcap / entry_price:,.0f}\n"
                        f"Exit: ${mcap:,.0f}\n"
-                       f"Final: {pnl_pct:.1f}%\n"
                        f"🔗 https://dexscreener.com/solana/{addr}")
                 alert_sender_webhook(msg)
                 close_position(addr, "TP3_TRAIL_STOP")
@@ -246,7 +295,8 @@ def monitor_cycle():
             sell_token(addr, token_name, position_size * TP4_SELL_PCT, current_price, "TP4")
             msg = (f"💰 TP4 HIT | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
-                   f"+{pnl_pct:.1f}% | Sold 20%\n"
+                   f"+{pnl_pct:.1f}% (+{pnl_sol:.4f} SOL) | Sold 20%\n"
+                   f"Balance: ${current_balance:.4f} SOL\n"
                    f"Entry mcap: ${entry_mcap:,}\n"
                    f"Current mcap: ${mcap:,.0f}\n"
                    f"Remaining: 80% | Trail 30%\n"
@@ -262,10 +312,11 @@ def monitor_cycle():
                 sell_token(addr, token_name, position_size * remaining_pct, current_price, "TP4_TRAIL_STOP")
                 msg = (f"🛑 TP4 TRAIL STOP | {token_name}\n"
                        f"━━━━━━━━━━━━━━━\n"
+                       f"{pnl_pct:.1f}% ({pnl_sol:.4f} SOL) | Exited\n"
+                       f"Balance: ${current_balance:.4f} SOL\n"
                        f"Entry: ${entry_mcap:,}\n"
                        f"Peak: ${peak_price * entry_mcap / entry_price:,.0f}\n"
                        f"Exit: ${mcap:,.0f}\n"
-                       f"Final: {pnl_pct:.1f}%\n"
                        f"🔗 https://dexscreener.com/solana/{addr}")
                 alert_sender_webhook(msg)
                 close_position(addr, "TP4_TRAIL_STOP")
@@ -279,7 +330,8 @@ def monitor_cycle():
             sell_token(addr, token_name, position_size * remaining_pct, current_price, "TP5")
             msg = (f"🚀🚀🚀 TP5 HIT | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
-                   f"+{pnl_pct:.1f}% | SOLD ALL\n"
+                   f"+{pnl_pct:.1f}% (+{pnl_sol:.4f} SOL) | SOLD ALL\n"
+                   f"Balance: ${current_balance:.4f} SOL\n"
                    f"Entry: ${entry_mcap:,}\n"
                    f"Exit: ${mcap:,.0f}\n"
                    f"TARGET REACHED!\n"
@@ -296,7 +348,8 @@ def monitor_cycle():
                 sell_token(addr, token_name, position_size * remaining_pct, current_price, "STOP_LOSS")
             msg = (f"🛑 STOP LOSS | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
-                   f"{pnl_pct:.1f}% | Exited all\n"
+                   f"{pnl_pct:.1f}% ({pnl_sol:.4f} SOL) | Exited all\n"
+                   f"Balance: ${current_balance:.4f} SOL\n"
                    f"Entry: ${entry_mcap:,}\n"
                    f"Exit: ${mcap:,.0f}\n"
                    f"🔗 https://dexscreener.com/solana/{addr}")
