@@ -10,7 +10,6 @@ import urllib.parse
 import time
 from pathlib import Path
 from datetime import datetime
-import pytz
 
 # Config
 BOT_TOKEN = "8767746012:AAEAUg-yCC8uZ-U2y-VBiuKS7qGm58XYQeg"
