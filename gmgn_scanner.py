@@ -442,6 +442,10 @@ def scan_cycle():
     now = time.time()
     to_remove = []
     
+    # Debug: count tokens in cooldown
+    if COOLDOWN_WATCH:
+        print(f"[DEBUG] Processing {len(COOLDOWN_WATCH)} tokens in cooldown")
+    
     # Process cooldown tokens
     for addr, data in list(COOLDOWN_WATCH.items()):
         result = data['result']
