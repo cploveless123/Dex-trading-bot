@@ -9,7 +9,7 @@ MAX_OPEN_POSITIONS = 9
 
 # === ENTRY FILTERS ===
 MIN_MCAP = 6000      # $6K floor (raised from $3K)
-MAX_MCAP = 60000     # $60K ceiling
+MAX_MCAP = 25000     # $25K ceiling (data shows >$25K = 0% WR)
 MIN_AGE_SECONDS = 120  # 2 minutes minimum
 MAX_AGE_SECONDS = 5400  # 90 minutes maximum
 MIN_5MIN_VOLUME = 1000  # 5min vol > $1K
