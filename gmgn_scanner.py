@@ -441,13 +441,15 @@ def scan_cycle():
     
     now = time.time()
     to_remove = []
+    cooldown_start = now
     
-    # Debug: count tokens in cooldown
-    if COOLDOWN_WATCH:
-        print(f"[DEBUG] Processing {len(COOLDOWN_WATCH)} tokens in cooldown")
-    
-    # Process cooldown tokens
+    # Process cooldown tokens (max 10s to avoid blocking new scans)
     for addr, data in list(COOLDOWN_WATCH.items()):
+        # Timeout: if processing cooldowns for more than 10s, stop to allow new scans
+        if time.time() - cooldown_start > 10:
+            print(f"[DEBUG] Cooldown timeout - processed {len(COOLDOWN_WATCH) - len(to_remove)} tokens")
+            break
+        
         result = data['result']
         state = data['state']
         
