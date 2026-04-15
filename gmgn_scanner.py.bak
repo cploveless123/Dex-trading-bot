@@ -21,13 +21,6 @@ STATE_PUMP_WAIT_2 = 'PUMP_WAIT_2'  # 30s wait
 STATE_PUMP_VERIFY = 'PUMP_VERIFY'   # 15s final verify
 STATE_RECOVERY_WAIT = 'RECOVERY_WAIT'  # 15s rechecks for deterioration
 STATE_POST_COOLDOWN = 'POST_COOLDOWN'  # 15s after cooldown ends
-# New cooldown states per Chris's spec:
-STATE_YOUNG_COOLDOWN = 'YOUNG_COOLDOWN'     # 45s for young (<15min) + h1>+5% + chg5>-5%
-STATE_OLDER_COOLDOWN = 'OLDER_COOLDOWN'     # 45s for older (>15min) + h1>+5% + chg5>-5%
-STATE_CHG1_RECHECK = 'CHG1_RECHECK'          # chg1 < -5%, 15s rechecks until chg1 > +5% from lowest_mcap
-STATE_CHG1_VERIFY = 'CHG1_VERIFY'            # chg1 recovered, 15s verify before buy
-STATE_BASE_COOLDOWN = 'BASE_COOLDOWN'       # 30s base for normal entries
-STATE_BASE_CHG1_CHECK = 'BASE_CHG1_CHECK'    # chg1 check before buy in base path
 
 # Cooldown tracking
 COOLDOWN_WATCH = {}  # addr -> {state, cooldown_end, token_data, result, recheck_count, pump_rule_triggered, chg5_prev, h1_prev, entry_conditions}
@@ -356,27 +349,19 @@ def add_to_cooldown(addr, token_data, result, entry_chg5):
     chg5 = result.get('chg5', 0)
     pump_triggered = result.get('pump_rule_triggered', False)
     
-    # Determine initial state per Chris's spec
-    age_sec = result.get('age_sec', 0)
-    h1 = result.get('h1', 0)
-    chg5 = result.get('chg5', 0)
-    pump_triggered = result.get('pump_rule_triggered', False)
-    
+    # Determine initial state
     if pump_triggered:
         state = STATE_PUMP_WAIT_1
-        cooldown_end = time.time() + PUMP_WAIT_1
+        cooldown_end = time.time() + STATE_PUMP_WAIT_1
     elif age_sec < YOUNG_AGE_THRESHOLD and h1 > H1_MOMENTUM_MIN and chg5 > -5:
-        # Young (<15min) + h1>+5% + chg5>-5% → 45s cooldown
-        state = STATE_YOUNG_COOLDOWN
-        cooldown_end = time.time() + 45
+        state = STATE_PUMP_WAIT_1  # Use pump wait as base for young+momentum
+        cooldown_end = time.time() + YOUNG_COOLDOWN
     elif age_sec >= YOUNG_AGE_THRESHOLD and h1 > H1_MOMENTUM_MIN and chg5 > -5:
-        # Older (>15min) + h1>+5% + chg5>-5% → 45s cooldown
-        state = STATE_OLDER_COOLDOWN
-        cooldown_end = time.time() + 45
+        state = STATE_PUMP_WAIT_1  # Use pump wait as base for older+momentum
+        cooldown_end = time.time() + OLDER_COOLDOWN
     else:
-        # Otherwise → 30s base recheck
         state = STATE_BASE_WAIT
-        cooldown_end = time.time() + 30
+        cooldown_end = time.time() + NORMAL_COOLDOWN
     
     COOLDOWN_WATCH[addr] = {
         'state': state,
@@ -390,7 +375,6 @@ def add_to_cooldown(addr, token_data, result, entry_chg5):
         'age_sec': age_sec,
         'entry_chg5': entry_chg5,
         'lowest_chg5': chg5,  # Track lowest chg5 for recovery
-        'lowest_mcap': result.get('mcap', 0),  # Track lowest mcap for chg1 recovery
     }
 
 def scan_cycle():
@@ -718,9 +702,8 @@ def main():
     print(f"  Sources: trending + trenches (no pumpfun to reduce throttling)")
     print(f"  Mcap $6K-$55K | Age 3-90min | Holders ≥15")
     print(f"  Dip 5-45% | chg5>+20% pump rule | chg5>+2% normal entry")
+    print(f"  Cooldown: 45s young/older+momentum | 30s base | 15s deterioration rechecks")
     print(f"  Fallen Giant: h1 >350% + mcap <$25K → REJECT")
-    print(f"  CHG1 recovery: chg1<-5% → recheck every 15s until mcap>+5%from low → verify 15s → BUY")
-    print(f"  Entry: Young<15min+older+momentum→45s | base→30s verify chg1>+3%from last")
     print(f"  Exit: TP1+50%H TP2+100%sell35% TP3+200%sell30% TP4+300%sell20% TP5+1000%sell15% Stop-30%")
     print(f"  MAX_OPEN: {MAX_OPEN_POSITIONS} | SIZE: {POSITION_SIZE} SOL | pump.fun/raydium/pumpswap ONLY")
     
