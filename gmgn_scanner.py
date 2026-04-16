@@ -968,66 +968,43 @@ def scan_cycle():
             del STOP_LOSS_COOLDOWN[addr]
     
     # === STAGGERED GMGN SCAN (alternate trending/trenches each cycle) ===
-    global _GMGN_SCAN_CYCLE
-    _GMGN_SCAN_CYCLE += 1
-    seen = set()
-
-    # Even cycles = trending, Odd cycles = trenches
-    # This halves GMGN API calls while still covering both sources
     # PRIORITY: Process youngest tokens FIRST (lowest creation_timestamp)
     # This ensures we catch new pump.fun launches early before they pump
-    if _GMGN_SCAN_CYCLE % 2 == 0:
-        tokens = get_gmgn_trending(50)
-        # Sort by age: youngest first (lowest creation_timestamp = newest token)
-        tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
-        for token_data in tokens:
-            addr = token_data.get('address', '')
-            if not addr or addr in seen:
-                continue
-            seen.add(addr)
+    # Scan ALL sources every cycle - it's ok to see the same token multiple times
+    seen = set()
 
-            # IRONCLAD checks
-            if addr in PERM_BLACKLIST:
-                continue
-            if addr in COOLDOWN_WATCH:
-                continue
-            if addr in REJECTED_TEMP:
-                continue
-            if addr in STOP_LOSS_COOLDOWN:
-                continue
-            if get_open_position_count() >= MAX_OPEN_POSITIONS:
-                continue
+    # GMGN trending - up to 50 newest tokens
+    tokens = get_gmgn_trending(50)
+    tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
 
-            result, fail_reason = scan_token(token_data)
-            if result is None:
-                continue
+    # GMGN trenches - up to 20 newest tokens (append to trending)
+    trenches_tokens = get_gmgn_trenches(20)
+    trenches_tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
+    tokens.extend(trenches_tokens)
 
-            add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
-    else:
-        trenches_tokens = get_gmgn_trenches(20)
-        # Sort by age: youngest first (newest pump.fun launches first)
-        trenches_tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
-        for token_data in trenches_tokens:
-            addr = token_data.get('address', '')
-            if not addr or addr in seen:
-                continue
-            seen.add(addr)
+    for token_data in tokens:
+        addr = token_data.get('address', '')
+        if not addr or addr in seen:
+            continue
+        seen.add(addr)
 
-            # IRONCLAD checks
-            if addr in PERM_BLACKLIST:
-                continue
-            if addr in COOLDOWN_WATCH:
-                continue
-            if addr in REJECTED_TEMP:
-                continue
-            if get_open_position_count() >= MAX_OPEN_POSITIONS:
-                continue
+        # IRONCLAD checks
+        if addr in PERM_BLACKLIST:
+            continue
+        if addr in COOLDOWN_WATCH:
+            continue
+        if addr in REJECTED_TEMP:
+            continue
+        if addr in STOP_LOSS_COOLDOWN:
+            continue
+        if get_open_position_count() >= MAX_OPEN_POSITIONS:
+            continue
 
-            result, fail_reason = scan_token(token_data)
-            if result is None:
-                continue
+        result, fail_reason = scan_token(token_data)
+        if result is None:
+            continue
 
-            add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
+        add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
     
     
     
