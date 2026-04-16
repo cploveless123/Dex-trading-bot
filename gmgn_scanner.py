@@ -964,7 +964,7 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # 30s done - FETCH FRESH DATA and verify chg1 > chg1_prev + 3%
+            # 30s done - FORCE FRESH FETCH (no cache) and verify chg1 > chg1_prev + 3%
             # Also verify token is old enough (PUMP_MIN_AGE)
             fresh_fdata, fresh_source = get_fresh_token_data(addr)
             if fresh_fdata:
@@ -1005,7 +1005,7 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # 30s done - FETCH FRESH DATA and verify chg1 >= +2%
+            # 30s done - FORCE FRESH FETCH (no cache) and verify chg1 >= +2%
             fresh_fdata, fresh_source = get_fresh_token_data(addr)
             if fresh_fdata:
                 if fresh_source == 'gmgn':
@@ -1039,7 +1039,7 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # Timer done - FETCH FRESH DATA and verify chg1 > chg1_prev + 3%
+            # Timer done - FORCE FRESH FETCH (no cache) and verify chg1 > chg1_prev + 3%
             fresh_fdata, fresh_source = get_fresh_token_data(addr)
             if fresh_fdata:
                 if fresh_source == 'gmgn':
