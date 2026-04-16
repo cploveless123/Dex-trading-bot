@@ -707,13 +707,19 @@ def add_to_cooldown(addr, token_data, result, entry_chg5):
     state = STATE_NORMAL_WAIT
     cooldown_end = time.time() + NORMAL_WAIT_DURATION
     
+    # Check if this token was previously rejected/pass
+    prev_rescan = 0
+    if addr in REJECTED_TEMP:
+        prev_rescan = REJECTED_TEMP[addr].get('rescan_count', 0)
+        del REJECTED_TEMP[addr]  # Clear temp record
+    
     COOLDOWN_WATCH[addr] = {
         'state': state,
         'cooldown_end': cooldown_end,
         'token_data': token_data,
         'result': result,
         'recheck_count': 0,
-        'rescan_count': 0,  # Track how many times we've re-seen this token
+        'rescan_count': prev_rescan,  # Track how many times we've re-seen this token
         'chg5_prev': entry_chg5,
         'chg1_prev': result.get('chg1', 0),
         'h1_prev': result.get('h1', 0),
@@ -823,9 +829,10 @@ def scan_cycle():
             chg1_threshold = chg1_prev + 5
             
             if data.get('in_verify', False):
-                # === VERIFY PHASE: 15s → check chg1 > +5% AND chg5 > 0% ===
-                if chg1_verify > 5 and chg1_verify > chg1_threshold and chg5_verify > 0:
-                    print(f"   [BUY_NORMAL] {result['token']}: chg1={chg1_verify:+.1f}% > +5%, chg5={chg5_verify:+.1f}% verified | BUY!")
+                # === VERIFY PHASE: 15s → check chg1 > +5% AND chg1 > chg1_prev AND chg5 > -5% AND H1 > +100% ===
+                h1_current = float(fresh_fdata.get('price_change_percent1h', 0) or 0) if fresh_fdata else result.get('h1', 0)
+                if chg1_verify > 5 and chg1_verify > chg1_threshold_new and chg5_verify > -5 and h1_current > 100:
+                    print(f"   [BUY_NORMAL] {result['token']}: chg1={chg1_verify:+.1f}%, chg5={chg5_verify:+.1f}%, H1={h1_current:+.1f}% | BUY!")
                     buy_token(addr, result)
                     to_remove.append(addr)
                     send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Normal cooldown path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n💰 Wallet: {get_wallet_balance():.4f} SOL\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
@@ -836,25 +843,26 @@ def scan_cycle():
                     data['recheck_count'] = 0
                     data['lowest_chg1'] = min(data.get('lowest_chg1', chg1_verify), chg1_verify)
                     data['in_verify'] = False
-                    reason = f"chg1={chg1_verify:.1f}% <= +5%" if chg1_verify <= 5 else f"chg5={chg5_verify:.1f}% <= 0%"
+                    reason = f"chg1={chg1_verify:.1f}% <= +5%" if chg1_verify <= 5 else (f"chg5={chg5_verify:.1f}% <= -5%" if chg5_verify <= -5 else f"H1={h1_current:+.1f}% <= +100%")
                     print(f"   [NORMAL_FAIL] {result['token']}: {reason} | → recovery")
                 continue
             
-            # === FIRST CHECK: chg1 > +5% AND chg1 > chg1_prev + 5% ===
-            if chg1_verify > 5 and chg1_verify > chg1_threshold:
+            # === FIRST CHECK: chg1 > +5% AND chg1 > chg1_prev ===
+            chg1_threshold_new = chg1_prev  # just need to be above prev (no +5 delta)
+            if chg1_verify > 5 and chg1_verify > chg1_threshold_new:
                 # Trigger verify phase (15s)
                 data['in_verify'] = True
                 data['cooldown_end'] = now + 15
                 data['lowest_chg1'] = min(data.get('lowest_chg1', chg1_verify), chg1_verify)
-                print(f"   [NORMAL_OK] {result['token']}: chg1={chg1_verify:+.1f}% > +5% and > {chg1_threshold:+.1f}% | verify 15s")
+                print(f"   [NORMAL_OK] {result['token']}: chg1={chg1_verify:+.1f}% > +5% and > {chg1_threshold_new:+.1f}% | verify 15s")
             else:
                 # First check failed → recovery
                 data['state'] = STATE_RECOVERY_WAIT
-                data['cooldown_end'] = now + 10
+                data['cooldown_end'] = now + 15  # 15s rechecks
                 data['recheck_count'] = 0
                 data['lowest_chg1'] = min(data.get('lowest_chg1', chg1_verify), chg1_verify)
                 data['in_verify'] = False
-                print(f"   [NORMAL_FAIL] {result['token']}: chg1={chg1_verify:.1f}% < +5% or < {chg1_threshold:+.1f}% | → recovery")
+                print(f"   [NORMAL_FAIL] {result['token']}: chg1={chg1_verify:.1f}% < +5% or < {chg1_threshold_new:+.1f}% | → recovery")
             continue
         
         # === RECOVERY PATH: chg1 < -10% → 10s rechecks → chg1 >= lowest + 5% → 10s verify → BUY ===
@@ -902,6 +910,8 @@ def scan_cycle():
                 data['cooldown_end'] = now + 10
                 print(f"   [RECOVERY_OK] {result['token']}: chg1={chg1_check:+.1f}% >= {lowest+5:+.1f}% (+5% from low) | verify 10s")
             elif recheck_count >= 30:
+                # Save rescan count so we can track repeated re-entries
+                REJECTED_TEMP[addr] = {'ts': now, 'rescan_count': data.get('rescan_count', 0) + 1}
                 to_remove.append(addr)
                 print(f"   [RECOVERY_REJECT] {result['token']}: max 30 rechecks | skip")
             else:
@@ -955,7 +965,11 @@ def scan_cycle():
         if addr in COOLDOWN_WATCH:
             continue
         if addr in REJECTED_TEMP:
-            continue
+            rc = REJECTED_TEMP[addr].get('rescan_count', 0)
+            if rc >= 10:
+                continue  # Too many rescans
+            # Increment rescan count for next time we see this token
+            REJECTED_TEMP[addr]['rescan_count'] = rc + 1
         if addr in STOP_LOSS_COOLDOWN:
             continue
         if get_open_position_count() >= MAX_OPEN_POSITIONS:
@@ -985,7 +999,11 @@ def scan_cycle():
         if addr in COOLDOWN_WATCH:
             continue
         if addr in REJECTED_TEMP:
-            continue
+            rc = REJECTED_TEMP[addr].get('rescan_count', 0)
+            if rc >= 10:
+                continue  # Too many rescans
+            # Increment rescan count for next time we see this token
+            REJECTED_TEMP[addr]['rescan_count'] = rc + 1
         if get_open_position_count() >= MAX_OPEN_POSITIONS:
             continue
         
