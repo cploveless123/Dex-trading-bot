@@ -842,7 +842,7 @@ def scan_cycle():
             if data.get('in_verify', False):
                 # === VERIFY PHASE: 15s → check chg1 > +5% AND chg1 > chg1_prev AND chg5 > -5% AND H1 > +100% ===
                 h1_current = float(fresh_fdata.get('price_change_percent1h', 0) or 0) if fresh_fdata else result.get('h1', 0)
-                if chg1_verify > 5 and chg1_verify > chg1_threshold_new and chg5_verify > -5 and h1_current > 100:
+                if chg1_verify > 5 and chg1_verify >= chg1_threshold_new and chg5_verify > -5 and h1_current > 100:
                     print(f"   [BUY_NORMAL] {result['token']}: chg1={chg1_verify:+.1f}%, chg5={chg5_verify:+.1f}%, H1={h1_current:+.1f}% | BUY!")
                     buy_token(addr, result)
                     to_remove.append(addr)
@@ -860,7 +860,7 @@ def scan_cycle():
             
             # === FIRST CHECK: chg1 > +5% AND chg1 > chg1_prev ===
             chg1_threshold_new = chg1_prev  # just need to be above prev (no +5 delta)
-            if chg1_verify > 5 and chg1_verify > chg1_threshold_new:
+            if chg1_verify > 5 and chg1_verify >= chg1_threshold_new:
                 # Trigger verify phase (15s)
                 data['in_verify'] = True
                 data['cooldown_end'] = now + 15
