@@ -22,6 +22,7 @@ from trading_constants import (
     STOP_LOSS_PCT,
     POSITION_SIZE,
     TRADES_FILE, BOT_TOKEN, CHAT_ID,
+    SIM_WALLET_FILE,
     CHRIS_STARTING_BALANCE
 )
 
@@ -67,6 +68,25 @@ def get_positions():
     except:
         pass
     return positions
+
+def update_wallet():
+    """Calculate and save current balance to sim_wallet.json"""
+    try:
+        trades = []
+        with open(TRADES_FILE) as f:
+            for line in f:
+                if line.strip():
+                    trades.append(json.loads(line))
+        
+        closed_pnl = sum(float(t.get('pnl_sol', 0)) for t in trades if t.get('action') == 'SELL')
+        balance = round(CHRIS_STARTING_BALANCE + closed_pnl, 6)
+        
+        wallet = {'balance': balance, 'last_updated': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00')}
+        with open(SIM_WALLET_FILE, 'w') as f:
+            json.dump(wallet, f, indent=2)
+        log(f"[WALLET] Updated - balance={balance:.4f} SOL (closed_pnl={closed_pnl:+.4f})")
+    except Exception as e:
+        log(f"[WALLET] Update failed: {e}")
 
 def sell_token(addr, token_name, quantity, price, reason):
     """Record a sell - prevents duplicate sells"""
@@ -135,6 +155,7 @@ def sell_token(addr, token_name, quantity, price, reason):
     with open(TRADES_FILE, 'a') as f:
         f.write(json.dumps(trade) + '\n')
     log(f"SOLD {quantity:.4f} SOL of {token_name} @ {price} ({reason}) | pnl={pnl_sol:.4f} SOL")
+    update_wallet()  # Update sim_wallet.json after every sell
 
 def update_position_sold(addr, sell_quantity, reason):
     """Update the open position with sell info"""

@@ -1,4 +1,4 @@
-from trading_constants import EXIT_PLAN_TEXT, TP1_SELL_PCT, POSITION_SIZE, SIM_RESET_TIMESTAMP, CHRIS_STARTING_BALANCE
+from trading_constants import EXIT_PLAN_TEXT, TP1_SELL_PCT, POSITION_SIZE, SIM_RESET_TIMESTAMP, SIM_WALLET_FILE, CHRIS_STARTING_BALANCE
 
 #!/usr/bin/env python3
 """
@@ -22,6 +22,15 @@ LAST_SIGNAL_FILE = Path("/root/Dex-trading-bot/.last_alert_signal")
 ALERTED_TRADES_FILE = Path("/root/Dex-trading-bot/.alerted_trades")
 LAST_TRADE_INDEX_FILE = Path("/root/Dex-trading-bot/.last_alert_index")
 
+
+def get_wallet_balance():
+    """Read balance from sim_wallet.json, fallback to calculated"""
+    try:
+        with open(SIM_WALLET_FILE) as f:
+            w = json.load(f)
+        return float(w.get('balance', CHRIS_STARTING_BALANCE))
+    except:
+        return CHRIS_STARTING_BALANCE
 
 
 def format_trade_alert(trade):
@@ -47,7 +56,7 @@ def format_trade_alert(trade):
     # Partial exits: remaining % locked (v5.5 = 100% - 40% = 60% at TP2)
     open_partial = len([t for t in reset_trades if t.get('status') == 'open_partial'])
     locked = open_full * POSITION_SIZE + open_partial * POSITION_SIZE * 0.60
-    balance = CHRIS_STARTING_BALANCE + closed_pnl - locked
+    balance = get_wallet_balance() - locked
     
     if action == "BUY":
         msg = f"""✅ BUY EXECUTED | {timestamp}
@@ -93,7 +102,7 @@ def format_tp1_alert(trade):
     open_full = len([t for t in all_trades if t.get('status') == 'open'])
     open_partial = len([t for t in all_trades if t.get('status') == 'open_partial'])
     locked = open_full * POSITION_SIZE + open_partial * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100)
-    balance = CHRIS_STARTING_BALANCE + closed_pnl - locked
+    balance = get_wallet_balance() - locked
     
     remaining_pct = 100 - TP1_SELL_PCT
     msg = f"""🎯 TP1 HIT (Partial Exit) | {timestamp}
@@ -215,7 +224,7 @@ def get_status():
     open_full = [t for t in reset_trades if t.get('status') == 'open' and not t.get('closed_at')]
     open_partial = [t for t in reset_trades if t.get('status') == 'open_partial' and not t.get('closed_at')]
     locked = len(open_full) * POSITION_SIZE + len(open_partial) * POSITION_SIZE * ((100 - TP1_SELL_PCT) / 100)
-    balance = CHRIS_STARTING_BALANCE + closed_pnl - locked
+    balance = get_wallet_balance() - locked
     wins = len([t for t in reset_trades if t.get('pnl_sol', 0) > 0])
     losses = len([t for t in reset_trades if t.get('pnl_sol', 0) < 0])
     
