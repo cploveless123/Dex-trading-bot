@@ -442,6 +442,18 @@ def scan_token(token_data, reason_if_fail=None):
             return None, f"Fallen Giant: h1={h1:.0f}% + mcap=${mc:,.0f} < ${FALLEN_GIANT_MCAP:,}"
         
         # H1 momentum check - exempt pump tokens (pump path has its own momentum check)
+        # But try token info endpoint if h1/chg5 shows 0 (GMGN trenches sometimes missing data)
+        if h1 == 0 and launchpad in ['pump', 'pumpswap'] and addr:
+            info = get_gmgn_token_info(addr)
+            if info:
+                h1 = info.get('price_change_percent1h', h1)
+                chg5_fresh = info.get('price_change_percent5m', chg5)
+                chg1_fresh = info.get('price_change_percent1m', chg1)
+                if chg5_fresh and chg5_fresh != chg5:
+                    chg5 = chg5_fresh
+                if chg1_fresh and chg1_fresh != chg1:
+                    chg1 = chg1_fresh
+        
         if launchpad not in ['pump', 'pumpswap']:
             if h1 < H1_MOMENTUM_MIN:
                 return None, f"h1 {h1:.1f}% < {H1_MOMENTUM_MIN}%"
