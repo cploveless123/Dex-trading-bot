@@ -837,7 +837,7 @@ def scan_cycle():
                 print(f"   [SKIP_TOO_NEW] {result['token']}: age {token_age}s < {PUMP_MIN_AGE}s | skip")
                 continue
             
-            chg1_threshold = chg1_prev + 5
+            chg1_threshold_new = chg1_prev  # just need to be above prev (no +5 delta)
             
             if data.get('in_verify', False):
                 # === VERIFY PHASE: 15s → check chg1 > +5% AND chg1 > chg1_prev AND chg5 > -5% AND H1 > +100% ===
@@ -858,8 +858,7 @@ def scan_cycle():
                     print(f"   [NORMAL_FAIL] {result['token']}: {reason} | → recovery")
                 continue
             
-            # === FIRST CHECK: chg1 > +5% AND chg1 > chg1_prev ===
-            chg1_threshold_new = chg1_prev  # just need to be above prev (no +5 delta)
+            # === FIRST CHECK: chg1 > +5% AND chg1 > chg1_prev (already defined above) ===
             if chg1_verify > 5 and chg1_verify >= chg1_threshold_new:
                 # Trigger verify phase (15s)
                 data['in_verify'] = True
