@@ -746,6 +746,7 @@ def scan_cycle():
         
         chg5_prev = data.get('chg5_prev', chg5)
         h1_prev = data.get('h1_prev', h1)
+        chg1_prev = data.get('chg1_prev', chg1)
         lowest_mcap = data.get('lowest_mcap', mcap)
         lowest_chg5 = data.get('lowest_chg5', chg5)
         
