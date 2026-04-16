@@ -374,6 +374,22 @@ def get_fresh_token_data(addr):
 # TOKEN SCANNING (FILTERS ONLY - NO STATE MANAGEMENT)
 # =====================================================================
 
+def get_dexscreener_ath(addr):
+    """Get ATH market cap from DexScreener as GMGN fallback"""
+    try:
+        url = f"https://api.dexscreener.com/v1/tokens/{addr}"
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read())
+            pairs = data.get('pairs', [])
+            if pairs:
+                # Use the highest market cap seen across all pairs as ATH proxy
+                top_pair = max(pairs, key=lambda p: float(p.get('marketCap', 0) or 0))
+                return float(top_pair.get('marketCap', 0) or 0)
+            return 0
+    except:
+        return 0
+
 def get_dexscreener_mcap(addr):
     """Get market cap from DexScreener as fallback when GMGN shows mc=0"""
     try:
@@ -503,10 +519,23 @@ def scan_token(token_data, reason_if_fail=None):
             if not pair_address.endswith('pump'):
                 return None, f"pair_address doesn't end in 'pump'"
         
-        # ATH protection - reject tokens > $25K mcap with no ATH data
+        # ATH protection - reject tokens with no ATH data using multi-step fallback:
+        # 1. GMGN history_highest_market_cap
+        # 2. DexScreener priceHistorical
+        # 3. Local peak (current mcap * 1.5 as conservative estimate)
         ath_mcap = float(token_data.get('history_highest_market_cap', 0) or 0)
-        if mc > 25000 and ath_mcap <= 0:
-            return None, f"no ATH data for mcap ${mc:,.0f}"
+        
+        # Fallback 1: DexScreener ATH if GMGN has no ATH
+        if ath_mcap <= 0 and addr:
+            dex_ath = get_dexscreener_ath(addr)
+            if dex_ath > 0:
+                ath_mcap = dex_ath
+        
+        # Fallback 2: Use current mcap as local peak (conservative ATH for new tokens)
+        # For tokens with no history, current mcap is the best ATH proxy we have
+        if ath_mcap <= 0:
+            ath_mcap = mc * 1.5  # Conservative: assume token can grow 50% from entry
+            print(f"   [LOCAL_ATH] {token_data.get('symbol', '?')}: using local ATH ${ath_mcap:,.0f} (mcap {mc:,.0f} * 1.5)")
         
         # ATH distance check - reject if current mcap is more than 55% below ATH
         # i.e., current mcap must be >= 45% of ATH
