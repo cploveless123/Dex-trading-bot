@@ -16,7 +16,7 @@ IRONCLAD RULES:
 - Both GMGN + DexScreener throttled → STOP ALL BUYS until fixed
 """
 
-import subprocess, json, time, urllib.request, urllib.parse
+import subprocess, json, time, urllib.request, urllib.parse, sys
 from datetime import datetime, timezone
 
 # =====================================================================
@@ -1068,6 +1068,7 @@ def main():
             scan_cycle()
         except Exception as e:
             print(f"Scan error: {e}")
+        sys.stdout.flush()
         time.sleep(10)  # 10s scan interval
 
 if __name__ == '__main__':
