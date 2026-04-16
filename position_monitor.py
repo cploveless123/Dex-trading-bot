@@ -21,7 +21,8 @@ from trading_constants import (
     TP5_PCT, TP5_SELL_PCT, TP5_TRAIL,
     STOP_LOSS_PCT,
     POSITION_SIZE,
-    TRADES_FILE, BOT_TOKEN, CHAT_ID
+    TRADES_FILE, BOT_TOKEN, CHAT_ID,
+    CHRIS_STARTING_BALANCE
 )
 
 MONITOR_LOG = '/root/Dex-trading-bot/position_monitor.log'
@@ -91,18 +92,47 @@ def sell_token(addr, token_name, quantity, price, reason):
         except:
             pass
     
+    # Find corresponding BUY entry for PnL calculation
+    entry_price = None
+    entry_mcap = None
+    try:
+        with open(TRADES_FILE) as f:
+            for line in f:
+                if not line.strip():
+                    continue
+                t = json.loads(line)
+                if t.get('token_address') == addr and t.get('action') == 'BUY':
+                    entry_price = float(t.get('entry_price', 0))
+                    entry_mcap = int(t.get('entry_mcap', 0))
+                    break
+    except:
+        pass
+    
+    # Calculate PnL
+    pnl_sol = 0.0
+    if entry_price and entry_price > 0:
+        pnl_sol = (float(price) - entry_price) * quantity / entry_price
+    
+    # Calculate exit mcap
+    exit_mcap = 0
+    if entry_price > 0 and entry_mcap:
+        exit_mcap = int(float(price) / entry_price * entry_mcap)
+    
     trade = {
         'action': 'SELL',
         'token_address': addr,
         'token_name': token_name,
         'sell_price': price,
         'sell_quantity': quantity,
+        'pnl_sol': round(pnl_sol, 6),
+        'pnl_pct': round((float(price) / entry_price - 1) * 100, 2) if entry_price > 0 else 0,
+        'exit_mcap': exit_mcap,
         'reason': reason,
         'sold_at': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00'),
     }
     with open(TRADES_FILE, 'a') as f:
         f.write(json.dumps(trade) + '\n')
-    log(f"SOLD {quantity:.4f} SOL of {token_name} @ {price} ({reason})")
+    log(f"SOLD {quantity:.4f} SOL of {token_name} @ {price} ({reason}) | pnl={pnl_sol:.4f} SOL")
 
 def update_position_sold(addr, sell_quantity, reason):
     """Update the open position with sell info"""
@@ -203,8 +233,6 @@ def monitor_cycle():
                    f"🔗 https://dexscreener.com/solana/{addr}\n"
                    f"🥧 https://pump.fun/{addr}")
             alert_sender_webhook(msg)
-            # Reduce remaining position size (already sold TP1%)
-            update_position_size(addr, position_size * (1 - TP1_SELL_PCT))
         
         # TP1 trailing stop (40% from peak)
         if tp_status['tp1_hit'] and not tp_status.get('tp1_trail_hit'):
