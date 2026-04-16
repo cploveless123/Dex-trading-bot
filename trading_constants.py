@@ -43,15 +43,14 @@ MAX_MCAP = 55000            # Maximum market cap in USD
 MIN_HOLDERS = 15             # Minimum holder count
 MIN_CHG5_FOR_BUY = 2.0      # Minimum 5m change % for buy signal
 PUMP_CHG1_THRESHOLD = 5.001  # 1-min change % to trigger pump path (NOT chg5)
-PUMP_CHG1_THRESHOLD_MAX = 50.0  # Reject chg1 >50% as pump dump candidates
 PUMP_MIN_AGE = 120              # Min age (sec) before buying via pump path (reject new listings)
 H1_MOMENTUM_MIN = 25.0      # Minimum 1h change % (momentum requirement)
 H1_MOMENTUM_MAX = 99999.0  # No ceiling - let any momentum through
 
 # Cooldown timing
 YOUNG_AGE_THRESHOLD = 180   # Age in seconds (< 3 min = young)
-YOUNG_COOLDOWN = 45          # Cooldown for young tokens
-OLDER_COOLDOWN = 45          # Cooldown for older tokens
+YOUNG_COOLDOWN = 30          # Cooldown for young tokens with chg5>+50%
+OLDER_COOLDOWN = 30          # Cooldown for older tokens with chg5>+1%
 BASE_WAIT = 15               # Base cooldown for normal entries
 CHG1_RECHECK_INTERVAL = 6    # Recheck interval when chg1 < -5%
 CHG1_VERIFY_DELAY = 6         # Verification delay after chg1 recovery

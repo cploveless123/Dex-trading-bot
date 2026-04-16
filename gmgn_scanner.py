@@ -58,7 +58,8 @@ STATE_YOUNG_COOLDOWN = 'YOUNG_COOLDOWN'  # 45s for young + momentum
 STATE_OLDER_COOLDOWN = 'OLDER_COOLDOWN'  # 45s for older + momentum
 STATE_CHG1_RECHECK = 'CHG1_RECHECK'      # 6s rechecks until mcap>+5% from low
 STATE_CHG1_VERIFY = 'CHG1_VERIFY'        # 15s verify before buy
-STATE_BASE_WAIT = 'BASE_WAIT'            # 15s → verify chg1 > chg1_prev + 3% → verify chg1 > chg5_prev + 3%
+STATE_BASE_WAIT = 'BASE_WAIT'            # 30s → verify chg1 > chg1_prev + 3%
+STATE_BUY_NOW = 'BUY_NOW'                # Buy immediately (passed filters, none of the wait conditions)
 STATE_RECOVERY_WAIT = 'RECOVERY_WAIT'    # 6s for chg1 recovery for chg5 recovery
 
 # Timing constants (sync with trading_constants.py)
@@ -690,8 +691,8 @@ def add_to_cooldown(addr, token_data, result, entry_chg5):
         state = STATE_OLDER_COOLDOWN
         cooldown_end = time.time() + OLDER_COOLDOWN
     else:
-        state = STATE_BASE_WAIT
-        cooldown_end = time.time() + 30
+        state = STATE_BUY_NOW
+        cooldown_end = now  # Immediate - no wait
     
     COOLDOWN_WATCH[addr] = {
         'state': state,
@@ -833,11 +834,6 @@ def scan_cycle():
                     print(f"   [SKIP_AGE] {result['token']}: age {token_age}s > {MAX_AGE}s | skip")
                     to_remove.append(addr)
                     continue
-                # Reject extreme pump dumps (chg1 > 50% in 1 min = likely rug)
-                if chg1 > PUMP_CHG1_THRESHOLD_MAX:
-                    print(f"   [SKIP_PUMP_DUMP] {result['token']}: chg1={chg1:+.1f}% > {PUMP_CHG1_THRESHOLD_MAX}% | skip (pump dump)")
-                    to_remove.append(addr)
-                    continue
                 # Reject brand new listings (need at least 2 min to establish history)
                 if token_age < PUMP_MIN_AGE:
                     print(f"   [SKIP_TOO_NEW] {result['token']}: age {token_age}s < {PUMP_MIN_AGE}s | skip (too new)")
@@ -967,6 +963,15 @@ def scan_cycle():
                 print(f"   [BASE_PASS] {result['token']}: chg1={chg1:.1f}% < {chg1_threshold:+.1f}% | token passed")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
+            continue
+        
+        # === BUY NOW PATH (immediately - none of the wait conditions met) ===
+        elif state == STATE_BUY_NOW:
+            # No cooldown needed - buy immediately
+            print(f"   [BUY_NOW] {result['token']}: chg1={chg1:+.1f}% | BUY (no wait needed)!")
+            buy_token(addr, result)
+            to_remove.append(addr)
+            send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Buy now path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
             continue
         
         # === RECOVERY WAIT (chg5 dropped but recovering) ===
