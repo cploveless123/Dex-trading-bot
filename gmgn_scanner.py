@@ -302,6 +302,7 @@ def get_dexscreener_pump_tokens(limit=20):
                     'launchpad': 'pump',
                     'pair_address': addr,
                     'dex_id': p.get('dexId', ''),
+                    'creation_timestamp': p.get('createdAt', 0),
                 }
                 normalized.append(normalized_token)
             return normalized[:limit]
@@ -973,8 +974,12 @@ def scan_cycle():
 
     # Even cycles = trending, Odd cycles = trenches
     # This halves GMGN API calls while still covering both sources
+    # PRIORITY: Process youngest tokens FIRST (lowest creation_timestamp)
+    # This ensures we catch new pump.fun launches early before they pump
     if _GMGN_SCAN_CYCLE % 2 == 0:
         tokens = get_gmgn_trending(50)
+        # Sort by age: youngest first (lowest creation_timestamp = newest token)
+        tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
         for token_data in tokens:
             addr = token_data.get('address', '')
             if not addr or addr in seen:
@@ -1000,6 +1005,8 @@ def scan_cycle():
             add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
     else:
         trenches_tokens = get_gmgn_trenches(20)
+        # Sort by age: youngest first (newest pump.fun launches first)
+        trenches_tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
         for token_data in trenches_tokens:
             addr = token_data.get('address', '')
             if not addr or addr in seen:
@@ -1026,6 +1033,8 @@ def scan_cycle():
     
     # === SCAN DEXSCREENER PUMP.FUN NEW LISTINGS (active discovery) ===
     pump_tokens = get_dexscreener_pump_tokens(20)
+    # Sort by age: youngest first (newest listings first)
+    pump_tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
     for token_data in pump_tokens:
         addr = token_data.get('address', '')
         if not addr or addr in seen:
