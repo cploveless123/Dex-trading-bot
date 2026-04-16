@@ -26,6 +26,8 @@ from trading_constants import (
 )
 
 MONITOR_LOG = '/root/Dex-trading-bot/position_monitor.log'
+STOP_LOSS_COOLDOWN_FILE = '/root/Dex-trading-bot/.stop_loss_cooldown'
+STOP_LOSS_COOLDOWN = {}
 
 def log(msg):
     ts = datetime.utcnow().strftime('%H:%M:%S')
@@ -388,6 +390,10 @@ def monitor_cycle():
                    f"🔗 https://dexscreener.com/solana/{addr}")
             alert_sender_webhook(msg)
             close_position(addr, "STOP_LOSS")
+            # Add to STOP_LOSS_COOLDOWN - 30 min re-entry lockout
+            STOP_LOSS_COOLDOWN[addr] = {'ts': time.time(), 'reason': 'STOP_LOSS'}
+            with open(STOP_LOSS_FILE, 'w') as f:
+                json.dump(STOP_LOSS_COOLDOWN, f)
             to_remove = True
         
         # Update peak price in trade

@@ -78,6 +78,8 @@ GMGN_SCANNER_VERSION = "v7.4 CLEAN"
 COOLDOWN_WATCH = {}       # addr -> {state, cooldown_end, token_data, result, ...}
 REJECTED_TEMP = {}        # addr -> {ts, reason}
 PERM_BLACKLIST = set()    # Loaded from file
+STOP_LOSS_COOLDOWN = {}   # addr -> {ts, reason} - tokens that hit stop loss, 30min lockout
+STOP_LOSS_FILE = '/root/Dex-trading-bot/.stop_loss_cooldown'
 
 # GMGN throttle state
 _gmgn_throttle_state = {
@@ -102,6 +104,13 @@ try:
         PERM_BLACKLIST = set(json.load(f))
 except:
     PERM_BLACKLIST = set()
+
+# Load STOP_LOSS_COOLDOWN (tokens we stopped out, 30min re-entry lockout)
+try:
+    with open(STOP_LOSS_FILE) as f:
+        STOP_LOSS_COOLDOWN = json.load(f)
+except:
+    STOP_LOSS_COOLDOWN = {}
 
 # =====================================================================
 # HELPER FUNCTIONS
@@ -549,6 +558,10 @@ def buy_token(addr, result):
     with open(PERM_BLACKLIST_FILE, 'w') as f:
         json.dump(list(PERM_BLACKLIST), f)
     
+    # Also save stop loss cooldown
+    with open(STOP_LOSS_FILE, 'w') as f:
+        json.dump(STOP_LOSS_COOLDOWN, f)
+    
     msg = (f"🟢 BUY | {datetime.now(timezone.utc).strftime('%H:%M')}\n"
            f"━━━━━━━━━━━━━━━\n"
            f"{result.get('token')}\n"
@@ -883,6 +896,11 @@ def scan_cycle():
         if now - REJECTED_TEMP[addr]['ts'] > 300:
             del REJECTED_TEMP[addr]
     
+    # Clean old stop loss cooldowns (30 min lockout)
+    for addr in list(STOP_LOSS_COOLDOWN.keys()):
+        if now - STOP_LOSS_COOLDOWN[addr]['ts'] > 1800:
+            del STOP_LOSS_COOLDOWN[addr]
+    
     # === NEW TOKEN SCAN FROM TRENDING ===
     tokens = get_gmgn_trending(50)
     seen = set()
@@ -898,6 +916,8 @@ def scan_cycle():
         if addr in COOLDOWN_WATCH:
             continue
         if addr in REJECTED_TEMP:
+            continue
+        if addr in STOP_LOSS_COOLDOWN:
             continue
         if get_open_position_count() >= MAX_OPEN_POSITIONS:
             continue
