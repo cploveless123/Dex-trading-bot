@@ -84,7 +84,6 @@ _gmgn_throttle_state = {
     'trending': {'count': 0, 'backoff_until': 0},
     'trenches': {'count': 0, 'backoff_until': 0},
     'token_info': {'count': 0, 'backoff_until': 0},
-    'pump_endpoint': {'count': 0, 'backoff_until': 0},
 }
 _BACKOFF_BASE = 30
 _BACKOFF_MAX = 300
@@ -198,21 +197,6 @@ def get_gmgn_trenches(limit=20):
         completed = d.get('completed', [])
         new = d.get('new', [])
         return completed + new
-    except:
-        return []
-
-def get_gmgn_pump(limit=20):
-    """Get pump.fun tokens from GMGN dedicated pump endpoint"""
-    if is_throttled('pump_endpoint'):
-        return []
-    r = subprocess.run(['gmgn-cli', 'market', 'pump', '--chain', 'sol', '--limit', str(limit)],
-                      capture_output=True, text=True, timeout=15)
-    if r.returncode != 0:
-        record_throttle('pump_endpoint')
-        return []
-    try:
-        d = json.loads(r.stdout)
-        return d.get('data', {}).get('tokens', [])
     except:
         return []
 
@@ -351,6 +335,7 @@ def scan_token(token_data, reason_if_fail=None):
             return None, f"mcap ${mc:,.0f} > ${MAX_MCAP:,}"
         
         # Age check - reject if too old
+        age_sec = int(time.time() - token_data.get('creation_timestamp', 0)) if token_data.get('creation_timestamp') else 0
         MAX_AGE = 3600  # 60 minutes max
         if age_sec > MAX_AGE:
             return None, f"age {age_sec}s > {MAX_AGE}s (too old)"
@@ -886,24 +871,7 @@ def scan_cycle():
         
         add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
     
-    # === SCAN GMGN PUMP ENDPOINT ===
-    pump_tokens = get_gmgn_pump(20)
-    for token_data in pump_tokens:
-        addr = token_data.get('address', '')
-        if not addr or addr in seen:
-            continue
-        seen.add(addr)
-        
-        if addr in PERM_BLACKLIST or addr in COOLDOWN_WATCH or addr in REJECTED_TEMP:
-            continue
-        if get_open_position_count() >= MAX_OPEN_POSITIONS:
-            continue
-        
-        result, fail_reason = scan_token(token_data)
-        if result is None:
-            continue
-        
-        add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
+    
     
     # === SCAN DEXSCREENER PUMP.FUN NEW LISTINGS (active discovery) ===
     pump_tokens = get_dexscreener_pump_tokens(20)

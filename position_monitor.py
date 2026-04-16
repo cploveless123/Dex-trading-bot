@@ -387,7 +387,7 @@ def main():
             monitor_cycle()
         except Exception as e:
             log(f"Monitor error: {e}")
-        time.sleep(5)  # Check positions every 5 seconds
+        time.sleep(7)  # Check positions every 7 seconds
 
 if __name__ == '__main__':
     main()
