@@ -441,9 +441,10 @@ def scan_token(token_data, reason_if_fail=None):
         if h1 > FALLEN_GIANT_H1 and mc < FALLEN_GIANT_MCAP:
             return None, f"Fallen Giant: h1={h1:.0f}% + mcap=${mc:,.0f} < ${FALLEN_GIANT_MCAP:,}"
         
-        # H1 momentum check
-        if h1 < H1_MOMENTUM_MIN:
-            return None, f"h1 {h1:.1f}% < {H1_MOMENTUM_MIN}%"
+        # H1 momentum check - exempt pump tokens (pump path has its own momentum check)
+        if launchpad not in ['pump', 'pumpswap']:
+            if h1 < H1_MOMENTUM_MIN:
+                return None, f"h1 {h1:.1f}% < {H1_MOMENTUM_MIN}%"
         
         # No H1 max ceiling - let any momentum through, stop loss handles risk
         
