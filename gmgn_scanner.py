@@ -371,6 +371,22 @@ def get_dexscreener_token(addr):
                 _LAST_DEXSCR_ALERT = time.time()
         return None
 
+def get_fresh_token_data_no_cache(addr):
+    """Force fresh fetch - bypass cache for pump path stage checks"""
+    now = time.time()
+    try:
+        result = subprocess.run(
+            ['gmgn-cli', 'token', 'info', '--chain', 'sol', '--address', addr],
+            capture_output=True, text=True, timeout=15
+        )
+        if result.returncode == 0:
+            data = json.loads(result.stdout)
+            _token_cache[addr] = {'data': data, 'time': now}
+            return data, 'gmgn'
+        return None, None
+    except:
+        return None, None
+
 def get_fresh_token_data(addr):
     """Get fresh token data: GMGN first, DexScreener fallback"""
     info = get_gmgn_token_info(addr)
