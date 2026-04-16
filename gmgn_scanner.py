@@ -54,7 +54,7 @@ CHAT_ID = '6402511249'
 STATE_PUMP_WAIT_1 = 'PUMP_WAIT_1'       # 45s wait for pump confirmation
 STATE_PUMP_WAIT_2 = 'PUMP_WAIT_2'       # 15s second confirmation
 STATE_PUMP_VERIFY = 'PUMP_VERIFY'        # 15s final verify
-STATE_YOUNG_COOLDOWN = 'YOUNG_COOLDOWN'  # 45s for young + momentum
+STATE_YOUNG_COOLDOWN = 'YOUNG_COOLDOWN'  # 30s for young + chg5>+50%
 STATE_OLDER_COOLDOWN = 'OLDER_COOLDOWN'  # 45s for older + momentum
 STATE_CHG1_RECHECK = 'CHG1_RECHECK'      # 6s rechecks until mcap>+5% from low
 STATE_CHG1_VERIFY = 'CHG1_VERIFY'        # 15s verify before buy
@@ -66,12 +66,12 @@ STATE_RECOVERY_WAIT = 'RECOVERY_WAIT'    # 6s for chg1 recovery for chg5 recover
 PUMP_WAIT_1 = 45            # First pump confirmation
 PUMP_WAIT_2 = 10            # Second pump confirmation (Chris: 10s path)
 PUMP_VERIFY_DELAY = 10     # Final pump verification (Chris: 10s path)
-YOUNG_COOLDOWN = 45         # Young path cooldown
-OLDER_COOLDOWN = 45         # Older path cooldown
-BASE_WAIT = 15              # Base path wait (was 30)
-CHG1_RECHECK_INTERVAL = 6   # Recovery recheck (was 15)
-CHG1_VERIFY_DELAY = 6       # Recovery verify (was 15)
-RECOVERY_WAIT = 6            # Recovery wait (was 15)
+YOUNG_COOLDOWN = 30         # Young path cooldown (<15min + chg5>+50%)
+OLDER_COOLDOWN = 30         # Older path cooldown (>15min + chg5>+1%)
+BASE_WAIT = 30             # Base path wait (30s verify chg1 > chg1_prev + 3%)
+CHG1_RECHECK_INTERVAL = 15 # Recovery recheck interval
+CHG1_VERIFY_DELAY = 15     # Recovery verify before buy
+RECOVERY_WAIT = 15          # Recovery wait interval
 
 # =====================================================================
 # GLOBAL STATE
@@ -863,13 +863,13 @@ def scan_cycle():
             if mcap >= recovery_target:
                 data['state'] = STATE_CHG1_VERIFY
                 data['cooldown_end'] = now + 15
-                print(f"   [CHG1_OK] {result['token']}: mcap={mcap:,.0f} >= {recovery_target:,.0f} (+5% from low) | verify 6s")
+                print(f"   [CHG1_OK] {result['token']}: mcap={mcap:,.0f} >= {recovery_target:,.0f} (+5% from low) | verify {CHG1_VERIFY_DELAY}s")
             else:
                 # Still low - update lowest and recheck
                 data['lowest_mcap'] = min(lowest_mcap, mcap)
                 data['cooldown_end'] = now + 15
                 data['recheck_count'] = data.get('recheck_count', 0) + 1
-                print(f"   [CHG1_RECHECK] {result['token']}: mcap={mcap:,.0f} < {recovery_target:,.0f} | recheck 6s")
+                print(f"   [CHG1_RECHECK] {result['token']}: mcap={mcap:,.0f} < {recovery_target:,.0f} | recheck {CHG1_RECHECK_INTERVAL}s")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
