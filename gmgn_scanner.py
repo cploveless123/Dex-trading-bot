@@ -803,17 +803,25 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # Timer done - verify chg1 still above pump threshold
-            if chg1 > PUMP_CHG1_THRESHOLD:
+            # Timer done - FETCH FRESH DATA and verify chg1 still above pump threshold
+            fresh_fdata, fresh_source = get_fresh_token_data(addr)
+            if fresh_fdata:
+                if fresh_source == 'gmgn':
+                    chg1_check = float(fresh_fdata.get('price_change_percent1m', 0) or 0)
+                else:
+                    chg1_check = float(fresh_fdata.get('priceChange', {}).get('m1', 0) or 0)
+            else:
+                chg1_check = chg1  # fallback to cached
+            if chg1_check > PUMP_CHG1_THRESHOLD:
                 data['state'] = STATE_PUMP_WAIT_2
                 data['cooldown_end'] = now + PUMP_WAIT_2
                 data['recheck_count'] = 0
-                print(f"   [PUMP_CONFIRMED] {result['token']}: chg1={chg1:+.1f}% still >+{PUMP_CHG1_THRESHOLD}% | wait {PUMP_WAIT_2}s")
+                print(f"   [PUMP_CONFIRMED] {result['token']}: chg1={chg1_check:+.1f}% still >+{PUMP_CHG1_THRESHOLD}% | wait {PUMP_WAIT_2}s")
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
                 data['lowest_chg5'] = min(lowest_chg5, chg5)
-                print(f"   [PUMP_FADED] {result['token']}: chg1={chg1:.1f}% < +{PUMP_CHG1_THRESHOLD}% | recovery (chg1 below +5%)")
+                print(f"   [PUMP_FADED] {result['token']}: chg1={chg1_check:.1f}% < +{PUMP_CHG1_THRESHOLD}% | recovery")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -824,15 +832,24 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            if chg1 > PUMP_CHG1_THRESHOLD:
+            # Timer done - FETCH FRESH DATA and verify chg1 still above pump threshold
+            fresh_fdata, fresh_source = get_fresh_token_data(addr)
+            if fresh_fdata:
+                if fresh_source == 'gmgn':
+                    chg1_check = float(fresh_fdata.get('price_change_percent1m', 0) or 0)
+                else:
+                    chg1_check = float(fresh_fdata.get('priceChange', {}).get('m1', 0) or 0)
+            else:
+                chg1_check = chg1  # fallback to cached
+            if chg1_check > PUMP_CHG1_THRESHOLD:
                 data['state'] = STATE_PUMP_VERIFY
                 data['cooldown_end'] = now + PUMP_VERIFY_DELAY
                 data['recheck_count'] = 0
-                print(f"   [PUMP_STILL_OK] {result['token']}: chg1={chg1:+.1f}% | verify {PUMP_VERIFY_DELAY}s")
+                print(f"   [PUMP_STILL_OK] {result['token']}: chg1={chg1_check:+.1f}% | verify {PUMP_VERIFY_DELAY}s")
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
-                print(f"   [PUMP_FADED_W2] {result['token']}: chg1={chg1:.1f}% | recovery")
+                print(f"   [PUMP_FADED_W2] {result['token']}: chg1={chg1_check:.1f}% | recovery")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -843,7 +860,16 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            if chg1 > PUMP_CHG1_THRESHOLD:
+            # Timer done - FETCH FRESH DATA and verify chg1 still above pump threshold
+            fresh_fdata, fresh_source = get_fresh_token_data(addr)
+            if fresh_fdata:
+                if fresh_source == 'gmgn':
+                    chg1_check = float(fresh_fdata.get('price_change_percent1m', 0) or 0)
+                else:
+                    chg1_check = float(fresh_fdata.get('priceChange', {}).get('m1', 0) or 0)
+            else:
+                chg1_check = chg1  # fallback to cached
+            if chg1_check > PUMP_CHG1_THRESHOLD:
                 # IRONCLAD: Re-check age before BUY - fresh data only
                 token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
                 # Age check - reject if too old OR too new OR missing timestamp
@@ -859,14 +885,14 @@ def scan_cycle():
                     print(f"   [SKIP_TOO_NEW] {result['token']}: age {token_age}s < {PUMP_MIN_AGE}s | skip (too new)")
                     to_remove.append(addr)
                     continue
-                print(f"   [BUY_PUMP] {result['token']}: chg1={chg1:+.1f}% | BUY!")
+                print(f"   [BUY_PUMP] {result['token']}: chg1={chg1_check:+.1f}% | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
                 send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Pump path triggered\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n💰 Wallet: {get_wallet_balance():.4f} SOL\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
-                print(f"   [PUMP_FADED_V] {result['token']}: chg1={chg1:.1f}% | recovery")
+                print(f"   [PUMP_FADED_V] {result['token']}: chg1={chg1_check:.1f}% | recovery")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
