@@ -338,6 +338,24 @@ def get_fresh_token_data(addr):
 # TOKEN SCANNING (FILTERS ONLY - NO STATE MANAGEMENT)
 # =====================================================================
 
+def get_dexscreener_mcap(addr):
+    """Get market cap from DexScreener as fallback when GMGN shows mc=0"""
+    try:
+        url = f"https://api.dexscreener.com/latest/dex/search?q={addr}&chain=solana&limit=5"
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read())
+            pairs = data.get('pairs', [])
+            for p in pairs:
+                base = p.get('baseToken', {})
+                if base.get('address', '') == addr:
+                    mc = float(p.get('marketCap', 0) or 0)
+                    if mc > 0:
+                        return mc
+            return 0
+    except:
+        return 0
+
 def get_dexscreener_volume(addr):
     """Get volume from DexScreener as fallback when GMGN shows 0 volume"""
     try:
@@ -391,7 +409,11 @@ def scan_token(token_data, reason_if_fail=None):
         if launchpad not in ALLOWED_EXCHANGES:
             return None, f"exchange {launchpad or 'unknown'} not allowed"
         
-        # Mcap check
+        # Mcap check - if GMGN returns 0 mc, try DexScreener as fallback
+        if mc < MIN_MCAP and mc == 0 and addr:
+            dex_mc = get_dexscreener_mcap(addr)
+            if dex_mc > 0:
+                mc = dex_mc
         if mc < MIN_MCAP:
             return None, f"mcap ${mc:,.0f} < ${MIN_MCAP:,}"
         if mc > MAX_MCAP:
@@ -423,9 +445,7 @@ def scan_token(token_data, reason_if_fail=None):
         if h1 < H1_MOMENTUM_MIN:
             return None, f"h1 {h1:.1f}% < {H1_MOMENTUM_MIN}%"
         
-        # H1 max check (reject insane pumps)
-        if h1 > H1_MOMENTUM_MAX:
-            return None, f"h1 {h1:.1f}% > {H1_MOMENTUM_MAX}% (insane pump)"
+        # No H1 max ceiling - let any momentum through, stop loss handles risk
         
         # BS ratio check
         if launchpad == 'pump':
