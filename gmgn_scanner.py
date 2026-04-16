@@ -110,6 +110,7 @@ _GMGN_SCAN_CYCLE = 0          # Even = trending, Odd = trenches
 DEXSCREENER_FAIL_COUNT = 0
 DEXSCREENER_FAIL_RESET = time.time()
 _BUYS_STOPPED = False
+_GMGN_STAGGER_COUNTER = 0  # stagger gmgn calls: 0=trending, 1=trenches, 2=new pairs
 _LAST_ALERT_TIMES = {}   # alert_key -> timestamp (5 min dedup)
 _ALERTS_THIS_CYCLE = set()
 _LAST_DEXSCR_ALERT = 0   # timestamp of last DexScreener failure alert
@@ -165,16 +166,25 @@ def record_throttle(endpoint):
 def reset_gmgn_fails():
     """Reset consecutive fail counter on successful GMGN call"""
     global _GMGN_CONSECUTIVE_FAILS, _GMGN_GLOBAL_BACKOFF_UNTIL, _BUYS_STOPPED
-    if _GMGN_CONSECUTIVE_FAILS > 0:
-        _GMGN_CONSECUTIVE_FAILS = 0
-        _GMGN_GLOBAL_BACKOFF_UNTIL = 0
-        if _BUYS_STOPPED and time.time() >= _GMGN_GLOBAL_BACKOFF_UNTIL:
-            _BUYS_STOPPED = False
+    _GMGN_CONSECUTIVE_FAILS = 0
+    _GMGN_GLOBAL_BACKOFF_UNTIL = 0
+    if _BUYS_STOPPED:
+        _BUYS_STOPPED = False
 
 def check_stop_buys():
-    """Stop buys if both GMGN AND DexScreener are failing"""
-    global _BUYS_STOPPED
+    """Stop buys if both GMGN AND DexScreener are failing, or GMGN global backoff active"""
+    global _BUYS_STOPPED, _GMGN_CONSECUTIVE_FAILS, _GMGN_GLOBAL_BACKOFF_UNTIL
     now = time.time()
+    
+    # GMGN global circuit breaker - if backoff active, stop buys
+    if now < _GMGN_GLOBAL_BACKOFF_UNTIL:
+        if not _BUYS_STOPPED:
+            _BUYS_STOPPED = True
+            try:
+                send_alert(f"🚨 GMGN BACKOFF ACTIVE: {_GMGN_CONSECUTIVE_FAILS} failures, backoff until {int(_GMGN_GLOBAL_BACKOFF_UNTIL - now)}s | BUYS STOPPED")
+            except:
+                pass
+        return True
     
     # Reset DexScreener fail count after 1 hour
     global DEXSCREENER_FAIL_COUNT, DEXSCREENER_FAIL_RESET
@@ -962,20 +972,22 @@ def scan_cycle():
         if now - STOP_LOSS_COOLDOWN[addr]['ts'] > 1800:
             del STOP_LOSS_COOLDOWN[addr]
     
-    # === STAGGERED GMGN SCAN (alternate trending/trenches each cycle) ===
-    # PRIORITY: Process youngest tokens FIRST (lowest creation_timestamp)
-    # This ensures we catch new pump.fun launches early before they pump
-    # Scan ALL sources every cycle - it's ok to see the same token multiple times
+    # === STAGGERED GMGN SCAN: cycle trending/trenches/new every 30s ===
+    global _GMGN_STAGGER_COUNTER
+    _GMGN_STAGGER_COUNTER = (_GMGN_STAGGER_COUNTER + 1) % 3
+    
+    if _GMGN_STAGGER_COUNTER == 0:
+        tokens = get_gmgn_trending(50)
+        tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
+    elif _GMGN_STAGGER_COUNTER == 1:
+        tokens = get_gmgn_trenches(20)
+        tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
+    else:
+        # New pairs proxy: trending sorted newest first
+        tokens = get_gmgn_trending(30)
+        tokens.sort(key=lambda x: x.get('creation_timestamp', 0), reverse=True)
+    
     seen = set()
-
-    # GMGN trending - up to 50 newest tokens
-    tokens = get_gmgn_trending(50)
-    tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
-
-    # GMGN trenches - up to 20 newest tokens (append to trending)
-    trenches_tokens = get_gmgn_trenches(20)
-    trenches_tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
-    tokens.extend(trenches_tokens)
 
     for token_data in tokens:
         addr = token_data.get('address', '')
