@@ -33,7 +33,7 @@ CHRIS_STARTING_BALANCE = 1.0   # Chris's starting balance in SOL
 
 # Position sizing
 POSITION_SIZE = 0.1          # SOL per trade
-MAX_OPEN_POSITIONS = 9       # Max concurrent positions
+MAX_OPEN_POSITIONS = 5       # Max concurrent positions
 MAX_DAILY_LOSS = 9999         # Disabled (no limit)
 
 # Entry filters

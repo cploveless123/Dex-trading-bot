@@ -23,7 +23,7 @@ from datetime import datetime, timezone
 # CONSTANTS
 # =====================================================================
 POSITION_SIZE = 0.1
-MAX_OPEN_POSITIONS = 9
+MAX_OPEN_POSITIONS = 5
 MIN_MCAP = 6000
 MAX_MCAP = 55000
 MIN_HOLDERS = 15
@@ -737,6 +737,12 @@ def scan_cycle():
                 data['h1_prev'] = h1
                 continue
             if chg1 > PUMP_CHG1_THRESHOLD:
+                # IRONCLAD: Re-check age before BUY - fresh data only
+                token_age = int(time.time() - token_data.get('creation_timestamp', 0))
+                if token_age > MAX_AGE:
+                    print(f"   [SKIP_AGE] {result['token']}: age {token_age}s > {MAX_AGE}s | skip")
+                    to_remove.append(addr)
+                    continue
                 print(f"   [BUY_PUMP] {result['token']}: chg1={chg1:+.1f}% | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)

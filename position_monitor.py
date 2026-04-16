@@ -394,6 +394,10 @@ def monitor_cycle():
             STOP_LOSS_COOLDOWN[addr] = {'ts': time.time(), 'reason': 'STOP_LOSS'}
             with open(STOP_LOSS_FILE, 'w') as f:
                 json.dump(STOP_LOSS_COOLDOWN, f)
+            # IRONCLAD: Also add to PERM_BLACKLIST (never re-buy)
+            PERM_BLACKLIST.add(addr)
+            with open(PERM_BLACKLIST_FILE, 'w') as f:
+                json.dump(list(PERM_BLACKLIST), f)
             to_remove = True
         
         # Update peak price in trade
