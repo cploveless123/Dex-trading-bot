@@ -972,8 +972,7 @@ def scan_cycle():
         if now - STOP_LOSS_COOLDOWN[addr]['ts'] > 1800:
             del STOP_LOSS_COOLDOWN[addr]
     
-    # === STAGGERED GMGN SCAN: call trending + trenches + new every cycle ===
-    # Check global backoff - skip all GMGN calls if in cooldown
+    # === STAGGERED GMGN SCAN: 1 call per 60s, cycle through trending/trenches/new ===
     if now < _GMGN_GLOBAL_BACKOFF_UNTIL:
         tokens = []
     else:
@@ -981,26 +980,15 @@ def scan_cycle():
         _GMGN_STAGGER_COUNTER = (_GMGN_STAGGER_COUNTER + 1) % 3
         
         if _GMGN_STAGGER_COUNTER == 0:
-            # Cycle 0: trending + trenches (2 calls to hit fail threshold faster)
             tokens = get_gmgn_trending(50)
             tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
-            t2 = get_gmgn_trenches(20)
-            t2.sort(key=lambda x: x.get('creation_timestamp', 0))
-            tokens.extend(t2)
         elif _GMGN_STAGGER_COUNTER == 1:
-            # Cycle 1: trenches + new pairs proxy
             tokens = get_gmgn_trenches(20)
             tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
-            t2 = get_gmgn_trending(30)
-            t2.sort(key=lambda x: x.get('creation_timestamp', 0), reverse=True)
-            tokens.extend(t2)
         else:
-            # Cycle 2: new pairs + trending
-            t1 = get_gmgn_trending(30)
-            t1.sort(key=lambda x: x.get('creation_timestamp', 0), reverse=True)
-            t2 = get_gmgn_trending(50)
-            t2.sort(key=lambda x: x.get('creation_timestamp', 0))
-            tokens = t1 + t2
+            # New pairs proxy: trending sorted newest first
+            tokens = get_gmgn_trending(30)
+            tokens.sort(key=lambda x: x.get('creation_timestamp', 0), reverse=True)
     
     seen = set()
 
@@ -1084,7 +1072,7 @@ def main():
         except Exception as e:
             print(f"Scan error: {e}")
         sys.stdout.flush()
-        time.sleep(10)  # 10s scan interval
+        time.sleep(10)  # 10s main loop, GMGN scan staggered 1 call per 60s
 
 if __name__ == '__main__':
     main()
