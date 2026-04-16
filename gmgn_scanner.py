@@ -59,7 +59,6 @@ STATE_OLDER_COOLDOWN = 'OLDER_COOLDOWN'  # 45s for older + momentum
 STATE_CHG1_RECHECK = 'CHG1_RECHECK'      # 15s rechecks until mcap>+5% from low
 STATE_CHG1_VERIFY = 'CHG1_VERIFY'        # 15s verify before buy
 STATE_BASE_WAIT = 'BASE_WAIT'            # 30s → verify chg1 > chg1_prev + 3%
-STATE_BUY_NOW = 'BUY_NOW'                # Buy immediately (passed filters, none of the wait conditions)
 STATE_RECOVERY_WAIT = 'RECOVERY_WAIT'    # 6s for chg1 recovery for chg5 recovery
 
 # Timing constants (sync with trading_constants.py)
@@ -693,8 +692,8 @@ def add_to_cooldown(addr, token_data, result, entry_chg5):
         state = STATE_OLDER_COOLDOWN
         cooldown_end = time.time() + OLDER_COOLDOWN
     else:
-        state = STATE_BUY_NOW
-        cooldown_end = now  # Immediate - no wait
+        state = STATE_BASE_WAIT
+        cooldown_end = time.time() + BASE_WAIT
     
     COOLDOWN_WATCH[addr] = {
         'state': state,
@@ -832,6 +831,11 @@ def scan_cycle():
             if chg1 > PUMP_CHG1_THRESHOLD:
                 # IRONCLAD: Re-check age before BUY - fresh data only
                 token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
+                # Reject if no age data (creation_timestamp = 0 or missing)
+                if token_age <= 0 or data.get('token_data', {}).get('creation_timestamp', 0) == 0:
+                    print(f"   [SKIP_NO_AGE] {result['token']}: no creation_timestamp | skip (unknown age)")
+                    to_remove.append(addr)
+                    continue
                 if token_age > MAX_AGE:
                     print(f"   [SKIP_AGE] {result['token']}: age {token_age}s > {MAX_AGE}s | skip")
                     to_remove.append(addr)
@@ -898,13 +902,19 @@ def scan_cycle():
                 # During cooldown: check if chg1 drops below -5%
                 if chg1 < -5:
                     data['state'] = STATE_CHG1_RECHECK
-                    data['cooldown_end'] = now + 15
+                    data['cooldown_end'] = now + CHG1_RECHECK_INTERVAL
                     data['lowest_mcap'] = mcap
                     print(f"   [CHG1_FALL] {result['token']}: chg1={chg1:.1f}% < -5% | recovery mode")
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # 45s done - verify chg1 > chg1_prev + 3%
+            # 30s done - verify chg1 > chg1_prev + 3%
+            # Also verify token is old enough (PUMP_MIN_AGE)
+            token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
+            if token_age < PUMP_MIN_AGE:
+                print(f"   [SKIP_TOO_NEW] {result['token']}: age {token_age}s < {PUMP_MIN_AGE}s | skip (too new)")
+                to_remove.append(addr)
+                continue
             chg1_threshold = chg1_prev + 3
             if chg1 > chg1_threshold:
                 print(f"   [BUY_YOUNG] {result['token']}: chg1={chg1:+.1f}% > {chg1_threshold:+.1f}% from last | BUY!")
@@ -925,13 +935,19 @@ def scan_cycle():
             if remaining > 0:
                 if chg1 < -5:
                     data['state'] = STATE_CHG1_RECHECK
-                    data['cooldown_end'] = now + 15
+                    data['cooldown_end'] = now + CHG1_RECHECK_INTERVAL
                     data['lowest_mcap'] = mcap
                     print(f"   [CHG1_FALL] {result['token']}: chg1={chg1:.1f}% < -5% | recovery mode")
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # 45s done - verify chg1 >= +2%
+            # 30s done - verify chg1 >= +2%
+            # Also verify token is old enough (PUMP_MIN_AGE)
+            token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
+            if token_age < PUMP_MIN_AGE:
+                print(f"   [SKIP_TOO_NEW] {result['token']}: age {token_age}s < {PUMP_MIN_AGE}s | skip (too new)")
+                to_remove.append(addr)
+                continue
             if chg1 > 2:
                 print(f"   [BUY_OLDER] {result['token']}: chg1={chg1:+.1f}% > +2% | BUY!")
                 buy_token(addr, result)
@@ -952,7 +968,13 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # Timer done - verify chg1 > chg1_prev + 3%
+            # Timer done - verify token is old enough (PUMP_MIN_AGE)
+            token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
+            if token_age < PUMP_MIN_AGE:
+                print(f"   [SKIP_TOO_NEW] {result['token']}: age {token_age}s < {PUMP_MIN_AGE}s | skip (too new)")
+                to_remove.append(addr)
+                continue
+            # Verify chg1 > chg1_prev + 3%
             chg1_threshold = chg1_prev + 3
             if chg1 > chg1_threshold:
                 print(f"   [BUY_BASE] {result['token']}: chg1={chg1:+.1f}% >= {chg1_threshold:+.1f}% from last | BUY!")
@@ -965,15 +987,6 @@ def scan_cycle():
                 print(f"   [BASE_PASS] {result['token']}: chg1={chg1:.1f}% < {chg1_threshold:+.1f}% | token passed")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
-            continue
-        
-        # === BUY NOW PATH (immediately - none of the wait conditions met) ===
-        elif state == STATE_BUY_NOW:
-            # No cooldown needed - buy immediately
-            print(f"   [BUY_NOW] {result['token']}: chg1={chg1:+.1f}% | BUY (no wait needed)!")
-            buy_token(addr, result)
-            to_remove.append(addr)
-            send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Buy now path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
             continue
         
         # === RECOVERY WAIT (chg5 dropped but recovering) ===
