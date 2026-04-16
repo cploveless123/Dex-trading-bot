@@ -26,6 +26,7 @@ POSITION_SIZE = 0.1
 MAX_OPEN_POSITIONS = 5
 MIN_MCAP = 5000
 MAX_MCAP = 55000
+MAX_AGE = 3600  # 60 minutes max token age
 MIN_HOLDERS = 15
 MIN_CHG5_FOR_BUY = 2.0
 PUMP_CHG1_THRESHOLD = 5.001
@@ -456,7 +457,6 @@ def scan_token(token_data, reason_if_fail=None):
         
         # Age check - reject if too old
         age_sec = int(time.time() - token_data.get('creation_timestamp', 0)) if token_data.get('creation_timestamp') else 0
-        MAX_AGE = 3600  # 60 minutes max
         if age_sec > MAX_AGE:
             return None, f"age {age_sec}s > {MAX_AGE}s (too old)"
         
