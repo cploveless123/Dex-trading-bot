@@ -468,6 +468,17 @@ def scan_token(token_data, reason_if_fail=None):
         chg5 = float(token_data.get('price_change_percent5m', 0) or 0)
         chg1 = float(token_data.get('price_change_percent1m', 0) or 0)
         holders = int(token_data.get('holder_count', 0) or 0)
+        
+        # If key fields missing from GMGN (None/0), try DexScreener fresh fetch
+        if (h1 == 0 and chg5 == 0 and chg1 == 0) and addr:
+            from gmgn_scanner import get_fresh_token_data_no_cache
+            fresh, src = get_fresh_token_data_no_cache(addr)
+            if fresh:
+                h1 = float(fresh.get('price_change_percent1h', 0) or 0) or h1
+                chg5 = float(fresh.get('price_change_percent5m', 0) or 0) or chg5
+                chg1 = float(fresh.get('price_change_percent1m', 0) or 0) or chg1
+                if mc == 0:
+                    mc = float(fresh.get('market_cap', 0) or 0) or mc
         top10pct = float(token_data.get('top10holderpercent', 0) or 0)
         volume = float(token_data.get('volume', 0) or 0)
         bs_ratio = float(token_data.get('bs_change24hpercent', 0) or 0)
