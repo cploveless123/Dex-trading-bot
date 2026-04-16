@@ -90,6 +90,15 @@ _gmgn_throttle_state = {
 _BACKOFF_BASE = 30
 _BACKOFF_MAX = 300
 
+# Global GMGN circuit breaker - stops ALL GMGN calls after consecutive failures
+_GMGN_CONSECUTIVE_FAILS = 0
+_GMGN_GLOBAL_BACKOFF_UNTIL = 0
+_GMGN_BACKOFF_THRESHOLD = 3   # 3 consecutive failures → global backoff
+_GMGN_BACKOFF_DURATION = 60   # 60s global backoff before retrying
+
+# Stagger GMGN calls - alternate trending/trenches to avoid burst
+_GMGN_SCAN_CYCLE = 0          # Even = trending, Odd = trenches
+
 # IronClad trackers
 DEXSCREENER_FAIL_COUNT = 0
 DEXSCREENER_FAIL_RESET = time.time()
@@ -117,6 +126,9 @@ except:
 # =====================================================================
 
 def is_throttled(endpoint):
+    # Check global backoff first - if active, block ALL GMGN calls
+    if time.time() < _GMGN_GLOBAL_BACKOFF_UNTIL:
+        return True
     state = _gmgn_throttle_state[endpoint]
     # Reset _alerted when backoff expires
     if time.time() >= state['backoff_until']:
@@ -124,14 +136,33 @@ def is_throttled(endpoint):
     return time.time() < state['backoff_until']
 
 def record_throttle(endpoint):
+    global _GMGN_CONSECUTIVE_FAILS, _GMGN_GLOBAL_BACKOFF_UNTIL, _BUYS_STOPPED
     state = _gmgn_throttle_state[endpoint]
     state['count'] += 1
     wait_time = min(_BACKOFF_BASE * (2 ** state['count']), _BACKOFF_MAX)
     state['backoff_until'] = time.time() + wait_time
+
+    # Global circuit breaker
+    _GMGN_CONSECUTIVE_FAILS += 1
+    if _GMGN_CONSECUTIVE_FAILS >= _GMGN_BACKOFF_THRESHOLD:
+        _GMGN_GLOBAL_BACKOFF_UNTIL = time.time() + _GMGN_BACKOFF_DURATION
+        if not _BUYS_STOPPED:
+            _BUYS_STOPPED = True
+            send_alert(f"🚨 GMGN CIRCUIT BREAKER: {_GMGN_CONSECUTIVE_FAILS} consecutive failures, global backoff {_GMGN_BACKOFF_DURATION}s | BUYING STOPPED")
+
     # Alert only once per throttle event (not per increment)
     if not state.get('_alerted', False):
         state['_alerted'] = True
         send_alert(f"⚠️ GMGN {endpoint.upper()} THROTTLED: {state['count']} failures, backoff {wait_time:.0f}s")
+
+def reset_gmgn_fails():
+    """Reset consecutive fail counter on successful GMGN call"""
+    global _GMGN_CONSECUTIVE_FAILS, _GMGN_GLOBAL_BACKOFF_UNTIL, _BUYS_STOPPED
+    if _GMGN_CONSECUTIVE_FAILS > 0:
+        _GMGN_CONSECUTIVE_FAILS = 0
+        _GMGN_GLOBAL_BACKOFF_UNTIL = 0
+        if _BUYS_STOPPED and time.time() >= _GMGN_GLOBAL_BACKOFF_UNTIL:
+            _BUYS_STOPPED = False
 
 def check_stop_buys():
     """Stop buys if both GMGN AND DexScreener are failing"""
@@ -186,6 +217,7 @@ def get_gmgn_trending(limit=50):
         send_alert("⚠️ GMGN trending FAILED")
         return []
     try:
+        reset_gmgn_fails()  # Reset consecutive fail counter on success
         d = json.loads(r.stdout)
         return d.get('data', {}).get('rank', [])
     except:
@@ -201,6 +233,7 @@ def get_gmgn_trenches(limit=20):
         record_throttle('trenches')
         return []
     try:
+        reset_gmgn_fails()  # Reset consecutive fail counter on success
         d = json.loads(r.stdout)
         # Trenches has 'completed' and 'new' arrays
         completed = d.get('completed', [])
@@ -287,6 +320,7 @@ def get_gmgn_token_info(addr):
         send_alert(f"⚠️ GMGN token_info FAILED")
         return None
     try:
+        reset_gmgn_fails()  # Reset consecutive fail counter on success
         data = json.loads(r.stdout)
         # Extract exchange from nested pool dict if top-level exchange is empty
         if data.get('exchange', '') == '' and 'pool' in data:
@@ -441,18 +475,10 @@ def scan_token(token_data, reason_if_fail=None):
         if h1 > FALLEN_GIANT_H1 and mc < FALLEN_GIANT_MCAP:
             return None, f"Fallen Giant: h1={h1:.0f}% + mcap=${mc:,.0f} < ${FALLEN_GIANT_MCAP:,}"
         
-        # H1 momentum check - exempt pump tokens (pump path has its own momentum check)
-        # But try token info endpoint if h1/chg5 shows 0 (GMGN trenches sometimes missing data)
-        if h1 == 0 and launchpad in ['pump', 'pumpswap'] and addr:
-            info = get_gmgn_token_info(addr)
-            if info:
-                h1 = info.get('price_change_percent1h', h1)
-                chg5_fresh = info.get('price_change_percent5m', chg5)
-                chg1_fresh = info.get('price_change_percent1m', chg1)
-                if chg5_fresh and chg5_fresh != chg5:
-                    chg5 = chg5_fresh
-                if chg1_fresh and chg1_fresh != chg1:
-                    chg1 = chg1_fresh
+        # H1 momentum check - for pump tokens with no h1 data yet, set to minimum to allow entry
+        # (pump path has its own chg1 momentum check anyway)
+        if launchpad in ['pump', 'pumpswap'] and h1 == 0:
+            h1 = H1_MOMENTUM_MIN  # Treat 0 h1 as "no data yet" - allow through to pump path
         
         if launchpad not in ['pump', 'pumpswap']:
             if h1 < H1_MOMENTUM_MIN:
@@ -771,7 +797,7 @@ def scan_cycle():
                 continue
             if chg1 > PUMP_CHG1_THRESHOLD:
                 # IRONCLAD: Re-check age before BUY - fresh data only
-                token_age = int(time.time() - token_data.get('creation_timestamp', 0))
+                token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
                 if token_age > MAX_AGE:
                     print(f"   [SKIP_AGE] {result['token']}: age {token_age}s > {MAX_AGE}s | skip")
                     to_remove.append(addr)
@@ -940,56 +966,61 @@ def scan_cycle():
         if now - STOP_LOSS_COOLDOWN[addr]['ts'] > 1800:
             del STOP_LOSS_COOLDOWN[addr]
     
-    # === NEW TOKEN SCAN FROM TRENDING ===
-    tokens = get_gmgn_trending(50)
+    # === STAGGERED GMGN SCAN (alternate trending/trenches each cycle) ===
+    global _GMGN_SCAN_CYCLE
+    _GMGN_SCAN_CYCLE += 1
     seen = set()
-    for token_data in tokens:
-        addr = token_data.get('address', '')
-        if not addr or addr in seen:
-            continue
-        seen.add(addr)
-        
-        # IRONCLAD checks
-        if addr in PERM_BLACKLIST:
-            continue
-        if addr in COOLDOWN_WATCH:
-            continue
-        if addr in REJECTED_TEMP:
-            continue
-        if addr in STOP_LOSS_COOLDOWN:
-            continue
-        if get_open_position_count() >= MAX_OPEN_POSITIONS:
-            continue
-        
-        result, fail_reason = scan_token(token_data)
-        if result is None:
-            continue
-        
-        add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
-    
-    # === SCAN TRENCHES (newly created pump.fun tokens) ===
-    trenches_tokens = get_gmgn_trenches(20)
-    for token_data in trenches_tokens:
-        addr = token_data.get('address', '')
-        if not addr or addr in seen:
-            continue
-        seen.add(addr)
-        
-        # IRONCLAD checks
-        if addr in PERM_BLACKLIST:
-            continue
-        if addr in COOLDOWN_WATCH:
-            continue
-        if addr in REJECTED_TEMP:
-            continue
-        if get_open_position_count() >= MAX_OPEN_POSITIONS:
-            continue
-        
-        result, fail_reason = scan_token(token_data)
-        if result is None:
-            continue
-        
-        add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
+
+    # Even cycles = trending, Odd cycles = trenches
+    # This halves GMGN API calls while still covering both sources
+    if _GMGN_SCAN_CYCLE % 2 == 0:
+        tokens = get_gmgn_trending(50)
+        for token_data in tokens:
+            addr = token_data.get('address', '')
+            if not addr or addr in seen:
+                continue
+            seen.add(addr)
+
+            # IRONCLAD checks
+            if addr in PERM_BLACKLIST:
+                continue
+            if addr in COOLDOWN_WATCH:
+                continue
+            if addr in REJECTED_TEMP:
+                continue
+            if addr in STOP_LOSS_COOLDOWN:
+                continue
+            if get_open_position_count() >= MAX_OPEN_POSITIONS:
+                continue
+
+            result, fail_reason = scan_token(token_data)
+            if result is None:
+                continue
+
+            add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
+    else:
+        trenches_tokens = get_gmgn_trenches(20)
+        for token_data in trenches_tokens:
+            addr = token_data.get('address', '')
+            if not addr or addr in seen:
+                continue
+            seen.add(addr)
+
+            # IRONCLAD checks
+            if addr in PERM_BLACKLIST:
+                continue
+            if addr in COOLDOWN_WATCH:
+                continue
+            if addr in REJECTED_TEMP:
+                continue
+            if get_open_position_count() >= MAX_OPEN_POSITIONS:
+                continue
+
+            result, fail_reason = scan_token(token_data)
+            if result is None:
+                continue
+
+            add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
     
     
     
