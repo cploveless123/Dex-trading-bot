@@ -24,7 +24,7 @@ from datetime import datetime, timezone
 # =====================================================================
 POSITION_SIZE = 0.1
 MAX_OPEN_POSITIONS = 5
-MIN_MCAP = 5000
+MIN_MCAP = 6000
 MAX_MCAP = 55000
 MAX_AGE = 3600  # 60 minutes max token age
 MIN_HOLDERS = 15
