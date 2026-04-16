@@ -8,7 +8,7 @@ TP5 Progressive Selling Strategy:
 - TP3 (+200%): Sell 30%, 30% trailing stop
 - TP4 (+300%): Sell 20%, 30% trailing stop
 - TP5 (+1000%): Sell ALL, target reached
-- Stop: -30% from entry
+- Stop: -25% from entry
 """
 
 import subprocess, json, time, urllib.request, urllib.parse
@@ -356,26 +356,41 @@ def monitor_cycle():
                 close_position(addr, "TP4_TRAIL_STOP")
                 to_remove = True
         
-        # TP5 (+1000%): Sell ALL
+        # TP5 (+1000%): Sell 10%, hold 10% with 15% trail (compound mode)
         if not tp_status['tp5_hit'] and pnl_pct >= TP5_PCT:
             tp_status['tp5_hit'] = True
+            tp_status['tp5_sold_pct'] = TP5_SELL_PCT
             peak_price = current_price  # CRITICAL: update peak to actual TP5 price
-            sold_pct = sum([tp_status.get(f'tp{tp}_sold_pct', 0) for tp in [2, 3, 4]])
-            remaining_pct = 1 - sold_pct
-            sell_token(addr, token_name, position_size * remaining_pct, current_price, "TP5")
-            msg = (f"🚀🚀🚀 TP5 HIT | {token_name}\n"
+            sell_token(addr, token_name, position_size * TP5_SELL_PCT, current_price, "TP5")
+            msg = (f"🚀 TP5 HIT | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
-                   f"+{pnl_pct:.1f}% (+{pnl_sol:.4f} SOL) | SOLD ALL\n"
+                   f"+{pnl_pct:.1f}% (+{pnl_sol:.4f} SOL) | Sold 10%\n"
                    f"Balance: ${current_balance:.4f} SOL\n"
+                   f"Remaining: 10% | Trail 15%\n"
                    f"Entry: ${entry_mcap:,}\n"
-                   f"Exit: ${mcap:,.0f}\n"
-                   f"TARGET REACHED!\n"
-                   f"🔗 https://dexscreener.com/solana/{addr}")
+                   f"Current: ${mcap:,.0f}\n"
+                   f"🔗 https://dexscreener.com/solana/{addr}\n"
+                   f"🥧 https://pump.fun/{addr}")
             alert_sender_webhook(msg)
-            close_position(addr, "TP5_COMPLETE")
-            to_remove = True
         
-        # Stop loss (-30%)
+        # TP5 trailing stop (15% from peak - compound mode)
+        if tp_status['tp5_hit'] and not tp_status.get('tp5_trail_hit'):
+            if current_price < peak_price * (1 - TP5_TRAIL/100):
+                remaining_pct = 1 - tp_status.get('tp5_sold_pct', TP5_SELL_PCT)
+                sell_token(addr, token_name, position_size * remaining_pct, current_price, "TP5_TRAIL_STOP")
+                msg = (f"🛑 TP5 TRAIL STOP | {token_name}\n"
+                       f"━━━━━━━━━━━━━━━\n"
+                       f"{pnl_pct:.1f}% ({pnl_sol:.4f} SOL) | Exited remaining\n"
+                       f"Balance: ${current_balance:.4f} SOL\n"
+                       f"Entry: ${entry_mcap:,}\n"
+                       f"Peak: ${peak_price * entry_mcap / entry_price:,.0f}\n"
+                       f"Exit: ${mcap:,.0f}\n"
+                       f"🔗 https://dexscreener.com/solana/{addr}")
+                alert_sender_webhook(msg)
+                close_position(addr, "TP5_TRAIL_STOP")
+                to_remove = True
+        
+        # Stop loss (-25%)
         if pnl_pct <= -STOP_LOSS_PCT:
             sold_pct = sum([tp_status.get(f'tp{tp}_sold_pct', 0) for tp in [2, 3, 4, 5]])
             remaining_pct = 1 - sold_pct
@@ -422,7 +437,7 @@ def main():
     log(f"TP2: +{TP2_PCT}% sell {int(TP2_SELL_PCT*100)}%, Trail {TP2_TRAIL}%")
     log(f"TP3: +{TP3_PCT}% sell {int(TP3_SELL_PCT*100)}%, Trail {TP3_TRAIL}%")
     log(f"TP4: +{TP4_PCT}% sell {int(TP4_SELL_PCT*100)}%, Trail {TP4_TRAIL}%")
-    log(f"TP5: +{TP5_PCT}% sell ALL, Trail {TP5_TRAIL}%")
+    log(f"TP5: +{TP5_PCT}% sell {int(TP5_SELL_PCT*100)}%, Trail {TP5_TRAIL}% (10% compound mode)")
     log(f"Stop: -{STOP_LOSS_PCT}%")
     
     while True:

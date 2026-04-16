@@ -70,22 +70,22 @@ TP1_HOLD = True              # HOLD at TP1 - no sell
 TP1_SELL_PCT = 0             # 0% sell at TP1 (HOLD mode)
 
 TP2_PCT = 100                # Take profit 2: +100%
-TP2_SELL_PCT = 0.40         # Sell 40% of position at TP2
-TP2_TRAIL = 30              # 30% trailing stop
+TP2_SELL_PCT = 0.35         # Sell 35% of position at TP2
+TP2_TRAIL = 30              # 30% trailing stop from PEAK
 
 TP3_PCT = 200               # Take profit 3: +200%
-TP3_SELL_PCT = 0.30         # Sell 30% of position at TP3
-TP3_TRAIL = 30              # 30% trailing stop
+TP3_SELL_PCT = 0.35         # Sell 35% of position at TP3
+TP3_TRAIL = 30              # 30% trailing stop from PEAK
 
 TP4_PCT = 300               # Take profit 4: +300%
 TP4_SELL_PCT = 0.20         # Sell 20% of position at TP4
-TP4_TRAIL = 30              # 30% trailing stop
+TP4_TRAIL = 30              # 30% trailing stop from PEAK
 
 TP5_PCT = 1000              # Take profit 5: +1000% (TP5 target!)
-TP5_SELL_PCT = 1.00         # Sell remaining at TP5 (exit all)
-TP5_TRAIL = 20              # 20% trailing stop
+TP5_SELL_PCT = 0.10        # Sell 10% of position at TP5
+TP5_TRAIL = 15              # 15% trailing stop from PEAK (tight — protect gains)
 
-STOP_LOSS_PCT = 30          # Exit all at -30%
+STOP_LOSS_PCT = 25          # Exit all at -25%
 
 # Exchange whitelist
 ALLOWED_EXCHANGES = ['raydium']  # Raydium only (no pump.fun/pumpswap for now)
