@@ -28,6 +28,8 @@ MIN_MCAP = 6000
 MAX_MCAP = 55000
 MAX_AGE = 3600  # 60 minutes max token age
 MIN_HOLDERS = 15
+SIM_WALLET_FILE = '/root/Dex-trading-bot/sim_wallet.json'
+CHRIS_STARTING_BALANCE = 1.0
 MIN_CHG5_FOR_BUY = 2.0
 PUMP_CHG1_THRESHOLD = 10.0
 H1_MOMENTUM_MIN = 25.0
@@ -205,6 +207,15 @@ def send_alert(msg):
         urllib.request.urlopen(req, timeout=10)
     except:
         pass
+
+def get_wallet_balance():
+    """Read balance from sim_wallet.json"""
+    try:
+        with open(SIM_WALLET_FILE) as f:
+            w = json.load(f)
+        return float(w.get('balance', CHRIS_STARTING_BALANCE))
+    except:
+        return CHRIS_STARTING_BALANCE
 
 # =====================================================================
 # GMGN API FUNCTIONS
@@ -851,7 +862,7 @@ def scan_cycle():
                 print(f"   [BUY_PUMP] {result['token']}: chg1={chg1:+.1f}% | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
-                send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Pump path triggered\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
+                send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Pump path triggered\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n💰 Wallet: {get_wallet_balance():.4f} SOL\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
@@ -893,7 +904,7 @@ def scan_cycle():
             print(f"   [BUY_CHG1] {result['token']}: chg1 recovered | BUY!")
             buy_token(addr, result)
             to_remove.append(addr)
-            send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 CHG1 recovery path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
+            send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 CHG1 recovery path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n💰 Wallet: {get_wallet_balance():.4f} SOL\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -923,7 +934,7 @@ def scan_cycle():
                 print(f"   [BUY_YOUNG] {result['token']}: chg1={chg1:+.1f}% > {chg1_threshold:+.1f}% from last | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
-                send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Young cooldown path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
+                send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Young cooldown path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n💰 Wallet: {get_wallet_balance():.4f} SOL\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
             else:
                 data['state'] = STATE_BASE_WAIT
                 data['cooldown_end'] = now + 30
@@ -955,7 +966,7 @@ def scan_cycle():
                 print(f"   [BUY_OLDER] {result['token']}: chg1={chg1:+.1f}% > +2% | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
-                send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Older cooldown path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
+                send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Older cooldown path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n💰 Wallet: {get_wallet_balance():.4f} SOL\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
             else:
                 data['state'] = STATE_BASE_WAIT
                 data['cooldown_end'] = now + 30
@@ -983,7 +994,7 @@ def scan_cycle():
                 print(f"   [BUY_BASE] {result['token']}: chg1={chg1:+.1f}% >= {chg1_threshold:+.1f}% from last | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
-                send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Base wait path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
+                send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Base wait path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n💰 Wallet: {get_wallet_balance():.4f} SOL\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
             else:
                 # BASE didn't trigger - token passes (no further cooldown needed)
                 to_remove.append(addr)
