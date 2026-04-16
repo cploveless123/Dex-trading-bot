@@ -223,6 +223,7 @@ def monitor_cycle():
         # TP1 (+50%): HOLD - watch only, 40% trailing stop
         if not tp_status['tp1_hit'] and pnl_pct >= TP1_PCT:
             tp_status['tp1_hit'] = True
+            peak_price = current_price  # CRITICAL: update peak to actual TP1 price
             msg = (f"💰 TP1 HIT | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
                    f"+{pnl_pct:.1f}% (+{pnl_sol:.4f} SOL) | HOLDING\n"
@@ -253,6 +254,7 @@ def monitor_cycle():
         if not tp_status['tp2_hit'] and pnl_pct >= TP2_PCT:
             tp_status['tp2_hit'] = True
             tp_status['tp2_sold_pct'] = TP2_SELL_PCT
+            peak_price = current_price  # CRITICAL: update peak to actual TP2 price
             sell_token(addr, token_name, position_size * TP2_SELL_PCT, current_price, "TP2")
             msg = (f"💰 TP2 HIT | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
@@ -286,6 +288,7 @@ def monitor_cycle():
         if not tp_status['tp3_hit'] and pnl_pct >= TP3_PCT:
             tp_status['tp3_hit'] = True
             tp_status['tp3_sold_pct'] = TP3_SELL_PCT
+            peak_price = current_price  # CRITICAL: update peak to actual TP3 price
             sell_token(addr, token_name, position_size * TP3_SELL_PCT, current_price, "TP3")
             msg = (f"💰 TP3 HIT | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
@@ -320,6 +323,7 @@ def monitor_cycle():
         if not tp_status['tp4_hit'] and pnl_pct >= TP4_PCT:
             tp_status['tp4_hit'] = True
             tp_status['tp4_sold_pct'] = TP4_SELL_PCT
+            peak_price = current_price  # CRITICAL: update peak to actual TP4 price
             sell_token(addr, token_name, position_size * TP4_SELL_PCT, current_price, "TP4")
             msg = (f"💰 TP4 HIT | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
@@ -353,6 +357,7 @@ def monitor_cycle():
         # TP5 (+1000%): Sell ALL
         if not tp_status['tp5_hit'] and pnl_pct >= TP5_PCT:
             tp_status['tp5_hit'] = True
+            peak_price = current_price  # CRITICAL: update peak to actual TP5 price
             sold_pct = sum([tp_status.get(f'tp{tp}_sold_pct', 0) for tp in [2, 3, 4]])
             remaining_pct = 1 - sold_pct
             sell_token(addr, token_name, position_size * remaining_pct, current_price, "TP5")

@@ -47,7 +47,7 @@ H1_MOMENTUM_MIN = 25.0      # Minimum 1h change % (momentum requirement)
 H1_MOMENTUM_MAX = 700.0     # Maximum 1h change % (reject meme coins with insane pump)
 
 # Cooldown timing
-YOUNG_AGE_THRESHOLD = 900   # Age in seconds (< 15 min = young)
+YOUNG_AGE_THRESHOLD = 180   # Age in seconds (< 3 min = young)
 YOUNG_COOLDOWN = 45          # Cooldown for young tokens
 OLDER_COOLDOWN = 45          # Cooldown for older tokens
 BASE_WAIT = 15               # Base cooldown for normal entries
