@@ -219,7 +219,18 @@ def get_status():
         all_trades = [json.loads(l) for l in f.readlines() if l.strip()]
     
     # Only count trades since reset
-    reset_trades = [t for t in all_trades if t.get('opened_at', '') > SIM_RESET_TIMESTAMP]
+    def trade_after_reset(t):
+        ts = t.get('opened_at')
+        if not ts:
+            return False
+        try:
+            from datetime import datetime
+            dt = datetime.fromisoformat(ts.replace('Z', '+00:00'))
+            return dt.timestamp() > SIM_RESET_TIMESTAMP
+        except Exception:
+            return False
+
+    reset_trades = [t for t in all_trades if trade_after_reset(t)]
     closed_pnl = sum(t.get('pnl_sol', 0) for t in reset_trades if t.get('closed_at'))
     open_full = [t for t in reset_trades if t.get('status') == 'open' and not t.get('closed_at')]
     open_partial = [t for t in reset_trades if t.get('status') == 'open_partial' and not t.get('closed_at')]
