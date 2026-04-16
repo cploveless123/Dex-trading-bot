@@ -473,10 +473,14 @@ def scan_token(token_data, reason_if_fail=None):
         if mc > MAX_MCAP:
             return None, f"mcap ${mc:,.0f} > ${MAX_MCAP:,}"
         
-        # Age check - reject if too old
+        # Age check - reject if too old OR too new OR missing timestamp
         age_sec = int(time.time() - token_data.get('creation_timestamp', 0)) if token_data.get('creation_timestamp') else 0
+        if not token_data.get('creation_timestamp', 0):
+            return None, f"no creation_timestamp (unknown age)"
         if age_sec > MAX_AGE:
             return None, f"age {age_sec}s > {MAX_AGE}s (too old)"
+        if age_sec < PUMP_MIN_AGE:
+            return None, f"age {age_sec}s < {PUMP_MIN_AGE}s (too new)"
         
         # Holders check
         if holders < MIN_HOLDERS:
@@ -831,16 +835,15 @@ def scan_cycle():
             if chg1 > PUMP_CHG1_THRESHOLD:
                 # IRONCLAD: Re-check age before BUY - fresh data only
                 token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
-                # Reject if no age data (creation_timestamp = 0 or missing)
-                if token_age <= 0 or data.get('token_data', {}).get('creation_timestamp', 0) == 0:
-                    print(f"   [SKIP_NO_AGE] {result['token']}: no creation_timestamp | skip (unknown age)")
+                # Age check - reject if too old OR too new OR missing timestamp
+                if not data.get('token_data', {}).get('creation_timestamp', 0):
+                    print(f"   [SKIP_NO_AGE] {result['token']}: no creation_timestamp | skip")
                     to_remove.append(addr)
                     continue
                 if token_age > MAX_AGE:
                     print(f"   [SKIP_AGE] {result['token']}: age {token_age}s > {MAX_AGE}s | skip")
                     to_remove.append(addr)
                     continue
-                # Reject brand new listings (need at least 2 min to establish history)
                 if token_age < PUMP_MIN_AGE:
                     print(f"   [SKIP_TOO_NEW] {result['token']}: age {token_age}s < {PUMP_MIN_AGE}s | skip (too new)")
                     to_remove.append(addr)
