@@ -948,16 +948,24 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # 30s done - verify chg1 > chg1_prev + 3%
+            # 30s done - FETCH FRESH DATA and verify chg1 > chg1_prev + 3%
             # Also verify token is old enough (PUMP_MIN_AGE)
+            fresh_fdata, fresh_source = get_fresh_token_data(addr)
+            if fresh_fdata:
+                if fresh_source == 'gmgn':
+                    chg1_verify = float(fresh_fdata.get('price_change_percent1m', 0) or 0)
+                else:
+                    chg1_verify = float(fresh_fdata.get('priceChange', {}).get('m1', 0) or 0)
+            else:
+                chg1_verify = chg1  # fallback to cached
             token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
             if token_age < PUMP_MIN_AGE:
                 print(f"   [SKIP_TOO_NEW] {result['token']}: age {token_age}s < {PUMP_MIN_AGE}s | skip (too new)")
                 to_remove.append(addr)
                 continue
             chg1_threshold = chg1_prev + 3
-            if chg1 > chg1_threshold:
-                print(f"   [BUY_YOUNG] {result['token']}: chg1={chg1:+.1f}% > {chg1_threshold:+.1f}% from last | BUY!")
+            if chg1_verify > chg1_threshold:
+                print(f"   [BUY_YOUNG] {result['token']}: chg1={chg1_verify:+.1f}% > {chg1_threshold:+.1f}% from last | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
                 send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Young cooldown path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n💰 Wallet: {get_wallet_balance():.4f} SOL\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
@@ -981,15 +989,22 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # 30s done - verify chg1 >= +2%
-            # Also verify token is old enough (PUMP_MIN_AGE)
+            # 30s done - FETCH FRESH DATA and verify chg1 >= +2%
+            fresh_fdata, fresh_source = get_fresh_token_data(addr)
+            if fresh_fdata:
+                if fresh_source == 'gmgn':
+                    chg1_verify = float(fresh_fdata.get('price_change_percent1m', 0) or 0)
+                else:
+                    chg1_verify = float(fresh_fdata.get('priceChange', {}).get('m1', 0) or 0)
+            else:
+                chg1_verify = chg1  # fallback to cached
             token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
             if token_age < PUMP_MIN_AGE:
                 print(f"   [SKIP_TOO_NEW] {result['token']}: age {token_age}s < {PUMP_MIN_AGE}s | skip (too new)")
                 to_remove.append(addr)
                 continue
-            if chg1 > 2:
-                print(f"   [BUY_OLDER] {result['token']}: chg1={chg1:+.1f}% > +2% | BUY!")
+            if chg1_verify > 2:
+                print(f"   [BUY_OLDER] {result['token']}: chg1={chg1_verify:+.1f}% > +2% | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
                 send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Older cooldown path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n💰 Wallet: {get_wallet_balance():.4f} SOL\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
@@ -1008,7 +1023,16 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # Timer done - verify token is old enough (PUMP_MIN_AGE)
+            # Timer done - FETCH FRESH DATA and verify chg1 > chg1_prev + 3%
+            fresh_fdata, fresh_source = get_fresh_token_data(addr)
+            if fresh_fdata:
+                if fresh_source == 'gmgn':
+                    chg1_verify = float(fresh_fdata.get('price_change_percent1m', 0) or 0)
+                else:
+                    chg1_verify = float(fresh_fdata.get('priceChange', {}).get('m1', 0) or 0)
+            else:
+                chg1_verify = chg1  # fallback to cached
+            # Verify token is old enough (PUMP_MIN_AGE)
             token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
             if token_age < PUMP_MIN_AGE:
                 print(f"   [SKIP_TOO_NEW] {result['token']}: age {token_age}s < {PUMP_MIN_AGE}s | skip (too new)")
@@ -1016,8 +1040,8 @@ def scan_cycle():
                 continue
             # Verify chg1 > chg1_prev + 3%
             chg1_threshold = chg1_prev + 3
-            if chg1 > chg1_threshold:
-                print(f"   [BUY_BASE] {result['token']}: chg1={chg1:+.1f}% >= {chg1_threshold:+.1f}% from last | BUY!")
+            if chg1_verify > chg1_threshold:
+                print(f"   [BUY_BASE] {result['token']}: chg1={chg1_verify:+.1f}% >= {chg1_threshold:+.1f}% from last | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
                 send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Base wait path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n💰 Wallet: {get_wallet_balance():.4f} SOL\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
