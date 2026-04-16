@@ -29,7 +29,7 @@ MAX_MCAP = 55000
 MAX_AGE = 3600  # 60 minutes max token age
 MIN_HOLDERS = 15
 MIN_CHG5_FOR_BUY = 2.0
-PUMP_CHG1_THRESHOLD = 5.001
+PUMP_CHG1_THRESHOLD = 10.0
 H1_MOMENTUM_MIN = 25.0
 H1_MOMENTUM_MAX = 700.0
 FALLEN_GIANT_H1 = 700
@@ -56,16 +56,17 @@ STATE_PUMP_WAIT_2 = 'PUMP_WAIT_2'       # 15s second confirmation
 STATE_PUMP_VERIFY = 'PUMP_VERIFY'        # 15s final verify
 STATE_YOUNG_COOLDOWN = 'YOUNG_COOLDOWN'  # 30s for young + chg5>+50%
 STATE_OLDER_COOLDOWN = 'OLDER_COOLDOWN'  # 45s for older + momentum
-STATE_CHG1_RECHECK = 'CHG1_RECHECK'      # 6s rechecks until mcap>+5% from low
+STATE_CHG1_RECHECK = 'CHG1_RECHECK'      # 15s rechecks until mcap>+5% from low
 STATE_CHG1_VERIFY = 'CHG1_VERIFY'        # 15s verify before buy
 STATE_BASE_WAIT = 'BASE_WAIT'            # 30s → verify chg1 > chg1_prev + 3%
 STATE_BUY_NOW = 'BUY_NOW'                # Buy immediately (passed filters, none of the wait conditions)
 STATE_RECOVERY_WAIT = 'RECOVERY_WAIT'    # 6s for chg1 recovery for chg5 recovery
 
 # Timing constants (sync with trading_constants.py)
-PUMP_WAIT_1 = 45            # First pump confirmation
-PUMP_WAIT_2 = 10            # Second pump confirmation (Chris: 10s path)
-PUMP_VERIFY_DELAY = 10     # Final pump verification (Chris: 10s path)
+PUMP_WAIT_1 = 45            # First pump confirmation wait (45s)
+PUMP_WAIT_2 = 30            # Second pump confirmation wait (30s)
+PUMP_VERIFY_DELAY = 15     # Final pump verification wait (15s)
+PUMP_CHG1_THRESHOLD = 10.0  # 1-min change % to trigger pump path (chg1 must be >+10%)
 YOUNG_COOLDOWN = 30         # Young path cooldown (<15min + chg5>+50%)
 OLDER_COOLDOWN = 30         # Older path cooldown (>15min + chg5>+1%)
 BASE_WAIT = 30             # Base path wait (30s verify chg1 > chg1_prev + 3%)
@@ -1088,7 +1089,7 @@ def main():
     print(f"GMGN Scanner {GMGN_SCANNER_VERSION} Started - LIVE TRADING")
     print(f"  Sources: GMGN trending + GMGN trenches + DexScreener pump.fun")
     print(f"  Mcap ${MIN_MCAP:,}-${MAX_MCAP:,} | Holders ≥{MIN_HOLDERS}")
-    print(f"  Dip 5-45% | chg1>+5% pump rule | chg5>+2% normal entry")
+    print(f"  Dip 5-45% | chg1>+{PUMP_CHG1_THRESHOLD:.0f}% pump rule | chg5>+2% normal entry")
     print(f"  Pump: {PUMP_WAIT_1}s→{PUMP_WAIT_2}s→{PUMP_VERIFY_DELAY}s→BUY")
     print(f"  Young: {YOUNG_COOLDOWN}s | Older: {OLDER_COOLDOWN}s | Base: {BASE_WAIT}s")
     print(f"  CHG1 recovery: {RECOVERY_WAIT}s rechecks until mcap>+5% from low → {CHG1_VERIFY_DELAY}s verify")
