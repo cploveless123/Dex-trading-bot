@@ -26,7 +26,7 @@ Risk Management:
 - Max open: 5 positions
 - Position size: 0.1 SOL each
 - Stop loss: -25% default, -15% for large winners
-- Max daily loss: 0.3 SOL (stop if hit)
+- Max daily loss: NO LIMIT
 """
 CHRIS_STARTING_BALANCE = 1.0   # Chris's starting balance in SOL
 
@@ -34,7 +34,7 @@ CHRIS_STARTING_BALANCE = 1.0   # Chris's starting balance in SOL
 # Position sizing
 POSITION_SIZE = 0.1          # SOL per trade
 MAX_OPEN_POSITIONS = 9       # Max concurrent positions
-MAX_DAILY_LOSS = 0.3         # Stop trading if daily loss exceeds this
+MAX_DAILY_LOSS = 9999         # Disabled (no limit)
 
 # Entry filters
 MIN_MCAP = 5000              # Minimum market cap in USD

@@ -196,7 +196,31 @@ def get_gmgn_trenches(limit=20):
         # Trenches has 'completed' and 'new' arrays
         completed = d.get('completed', [])
         new = d.get('new', [])
-        return completed + new
+        
+        # Normalize fields from GMGN trenches to scanner format
+        normalized = []
+        for t in completed + new:
+            # Map GMGN fields to scanner format
+            normalized_token = {
+                'address': t.get('address', ''),
+                'symbol': t.get('symbol', t.get('tc_name', '?')),
+                'name': t.get('name', ''),
+                'price': t.get('price', 0),
+                'market_cap': t.get('market_cap', 0),
+                'volume': t.get('volume_24h') or t.get('volume24h') or t.get('volume', 0),
+                'price_change_percent1m': t.get('price_change_percent1m', 0),
+                'price_change_percent5m': t.get('price_change_percent5m', 0),
+                'price_change_percent1h': t.get('price_change_percent1h', 0),
+                'price_change_percent24h': t.get('price_change_percent24h', 0),
+                'holder_count': t.get('holder_count', 0),
+                'liquidity': t.get('liquidity', 0),
+                'launchpad': t.get('launchpad', ''),
+                'exchange': t.get('exchange', ''),
+                'pool_address': t.get('pool_address', ''),
+                'creation_timestamp': t.get('created_timestamp', 0),
+            }
+            normalized.append(normalized_token)
+        return normalized
     except:
         return []
 
@@ -255,9 +279,11 @@ def get_gmgn_token_info(addr):
         return None
     try:
         data = json.loads(r.stdout)
-        if data and data.get('price_change_percent1h') is None:
-            # GMGN data stale - just return None, no alert
-            return None
+        # Extract exchange from nested pool dict if top-level exchange is empty
+        if data.get('exchange', '') == '' and 'pool' in data:
+            pool = data['pool']
+            data['exchange'] = pool.get('exchange', '') or ''
+            data['pool_exchange'] = pool.get('exchange', '') or ''
         return data
     except:
         return None
@@ -303,6 +329,24 @@ def get_fresh_token_data(addr):
 # TOKEN SCANNING (FILTERS ONLY - NO STATE MANAGEMENT)
 # =====================================================================
 
+def get_dexscreener_volume(addr):
+    """Get volume from DexScreener as fallback when GMGN shows 0 volume"""
+    try:
+        url = f"https://api.dexscreener.com/latest/dex/search?q={addr}&chain=solana&limit=5"
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read())
+            pairs = data.get('pairs', [])
+            for p in pairs:
+                base = p.get('baseToken', {})
+                if base.get('address', '') == addr:
+                    vol = float(p.get('volume24h', 0) or 0)
+                    if vol > 0:
+                        return vol
+            return 0
+    except:
+        return 0
+
 def scan_token(token_data, reason_if_fail=None):
     """
     Apply all entry filters. Returns (result_dict, None) if passes, (None, reason) if fails.
@@ -324,8 +368,18 @@ def scan_token(token_data, reason_if_fail=None):
         if not addr:
             return None, "no address"
         
-        # Exchange check - empty launchpad means unknown, reject it
-        if launchpad == '' or launchpad not in ALLOWED_EXCHANGES:
+        # Exchange check - empty launchpad means unknown, check 'exchange' field as fallback
+        exchange_fallback = str(token_data.get('exchange', '')).lower().strip()
+        if launchpad == '':
+            launchpad = exchange_fallback
+        
+        # If still empty, try to get exchange from GMGN token info (pool.exchange)
+        if launchpad == '' and addr:
+            info = get_gmgn_token_info(addr)
+            if info:
+                launchpad = str(info.get('exchange', '') or info.get('pool_exchange', '') or '').lower().strip()
+        
+        if launchpad not in ALLOWED_EXCHANGES:
             return None, f"exchange {launchpad or 'unknown'} not allowed"
         
         # Mcap check
@@ -344,7 +398,11 @@ def scan_token(token_data, reason_if_fail=None):
         if holders < MIN_HOLDERS:
             return None, f"holders {holders} < {MIN_HOLDERS}"
         
-        # Volume check
+        # Volume check - if GMGN shows 0 volume, try DexScreener as fallback
+        if volume < MIN_VOLUME and volume == 0 and addr:
+            dex_vol = get_dexscreener_volume(addr)
+            if dex_vol > 0:
+                volume = dex_vol
         if volume < MIN_VOLUME:
             return None, f"vol ${volume:,.0f} < ${MIN_VOLUME:,}"
         
@@ -368,6 +426,9 @@ def scan_token(token_data, reason_if_fail=None):
         
         # Pair address check for pump/pumpswap - must not be "none"
         if launchpad in ['pump', 'pumpswap']:
+            # If GMGN returns empty pair_address, use token address as fallback (pump.fun addresses end with 'pump')
+            if pair_address in ['none', '', 'None', None]:
+                pair_address = addr
             if pair_address in ['none', '', 'None', None]:
                 return None, f"pair_address {pair_address} not valid for pump token"
             if not pair_address.endswith('pump'):
