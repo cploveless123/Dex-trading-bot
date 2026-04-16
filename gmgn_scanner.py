@@ -76,7 +76,7 @@ NORMAL_WAIT_DURATION = 45    # Normal path: 45s cooldown before first check
 CHG1_RECHECK_INTERVAL = 15 # Recovery recheck interval
 CHG1_VERIFY_DELAY = 15     # Recovery verify before buy
 RECOVERY_WAIT = 15          # Recovery wait interval
-PUMP_MIN_AGE = 120         # Min age (sec) before buying via pump path
+PUMP_MIN_AGE = 180  # 3 min minimum age before buying         # Min age (sec) before buying via pump path
 
 # =====================================================================
 # GLOBAL STATE
@@ -229,8 +229,16 @@ def get_gmgn_trending(limit=50):
     r = subprocess.run(['gmgn-cli', 'market', 'trending', '--chain', 'sol', '--interval', '5m', '--limit', str(limit)],
                       capture_output=True, text=True, timeout=15)
     if r.returncode != 0:
-        record_throttle('trending')
-        send_alert("⚠️ GMGN trending FAILED")
+        # Check if it's a 403 (forbidden/rate limit) vs other error
+        if '403' in r.stderr or 'forbidden' in r.stderr.lower():
+            # Treat 403 as throttle - back off for 5 minutes
+            from gmgn_scanner import record_throttle
+            record_throttle('trending')
+            record_throttle('trending')  # double it
+            send_alert("🚨 GMGN trending: HTTP 403 (rate limited) - backing off")
+        else:
+            record_throttle('trending')
+            send_alert("⚠️ GMGN trending FAILED")
         return []
     try:
         reset_gmgn_fails()  # Reset consecutive fail counter on success
@@ -246,7 +254,13 @@ def get_gmgn_trenches(limit=20):
     r = subprocess.run(['gmgn-cli', 'market', 'trenches', '--chain', 'sol', '--limit', str(limit)],
                       capture_output=True, text=True, timeout=15)
     if r.returncode != 0:
-        record_throttle('trenches')
+        # Check if it's a 403 (forbidden/rate limit) vs other error
+        if '403' in r.stderr or 'forbidden' in r.stderr.lower():
+            # Treat 403 as throttle - back off for 5 minutes
+            record_throttle('trenches')
+            record_throttle('trenches')  # double it
+        else:
+            record_throttle('trenches')
         return []
     try:
         reset_gmgn_fails()  # Reset consecutive fail counter on success
