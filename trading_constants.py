@@ -42,7 +42,9 @@ MAX_MCAP = 55000             # Maximum market cap in USD
 MAX_MCAP = 55000            # Maximum market cap in USD
 MIN_HOLDERS = 15             # Minimum holder count
 MIN_CHG5_FOR_BUY = 2.0      # Minimum 5m change % for buy signal
-PUMP_CHG1_THRESHOLD = 5.001  # 1-min change % to trigger pump path (was 20) (NOT chg5)
+PUMP_CHG1_THRESHOLD = 5.001  # 1-min change % to trigger pump path (NOT chg5)
+PUMP_CHG1_THRESHOLD_MAX = 50.0  # Reject chg1 >50% as pump dump candidates
+PUMP_MIN_AGE = 120              # Min age (sec) before buying via pump path (reject new listings)
 H1_MOMENTUM_MIN = 25.0      # Minimum 1h change % (momentum requirement)
 H1_MOMENTUM_MAX = 99999.0  # No ceiling - let any momentum through
 

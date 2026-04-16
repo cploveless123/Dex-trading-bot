@@ -833,6 +833,16 @@ def scan_cycle():
                     print(f"   [SKIP_AGE] {result['token']}: age {token_age}s > {MAX_AGE}s | skip")
                     to_remove.append(addr)
                     continue
+                # Reject extreme pump dumps (chg1 > 50% in 1 min = likely rug)
+                if chg1 > PUMP_CHG1_THRESHOLD_MAX:
+                    print(f"   [SKIP_PUMP_DUMP] {result['token']}: chg1={chg1:+.1f}% > {PUMP_CHG1_THRESHOLD_MAX}% | skip (pump dump)")
+                    to_remove.append(addr)
+                    continue
+                # Reject brand new listings (need at least 2 min to establish history)
+                if token_age < PUMP_MIN_AGE:
+                    print(f"   [SKIP_TOO_NEW] {result['token']}: age {token_age}s < {PUMP_MIN_AGE}s | skip (too new)")
+                    to_remove.append(addr)
+                    continue
                 print(f"   [BUY_PUMP] {result['token']}: chg1={chg1:+.1f}% | BUY!")
                 buy_token(addr, result)
                 to_remove.append(addr)
