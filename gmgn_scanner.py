@@ -25,7 +25,7 @@ from datetime import datetime, timezone
 POSITION_SIZE = 0.1
 MAX_OPEN_POSITIONS = 9
 MIN_MCAP = 6000
-MAX_MCAP = 35000
+MAX_MCAP = 55000
 MIN_HOLDERS = 15
 MIN_CHG5_FOR_BUY = 2.0
 PUMP_CHG1_THRESHOLD = 5.001
@@ -84,6 +84,7 @@ _gmgn_throttle_state = {
     'trending': {'count': 0, 'backoff_until': 0},
     'trenches': {'count': 0, 'backoff_until': 0},
     'token_info': {'count': 0, 'backoff_until': 0},
+    'pump_endpoint': {'count': 0, 'backoff_until': 0},
 }
 _BACKOFF_BASE = 30
 _BACKOFF_MAX = 300
