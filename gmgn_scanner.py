@@ -16,7 +16,7 @@ IRONCLAD RULES:
 - Both GMGN + DexScreener throttled → STOP ALL BUYS until fixed
 """
 
-import subprocess, json, time, urllib.request, urllib.parse, sys
+import subprocess, json, time, urllib.request, urllib.parse, sys, os
 from datetime import datetime, timezone
 
 # =====================================================================
@@ -603,10 +603,24 @@ def save_trade(trade):
         f.write(json.dumps(trade) + '\n')
 
 def buy_token(addr, result):
-    """Execute a buy - always checks PERM_BLACKLIST first"""
+    """Execute a buy - always checks PERM_BLACKLIST and sim_trades.jsonl"""
     # IRONCLAD: Never buy blacklisted
     if addr in PERM_BLACKLIST:
         return False
+    
+    # IRONCLAD: Never buy a token we already have in sim_trades.jsonl (any status, any state)
+    if os.path.exists('/root/Dex-trading-bot/trades/sim_trades.jsonl'):
+        try:
+            with open('/root/Dex-trading-bot/trades/sim_trades.jsonl') as f:
+                for line in f:
+                    try:
+                        t = json.loads(line.strip())
+                        if t.get('action') == 'BUY' and t.get('token_address') == addr:
+                            return False  # Already bought this address before
+                    except:
+                        continue
+        except:
+            pass
     
     if get_open_position_count() >= MAX_OPEN_POSITIONS:
         return False
