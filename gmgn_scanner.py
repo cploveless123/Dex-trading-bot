@@ -562,14 +562,11 @@ def scan_token(token_data, reason_if_fail=None):
         
         
         
-        # H1 momentum check - for pump tokens with no h1 data yet, set to minimum to allow entry
-        # (pump path has its own chg1 momentum check anyway)
-        if launchpad in ['pump', 'pumpswap'] and h1 == 0:
-            h1 = H1_MOMENTUM_MIN  # Treat 0 h1 as "no data yet" - allow through to pump path
-        
-        if launchpad not in ['pump', 'pumpswap']:
-            if h1 < H1_MOMENTUM_MIN:
-                return None, f"h1 {h1:.1f}% < {H1_MOMENTUM_MIN}%"
+        # H1 momentum check - require H1 > +100% (or 0 = new token with no data yet)
+        if h1 == 0:
+            pass  # New token, no h1 data - allow through
+        elif h1 <= 100:
+            return None, f"h1 {h1:.1f}% <= +100%"
         
         # No H1 max ceiling - let any momentum through, stop loss handles risk
         
@@ -923,12 +920,15 @@ def scan_cycle():
                 if fresh_source == 'gmgn':
                     chg1_check = float(fresh_fdata.get('price_change_percent1m', 0) or 0)
                     chg5_check = float(fresh_fdata.get('price_change_percent5m', 0) or 0)
+                    h1_check = float(fresh_fdata.get('price_change_percent1h', 0) or 0)
                 else:
                     chg1_check = float(fresh_fdata.get('priceChange', {}).get('m1', 0) or 0)
                     chg5_check = float(fresh_fdata.get('priceChange', {}).get('m5', 0) or 0)
+                    h1_check = float(fresh_fdata.get('priceChange', {}).get('h1', 0) or 0)
             else:
                 chg1_check = chg1
                 chg5_check = chg5
+                h1_check = result.get('h1', 0)
             
             # Track lowest chg1
             lowest = data.get('lowest_chg1', chg1_check)
@@ -939,22 +939,23 @@ def scan_cycle():
             recheck_count = data.get('recheck_count', 0)
             
             if data.get('in_verify', False):
-                # Verify phase: 10s → final check → BUY
-                if chg1_check >= lowest + 5 and chg5_check > 0:
-                    print(f"   [BUY_RECOVERY] {result['token']}: chg1={chg1_check:+.1f}% >= {lowest+5:+.1f}%, chg5={chg5_check:+.1f}% | BUY!")
+                # Verify phase: 10s → fresh check → BUY
+                # All conditions: chg1 >= lowest+5%, H1>+100%, chg5>-5%
+                if chg1_check >= lowest + 5 and h1_check > 100 and chg5_check > -5:
+                    print(f"   [BUY_RECOVERY] {result['token']}: chg1={chg1_check:+.1f}% >= {lowest+5:+.1f}%, H1={h1_check:+.1f}%, chg5={chg5_check:+.1f}% | BUY!")
                     buy_token(addr, result)
                     to_remove.append(addr)
                     send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Recovery path (verified)\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n💰 Wallet: {get_wallet_balance():.4f} SOL\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}")
                 else:
                     to_remove.append(addr)
-                    reason = f"chg1={chg1_check:.1f}% < {lowest+5:+.1f}%" if chg1_check < lowest + 5 else f"chg5={chg5_check:.1f}% <= 0%"
+                    reason = f"chg1={chg1_check:.1f}% < {lowest+5:+.1f}%" if chg1_check < lowest + 5 else (f"H1={h1_check:+.1f}% <= +100%" if h1_check <= 100 else f"chg5={chg5_check:.1f}% <= -5%")
                     print(f"   [RECOVERY_FAIL] {result['token']}: {reason} after verify | skip")
                 data['in_verify'] = False
-            elif chg1_check >= lowest + 5 and chg5_check > 0:
-                # Trigger verify phase (10s)
+            elif chg1_check >= lowest + 5 and h1_check > 100 and chg5_check > -5:
+                # Trigger verify phase (10s) - all conditions must be met
                 data['in_verify'] = True
                 data['cooldown_end'] = now + 10
-                print(f"   [RECOVERY_OK] {result['token']}: chg1={chg1_check:+.1f}% >= {lowest+5:+.1f}% (+5% from low) | verify 10s")
+                print(f"   [RECOVERY_OK] {result['token']}: chg1={chg1_check:+.1f}% >= {lowest+5:+.1f}%, H1={h1_check:+.1f}%, chg5={chg5_check:+.1f}% | verify 10s")
             elif recheck_count >= 30:
                 # Save rescan count so we can track repeated re-entries
                 REJECTED_TEMP[addr] = {'ts': now, 'rescan_count': data.get('rescan_count', 0) + 1}
