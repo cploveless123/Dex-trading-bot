@@ -428,7 +428,7 @@ def monitor_cycle():
             close_position(addr, "STOP_LOSS")
             # Add to STOP_LOSS_COOLDOWN - 30 min re-entry lockout
             STOP_LOSS_COOLDOWN[addr] = {'ts': time.time(), 'reason': 'STOP_LOSS'}
-            with open(STOP_LOSS_FILE, 'w') as f:
+            with open(STOP_LOSS_COOLDOWN_FILE, 'w') as f:
                 json.dump(STOP_LOSS_COOLDOWN, f)
             # IRONCLAD: Also add to PERM_BLACKLIST (never re-buy)
             PERM_BLACKLIST.add(addr)
@@ -458,7 +458,7 @@ def main():
     log(f"TP2: +{TP2_PCT}% sell {int(TP2_SELL_PCT*100)}%, Trail {TP2_TRAIL}%")
     log(f"TP3: +{TP3_PCT}% sell {int(TP3_SELL_PCT*100)}%, Trail {TP3_TRAIL}%")
     log(f"TP4: +{TP4_PCT}% sell {int(TP4_SELL_PCT*100)}%, Trail {TP4_TRAIL}%")
-    log(f"TP5: +{TP5_PCT}% sell {int(TP5_SELL_PCT*100)}%, Trail {TP5_TRAIL}% (10% compound mode)")
+    log(f"TP5: +{TP5_PCT}% sell ALL, Trail {TP5_TRAIL}%")
     log(f"Stop: -{STOP_LOSS_PCT}%")
     
     while True:
