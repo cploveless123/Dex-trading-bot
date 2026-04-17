@@ -34,8 +34,6 @@ MIN_CHG5_FOR_BUY = 2.0
 PUMP_CHG1_THRESHOLD = 10.0
 H1_MOMENTUM_MIN = 25.0
 H1_MOMENTUM_MAX = 700.0
-FALLEN_GIANT_H1 = 700
-FALLEN_GIANT_MCAP = 25000
 H1_INSTABILITY_MULTIPLIER = 3
 CHG5_DROP_THRESHOLD = 10
 CHG5_RECOVERY_CHECK = 5
@@ -562,9 +560,7 @@ def scan_token(token_data, reason_if_fail=None):
         if volume < MIN_VOLUME:
             return None, f"vol ${volume:,.0f} < ${MIN_VOLUME:,}"
         
-        # Fallen Giant check
-        if h1 > FALLEN_GIANT_H1 and mc < FALLEN_GIANT_MCAP:
-            return None, f"Fallen Giant: h1={h1:.0f}% + mcap=${mc:,.0f} < ${FALLEN_GIANT_MCAP:,}"
+        
         
         # H1 momentum check - for pump tokens with no h1 data yet, set to minimum to allow entry
         # (pump path has its own chg1 momentum check anyway)
