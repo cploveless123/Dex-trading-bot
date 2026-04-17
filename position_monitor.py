@@ -29,6 +29,13 @@ from trading_constants import (
 MONITOR_LOG = '/root/Dex-trading-bot/position_monitor.log'
 STOP_LOSS_COOLDOWN_FILE = '/root/Dex-trading-bot/.stop_loss_cooldown'
 STOP_LOSS_COOLDOWN = {}
+PERM_BLACKLIST_FILE = '/root/Dex-trading-bot/.perm_blacklist.json'
+PERM_BLACKLIST = set()
+try:
+    with open(PERM_BLACKLIST_FILE, 'r') as f:
+        PERM_BLACKLIST = set(json.load(f))
+except:
+    pass
 
 def log(msg):
     ts = datetime.utcnow().strftime('%H:%M:%S')
