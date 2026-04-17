@@ -98,7 +98,7 @@ _BACKOFF_MAX = 300
 # Global GMGN circuit breaker - stops ALL GMGN calls after consecutive failures
 _GMGN_CONSECUTIVE_FAILS = 0
 _GMGN_GLOBAL_BACKOFF_UNTIL = 0
-_GMGN_BACKOFF_THRESHOLD = 3   # 3 consecutive failures → global backoff
+_GMGN_BACKOFF_THRESHOLD = 10  # 10 fails before backoff   # 3 consecutive failures → global backoff
 _GMGN_BACKOFF_DURATION = 60   # 60s global backoff before retrying
 
 # Stagger GMGN calls - alternate trending/trenches to avoid burst
