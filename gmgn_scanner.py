@@ -1017,15 +1017,17 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            recovery_target = lowest_chg5 + CHG5_RECOVERY_CHECK
-            if chg5 >= max(recovery_target, MIN_CHG5_FOR_BUY):
+            # Check if mcap has recovered +5% from lowest point (not chg5 rate)
+            lowest_mcap = data.get('lowest_mcap', mcap)
+            recovery_mcap = lowest_mcap * 1.05  # 5% recovery from low
+            if mcap >= recovery_mcap and chg5 >= MIN_CHG5_FOR_BUY:
                 data['state'] = STATE_BASE_WAIT
                 data['cooldown_end'] = now + 30
-                print(f"   [RECOVERED] {result['token']}: chg5={chg5:+.1f}% >= {recovery_target:+.1f}% | base path")
+                print(f"   [RECOVERED] {result['token']}: mcap=${mcap:,.0f} >= {recovery_mcap:,.0f} (+5% from low) | base path")
             else:
-                data['lowest_chg5'] = min(lowest_chg5, chg5)
+                data['lowest_mcap'] = min(lowest_mcap, mcap)
                 data['cooldown_end'] = now + RECOVERY_WAIT
-                print(f"   [STILL_RECOVERING] {result['token']}: chg5={chg5:.1f}% < {recovery_target:+.1f}% | wait {RECOVERY_WAIT}s")
+                print(f"   [STILL_RECOVERING] {result['token']}: mcap=${mcap:,.0f} < {recovery_mcap:,.0f} (+5% needed) | wait {RECOVERY_WAIT}s")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
