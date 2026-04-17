@@ -1048,24 +1048,46 @@ def scan_cycle():
         if now - STOP_LOSS_COOLDOWN[addr]['ts'] > 1800:
             del STOP_LOSS_COOLDOWN[addr]
     
-    # === STAGGERED GMGN SCAN (alternate trending/trenches each cycle) ===
-    # PRIORITY: Process newest tokens first - but ALL tokens get processed within 2 cycles
-    # Cycle 0: Fetch 50 tokens, process 15 newest, save 35 oldest to _REMEMBER
-    # Cycle 1: Combine new 50 + _REMEMBER 35, process 35 (all from carryover first), save new 50 remainder
+    # === STAGGERED GMGN + DEXSCREENER SCAN ===
+    # 4-cycle rotation: GMGN trending → GMGN trenches → GMGN trenches → DexScreener pump.fun
+    # Every token gets processed within 4 cycles (2 min)
     global _REMAINING_TOKENS
     
     seen = set()
     
-    # Fetch fresh tokens based on stagger
-    # Cycle 0: trending, Cycle 1: trenches, Cycle 2: trenches (fresh new pump.fun)
+    # Cycle 0: GMGN trending, Cycle 1: GMGN trenches, Cycle 2: GMGN trenches, Cycle 3: DexScreener pump.fun
     if _GMGN_SCAN_CYCLE == 0:
         new_tokens = get_gmgn_trending(50)
     elif _GMGN_SCAN_CYCLE == 1:
         new_tokens = get_gmgn_trenches(50)
+    elif _GMGN_SCAN_CYCLE == 2:
+        new_tokens = get_gmgn_trenches(50)  # Fresh "new" pump.fun tokens
     else:
-        new_tokens = get_gmgn_trenches(50)  # Get fresh "new" pump.fun tokens
-    
-    _GMGN_SCAN_CYCLE = (_GMGN_SCAN_CYCLE + 1) % 3
+        # Cycle 3: Dedicate full slot to DexScreener pump.fun - process ALL tokens
+        pump_tokens = get_dexscreener_pump_tokens(20)
+        pump_tokens.sort(key=lambda x: x.get('creation_timestamp', 0), reverse=True)  # Newest first
+        for token_data in pump_tokens:
+            addr = token_data.get('address', '')
+            if not addr or addr in seen:
+                continue
+            seen.add(addr)
+            if addr in PERM_BLACKLIST:
+                continue
+            if addr in COOLDOWN_WATCH:
+                continue
+            if addr in REJECTED_TEMP:
+                continue
+            if addr in STOP_LOSS_COOLDOWN:
+                continue
+            if get_open_position_count() >= MAX_OPEN_POSITIONS:
+                continue
+            result, fail_reason = scan_token(token_data)
+            if result is None:
+                continue
+            add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
+        # End of DexScreener slot
+        _GMGN_SCAN_CYCLE = (_GMGN_SCAN_CYCLE + 1) % 4
+        return  # Skip to next cycle
     
     # If we have carryover from last cycle, process those first (25 max)
     if _REMAINING_TOKENS:
@@ -1131,33 +1153,7 @@ def scan_cycle():
     
     
     
-    # === SCAN DEXSCREENER PUMP.FUN NEW LISTINGS (active discovery) ===
-    pump_tokens = get_dexscreener_pump_tokens(20)
-    # Sort by age: youngest first (newest listings first)
-    pump_tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
-    for token_data in pump_tokens:
-        addr = token_data.get('address', '')
-        if not addr or addr in seen:
-            continue
-        seen.add(addr)
-        
-        # IRONCLAD checks
-        if addr in PERM_BLACKLIST:
-            continue
-        if addr in COOLDOWN_WATCH:
-            continue
-        if addr in REJECTED_TEMP:
-            continue
-        if get_open_position_count() >= MAX_OPEN_POSITIONS:
-            continue
-        
-        result, fail_reason = scan_token(token_data)
-        if result is None:
-            continue
-        
-        add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
-
-# =====================================================================
+    # =====================================================================
 # MAIN
 # =====================================================================
 
