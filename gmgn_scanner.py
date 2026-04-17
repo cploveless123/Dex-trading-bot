@@ -550,6 +550,10 @@ def scan_token(token_data, reason_if_fail=None):
         if holders < MIN_HOLDERS:
             return None, f"holders {holders} < {MIN_HOLDERS}"
         
+        # Top10 concentration check - reject if > 50% held by top10 wallets (dump risk)
+        if top10pct > 50:
+            return None, f"top10 {top10pct:.0f}% > 50% (high concentration)"
+        
         # Volume check - if GMGN shows 0 volume, try DexScreener as fallback
         if volume < MIN_VOLUME and volume == 0 and addr:
             dex_vol = get_dexscreener_volume(addr)
