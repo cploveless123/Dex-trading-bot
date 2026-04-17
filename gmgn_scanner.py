@@ -607,10 +607,10 @@ def scan_token(token_data, reason_if_fail=None):
             ath_mcap = mc * 1.5  # Conservative: assume token can grow 50% from entry
             print(f"   [LOCAL_ATH] {token_data.get('symbol', '?')}: using local ATH ${ath_mcap:,.0f} (mcap {mc:,.0f} * 1.5)")
         
-        # ATH distance check - reject tokens that are still near their peak (too close to ATH)
-        # Only buy pullbacks/dips - reject if within 10% of ATH
-        if ath_mcap > 0 and mc > ath_mcap * 0.90:
-            return None, f"mcap ${mc:,.0f} within 10% of ATH ${ath_mcap:,.0f} (buying peak, skip)"
+        # ATH distance check - reject if current mcap is more than 50% below ATH
+        # i.e., current mcap must be >= 50% of ATH
+        if ath_mcap > 0 and mc < ath_mcap * 0.50:
+            return None, f"mcap ${mc:,.0f} >50% below ATH ${ath_mcap:,.0f}"
         
         # Build result
         pump_triggered = chg1 > PUMP_CHG1_THRESHOLD
