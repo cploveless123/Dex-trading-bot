@@ -1052,17 +1052,20 @@ def scan_cycle():
     seen = set()
     
     # Fetch fresh tokens based on stagger
+    # Cycle 0: trending, Cycle 1: trenches, Cycle 2: trenches (fresh new pump.fun)
     if _GMGN_SCAN_CYCLE == 0:
         new_tokens = get_gmgn_trending(50)
-    else:
+    elif _GMGN_SCAN_CYCLE == 1:
         new_tokens = get_gmgn_trenches(50)
+    else:
+        new_tokens = get_gmgn_trenches(50)  # Get fresh "new" pump.fun tokens
     
-    _GMGN_SCAN_CYCLE = (_GMGN_SCAN_CYCLE + 1) % 2
+    _GMGN_SCAN_CYCLE = (_GMGN_SCAN_CYCLE + 1) % 3
     
-    # If we have carryover from last cycle, process those first (35 max)
+    # If we have carryover from last cycle, process those first (25 max)
     if _REMAINING_TOKENS:
-        tokens_to_process = _REMAINING_TOKENS[:35]  # Process up to 35 from carryover
-        _REMAINING_TOKENS = _REMAINING_TOKENS[35:]  # Keep rest for next cycle
+        tokens_to_process = _REMAINING_TOKENS[:25]  # Process up to 25 from carryover
+        _REMAINING_TOKENS = _REMAINING_TOKENS[25:]  # Keep rest for next cycle
         
         # Sort what we're processing now by newest first (within carryover)
         tokens_to_process.sort(key=lambda x: x.get('creation_timestamp', 0), reverse=True)
@@ -1094,8 +1097,8 @@ def scan_cycle():
     # Now process new tokens from this cycle - sort newest first, take 15
     if new_tokens:
         new_tokens.sort(key=lambda x: x.get('creation_timestamp', 0), reverse=True)
-        tokens_this_cycle = new_tokens[:15]  # Process newest 15
-        _REMAINING_TOKENS.extend(new_tokens[15:])  # Save rest for next cycle
+        tokens_this_cycle = new_tokens[:25]  # Process newest 25
+        _REMAINING_TOKENS.extend(new_tokens[25:])  # Save rest for next cycle
         
         for token_data in tokens_this_cycle:
             addr = token_data.get('address', '')
