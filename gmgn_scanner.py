@@ -101,6 +101,7 @@ _GMGN_BACKOFF_DURATION = 60   # 60s global backoff before retrying
 
 # Stagger GMGN calls - alternate trending/trenches to avoid burst
 _GMGN_SCAN_CYCLE = 0          # Even = trending, Odd = trenches
+_REMAINING_TOKENS = []         # Carry-over tokens from previous cycle (ensures all tokens processed within 2 cycles)
 
 # IronClad trackers
 DEXSCREENER_FAIL_COUNT = 0
@@ -730,7 +731,7 @@ def add_to_cooldown(addr, token_data, result, entry_chg5):
 # =====================================================================
 
 def scan_cycle():
-    global _ALERTS_THIS_CYCLE, _BUYS_STOPPED
+    global _ALERTS_THIS_CYCLE, _BUYS_STOPPED, _GMGN_SCAN_CYCLE, _REMAINING_TOKENS
     _ALERTS_THIS_CYCLE.clear()
     _BUYS_STOPPED = False
     
@@ -1044,43 +1045,82 @@ def scan_cycle():
             del STOP_LOSS_COOLDOWN[addr]
     
     # === STAGGERED GMGN SCAN (alternate trending/trenches each cycle) ===
-    # PRIORITY: Process youngest tokens FIRST (lowest creation_timestamp)
-    # This ensures we catch new pump.fun launches early before they pump
-    # Scan ALL sources every cycle - it's ok to see the same token multiple times
+    # PRIORITY: Process newest tokens first - but ALL tokens get processed within 2 cycles
+    # Cycle 0: Fetch 50 tokens, process 15 newest, save 35 oldest to _REMEMBER
+    # Cycle 1: Combine new 50 + _REMEMBER 35, process 35 (all from carryover first), save new 50 remainder
+    global _REMAINING_TOKENS
+    
     seen = set()
+    
+    # Fetch fresh tokens based on stagger
+    if _GMGN_SCAN_CYCLE == 0:
+        new_tokens = get_gmgn_trending(50)
+    else:
+        new_tokens = get_gmgn_trenches(50)
+    
+    _GMGN_SCAN_CYCLE = (_GMGN_SCAN_CYCLE + 1) % 2
+    
+    # If we have carryover from last cycle, process those first (35 max)
+    if _REMAINING_TOKENS:
+        tokens_to_process = _REMAINING_TOKENS[:35]  # Process up to 35 from carryover
+        _REMAINING_TOKENS = _REMAINING_TOKENS[35:]  # Keep rest for next cycle
+        
+        # Sort what we're processing now by newest first (within carryover)
+        tokens_to_process.sort(key=lambda x: x.get('creation_timestamp', 0), reverse=True)
+        
+        for token_data in tokens_to_process:
+            addr = token_data.get('address', '')
+            if not addr or addr in seen:
+                continue
+            seen.add(addr)
 
-    # GMGN trending - up to 50 newest tokens
-    tokens = get_gmgn_trending(50)
-    tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
+            # IRONCLAD checks
+            if addr in PERM_BLACKLIST:
+                continue
+            if addr in COOLDOWN_WATCH:
+                continue
+            if addr in REJECTED_TEMP:
+                continue
+            if addr in STOP_LOSS_COOLDOWN:
+                continue
+            if get_open_position_count() >= MAX_OPEN_POSITIONS:
+                continue
 
-    # GMGN trenches - up to 20 newest tokens (append to trending)
-    trenches_tokens = get_gmgn_trenches(20)
-    trenches_tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
-    tokens.extend(trenches_tokens)
+            result, fail_reason = scan_token(token_data)
+            if result is None:
+                continue
 
-    for token_data in tokens:
-        addr = token_data.get('address', '')
-        if not addr or addr in seen:
-            continue
-        seen.add(addr)
+            add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
+    
+    # Now process new tokens from this cycle - sort newest first, take 15
+    if new_tokens:
+        new_tokens.sort(key=lambda x: x.get('creation_timestamp', 0), reverse=True)
+        tokens_this_cycle = new_tokens[:15]  # Process newest 15
+        _REMAINING_TOKENS.extend(new_tokens[15:])  # Save rest for next cycle
+        
+        for token_data in tokens_this_cycle:
+            addr = token_data.get('address', '')
+            if not addr or addr in seen:
+                continue
+            seen.add(addr)
 
-        # IRONCLAD checks
-        if addr in PERM_BLACKLIST:
-            continue
-        if addr in COOLDOWN_WATCH:
-            continue
-        if addr in REJECTED_TEMP:
-            continue
-        if addr in STOP_LOSS_COOLDOWN:
-            continue
-        if get_open_position_count() >= MAX_OPEN_POSITIONS:
-            continue
+            # IRONCLAD checks
+            if addr in PERM_BLACKLIST:
+                continue
+            if addr in COOLDOWN_WATCH:
+                continue
+            if addr in REJECTED_TEMP:
+                continue
+            if addr in STOP_LOSS_COOLDOWN:
+                continue
+            if get_open_position_count() >= MAX_OPEN_POSITIONS:
+                continue
 
-        result, fail_reason = scan_token(token_data)
-        if result is None:
-            continue
+            result, fail_reason = scan_token(token_data)
+            if result is None:
+                continue
 
-        add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
+            add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
     
     
     
