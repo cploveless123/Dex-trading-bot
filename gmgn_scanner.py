@@ -503,7 +503,9 @@ def scan_token(token_data, reason_if_fail=None):
             if h1 < H1_MOMENTUM_MIN:
                 return None, f"h1 {h1:.1f}% < {H1_MOMENTUM_MIN}%"
         
-        # No H1 max ceiling - let any momentum through, stop loss handles risk
+        # H1 ceiling - reject too parabolic (winners avg 110% H1, losers avg 178% H1)
+        if h1 > 200:
+            return None, f"h1 {h1:.1f}% > +200% (too parabolic)"
         
         # BS ratio check
         if launchpad == 'pump':
