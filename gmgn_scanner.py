@@ -995,11 +995,11 @@ def scan_cycle():
             tokens = get_gmgn_trending(50)
             tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
         elif _GMGN_STAGGER_COUNTER == 1:
-            tokens = get_gmgn_trenches(20)
+            tokens = get_gmgn_trenches(50)
             tokens.sort(key=lambda x: x.get('creation_timestamp', 0))
         else:
             # New pairs proxy: trending sorted newest first
-            tokens = get_gmgn_trending(30)
+            tokens = get_gmgn_trending(50)
             tokens.sort(key=lambda x: x.get('creation_timestamp', 0), reverse=True)
     
     seen = set()
