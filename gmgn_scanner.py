@@ -670,29 +670,6 @@ def save_trade(trade):
     with open(TRADES_FILE, 'a') as f:
         f.write(json.dumps(trade) + '\n')
 
-def check_ath_at_buy(addr, data, result, mcap, now):
-    """Check if token is within 10% of ATH at buy decision. If so, skip the buy."""
-    if mcap <= 0:
-        return True  # No mcap data, proceed
-    ath_mcap = data.get('ath_mcap', 0)
-    if ath_mcap <= 0:
-        return True  # No ATH data, proceed
-    # Check: reject if within 10% of ATH (buying the peak)
-    if mcap > ath_mcap * 0.90:
-        data['ath_check_count'] = data.get('ath_check_count', 0) + 1
-        ath_count = data.get('ath_check_count', 0)
-        print(f"   [ATH_REJECT] {result['token']}: mcap ${mcap:,.0f} within 10% of ATH ${ath_mcap:,.0f} ({mcap/ath_mcap*100:.1f}% of ATH) | skip buy #{ath_count}")
-        if ath_count < 5:
-            data['state'] = STATE_RECOVERY_WAIT
-            data['cooldown_end'] = now + 15
-            data['in_verify'] = False
-            data['lowest_mcap'] = min(data.get('lowest_mcap', mcap), mcap)
-            return False
-        else:
-            return True  # Max ATH rechecks reached, allow buy
-    print(f"   [ATH_OK] {result['token']}: mcap ${mcap:,.0f} = {mcap/ath_mcap*100:.1f}% of ATH ${ath_mcap:,.0f} | proceed")
-    return True
-
 def buy_token(addr, result):
     """Execute a buy - always checks PERM_BLACKLIST first"""
     # IRONCLAD: Never buy blacklisted
@@ -902,9 +879,6 @@ def scan_cycle():
                 # === VERIFY PHASE: 15s → check chg1 > +5% AND chg1 > chg1_prev AND chg5 > -5% AND H1 > +100% ===
                 h1_current = float(fresh_fdata.get('price_change_percent1h', 0) or 0) if fresh_fdata else result.get('h1', 0)
                 if chg1_verify > 5 and chg1_verify >= chg1_threshold_new and chg5_verify > -5 and h1_current > 100:
-                    # ATH mid-cooldown check - reject if within 10% of ATH
-                    if not check_ath_at_buy(addr, data, result, mcap, now):
-                        continue  # ATH check failed, token still near peak, continue monitoring
                     print(f"   [BUY_NORMAL] {result['token']}: chg1={chg1_verify:+.1f}%, chg5={chg5_verify:+.1f}%, H1={h1_current:+.1f}% | BUY!")
                     buy_token(addr, result)
                     to_remove.append(addr)
@@ -967,10 +941,6 @@ def scan_cycle():
             if data.get('in_verify', False):
                 # Verify phase: 10s → final check → BUY
                 if chg1_check >= lowest + 5 and chg5_check > 0:
-                    # ATH mid-cooldown check - reject if within 10% of ATH
-                    mcap_verify = float(fresh_fdata.get('market_cap', 0) or 0) if fresh_fdata else mcap
-                    if not check_ath_at_buy(addr, data, result, mcap_verify, now):
-                        continue  # ATH check failed, token still near peak, continue monitoring
                     print(f"   [BUY_RECOVERY] {result['token']}: chg1={chg1_check:+.1f}% >= {lowest+5:+.1f}%, chg5={chg5_check:+.1f}% | BUY!")
                     buy_token(addr, result)
                     to_remove.append(addr)
