@@ -74,7 +74,7 @@ NORMAL_WAIT_DURATION = 45    # Normal path: 45s cooldown before first check
 CHG1_RECHECK_INTERVAL = 15 # Recovery recheck interval
 CHG1_VERIFY_DELAY = 15     # Recovery verify before buy
 RECOVERY_WAIT = 15          # Recovery wait interval
-PUMP_MIN_AGE = 180  # 3 min minimum age  # 5 min minimum age before buying  # 3 min minimum age before buying         # Min age (sec) before buying via pump path
+PUMP_MIN_AGE = 300  # 5 min minimum age before buying
 
 # =====================================================================
 # GLOBAL STATE
