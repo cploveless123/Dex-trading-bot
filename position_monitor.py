@@ -377,7 +377,7 @@ def monitor_cycle():
                 close_position(addr, "TP4_TRAIL_STOP")
                 to_remove = True
         
-        # TP5 (+1000%): Sell 10%, hold 10% with 15% trail (compound mode)
+        # TP5 (+1000%): Sell ALL, target reached
         if not tp_status['tp5_hit'] and pnl_pct >= TP5_PCT:
             tp_status['tp5_hit'] = True
             tp_status['tp5_sold_pct'] = TP5_SELL_PCT
@@ -394,7 +394,7 @@ def monitor_cycle():
                    f"🥧 https://pump.fun/{addr}")
             alert_sender_webhook(msg)
         
-        # TP5 trailing stop (15% from peak - compound mode)
+        # TP5 trailing stop (20% from peak)
         if tp_status['tp5_hit'] and not tp_status.get('tp5_trail_hit'):
             if current_price < peak_price * (1 - TP5_TRAIL/100):
                 remaining_pct = 1 - tp_status.get('tp5_sold_pct', TP5_SELL_PCT)
