@@ -549,7 +549,7 @@ def scan_token(token_data, reason_if_fail=None):
             return None, f"holders {holders} < {MIN_HOLDERS}"
         
         # Top10 concentration check - reject if > 50% held by top10 wallets (dump risk)
-        if top10pct > 50:
+        if top10pct > 40:
             return None, f"top10 {top10pct:.0f}% > 50% (high concentration)"
         
         # Volume check - if GMGN shows 0 volume, try DexScreener as fallback
