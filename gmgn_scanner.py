@@ -1018,14 +1018,15 @@ def scan_cycle():
                 data['h1_prev'] = h1
                 continue
             recovery_target = lowest_chg5 + CHG5_RECOVERY_CHECK
-            if chg5 >= max(recovery_target, MIN_CHG5_FOR_BUY):
+            if chg5 >= max(recovery_target, MIN_CHG5_FOR_BUY) and chg1 > 1.0 and h1 > 25.0:
                 data['state'] = STATE_BASE_WAIT
                 data['cooldown_end'] = now + 30
-                print(f"   [RECOVERED] {result['token']}: chg5={chg5:+.1f}% >= {recovery_target:+.1f}% | base path")
+                print(f"   [RECOVERED] {result['token']}: chg5={chg5:+.1f}% >= {recovery_target:+.1f}%, chg1={chg1:+.1f}% h1={h1:+.1f}% | base path")
             else:
                 data['lowest_chg5'] = min(lowest_chg5, chg5)
                 data['cooldown_end'] = now + RECOVERY_WAIT
-                print(f"   [STILL_RECOVERING] {result['token']}: chg5={chg5:.1f}% < {recovery_target:+.1f}% | wait {RECOVERY_WAIT}s")
+                reason = f"chg5={chg5:.1f}% < {recovery_target:.1f}%" if chg5 < max(recovery_target, MIN_CHG5_FOR_BUY) else f"chg1={chg1:.1f}% <= +1% or h1={h1:.1f}% <= +25%"
+                print(f"   [STILL_RECOVERING] {result['token']}: {reason} | wait {RECOVERY_WAIT}s")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
