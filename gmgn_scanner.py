@@ -102,7 +102,6 @@ _BACKOFF_MAX = 300
 
 # Global GMGN circuit breaker - stops ALL GMGN calls after consecutive failures
 _GMGN_CONSECUTIVE_FAILS = 0
-_GMGN_GLOBAL_BACKOFF_UNTIL = 0
 _GMGN_BACKOFF_THRESHOLD = 3   # 3 consecutive failures → global backoff
 _GMGN_BACKOFF_DURATION = 60   # 60s global backoff before retrying
 
@@ -153,18 +152,18 @@ def record_throttle(endpoint):
     wait_time = min(_BACKOFF_BASE * (2 ** state['count']), _BACKOFF_MAX)
     state['backoff_until'] = time.time() + wait_time
 
-    # Global circuit breaker
+    # Global circuit breaker - silent, no alert spam
     _GMGN_CONSECUTIVE_FAILS += 1
     if _GMGN_CONSECUTIVE_FAILS >= _GMGN_BACKOFF_THRESHOLD:
         _GMGN_GLOBAL_BACKOFF_UNTIL = time.time() + _GMGN_BACKOFF_DURATION
         if not _BUYS_STOPPED:
             _BUYS_STOPPED = True
-            send_alert(f"🚨 GMGN CIRCUIT BREAKER: {_GMGN_CONSECUTIVE_FAILS} consecutive failures, global backoff {_GMGN_BACKOFF_DURATION}s | BUYING STOPPED")
+            # No alert - just silently stop buying
 
-    # Alert only once per throttle event (not per increment)
+    # Alert only once per throttle event (not per increment) - use static key for dedup
     if not state.get('_alerted', False):
         state['_alerted'] = True
-        send_alert(f"⚠️ GMGN {endpoint.upper()} THROTTLED: {state['count']} failures, backoff {wait_time:.0f}s")
+        send_alert(f"⚠️ GMGN {endpoint.upper()} THROTTLED: {state['count']} failures", alert_type=f"gmgn_{endpoint}_throttle")
 
 def reset_gmgn_fails():
     """Reset consecutive fail counter on successful GMGN call"""
@@ -176,7 +175,7 @@ def reset_gmgn_fails():
             _BUYS_STOPPED = False
 
 def check_stop_buys():
-    """Stop buys if both GMGN AND DexScreener are failing"""
+    """Stop buys if both GMGN AND DexScreener are failing - silent mode"""
     global _BUYS_STOPPED
     now = time.time()
     
@@ -191,10 +190,10 @@ def check_stop_buys():
     if gmgn_throttled and DEXSCREENER_FAIL_COUNT >= 5:
         if not _BUYS_STOPPED:
             _BUYS_STOPPED = True
-            send_alert("🚨🚨 STOPPING ALL BUYS: GMGN throttled + DexScreener failing")
+            # No alert - silent stop
     elif not gmgn_throttled and _BUYS_STOPPED:
         _BUYS_STOPPED = False
-        send_alert("✅ RESUMING BUYS: APIs recovered")
+        # No alert - silent resume
     
     return _BUYS_STOPPED
 
@@ -1184,7 +1183,7 @@ def main():
         except Exception as e:
             print(f"Scan error: {e}")
         sys.stdout.flush()
-        time.sleep(10)  # 10s scan interval
+        time.sleep(30)  # 30s scan interval - reduce GMGN hammering
 
 if __name__ == '__main__':
     main()
