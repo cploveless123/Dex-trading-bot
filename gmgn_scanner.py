@@ -1,12 +1,4 @@
 #!/usr/bin/env python3
-import os, sys
-# Direct write to log file bypassing all buffering
-_log_path = '/root/Dex-trading-bot/gmgn_scanner.log'
-_log_fd = os.open(_log_path, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o644)
-def _log(msg):
-    os.write(_log_fd, (msg + '\n').encode())
-    os.fsync(_log_fd)  # Force write to disk
-
 """
 gmgn_scanner.py - v7.4 CLEAN
 A complete, clean rewrite of the GMGN scanner with IRONCLAD rules.
@@ -36,14 +28,14 @@ MIN_MCAP = 7500
 MAX_MCAP = 30000
 MAX_AGE = 3600  # 60 minutes max token age
 MIN_HOLDERS = 15
-MIN_CHG5_FOR_BUY = 2.0
+MIN_CHG5_FOR_BUY = 5.0
 H1_MOMENTUM_MIN = 25.0
 H1_MOMENTUM_MAX = 700.0
 FALLEN_GIANT_H1 = 700
 FALLEN_GIANT_MCAP = 25000
 H1_INSTABILITY_MULTIPLIER = 3
 CHG5_DROP_THRESHOLD = 10
-CHG5_RECOVERY_CHECK = 3      # % mcap recovery needed
+CHG5_RECOVERY_CHECK = 5
 YOUNG_AGE_THRESHOLD = 180   # 3 minutes - tokens younger than this use young cooldown path
 BS_RATIO_NEW = 1.5
 BS_RATIO_OLD = 1.3
@@ -72,13 +64,13 @@ STATE_RECOVERY_WAIT = 'RECOVERY_WAIT'    # 6s for chg1 recovery for chg5 recover
 PUMP_WAIT_1 = 45            # First pump confirmation wait (45s)
 PUMP_WAIT_2 = 30            # Second pump confirmation wait (30s)
 PUMP_VERIFY_DELAY = 15     # Final pump verification wait (15s)
-PUMP_CHG1_THRESHOLD = 1.0   # 1-min change % to trigger pump path (chg1 must be >=+1% + rising)
+PUMP_CHG1_THRESHOLD = 10.0  # 1-min change % to trigger pump path (chg1 must be >+10%)
 YOUNG_COOLDOWN = 30         # Young path cooldown (<15min + chg5>+50%)
 OLDER_COOLDOWN = 30         # Older path cooldown (>15min + chg5>+1%)
 BASE_WAIT = 30             # Base path wait (30s verify chg1 > chg1_prev + 3%)
 CHG1_RECHECK_INTERVAL = 15 # Recovery recheck interval
 CHG1_VERIFY_DELAY = 15     # Recovery verify before buy
-RECOVERY_WAIT = 10          # Recovery wait interval (shortened from 15s)
+RECOVERY_WAIT = 15          # Recovery wait interval
 PUMP_MIN_AGE = 150         # Min age (sec) before buying via pump path (2.5 min)
 
 # =====================================================================
@@ -102,7 +94,7 @@ _BACKOFF_MAX = 300
 
 # Global GMGN circuit breaker - stops ALL GMGN calls after consecutive failures
 _GMGN_CONSECUTIVE_FAILS = 0
-_GMGN_GLOBAL_BACKOFF_UNTIL = 0   # Shared global backoff timer
+_GMGN_GLOBAL_BACKOFF_UNTIL = 0
 _GMGN_BACKOFF_THRESHOLD = 3   # 3 consecutive failures → global backoff
 _GMGN_BACKOFF_DURATION = 60   # 60s global backoff before retrying
 
@@ -153,18 +145,18 @@ def record_throttle(endpoint):
     wait_time = min(_BACKOFF_BASE * (2 ** state['count']), _BACKOFF_MAX)
     state['backoff_until'] = time.time() + wait_time
 
-    # Global circuit breaker - silent, no alert spam
+    # Global circuit breaker
     _GMGN_CONSECUTIVE_FAILS += 1
     if _GMGN_CONSECUTIVE_FAILS >= _GMGN_BACKOFF_THRESHOLD:
         _GMGN_GLOBAL_BACKOFF_UNTIL = time.time() + _GMGN_BACKOFF_DURATION
         if not _BUYS_STOPPED:
             _BUYS_STOPPED = True
-            # No alert - just silently stop buying
+            send_alert(f"🚨 GMGN CIRCUIT BREAKER: {_GMGN_CONSECUTIVE_FAILS} consecutive failures, global backoff {_GMGN_BACKOFF_DURATION}s | BUYING STOPPED")
 
-    # Alert only once per throttle event (not per increment) - use static key for dedup
+    # Alert only once per throttle event (not per increment)
     if not state.get('_alerted', False):
         state['_alerted'] = True
-        send_alert(f"⚠️ GMGN {endpoint.upper()} THROTTLED: {state['count']} failures", alert_type=f"gmgn_{endpoint}_throttle")
+        send_alert(f"⚠️ GMGN {endpoint.upper()} THROTTLED: {state['count']} failures, backoff {wait_time:.0f}s")
 
 def reset_gmgn_fails():
     """Reset consecutive fail counter on successful GMGN call"""
@@ -176,7 +168,7 @@ def reset_gmgn_fails():
             _BUYS_STOPPED = False
 
 def check_stop_buys():
-    """Stop buys if both GMGN AND DexScreener are failing - silent mode"""
+    """Stop buys if both GMGN AND DexScreener are failing"""
     global _BUYS_STOPPED
     now = time.time()
     
@@ -191,10 +183,10 @@ def check_stop_buys():
     if gmgn_throttled and DEXSCREENER_FAIL_COUNT >= 5:
         if not _BUYS_STOPPED:
             _BUYS_STOPPED = True
-            # No alert - silent stop
+            send_alert("🚨🚨 STOPPING ALL BUYS: GMGN throttled + DexScreener failing")
     elif not gmgn_throttled and _BUYS_STOPPED:
         _BUYS_STOPPED = False
-        # No alert - silent resume
+        send_alert("✅ RESUMING BUYS: APIs recovered")
     
     return _BUYS_STOPPED
 
@@ -223,19 +215,14 @@ def get_gmgn_trending(limit=50):
         return []
     r = subprocess.run(['gmgn-cli', 'market', 'trending', '--chain', 'sol', '--interval', '5m', '--limit', str(limit)],
                       capture_output=True, text=True, timeout=15)
-    # Detect HTTP 403 (rate limited) even if returncode is 0
-    if r.returncode != 0 or '403' in r.stdout or 'HTTP 403' in r.stderr:
+    if r.returncode != 0:
         record_throttle('trending')
-        send_alert("⚠️ GMGN trending FAILED (403)", alert_type="gmgn_trending_fail")
+        send_alert("⚠️ GMGN trending FAILED")
         return []
     try:
         reset_gmgn_fails()  # Reset consecutive fail counter on success
         d = json.loads(r.stdout)
-        tokens = d.get('data', {}).get('rank', [])
-        if not tokens and 'rate limit' in r.stdout.lower():
-            record_throttle('trending')
-            send_alert("⚠️ GMGN trending EMPTY + rate limited", alert_type="gmgn_trending_empty")
-        return tokens
+        return d.get('data', {}).get('rank', [])
     except:
         return []
 
@@ -245,9 +232,8 @@ def get_gmgn_trenches(limit=20):
         return []
     r = subprocess.run(['gmgn-cli', 'market', 'trenches', '--chain', 'sol', '--limit', str(limit)],
                       capture_output=True, text=True, timeout=15)
-    if r.returncode != 0 or '403' in r.stdout or 'HTTP 403' in r.stderr:
+    if r.returncode != 0:
         record_throttle('trenches')
-        send_alert("⚠️ GMGN trenches FAILED (403)", alert_type="gmgn_trenches_fail")
         return []
     try:
         reset_gmgn_fails()  # Reset consecutive fail counter on success
@@ -329,13 +315,13 @@ def get_dexscreener_pump_tokens(limit=20):
 
 def get_gmgn_token_info(addr):
     if is_throttled('token_info'):
-        send_alert(f"⚠️ GMGN token_info THROTTLED", alert_type="gmgn_token_info_throttle")
+        send_alert(f"⚠️ GMGN token_info THROTTLED")
         return None
     r = subprocess.run(['gmgn-cli', 'token', 'info', '--chain', 'sol', '--address', addr],
                       capture_output=True, text=True, timeout=15)
     if r.returncode != 0:
         record_throttle('token_info')
-        send_alert(f"⚠️ GMGN token_info FAILED", alert_type="gmgn_token_info_fail")
+        send_alert(f"⚠️ GMGN token_info FAILED")
         return None
     try:
         reset_gmgn_fails()  # Reset consecutive fail counter on success
@@ -518,8 +504,8 @@ def scan_token(token_data, reason_if_fail=None):
                 return None, f"h1 {h1:.1f}% < {H1_MOMENTUM_MIN}%"
         
         # H1 ceiling - reject too parabolic (winners avg 110% H1, losers avg 178% H1)
-        if h1 > 300:
-            return None, f"h1 {h1:.1f}% > +300% (too parabolic)"
+        if h1 > 200:
+            return None, f"h1 {h1:.1f}% > +200% (too parabolic)"
         
         # BS ratio check
         if launchpad == 'pump':
@@ -763,34 +749,47 @@ def scan_cycle():
         result = data['result']
         state = data['state']
         
-        # CRITICAL: Fetch fresh data on EVERY cycle for every token in cooldown
-        # This ensures chg1/mcap decisions are based on current data, not cached
-        fresh_data, source = get_fresh_token_data(addr)
-        if fresh_data is None:
-            # Failed to get fresh data - use cached from result
+        # Only fetch fresh data if cooldown timer is about to expire (within 15s)
+        # This reduces GMGN calls from N per 15s to 1 per 15s when timer is close
+        cooldown_remaining = data['cooldown_end'] - now
+        
+        # ALWAYS fetch fresh data when timer is expired or about to expire
+        # This ensures we have current chg1/mcap for buy decisions
+        if cooldown_remaining <= 15:
+            fresh_data, source = get_fresh_token_data(addr)
+            if fresh_data is None:
+                # Failed to get fresh data - use cached from result, don't skip state transition
+                chg5 = result.get('chg5', 0)
+                h1 = result.get('h1', 0)
+                chg1 = result.get('chg1', 0)
+                mcap = result.get('mcap', 0)
+            else:
+                # Extract data from fresh source
+                if source == 'gmgn':
+                    chg5 = float(fresh_data.get('price_change_percent5m', 0) or 0)
+                    h1 = float(fresh_data.get('price_change_percent1h', 0) or 0)
+                    chg1 = float(fresh_data.get('price_change_percent1m', 0) or 0)
+                    mcap = float(fresh_data.get('market_cap', 0) or 0)
+                else:  # dexscraper
+                    pc = fresh_data.get('priceChange', {})
+                    chg5 = float(pc.get('m5', 0) or 0)
+                    h1 = float(pc.get('h1', 0) or 0)
+                    chg1 = float(pc.get('m1', 0) or 0)
+                    mcap = float(fresh_data.get('marketCap', 0) or 0)
+                
+                # Update result with fresh data
+                result['chg5'] = chg5
+                result['h1'] = h1
+                result['chg1'] = chg1
+                result['mcap'] = mcap
+        else:
+            # Timer not close - skip fresh fetch, use cached data
             chg5 = result.get('chg5', 0)
             h1 = result.get('h1', 0)
             chg1 = result.get('chg1', 0)
             mcap = result.get('mcap', 0)
-        else:
-            # Extract data from fresh source
-            if source == 'gmgn':
-                chg5 = float(fresh_data.get('price_change_percent5m', 0) or 0)
-                h1 = float(fresh_data.get('price_change_percent1h', 0) or 0)
-                chg1 = float(fresh_data.get('price_change_percent1m', 0) or 0)
-                mcap = float(fresh_data.get('market_cap', 0) or 0)
-            else:  # dexscraper
-                pc = fresh_data.get('priceChange', {})
-                chg5 = float(pc.get('m5', 0) or 0)
-                h1 = float(pc.get('h1', 0) or 0)
-                chg1 = float(pc.get('m1', 0) or 0)
-                mcap = float(fresh_data.get('marketCap', 0) or 0)
-            
-            # Update result with fresh data
-            result['chg5'] = chg5
-            result['h1'] = h1
-            result['chg1'] = chg1
-            result['mcap'] = mcap
+            fresh_data = None
+            source = None
         
         chg5_prev = data.get('chg5_prev', chg5)
         h1_prev = data.get('h1_prev', h1)
@@ -806,7 +805,7 @@ def scan_cycle():
                 data['h1_prev'] = h1
                 continue
             # Timer done - verify chg1 still above pump threshold AND rising
-            if chg1 > PUMP_CHG1_THRESHOLD and (chg1 > chg1_prev or (chg1_prev == 0 and chg1 > 0)):
+            if chg1 > PUMP_CHG1_THRESHOLD and chg1 > chg1_prev:
                 data['state'] = STATE_PUMP_WAIT_2
                 data['cooldown_end'] = now + PUMP_WAIT_2
                 data['recheck_count'] = 0
@@ -814,12 +813,12 @@ def scan_cycle():
             elif chg1 > PUMP_CHG1_THRESHOLD and chg1 <= chg1_prev:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
-                data['lowest_chg1'] = chg1  # Track chg1 low point for recovery
+                data['lowest_chg5'] = min(lowest_chg5, chg5)
                 print(f"   [PUMP_REVERSING] {result['token']}: chg1={chg1:.1f}% <= prev {chg1_prev:+.1f}% | recovery")
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
-                data['lowest_chg1'] = chg1  # Track chg1 low point for recovery
+                data['lowest_chg5'] = min(lowest_chg5, chg5)
                 print(f"   [PUMP_FADED] {result['token']}: chg1={chg1:.1f}% < +{PUMP_CHG1_THRESHOLD}% | recovery")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
@@ -831,7 +830,7 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            if chg1 > PUMP_CHG1_THRESHOLD and (chg1 > chg1_prev or (chg1_prev == 0 and chg1 > 0)):
+            if chg1 > PUMP_CHG1_THRESHOLD and chg1 > chg1_prev:
                 data['state'] = STATE_PUMP_VERIFY
                 data['cooldown_end'] = now + PUMP_VERIFY_DELAY
                 data['recheck_count'] = 0
@@ -839,7 +838,6 @@ def scan_cycle():
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
-                data['lowest_chg1'] = chg1  # Track chg1 low point for recovery
                 print(f"   [PUMP_FADED_W2] {result['token']}: chg1={chg1:.1f}% | recovery")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
@@ -851,7 +849,7 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            if chg1 > PUMP_CHG1_THRESHOLD and (chg1 > chg1_prev or (chg1_prev == 0 and chg1 > 0)):
+            if chg1 > PUMP_CHG1_THRESHOLD and chg1 > chg1_prev:
                 # IRONCLAD: Re-check age before BUY - fresh data only
                 token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
                 # Reject if no age data (creation_timestamp = 0 or missing)
@@ -887,20 +885,18 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # Track lowest chg1 for recovery
-            lowest_chg1 = data.get('lowest_chg1', chg1)
-            if chg1 < lowest_chg1:
-                lowest_chg1 = chg1
-                data['lowest_chg1'] = lowest_chg1
-            # Recover if: chg1 rising from low AND positive OR chg1 stable at positive
-            if (chg1 > lowest_chg1 and chg1 > 0) or (chg1 >= 0 and chg1 >= lowest_chg1):
+            # Timer done - check if mcap recovered > +5% from lowest
+            recovery_target = lowest_mcap * 1.05
+            if mcap >= recovery_target:
                 data['state'] = STATE_CHG1_VERIFY
-                data['cooldown_end'] = now + CHG1_VERIFY_DELAY
-                print(f"   [CHG1_OK] {result['token']}: chg1={chg1:+.1f}% rising from {lowest_chg1:+.1f}% | verify {CHG1_VERIFY_DELAY}s")
+                data['cooldown_end'] = now + 15
+                print(f"   [CHG1_OK] {result['token']}: mcap={mcap:,.0f} >= {recovery_target:,.0f} (+5% from low) | verify {CHG1_VERIFY_DELAY}s")
             else:
-                data['cooldown_end'] = now + CHG1_RECHECK_INTERVAL
+                # Still low - update lowest and recheck
+                data['lowest_mcap'] = min(lowest_mcap, mcap)
+                data['cooldown_end'] = now + 15
                 data['recheck_count'] = data.get('recheck_count', 0) + 1
-                print(f"   [CHG1_RECHECK] {result['token']}: chg1={chg1:+.1f}% (lowest={lowest_chg1:+.1f}%) | recheck {CHG1_RECHECK_INTERVAL}s")
+                print(f"   [CHG1_RECHECK] {result['token']}: mcap={mcap:,.0f} < {recovery_target:,.0f} | recheck {CHG1_RECHECK_INTERVAL}s")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -1007,9 +1003,9 @@ def scan_cycle():
                     to_remove.append(addr)
                     send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Base wait path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}", f"BUY:{addr}")
             else:
-                # BASE didn't trigger - stay in BASE_WAIT, wait for next cycle
-                data['cooldown_end'] = now + 30
-                print(f"   [BASE_NOT_READY] {result['token']}: chg1={chg1:.1f}% < {chg1_threshold:+.1f}% | stay in base {30}s")
+                # BASE didn't trigger - token passes (no further cooldown needed)
+                to_remove.append(addr)
+                print(f"   [BASE_PASS] {result['token']}: chg1={chg1:.1f}% < {chg1_threshold:+.1f}% | token passed")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -1021,20 +1017,15 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # Track lowest chg1 and trigger when chg1 rises from that low
-            lowest_chg1 = data.get('lowest_chg1', chg1)
-            if chg1 < lowest_chg1:
-                lowest_chg1 = chg1
-                data['lowest_chg1'] = lowest_chg1
-            
-            # Recover if: chg1 is rising from low OR chg1 is stable at positive value
-            if (chg1 > lowest_chg1 and chg1 > 0) or (chg1 >= 0 and chg1 >= lowest_chg1):
+            recovery_target = lowest_chg5 + CHG5_RECOVERY_CHECK
+            if chg5 >= max(recovery_target, MIN_CHG5_FOR_BUY):
                 data['state'] = STATE_BASE_WAIT
                 data['cooldown_end'] = now + 30
-                print(f"   [RECOVERED] {result['token']}: chg1={chg1:+.1f}% | momentum recovered/stable | base path")
+                print(f"   [RECOVERED] {result['token']}: chg5={chg5:+.1f}% >= {recovery_target:+.1f}% | base path")
             else:
+                data['lowest_chg5'] = min(lowest_chg5, chg5)
                 data['cooldown_end'] = now + RECOVERY_WAIT
-                print(f"   [STILL_RECOVERING] {result['token']}: chg1={chg1:+.1f}% (lowest={lowest_chg1:+.1f}%) | wait {RECOVERY_WAIT}s")
+                print(f"   [STILL_RECOVERING] {result['token']}: chg5={chg5:.1f}% < {recovery_target:+.1f}% | wait {RECOVERY_WAIT}s")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -1160,8 +1151,7 @@ def scan_cycle():
 
             add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
     
-    # Increment cycle counter for GMGN paths (DexScreener path handles it separately)
-    _GMGN_SCAN_CYCLE = (_GMGN_SCAN_CYCLE + 1) % 4
+    
     
     # =====================================================================
 # MAIN
@@ -1171,10 +1161,10 @@ def main():
     print(f"GMGN Scanner {GMGN_SCANNER_VERSION} Started - LIVE TRADING")
     print(f"  Sources: GMGN trending + GMGN trenches + DexScreener pump.fun")
     print(f"  Mcap ${MIN_MCAP:,}-${MAX_MCAP:,} | Holders ≥{MIN_HOLDERS}")
-    print(f"  Dip 5-45% | chg1>+{PUMP_CHG1_THRESHOLD:.0f}% pump rule | chg5>+2% normal entry")
+    print(f"  Dip 5-45% | chg1>+{PUMP_CHG1_THRESHOLD:.0f}% pump rule | chg5>+{MIN_CHG5_FOR_BUY:.0f}% normal entry")
     print(f"  Pump: {PUMP_WAIT_1}s→{PUMP_WAIT_2}s→{PUMP_VERIFY_DELAY}s→BUY")
     print(f"  Young: {YOUNG_COOLDOWN}s | Older: {OLDER_COOLDOWN}s | Base: {BASE_WAIT}s")
-    print(f"  CHG1 recovery: {RECOVERY_WAIT}s rechecks until mcap>+{CHG5_RECOVERY_CHECK}% from low → {CHG1_VERIFY_DELAY}s verify")
+    print(f"  CHG1 recovery: {RECOVERY_WAIT}s rechecks until mcap>+5% from low → {CHG1_VERIFY_DELAY}s verify")
     print(f"  Max: {MAX_OPEN_POSITIONS} open | Size: {POSITION_SIZE} SOL")
     print(f"  IronClad: Fresh data only, DexScreener backup, alert dedup")
     
@@ -1184,7 +1174,7 @@ def main():
         except Exception as e:
             print(f"Scan error: {e}")
         sys.stdout.flush()
-        time.sleep(30)  # 30s scan interval - reduce GMGN hammering
+        time.sleep(10)  # 10s scan interval
 
 if __name__ == '__main__':
     main()
