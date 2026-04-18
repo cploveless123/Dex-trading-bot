@@ -947,9 +947,9 @@ def scan_cycle():
                 print(f"   [SKIP_TOO_NEW] {result['token']}: age {token_age}s < {PUMP_MIN_AGE}s | skip (too new)")
                 to_remove.append(addr)
                 continue
-            chg1_threshold = chg1_prev + 3
+            chg1_threshold = chg1_prev + 10
             if chg1 > chg1_threshold:
-                print(f"   [BUY_YOUNG] {result['token']}: chg1={chg1:+.1f}% > {chg1_threshold:+.1f}% from last | BUY!")
+                print(f"   [BUY_YOUNG] {result['token']}: chg1={chg1:+.1f}% > prev {chg1_prev:+.1f}% +10% | BUY!")
                 if buy_token(addr, result):
                     to_remove.append(addr)
                     send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Young cooldown path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}", f"BUY:{addr}")
@@ -980,8 +980,9 @@ def scan_cycle():
                 print(f"   [SKIP_TOO_NEW] {result['token']}: age {token_age}s < {PUMP_MIN_AGE}s | skip (too new)")
                 to_remove.append(addr)
                 continue
-            if chg1 > 2:
-                print(f"   [BUY_OLDER] {result['token']}: chg1={chg1:+.1f}% > +2% | BUY!")
+            chg1_threshold = chg1_prev + 10
+            if chg1 > chg1_threshold:
+                print(f"   [BUY_OLDER] {result['token']}: chg1={chg1:+.1f}% > prev {chg1_prev:+.1f}% +10% | BUY!")
                 if buy_token(addr, result):
                     to_remove.append(addr)
                     send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Older cooldown path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}", f"BUY:{addr}")
@@ -993,7 +994,7 @@ def scan_cycle():
             data['h1_prev'] = h1
             continue
         
-        # === BASE WAIT PATH (30s → verify chg1 > chg1_prev + 3%) ===
+        # === BASE WAIT PATH (30s → verify chg1 > chg1_prev + 10%) ===
         elif state == STATE_BASE_WAIT:
             remaining = data['cooldown_end'] - now
             if remaining > 0:
@@ -1006,10 +1007,10 @@ def scan_cycle():
                 print(f"   [SKIP_TOO_NEW] {result['token']}: age {token_age}s < {PUMP_MIN_AGE}s | skip (too new)")
                 to_remove.append(addr)
                 continue
-            # Verify chg1 > chg1_prev + 3%
-            chg1_threshold = chg1_prev + 3
+            # Verify chg1 > chg1_prev + 10%
+            chg1_threshold = chg1_prev + 10
             if chg1 > chg1_threshold:
-                print(f"   [BUY_BASE] {result['token']}: chg1={chg1:+.1f}% >= {chg1_threshold:+.1f}% from last | BUY!")
+                print(f"   [BUY_BASE] {result['token']}: chg1={chg1:+.1f}% >= prev {chg1_prev:+.1f}% +10% | BUY!")
                 if buy_token(addr, result):
                     to_remove.append(addr)
                     send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Base wait path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}", f"BUY:{addr}")
