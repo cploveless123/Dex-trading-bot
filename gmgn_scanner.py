@@ -792,7 +792,7 @@ def scan_cycle():
                 data['h1_prev'] = h1
                 continue
             # Timer done - verify chg1 still above pump threshold AND rising
-            if chg1 > PUMP_CHG1_THRESHOLD and chg1 > chg1_prev:
+            if chg1 > PUMP_CHG1_THRESHOLD and (chg1 > chg1_prev or (chg1_prev == 0 and chg1 > 0)):
                 data['state'] = STATE_PUMP_WAIT_2
                 data['cooldown_end'] = now + PUMP_WAIT_2
                 data['recheck_count'] = 0
@@ -817,7 +817,7 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            if chg1 > PUMP_CHG1_THRESHOLD and chg1 > chg1_prev:
+            if chg1 > PUMP_CHG1_THRESHOLD and (chg1 > chg1_prev or (chg1_prev == 0 and chg1 > 0)):
                 data['state'] = STATE_PUMP_VERIFY
                 data['cooldown_end'] = now + PUMP_VERIFY_DELAY
                 data['recheck_count'] = 0
@@ -837,7 +837,7 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            if chg1 > PUMP_CHG1_THRESHOLD and chg1 > chg1_prev:
+            if chg1 > PUMP_CHG1_THRESHOLD and (chg1 > chg1_prev or (chg1_prev == 0 and chg1 > 0)):
                 # IRONCLAD: Re-check age before BUY - fresh data only
                 token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
                 # Reject if no age data (creation_timestamp = 0 or missing)
