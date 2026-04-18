@@ -891,8 +891,8 @@ def scan_cycle():
             if chg1 < lowest_chg1:
                 lowest_chg1 = chg1
                 data['lowest_chg1'] = lowest_chg1
-            # Trigger BUY when chg1 rises from low AND is positive
-            if chg1 >= lowest_chg1 and chg1 > 0:
+            # Recover if: chg1 rising from low AND positive OR chg1 stable at positive
+            if (chg1 > lowest_chg1 and chg1 > 0) or (chg1 >= 0 and chg1 >= lowest_chg1):
                 data['state'] = STATE_CHG1_VERIFY
                 data['cooldown_end'] = now + CHG1_VERIFY_DELAY
                 print(f"   [CHG1_OK] {result['token']}: chg1={chg1:+.1f}% rising from {lowest_chg1:+.1f}% | verify {CHG1_VERIFY_DELAY}s")
@@ -1028,11 +1028,11 @@ def scan_cycle():
                 lowest_chg1 = chg1
                 data['lowest_chg1'] = lowest_chg1
             
-            # Trigger when chg1 rises from its low AND is positive AND actually rising (not flat)
-            if chg1 > lowest_chg1 and chg1 > 0:
+            # Recover if: chg1 is rising from low OR chg1 is stable at positive value
+            if (chg1 > lowest_chg1 and chg1 > 0) or (chg1 >= 0 and chg1 >= lowest_chg1):
                 data['state'] = STATE_BASE_WAIT
                 data['cooldown_end'] = now + 30
-                print(f"   [RECOVERED] {result['token']}: chg1={chg1:+.1f}% rising from {lowest_chg1:+.1f}% | momentum recovered | base path")
+                print(f"   [RECOVERED] {result['token']}: chg1={chg1:+.1f}% | momentum recovered/stable | base path")
             else:
                 data['cooldown_end'] = now + RECOVERY_WAIT
                 print(f"   [STILL_RECOVERING] {result['token']}: chg1={chg1:+.1f}% (lowest={lowest_chg1:+.1f}%) | wait {RECOVERY_WAIT}s")
