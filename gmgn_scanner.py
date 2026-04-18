@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+import os, sys
+# Direct write to log file bypassing all buffering
+_log_path = '/root/Dex-trading-bot/gmgn_scanner.log'
+_log_fd = os.open(_log_path, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o644)
+def _log(msg):
+    os.write(_log_fd, (msg + '\n').encode())
+    os.fsync(_log_fd)  # Force write to disk
+
 """
 gmgn_scanner.py - v7.4 CLEAN
 A complete, clean rewrite of the GMGN scanner with IRONCLAD rules.
@@ -1152,7 +1160,8 @@ def scan_cycle():
 
             add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
     
-    
+    # Increment cycle counter for GMGN paths (DexScreener path handles it separately)
+    _GMGN_SCAN_CYCLE = (_GMGN_SCAN_CYCLE + 1) % 4
     
     # =====================================================================
 # MAIN
