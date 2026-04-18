@@ -844,11 +844,14 @@ def scan_cycle():
                     chg1 = float(pc.get('m1', 0) or 0)
                     mcap = float(fresh_data.get('marketCap', 0) or 0)
                     h1 = float(fresh_data.get('priceChange', {}).get('h1', 0) or 0)
+            # Track lowest chg1 at expiry
+            data['lowest_chg1'] = min(data.get('lowest_chg1', chg1), chg1)
+            chg1_baseline = data.get('chg1_baseline', chg1)
             if chg5 >= PUMP_ENTRY_CHG5 and chg1 > -30:
                 data['state'] = STATE_PUMP_WAIT_2
                 data['cooldown_end'] = now + PUMP_WAIT_2
                 data['recheck_count'] = 0
-                print(f"   [PUMP_CONFIRMED] {result['token']}: chg5={chg5:+.1f}% >= {PUMP_ENTRY_CHG5}% and chg1={chg1:+.1f}% > -30% | wait {PUMP_WAIT_2}s")
+                print(f"   [PUMP_CONFIRMED] {result['token']}: chg5={chg5:+.1f}% >= {PUMP_ENTRY_CHG5}% and chg1={chg1:+.1f}% > -30% | wait {PUMP_WAIT_2}s | baseline={chg1_baseline:+.1f}%")
             elif chg1 <= -30:
                 data['state'] = STATE_PUMP_WAIT_2
                 data['cooldown_end'] = now + 15
@@ -867,6 +870,8 @@ def scan_cycle():
         elif state == STATE_PUMP_WAIT_2:
             remaining = data['cooldown_end'] - now
             if remaining > 0:
+                # During wait: track lowest chg1 locally (no fetch needed)
+                data['lowest_chg1'] = min(data.get('lowest_chg1', chg1), chg1)
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
@@ -884,11 +889,22 @@ def scan_cycle():
                     chg1 = float(pc.get('m1', 0) or 0)
                     mcap = float(fresh_data.get('marketCap', 0) or 0)
                     h1 = float(fresh_data.get('priceChange', {}).get('h1', 0) or 0)
+            chg1_baseline = data.get('chg1_baseline', chg1)
+            lowest_chg1 = data.get('lowest_chg1', chg1)
+            data['lowest_chg1'] = min(lowest_chg1, chg1)
             if chg5 >= PUMP_ENTRY_CHG5 and chg1 > -30:
-                data['state'] = STATE_PUMP_VERIFY
-                data['cooldown_end'] = now + PUMP_VERIFY_DELAY
-                data['recheck_count'] = 0
-                print(f"   [PUMP_STILL_OK] {result['token']}: chg5={chg5:+.1f}% >= {PUMP_ENTRY_CHG5}% and chg1={chg1:+.1f}% > -30% | verify {PUMP_VERIFY_DELAY}s")
+                # Recovery check: chg1 must be >+1% above the lowest observed during PUMP_WAIT_1 (reversal momentum)
+                lowest_chg1 = data.get('lowest_chg1', chg1)
+                reversal_threshold = lowest_chg1 + 1
+                if chg1 > reversal_threshold:
+                    data['state'] = STATE_PUMP_VERIFY
+                    data['cooldown_end'] = now + PUMP_VERIFY_DELAY
+                    data['recheck_count'] = 0
+                    print(f"   [PUMP_REVERSAL] {result['token']}: chg1={chg1:+.1f}% > lowest={lowest_chg1:+.1f}% +1% | verify {PUMP_VERIFY_DELAY}s")
+                else:
+                    data['state'] = STATE_RECOVERY_WAIT
+                    data['cooldown_end'] = now + RECOVERY_WAIT
+                    print(f"   [PUMP_FADED_W2] {result['token']}: chg1={chg1:.1f}% not > {reversal_threshold:+.1f}% (lowest={lowest_chg1:.1f}%) | recovery")
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
@@ -918,8 +934,10 @@ def scan_cycle():
                     chg1 = float(pc.get('m1', 0) or 0)
                     mcap = float(fresh_data.get('marketCap', 0) or 0)
                     h1 = float(fresh_data.get('priceChange', {}).get('h1', 0) or 0)
-            # Final verify: chg5 >= +50% AND chg1 > -30%
-            if chg5 >= PUMP_ENTRY_CHG5 and chg1 > -30:
+            # Final verify: chg5 >= +50% AND chg1 > lowest_chg1 + 1% (reversal from observed low)
+            lowest_chg1 = data.get('lowest_chg1', chg1)
+            reversal_threshold = lowest_chg1 + 1
+            if chg5 >= PUMP_ENTRY_CHG5 and chg1 > reversal_threshold:
                 # IRONCLAD: Re-check age before BUY - fresh data only
                 token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
                 # Reject if no age data (creation_timestamp = 0 or missing)
@@ -943,7 +961,7 @@ def scan_cycle():
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
-                print(f"   [PUMP_FADED_V] {result['token']}: chg1={chg1:.1f}% | recovery")
+                print(f"   [PUMP_FADED_V] {result['token']}: chg1={chg1:.1f}% not > {reversal_threshold:+.1f}% (lowest={lowest_chg1:.1f}%) | recovery")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
