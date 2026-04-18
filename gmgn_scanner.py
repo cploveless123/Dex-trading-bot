@@ -64,7 +64,7 @@ STATE_RECOVERY_WAIT = 'RECOVERY_WAIT'    # 6s for chg1 recovery for chg5 recover
 PUMP_WAIT_1 = 45            # First pump confirmation wait (45s)
 PUMP_WAIT_2 = 30            # Second pump confirmation wait (30s)
 PUMP_VERIFY_DELAY = 15     # Final pump verification wait (15s)
-PUMP_CHG1_THRESHOLD = 0.0   # 1-min change % to trigger pump path (chg1 must be >=0% + rising)
+PUMP_CHG1_THRESHOLD = 1.0   # 1-min change % to trigger pump path (chg1 must be >=+1% + rising)
 YOUNG_COOLDOWN = 30         # Young path cooldown (<15min + chg5>+50%)
 OLDER_COOLDOWN = 30         # Older path cooldown (>15min + chg5>+1%)
 BASE_WAIT = 30             # Base path wait (30s verify chg1 > chg1_prev + 3%)
