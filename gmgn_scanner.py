@@ -1028,8 +1028,8 @@ def scan_cycle():
                 lowest_chg1 = chg1
                 data['lowest_chg1'] = lowest_chg1
             
-            # Trigger BUY when chg1 rises from its low AND is positive
-            if chg1 >= lowest_chg1 and chg1 > 0:
+            # Trigger when chg1 rises from its low AND is positive AND actually rising (not flat)
+            if chg1 > lowest_chg1 and chg1 > 0:
                 data['state'] = STATE_BASE_WAIT
                 data['cooldown_end'] = now + 30
                 print(f"   [RECOVERED] {result['token']}: chg1={chg1:+.1f}% rising from {lowest_chg1:+.1f}% | momentum recovered | base path")
