@@ -563,8 +563,8 @@ def scan_token(token_data, reason_if_fail=None):
             return None, f"mcap ${mc:,.0f} >55% below ATH ${ath_mcap:,.0f}"
 
         # Build result
-        # Pump path entry: chg5 >= +50% AND chg1 > -20% (all prefilters must pass first)
-        pump_triggered = (chg5 >= 50.0 and chg1 > -20.0)
+        # Pump path entry: h1 > +100% AND chg5 >= +15% AND chg1 > -20% (all prefilters must pass first)
+        pump_triggered = (h1 > 100 and chg5 >= 15.0 and chg1 > -20.0)
 
         result = {
             'token': token_data.get('symbol', '?'),
