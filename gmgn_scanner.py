@@ -215,9 +215,9 @@ def get_gmgn_trending(limit=50):
         return []
     r = subprocess.run(['gmgn-cli', 'market', 'trending', '--chain', 'sol', '--interval', '5m', '--limit', str(limit)],
                       capture_output=True, text=True, timeout=15)
-    if r.returncode != 0:
+    if r.returncode != 0 or '403' in r.stdout or 'HTTP 403' in r.stderr:
         record_throttle('trending')
-        send_alert("⚠️ GMGN trending FAILED")
+        send_alert("⚠️ GMGN trending FAILED (403)")
         return []
     try:
         reset_gmgn_fails()  # Reset consecutive fail counter on success
@@ -232,8 +232,9 @@ def get_gmgn_trenches(limit=20):
         return []
     r = subprocess.run(['gmgn-cli', 'market', 'trenches', '--chain', 'sol', '--limit', str(limit)],
                       capture_output=True, text=True, timeout=15)
-    if r.returncode != 0:
+    if r.returncode != 0 or '403' in r.stdout or 'HTTP 403' in r.stderr:
         record_throttle('trenches')
+        send_alert("⚠️ GMGN trenches FAILED (403)")
         return []
     try:
         reset_gmgn_fails()  # Reset consecutive fail counter on success
@@ -319,9 +320,9 @@ def get_gmgn_token_info(addr):
         return None
     r = subprocess.run(['gmgn-cli', 'token', 'info', '--chain', 'sol', '--address', addr],
                       capture_output=True, text=True, timeout=15)
-    if r.returncode != 0:
+    if r.returncode != 0 or '403' in r.stdout or 'HTTP 403' in r.stderr:
         record_throttle('token_info')
-        send_alert(f"⚠️ GMGN token_info FAILED")
+        send_alert(f"⚠️ GMGN token_info FAILED (403)")
         return None
     try:
         reset_gmgn_fails()  # Reset consecutive fail counter on success
