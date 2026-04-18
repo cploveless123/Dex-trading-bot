@@ -35,7 +35,7 @@ FALLEN_GIANT_H1 = 700
 FALLEN_GIANT_MCAP = 25000
 H1_INSTABILITY_MULTIPLIER = 3
 CHG5_DROP_THRESHOLD = 10
-CHG5_RECOVERY_CHECK = 5
+CHG5_RECOVERY_CHECK = 3      # % mcap recovery needed
 YOUNG_AGE_THRESHOLD = 180   # 3 minutes - tokens younger than this use young cooldown path
 BS_RATIO_NEW = 1.5
 BS_RATIO_OLD = 1.3
@@ -70,7 +70,7 @@ OLDER_COOLDOWN = 30         # Older path cooldown (>15min + chg5>+1%)
 BASE_WAIT = 30             # Base path wait (30s verify chg1 > chg1_prev + 3%)
 CHG1_RECHECK_INTERVAL = 15 # Recovery recheck interval
 CHG1_VERIFY_DELAY = 15     # Recovery verify before buy
-RECOVERY_WAIT = 15          # Recovery wait interval
+RECOVERY_WAIT = 10          # Recovery wait interval (shortened from 15s)
 PUMP_MIN_AGE = 150         # Min age (sec) before buying via pump path (2.5 min)
 
 # =====================================================================
@@ -885,8 +885,8 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # Timer done - check if mcap recovered > +5% from lowest
-            recovery_target = lowest_mcap * 1.05
+            # Timer done - check if mcap recovered > +3% from lowest
+            recovery_target = lowest_mcap * (1 + CHG5_RECOVERY_CHECK / 100)
             if mcap >= recovery_target:
                 data['state'] = STATE_CHG1_VERIFY
                 data['cooldown_end'] = now + 15
@@ -1019,7 +1019,7 @@ def scan_cycle():
                 continue
             # Check if mcap has recovered +5% from lowest point (not chg5 rate)
             lowest_mcap = data.get('lowest_mcap', mcap)
-            recovery_mcap = lowest_mcap * 1.05  # 5% recovery from low
+            recovery_mcap = lowest_mcap * (1 + CHG5_RECOVERY_CHECK / 100)  # 3% recovery from low
             if mcap >= recovery_mcap and chg5 >= MIN_CHG5_FOR_BUY:
                 data['state'] = STATE_BASE_WAIT
                 data['cooldown_end'] = now + 30
@@ -1166,7 +1166,7 @@ def main():
     print(f"  Dip 5-45% | chg1>+{PUMP_CHG1_THRESHOLD:.0f}% pump rule | chg5>+{MIN_CHG5_FOR_BUY:.0f}% normal entry")
     print(f"  Pump: {PUMP_WAIT_1}s→{PUMP_WAIT_2}s→{PUMP_VERIFY_DELAY}s→BUY")
     print(f"  Young: {YOUNG_COOLDOWN}s | Older: {OLDER_COOLDOWN}s | Base: {BASE_WAIT}s")
-    print(f"  CHG1 recovery: {RECOVERY_WAIT}s rechecks until mcap>+5% from low → {CHG1_VERIFY_DELAY}s verify")
+    print(f"  CHG1 recovery: {RECOVERY_WAIT}s rechecks until mcap>+{CHG5_RECOVERY_CHECK}% from low → {CHG1_VERIFY_DELAY}s verify")
     print(f"  Max: {MAX_OPEN_POSITIONS} open | Size: {POSITION_SIZE} SOL")
     print(f"  IronClad: Fresh data only, DexScreener backup, alert dedup")
     
