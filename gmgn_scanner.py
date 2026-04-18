@@ -76,7 +76,7 @@ BASE_WAIT = 30             # Base path wait (30s verify chg1 > chg1_prev + 3%)
 CHG1_RECHECK_INTERVAL = 15 # Recovery recheck interval
 CHG1_VERIFY_DELAY = 15     # Recovery verify before buy
 RECOVERY_WAIT = 15          # Recovery wait interval
-PUMP_MIN_AGE = 180         # Min age (sec) before buying via pump path (3 min)
+PUMP_MIN_AGE = 210         # Min age (sec) before buying via pump path (3.5 min)
 
 # =====================================================================
 # GLOBAL STATE

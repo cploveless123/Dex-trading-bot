@@ -43,7 +43,7 @@ MIN_HOLDERS = 15             # Minimum holder count
 MIN_VOLUME = 6000          # Min 24h volume ($)
 MIN_CHG5_FOR_BUY = 2.0      # Minimum 5m change % for buy signal
 PUMP_CHG1_THRESHOLD = 5.001  # 1-min change % to trigger pump path (NOT chg5)
-PUMP_MIN_AGE = 120              # Min age (sec) before buying via pump path (reject new listings)
+PUMP_MIN_AGE = 210              # Min age (sec) before buying via pump path (3.5 min)
 H1_MOMENTUM_MIN = 25.0      # Minimum 1h change % (momentum requirement)
 H1_MOMENTUM_MAX = 99999.0  # No ceiling - let any momentum through
 
