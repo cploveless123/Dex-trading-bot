@@ -478,12 +478,23 @@ def scan_token(token_data, reason_if_fail=None):
         if age_sec > MAX_AGE:
             return None, f"age {age_sec}s > {MAX_AGE}s (too old)"
         
-        # Holders check
+        # Holders check - for DexScreener tokens with 0 holders, try GMGN as backup
+        if holders < MIN_HOLDERS and holders == 0:
+            # Try GMGN token_info to get holders for DexScreener tokens
+            from gmgn_scanner import get_gmgn_token_info
+            info = get_gmgn_token_info(addr)
+            if info and info.get('holder_count', 0) >= MIN_HOLDERS:
+                holders = int(info.get('holder_count', 0))
+            elif not info:
+                pass  # Keep holders=0, will fail check below
+            # If still 0 after GMGN lookup, fail normally
+        
         if holders < MIN_HOLDERS:
             return None, f"holders {holders} < {MIN_HOLDERS}"
         
-        # Volume check - if GMGN shows 0 volume, try DexScreener as fallback
-        if volume < MIN_VOLUME and volume == 0 and addr:
+        # Volume check - if GMGN shows 0 or None volume, try DexScreener as fallback
+        if (volume < MIN_VOLUME or volume is None) and volume != -1 and addr:
+            _gmgn_throttle_state['token_info']['backoff_until'] = 0
             dex_vol = get_dexscreener_volume(addr)
             if dex_vol > 0:
                 volume = dex_vol
