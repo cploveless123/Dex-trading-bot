@@ -215,9 +215,9 @@ def get_gmgn_trending(limit=50):
         return []
     r = subprocess.run(['gmgn-cli', 'market', 'trending', '--chain', 'sol', '--interval', '5m', '--limit', str(limit)],
                       capture_output=True, text=True, timeout=15)
-    if r.returncode != 0 or '403' in r.stdout or 'HTTP 403' in r.stderr:
+    if r.returncode != 0:
         record_throttle('trending')
-        send_alert("⚠️ GMGN trending FAILED (403)")
+        send_alert("⚠️ GMGN trending FAILED")
         return []
     try:
         reset_gmgn_fails()  # Reset consecutive fail counter on success
@@ -226,16 +226,14 @@ def get_gmgn_trending(limit=50):
     except:
         return []
 
-def get_gmgn_trenches(limit=50, token_filter='all'):
-    """Get tokens from GMGN trenches (newly created/completed pump.fun tokens)
-    token_filter: 'all' = completed+new, 'new' = only new/freshly created, 'completed' = only completed"""
+def get_gmgn_trenches(limit=20):
+    """Get tokens from GMGN trenches (newly created/completed pump.fun tokens)"""
     if is_throttled('trenches'):
         return []
     r = subprocess.run(['gmgn-cli', 'market', 'trenches', '--chain', 'sol', '--limit', str(limit)],
                       capture_output=True, text=True, timeout=15)
-    if r.returncode != 0 or '403' in r.stdout or 'HTTP 403' in r.stderr:
+    if r.returncode != 0:
         record_throttle('trenches')
-        send_alert("⚠️ GMGN trenches FAILED (403)")
         return []
     try:
         reset_gmgn_fails()  # Reset consecutive fail counter on success
@@ -244,17 +242,9 @@ def get_gmgn_trenches(limit=50, token_filter='all'):
         completed = d.get('completed', [])
         new = d.get('new', [])
         
-        # Filter based on token_filter
-        if token_filter == 'new':
-            source_tokens = new
-        elif token_filter == 'completed':
-            source_tokens = completed
-        else:
-            source_tokens = completed + new
-        
         # Normalize fields from GMGN trenches to scanner format
         normalized = []
-        for t in source_tokens:
+        for t in completed + new:
             # Map GMGN fields to scanner format
             normalized_token = {
                 'address': t.get('address', ''),
@@ -279,11 +269,11 @@ def get_gmgn_trenches(limit=50, token_filter='all'):
     except:
         return []
 
-def get_dexscreener_pump_tokens(limit=50):
+def get_dexscreener_pump_tokens(limit=20):
     """Actively scan DexScreener for new pump.fun tokens as a discovery fallback"""
     global DEXSCREENER_FAIL_COUNT
     try:
-        url = f"https://api.dexscreener.com/latest/dex/search?q=pumpfun&chain=solana&limit={limit}"
+        url = "https://api.dexscreener.com/latest/dex/search?q=pumpfun&chain=solana&limit=20"
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read())
@@ -329,9 +319,9 @@ def get_gmgn_token_info(addr):
         return None
     r = subprocess.run(['gmgn-cli', 'token', 'info', '--chain', 'sol', '--address', addr],
                       capture_output=True, text=True, timeout=15)
-    if r.returncode != 0 or '403' in r.stdout or 'HTTP 403' in r.stderr:
+    if r.returncode != 0:
         record_throttle('token_info')
-        send_alert(f"⚠️ GMGN token_info FAILED (403)")
+        send_alert(f"⚠️ GMGN token_info FAILED")
         return None
     try:
         reset_gmgn_fails()  # Reset consecutive fail counter on success
@@ -514,7 +504,7 @@ def scan_token(token_data, reason_if_fail=None):
                 return None, f"h1 {h1:.1f}% < {H1_MOMENTUM_MIN}%"
         
         # H1 ceiling - reject too parabolic (winners avg 110% H1, losers avg 178% H1)
-        if h1 > 350:
+        if h1 > 200:
             return None, f"h1 {h1:.1f}% > +200% (too parabolic)"
         
         # BS ratio check
@@ -1028,15 +1018,14 @@ def scan_cycle():
                 data['h1_prev'] = h1
                 continue
             recovery_target = lowest_chg5 + CHG5_RECOVERY_CHECK
-            if chg5 >= max(recovery_target, MIN_CHG5_FOR_BUY) and chg1 > 1.0 and h1 > 25.0:
+            if chg5 >= max(recovery_target, MIN_CHG5_FOR_BUY):
                 data['state'] = STATE_BASE_WAIT
                 data['cooldown_end'] = now + 30
-                print(f"   [RECOVERED] {result['token']}: chg5={chg5:+.1f}% >= {recovery_target:+.1f}%, chg1={chg1:+.1f}% h1={h1:+.1f}% | base path")
+                print(f"   [RECOVERED] {result['token']}: chg5={chg5:+.1f}% >= {recovery_target:+.1f}% | base path")
             else:
                 data['lowest_chg5'] = min(lowest_chg5, chg5)
                 data['cooldown_end'] = now + RECOVERY_WAIT
-                reason = f"chg5={chg5:.1f}% < {recovery_target:.1f}%" if chg5 < max(recovery_target, MIN_CHG5_FOR_BUY) else f"chg1={chg1:.1f}% <= +1% or h1={h1:.1f}% <= +25%"
-                print(f"   [STILL_RECOVERING] {result['token']}: {reason} | wait {RECOVERY_WAIT}s")
+                print(f"   [STILL_RECOVERING] {result['token']}: chg5={chg5:.1f}% < {recovery_target:+.1f}% | wait {RECOVERY_WAIT}s")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -1061,24 +1050,21 @@ def scan_cycle():
     
     # === STAGGERED GMGN + DEXSCREENER SCAN ===
     # 4-cycle rotation: GMGN trending → GMGN trenches → GMGN trenches → DexScreener pump.fun
-    # Every token gets processed within 4 cycles (4 min - one source per 60s)
+    # Every token gets processed within 4 cycles (2 min)
     global _REMAINING_TOKENS
     
     seen = set()
     
-    # 60s rotation: trending → trenches → new pairs → DexScreener
+    # Cycle 0: GMGN trending, Cycle 1: GMGN trenches, Cycle 2: GMGN trenches, Cycle 3: DexScreener pump.fun
     if _GMGN_SCAN_CYCLE == 0:
-        # Cycle 0: GMGN trending (50 tokens)
         new_tokens = get_gmgn_trending(50)
     elif _GMGN_SCAN_CYCLE == 1:
-        # Cycle 1: GMGN trenches - all (completed + new)
-        new_tokens = get_gmgn_trenches(50, 'all')
+        new_tokens = get_gmgn_trenches(50)
     elif _GMGN_SCAN_CYCLE == 2:
-        # Cycle 2: GMGN trenches - new/freshly created only
-        new_tokens = get_gmgn_trenches(50, 'new')
+        new_tokens = get_gmgn_trenches(50)  # Fresh "new" pump.fun tokens
     else:
-        # Cycle 3: Dedicate full slot to DexScreener new pump.fun tokens (50)
-        pump_tokens = get_dexscreener_pump_tokens(50)
+        # Cycle 3: Dedicate full slot to DexScreener pump.fun - process ALL tokens
+        pump_tokens = get_dexscreener_pump_tokens(20)
         pump_tokens.sort(key=lambda x: x.get('creation_timestamp', 0), reverse=True)  # Newest first
         for token_data in pump_tokens:
             addr = token_data.get('address', '')
@@ -1103,10 +1089,10 @@ def scan_cycle():
         _GMGN_SCAN_CYCLE = (_GMGN_SCAN_CYCLE + 1) % 4
         return  # Skip to next cycle
     
-    # If we have carryover from last cycle, process those first (50 max)
+    # If we have carryover from last cycle, process those first (25 max)
     if _REMAINING_TOKENS:
-        tokens_to_process = _REMAINING_TOKENS[:50]  # Process up to 50 from carryover
-        _REMAINING_TOKENS = _REMAINING_TOKENS[50:]  # Keep rest for next cycle
+        tokens_to_process = _REMAINING_TOKENS[:25]  # Process up to 25 from carryover
+        _REMAINING_TOKENS = _REMAINING_TOKENS[25:]  # Keep rest for next cycle
         
         # Sort what we're processing now by newest first (within carryover)
         tokens_to_process.sort(key=lambda x: x.get('creation_timestamp', 0), reverse=True)
@@ -1135,11 +1121,11 @@ def scan_cycle():
 
             add_to_cooldown(addr, token_data, result, result.get('chg5', 0))
     
-    # Now process new tokens from this cycle - sort newest first, take 50
+    # Now process new tokens from this cycle - sort newest first, take 15
     if new_tokens:
         new_tokens.sort(key=lambda x: x.get('creation_timestamp', 0), reverse=True)
-        tokens_this_cycle = new_tokens[:50]  # Process newest 50
-        _REMAINING_TOKENS.extend(new_tokens[50:])  # Save rest for next cycle
+        tokens_this_cycle = new_tokens[:25]  # Process newest 25
+        _REMAINING_TOKENS.extend(new_tokens[25:])  # Save rest for next cycle
         
         for token_data in tokens_this_cycle:
             addr = token_data.get('address', '')
@@ -1188,7 +1174,7 @@ def main():
         except Exception as e:
             print(f"Scan error: {e}")
         sys.stdout.flush()
-        time.sleep(60)  # 60s scan interval - stagger sources 1 per minute
+        time.sleep(60)  # 60s scan interval - staggered rotation
 
 if __name__ == '__main__':
     main()
