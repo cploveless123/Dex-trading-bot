@@ -893,23 +893,18 @@ def scan_cycle():
             lowest_chg1 = data.get('lowest_chg1', chg1)
             data['lowest_chg1'] = min(lowest_chg1, chg1)
             if chg5 >= PUMP_ENTRY_CHG5 and chg1 > -30:
-                # Determine threshold: if dip detected, compare to lowest; else compare to baseline
-                dip_detected = lowest_chg1 < chg1_baseline - 5
-                if dip_detected:
-                    threshold = lowest_chg1 + 10
-                    print(f"   [PUMP_RECOVERY] {result['token']}: chg1={chg1:+.1f}% vs lowest={lowest_chg1:+.1f}% | threshold={threshold:+.1f}% | verify")
-                else:
-                    threshold = chg1_baseline + 10
-                    print(f"   [PUMP_STILL_OK] {result['token']}: chg5={chg5:+.1f}% >= {PUMP_ENTRY_CHG5}% and chg1={chg1:+.1f}% > -30% | verify")
-                if chg1 > threshold:
+                # Recovery check: chg1 must be +10% above the lowest observed during PUMP_WAIT_1
+                lowest_chg1 = data.get('lowest_chg1', chg1)
+                recovery_threshold = lowest_chg1 + 10
+                if chg1 > recovery_threshold:
                     data['state'] = STATE_PUMP_VERIFY
                     data['cooldown_end'] = now + PUMP_VERIFY_DELAY
                     data['recheck_count'] = 0
-                    print(f"   [PUMP_PASS_RECOVERY] {result['token']}: chg1={chg1:+.1f}% > {threshold:+.1f}% | verify {PUMP_VERIFY_DELAY}s")
+                    print(f"   [PUMP_RECOVERY] {result['token']}: chg1={chg1:+.1f}% > lowest={lowest_chg1:+.1f}% +10% | verify {PUMP_VERIFY_DELAY}s")
                 else:
                     data['state'] = STATE_RECOVERY_WAIT
                     data['cooldown_end'] = now + RECOVERY_WAIT
-                    print(f"   [PUMP_FADED_W2] {result['token']}: chg1={chg1:.1f}% not > {threshold:+.1f}% | recovery")
+                    print(f"   [PUMP_FADED_W2] {result['token']}: chg1={chg1:.1f}% not > {recovery_threshold:+.1f}% (lowest={lowest_chg1:.1f}%) | recovery")
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
@@ -939,18 +934,10 @@ def scan_cycle():
                     chg1 = float(pc.get('m1', 0) or 0)
                     mcap = float(fresh_data.get('marketCap', 0) or 0)
                     h1 = float(fresh_data.get('priceChange', {}).get('h1', 0) or 0)
-            # Apply recovery threshold if dip was detected
-            chg1_baseline = data.get('chg1_baseline', chg1)
+            # Final verify: chg5 >= +50% AND chg1 > lowest_chg1 + 10% (recovery from observed low)
             lowest_chg1 = data.get('lowest_chg1', chg1)
-            dip_detected = lowest_chg1 < chg1_baseline - 5
-            if dip_detected:
-                threshold = lowest_chg1 + 10
-                threshold_met = chg1 > threshold
-            else:
-                threshold = -30
-                threshold_met = chg1 > -30
-            # Final verify: chg5 >= +50% AND chg1 > threshold (recovery or baseline)
-            if chg5 >= PUMP_ENTRY_CHG5 and threshold_met:
+            recovery_threshold = lowest_chg1 + 10
+            if chg5 >= PUMP_ENTRY_CHG5 and chg1 > recovery_threshold:
                 # IRONCLAD: Re-check age before BUY - fresh data only
                 token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
                 # Reject if no age data (creation_timestamp = 0 or missing)
@@ -974,7 +961,7 @@ def scan_cycle():
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
-                print(f"   [PUMP_FADED_V] {result['token']}: chg1={chg1:.1f}% | recovery")
+                print(f"   [PUMP_FADED_V] {result['token']}: chg1={chg1:.1f}% not > {recovery_threshold:+.1f}% (lowest={lowest_chg1:.1f}%) | recovery")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
