@@ -1006,9 +1006,11 @@ def scan_cycle():
                     to_remove.append(addr)
                     send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Base wait path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}", f"BUY:{addr}")
             else:
-                # BASE didn't trigger - token passes (no further cooldown needed)
-                to_remove.append(addr)
-                print(f"   [BASE_PASS] {result['token']}: chg1={chg1:.1f}% < {chg1_threshold:+.1f}% | token passed")
+                # BASE didn't trigger - go to recovery instead of passing
+                data['state'] = STATE_RECOVERY_WAIT
+                data['cooldown_end'] = now + RECOVERY_WAIT
+                data['lowest_chg1'] = chg1
+                print(f"   [BASE_NOT_READY] {result['token']}: chg1={chg1:.1f}% < {chg1_threshold:+.1f}% | recovery")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
