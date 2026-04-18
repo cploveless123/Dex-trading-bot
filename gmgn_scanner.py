@@ -749,47 +749,34 @@ def scan_cycle():
         result = data['result']
         state = data['state']
         
-        # Only fetch fresh data if cooldown timer is about to expire (within 15s)
-        # This reduces GMGN calls from N per 15s to 1 per 15s when timer is close
-        cooldown_remaining = data['cooldown_end'] - now
-        
-        # ALWAYS fetch fresh data when timer is expired or about to expire
-        # This ensures we have current chg1/mcap for buy decisions
-        if cooldown_remaining <= 15:
-            fresh_data, source = get_fresh_token_data(addr)
-            if fresh_data is None:
-                # Failed to get fresh data - use cached from result, don't skip state transition
-                chg5 = result.get('chg5', 0)
-                h1 = result.get('h1', 0)
-                chg1 = result.get('chg1', 0)
-                mcap = result.get('mcap', 0)
-            else:
-                # Extract data from fresh source
-                if source == 'gmgn':
-                    chg5 = float(fresh_data.get('price_change_percent5m', 0) or 0)
-                    h1 = float(fresh_data.get('price_change_percent1h', 0) or 0)
-                    chg1 = float(fresh_data.get('price_change_percent1m', 0) or 0)
-                    mcap = float(fresh_data.get('market_cap', 0) or 0)
-                else:  # dexscraper
-                    pc = fresh_data.get('priceChange', {})
-                    chg5 = float(pc.get('m5', 0) or 0)
-                    h1 = float(pc.get('h1', 0) or 0)
-                    chg1 = float(pc.get('m1', 0) or 0)
-                    mcap = float(fresh_data.get('marketCap', 0) or 0)
-                
-                # Update result with fresh data
-                result['chg5'] = chg5
-                result['h1'] = h1
-                result['chg1'] = chg1
-                result['mcap'] = mcap
-        else:
-            # Timer not close - skip fresh fetch, use cached data
+        # CRITICAL: Fetch fresh data on EVERY cycle for every token in cooldown
+        # This ensures chg1/mcap decisions are based on current data, not cached
+        fresh_data, source = get_fresh_token_data(addr)
+        if fresh_data is None:
+            # Failed to get fresh data - use cached from result
             chg5 = result.get('chg5', 0)
             h1 = result.get('h1', 0)
             chg1 = result.get('chg1', 0)
             mcap = result.get('mcap', 0)
-            fresh_data = None
-            source = None
+        else:
+            # Extract data from fresh source
+            if source == 'gmgn':
+                chg5 = float(fresh_data.get('price_change_percent5m', 0) or 0)
+                h1 = float(fresh_data.get('price_change_percent1h', 0) or 0)
+                chg1 = float(fresh_data.get('price_change_percent1m', 0) or 0)
+                mcap = float(fresh_data.get('market_cap', 0) or 0)
+            else:  # dexscraper
+                pc = fresh_data.get('priceChange', {})
+                chg5 = float(pc.get('m5', 0) or 0)
+                h1 = float(pc.get('h1', 0) or 0)
+                chg1 = float(pc.get('m1', 0) or 0)
+                mcap = float(fresh_data.get('marketCap', 0) or 0)
+            
+            # Update result with fresh data
+            result['chg5'] = chg5
+            result['h1'] = h1
+            result['chg1'] = chg1
+            result['mcap'] = mcap
         
         chg5_prev = data.get('chg5_prev', chg5)
         h1_prev = data.get('h1_prev', h1)
