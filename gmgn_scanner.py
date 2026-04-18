@@ -1176,7 +1176,7 @@ def main():
         except Exception as e:
             print(f"Scan error: {e}")
         sys.stdout.flush()
-        time.sleep(10)  # 10s scan interval
+        time.sleep(30)  # 30s scan interval - reduce GMGN hammering
 
 if __name__ == '__main__':
     main()
