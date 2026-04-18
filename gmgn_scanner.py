@@ -1156,7 +1156,7 @@ def main():
     print(f"GMGN Scanner {GMGN_SCANNER_VERSION} Started - LIVE TRADING")
     print(f"  Sources: GMGN trending + GMGN trenches + DexScreener pump.fun")
     print(f"  Mcap ${MIN_MCAP:,}-${MAX_MCAP:,} | Holders ≥{MIN_HOLDERS}")
-    print(f"  Dip 5-45% | chg1>+{PUMP_CHG1_THRESHOLD:.0f}% pump rule | chg5>+{MIN_CHG5_FOR_BUY:.0f}% normal entry")
+    print(f"  Dip 5-45% | chg1>+{PUMP_CHG1_THRESHOLD:.0f}% pump rule | chg5>+2% normal entry")
     print(f"  Pump: {PUMP_WAIT_1}s→{PUMP_WAIT_2}s→{PUMP_VERIFY_DELAY}s→BUY")
     print(f"  Young: {YOUNG_COOLDOWN}s | Older: {OLDER_COOLDOWN}s | Base: {BASE_WAIT}s")
     print(f"  CHG1 recovery: {RECOVERY_WAIT}s rechecks until mcap>+{CHG5_RECOVERY_CHECK}% from low → {CHG1_VERIFY_DELAY}s verify")
