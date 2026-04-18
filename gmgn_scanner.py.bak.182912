@@ -50,28 +50,23 @@ CHAT_ID = '6402511249'
 # =====================================================================
 # STATE MACHINE STATES
 # =====================================================================
-STATE_PUMP_WAIT_1 = 'PUMP_WAIT_1'       # 30s wait for pump confirmation
+STATE_PUMP_WAIT_1 = 'PUMP_WAIT_1'       # 45s wait for pump confirmation
 STATE_PUMP_WAIT_2 = 'PUMP_WAIT_2'       # 15s second confirmation
 STATE_PUMP_VERIFY = 'PUMP_VERIFY'        # 15s final verify
 STATE_YOUNG_COOLDOWN = 'YOUNG_COOLDOWN'  # 30s for young + chg5>+50%
 STATE_OLDER_COOLDOWN = 'OLDER_COOLDOWN'  # 45s for older + momentum
 STATE_CHG1_RECHECK = 'CHG1_RECHECK'      # 15s rechecks until mcap>+5% from low
 STATE_CHG1_VERIFY = 'CHG1_VERIFY'        # 15s verify before buy
-STATE_COOLDOWN_WAIT = 'COOLDOWN_WAIT'    # 45s cooldown for volatile tokens (h1>+25%, chg5>-10%)
-STATE_COOLDOWN_CRASH = 'COOLDOWN_CRASH'  # chg1 < -30% during cooldown - wait 15s
-STATE_COOLDOWN_RECHECK = 'COOLDOWN_RECHECK'  # 15s rechecks until chg1 > chg1_prev + 10%
-STATE_COOLDOWN_VERIFY = 'COOLDOWN_VERIFY'  # 15s verify before BUY
-STATE_BASE_WAIT = 'BASE_WAIT'            # 30s → verify chg1 > chg1_prev + 10%
+STATE_BASE_WAIT = 'BASE_WAIT'            # 30s → verify chg1 > chg1_prev + 3%
 STATE_RECOVERY_WAIT = 'RECOVERY_WAIT'    # 6s for chg1 recovery for chg5 recovery
 
 # Timing constants (sync with trading_constants.py)
-PUMP_WAIT_1 = 30            # First pump confirmation wait (30s)
-PUMP_WAIT_2 = 15            # Second pump confirmation wait (15s)
+PUMP_WAIT_1 = 45            # First pump confirmation wait (45s)
+PUMP_WAIT_2 = 30            # Second pump confirmation wait (30s)
 PUMP_VERIFY_DELAY = 15     # Final pump verification wait (15s)
-PUMP_CHG1_THRESHOLD = 10.0  # chg1 must exceed this in pump verify step
-PUMP_ENTRY_CHG5 = 50.0         # chg5 must exceed this for pump entry
+PUMP_CHG1_THRESHOLD = 10.0  # 1-min change % to trigger pump path (chg1 must be >+10%)
 YOUNG_COOLDOWN = 30         # Young path cooldown (<15min + chg5>+50%)
-OLDER_COOLDOWN = 45         # Older path cooldown (>15min + h1>+25% + chg5>-10%)
+OLDER_COOLDOWN = 30         # Older path cooldown (>15min + chg5>+1%)
 BASE_WAIT = 30             # Base path wait (30s verify chg1 > chg1_prev + 3%)
 CHG1_RECHECK_INTERVAL = 15 # Recovery recheck interval
 CHG1_VERIFY_DELAY = 15     # Recovery verify before buy
@@ -563,8 +558,7 @@ def scan_token(token_data, reason_if_fail=None):
             return None, f"mcap ${mc:,.0f} >55% below ATH ${ath_mcap:,.0f}"
         
         # Build result
-        # Pump path entry: chg5 >= +50% AND chg1 > -30% (all prefilters must pass first)
-        pump_triggered = (chg5 >= 50.0 and chg1 > -30.0)
+        pump_triggered = chg1 > PUMP_CHG1_THRESHOLD
         
         result = {
             'token': token_data.get('symbol', '?'),
@@ -718,10 +712,6 @@ def add_to_cooldown(addr, token_data, result, entry_chg5):
         # chg1 negative - use recovery path
         state = STATE_CHG1_RECHECK
         cooldown_end = time.time() + 15
-    elif chg5 > -10 and h1 > 25:
-        # Cooldown rule: volatile token, wait 45s
-        state = STATE_COOLDOWN_WAIT
-        cooldown_end = time.time() + OLDER_COOLDOWN  # 45s
     elif age_sec < YOUNG_AGE_THRESHOLD and h1 > H1_MOMENTUM_MIN and chg5 > -5:
         state = STATE_YOUNG_COOLDOWN
         cooldown_end = time.time() + YOUNG_COOLDOWN
@@ -825,23 +815,22 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # Timer done - verify chg5 >= +50% AND chg1 > -30%
-            if chg5 >= PUMP_ENTRY_CHG5 and chg1 > -30:
+            # Timer done - verify chg1 still above pump threshold AND rising
+            if chg1 > PUMP_CHG1_THRESHOLD and chg1 > chg1_prev:
                 data['state'] = STATE_PUMP_WAIT_2
                 data['cooldown_end'] = now + PUMP_WAIT_2
                 data['recheck_count'] = 0
-                print(f"   [PUMP_CONFIRMED] {result['token']}: chg5={chg5:+.1f}% >= {PUMP_ENTRY_CHG5}% and chg1={chg1:+.1f}% > -30% | wait {PUMP_WAIT_2}s")
-            elif chg1 <= -30:
-                # chg1 crashed - wait 15s extra then recheck
-                data['state'] = STATE_PUMP_WAIT_2
-                data['cooldown_end'] = now + 15
+                print(f"   [PUMP_CONFIRMED] {result['token']}: chg1={chg1:+.1f}% > prev {chg1_prev:+.1f}% | wait {PUMP_WAIT_2}s")
+            elif chg1 > PUMP_CHG1_THRESHOLD and chg1 <= chg1_prev:
+                data['state'] = STATE_RECOVERY_WAIT
+                data['cooldown_end'] = now + RECOVERY_WAIT
                 data['lowest_chg5'] = min(lowest_chg5, chg5)
-                print(f"   [PUMP_CHG1_CRASH] {result['token']}: chg1={chg1:.1f}% <= -30% | wait 15s extra")
+                print(f"   [PUMP_REVERSING] {result['token']}: chg1={chg1:.1f}% <= prev {chg1_prev:+.1f}% | recovery")
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
                 data['lowest_chg5'] = min(lowest_chg5, chg5)
-                print(f"   [PUMP_FADED] {result['token']}: chg5={chg5:.1f}% < {PUMP_ENTRY_CHG5}% | recovery")
+                print(f"   [PUMP_FADED] {result['token']}: chg1={chg1:.1f}% < +{PUMP_CHG1_THRESHOLD}% | recovery")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -852,16 +841,15 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # Verify: chg5 >= +50% AND chg1 > -30% (still positive/recovering, not crashed)
-            if chg5 >= PUMP_ENTRY_CHG5 and chg1 > -30:
+            if chg1 > PUMP_CHG1_THRESHOLD and chg1 > chg1_prev:
                 data['state'] = STATE_PUMP_VERIFY
                 data['cooldown_end'] = now + PUMP_VERIFY_DELAY
                 data['recheck_count'] = 0
-                print(f"   [PUMP_STILL_OK] {result['token']}: chg5={chg5:+.1f}% >= {PUMP_ENTRY_CHG5}% and chg1={chg1:+.1f}% > prev+10% | verify {PUMP_VERIFY_DELAY}s")
+                print(f"   [PUMP_STILL_OK] {result['token']}: chg1={chg1:+.1f}% > prev {chg1_prev:+.1f}% | verify {PUMP_VERIFY_DELAY}s")
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
-                print(f"   [PUMP_FADED_W2] {result['token']}: chg5={chg5:.1f}% or chg1={chg1:.1f}% not met | recovery")
+                print(f"   [PUMP_FADED_W2] {result['token']}: chg1={chg1:.1f}% | recovery")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
@@ -872,8 +860,7 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # Final verify: chg5 >= +50% AND chg1 > -30% (still positive, momentum not dead)
-            if chg5 >= PUMP_ENTRY_CHG5 and chg1 > -30:
+            if chg1 > PUMP_CHG1_THRESHOLD and chg1 > chg1_prev:
                 # IRONCLAD: Re-check age before BUY - fresh data only
                 token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
                 # Reject if no age data (creation_timestamp = 0 or missing)
@@ -1007,135 +994,6 @@ def scan_cycle():
             data['h1_prev'] = h1
             continue
         
-        # === COOLDOWN PATH (45s for volatile: h1>+25%, chg5>-10%) ===
-        elif state == STATE_COOLDOWN_WAIT:
-            remaining = data['cooldown_end'] - now
-            if remaining > 0:
-                # During cooldown: check if chg1 < -30% → trigger crash logic
-                if chg1 < -30:
-                    data['state'] = STATE_COOLDOWN_CRASH
-                    data['cooldown_end'] = now + 15
-                    data['lowest_mcap'] = mcap
-                    data['lowest_chg5'] = min(lowest_chg5, chg5)
-                    print(f"   [COOLDOWN_CRASH] {result['token']}: chg1={chg1:.1f}% < -30% | wait 15s")
-                data['chg5_prev'] = chg5
-                data['h1_prev'] = h1
-                data['chg1_prev'] = chg1
-                continue
-            # Timer done - verify chg1 > chg1_prev + 10%
-            chg1_threshold = chg1_prev + 10
-            if chg1 > chg1_threshold:
-                print(f"   [BUY_COOLDOWN] {result['token']}: chg1={chg1:+.1f}% > prev {chg1_prev:+.1f}% +10% | BUY!")
-                if buy_token(addr, result):
-                    to_remove.append(addr)
-                    send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Cooldown path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}", f"BUY:{addr}")
-            else:
-                data['state'] = STATE_BASE_WAIT
-                data['cooldown_end'] = now + 30
-                print(f"   [COOLDOWN_NOT_READY] {result['token']}: chg1={chg1:.1f}% < {chg1_threshold:+.1f}% | base recheck")
-            data['chg5_prev'] = chg5
-            data['h1_prev'] = h1
-            data['chg1_prev'] = chg1
-            continue
-
-        # === COOLDOWN CRASH PATH (chg1 < -30% during cooldown) ===
-        elif state == STATE_COOLDOWN_CRASH:
-            remaining = data['cooldown_end'] - now
-            if remaining > 0:
-                data['chg5_prev'] = chg5
-                data['h1_prev'] = h1
-                continue
-            # 15s done - check if chg1 still < -30%
-            if chg1 < -30:
-                # Still crashed - 15s rechecks until chg1 > chg1_prev + 10%
-                data['state'] = STATE_COOLDOWN_RECHECK
-                data['cooldown_end'] = now + 15
-                data['lowest_mcap'] = min(data.get('lowest_mcap', mcap), mcap)
-                data['lowest_chg5'] = min(data.get('lowest_chg5', chg5), chg5)
-                print(f"   [COOLDOWN_STILL_CRASHED] {result['token']}: chg1={chg1:.1f}% < -30% | recheck 15s")
-                data['chg5_prev'] = chg5
-                data['h1_prev'] = h1
-                data['chg1_prev'] = chg1
-                continue
-            # Recovered above -30% - now need chg1 > chg1_prev + 10%
-            chg1_threshold = chg1_prev + 10
-            if chg1 > chg1_threshold:
-                data['state'] = STATE_COOLDOWN_VERIFY
-                data['cooldown_end'] = now + 15
-                data['recheck_count'] = 0
-                print(f"   [COOLDOWN_RECOVERED] {result['token']}: chg1={chg1:+.1f}% > prev {chg1_prev:+.1f}% +10% | verify 15s")
-            else:
-                data['state'] = STATE_COOLDOWN_RECHECK
-                data['cooldown_end'] = now + 15
-                print(f"   [COOLDOWN_RECHECKING] {result['token']}: chg1={chg1:.1f}% < {chg1_threshold:+.1f}% | recheck 15s")
-            data['chg5_prev'] = chg5
-            data['h1_prev'] = h1
-            data['chg1_prev'] = chg1
-            continue
-
-        # === COOLDOWN RECHECK (15s cycles until chg1 > chg1_prev + 10%) ===
-        elif state == STATE_COOLDOWN_RECHECK:
-            remaining = data['cooldown_end'] - now
-            if remaining > 0:
-                data['chg5_prev'] = chg5
-                data['h1_prev'] = h1
-                continue
-            chg1_threshold = chg1_prev + 10
-            if chg1 > chg1_threshold:
-                data['state'] = STATE_COOLDOWN_VERIFY
-                data['cooldown_end'] = now + 15
-                data['recheck_count'] = 0
-                print(f"   [COOLDOWN_REVERSAL] {result['token']}: chg1={chg1:+.1f}% > prev {chg1_prev:+.1f}% +10% | verify 15s")
-            else:
-                data['cooldown_end'] = now + 15
-                data['recheck_count'] = data.get('recheck_count', 0) + 1
-                print(f"   [COOLDOWN_RECHECKING] {result['token']}: chg1={chg1:.1f}% < {chg1_threshold:+.1f}% | recheck 15s")
-            data['chg5_prev'] = chg5
-            data['h1_prev'] = h1
-            data['chg1_prev'] = chg1
-            continue
-
-        # === COOLDOWN VERIFY (15s wait, then BUY with fresh data) ===
-        elif state == STATE_COOLDOWN_VERIFY:
-            remaining = data['cooldown_end'] - now
-            if remaining > 0:
-                data['chg5_prev'] = chg5
-                data['h1_prev'] = h1
-                continue
-            # Final verify with fresh data - fetch fresh token data
-            fresh_data, source = get_fresh_token_data(addr)
-            if fresh_data:
-                if source == 'gmgn':
-                    fresh_chg5 = float(fresh_data.get('price_change_percent5m', 0) or 0)
-                    fresh_chg1 = float(fresh_data.get('price_change_percent1m', 0) or 0)
-                else:
-                    pc = fresh_data.get('priceChange', {})
-                    fresh_chg5 = float(pc.get('m5', 0) or 0)
-                    fresh_chg1 = float(pc.get('m1', 0) or 0)
-                # Verify chg1 > chg1_prev + 10% with fresh data
-                if fresh_chg1 > chg1_prev + 10:
-                    token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
-                    if token_age < PUMP_MIN_AGE:
-                        print(f"   [SKIP_TOO_NEW] {result['token']}: age {token_age}s < {PUMP_MIN_AGE}s | skip (too new)")
-                        to_remove.append(addr)
-                        continue
-                    print(f"   [BUY_COOLDOWN_VERIFY] {result['token']}: fresh chg1={fresh_chg1:+.1f}% > prev {chg1_prev:+.1f}% +10% | BUY!")
-                    if buy_token(addr, result):
-                        to_remove.append(addr)
-                        send_alert(f"🚀 BUY SIGNAL | {result['token']}\n━━━━━━━━━━━━━━━\n📊 Cooldown verify path\n💰 Entry: ${result.get('mcap', 0):,.0f} mcap\n🔗 https://dexscreener.com/solana/{addr}\n🥧 https://pump.fun/{addr}", f"BUY:{addr}")
-                else:
-                    data['state'] = STATE_COOLDOWN_RECHECK
-                    data['cooldown_end'] = now + 15
-                    data['chg1_prev'] = fresh_chg1  # Update prev to fresh chg1
-                    print(f"   [COOLDOWN_VERIFY_FAIL] {result['token']}: fresh chg1={fresh_chg1:.1f}% < prev+10% | recheck")
-            else:
-                data['state'] = STATE_COOLDOWN_RECHECK
-                data['cooldown_end'] = now + 15
-                print(f"   [COOLDOWN_NO_FRESH] {result['token']}: no fresh data | recheck 15s")
-            data['chg5_prev'] = chg5
-            data['h1_prev'] = h1
-            continue
-
         # === BASE WAIT PATH (30s → verify chg1 > chg1_prev + 10%) ===
         elif state == STATE_BASE_WAIT:
             remaining = data['cooldown_end'] - now
