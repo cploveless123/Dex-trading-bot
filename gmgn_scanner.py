@@ -226,7 +226,7 @@ def get_gmgn_trending(limit=50):
     # Detect HTTP 403 (rate limited) even if returncode is 0
     if r.returncode != 0 or '403' in r.stdout or 'HTTP 403' in r.stderr:
         record_throttle('trending')
-        send_alert("⚠️ GMGN trending FAILED (403)")
+        send_alert("⚠️ GMGN trending FAILED (403)", alert_type="gmgn_trending_fail")
         return []
     try:
         reset_gmgn_fails()  # Reset consecutive fail counter on success
@@ -234,7 +234,7 @@ def get_gmgn_trending(limit=50):
         tokens = d.get('data', {}).get('rank', [])
         if not tokens and 'rate limit' in r.stdout.lower():
             record_throttle('trending')
-            send_alert("⚠️ GMGN trending EMPTY + rate limited")
+            send_alert("⚠️ GMGN trending EMPTY + rate limited", alert_type="gmgn_trending_empty")
         return tokens
     except:
         return []
@@ -247,7 +247,7 @@ def get_gmgn_trenches(limit=20):
                       capture_output=True, text=True, timeout=15)
     if r.returncode != 0 or '403' in r.stdout or 'HTTP 403' in r.stderr:
         record_throttle('trenches')
-        send_alert("⚠️ GMGN trenches FAILED (403)")
+        send_alert("⚠️ GMGN trenches FAILED (403)", alert_type="gmgn_trenches_fail")
         return []
     try:
         reset_gmgn_fails()  # Reset consecutive fail counter on success
@@ -329,13 +329,13 @@ def get_dexscreener_pump_tokens(limit=20):
 
 def get_gmgn_token_info(addr):
     if is_throttled('token_info'):
-        send_alert(f"⚠️ GMGN token_info THROTTLED")
+        send_alert(f"⚠️ GMGN token_info THROTTLED", alert_type="gmgn_token_info_throttle")
         return None
     r = subprocess.run(['gmgn-cli', 'token', 'info', '--chain', 'sol', '--address', addr],
                       capture_output=True, text=True, timeout=15)
     if r.returncode != 0:
         record_throttle('token_info')
-        send_alert(f"⚠️ GMGN token_info FAILED")
+        send_alert(f"⚠️ GMGN token_info FAILED", alert_type="gmgn_token_info_fail")
         return None
     try:
         reset_gmgn_fails()  # Reset consecutive fail counter on success
