@@ -886,18 +886,20 @@ def scan_cycle():
                 data['chg5_prev'] = chg5
                 data['h1_prev'] = h1
                 continue
-            # Timer done - check if mcap recovered > +3% from lowest
-            recovery_target = lowest_mcap * (1 + CHG5_RECOVERY_CHECK / 100)
-            if mcap >= recovery_target:
+            # Track lowest chg1 for recovery
+            lowest_chg1 = data.get('lowest_chg1', chg1)
+            if chg1 < lowest_chg1:
+                lowest_chg1 = chg1
+                data['lowest_chg1'] = lowest_chg1
+            # Trigger BUY when chg1 rises from low AND is positive
+            if chg1 > lowest_chg1 and chg1 > 0:
                 data['state'] = STATE_CHG1_VERIFY
-                data['cooldown_end'] = now + 15
-                print(f"   [CHG1_OK] {result['token']}: mcap={mcap:,.0f} >= {recovery_target:,.0f} (+5% from low) | verify {CHG1_VERIFY_DELAY}s")
+                data['cooldown_end'] = now + CHG1_VERIFY_DELAY
+                print(f"   [CHG1_OK] {result['token']}: chg1={chg1:+.1f}% rising from {lowest_chg1:+.1f}% | verify {CHG1_VERIFY_DELAY}s")
             else:
-                # Still low - update lowest and recheck
-                data['lowest_mcap'] = min(lowest_mcap, mcap)
-                data['cooldown_end'] = now + 15
+                data['cooldown_end'] = now + CHG1_RECHECK_INTERVAL
                 data['recheck_count'] = data.get('recheck_count', 0) + 1
-                print(f"   [CHG1_RECHECK] {result['token']}: mcap={mcap:,.0f} < {recovery_target:,.0f} | recheck {CHG1_RECHECK_INTERVAL}s")
+                print(f"   [CHG1_RECHECK] {result['token']}: chg1={chg1:+.1f}% (lowest={lowest_chg1:+.1f}%) | recheck {CHG1_RECHECK_INTERVAL}s")
             data['chg5_prev'] = chg5
             data['h1_prev'] = h1
             continue
