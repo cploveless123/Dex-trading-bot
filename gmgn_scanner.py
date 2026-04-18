@@ -1185,7 +1185,7 @@ def main():
         except Exception as e:
             print(f"Scan error: {e}")
         sys.stdout.flush()
-        time.sleep(60)  # 60s scan interval - staggered rotation
+        time.sleep(10)  # 10s scan interval - fast rotation, 1 GMGN call per cycle
 
 if __name__ == '__main__':
     main()
