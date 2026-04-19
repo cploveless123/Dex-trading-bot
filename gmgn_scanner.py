@@ -584,8 +584,7 @@ def scan_token(token_data, reason_if_fail=None):
             'age_sec': int(time.time() - token_data.get('creation_timestamp', 0)) if token_data.get('creation_timestamp') else 0,
         }
 
-        log_token_data(result, bought=False)
-    return result, None
+        return result, None
 
     except Exception as e:
         return None, f"scan error: {e}"
@@ -595,30 +594,6 @@ def scan_token(token_data, reason_if_fail=None):
 # =====================================================================
 
 TRADES_FILE = '/root/Dex-trading-bot/trades/sim_trades.jsonl'
-SCAN_LOG_FILE = '/root/Dex-trading-bot/trades/scan_log.jsonl'
-
-def log_token_data(token_data, bought=False):
-    """Log token data for analysis - every token that enters pump evaluation"""
-    try:
-        entry = {
-            'timestamp': token_data.get('timestamp', ''),
-            'token_name': token_data.get('token', ''),
-            'address': token_data.get('address', ''),
-            'h1': token_data.get('h1', 0),
-            'chg5': token_data.get('chg5', 0),
-            'chg1': token_data.get('chg1', 0),
-            'mcap': token_data.get('mcap', 0),
-            'holders': token_data.get('holders', 0),
-            'age': token_data.get('age', 0),
-            'bought': bought,
-            'pump_triggered': token_data.get('pump_triggered', False),
-            'entry_price': token_data.get('entry_price', 0),
-            'entry_mcap': token_data.get('entry_mcap', 0)
-        }
-        with open(SCAN_LOG_FILE, 'a') as f:
-            f.write(json.dumps(entry) + '\n')
-    except Exception as e:
-        pass  # Don't let logging break scanner
 
 def get_open_position_count():
     try:
@@ -698,12 +673,6 @@ def buy_token(addr, result):
         'tp1_sold': False, 'tp2_sold': False, 'tp3_sold': False, 'tp4_sold': False, 'tp5_sold': False,
         'partial_exit': False, 'fully_exited': False,
         'peak_price': result.get('entry_price', 0),
-        # Entry metrics for analysis
-        'entry_h1': result.get('h1', 0),
-        'entry_chg5': result.get('chg5', 0),
-        'entry_chg1': result.get('chg1', 0),
-        'entry_holders': result.get('holders', 0),
-        'entry_age': result.get('age', 0),
     }
 
     save_trade(trade)
