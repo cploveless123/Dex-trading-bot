@@ -95,6 +95,23 @@ def update_wallet():
     except Exception as e:
         log(f"[WALLET] Update failed: {e}")
 
+def update_position_sold(addr, quantity, reason):
+    """Mark a BUY position as sold so we don't sell it again"""
+    try:
+        temp_file = '/tmp/positions_update.jsonl'
+        with open(TRADES_FILE, 'r') as f_in, open(temp_file, 'w') as f_out:
+            for line in f_in:
+                t = json.loads(line)
+                if t.get('token_address') == addr and t.get('action') == 'BUY' and t.get('status') == 'open':
+                    t['status'] = 'closed'
+                    t['sold_quantity'] = quantity
+                    t['sell_reason'] = reason
+                f_out.write(json.dumps(t) + '\n')
+        import shutil
+        shutil.move(temp_file, TRADES_FILE)
+    except Exception as e:
+        log(f"Failed to update position sold: {e}")
+
 def sell_token(addr, token_name, quantity, price, reason):
     """Record a sell - prevents duplicate sells"""
     # Check if we already sold this token recently (within last 60s)
@@ -161,9 +178,6 @@ def sell_token(addr, token_name, quantity, price, reason):
     }
     with open(TRADES_FILE, 'a') as f:
         f.write(json.dumps(trade) + '\n')
-    
-    # Update the BUY record so we don't sell the same position multiple times
-    update_position_sold(addr, quantity, reason)
     
     log(f"SOLD {quantity:.4f} SOL of {token_name} @ {price} ({reason}) | pnl={pnl_sol:.4f} SOL")
     update_wallet()  # Update sim_wallet.json after every sell
