@@ -161,6 +161,10 @@ def sell_token(addr, token_name, quantity, price, reason):
     }
     with open(TRADES_FILE, 'a') as f:
         f.write(json.dumps(trade) + '\n')
+    
+    # Update the BUY record so we don't sell the same position multiple times
+    update_position_sold(addr, quantity, reason)
+    
     log(f"SOLD {quantity:.4f} SOL of {token_name} @ {price} ({reason}) | pnl={pnl_sol:.4f} SOL")
     update_wallet()  # Update sim_wallet.json after every sell
 

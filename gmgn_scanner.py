@@ -433,6 +433,25 @@ def get_dexscreener_volume(addr):
     except:
         return 0
 
+def log_token_data(token_data):
+    """Log token data for analysis"""
+    try:
+        entry = {
+            'timestamp': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00'),
+            'token': token_data.get('symbol', '?'),
+            'address': token_data.get('address', ''),
+            'h1': token_data.get('h1', 0),
+            'chg5': token_data.get('chg5', 0),
+            'chg1': token_data.get('chg1', 0),
+            'mcap': token_data.get('mcap', 0),
+            'holders': token_data.get('holders', 0),
+            'age_sec': token_data.get('age_sec', 0),
+        }
+        with open(SCAN_LOG_FILE, 'a') as f:
+            f.write(json.dumps(entry) + '\n')
+    except Exception:
+        pass
+
 def scan_token(token_data, reason_if_fail=None):
     """
     Apply all entry filters. Returns (result_dict, None) if passes, (None, reason) if fails.
@@ -594,6 +613,7 @@ def scan_token(token_data, reason_if_fail=None):
 # =====================================================================
 
 TRADES_FILE = '/root/Dex-trading-bot/trades/sim_trades.jsonl'
+SCAN_LOG_FILE = '/root/Dex-trading-bot/trades/scan_log.jsonl'
 
 def get_open_position_count():
     try:
@@ -622,6 +642,7 @@ def save_trade(trade):
         f.write(json.dumps(trade) + '\n')
 
 def buy_token(addr, result):
+    log_token_data(result)  # Log every buy attempt
     """Execute a buy - always checks PERM_BLACKLIST and sim_trades.jsonl"""
     # IRONCLAD: Never buy blacklisted
     if addr in PERM_BLACKLIST:
