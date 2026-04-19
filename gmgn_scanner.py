@@ -563,8 +563,8 @@ def scan_token(token_data, reason_if_fail=None):
             return None, f"mcap ${mc:,.0f} >55% below ATH ${ath_mcap:,.0f}"
 
         # Build result
-        # Pump path entry: h1 > +100% AND chg5 >= +15% AND chg1 > -20% (all prefilters must pass first)
-        pump_triggered = (h1 > 100 and chg5 >= 15.0 and chg1 > -20.0)
+        # Pump path entry: h1 > +100% AND chg5 >= +15% AND chg1 > -10% (all prefilters must pass first)
+        pump_triggered = (h1 > 75 and chg5 >= 10.0 and chg1 > -10.0)
 
         result = {
             'token': token_data.get('symbol', '?'),
@@ -844,7 +844,7 @@ def scan_cycle():
                     chg1 = float(pc.get('m1', 0) or 0)
                     mcap = float(fresh_data.get('marketCap', 0) or 0)
                     h1 = float(fresh_data.get('priceChange', {}).get('h1', 0) or 0)
-            if chg5 >= PUMP_ENTRY_CHG5 and chg1 > -20:
+            if chg5 >= PUMP_ENTRY_CHG5 and chg1 > -10:
                 data['state'] = STATE_PUMP_WAIT_2
                 data['cooldown_end'] = now + PUMP_WAIT_2
                 data['recheck_count'] = 0
@@ -884,7 +884,7 @@ def scan_cycle():
                     chg1 = float(pc.get('m1', 0) or 0)
                     mcap = float(fresh_data.get('marketCap', 0) or 0)
                     h1 = float(fresh_data.get('priceChange', {}).get('h1', 0) or 0)
-            if chg5 >= PUMP_ENTRY_CHG5 and chg1 > -20:
+            if chg5 >= PUMP_ENTRY_CHG5 and chg1 > -10:
                 data['state'] = STATE_PUMP_VERIFY
                 data['cooldown_end'] = now + PUMP_VERIFY_DELAY
                 data['recheck_count'] = 0
@@ -918,8 +918,8 @@ def scan_cycle():
                     chg1 = float(pc.get('m1', 0) or 0)
                     mcap = float(fresh_data.get('marketCap', 0) or 0)
                     h1 = float(fresh_data.get('priceChange', {}).get('h1', 0) or 0)
-            # Final verify: chg5 >= +50% AND chg1 > -20%
-            if chg5 >= PUMP_ENTRY_CHG5 and chg1 > -20:
+            # Final verify: chg5 >= +50% AND chg1 > -10%
+            if chg5 >= PUMP_ENTRY_CHG5 and chg1 > -10:
                 # IRONCLAD: Re-check age before BUY - fresh data only
                 token_age = int(time.time() - data.get('token_data', {}).get('creation_timestamp', 0))
                 # Reject if no age data (creation_timestamp = 0 or missing)
