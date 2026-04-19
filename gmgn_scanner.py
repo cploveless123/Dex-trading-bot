@@ -1249,8 +1249,8 @@ def scan_cycle():
             del STOP_LOSS_COOLDOWN[addr]
 
     # === STAGGERED GMGN + DEXSCREENER SCAN ===
-    # 4-cycle rotation: GMGN trending → GMGN trenches → GMGN trenches → DexScreener pump.fun
-    # Every token gets processed within 4 cycles (2 min)
+    # 4-cycle rotation: GMGN trending → GMGN trenches → GMGN new pairs → DexScreener pump.fun
+    # One source per 30s, full rotation every 2 min
     global _REMAINING_TOKENS
 
     seen = set()
@@ -1359,7 +1359,7 @@ def scan_cycle():
 
 def main():
     print(f"GMGN Scanner {GMGN_SCANNER_VERSION} Started - LIVE TRADING")
-    print(f"  Sources: GMGN trending + GMGN trenches + DexScreener pump.fun")
+    print(f"  Sources: GMGN trending → trenches → new pairs → DexScreener (30s each)")
     print(f"  Mcap ${MIN_MCAP:,}-${MAX_MCAP:,} | Holders ≥{MIN_HOLDERS}")
     print(f"  Dip 5-45% | chg1>+{PUMP_CHG1_THRESHOLD:.0f}% pump rule | chg5>+{MIN_CHG5_FOR_BUY:.0f}% normal entry")
     print(f"  Pump: {PUMP_WAIT_1}s→{PUMP_WAIT_2}s→{PUMP_VERIFY_DELAY}s→BUY")
@@ -1374,7 +1374,7 @@ def main():
         except Exception as e:
             print(f"Scan error: {e}")
         sys.stdout.flush()
-        time.sleep(10)  # 10s scan interval - fast rotation, 1 GMGN call per cycle
+        time.sleep(30)  # 30s scan interval - one source per cycle - fast rotation, 1 GMGN call per cycle
 
 if __name__ == '__main__':
     main()
