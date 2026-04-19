@@ -235,6 +235,7 @@ def monitor_cycle():
                     except (ValueError, TypeError):
                         pass
         current_balance = CHRIS_STARTING_BALANCE + total_pnl
+        closed_pnl = total_pnl  # Use same calculation for closed_pnl
         
         tp_status = trade.get('tp_status', {'tp1_hit': False, 'tp2_hit': False, 'tp3_hit': False, 'tp4_hit': False, 'tp5_hit': False})
         
@@ -434,6 +435,17 @@ def monitor_cycle():
             remaining_pct = 1 - sold_pct
             if remaining_pct > 0:
                 sell_token(addr, token_name, position_size * remaining_pct, current_price, "STOP_LOSS")
+            # Calculate closed_pnl for message
+            try:
+                trades_for_pnl = []
+                with open(TRADES_FILE) as f:
+                    for line in f:
+                        if line.strip():
+                            trades_for_pnl.append(json.loads(line))
+                closed_pnl = sum(float(t.get('pnl_sol', 0)) for t in trades_for_pnl if t.get('action') == 'SELL')
+            except:
+                closed_pnl = 0.0
+            
             msg = (f"🛑 STOP LOSS | {token_name}\n"
                    f"━━━━━━━━━━━━━━━\n"
                    f"{pnl_pct:.1f}% ({pnl_sol:.4f} SOL) | Exited all\n"
