@@ -75,7 +75,7 @@ OLDER_COOLDOWN = 45         # Older path cooldown (>15min + h1>+25% + chg5>-10%)
 BASE_WAIT = 30             # Base path wait (30s verify chg1 > chg1_prev + 3%)
 CHG1_RECHECK_INTERVAL = 15 # Recovery recheck interval
 CHG1_VERIFY_DELAY = 15     # Recovery verify before buy
-RECOVERY_WAIT = 15          # Recovery wait interval
+RECOVERY_WAIT = 600          # Recovery wait interval
 PUMP_MIN_AGE = 210         # Min age (sec) before buying via pump path (3.5 min)
 
 # =====================================================================
@@ -848,7 +848,7 @@ def scan_cycle():
                 data['state'] = STATE_PUMP_WAIT_2
                 data['cooldown_end'] = now + PUMP_WAIT_2
                 data['recheck_count'] = 0
-                print(f"   [PUMP_CONFIRMED] {result['token']}: chg5={chg5:+.1f}% >= {PUMP_ENTRY_CHG5}% and chg1={chg1:+.1f}% > -30% | wait {PUMP_WAIT_2}s")
+                print(f"   [PUMP_CONFIRMED] {result['token']}: h1={h1:+.1f}% > 100 AND chg5={chg5:+.1f}% >= 10 AND chg1={chg1:+.1f}% > -20 | wait {PUMP_WAIT_2}s")
             elif chg1 <= -30:
                 data['state'] = STATE_PUMP_WAIT_2
                 data['cooldown_end'] = now + 15
@@ -888,7 +888,7 @@ def scan_cycle():
                 data['state'] = STATE_PUMP_VERIFY
                 data['cooldown_end'] = now + PUMP_VERIFY_DELAY
                 data['recheck_count'] = 0
-                print(f"   [PUMP_STILL_OK] {result['token']}: chg5={chg5:+.1f}% >= {PUMP_ENTRY_CHG5}% and chg1={chg1:+.1f}% > -30% | verify {PUMP_VERIFY_DELAY}s")
+                print(f"   [PUMP_STILL_OK] {result['token']}: h1={h1:+.1f}% > 100 AND chg5={chg5:+.1f}% >= 10 AND chg1={chg1:+.1f}% > -20 | verify {PUMP_VERIFY_DELAY}s")
             else:
                 data['state'] = STATE_RECOVERY_WAIT
                 data['cooldown_end'] = now + RECOVERY_WAIT
