@@ -218,7 +218,7 @@ def send_alert(msg, alert_type=None):
 def get_gmgn_trending(limit=50):
     if is_throttled('trending'):
         return []
-    r = subprocess.run(['gmgn-cli', 'market', 'trending', '--chain', 'sol', '--interval', '5m', '--limit', str(limit)],
+    r = subprocess.run(['/usr/local/bin/gmgn-cli', 'market', 'trending', '--chain', 'sol', '--interval', '5m', '--limit', str(limit)],
                       capture_output=True, text=True, timeout=15)
     if r.returncode != 0:
         record_throttle('trending')
@@ -235,7 +235,7 @@ def get_gmgn_trenches(limit=20):
     """Get tokens from GMGN trenches (newly created/completed pump.fun tokens)"""
     if is_throttled('trenches'):
         return []
-    r = subprocess.run(['gmgn-cli', 'market', 'trenches', '--chain', 'sol', '--limit', str(limit)],
+    r = subprocess.run(['/usr/local/bin/gmgn-cli', 'market', 'trenches', '--chain', 'sol', '--limit', str(limit)],
                       capture_output=True, text=True, timeout=15)
     if r.returncode != 0:
         record_throttle('trenches')
@@ -322,7 +322,7 @@ def get_gmgn_token_info(addr):
     if is_throttled('token_info'):
         send_alert(f"⚠️ GMGN token_info THROTTLED")
         return None
-    r = subprocess.run(['gmgn-cli', 'token', 'info', '--chain', 'sol', '--address', addr],
+    r = subprocess.run(['/usr/local/bin/gmgn-cli', 'token', 'info', '--chain', 'sol', '--address', addr],
                       capture_output=True, text=True, timeout=15)
     if r.returncode != 0:
         record_throttle('token_info')
