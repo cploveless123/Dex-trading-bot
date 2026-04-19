@@ -698,6 +698,12 @@ def buy_token(addr, result):
         'tp1_sold': False, 'tp2_sold': False, 'tp3_sold': False, 'tp4_sold': False, 'tp5_sold': False,
         'partial_exit': False, 'fully_exited': False,
         'peak_price': result.get('entry_price', 0),
+        # Entry metrics for analysis
+        'entry_h1': result.get('h1', 0),
+        'entry_chg5': result.get('chg5', 0),
+        'entry_chg1': result.get('chg1', 0),
+        'entry_holders': result.get('holders', 0),
+        'entry_age': result.get('age', 0),
     }
 
     save_trade(trade)
