@@ -176,6 +176,17 @@ def sell_token(addr, token_name, quantity, price, reason):
         'reason': reason,
         'sold_at': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00'),
     }
+
+        # Mark BUY as closed to prevent duplicate sells
+        with open(TRADES_FILE, 'r') as rf:
+            all_lines = rf.readlines()
+        with open(TRADES_FILE, 'w') as wf:
+            for line in all_lines:
+                t = json.loads(line)
+                if t.get('token_address') == addr and t.get('action') == 'BUY' and t.get('status') == 'open':
+                    t['status'] = 'closed'
+                    t['sold_reason'] = reason
+                wf.write(json.dumps(t) + '\n')
     with open(TRADES_FILE, 'a') as f:
         f.write(json.dumps(trade) + '\n')
     
